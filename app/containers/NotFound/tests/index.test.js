@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import NotFoundPage from '../index';
+import NotFound from '../index';
 
-describe('<NotFoundPage />', () => {
+describe('<NotFound />', () => {
   it('should render and match the snapshot', () => {
     const {
       container: { firstChild },
-    } = render(<NotFoundPage />);
+    } = render(<NotFound />);
     expect(firstChild).toMatchSnapshot();
   });
 });

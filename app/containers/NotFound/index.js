@@ -1,5 +1,5 @@
 /**
- * NotFoundPage
+ * NotFound
  * @description ...
  */
 
