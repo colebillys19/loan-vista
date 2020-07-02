@@ -5,9 +5,10 @@ import { StyledTab, StyledTabs } from './styledComponents';
 
 const Tabs = ({ handleChange, value }) => (
   <StyledTabs value={value} onChange={handleChange}>
-    <StyledTab label="Item One" />
-    <StyledTab label="Item Two" />
-    <StyledTab label="Item Three" />
+    <StyledTab label="Calls" disableRipple />
+    <StyledTab label="Emails" disableRipple />
+    <StyledTab label="Payments" disableRipple />
+    <StyledTab label="Escrow" disableRipple />
   </StyledTabs>
 );
 

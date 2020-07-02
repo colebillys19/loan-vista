@@ -9,6 +9,7 @@ import Tabs from './Tabs';
 import {
   ContentWrapper,
   HomePageButtonWrapper,
+  StyledButton,
   TabNavWrapper,
 } from './styledComponents';
 
@@ -23,7 +24,7 @@ const TabNav = () => {
     <TabNavWrapper>
       <ContentWrapper>
         <HomePageButtonWrapper>
-          <div>Loan Profile</div>
+          <StyledButton disableRipple>Loan Profile</StyledButton>
         </HomePageButtonWrapper>
         <Tabs value={value} handleChange={handleChange} />
       </ContentWrapper>
