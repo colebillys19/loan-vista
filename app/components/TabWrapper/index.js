@@ -6,7 +6,7 @@
 import styled from 'styled-components';
 
 export default styled.div`
-  background-color: #777;
+  background-color: #a9a0e1;
   display: inline-block;
   height: calc(100vh - 14.3rem);
   margin-left: 0.3rem;

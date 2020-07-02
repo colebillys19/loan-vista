@@ -4,7 +4,6 @@ import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 
 export const ContentWrapper = styled.div`
-  background-color: #bbb;
   height: 100%;
   margin: 0 auto;
   position: relative;
@@ -35,6 +34,7 @@ export const StyledButton = styled(Button)`
 
 export const StyledTab = styled(Tab)`
   flex-grow: 1;
+  font-family: Lato, Helvetica, Arial, sans-serif;
   font-size: 1.4rem;
   height: 100%;
   max-width: 30rem;
@@ -56,7 +56,7 @@ export const StyledTabs = styled(Tabs)`
     position: relative;
   }
   & .MuiTabs-indicator {
-    background-color: royalblue;
+    background-color: rgb(106, 90, 205);
     height: 0.5rem;
   }
 `;
