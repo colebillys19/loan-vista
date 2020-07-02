@@ -1,20 +1,20 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import { HomePage } from '../index';
+import { Home } from '../index';
 
-describe('<HomePage />', () => {
+describe('<Home />', () => {
   it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     const dispatch = jest.fn();
-    render(<HomePage dispatch={dispatch} />);
+    render(<Home dispatch={dispatch} />);
     expect(spy).not.toHaveBeenCalled();
   });
 
   it('Should render and match the snapshot', () => {
     const {
       container: { firstChild },
-    } = render(<HomePage />);
+    } = render(<Home />);
     expect(firstChild).toMatchSnapshot();
   });
 });

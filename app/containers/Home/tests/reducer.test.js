@@ -1,7 +1,7 @@
-import homepageReducer from '../reducer';
+import homeReducer from '../reducer';
 
 /* eslint-disable default-case, no-param-reassign */
-describe('homepageReducer', () => {
+describe('homeReducer', () => {
   let state;
   beforeEach(() => {
     state = {
@@ -11,6 +11,6 @@ describe('homepageReducer', () => {
 
   it('returns the initial state', () => {
     const expectedResult = state;
-    expect(homepageReducer(undefined, {})).toEqual(expectedResult);
+    expect(homeReducer(undefined, {})).toEqual(expectedResult);
   });
 });

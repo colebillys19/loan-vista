@@ -1,5 +1,5 @@
 /**
- * HomePage
+ * Home
  * @description ...
  */
 
@@ -11,21 +11,21 @@ import { compose } from 'redux';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
-import makeSelectHomePage from './selectors';
+import makeSelectHome from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 
-export function HomePage() {
-  useInjectReducer({ key: 'homepage', reducer });
-  useInjectSaga({ key: 'homepage', saga });
+export function Home() {
+  useInjectReducer({ key: 'home', reducer });
+  useInjectSaga({ key: 'home', saga });
 
-  return <div>HomePage</div>;
+  return <div>Home</div>;
 }
 
-HomePage.propTypes = {};
+Home.propTypes = {};
 
 const mapStateToProps = createStructuredSelector({
-  homepage: makeSelectHomePage(),
+  home: makeSelectHome(),
 });
 
 function mapDispatchToProps(dispatch) {
@@ -39,4 +39,4 @@ const withConnect = connect(
   mapDispatchToProps,
 );
 
-export default compose(withConnect)(HomePage);
+export default compose(withConnect)(Home);

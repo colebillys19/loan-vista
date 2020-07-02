@@ -4,7 +4,7 @@ import { DEFAULT_ACTION } from './constants';
 export const initialState = {};
 
 /* eslint-disable default-case, no-param-reassign */
-const homepageReducer = (state = initialState, action) =>
+const homeReducer = (state = initialState, action) =>
   produce(state, (/* draft */) => {
     switch (action.type) {
       case DEFAULT_ACTION:
@@ -12,4 +12,4 @@ const homepageReducer = (state = initialState, action) =>
     }
   });
 
-export default homepageReducer;
+export default homeReducer;
