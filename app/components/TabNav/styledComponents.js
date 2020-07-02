@@ -4,7 +4,7 @@ import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 
 export const ContentWrapper = styled.div`
-  background-color: coral;
+  background-color: #bbb;
   height: 100%;
   margin: 0 auto;
   position: relative;
@@ -26,6 +26,7 @@ export const StyledButton = styled(Button)`
   padding: 0;
   line-height: 1.8rem;
   margin: 0 auto;
+  text-transform: none;
   & :hover {
     text-decoration: underline;
     background-color: transparent;
@@ -55,7 +56,7 @@ export const StyledTabs = styled(Tabs)`
     position: relative;
   }
   & .MuiTabs-indicator {
-    background-color: indigo;
+    background-color: royalblue;
     height: 0.5rem;
   }
 `;
