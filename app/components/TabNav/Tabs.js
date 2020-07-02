@@ -14,7 +14,7 @@ const Tabs = ({ handleChange, value }) => (
 
 Tabs.propTypes = {
   handleChange: T.func.isRequired,
-  value: T.number.isRequired,
+  value: T.oneOfType([T.number, T.bool]).isRequired,
 };
 
 export default Tabs;

@@ -5,6 +5,11 @@
 
 import React, { Fragment } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import T from 'prop-types';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { compose } from 'redux';
+import { push } from 'connected-react-router';
 
 import GlobalStyle from 'global-styles';
 
@@ -19,12 +24,13 @@ import NotFoundView from 'components/NotFoundView';
 import Sidebar from 'components/Sidebar';
 import TabNav from 'components/TabNav';
 
+import { makeSelectPathname } from './selectors';
 import { MainWrapper } from './styledComponents';
 
-const App = () => (
+const App = ({ dispatchNavigation, pathname }) => (
   <Fragment>
     <Header />
-    <TabNav />
+    <TabNav dispatchNavigation={dispatchNavigation} pathname={pathname} />
     <MainWrapper>
       <Sidebar />
       <Switch>
@@ -40,4 +46,21 @@ const App = () => (
   </Fragment>
 );
 
-export default App;
+App.propTypes = { dispatchNavigation: T.func.isRequired, pathname: T.string.isRequired };
+
+const mapStateToProps = createStructuredSelector({
+  pathname: makeSelectPathname(),
+});
+
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatchNavigation: (pathname) => dispatch(push(pathname)),
+  };
+}
+
+const withConnect = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+);
+
+export default compose(withConnect)(App);
