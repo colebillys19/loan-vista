@@ -13,6 +13,7 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import history from 'utils/history';
 import 'sanitize.css/sanitize.css';
+import { StylesProvider } from '@material-ui/core/styles';
 
 // Import root app
 import App from 'containers/App';
@@ -34,7 +35,9 @@ const render = () => {
   ReactDOM.render(
     <Provider store={store}>
       <ConnectedRouter history={history}>
-        <App />
+        <StylesProvider injectFirst>
+          <App />
+        </StylesProvider>
       </ConnectedRouter>
     </Provider>,
     MOUNT_NODE,
