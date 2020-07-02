@@ -12,12 +12,15 @@ import Home from 'containers/Home/Loadable';
 import Payments from 'containers/Payments/Loadable';
 
 import EscrowView from 'components/EscrowView';
+import Header from 'components/Header';
 import NotFoundView from 'components/NotFoundView';
 
 import GlobalStyle from '../../global-styles';
 
 const App = () => (
   <div>
+    <Header />
+    <div>TabNav</div>
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/calls" component={Calls} />
