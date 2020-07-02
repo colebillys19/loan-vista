@@ -6,7 +6,15 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-const CallsView = () => <div>CallsView</div>;
+import TabWrapper from 'components/TabWrapper';
+
+import { CallsViewWrapper } from './styledComponents';
+
+const CallsView = () => (
+  <TabWrapper>
+    <CallsViewWrapper>CallsView</CallsViewWrapper>
+  </TabWrapper>
+);
 
 CallsView.propTypes = {};
 

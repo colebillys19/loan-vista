@@ -6,7 +6,15 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-const HomeView = () => <div>HomeView</div>;
+import TabWrapper from 'components/TabWrapper';
+
+import { HomeViewWrapper } from './styledComponents';
+
+const HomeView = () => (
+  <TabWrapper>
+    <HomeViewWrapper>HomeView</HomeViewWrapper>
+  </TabWrapper>
+);
 
 HomeView.propTypes = {};
 

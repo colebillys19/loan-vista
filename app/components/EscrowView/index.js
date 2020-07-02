@@ -6,7 +6,15 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-const EscrowView = () => <div>EscrowView</div>;
+import TabWrapper from 'components/TabWrapper';
+
+import { EscrowViewWrapper } from './styledComponents';
+
+const EscrowView = () => (
+  <TabWrapper>
+    <EscrowViewWrapper>EscrowView</EscrowViewWrapper>
+  </TabWrapper>
+);
 
 EscrowView.propTypes = {};
 

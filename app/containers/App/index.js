@@ -3,8 +3,10 @@
  * @description ...
  */
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Switch, Route } from 'react-router-dom';
+
+import GlobalStyle from 'global-styles';
 
 import Calls from 'containers/Calls/Loadable';
 import Emails from 'containers/Emails/Loadable';
@@ -14,23 +16,28 @@ import Payments from 'containers/Payments/Loadable';
 import EscrowView from 'components/EscrowView';
 import Header from 'components/Header';
 import NotFoundView from 'components/NotFoundView';
+import Sidebar from 'components/Sidebar';
+import TabNav from 'components/TabNav';
 
-import GlobalStyle from '../../global-styles';
+import { MainWrapper } from './styledComponents';
 
 const App = () => (
-  <div>
+  <Fragment>
     <Header />
-    <div>TabNav</div>
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/calls" component={Calls} />
-      <Route exact path="/emails" component={Emails} />
-      <Route exact path="/payments" component={Payments} />
-      <Route exact path="/escrow" component={EscrowView} />
-      <Route component={NotFoundView} />
-    </Switch>
+    <TabNav />
+    <MainWrapper>
+      <Sidebar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/calls" component={Calls} />
+        <Route exact path="/emails" component={Emails} />
+        <Route exact path="/payments" component={Payments} />
+        <Route exact path="/escrow" component={EscrowView} />
+        <Route component={NotFoundView} />
+      </Switch>
+    </MainWrapper>
     <GlobalStyle />
-  </div>
+  </Fragment>
 );
 
 export default App;

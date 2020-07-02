@@ -6,7 +6,15 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-const EmailsView = () => <div>EmailsView</div>;
+import TabWrapper from 'components/TabWrapper';
+
+import { EmailsViewWrapper } from './styledComponents';
+
+const EmailsView = () => (
+  <TabWrapper>
+    <EmailsViewWrapper>EmailsView</EmailsViewWrapper>
+  </TabWrapper>
+);
 
 EmailsView.propTypes = {};
 
