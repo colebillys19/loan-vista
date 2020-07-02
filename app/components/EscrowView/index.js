@@ -11,7 +11,7 @@ import TabWrapper from 'components/TabWrapper';
 import { EscrowViewWrapper } from './styledComponents';
 
 const EscrowView = () => (
-  <TabWrapper>
+  <TabWrapper aria-labelledby="escrow-tab" id="escrow-view">
     <EscrowViewWrapper>EscrowView</EscrowViewWrapper>
   </TabWrapper>
 );

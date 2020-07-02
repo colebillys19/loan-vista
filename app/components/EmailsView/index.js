@@ -11,7 +11,7 @@ import TabWrapper from 'components/TabWrapper';
 import { EmailsViewWrapper } from './styledComponents';
 
 const EmailsView = () => (
-  <TabWrapper>
+  <TabWrapper aria-labelledby="emails-tab" id="emails-view">
     <EmailsViewWrapper>EmailsView</EmailsViewWrapper>
   </TabWrapper>
 );

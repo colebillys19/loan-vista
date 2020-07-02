@@ -11,7 +11,7 @@ import TabWrapper from 'components/TabWrapper';
 import { HomeViewWrapper } from './styledComponents';
 
 const HomeView = () => (
-  <TabWrapper>
+  <TabWrapper aria-labelledby="home-button" id="home-view">
     <HomeViewWrapper>HomeView</HomeViewWrapper>
   </TabWrapper>
 );

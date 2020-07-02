@@ -11,7 +11,7 @@ import TabWrapper from 'components/TabWrapper';
 import { CallsViewWrapper } from './styledComponents';
 
 const CallsView = () => (
-  <TabWrapper>
+  <TabWrapper aria-labelledby="calls-tab" id="calls-view">
     <CallsViewWrapper>CallsView</CallsViewWrapper>
   </TabWrapper>
 );

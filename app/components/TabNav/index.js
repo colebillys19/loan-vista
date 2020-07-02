@@ -24,7 +24,9 @@ const TabNav = () => {
     <TabNavWrapper>
       <ContentWrapper>
         <HomePageButtonWrapper>
-          <StyledButton disableRipple>Loan Profile</StyledButton>
+          <StyledButton disableRipple id="home-button">
+            Loan Profile
+          </StyledButton>
         </HomePageButtonWrapper>
         <Tabs value={value} handleChange={handleChange} />
       </ContentWrapper>

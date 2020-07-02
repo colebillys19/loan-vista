@@ -11,7 +11,7 @@ import TabWrapper from 'components/TabWrapper';
 import { PaymentsViewWrapper } from './styledComponents';
 
 const PaymentsView = () => (
-  <TabWrapper>
+  <TabWrapper aria-labelledby="payments-tab" id="payments-view">
     <PaymentsViewWrapper>PaymentsView</PaymentsViewWrapper>
   </TabWrapper>
 );
