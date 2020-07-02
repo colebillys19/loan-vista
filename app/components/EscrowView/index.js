@@ -7,9 +7,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 // import styled from 'styled-components';
 
-function EscrowView() {
-  return <div />;
-}
+const EscrowView = () => <div>EscrowView</div>;
 
 EscrowView.propTypes = {};
 

@@ -4,18 +4,20 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
+import PaymentsView from 'components/PaymentsView';
+
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
 import makeSelectPayments from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 
-export function Payments() {
+export const Payments = () => {
   useInjectReducer({ key: 'payments', reducer });
   useInjectSaga({ key: 'payments', saga });
 
-  return <div />;
-}
+  return <PaymentsView />;
+};
 
 Payments.propTypes = {};
 

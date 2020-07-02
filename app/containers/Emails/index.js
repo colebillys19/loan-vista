@@ -9,18 +9,20 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
+import EmailsView from 'components/EmailsView';
+
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
 import makeSelectEmails from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 
-export function Emails() {
+export const Emails = () => {
   useInjectReducer({ key: 'emails', reducer });
   useInjectSaga({ key: 'emails', saga });
 
-  return <div />;
-}
+  return <EmailsView />;
+};
 
 Emails.propTypes = {};
 

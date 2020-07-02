@@ -16,18 +16,18 @@ import NotFoundView from 'components/NotFoundView';
 
 import GlobalStyle from '../../global-styles';
 
-export default function App() {
-  return (
-    <div>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/calls" component={Calls} />
-        <Route exact path="/emails" component={Emails} />
-        <Route exact path="/payments" component={Payments} />
-        <Route exact path="/escrow" component={EscrowView} />
-        <Route component={NotFoundView} />
-      </Switch>
-      <GlobalStyle />
-    </div>
-  );
-}
+const App = () => (
+  <div>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/calls" component={Calls} />
+      <Route exact path="/emails" component={Emails} />
+      <Route exact path="/payments" component={Payments} />
+      <Route exact path="/escrow" component={EscrowView} />
+      <Route component={NotFoundView} />
+    </Switch>
+    <GlobalStyle />
+  </div>
+);
+
+export default App;
