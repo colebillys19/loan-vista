@@ -18,8 +18,8 @@ import Emails from 'containers/Emails/Loadable';
 import Home from 'containers/Home/Loadable';
 import Payments from 'containers/Payments/Loadable';
 
-import EscrowView from 'components/EscrowView';
 import Header from 'components/Header';
+import MiscView from 'components/MiscView';
 import NotFoundView from 'components/NotFoundView';
 import Sidebar from 'components/Sidebar';
 import TabNav from 'components/TabNav';
@@ -32,13 +32,13 @@ const App = ({ dispatchNavigation, pathname }) => (
     <Header />
     <TabNav dispatchNavigation={dispatchNavigation} pathname={pathname} />
     <MainWrapper>
-      <Sidebar />
+      <Sidebar pathname={pathname} />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/calls" component={Calls} />
         <Route exact path="/emails" component={Emails} />
         <Route exact path="/payments" component={Payments} />
-        <Route exact path="/escrow" component={EscrowView} />
+        <Route exact path="/misc" component={MiscView} />
         <Route component={NotFoundView} />
       </Switch>
     </MainWrapper>

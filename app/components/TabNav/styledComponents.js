@@ -4,17 +4,14 @@ import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 
 export const ContentWrapper = styled.div`
-  height: 100%;
+  height: 6rem;
   margin: 0 auto;
-  position: relative;
   width: 120rem;
 `;
 
 export const HomePageButtonWrapper = styled.div`
   align-items: center;
   display: flex;
-  height: 100%;
-  justify-content: center;
   position: absolute;
   width: 36rem;
 `;
@@ -22,9 +19,9 @@ export const HomePageButtonWrapper = styled.div`
 export const StyledButton = styled(Button)`
   display: block;
   font-size: 2rem;
-  padding: 0;
-  line-height: 1.8rem;
+  height: 6rem;
   margin: 0 auto;
+  padding: 0;
   text-transform: none;
   & :hover {
     text-decoration: underline;
@@ -34,27 +31,17 @@ export const StyledButton = styled(Button)`
 
 export const StyledTab = styled(Tab)`
   flex-grow: 1;
-  font-family: Lato, Helvetica, Arial, sans-serif;
   font-size: 1.4rem;
-  height: 100%;
-  max-width: 30rem;
+  height: 6rem;
+  max-width: 22rem;
   text-transform: none;
 `;
 
 export const StyledTabs = styled(Tabs)`
   display: inline-block;
-  height: 100%;
   left: 36.3rem;
   position: relative;
   width: 83.7rem;
-  & .MuiTabs-scroller {
-    height: 100%;
-    position: relative;
-  }
-  & .MuiTabs-flexContainer {
-    height: 100%;
-    position: relative;
-  }
   & .MuiTabs-indicator {
     background-color: rgb(106, 90, 205);
     height: 0.5rem;
@@ -62,6 +49,5 @@ export const StyledTabs = styled(Tabs)`
 `;
 
 export const TabNavWrapper = styled.div`
-  height: 6rem;
   margin-bottom: 0.3rem;
 `;
