@@ -6,7 +6,15 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-const NotFoundView = () => <div>NotFoundView</div>;
+import TabWrapper from 'components/TabWrapper';
+
+import { NotFoundViewWrapper } from './styledComponents';
+
+const NotFoundView = () => (
+  <TabWrapper aria-labelledby="misc-tab" id="misc-view">
+    <NotFoundViewWrapper>NotFoundView</NotFoundViewWrapper>
+  </TabWrapper>
+);
 
 NotFoundView.propTypes = {};
 

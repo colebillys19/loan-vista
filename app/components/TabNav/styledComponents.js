@@ -43,7 +43,7 @@ export const StyledTabs = styled(Tabs)`
   position: relative;
   width: 83.7rem;
   & .MuiTabs-indicator {
-    background-color: rgb(106, 90, 205);
+    background-color: #4370ff;
     height: 0.5rem;
   }
 `;
