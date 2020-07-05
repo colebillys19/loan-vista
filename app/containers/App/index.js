@@ -13,10 +13,10 @@ import { push } from 'connected-react-router';
 
 import GlobalStyle from 'global-styles';
 
-import Calls from 'containers/Calls/Loadable';
-import Emails from 'containers/Emails/Loadable';
-import Home from 'containers/Home/Loadable';
-import Payments from 'containers/Payments/Loadable';
+import Calls from 'containers/Calls';
+import Emails from 'containers/Emails';
+import Home from 'containers/Home';
+import Payments from 'containers/Payments';
 
 import Header from 'components/Header';
 import MiscView from 'components/MiscView';
