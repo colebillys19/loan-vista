@@ -20,6 +20,6 @@ export const StyledH1 = styled.h1`
   display: block;
   font-size: 2.5rem;
   font-weight: normal;
-  margin: 1rem auto 0;
-  width: max-content;
+  margin-top: 1rem;
+  text-align: center;
 `;

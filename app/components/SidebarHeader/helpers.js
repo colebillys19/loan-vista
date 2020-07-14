@@ -3,7 +3,7 @@ import iconDictionary from 'utils/iconDictionary';
 export const getIcon = (pathname) => {
   switch (pathname) {
     case '/':
-      return iconDictionary('profile', '8.8rem');
+      return iconDictionary('profile', '9rem');
 
     case '/calls':
       return iconDictionary('call', '8.5rem');

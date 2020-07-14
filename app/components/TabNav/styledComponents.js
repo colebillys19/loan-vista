@@ -18,7 +18,7 @@ export const HomePageButtonWrapper = styled.div`
 
 export const StyledButton = styled(Button)`
   display: block;
-  font-size: 2rem;
+  font-size: 2.2rem;
   height: 6rem;
   margin: 0 auto;
   padding: 0;
