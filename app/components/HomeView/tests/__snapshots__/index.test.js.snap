@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomeView /> Should render and match the snapshot 1`] = `
+<section
+  aria-labelledby="home-button"
+  class="TabWrapper-j2wsfb-0 beIMbY"
+  id="home-view"
+>
+  <div
+    class="styledComponents__HomeViewWrapper-sc-1bdscd6-0 jnMtMY"
+  >
+    HomeView
+  </div>
+</section>
+`;

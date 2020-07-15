@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TabNav /> Should render and match the snapshot 1`] = `
+<div
+  class="styledComponents__TabNavWrapper-sc-17zzlu5-5 dORugu"
+>
+  <div
+    class="styledComponents__ContentWrapper-sc-17zzlu5-0 eROMjD"
+  >
+    <div
+      class="styledComponents__HomePageButtonWrapper-sc-17zzlu5-1 kdpGIa"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-17zzlu5-2 cVUXVk"
+        id="home-button"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Loan Profile
+        </span>
+      </button>
+    </div>
+    <div
+      class="MuiTabs-root styledComponents__StyledTabs-sc-17zzlu5-4 ewLGCw"
+    >
+      <div
+        class="MuiTabs-scroller MuiTabs-fixed"
+        style="overflow: hidden;"
+      >
+        <div
+          class="MuiTabs-flexContainer"
+          role="tablist"
+        >
+          <button
+            aria-controls="calls-view"
+            aria-selected="false"
+            class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-sc-17zzlu5-3 bzfEUX"
+            id="calls-tab"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <span
+              class="MuiTab-wrapper"
+            >
+              Calls
+            </span>
+          </button>
+          <button
+            aria-controls="emails-view"
+            aria-selected="false"
+            class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-sc-17zzlu5-3 bzfEUX"
+            id="emails-tab"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <span
+              class="MuiTab-wrapper"
+            >
+              Emails
+            </span>
+          </button>
+          <button
+            aria-controls="payments-view"
+            aria-selected="false"
+            class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-sc-17zzlu5-3 bzfEUX"
+            id="payments-tab"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <span
+              class="MuiTab-wrapper"
+            >
+              Payments
+            </span>
+          </button>
+          <button
+            aria-controls="misc-view"
+            aria-selected="false"
+            class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-sc-17zzlu5-3 bzfEUX"
+            id="misc-tab"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <span
+              class="MuiTab-wrapper"
+            >
+              Misc
+            </span>
+          </button>
+        </div>
+        <span
+          class="PrivateTabIndicator-root-5 PrivateTabIndicator-colorSecondary-7 MuiTabs-indicator"
+          style="left: 0px; width: 0px;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

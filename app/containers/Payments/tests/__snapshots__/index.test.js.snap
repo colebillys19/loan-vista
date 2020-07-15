@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Payments /> Should render and match the snapshot 1`] = `
+<section
+  aria-labelledby="payments-tab"
+  class="TabWrapper-j2wsfb-0 beIMbY"
+  id="payments-view"
+>
+  <div
+    class="styledComponents__PaymentsViewWrapper-aridfv-0 vPqov"
+  >
+    PaymentsView
+  </div>
+</section>
+`;

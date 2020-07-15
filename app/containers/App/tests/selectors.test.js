@@ -8,6 +8,6 @@ describe('makeSelectLocation', () => {
     const mockedState = {
       router,
     };
-    expect(makeSelectPathname()(mockedState)).toEqual(router.location);
+    expect(makeSelectPathname()(mockedState)).toEqual('/foo');
   });
 });
