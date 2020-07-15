@@ -1,12 +1,12 @@
 import { createSelector } from 'reselect';
 import { initialState } from './reducer';
 
-const selectHomeDomain = state => state.home || initialState;
+const selectHomeDomain = (state) => state.home || initialState;
 
 const makeSelectHome = () =>
   createSelector(
     selectHomeDomain,
-    substate => substate,
+    (substate) => substate,
   );
 
 export default makeSelectHome;

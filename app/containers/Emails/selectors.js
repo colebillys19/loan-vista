@@ -1,12 +1,12 @@
 import { createSelector } from 'reselect';
 import { initialState } from './reducer';
 
-const selectEmailsDomain = state => state.emails || initialState;
+const selectEmailsDomain = (state) => state.emails || initialState;
 
 const makeSelectEmails = () =>
   createSelector(
     selectEmailsDomain,
-    substate => substate,
+    (substate) => substate,
   );
 
 export default makeSelectEmails;

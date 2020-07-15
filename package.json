@@ -40,8 +40,7 @@
     "test:clean": "rimraf ./coverage",
     "test": "cross-env NODE_ENV=test jest --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
-    "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "prettify": "prettier --write"
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "browserslist": [
     "last 2 versions",

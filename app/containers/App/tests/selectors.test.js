@@ -1,4 +1,4 @@
-import { makeSelectLocation } from 'containers/App/selectors';
+import { makeSelectPathname } from 'containers/App/selectors';
 
 describe('makeSelectLocation', () => {
   it('should select the location', () => {
@@ -8,6 +8,6 @@ describe('makeSelectLocation', () => {
     const mockedState = {
       router,
     };
-    expect(makeSelectLocation()(mockedState)).toEqual(router.location);
+    expect(makeSelectPathname()(mockedState)).toEqual(router.location);
   });
 });

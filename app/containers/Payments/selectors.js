@@ -1,12 +1,12 @@
 import { createSelector } from 'reselect';
 import { initialState } from './reducer';
 
-const selectPaymentsDomain = state => state.payments || initialState;
+const selectPaymentsDomain = (state) => state.payments || initialState;
 
 const makeSelectPayments = () =>
   createSelector(
     selectPaymentsDomain,
-    substate => substate,
+    (substate) => substate,
   );
 
 export default makeSelectPayments;
