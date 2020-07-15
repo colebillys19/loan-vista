@@ -6,7 +6,7 @@ export const getIcon = (pathname) => {
       return iconDictionary('profile', '9rem');
 
     case '/calls':
-      return iconDictionary('call', '8.5rem');
+      return iconDictionary('call', '8.2rem');
 
     case '/emails':
       return iconDictionary('mail', '9.5rem');
@@ -25,7 +25,7 @@ export const getIcon = (pathname) => {
 export const getTabName = (pathname) => {
   switch (pathname) {
     case '/':
-      return 'Home';
+      return '1234567890';
 
     case '/calls':
       return 'Calls';
