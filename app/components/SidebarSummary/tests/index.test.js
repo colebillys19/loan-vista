@@ -1,23 +1,19 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import TabNav from '../index';
+import SidebarSummary from '../index';
 
-const mockProps = { dispatchNavigation: jest.fn(), pathname: 'pathname' };
-
-const Component = <TabNav {...mockProps} />;
-
-describe('<TabNav />', () => {
+describe('<SidebarSummary />', () => {
   it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
-    render(Component);
+    render(<SidebarSummary />);
     expect(spy).not.toHaveBeenCalled();
   });
 
   it.skip('Should render and match the snapshot', () => {
     const {
       container: { firstChild },
-    } = render(Component);
+    } = render(<SidebarSummary />);
     expect(firstChild).toMatchSnapshot();
   });
 });
