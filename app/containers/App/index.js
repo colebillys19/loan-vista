@@ -35,7 +35,10 @@ const App = ({ dispatchNavigation, pathname }) => (
     <Main
       render={({ sidebarLoanSummaryData }) => (
         <MainWrapper>
-          <Sidebar pathname={pathname} sidebarLoanSummaryData={sidebarLoanSummaryData} />
+          <Sidebar
+            pathname={pathname}
+            sidebarLoanSummaryData={sidebarLoanSummaryData}
+          />
           <Switch>
             <Route component={HomeView} exact path="/" />
             <Route component={Calls} exact path="/calls" />
@@ -51,7 +54,10 @@ const App = ({ dispatchNavigation, pathname }) => (
   </Fragment>
 );
 
-App.propTypes = { dispatchNavigation: T.func.isRequired, pathname: T.string.isRequired };
+App.propTypes = {
+  dispatchNavigation: T.func.isRequired,
+  pathname: T.string.isRequired,
+};
 
 const mapStateToProps = createStructuredSelector({
   pathname: makeSelectPathname(),

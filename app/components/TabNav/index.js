@@ -35,7 +35,11 @@ const TabNav = ({ dispatchNavigation, pathname }) => {
     <TabNavWrapper>
       <ContentWrapper>
         <HomeViewButtonWrapper>
-          <StyledButton disableRipple id="home-button" onClick={handleHomeButtonClick}>
+          <StyledButton
+            disableRipple
+            id="home-button"
+            onClick={handleHomeButtonClick}
+          >
             Loan Profile
           </StyledButton>
         </HomeViewButtonWrapper>
@@ -45,6 +49,9 @@ const TabNav = ({ dispatchNavigation, pathname }) => {
   );
 };
 
-TabNav.propTypes = { dispatchNavigation: T.func.isRequired, pathname: T.string.isRequired };
+TabNav.propTypes = {
+  dispatchNavigation: T.func.isRequired,
+  pathname: T.string.isRequired,
+};
 
 export default TabNav;

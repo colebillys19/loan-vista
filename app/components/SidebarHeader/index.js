@@ -7,7 +7,11 @@ import React from 'react';
 import T from 'prop-types';
 
 import { getIcon, getTabName } from './helpers';
-import { IconWrapper, SidebarHeaderWrapper, StyledH1 } from './styledComponents';
+import {
+  IconWrapper,
+  SidebarHeaderWrapper,
+  StyledH1,
+} from './styledComponents';
 
 const SidebarHeader = ({ pathname }) => (
   <SidebarHeaderWrapper>

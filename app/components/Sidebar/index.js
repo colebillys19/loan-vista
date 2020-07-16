@@ -14,10 +14,17 @@ import { SidebarWrapper } from './styledComponents';
 const Sidebar = ({ pathname, sidebarLoanSummaryData }) => (
   <SidebarWrapper>
     <SidebarHeader pathname={pathname} />
-    <SidebarSummary data={sidebarLoanSummaryData} iconName="money" title="Loan" />
+    <SidebarSummary
+      data={sidebarLoanSummaryData}
+      iconName="money"
+      title="Loan"
+    />
   </SidebarWrapper>
 );
 
-Sidebar.propTypes = { pathname: T.string.isRequired, sidebarLoanSummaryData: T.array.isRequired };
+Sidebar.propTypes = {
+  pathname: T.string.isRequired,
+  sidebarLoanSummaryData: T.array.isRequired,
+};
 
 export default Sidebar;

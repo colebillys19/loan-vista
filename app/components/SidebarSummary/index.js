@@ -8,7 +8,11 @@ import T from 'prop-types';
 
 import iconDictionary from 'utils/iconDictionary';
 
-import { IconWrapper, SidebarSummaryWrapper, StyledH5 } from './styledComponents';
+import {
+  IconWrapper,
+  SidebarSummaryWrapper,
+  StyledH5,
+} from './styledComponents';
 
 const SidebarSummary = ({ data, iconName, title }) => {
   const Icon = iconDictionary(iconName, '3rem');
