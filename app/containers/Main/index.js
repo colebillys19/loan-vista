@@ -1,33 +1,31 @@
 /**
- * Home
+ * Main
  * @description ...
  */
 
-import React from 'react';
-// import PropTypes from 'prop-types';
+import T from 'prop-types';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
-import HomeView from 'components/HomeView';
-
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
-import makeSelectHome from './selectors';
+import makeSelectMain from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+import { sidebarLoanSummaryData } from './mockData';
 
-export const Home = () => {
-  useInjectReducer({ key: 'home', reducer });
-  useInjectSaga({ key: 'home', saga });
+export const Main = ({ render }) => {
+  useInjectReducer({ key: 'main', reducer });
+  useInjectSaga({ key: 'main', saga });
 
-  return <HomeView />;
+  return render({ sidebarLoanSummaryData });
 };
 
-Home.propTypes = {};
+Main.propTypes = { render: T.func.isRequired };
 
 const mapStateToProps = createStructuredSelector({
-  home: makeSelectHome(),
+  main: makeSelectMain(),
 });
 
 function mapDispatchToProps(dispatch) {
@@ -41,4 +39,4 @@ const withConnect = connect(
   mapDispatchToProps,
 );
 
-export default compose(withConnect)(Home);
+export default compose(withConnect)(Main);

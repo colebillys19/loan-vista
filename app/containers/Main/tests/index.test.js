@@ -5,32 +5,32 @@ import { Provider } from 'react-redux';
 
 import configureStore from 'configureStore';
 import history from 'utils/history';
-import { Home } from '../index';
+import { Main } from '../index';
 
 // Create redux store with history
 const initialState = {};
 const store = configureStore(initialState, history);
 
-const WrappedHome = (props) => (
+const WrappedMain = (props) => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Home {...props} />
+      <Main {...props} />
     </ConnectedRouter>
   </Provider>
 );
 
-describe('<Home />', () => {
+describe('<Main />', () => {
   it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     const dispatch = jest.fn();
-    render(<WrappedHome dispatch={dispatch} />);
+    render(<WrappedMain dispatch={dispatch} />);
     expect(spy).not.toHaveBeenCalled();
   });
 
   it.skip('Should render and match the snapshot', () => {
     const {
       container: { firstChild },
-    } = render(<WrappedHome />);
+    } = render(<WrappedMain />);
     expect(firstChild).toMatchSnapshot();
   });
 });

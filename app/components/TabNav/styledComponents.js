@@ -9,7 +9,7 @@ export const ContentWrapper = styled.div`
   width: 120rem;
 `;
 
-export const HomePageButtonWrapper = styled.div`
+export const HomeViewButtonWrapper = styled.div`
   align-items: center;
   display: flex;
   position: absolute;

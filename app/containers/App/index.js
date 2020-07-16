@@ -15,10 +15,11 @@ import GlobalStyle from 'global-styles';
 
 import Calls from 'containers/Calls';
 import Emails from 'containers/Emails';
-import Home from 'containers/Home';
+import Main from 'containers/Main';
 import Payments from 'containers/Payments';
 
 import Header from 'components/Header';
+import HomeView from 'components/HomeView';
 import MiscView from 'components/MiscView';
 import NotFoundView from 'components/NotFoundView';
 import Sidebar from 'components/Sidebar';
@@ -31,17 +32,21 @@ const App = ({ dispatchNavigation, pathname }) => (
   <Fragment>
     <Header />
     <TabNav dispatchNavigation={dispatchNavigation} pathname={pathname} />
-    <MainWrapper>
-      <Sidebar pathname={pathname} />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/calls" component={Calls} />
-        <Route exact path="/emails" component={Emails} />
-        <Route exact path="/payments" component={Payments} />
-        <Route exact path="/misc" component={MiscView} />
-        <Route component={NotFoundView} />
-      </Switch>
-    </MainWrapper>
+    <Main
+      render={({ sidebarLoanSummaryData }) => (
+        <MainWrapper>
+          <Sidebar pathname={pathname} sidebarLoanSummaryData={sidebarLoanSummaryData} />
+          <Switch>
+            <Route component={HomeView} exact path="/" />
+            <Route component={Calls} exact path="/calls" />
+            <Route component={Emails} exact path="/emails" />
+            <Route component={Payments} exact path="/payments" />
+            <Route component={MiscView} exact path="/misc" />
+            <Route component={NotFoundView} />
+          </Switch>
+        </MainWrapper>
+      )}
+    />
     <GlobalStyle />
   </Fragment>
 );

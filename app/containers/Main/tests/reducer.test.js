@@ -1,7 +1,7 @@
-import homeReducer from '../reducer';
+import mainReducer from '../reducer';
 
 /* eslint-disable default-case, no-param-reassign */
-describe('homeReducer', () => {
+describe('mainReducer', () => {
   let state;
   beforeEach(() => {
     state = {
@@ -11,6 +11,6 @@ describe('homeReducer', () => {
 
   it('returns the initial state', () => {
     const expectedResult = state;
-    expect(homeReducer(undefined, {})).toEqual(expectedResult);
+    expect(mainReducer(undefined, {})).toEqual(expectedResult);
   });
 });

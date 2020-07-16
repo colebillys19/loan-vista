@@ -12,7 +12,7 @@ export const IconWrapper = styled.div`
 `;
 
 export const SidebarHeaderWrapper = styled.div`
-  margin: 3rem auto 0;
+  margin: 3rem auto;
   width: 100%;
 `;
 

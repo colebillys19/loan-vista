@@ -1,0 +1,15 @@
+export const sidebarLoanSummaryData = [
+  { label: 'Loan Type', value: 'FHA Residential' },
+  { label: 'Status', value: 'Current' },
+  { label: 'Principal Balance', value: '$234,456.78' },
+  { label: 'Original Loan Amount', value: '$345,567,89' },
+  { label: 'Investor Name', value: 'Nevada Housing' },
+  { label: 'Investor Code', value: 'N03' },
+  { label: 'Assumption Code', value: 'A' },
+  { label: 'Assumption Date', value: '2/3/2020' },
+  { label: 'Interest Rate', value: '5%' },
+  { label: 'Origination Date', value: '5/6/2012' },
+  { label: 'Maturity Date', value: '5/6/2042' },
+  { label: 'Grace Days', value: '15' },
+  { label: 'Lien Position', value: '1st Mortgage' },
+];
