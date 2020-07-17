@@ -13,13 +13,13 @@ import { useInjectReducer } from 'utils/injectReducer';
 import makeSelectMain from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import { sidebarLoanSummaryData } from './mockData';
+import { sidebarSummaryData } from './mockData';
 
 export const Main = ({ render }) => {
   useInjectReducer({ key: 'main', reducer });
   useInjectSaga({ key: 'main', saga });
 
-  return render({ sidebarLoanSummaryData });
+  return render({ sidebarSummaryData });
 };
 
 Main.propTypes = { render: T.func.isRequired };

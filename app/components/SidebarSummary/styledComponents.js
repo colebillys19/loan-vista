@@ -1,14 +1,29 @@
 import styled from 'styled-components';
 
-export const IconWrapper = styled.span`
-  outline: 1px solid orange;
-`;
-
 export const SidebarSummaryWrapper = styled.section`
-  outline: 1px solid green;
+  padding: 0 2rem 2rem;
 `;
 
-export const StyledH5 = styled.h5`
+export const StyledH5 = styled.h3`
   margin: 0;
-  color: pink;
+  display: inline-block;
+`;
+
+export const SummaryDetail = styled.div`
+  & span:last-of-type {
+    font-weight: bold;
+    margin-left: 0.3rem;
+  }
+  & :not(:last-of-type) {
+    margin-bottom: 0.3rem;
+  }
+`;
+
+export const SummaryTitleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  & svg {
+    margin-right: 0.8rem;
+  }
 `;

@@ -8,6 +8,7 @@ import Mail from './svg/Mail';
 import Money from './svg/Money';
 import Note from './svg/Note';
 import Profile from './svg/Profile';
+import Support from './svg/Support';
 import Warning from './svg/Warning';
 
 export default (name, size) => {
@@ -20,6 +21,7 @@ export default (name, size) => {
     money: Money,
     note: Note,
     profile: Profile,
+    support: Support,
     warning: Warning,
   };
 

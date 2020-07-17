@@ -11,20 +11,36 @@ import SidebarSummary from 'components/SidebarSummary';
 
 import { SidebarWrapper } from './styledComponents';
 
-const Sidebar = ({ pathname, sidebarLoanSummaryData }) => (
+const Sidebar = ({
+  pathname,
+  sidebarSummaryData: {
+    callsSummaryData,
+    loanSummaryData,
+    paymentSummaryData,
+    serviceSummaryData,
+  },
+}) => (
   <SidebarWrapper>
     <SidebarHeader pathname={pathname} />
+    <SidebarSummary data={loanSummaryData} iconName="note" title="Loan" />
+    <SidebarSummary data={paymentSummaryData} iconName="coin" title="Payment" />
+    <SidebarSummary data={callsSummaryData} iconName="call" title="Calls" />
     <SidebarSummary
-      data={sidebarLoanSummaryData}
-      iconName="money"
-      title="Loan"
+      data={serviceSummaryData}
+      iconName="support"
+      title="Service"
     />
   </SidebarWrapper>
 );
 
 Sidebar.propTypes = {
   pathname: T.string.isRequired,
-  sidebarLoanSummaryData: T.array.isRequired,
+  sidebarSummaryData: T.shape({
+    callsSummaryData: T.array,
+    loanSummaryData: T.array,
+    paymentSummaryData: T.array,
+    serviceSummaryData: T.array,
+  }).isRequired,
 };
 
 export default Sidebar;
