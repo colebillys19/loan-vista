@@ -1,18 +1,12 @@
 import styled from 'styled-components';
 
 export const IconWrapper = styled.div`
-  align-items: center;
-  display: flex;
-  height: 10rem;
-  justify-content: center;
-  margin: 0 auto;
-  position: relative;
+  margin-bottom: 2rem;
   text-align: center;
-  width: 10rem;
 `;
 
 export const SidebarHeaderWrapper = styled.div`
-  margin: 3rem auto;
+  margin: 0 auto 4rem;
   width: 100%;
 `;
 

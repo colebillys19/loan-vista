@@ -6,19 +6,19 @@ export const getIcon = (pathname) => {
       return iconDictionary('profile', '9rem');
 
     case '/calls':
-      return iconDictionary('call', '8.2rem');
+      return iconDictionary('call', '9rem');
 
     case '/emails':
-      return iconDictionary('mail', '9.5rem');
+      return iconDictionary('mail', '9rem');
 
     case '/payments':
-      return iconDictionary('money', '10rem');
+      return iconDictionary('money', '9rem');
 
     case '/misc':
-      return iconDictionary('folder', '8.6rem');
+      return iconDictionary('folder', '9rem');
 
     default:
-      return iconDictionary('warning', '10rem');
+      return iconDictionary('warning', '9rem');
   }
 };
 

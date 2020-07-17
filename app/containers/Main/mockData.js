@@ -11,7 +11,7 @@ export const sidebarSummaryData = {
     { label: 'Loan Type', value: 'FHA Residential' },
     { label: 'Status', value: 'Current' },
     { label: 'Principal Balance', value: '$234,456.78' },
-    { label: 'Original Loan Amount', value: '$345,567,89' },
+    { label: 'Original Loan Amount', value: '$345,567.89' },
     { label: 'Investor Name', value: 'Nevada Housing' },
     { label: 'Investor Code', value: 'N03' },
     { label: 'Assumption Code', value: 'A' },

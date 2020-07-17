@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const SidebarSummaryWrapper = styled.section`
-  padding: 0 2rem 2rem;
+  & :not(:last-of-type) {
+    margin-bottom: 2.2rem;
+  }
 `;
 
 export const StyledH5 = styled.h3`
