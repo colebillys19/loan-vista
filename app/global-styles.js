@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: Lato, Helvetica, Arial, sans-serif;
     font-size: 1.4rem;
+    letter-spacing: 0.1rem;
   }
 
   body.fontLoaded {

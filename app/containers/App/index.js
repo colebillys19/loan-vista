@@ -33,10 +33,11 @@ const App = ({ dispatchNavigation, pathname }) => (
     <Header />
     <TabNav dispatchNavigation={dispatchNavigation} pathname={pathname} />
     <Main
-      render={({ sidebarSummaryData }) => (
+      render={({ sidebarHeaderData, sidebarSummaryData }) => (
         <MainWrapper>
           <Sidebar
             pathname={pathname}
+            sidebarHeaderData={sidebarHeaderData}
             sidebarSummaryData={sidebarSummaryData}
           />
           <Switch>

@@ -16,7 +16,7 @@ import {
 } from './styledComponents';
 
 const SidebarSummary = ({ data, iconName, title }) => {
-  const Icon = iconDictionary(iconName, '2.5rem');
+  const Icon = iconDictionary(iconName, '1.2rem');
 
   return (
     <SidebarSummaryWrapper>

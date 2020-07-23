@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Bullet from './svg/Bullet';
 import Call from './svg/Call';
 import Calendar from './svg/Calendar';
 import Coin from './svg/Coin';
@@ -13,6 +14,7 @@ import Warning from './svg/Warning';
 
 export default (name, size) => {
   const icons = {
+    bullet: Bullet,
     call: Call,
     calendar: Calendar,
     coin: Coin,

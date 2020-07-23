@@ -26,6 +26,6 @@ export const SummaryTitleWrapper = styled.div`
   align-items: center;
   margin-bottom: 0.8rem;
   & svg {
-    margin-right: 0.8rem;
+    margin-right: 0.5rem;
   }
 `;

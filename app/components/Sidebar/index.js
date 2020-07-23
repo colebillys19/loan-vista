@@ -6,41 +6,31 @@
 import React from 'react';
 import T from 'prop-types';
 
-import SidebarHeader from 'components/SidebarHeader';
-import SidebarSummary from 'components/SidebarSummary';
+import ConditionalRender from 'components/_baseUI/ConditionalRender';
 
+import SidebarContent from './SidebarContent';
+import { pathnameIsValid } from './helpers';
 import { SidebarWrapper } from './styledComponents';
 
-const Sidebar = ({
-  pathname,
-  sidebarSummaryData: {
-    callsSummaryData,
-    loanSummaryData,
-    paymentSummaryData,
-    serviceSummaryData,
-  },
-}) => (
+const Sidebar = ({ pathname, sidebarHeaderData, sidebarSummaryData }) => (
   <SidebarWrapper>
-    <SidebarHeader pathname={pathname} />
-    <SidebarSummary data={loanSummaryData} iconName="note" title="Loan" />
-    <SidebarSummary data={paymentSummaryData} iconName="coin" title="Payment" />
-    <SidebarSummary data={callsSummaryData} iconName="call" title="Calls" />
-    <SidebarSummary
-      data={serviceSummaryData}
-      iconName="support"
-      title="Service"
+    <ConditionalRender
+      Component={
+        <SidebarContent
+          pathname={pathname}
+          sidebarHeaderData={sidebarHeaderData}
+          sidebarSummaryData={sidebarSummaryData}
+        />
+      }
+      shouldRender={pathnameIsValid(pathname)}
     />
   </SidebarWrapper>
 );
 
 Sidebar.propTypes = {
   pathname: T.string.isRequired,
-  sidebarSummaryData: T.shape({
-    callsSummaryData: T.array,
-    loanSummaryData: T.array,
-    paymentSummaryData: T.array,
-    serviceSummaryData: T.array,
-  }).isRequired,
+  sidebarHeaderData: T.object.isRequired,
+  sidebarSummaryData: T.object.isRequired,
 };
 
 export default Sidebar;

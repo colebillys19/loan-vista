@@ -1,3 +1,12 @@
+export const sidebarHeaderData = {
+  address1: '43 Heritage Knoll Ct',
+  address2: 'Carson City, NV 89701',
+  health: 1,
+  loanNumber: '1590753088',
+  name: 'John Doe',
+  status: 'Current',
+};
+
 export const sidebarSummaryData = {
   callsSummaryData: [
     { label: 'Total Calls', value: '82' },
