@@ -6,8 +6,11 @@
 import React from 'react';
 import T from 'prop-types';
 
+import ConditionalRender from 'components/_baseUI/ConditionalRender';
+
 import { getIcon, getTabName } from './helpers';
 import {
+  DetailLabel,
   IconWrapper,
   SidebarDetail,
   SidebarHeaderWrapper,
@@ -24,20 +27,28 @@ const SidebarHeader = ({
     name,
     status,
   },
-}) => {
-  const heading = pathname === '/' ? loanNumber : getTabName(pathname);
-
-  return (
-    <SidebarHeaderWrapper>
-      <IconWrapper>{getIcon(pathname, '10rem')}</IconWrapper>
-      <StyledH1>{heading}</StyledH1>
-      <SidebarDetail>{name}</SidebarDetail>
-      <SidebarDetail>{address1}</SidebarDetail>
-      <SidebarDetail>{address2}</SidebarDetail>
-      <SidebarDetail>Status: {status}</SidebarDetail>
-    </SidebarHeaderWrapper>
-  );
-};
+}) => (
+  <SidebarHeaderWrapper>
+    <IconWrapper>{getIcon(pathname, '10rem')}</IconWrapper>
+    <StyledH1>{pathname === '/' ? loanNumber : getTabName(pathname)}</StyledH1>
+    <SidebarDetail>{name}</SidebarDetail>
+    <SidebarDetail>{address1}</SidebarDetail>
+    <SidebarDetail>{address2}</SidebarDetail>
+    <ConditionalRender
+      Component={
+        <SidebarDetail>
+          <DetailLabel>Loan Number: </DetailLabel>
+          {loanNumber}
+        </SidebarDetail>
+      }
+      shouldRender={pathname !== '/'}
+    />
+    <SidebarDetail>
+      <DetailLabel>Status: </DetailLabel>
+      {status}
+    </SidebarDetail>
+  </SidebarHeaderWrapper>
+);
 
 SidebarHeader.propTypes = {
   pathname: T.string.isRequired,

@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const DetailLabel = styled.span`
+  color: grey;
+`;
+
 export const SidebarSummaryWrapper = styled.section`
   & :not(:last-of-type) {
     margin-bottom: 2.2rem;
@@ -13,7 +17,6 @@ export const StyledH5 = styled.h3`
 
 export const SummaryDetail = styled.div`
   & span:last-of-type {
-    font-weight: bold;
     margin-left: 0.3rem;
   }
   & :not(:last-of-type) {

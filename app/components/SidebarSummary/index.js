@@ -9,6 +9,7 @@ import T from 'prop-types';
 import iconDictionary from 'utils/iconDictionary';
 
 import {
+  DetailLabel,
   SidebarSummaryWrapper,
   StyledH5,
   SummaryDetail,
@@ -26,7 +27,7 @@ const SidebarSummary = ({ data, iconName, title }) => {
       </SummaryTitleWrapper>
       {data.map(({ label, value }) => (
         <SummaryDetail>
-          <span>{label}: </span>
+          <DetailLabel>{label}: </DetailLabel>
           <span>{value}</span>
         </SummaryDetail>
       ))}

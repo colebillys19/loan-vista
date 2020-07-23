@@ -24,9 +24,6 @@ export const getIcon = (pathname) => {
 
 export const getTabName = (pathname) => {
   switch (pathname) {
-    case '/':
-      return '1234567890';
-
     case '/calls':
       return 'Calls';
 
