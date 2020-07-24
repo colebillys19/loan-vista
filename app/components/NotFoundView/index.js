@@ -7,12 +7,18 @@ import React from 'react';
 // import T from 'prop-types';
 
 import TabWrapper from 'components/TabWrapper';
+import iconDictionary from 'utils/iconDictionary';
 
-import { NotFoundViewWrapper } from './styledComponents';
+import { NotFoundViewWrapper, WarningHeading } from './styledComponents';
+
+const WarningIcon = iconDictionary('warning', '12rem');
 
 const NotFoundView = () => (
-  <TabWrapper aria-labelledby="misc-tab" id="misc-view">
-    <NotFoundViewWrapper>NotFoundView</NotFoundViewWrapper>
+  <TabWrapper>
+    <NotFoundViewWrapper>
+      {WarningIcon}
+      <WarningHeading>Page Not Found</WarningHeading>
+    </NotFoundViewWrapper>
   </TabWrapper>
 );
 

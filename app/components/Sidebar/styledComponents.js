@@ -2,6 +2,14 @@ import styled from 'styled-components';
 
 import { mainBlue } from 'styleConstants';
 
+// export const LeftBorder = styled.div`
+//   background-color: green;
+//   min-height: calc(100vh - 20.3rem);
+//   position: absolute;
+//   left: 1rem;
+//   min-width: 0.3rem;
+// `;
+
 export const SidebarWrapper = styled.aside`
   border-left: 0.3rem solid ${mainBlue};
   display: inline-block;
