@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
+import { mainBlue } from 'styleConstants';
+
 export const SidebarWrapper = styled.aside`
-  background-color: #c7cbee;
+  border-left: 0.3rem solid ${mainBlue};
   display: inline-block;
   margin-right: 0.3rem;
   min-height: calc(100vh - 14.3rem);

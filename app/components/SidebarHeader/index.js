@@ -8,25 +8,19 @@ import T from 'prop-types';
 
 import ConditionalRender from 'components/_baseUI/ConditionalRender';
 
-import { getIcon, getTabName } from './helpers';
+import { getIcon, getTabName, getHealthColor } from './helpers';
 import {
   DetailLabel,
   IconWrapper,
   SidebarDetail,
   SidebarHeaderWrapper,
   StyledH1,
+  Yeet,
 } from './styledComponents';
 
 const SidebarHeader = ({
   pathname,
-  sidebarHeaderData: {
-    address1,
-    address2,
-    // health,
-    loanNumber,
-    name,
-    status,
-  },
+  sidebarHeaderData: { address1, address2, health, loanNumber, name, status },
 }) => (
   <SidebarHeaderWrapper>
     <IconWrapper>{getIcon(pathname, '10rem')}</IconWrapper>
@@ -45,7 +39,7 @@ const SidebarHeader = ({
     />
     <SidebarDetail>
       <DetailLabel>Status: </DetailLabel>
-      {status}
+      <Yeet color={getHealthColor(health)}>{status}</Yeet>
     </SidebarDetail>
   </SidebarHeaderWrapper>
 );

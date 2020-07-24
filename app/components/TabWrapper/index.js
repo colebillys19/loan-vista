@@ -5,8 +5,11 @@
 
 import styled from 'styled-components';
 
+import { mainBlue } from 'styleConstants';
+
 export default styled.section`
-  background-color: #92a5f5;
+  background-color: ${mainBlue};
+  color: white;
   display: inline-block;
   min-height: calc(100vh - 14.3rem);
   padding: 1rem;

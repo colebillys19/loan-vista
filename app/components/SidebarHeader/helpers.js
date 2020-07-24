@@ -1,5 +1,17 @@
 import iconDictionary from 'utils/iconDictionary';
 
+export const getHealthColor = (health) => {
+  if (health === 1) {
+    return '#299544';
+  }
+
+  if (health === 0) {
+    return '#ff8e27';
+  }
+
+  return '#fe3c36';
+};
+
 export const getIcon = (pathname) => {
   switch (pathname) {
     case '/':

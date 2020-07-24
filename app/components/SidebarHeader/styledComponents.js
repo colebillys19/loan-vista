@@ -28,3 +28,7 @@ export const StyledH1 = styled.h1`
   margin: 1rem 0 0.5rem;
   text-align: center;
 `;
+
+export const Yeet = styled.span`
+  color: ${({ color }) => color};
+`;

@@ -3,6 +3,8 @@ import Button from '@material-ui/core/Button';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 
+import { mainBlue } from 'styleConstants';
+
 export const ContentWrapper = styled.div`
   height: 6rem;
   margin: 0 auto;
@@ -43,7 +45,7 @@ export const StyledTabs = styled(Tabs)`
   position: relative;
   width: 83.7rem;
   & .MuiTabs-indicator {
-    background-color: #4370ff;
+    background-color: ${mainBlue};
     height: 0.5rem;
   }
 `;
