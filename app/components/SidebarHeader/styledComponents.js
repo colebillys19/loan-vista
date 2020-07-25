@@ -21,14 +21,14 @@ export const SidebarHeaderWrapper = styled.div`
   width: 100%;
 `;
 
+export const StatusWrapper = styled.span`
+  color: ${({ color }) => color};
+`;
+
 export const StyledH1 = styled.h1`
   display: block;
   font-size: 2.5rem;
   font-weight: normal;
   margin: 1rem 0 0.5rem;
   text-align: center;
-`;
-
-export const Yeet = styled.span`
-  color: ${({ color }) => color};
 `;

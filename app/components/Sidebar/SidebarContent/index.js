@@ -3,11 +3,12 @@
  * @description ...
  */
 
-import React, { Fragment } from 'react';
+import React from 'react';
 import T from 'prop-types';
 
 import SidebarHeader from 'components/SidebarHeader';
 import SidebarSummary from 'components/SidebarSummary';
+import { SidebarContentWrapper } from '../styledComponents';
 
 const SidebarContent = ({
   pathname,
@@ -19,7 +20,7 @@ const SidebarContent = ({
     serviceSummaryData,
   },
 }) => (
-  <Fragment>
+  <SidebarContentWrapper>
     <SidebarHeader pathname={pathname} sidebarHeaderData={sidebarHeaderData} />
     <SidebarSummary data={loanSummaryData} iconName="bullet" title="Loan" />
     <SidebarSummary
@@ -33,7 +34,7 @@ const SidebarContent = ({
       iconName="bullet"
       title="Service"
     />
-  </Fragment>
+  </SidebarContentWrapper>
 );
 
 SidebarContent.propTypes = {

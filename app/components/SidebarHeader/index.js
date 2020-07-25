@@ -14,8 +14,8 @@ import {
   IconWrapper,
   SidebarDetail,
   SidebarHeaderWrapper,
+  StatusWrapper,
   StyledH1,
-  Yeet,
 } from './styledComponents';
 
 const SidebarHeader = ({
@@ -23,7 +23,7 @@ const SidebarHeader = ({
   sidebarHeaderData: { address1, address2, health, loanNumber, name, status },
 }) => (
   <SidebarHeaderWrapper>
-    <IconWrapper>{getIcon(pathname, '10rem')}</IconWrapper>
+    <IconWrapper>{getIcon(pathname, '8rem')}</IconWrapper>
     <StyledH1>{pathname === '/' ? loanNumber : getTabName(pathname)}</StyledH1>
     <SidebarDetail>{name}</SidebarDetail>
     <SidebarDetail>{address1}</SidebarDetail>
@@ -39,7 +39,7 @@ const SidebarHeader = ({
     />
     <SidebarDetail>
       <DetailLabel>Status: </DetailLabel>
-      <Yeet color={getHealthColor(health)}>{status}</Yeet>
+      <StatusWrapper color={getHealthColor(health)}>{status}</StatusWrapper>
     </SidebarDetail>
   </SidebarHeaderWrapper>
 );

@@ -10,10 +10,10 @@ import ConditionalRender from 'components/_baseUI/ConditionalRender';
 
 import SidebarContent from './SidebarContent';
 import { pathnameIsValid } from './helpers';
-import { SidebarWrapper } from './styledComponents';
+import { SidebarContainer } from './styledComponents';
 
 const Sidebar = ({ pathname, sidebarHeaderData, sidebarSummaryData }) => (
-  <SidebarWrapper>
+  <SidebarContainer>
     <ConditionalRender
       Component={
         <SidebarContent
@@ -24,7 +24,7 @@ const Sidebar = ({ pathname, sidebarHeaderData, sidebarSummaryData }) => (
       }
       shouldRender={pathnameIsValid(pathname)}
     />
-  </SidebarWrapper>
+  </SidebarContainer>
 );
 
 Sidebar.propTypes = {

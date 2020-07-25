@@ -8,11 +8,12 @@ import styled from 'styled-components';
 import { mainBlue } from 'styleConstants';
 
 export default styled.section`
-  background-color: ${mainBlue};
-  color: white;
+  background-color: white;
+  color: ${mainBlue};
   display: inline-block;
-  min-height: calc(100vh - 14.3rem);
-  padding: 1rem;
-  width: 83.7rem;
+  font-size: 2rem;
+  min-height: 110rem;
+  padding: 3rem;
   vertical-align: top;
+  width: 83.7rem;
 `;

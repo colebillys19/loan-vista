@@ -10,8 +10,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
   }
 
-  html,
-  body {
+  html, body {
     height: 100%;
     width: 100%;
   }
@@ -20,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: Lato, Helvetica, Arial, sans-serif;
     font-size: 1.4rem;
     letter-spacing: 0.1rem;
+    overflow-y: scroll;
   }
 
   body.fontLoaded {
@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #app {
-    background-color: linen;
+    background-color: snow;
     min-height: 100%;
     min-width: 100%;
   }

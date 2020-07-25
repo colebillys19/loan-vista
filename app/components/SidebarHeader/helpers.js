@@ -12,25 +12,25 @@ export const getHealthColor = (health) => {
   return '#fe3c36';
 };
 
-export const getIcon = (pathname) => {
+export const getIcon = (pathname, size) => {
   switch (pathname) {
     case '/':
-      return iconDictionary('profile', '9rem');
+      return iconDictionary('profile', size);
 
     case '/calls':
-      return iconDictionary('call', '9rem');
+      return iconDictionary('call', size);
 
     case '/emails':
-      return iconDictionary('mail', '9rem');
+      return iconDictionary('mail', size);
 
     case '/payments':
-      return iconDictionary('money', '9rem');
+      return iconDictionary('money', size);
 
     case '/misc':
-      return iconDictionary('folder', '9rem');
+      return iconDictionary('folder', size);
 
     default:
-      return iconDictionary('warning', '9rem');
+      return iconDictionary('warning', size);
   }
 };
 
