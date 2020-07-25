@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #app {
-    background-color: snow;
+    background-color: ghostwhite;
     min-height: 100%;
     min-width: 100%;
   }

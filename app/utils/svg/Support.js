@@ -1,13 +1,13 @@
 import React from 'react';
 import SvgIcon from '@material-ui/core/SvgIcon';
 
-import { mainBlue } from 'styleConstants';
+import { primaryAppColor } from 'styleConstants';
 
 /* eslint-disable prettier/prettier */
 const Support = (props) => (
   <SvgIcon height="512" viewBox="0 0 64 64" width="512" xmlns="http://www.w3.org/2000/svg" {...props}>
     <g>
-      <g fill={mainBlue}>
+      <g fill={primaryAppColor}>
         <path d="m51.242 25.6a9.758 9.758 0 1 1 0 19.516z"/>
         <path d="m12.758 45.119a9.758 9.758 0 0 1 0-19.516z"/>
         <ellipse cx="32" cy="53.479" rx="4" ry="4.021"/>
