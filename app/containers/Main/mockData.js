@@ -13,7 +13,7 @@ export const sidebarSummaryData = {
     { label: 'Total Notes', value: '27' },
     { label: 'Average Calls/Quarter', value: '4' },
     { label: 'Calls/Last 30 Days', value: '3' },
-    { label: 'Average Time/Call', value: '3 min' },
+    { label: 'Average Time/Call', value: '3 min.' },
     { label: 'Most Frequent Reason', value: 'A100' },
   ],
   loanSummaryData: [
