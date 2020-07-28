@@ -13,7 +13,7 @@ import { SidebarContentWrapper } from '../styledComponents';
 const SidebarContent = ({
   pathname,
   sidebarHeaderData,
-  sidebarSummaryData: {
+  sidebarSummariesData: {
     callsSummaryData,
     loanSummaryData,
     paymentSummaryData,
@@ -40,7 +40,7 @@ const SidebarContent = ({
 SidebarContent.propTypes = {
   pathname: T.string.isRequired,
   sidebarHeaderData: T.object.isRequired,
-  sidebarSummaryData: T.shape({
+  sidebarSummariesData: T.shape({
     callsSummaryData: T.array,
     loanSummaryData: T.array,
     paymentSummaryData: T.array,

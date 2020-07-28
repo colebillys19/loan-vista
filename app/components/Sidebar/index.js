@@ -12,14 +12,14 @@ import SidebarContent from './SidebarContent';
 import { pathnameIsValid } from './helpers';
 import { SidebarContainer } from './styledComponents';
 
-const Sidebar = ({ pathname, sidebarHeaderData, sidebarSummaryData }) => (
+const Sidebar = ({ pathname, sidebarHeaderData, sidebarSummariesData }) => (
   <SidebarContainer>
     <ConditionalRender
       Component={
         <SidebarContent
           pathname={pathname}
           sidebarHeaderData={sidebarHeaderData}
-          sidebarSummaryData={sidebarSummaryData}
+          sidebarSummariesData={sidebarSummariesData}
         />
       }
       shouldRender={pathnameIsValid(pathname)}
@@ -30,7 +30,7 @@ const Sidebar = ({ pathname, sidebarHeaderData, sidebarSummaryData }) => (
 Sidebar.propTypes = {
   pathname: T.string.isRequired,
   sidebarHeaderData: T.object.isRequired,
-  sidebarSummaryData: T.object.isRequired,
+  sidebarSummariesData: T.object.isRequired,
 };
 
 export default Sidebar;

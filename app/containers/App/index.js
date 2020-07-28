@@ -33,12 +33,12 @@ const App = ({ dispatchNavigation, pathname }) => (
     <Header />
     <TabNav dispatchNavigation={dispatchNavigation} pathname={pathname} />
     <Main
-      render={({ sidebarHeaderData, sidebarSummaryData }) => (
+      render={({ sidebarHeaderData, sidebarSummariesData }) => (
         <MainWrapper>
           <Sidebar
             pathname={pathname}
             sidebarHeaderData={sidebarHeaderData}
-            sidebarSummaryData={sidebarSummaryData}
+            sidebarSummariesData={sidebarSummariesData}
           />
           <Switch>
             <Route component={HomeView} exact path="/" />

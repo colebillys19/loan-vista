@@ -11,13 +11,21 @@ import { compose } from 'redux';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
-import makeSelectMain from './selectors';
+import makeSelectMain, {
+  makeSelectSidebarHeaderData,
+  makeSelectSidebarSummariesData,
+} from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import { fetchLoanData } from './actions';
-import { sidebarHeaderData, sidebarSummaryData } from './mockData';
 
-export const Main = ({ dispatchFetchLoanData, loanData, render }) => {
+export const Main = ({
+  dispatchFetchLoanData,
+  loanData,
+  render,
+  sidebarHeaderData,
+  sidebarSummariesData,
+}) => {
   useInjectReducer({ key: 'main', reducer });
   useInjectSaga({ key: 'main', saga });
 
@@ -29,17 +37,21 @@ export const Main = ({ dispatchFetchLoanData, loanData, render }) => {
     console.log('yo');
   }
 
-  return render({ sidebarHeaderData, sidebarSummaryData });
+  return render({ sidebarHeaderData, sidebarSummariesData });
 };
 
 Main.propTypes = {
   dispatchFetchLoanData: T.func.isRequired,
   loanData: T.object.isRequired,
   render: T.func.isRequired,
+  sidebarHeaderData: T.object.isRequired,
+  sidebarSummariesData: T.object.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
   loanData: makeSelectMain('loanData'),
+  sidebarHeaderData: makeSelectSidebarHeaderData(),
+  sidebarSummariesData: makeSelectSidebarSummariesData(),
 });
 
 function mapDispatchToProps(dispatch) {

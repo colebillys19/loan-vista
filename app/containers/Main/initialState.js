@@ -3,7 +3,7 @@ const initialState = {
   loading: false,
   loanData: {
     balances: {},
-    borrower: {},
+    borrower: { name: '' },
     payment: {},
     propertyAddress: {
       city: '',
@@ -52,6 +52,7 @@ const initialState = {
       },
     },
   },
+  loanNumber: '1590753088',
 };
 
 export default initialState;
