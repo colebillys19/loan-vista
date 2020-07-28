@@ -15,7 +15,7 @@ const Tabs = ({ handleChange, value }) => (
       aria-controls="emails-view"
       disableRipple
       id="emails-tab"
-      label="Emails"
+      label="Emails + Letters"
     />
     <StyledTab
       aria-controls="payments-view"

@@ -1,242 +1,272 @@
 [
   {
      "body":"Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
-     "date":"2020-08-18",
-     "file":"et_ultrices.ppt",
+     "dateSent":"2020-08-18",
+     "file":"et_ultrices.pdf",
      "from":"cclubbe0@ifeng.com",
      "subject":"metus sapien ut nunc vestibulum ante",
-     "time":"3:30"
+     "timeSent":"3:30",
+     "type": "email"
   },
   {
      "body":"Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy.",
-     "date":"2020-11-11",
-     "file":"rutrum_rutrum.ppt",
+     "dateSent":"2020-11-11",
+     "file":"rutrum_rutrum.pdf",
      "from":"gschettini1@tuttocitta.it",
      "subject":"at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu",
-     "time":"3:37"
+     "timeSent":"3:37",
+     "type": "email"
   },
   {
      "body":"In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
-     "date":"2020-12-09",
+     "dateSent":"2020-12-09",
      "file":"in_eleifend.pdf",
-     "from":"ovallentine2@webmd.com",
+     "from":"HTL3",
      "subject":"id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec",
-     "time":"11:12"
+     "timeSent":null,
+     "type": "letter"
   },
   {
      "body":"Nulla tellus. In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
-     "date":"2020-07-10",
-     "file":"lacus.xls",
+     "dateSent":"2020-07-10",
+     "file":"lacus.pdf",
      "from":"ktremberth3@nasa.gov",
      "subject":"nulla ultrices aliquet maecenas leo odio condimentum id",
-     "time":"7:36"
+     "timeSent":"7:36",
+     "type": "email"
   },
   {
      "body":"In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy.",
-     "date":"2020-11-03",
-     "file":"tellus_nulla_ut.ppt",
-     "from":"sstredwick4@seesaa.net",
+     "dateSent":"2020-11-03",
+     "file":"tellus_nulla_ut.pdf",
+     "from":"YYT1",
      "subject":"porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci",
-     "time":"5:44"
+     "timeSent":null,
+     "type": "letter"
   },
   {
      "body":"Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
-     "date":"2020-08-19",
-     "file":"vestibulum_ac.ppt",
+     "dateSent":"2020-08-19",
+     "file":"vestibulum_ac.pdf",
      "from":"hcoil5@g.co",
      "subject":"ridiculus mus etiam vel augue vestibulum",
-     "time":"21:38"
+     "timeSent":"21:38",
+     "type": "email"
   },
   {
      "body":"In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit.",
-     "date":"2020-11-01",
-     "file":"ipsum.ppt",
+     "dateSent":"2020-11-01",
+     "file":"ipsum.pdf",
      "from":"jdrever6@bloomberg.com",
      "subject":"justo lacinia eget tincidunt eget tempus vel pede",
-     "time":"20:09"
+     "timeSent":"20:09",
+     "type": "email"
   },
   {
      "body":"Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
-     "date":"2020-10-01",
-     "file":"pede.xls",
+     "dateSent":"2020-10-01",
+     "file":"pede.pdf",
      "from":"dplaistowe7@webs.com",
      "subject":"justo eu massa donec dapibus duis at velit",
-     "time":"11:54"
+     "timeSent":"11:54",
+     "type": "email"
   },
   {
      "body":"Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula.",
-     "date":"2020-10-05",
-     "file":"tellus_semper.ppt",
-     "from":"ebadman8@mediafire.com",
+     "dateSent":"2020-10-05",
+     "file":"tellus_semper.pdf",
+     "from":"PLW2",
      "subject":"aliquet pulvinar sed nisl nunc",
-     "time":"9:51"
+     "timeSent":null,
+     "type": "letter"
   },
   {
      "body":"Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis.",
-     "date":"2020-08-23",
-     "file":"pellentesque_quisque_porta.ppt",
+     "dateSent":"2020-08-23",
+     "file":"pellentesque_quisque_porta.pdf",
      "from":"tnorquoy9@smugmug.com",
      "subject":"ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum",
-     "time":"17:43"
+     "timeSent":"17:43",
+     "type": "email"
   },
   {
      "body":"Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.",
-     "date":"2020-12-18",
-     "file":"mattis_pulvinar.xls",
+     "dateSent":"2020-12-18",
+     "file":"mattis_pulvinar.pdf",
      "from":"mstonbridgea@wikispaces.com",
      "subject":"nullam sit amet turpis elementum ligula vehicula consequat",
-     "time":"10:52"
+     "timeSent":"10:52",
+     "type": "email"
   },
   {
      "body":"Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
-     "date":"2020-10-28",
-     "file":"sit.xls",
+     "dateSent":"2020-10-28",
+     "file":"sit.pdf",
      "from":"syakobowitchb@omniture.com",
      "subject":"non ligula pellentesque ultrices phasellus id sapien in sapien",
-     "time":"7:40"
+     "timeSent":"7:40",
+     "type": "email"
   },
   {
      "body":"Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus. Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis.",
-     "date":"2020-09-08",
-     "file":"magna_at_nunc.doc",
+     "dateSent":"2020-09-08",
+     "file":"magna_at_nunc.pdf",
      "from":"snealeyc@baidu.com",
      "subject":"ipsum integer a nibh in",
-     "time":"3:35"
+     "timeSent":"3:35",
+     "type": "email"
   },
   {
      "body":"Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique.",
-     "date":"2020-08-24",
-     "file":"consectetuer_adipiscing.xls",
+     "dateSent":"2020-08-24",
+     "file":"consectetuer_adipiscing.pdf",
      "from":"dgiacomuzzod@hhs.gov",
      "subject":"sed augue aliquam erat volutpat in congue etiam",
-     "time":"13:10"
+     "timeSent":"13:10",
+     "type": "email"
   },
   {
      "body":"In eleifend quam a odio. In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.",
-     "date":"2020-10-05",
-     "file":"sed_vestibulum_sit.xls",
+     "dateSent":"2020-10-05",
+     "file":"sed_vestibulum_sit.pdf",
      "from":"hbestee@devhub.com",
      "subject":"volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam",
-     "time":"20:40"
+     "timeSent":"20:40",
+     "type": "email"
   },
   {
      "body":"Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.",
-     "date":"2020-11-06",
-     "file":"sed_tristique.doc",
-     "from":"ccastellanf@sakura.ne.jp",
+     "dateSent":"2020-11-06",
+     "file":"sed_tristique.pdf",
+     "from":"IST1",
      "subject":"orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu",
-     "time":"20:45"
+     "timeSent":null,
+     "type": "letter"
   },
   {
      "body":"Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
-     "date":"2020-07-10",
-     "file":"aliquam.xls",
-     "from":"gwendeng@comcast.net",
+     "dateSent":"2020-07-10",
+     "file":"aliquam.pdf",
+     "from":"IST1",
      "subject":"tortor risus dapibus augue vel accumsan tellus nisi eu",
-     "time":"4:24"
+     "timeSent":null,
+     "type": "letter"
   },
   {
      "body":"Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus. Phasellus in felis.",
-     "date":"2020-08-30",
-     "file":"morbi.xls",
+     "dateSent":"2020-08-30",
+     "file":"morbi.pdf",
      "from":"craysh@loc.gov",
      "subject":"curabitur in libero ut massa volutpat",
-     "time":"17:20"
+     "timeSent":"17:20",
+     "type": "email"
   },
   {
      "body":"Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam.",
-     "date":"2020-08-12",
-     "file":"amet_turpis_elementum.doc",
-     "from":"dglasperi@ning.com",
+     "dateSent":"2020-08-12",
+     "file":"amet_turpis_elementum.pdf",
+     "from":"JJP1",
      "subject":"platea dictumst aliquam augue quam sollicitudin vitae consectetuer",
-     "time":"20:36"
+     "timeSent":null,
+     "type": "letter"
   },
   {
      "body":"Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
-     "date":"2020-10-23",
-     "file":"aliquam_augue.ppt",
+     "dateSent":"2020-10-23",
+     "file":"aliquam_augue.pdf",
      "from":"gbannardj@sciencedirect.com",
      "subject":"lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada",
-     "time":"13:11"
+     "timeSent":"13:11",
+     "type": "email"
   },
   {
      "body":"Ut at dolor quis odio consequat varius. Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus.",
-     "date":"2020-10-29",
+     "dateSent":"2020-10-29",
      "file":"turpis.pdf",
      "from":"jleppingwellk@springer.com",
      "subject":"sit amet consectetuer adipiscing elit proin risus",
-     "time":"5:12"
+     "timeSent":"5:12",
+     "type": "email"
   },
   {
      "body":"Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum.",
-     "date":"2020-10-03",
-     "file":"mauris_laoreet_ut.xls",
-     "from":"szanicchellil@opera.com",
+     "dateSent":"2020-10-03",
+     "file":"mauris_laoreet_ut.pdf",
+     "from":"OKL2",
      "subject":"nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis",
-     "time":"16:40"
+     "timeSent":null,
+     "type": "letter"
   },
   {
      "body":"Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla.",
-     "date":"2020-10-21",
-     "file":"a_suscipit.ppt",
+     "dateSent":"2020-10-21",
+     "file":"a_suscipit.pdf",
      "from":"pcoushem@zimbio.com",
      "subject":"ultrices vel augue vestibulum ante",
-     "time":"2:45"
+     "timeSent":"2:45",
+     "type": "email"
   },
   {
      "body":"In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna.",
-     "date":"2020-07-08",
-     "file":"mi_sit_amet.xls",
+     "dateSent":"2020-07-08",
+     "file":"mi_sit_amet.pdf",
      "from":"msavoryn@businesswire.com",
      "subject":"varius ut blandit non interdum in ante vestibulum",
-     "time":"23:45"
+     "timeSent":"23:45",
+     "type": "email"
   },
   {
      "body":"Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.",
-     "date":"2020-07-26",
-     "file":"enim_sit.ppt",
+     "dateSent":"2020-07-26",
+     "file":"enim_sit.pdf",
      "from":"sjeppeo@amazon.de",
      "subject":"eleifend donec ut dolor morbi vel lectus in quam",
-     "time":"7:47"
+     "timeSent":"7:47",
+     "type": "email"
   },
   {
      "body":"Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi.",
-     "date":"2020-08-15",
-     "file":"aenean_sit.ppt",
-     "from":"kjoinerp@ovh.net",
+     "dateSent":"2020-08-15",
+     "file":"aenean_sit.pdf",
+     "from":"HHC2",
      "subject":"ut odio cras mi pede malesuada in imperdiet et",
-     "time":"11:24"
+     "timeSent":null,
+     "type": "letter"
   },
   {
      "body":"Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
-     "date":"2020-06-21",
+     "dateSent":"2020-06-21",
      "file":"in_hac_habitasse.pdf",
      "from":"kpendreyq@hc360.com",
      "subject":"volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh",
-     "time":"18:17"
+     "timeSent":"18:17",
+     "type": "email"
   },
   {
      "body":"Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy.",
-     "date":"2020-09-21",
-     "file":"nisi.ppt",
+     "dateSent":"2020-09-21",
+     "file":"nisi.pdf",
      "from":"ullopr@nymag.com",
      "subject":"odio donec vitae nisi nam ultrices libero non",
-     "time":"17:31"
+     "timeSent":"17:31",
+     "type": "email"
   },
   {
      "body":"Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius.",
-     "date":"2020-08-03",
-     "file":"pede_posuere_nonummy.doc",
-     "from":"spelcheurs@netvibes.com",
+     "dateSent":"2020-08-03",
+     "file":"pede_posuere_nonummy.pdf",
+     "from":"POS3",
      "subject":"nisi eu orci mauris lacinia sapien quis libero",
-     "time":"16:37"
+     "timeSent":null,
+     "type": "letter"
   },
   {
      "body":"Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus. Pellentesque at nulla.",
-     "date":"2020-11-25",
-     "file":"sapien.ppt",
+     "dateSent":"2020-11-25",
+     "file":"sapien.pdf",
      "from":"losoriot@google.pl",
      "subject":"massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu",
-     "time":"1:25"
+     "timeSent":"1:25",
+     "type": "email"
   }
 ]

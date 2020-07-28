@@ -50,4 +50,4 @@ const loanInfoMockData = {
   },
 };
 
-export default loanInfoMockData;
+module.exports = loanInfoMockData;
