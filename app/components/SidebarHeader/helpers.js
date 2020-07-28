@@ -20,7 +20,7 @@ export const getIcon = (pathname, size) => {
     case '/calls':
       return iconDictionary('call', size);
 
-    case '/corr':
+    case '/correspondence':
       return iconDictionary('mail', size);
 
     case '/payments':
@@ -39,7 +39,7 @@ export const getTabName = (pathname) => {
     case '/calls':
       return 'Calls';
 
-    case '/corr':
+    case '/correspondence':
       return 'Emails + Letters';
 
     case '/payments':

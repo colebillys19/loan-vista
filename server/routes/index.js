@@ -8,7 +8,7 @@ const loanInfoRouter = require('./loanInfo');
 const paymentsRouter = require('./payments');
 
 router.use('/calls', callsRouter);
-router.use('/corr', corrRouter);
+router.use('/correspondence', corrRouter);
 // router.use('/escrow', escrowRouter);
 router.use('/', loanInfoRouter);
 router.use('/payments', paymentsRouter);

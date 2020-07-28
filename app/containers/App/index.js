@@ -43,7 +43,7 @@ const App = ({ dispatchNavigation, pathname }) => (
           <Switch>
             <Route component={HomeView} exact path="/" />
             <Route component={Calls} exact path="/calls" />
-            <Route component={Corr} exact path="/corr" />
+            <Route component={Corr} exact path="/correspondence" />
             <Route component={Payments} exact path="/payments" />
             <Route component={MiscView} exact path="/misc" />
             <Route component={NotFoundView} />
