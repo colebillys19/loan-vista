@@ -1,5 +1,5 @@
 /**
- * Emails
+ * Corr
  * @description ...
  */
 
@@ -9,25 +9,25 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
-import EmailsView from 'components/EmailsView';
+import CorrView from 'components/CorrView';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
-import makeSelectEmails from './selectors';
+import makeSelectCorr from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 
-export const Emails = () => {
-  useInjectReducer({ key: 'emails', reducer });
-  useInjectSaga({ key: 'emails', saga });
+export const Corr = () => {
+  useInjectReducer({ key: 'corr', reducer });
+  useInjectSaga({ key: 'corr', saga });
 
-  return <EmailsView />;
+  return <CorrView />;
 };
 
-Emails.propTypes = {};
+Corr.propTypes = {};
 
 const mapStateToProps = createStructuredSelector({
-  emails: makeSelectEmails(),
+  corr: makeSelectCorr(),
 });
 
 function mapDispatchToProps(dispatch) {
@@ -41,4 +41,4 @@ const withConnect = connect(
   mapDispatchToProps,
 );
 
-export default compose(withConnect)(Emails);
+export default compose(withConnect)(Corr);

@@ -12,9 +12,9 @@ const Tabs = ({ handleChange, value }) => (
       label="Calls"
     />
     <StyledTab
-      aria-controls="emails-view"
+      aria-controls="emails-letters-view"
       disableRipple
-      id="emails-tab"
+      id="emails-letters-tab"
       label="Emails + Letters"
     />
     <StyledTab

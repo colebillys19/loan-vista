@@ -1,7 +1,7 @@
-import emailsReducer from '../reducer';
+import corrReducer from '../reducer';
 
 /* eslint-disable default-case, no-param-reassign */
-describe('emailsReducer', () => {
+describe('corrReducer', () => {
   let state;
   beforeEach(() => {
     state = {
@@ -11,6 +11,6 @@ describe('emailsReducer', () => {
 
   it('returns the initial state', () => {
     const expectedResult = state;
-    expect(emailsReducer(undefined, {})).toEqual(expectedResult);
+    expect(corrReducer(undefined, {})).toEqual(expectedResult);
   });
 });

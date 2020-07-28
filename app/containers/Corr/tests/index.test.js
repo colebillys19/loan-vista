@@ -5,32 +5,32 @@ import { Provider } from 'react-redux';
 
 import configureStore from 'configureStore';
 import history from 'utils/history';
-import { Emails } from '../index';
+import { Corr } from '../index';
 
 // Create redux store with history
 const initialState = {};
 const store = configureStore(initialState, history);
 
-const WrappedEmails = (props) => (
+const WrappedCorr = (props) => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Emails {...props} />
+      <Corr {...props} />
     </ConnectedRouter>
   </Provider>
 );
 
-describe('<Emails />', () => {
+describe('<Corr />', () => {
   it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     const dispatch = jest.fn();
-    render(<WrappedEmails dispatch={dispatch} />);
+    render(<WrappedCorr dispatch={dispatch} />);
     expect(spy).not.toHaveBeenCalled();
   });
 
   it.skip('Should render and match the snapshot', () => {
     const {
       container: { firstChild },
-    } = render(<WrappedEmails />);
+    } = render(<WrappedCorr />);
     expect(firstChild).toMatchSnapshot();
   });
 });

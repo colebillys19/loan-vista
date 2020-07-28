@@ -9,11 +9,4 @@ describe('<TabWrapper />', () => {
     render(<TabWrapper />);
     expect(spy).not.toHaveBeenCalled();
   });
-
-  it.skip('Should render and match the snapshot', () => {
-    const {
-      container: { firstChild },
-    } = render(<TabWrapper />);
-    expect(firstChild).toMatchSnapshot();
-  });
 });

@@ -9,11 +9,4 @@ describe('<SidebarSummary />', () => {
     render(<SidebarSummary />);
     expect(spy).not.toHaveBeenCalled();
   });
-
-  it.skip('Should render and match the snapshot', () => {
-    const {
-      container: { firstChild },
-    } = render(<SidebarSummary />);
-    expect(firstChild).toMatchSnapshot();
-  });
 });

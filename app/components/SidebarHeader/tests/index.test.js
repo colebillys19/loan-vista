@@ -13,11 +13,4 @@ describe('<SidebarHeader />', () => {
     render(Component);
     expect(spy).not.toHaveBeenCalled();
   });
-
-  it.skip('Should render and match the snapshot', () => {
-    const {
-      container: { firstChild },
-    } = render(Component);
-    expect(firstChild).toMatchSnapshot();
-  });
 });

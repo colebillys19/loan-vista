@@ -4,7 +4,7 @@ import { DEFAULT_ACTION } from './constants';
 export const initialState = {};
 
 /* eslint-disable default-case, no-param-reassign */
-const emailsReducer = (state = initialState, action) =>
+const corrReducer = (state = initialState, action) =>
   produce(state, (/* draft */) => {
     switch (action.type) {
       case DEFAULT_ACTION:
@@ -12,4 +12,4 @@ const emailsReducer = (state = initialState, action) =>
     }
   });
 
-export default emailsReducer;
+export default corrReducer;
