@@ -1,9 +1,7 @@
-// const fs = require('fs');
+// const escrowData = require('../mockData/escrowMockData');
 
-// const getEscrow = (req, res) => {
-//   const jsonData = fs.readFileSync('../mockData/CALLS_MOCK_DATA.json');
-//   const data = JSON.parse(jsonData);
-//   res.send(data);
+// const getEscrowData = (req, res) => {
+//   res.send(escrowData);
 // };
 
-// module.exports = { getEscrow };
+// module.exports = getEscrowData;

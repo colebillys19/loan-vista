@@ -1,13 +1,31 @@
 import produce from 'immer';
-import { DEFAULT_ACTION } from './constants';
 
-export const initialState = {};
+import mainInitialState from './initialState';
+import {
+  FETCH_LOAN_DATA,
+  FETCH_LOAN_DATA_FAILURE,
+  FETCH_LOAN_DATA_SUCCESS,
+} from './constants';
 
-/* eslint-disable default-case, no-param-reassign */
-const mainReducer = (state = initialState, action) =>
-  produce(state, (/* draft */) => {
-    switch (action.type) {
-      case DEFAULT_ACTION:
+export const initialState = mainInitialState;
+
+/* eslint-disable default-case, no-param-reassign, no-case-declarations */
+const mainReducer = (state = initialState, { payload, type }) =>
+  produce(state, (draft) => {
+    switch (type) {
+      case FETCH_LOAN_DATA:
+        draft.error = false;
+        draft.loading = true;
+        break;
+      case FETCH_LOAN_DATA_FAILURE:
+        const { error } = payload;
+        draft.error = error;
+        draft.loading = false;
+        break;
+      case FETCH_LOAN_DATA_SUCCESS:
+        const { loanData } = payload;
+        draft.loanData = loanData;
+        draft.loading = false;
         break;
     }
   });

@@ -1,16 +1,16 @@
 const express = require('express');
 const router = express.Router();
 
-const callsRouter = require('./calls');
-const corrRouter = require('./corr');
+const getCalls = require('./calls');
+const getCorrespondence = require('./corr');
 // const escrowRouter = require('./escrow');
-const loanInfoRouter = require('./loanInfo');
-const paymentsRouter = require('./payments');
+const getLoanData = require('./loan');
+const getPayments = require('./payments');
 
-router.use('/calls', callsRouter);
-router.use('/correspondence', corrRouter);
+router.use('/calls', getCalls);
+router.use('/correspondence', getCorrespondence);
 // router.use('/escrow', escrowRouter);
-router.use('/', loanInfoRouter);
-router.use('/payments', paymentsRouter);
+router.use('/loan', getLoanData);
+router.use('/payments', getPayments);
 
 module.exports = router;

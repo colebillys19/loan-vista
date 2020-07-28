@@ -6,4 +6,4 @@ const getCalls = (req, res) => {
   res.send(data);
 };
 
-module.exports = { getCalls };
+module.exports = getCalls;

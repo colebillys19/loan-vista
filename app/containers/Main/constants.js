@@ -1,1 +1,3 @@
-export const DEFAULT_ACTION = 'app/Main/DEFAULT_ACTION';
+export const FETCH_LOAN_DATA = 'app/Main/FETCH_LOAN_DATA';
+export const FETCH_LOAN_DATA_FAILURE = 'app/Main/FETCH_LOAN_DATA_FAILURE';
+export const FETCH_LOAN_DATA_SUCCESS = 'app/Main/FETCH_LOAN_DATA_SUCCESS';

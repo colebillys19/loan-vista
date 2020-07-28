@@ -6,4 +6,4 @@ const getPayments = (req, res) => {
   res.send(data);
 };
 
-module.exports = { getPayments };
+module.exports = getPayments;

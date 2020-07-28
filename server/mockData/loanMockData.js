@@ -1,4 +1,4 @@
-const loanInfoMockData = {
+const loanMockData = {
   balances: {},
   borrower: {},
   payment: {},
@@ -50,4 +50,4 @@ const loanInfoMockData = {
   },
 };
 
-module.exports = loanInfoMockData;
+module.exports = loanMockData;

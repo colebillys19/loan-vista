@@ -3,10 +3,10 @@ import { initialState } from './reducer';
 
 const selectMainDomain = (state) => state.main || initialState;
 
-const makeSelectMain = () =>
+const makeSelectMain = (prop) =>
   createSelector(
     selectMainDomain,
-    (substate) => substate,
+    (substate) => substate[prop],
   );
 
 export default makeSelectMain;

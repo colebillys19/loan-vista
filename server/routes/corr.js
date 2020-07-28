@@ -6,4 +6,4 @@ const getCorrespondence = (req, res) => {
   res.send(data);
 };
 
-module.exports = { getCorrespondence };
+module.exports = getCorrespondence;
