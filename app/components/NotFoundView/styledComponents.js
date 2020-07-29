@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { primaryAppColor } from 'styleConstants';
+import { appColorA } from 'styleConstants';
 
 export const NotFoundViewWrapper = styled.div`
   display: inline-flex;
@@ -10,7 +10,7 @@ export const NotFoundViewWrapper = styled.div`
 `;
 
 export const WarningHeading = styled.h1`
-  color: ${primaryAppColor};
+  color: ${appColorA};
   font-size: 3rem;
   padding: 0;
 `;

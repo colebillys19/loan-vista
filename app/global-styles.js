@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import { appBackgroundColor } from 'styleConstants';
+
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Lato';
@@ -27,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #app {
-    background-color: ghostwhite;
+    background-color: ${appBackgroundColor};
     min-height: 100%;
     min-width: 100%;
   }

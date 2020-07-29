@@ -5,8 +5,13 @@
 
 import React from 'react';
 
-import { HeaderWrapper } from './styledComponents';
+import { HeaderWrapper, SwatchA, SwatchB } from './styledComponents';
 
-const Header = () => <HeaderWrapper />;
+const Header = () => (
+  <HeaderWrapper>
+    <SwatchA />
+    <SwatchB />
+  </HeaderWrapper>
+);
 
 export default Header;

@@ -5,12 +5,12 @@
 
 import styled from 'styled-components';
 
-import { primaryAppColor } from 'styleConstants';
+import { appColorA } from 'styleConstants';
 
 export default styled.section`
   background-color: ${({ isNotFound }) =>
     isNotFound ? 'transparent' : 'white'};
-  color: ${primaryAppColor};
+  color: ${appColorA};
   display: inline-block;
   font-size: 2rem;
   min-height: 110rem;
