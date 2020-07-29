@@ -3,8 +3,8 @@
  * @description ...
  */
 
-import React from 'react';
-// import T from 'prop-types';
+import React, { useEffect } from 'react';
+import T from 'prop-types';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
@@ -16,23 +16,32 @@ import { useInjectReducer } from 'utils/injectReducer';
 import makeSelectCalls from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+import { fetchCallsData } from './actions';
 
-export const Calls = () => {
+export const Calls = ({ callsData, dispatchFetchCallsData }) => {
   useInjectReducer({ key: 'calls', reducer });
   useInjectSaga({ key: 'calls', saga });
 
-  return <CallsView />;
+  useEffect(() => {
+    dispatchFetchCallsData();
+  }, []);
+
+  return <CallsView callsData={callsData} />;
 };
 
-Calls.propTypes = {};
+Calls.propTypes = {
+  callsData: T.array.isRequired,
+  dispatchFetchCallsData: T.func.isRequired,
+};
 
 const mapStateToProps = createStructuredSelector({
-  calls: makeSelectCalls(),
+  callsData: makeSelectCalls('callsData'),
 });
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatch,
+    dispatchFetchCallsData: (loanNumber) =>
+      dispatch(fetchCallsData(loanNumber)),
   };
 }
 

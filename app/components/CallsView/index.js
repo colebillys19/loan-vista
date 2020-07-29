@@ -4,18 +4,21 @@
  */
 
 import React from 'react';
-// import T from 'prop-types';
+import T from 'prop-types';
 
+import CallsList from 'components/CallsList';
 import TabWrapper from 'components/TabWrapper';
 
 import { CallsViewWrapper } from './styledComponents';
 
-const CallsView = () => (
+const CallsView = ({ callsData }) => (
   <TabWrapper aria-labelledby="calls-tab" id="calls-view">
-    <CallsViewWrapper>CallsView</CallsViewWrapper>
+    <CallsViewWrapper>
+      <CallsList callsData={callsData} />
+    </CallsViewWrapper>
   </TabWrapper>
 );
 
-CallsView.propTypes = {};
+CallsView.propTypes = { callsData: T.array.isRequired };
 
 export default CallsView;

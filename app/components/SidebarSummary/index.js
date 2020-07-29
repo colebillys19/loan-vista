@@ -26,7 +26,7 @@ const SidebarSummary = ({ data, iconName, title }) => {
         <StyledH5>{title}</StyledH5>
       </SummaryTitleWrapper>
       {data.map(({ label, value }) => (
-        <SummaryDetail>
+        <SummaryDetail key={label}>
           <DetailLabel>{label}: </DetailLabel>
           <span>{value}</span>
         </SummaryDetail>

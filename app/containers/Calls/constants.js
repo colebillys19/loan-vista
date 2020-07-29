@@ -1,1 +1,3 @@
-export const DEFAULT_ACTION = 'app/Calls/DEFAULT_ACTION';
+export const FETCH_CALLS_DATA = 'app/Calls/FETCH_CALLS_DATA';
+export const FETCH_CALLS_DATA_FAILURE = 'app/Calls/FETCH_CALLS_DATA_FAILURE';
+export const FETCH_CALLS_DATA_SUCCESS = 'app/Calls/FETCH_CALLS_DATA_SUCCESS';
