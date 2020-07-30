@@ -13,7 +13,7 @@ import CallsView from 'components/CallsView';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
-import makeSelectCalls from './selectors';
+import { makeSelectCallsData } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import { fetchCallsData } from './actions';
@@ -35,7 +35,7 @@ Calls.propTypes = {
 };
 
 const mapStateToProps = createStructuredSelector({
-  callsData: makeSelectCalls('callsData'),
+  callsData: makeSelectCallsData('callsData'),
 });
 
 function mapDispatchToProps(dispatch) {
