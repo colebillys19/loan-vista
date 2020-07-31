@@ -23,7 +23,7 @@ export const SummaryDetail = styled.div`
     margin-left: 0.3rem;
   }
   & :not(:last-of-type) {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
   }
 `;
 

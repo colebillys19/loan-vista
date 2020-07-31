@@ -7,7 +7,7 @@ import { FETCH_CALLS_DATA } from './constants';
 
 export function* fetchCallsDataSaga() {
   try {
-    const callsData = yield call(get, '/calls');
+    const callsData = yield call(get, '/api/calls');
     yield put(fetchCallsDataSuccess(callsData));
   } catch (error) {
     yield put(fetchCallsDataFailure(error));

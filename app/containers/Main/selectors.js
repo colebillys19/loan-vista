@@ -7,7 +7,7 @@ import {
   getPaymentSummary,
   getServiceSummary,
   getSidebarHeaderData,
-} from './helpers';
+} from './selectorHelpers';
 
 const selectMainDomain = (state) => state.main || initialState;
 

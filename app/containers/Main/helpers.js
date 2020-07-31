@@ -1,80 +1,56 @@
-import { SUMMARY_LABEL_DICT } from './constants';
+import moment from 'moment';
 
 /**
- * getCallsSummary
+ * convertNumToPercentage
  * @description: ...
  */
-export const getCallsSummary = (callsSummaryData) => {
-  const { calls: callsDict } = SUMMARY_LABEL_DICT;
-
-  return callsDict.map(({ key, label }) => ({
-    label,
-    value: callsSummaryData[key],
-  }));
+const convertNumToCurrency = (num, withAdorn = true) => {
+  const split = num.toFixed(2).split('.');
+  split[0] = split[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return `${withAdorn ? '$' : ''}${split.join('.')}`;
 };
 
 /**
- * getLoanSummary
+ * convertNumToPercentage
  * @description: ...
  */
-export const getLoanSummary = (loanSummaryData) => {
-  const { loan: loanDict } = SUMMARY_LABEL_DICT;
+const convertNumToPercentage = (n) => {
+  // account for numbers displayed as base/exponent
+  if (n < 0.000001) {
+    return '< 0.0001%';
+  }
 
-  return loanDict.map(({ key, label }) => ({
-    label,
-    value: loanSummaryData[key],
-  }));
+  const num = n * 100;
+  const numStr = num.toString();
+  const isLongDecimal =
+    numStr.indexOf('.') !== -1 && numStr.split('.')[1].length > 5;
+
+  if (isLongDecimal) {
+    return `${num
+      .toFixed(5)
+      .toString()
+      .replace(/0+$/, '')}%`;
+  }
+
+  return `${numStr}%`;
 };
 
 /**
- * getPaymentSummary
+ * dataFormatter
  * @description: ...
  */
-export const getPaymentSummary = (paymentSummaryData) => {
-  const { payment: paymentDict } = SUMMARY_LABEL_DICT;
-
-  return paymentDict.map(({ key, label }) => ({
-    label,
-    value: paymentSummaryData[key],
-  }));
-};
-
-/**
- * getServiceSummary
- * @description: ...
- */
-export const getServiceSummary = (serviceSummaryData) => {
-  const { service: serviceDict } = SUMMARY_LABEL_DICT;
-
-  return serviceDict.map(({ key, label }) => ({
-    label,
-    value: serviceSummaryData[key],
-  }));
-};
-
-/**
- * getSidebarHeaderData
- * @description: ...
- */
-export const getSidebarHeaderData = (
-  loanNumber,
-  {
-    borrower: { name },
-    propertyAddress: { city, state, streetAddress, unit, zip },
-    summaries: {
-      loan: { health, status },
-    },
-  },
-) => {
-  const address1 = `${streetAddress}${unit ? `, Unit ${unit}` : ''}`;
-  const address2 = `${city}, ${state} ${zip}`;
-
-  return {
-    address1,
-    address2,
-    health,
-    loanNumber,
-    name,
-    status,
-  };
+export const dataFormatter = (value, format) => {
+  /* eslint-disable yeet */
+  switch (format) {
+    case 'currency':
+      return convertNumToCurrency(value);
+    case 'date':
+      return moment(value, 'YYYY-MM-DD').format('M/D/YYYY');
+    case 'minutes':
+      return `${value} minutes`;
+    case 'percentage':
+      return convertNumToPercentage(value);
+    default:
+      return value;
+  }
 };

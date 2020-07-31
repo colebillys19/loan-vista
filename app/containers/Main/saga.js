@@ -7,7 +7,7 @@ import { FETCH_LOAN_DATA } from './constants';
 
 export function* fetchLoanDataSaga() {
   try {
-    const loanData = yield call(get, '/loan');
+    const loanData = yield call(get, '/api/loan');
     yield put(fetchLoanDataSuccess(loanData));
   } catch (error) {
     yield put(fetchLoanDataFailure(error));

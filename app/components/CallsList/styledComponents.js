@@ -1,16 +1,21 @@
 import styled from 'styled-components';
 
-import { appBackgroundColor } from 'styleConstants';
-
 export const StyledTable = styled.table`
-  background-color: ${appBackgroundColor};
   width: 100%;
+
+  outline: 1px solid #ccc;
 `;
 
-export const StyledTableData = styled.td``;
+export const StyledTableData = styled.td`
+  height: 2.1rem;
+  vertical-align: bottom;
+`;
 
-export const StyledTableHead = styled.thead``;
+export const StyledTableHead = styled.thead`
+  background-color: #eee;
+`;
 
 export const StyledTableHeader = styled.th`
+  height: 3rem;
   text-align: left;
 `;
