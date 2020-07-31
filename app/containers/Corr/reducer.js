@@ -1,13 +1,13 @@
 import produce from 'immer';
 
-import mainInitialState from './initialState';
+import corrInitialState from './initialState';
 import {
   FETCH_CORR_DATA,
   FETCH_CORR_DATA_FAILURE,
   FETCH_CORR_DATA_SUCCESS,
 } from './constants';
 
-export const initialState = mainInitialState;
+export const initialState = corrInitialState;
 
 /* eslint-disable default-case, no-param-reassign, no-case-declarations */
 const corrReducer = (state = initialState, { payload, type }) =>

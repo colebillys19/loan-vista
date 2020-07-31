@@ -1,5 +1,5 @@
-import React from 'react';
-// import T from 'prop-types';
+import React, { useEffect } from 'react';
+import T from 'prop-types';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
@@ -8,28 +8,34 @@ import PaymentsView from 'components/PaymentsView';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
-import makeSelectPayments from './selectors';
+import { makeSelectPaymentsData } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+import { fetchPaymentsData } from './actions';
 
-export const Payments = () => {
+export const Payments = ({ paymentsData, dispatchFetchPaymentsData }) => {
   useInjectReducer({ key: 'payments', reducer });
   useInjectSaga({ key: 'payments', saga });
 
-  return <PaymentsView />;
+  useEffect(() => {
+    dispatchFetchPaymentsData();
+  }, []);
+
+  return <PaymentsView paymentsData={paymentsData} />;
 };
 
-Payments.propTypes = {};
+Payments.propTypes = {
+  paymentsData: T.array.isRequired,
+  dispatchFetchPaymentsData: T.func.isRequired,
+};
 
 const mapStateToProps = createStructuredSelector({
-  payments: makeSelectPayments(),
+  paymentsData: makeSelectPaymentsData(),
 });
 
-function mapDispatchToProps(dispatch) {
-  return {
-    dispatch,
-  };
-}
+const mapDispatchToProps = (dispatch) => ({
+  dispatchFetchPaymentsData: () => dispatch(fetchPaymentsData()),
+});
 
 const withConnect = connect(
   mapStateToProps,

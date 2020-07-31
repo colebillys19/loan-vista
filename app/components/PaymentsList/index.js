@@ -4,28 +4,51 @@
  */
 
 import React from 'react';
-// import T from 'prop-types';
+import T from 'prop-types';
 
-const PaymentsList = () => <div>PaymentsList</div>;
+import TableRow from './TableRow';
+import {
+  StyledTable,
+  StyledTableHead,
+  StyledTableHeader,
+} from './styledComponents';
 
-PaymentsList.propTypes = {};
+const PaymentsList = ({ paymentsData, headers }) => (
+  <StyledTable>
+    <StyledTableHead>
+      <tr>
+        {headers.map((header) => (
+          <StyledTableHeader key={header} scope="col">
+            {header}
+          </StyledTableHeader>
+        ))}
+      </tr>
+    </StyledTableHead>
+    <tbody>
+      {paymentsData.map(({ id, ...restData }) => (
+        <TableRow data={restData} headers={headers} key={id} />
+      ))}
+    </tbody>
+  </StyledTable>
+);
+
+PaymentsList.propTypes = {
+  paymentsData: T.arrayOf(
+    T.shape({
+      date: T.string,
+      description: T.string,
+      escrow: T.string,
+      id: T.number,
+      interest: T.string,
+      principal: T.string,
+      total: T.string,
+    }),
+  ).isRequired,
+  headers: T.arrayOf(T.string),
+};
+
+PaymentsList.defaultProps = {
+  headers: ['date', 'description', 'total', 'principal', 'interest', 'escrow'],
+};
 
 export default PaymentsList;
-
-/*
-<StyledTable>
-  <StyledTableHead>
-    <tr>
-      {headers.map((header) => (
-        <StyledTableHeader key={header} scope="col">{header}</StyledTableHeader>
-      ))}
-    </tr>
-  </StyledTableHead>
-  <tbody>
-    {paymentsData.map((rowData, i) => {
-      const { id } = rowData;
-      return <TableRow data={rowData} headers={headers} key={id} />;
-    })}
-  </tbody>
-</StyledTable>
-*/

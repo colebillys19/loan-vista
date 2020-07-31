@@ -38,11 +38,9 @@ const mapStateToProps = createStructuredSelector({
   callsData: makeSelectCallsData(),
 });
 
-function mapDispatchToProps(dispatch) {
-  return {
-    dispatchFetchCallsData: () => dispatch(fetchCallsData()),
-  };
-}
+const mapDispatchToProps = (dispatch) => ({
+  dispatchFetchCallsData: () => dispatch(fetchCallsData()),
+});
 
 const withConnect = connect(
   mapStateToProps,

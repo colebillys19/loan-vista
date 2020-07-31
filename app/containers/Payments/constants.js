@@ -1,1 +1,5 @@
-export const DEFAULT_ACTION = 'app/Payments/DEFAULT_ACTION';
+export const FETCH_PAYMENTS_DATA = 'app/Payments/FETCH_PAYMENTS_DATA';
+export const FETCH_PAYMENTS_DATA_FAILURE =
+  'app/Payments/FETCH_PAYMENTS_DATA_FAILURE';
+export const FETCH_PAYMENTS_DATA_SUCCESS =
+  'app/Payments/FETCH_PAYMENTS_DATA_SUCCESS';

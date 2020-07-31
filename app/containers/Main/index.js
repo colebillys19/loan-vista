@@ -47,11 +47,9 @@ const mapStateToProps = createStructuredSelector({
   sidebarSummariesData: makeSelectSidebarSummariesData(),
 });
 
-function mapDispatchToProps(dispatch) {
-  return {
-    dispatchFetchLoanData: (loanNumber) => dispatch(fetchLoanData(loanNumber)),
-  };
-}
+const mapDispatchToProps = (dispatch) => ({
+  dispatchFetchLoanData: () => dispatch(fetchLoanData()),
+});
 
 const withConnect = connect(
   mapStateToProps,

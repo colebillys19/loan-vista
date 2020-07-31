@@ -38,11 +38,9 @@ const mapStateToProps = createStructuredSelector({
   corrData: makeSelectCorrData(),
 });
 
-function mapDispatchToProps(dispatch) {
-  return {
-    dispatchFetchCorrData: () => dispatch(fetchCorrData()),
-  };
-}
+const mapDispatchToProps = (dispatch) => ({
+  dispatchFetchCorrData: () => dispatch(fetchCorrData()),
+});
 
 const withConnect = connect(
   mapStateToProps,
