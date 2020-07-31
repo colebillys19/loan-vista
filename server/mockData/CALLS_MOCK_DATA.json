@@ -6,7 +6,7 @@
      "details":"Praesent id massa id nisl venenatis lacinia.",
      "id": 0,
      "rep":"JDS",
-     "time":"14:29"
+     "time":"14:29:11"
   },
   {
      "audio":"tellus.mp3",
@@ -15,7 +15,7 @@
      "details":"Nulla tempus.",
      "id": 1,
      "rep":"PTC",
-     "time":"0:23"
+     "time":"08:23:24"
   },
   {
      "audio":"ligula.mp3",
@@ -24,7 +24,7 @@
      "details":"Mauris sit amet eros.",
      "id": 2,
      "rep":"WWM",
-     "time":"23:49"
+     "time":"23:49:53"
   },
   {
      "audio":"sollicitudin_ut_suscipit.mp3",
@@ -33,7 +33,7 @@
      "details":"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis.",
      "id": 3,
      "rep":"JBS",
-     "time":"4:31"
+     "time":"04:31:22"
   },
   {
      "audio":"bibendum.mp3",
@@ -42,7 +42,7 @@
      "details":"Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.",
      "id": 4,
      "rep":"TTB",
-     "time":"16:04"
+     "time":"16:04:33"
   },
   {
      "audio":"habitasse_platea_dictumst.mp3",
@@ -51,7 +51,7 @@
      "details":"Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
      "id": 5,
      "rep":"TTB",
-     "time":"3:44"
+     "time":"03:44:25"
   },
   {
      "audio":"et.mp3",
@@ -60,7 +60,7 @@
      "details":"Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim.",
      "id": 6,
      "rep":"BCI",
-     "time":"17:23"
+     "time":"17:23:33"
   },
   {
      "audio":"accumsan_tellus.mp3",
@@ -69,7 +69,7 @@
      "details":"Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
      "id": 7,
      "rep":"PTC",
-     "time":"19:59"
+     "time":"19:59:19"
   },
   {
      "audio":"lectus_in_quam.mp3",
@@ -78,7 +78,7 @@
      "details":"Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
      "id": 8,
      "rep":"WWM",
-     "time":"14:31"
+     "time":"14:31:17"
   },
   {
      "audio":"pellentesque_volutpat_dui.mp3",
@@ -87,7 +87,7 @@
      "details":"Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante.",
      "id": 9,
      "rep":"WWM",
-     "time":"21:15"
+     "time":"21:15:01"
   },
   {
      "audio":"sed_vel.mp3",
@@ -96,7 +96,7 @@
      "details":"Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl.",
      "id": 10,
      "rep":"PTC",
-     "time":"13:32"
+     "time":"13:32:11"
   },
   {
      "audio":"platea_dictumst.mp3",
@@ -105,7 +105,7 @@
      "details":"Morbi a ipsum.",
      "id": 11,
      "rep":"KGF",
-     "time":"2:26"
+     "time":"02:26:24"
   },
   {
      "audio":"porta_volutpat_erat.mp3",
@@ -114,7 +114,7 @@
      "details":"Maecenas pulvinar lobortis est.",
      "id": 12,
      "rep":"BSC",
-     "time":"13:06"
+     "time":"13:06:53"
   },
   {
      "audio":"vestibulum.mp3",
@@ -123,7 +123,7 @@
      "details":"Suspendisse potenti. Nullam porttitor lacus at turpis.",
      "id": 13,
      "rep":"KGF",
-     "time":"0:45"
+     "time":"00:45:22"
   },
   {
      "audio":"pellentesque.mp3",
@@ -132,7 +132,7 @@
      "details":"Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla.",
      "id": 14,
      "rep":"BSC",
-     "time":"9:44"
+     "time":"09:44:33"
   },
   {
      "audio":"morbi.mp3",
@@ -141,7 +141,7 @@
      "details":"Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat.",
      "id": 15,
      "rep":"BSC",
-     "time":"21:01"
+     "time":"21:01:25"
   },
   {
      "audio":"sit_amet_nulla.mp3",
@@ -150,7 +150,7 @@
      "details":"Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat.",
      "id": 16,
      "rep":"KLE",
-     "time":"4:51"
+     "time":"04:51:33"
   },
   {
      "audio":"integer_pede_justo.mp3",
@@ -159,7 +159,7 @@
      "details":"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
      "id": 17,
      "rep":"HIP",
-     "time":"9:12"
+     "time":"09:12:19"
   },
   {
      "audio":"quis_augue_luctus.mp3",
@@ -168,7 +168,7 @@
      "details":"In hac habitasse platea dictumst.",
      "id": 18,
      "rep":"QCV",
-     "time":"7:50"
+     "time":"07:50:17"
   },
   {
      "audio":"quam.mp3",
@@ -177,7 +177,7 @@
      "details":"Aliquam erat volutpat.",
      "id": 19,
      "rep":"JDS",
-     "time":"16:54"
+     "time":"16:54:01"
   },
   {
      "audio":"odio_in.mp3",
@@ -186,7 +186,7 @@
      "details":"Vestibulum sed magna at nunc commodo placerat. Praesent blandit.",
      "id": 20,
      "rep":"JDS",
-     "time":"6:22"
+     "time":"06:22:11"
   },
   {
      "audio":"ipsum_ac_tellus.mp3",
@@ -195,7 +195,7 @@
      "details":"Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.",
      "id": 21,
      "rep":"QCV",
-     "time":"13:13"
+     "time":"13:13:24"
   },
   {
      "audio":"dapibus_at_diam.mp3",
@@ -204,7 +204,7 @@
      "details":"Nulla justo. Aliquam quis turpis eget elit sodales scelerisque.",
      "id": 22,
      "rep":"QCV",
-     "time":"6:07"
+     "time":"06:07:53"
   },
   {
      "audio":"integer_ac_leo.mp3",
@@ -213,7 +213,7 @@
      "details":"Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
      "id": 23,
      "rep":"LLS",
-     "time":"9:19"
+     "time":"09:19:22"
   },
   {
      "audio":"justo_maecenas_rhoncus.mp3",
@@ -222,7 +222,7 @@
      "details":"Suspendisse potenti.",
      "id": 24,
      "rep":"TTB",
-     "time":"10:29"
+     "time":"10:29:33"
   },
   {
      "audio":"leo_rhoncus_sed.mp3",
@@ -231,7 +231,7 @@
      "details":"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.",
      "id": 25,
      "rep":"HIP",
-     "time":"5:47"
+     "time":"05:47:25"
   },
   {
      "audio":"tempus.mp3",
@@ -240,7 +240,7 @@
      "details":"Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis.",
      "id": 26,
      "rep":"KLE",
-     "time":"5:35"
+     "time":"05:35:33"
   },
   {
      "audio":"penatibus.mp3",
@@ -249,7 +249,7 @@
      "details":"Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
      "id": 27,
      "rep":"LLS",
-     "time":"8:30"
+     "time":"08:30:19"
   },
   {
      "audio":"nulla_elit_ac.mp3",
@@ -258,7 +258,7 @@
      "details":"Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
      "id": 28,
      "rep":"HIP",
-     "time":"22:32"
+     "time":"22:32:17"
   },
   {
      "audio":"ullamcorper_purus_sit.mp3",
@@ -267,6 +267,6 @@
      "details":"Aenean auctor grmp3da sem. Praesent id massa id nisl venenatis lacinia.",
      "id": 29,
      "rep":"KLE",
-     "time":"15:30"
+     "time":"15:30:01"
   }
 ]

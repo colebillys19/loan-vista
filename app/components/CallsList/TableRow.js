@@ -1,8 +1,6 @@
 import React from 'react';
 import T from 'prop-types';
 
-// import ExpandableTableCell from 'components/base_ui/ExpandableTableCell';
-
 import { StyledTableData } from './styledComponents';
 
 const TableRow = ({ data, headers }) => (

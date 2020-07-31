@@ -3,8 +3,8 @@
  * @description ...
  */
 
-import React from 'react';
-// import T from 'prop-types';
+import React, { useEffect } from 'react';
+import T from 'prop-types';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
@@ -13,26 +13,34 @@ import CorrView from 'components/CorrView';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
-import makeSelectCorr from './selectors';
+import { makeSelectCorrData } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+import { fetchCorrData } from './actions';
 
-export const Corr = () => {
+export const Corr = ({ corrData, dispatchFetchCorrData }) => {
   useInjectReducer({ key: 'corr', reducer });
   useInjectSaga({ key: 'corr', saga });
 
-  return <CorrView />;
+  useEffect(() => {
+    dispatchFetchCorrData();
+  }, []);
+
+  return <CorrView corrData={corrData} />;
 };
 
-Corr.propTypes = {};
+Corr.propTypes = {
+  corrData: T.array.isRequired,
+  dispatchFetchCorrData: T.func.isRequired,
+};
 
 const mapStateToProps = createStructuredSelector({
-  corr: makeSelectCorr(),
+  corrData: makeSelectCorrData(),
 });
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatch,
+    dispatchFetchCorrData: () => dispatch(fetchCorrData()),
   };
 }
 

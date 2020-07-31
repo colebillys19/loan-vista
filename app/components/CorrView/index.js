@@ -4,18 +4,21 @@
  */
 
 import React from 'react';
-// import T from 'prop-types';
+import T from 'prop-types';
 
+import CorrList from 'components/CorrList';
 import TabWrapper from 'components/TabWrapper';
 
 import { CorrViewWrapper } from './styledComponents';
 
-const CorrView = () => (
+const CorrView = ({ corrData }) => (
   <TabWrapper aria-labelledby="emails-letters-tab" id="emails-letters-view">
-    <CorrViewWrapper>CorrView</CorrViewWrapper>
+    <CorrViewWrapper>
+      <CorrList corrData={corrData} />
+    </CorrViewWrapper>
   </TabWrapper>
 );
 
-CorrView.propTypes = {};
+CorrView.propTypes = { corrData: T.array.isRequired };
 
 export default CorrView;

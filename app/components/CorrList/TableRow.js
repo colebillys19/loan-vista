@@ -1,18 +1,26 @@
 import React from 'react';
-// import T from 'prop-types';
+import T from 'prop-types';
 
-// import ExpandableTableCell from 'components/base_ui/ExpandableTableCell';
+import { StyledTableData } from './styledComponents';
 
-const TableRow = () => <div />;
+const TableRow = ({ data, headers }) => (
+  <tr>
+    {headers.map((header) => (
+      <StyledTableData key={header}>{data[header]}</StyledTableData>
+    ))}
+  </tr>
+);
 
-TableRow.propTypes = {};
+TableRow.propTypes = {
+  data: T.shape({
+    dateSent: T.string,
+    file: T.string,
+    from: T.string,
+    subject: T.string,
+    timeSent: T.string,
+    type: T.string,
+  }),
+  headers: T.arrayOf(T.string).isRequired,
+};
 
 export default TableRow;
-
-/*
-<tr>
-  {headers.map((header) => (
-    <StyledTableData key={header}>{data[header]}</StyledTableData>
-  ))}
-</tr>
-*/

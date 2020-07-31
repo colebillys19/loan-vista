@@ -35,13 +35,12 @@ Calls.propTypes = {
 };
 
 const mapStateToProps = createStructuredSelector({
-  callsData: makeSelectCallsData('callsData'),
+  callsData: makeSelectCallsData(),
 });
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatchFetchCallsData: (loanNumber) =>
-      dispatch(fetchCallsData(loanNumber)),
+    dispatchFetchCallsData: () => dispatch(fetchCallsData()),
   };
 }
 
