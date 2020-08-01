@@ -10,6 +10,8 @@ const initialState = {
       time: '',
     },
   ],
+  error: false,
+  loading: true,
 };
 
 export default initialState;

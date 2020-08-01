@@ -10,6 +10,8 @@ const initialState = {
       type: '',
     },
   ],
+  error: false,
+  loading: false,
 };
 
 export default initialState;

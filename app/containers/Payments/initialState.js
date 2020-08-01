@@ -1,4 +1,6 @@
 const initialState = {
+  error: false,
+  loading: false,
   paymentsData: [
     {
       accidentHealthInsurance: 0,

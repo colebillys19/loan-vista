@@ -17,7 +17,7 @@ const NotFoundView = () => (
   <TabWrapper isNotFound>
     <NotFoundViewWrapper>
       {WarningIcon}
-      <WarningHeading>Page Not Found</WarningHeading>
+      <WarningHeading>page not found</WarningHeading>
     </NotFoundViewWrapper>
   </TabWrapper>
 );

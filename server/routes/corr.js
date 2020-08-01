@@ -5,7 +5,10 @@ const getCorrespondence = (req, res) => {
     'server/mockData/CORRESPONDENCE_MOCK_DATA.json',
   );
   const data = JSON.parse(jsonData);
-  res.send(data);
+
+  setTimeout(() => {
+    res.send(data);
+  }, 500);
 };
 
 module.exports = getCorrespondence;

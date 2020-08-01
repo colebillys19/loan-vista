@@ -13,12 +13,12 @@ import CallsView from 'components/CallsView';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
-import { makeSelectCallsData } from './selectors';
+import makeSelectCalls, { makeSelectCallsData } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import { fetchCallsData } from './actions';
 
-export const Calls = ({ callsData, dispatchFetchCallsData }) => {
+export const Calls = ({ callsData, dispatchFetchCallsData, loading }) => {
   useInjectReducer({ key: 'calls', reducer });
   useInjectSaga({ key: 'calls', saga });
 
@@ -26,16 +26,18 @@ export const Calls = ({ callsData, dispatchFetchCallsData }) => {
     dispatchFetchCallsData();
   }, []);
 
-  return <CallsView callsData={callsData} />;
+  return <CallsView callsData={callsData} loading={loading} />;
 };
 
 Calls.propTypes = {
   callsData: T.array.isRequired,
   dispatchFetchCallsData: T.func.isRequired,
+  loading: T.bool.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
   callsData: makeSelectCallsData(),
+  loading: makeSelectCalls('loading'),
 });
 
 const mapDispatchToProps = (dispatch) => ({

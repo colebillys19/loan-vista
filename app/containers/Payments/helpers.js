@@ -5,7 +5,7 @@ import { convertNumToCurrency } from 'utils/globalHelpers';
 export const getPaymentsData = (paymentsData) =>
   paymentsData.map(
     ({ date, escrow, interest, principal, total, ...restData }) => {
-      const dateFormatted = moment(date, 'YYYY-MM-DD').format('M/D/YYYY');
+      const dateFormatted = moment(date, 'YYYY-MM-DD').format('MM/DD/YYYY');
 
       return {
         date: dateFormatted,
