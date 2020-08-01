@@ -8,9 +8,17 @@ import T from 'prop-types';
 
 import SidebarHeader from 'components/SidebarHeader';
 import SidebarSummary from 'components/SidebarSummary';
-import { SidebarContainer, SidebarContentContainer } from './styledComponents';
+import ConditionalRender from 'components/_baseUI/ConditionalRender';
+
+import {
+  SidebarContainer,
+  SidebarContentContainer,
+  SidebarDetailPlaceholder,
+  SidebarHeaderPlaceholder,
+} from './styledComponents';
 
 const Sidebar = ({
+  loading,
   pathname,
   sidebarHeaderData,
   sidebarSummariesData: {
@@ -22,27 +30,42 @@ const Sidebar = ({
 }) => (
   <SidebarContainer>
     <SidebarContentContainer>
-      <SidebarHeader
-        pathname={pathname}
-        sidebarHeaderData={sidebarHeaderData}
+      <ConditionalRender
+        Component={
+          <SidebarHeader
+            pathname={pathname}
+            sidebarHeaderData={sidebarHeaderData}
+          />
+        }
+        FallbackComponent={<SidebarHeaderPlaceholder />}
+        shouldRender={!loading}
       />
-      <SidebarSummary data={loanSummaryData} iconName="bullet" title="Loan" />
-      <SidebarSummary
-        data={paymentSummaryData}
-        iconName="bullet"
-        title="Payment"
+      <ConditionalRender
+        Component={<SidebarSummary data={loanSummaryData} title="Loan" />}
+        FallbackComponent={<SidebarDetailPlaceholder height="29.4rem" />}
+        shouldRender={!loading}
       />
-      <SidebarSummary data={callsSummaryData} iconName="bullet" title="Calls" />
-      <SidebarSummary
-        data={serviceSummaryData}
-        iconName="bullet"
-        title="Service"
+      <ConditionalRender
+        Component={<SidebarSummary data={paymentSummaryData} title="Payment" />}
+        FallbackComponent={<SidebarDetailPlaceholder height="14.7rem" />}
+        shouldRender={!loading}
+      />
+      <ConditionalRender
+        Component={<SidebarSummary data={callsSummaryData} title="Calls" />}
+        FallbackComponent={<SidebarDetailPlaceholder height="14.7rem" />}
+        shouldRender={!loading}
+      />
+      <ConditionalRender
+        Component={<SidebarSummary data={serviceSummaryData} title="Service" />}
+        FallbackComponent={<SidebarDetailPlaceholder height="10.4rem" />}
+        shouldRender={!loading}
       />
     </SidebarContentContainer>
   </SidebarContainer>
 );
 
 Sidebar.propTypes = {
+  loading: T.bool.isRequired,
   pathname: T.string.isRequired,
   sidebarHeaderData: T.object.isRequired,
   sidebarSummariesData: T.shape({

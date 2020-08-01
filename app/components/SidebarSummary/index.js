@@ -16,8 +16,8 @@ import {
   SummaryTitleWrapper,
 } from './styledComponents';
 
-const SidebarSummary = ({ data, iconName, title }) => {
-  const Icon = iconDictionary(iconName, '1.2rem');
+const SidebarSummary = ({ data, title }) => {
+  const Icon = iconDictionary('bullet', '1.2rem');
 
   return (
     <SidebarSummaryContainer>
@@ -37,7 +37,6 @@ const SidebarSummary = ({ data, iconName, title }) => {
 
 SidebarSummary.propTypes = {
   data: T.array.isRequired,
-  iconName: T.string.isRequired,
   title: T.string.isRequired,
 };
 

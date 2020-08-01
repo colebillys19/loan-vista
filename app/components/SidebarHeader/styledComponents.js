@@ -17,7 +17,7 @@ export const SidebarDetail = styled.div`
 `;
 
 export const SidebarHeaderContainer = styled.div`
-  margin: 0 auto 4rem;
+  margin-bottom: 4rem;
   width: 100%;
 `;
 

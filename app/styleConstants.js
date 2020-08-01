@@ -4,3 +4,4 @@ export const appColorC = 'lightsalmon';
 export const appBackgroundColor = 'ghostwhite';
 export const appTextColorA = 'black';
 export const appTextColorB = 'black';
+export const borderGrey = '#ccc';
