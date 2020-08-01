@@ -12,26 +12,22 @@ import ConditionalRender from 'components/_baseUI/ConditionalRender';
 import Spinner from 'components/_baseUI/Spinner';
 import NoListDataFallback from 'components/_baseUI/NoListDataFallback';
 
-import { CallsViewWrapper } from './styledComponents';
-
 const CallsView = ({ callsData, loading }) => {
   const noListData = !loading && callsData.length === 0;
 
   return (
     <TabWrapper aria-labelledby="calls-tab" id="calls-view">
-      <CallsViewWrapper>
-        <ConditionalRender
-          Component={
-            <ConditionalRender
-              Component={<CallsList callsData={callsData} loading={loading} />}
-              FallbackComponent={<Spinner />}
-              shouldRender={!loading}
-            />
-          }
-          FallbackComponent={<NoListDataFallback />}
-          shouldRender={!noListData}
-        />
-      </CallsViewWrapper>
+      <ConditionalRender
+        Component={
+          <ConditionalRender
+            Component={<CallsList callsData={callsData} loading={loading} />}
+            FallbackComponent={<Spinner />}
+            shouldRender={!loading}
+          />
+        }
+        FallbackComponent={<NoListDataFallback />}
+        shouldRender={!noListData}
+      />
     </TabWrapper>
   );
 };

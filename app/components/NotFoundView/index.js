@@ -14,7 +14,7 @@ import { NotFoundViewWrapper, WarningHeading } from './styledComponents';
 const WarningIcon = iconDictionary('warning', '12rem');
 
 const NotFoundView = () => (
-  <TabWrapper isNotFound>
+  <TabWrapper>
     <NotFoundViewWrapper>
       {WarningIcon}
       <WarningHeading>page not found</WarningHeading>

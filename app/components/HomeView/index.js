@@ -8,11 +8,9 @@ import React from 'react';
 
 import TabWrapper from 'components/TabWrapper';
 
-import { HomeViewWrapper } from './styledComponents';
-
 const HomeView = () => (
   <TabWrapper aria-labelledby="home-button" id="home-view">
-    <HomeViewWrapper>HomeView</HomeViewWrapper>
+    HomeView
   </TabWrapper>
 );
 

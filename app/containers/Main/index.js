@@ -29,7 +29,7 @@ export const Main = ({
   useInjectSaga({ key: 'main', saga });
 
   useEffect(() => {
-    dispatchFetchLoanData();
+    // dispatchFetchLoanData();
   }, []);
 
   return render({ sidebarHeaderData, sidebarSummariesData });

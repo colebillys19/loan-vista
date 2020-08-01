@@ -13,7 +13,7 @@ import {
   DetailLabel,
   IconWrapper,
   SidebarDetail,
-  SidebarHeaderWrapper,
+  SidebarHeaderContainer,
   StatusWrapper,
   StyledH1,
 } from './styledComponents';
@@ -22,7 +22,7 @@ const SidebarHeader = ({
   pathname,
   sidebarHeaderData: { address1, address2, health, loanNumber, name, status },
 }) => (
-  <SidebarHeaderWrapper>
+  <SidebarHeaderContainer>
     <IconWrapper>{getIcon(pathname, '8rem')}</IconWrapper>
     <StyledH1>{pathname === '/' ? loanNumber : getTabName(pathname)}</StyledH1>
     <SidebarDetail>{name}</SidebarDetail>
@@ -41,7 +41,7 @@ const SidebarHeader = ({
       <DetailLabel>Status: </DetailLabel>
       <StatusWrapper color={getHealthColor(health)}>{status}</StatusWrapper>
     </SidebarDetail>
-  </SidebarHeaderWrapper>
+  </SidebarHeaderContainer>
 );
 
 SidebarHeader.propTypes = {

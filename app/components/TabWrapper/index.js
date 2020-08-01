@@ -6,8 +6,7 @@
 import styled from 'styled-components';
 
 export default styled.section`
-  background-color: ${({ isNotFound }) =>
-    isNotFound ? 'transparent' : 'white'};
+  background-color: white;
   display: inline-block;
   margin-bottom: 4rem;
   min-height: 110rem;

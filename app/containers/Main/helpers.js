@@ -37,7 +37,9 @@ export const dataFormatter = (value, format) => {
     case 'currency':
       return convertNumToCurrency(value);
     case 'date':
-      return moment(value, 'YYYY-MM-DD').format('M/D/YYYY');
+      return value !== '-'
+        ? moment(value, 'YYYY-MM-DD').format('M/D/YYYY')
+        : '-';
     case 'minutes':
       return `${value} minutes`;
     case 'percentage':

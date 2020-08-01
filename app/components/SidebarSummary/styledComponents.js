@@ -4,7 +4,7 @@ export const DetailLabel = styled.span`
   color: grey;
 `;
 
-export const SidebarSummaryWrapper = styled.section`
+export const SidebarSummaryContainer = styled.section`
   & :last-of-type {
     padding-bottom: 2rem;
   }

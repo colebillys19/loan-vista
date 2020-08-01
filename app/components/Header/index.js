@@ -5,13 +5,13 @@
 
 import React from 'react';
 
-import { HeaderWrapper, SwatchA, SwatchB } from './styledComponents';
+import { HeaderContainer, SwatchA, SwatchB } from './styledComponents';
 
 const Header = () => (
-  <HeaderWrapper>
+  <HeaderContainer>
     <SwatchA />
     <SwatchB />
-  </HeaderWrapper>
+  </HeaderContainer>
 );
 
 export default Header;

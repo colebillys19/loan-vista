@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { appColorA, appColorB, appColorC } from 'styleConstants';
 
-export const HeaderWrapper = styled.header`
+export const HeaderContainer = styled.header`
   background-color: ${appColorA};
   height: 8rem;
 `;

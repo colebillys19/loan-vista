@@ -26,7 +26,7 @@ import Sidebar from 'components/Sidebar';
 import TabNav from 'components/TabNav';
 
 import { makeSelectPathname } from './selectors';
-import { MainWrapper } from './styledComponents';
+import { MainContainer } from './styledComponents';
 
 const App = ({ dispatchNavigation, pathname }) => (
   <Fragment>
@@ -34,7 +34,7 @@ const App = ({ dispatchNavigation, pathname }) => (
     <TabNav dispatchNavigation={dispatchNavigation} pathname={pathname} />
     <Main
       render={({ sidebarHeaderData, sidebarSummariesData }) => (
-        <MainWrapper>
+        <MainContainer>
           <Sidebar
             pathname={pathname}
             sidebarHeaderData={sidebarHeaderData}
@@ -48,7 +48,7 @@ const App = ({ dispatchNavigation, pathname }) => (
             <Route component={MiscView} exact path="/misc" />
             <Route component={NotFoundView} />
           </Switch>
-        </MainWrapper>
+        </MainContainer>
       )}
     />
     <GlobalStyle />
@@ -64,11 +64,9 @@ const mapStateToProps = createStructuredSelector({
   pathname: makeSelectPathname(),
 });
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    dispatchNavigation: (pathname) => dispatch(push(pathname)),
-  };
-};
+const mapDispatchToProps = (dispatch) => ({
+  dispatchNavigation: (pathname) => dispatch(push(pathname)),
+});
 
 const withConnect = connect(
   mapStateToProps,

@@ -5,7 +5,7 @@ import Tabs from '@material-ui/core/Tabs';
 
 import { appColorA } from 'styleConstants';
 
-export const ContentWrapper = styled.div`
+export const ContentContainer = styled.div`
   height: 6rem;
   margin: 0 auto;
   width: 120rem;

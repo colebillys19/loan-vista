@@ -6,31 +6,51 @@
 import React from 'react';
 import T from 'prop-types';
 
-import ConditionalRender from 'components/_baseUI/ConditionalRender';
+import SidebarHeader from 'components/SidebarHeader';
+import SidebarSummary from 'components/SidebarSummary';
+import { SidebarContainer, SidebarContentContainer } from './styledComponents';
 
-import SidebarContent from './SidebarContent';
-import { pathnameIsValid } from './helpers';
-import { SidebarContainer } from './styledComponents';
-
-const Sidebar = ({ pathname, sidebarHeaderData, sidebarSummariesData }) => (
+const Sidebar = ({
+  pathname,
+  sidebarHeaderData,
+  sidebarSummariesData: {
+    callsSummaryData,
+    loanSummaryData,
+    paymentSummaryData,
+    serviceSummaryData,
+  },
+}) => (
   <SidebarContainer>
-    <ConditionalRender
-      Component={
-        <SidebarContent
-          pathname={pathname}
-          sidebarHeaderData={sidebarHeaderData}
-          sidebarSummariesData={sidebarSummariesData}
-        />
-      }
-      shouldRender={pathnameIsValid(pathname)}
-    />
+    <SidebarContentContainer>
+      <SidebarHeader
+        pathname={pathname}
+        sidebarHeaderData={sidebarHeaderData}
+      />
+      <SidebarSummary data={loanSummaryData} iconName="bullet" title="Loan" />
+      <SidebarSummary
+        data={paymentSummaryData}
+        iconName="bullet"
+        title="Payment"
+      />
+      <SidebarSummary data={callsSummaryData} iconName="bullet" title="Calls" />
+      <SidebarSummary
+        data={serviceSummaryData}
+        iconName="bullet"
+        title="Service"
+      />
+    </SidebarContentContainer>
   </SidebarContainer>
 );
 
 Sidebar.propTypes = {
   pathname: T.string.isRequired,
   sidebarHeaderData: T.object.isRequired,
-  sidebarSummariesData: T.object.isRequired,
+  sidebarSummariesData: T.shape({
+    callsSummaryData: T.array,
+    loanSummaryData: T.array,
+    paymentSummaryData: T.array,
+    serviceSummaryData: T.array,
+  }).isRequired,
 };
 
 export default Sidebar;

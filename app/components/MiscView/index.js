@@ -8,11 +8,9 @@ import React from 'react';
 
 import TabWrapper from 'components/TabWrapper';
 
-import { MiscViewWrapper } from './styledComponents';
-
 const MiscView = () => (
   <TabWrapper aria-labelledby="misc-tab" id="misc-view">
-    <MiscViewWrapper>MiscView</MiscViewWrapper>
+    MiscView
   </TabWrapper>
 );
 

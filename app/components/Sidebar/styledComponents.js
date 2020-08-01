@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { appColorC } from 'styleConstants';
+
 export const SidebarContainer = styled.aside`
   display: inline-block;
   margin-right: 0.3rem;
@@ -9,7 +11,13 @@ export const SidebarContainer = styled.aside`
   vertical-align: top;
 `;
 
-export const SidebarContentWrapper = styled.div`
+export const SidebarContentContainer = styled.div`
   border-left: 0.1rem solid #ccc;
   padding: 0 2.5rem;
+`;
+
+export const SidebarHeaderPlaceholder = styled.div`
+  background-color: ${appColorC};
+  height: 20.6rem;
+  width: 100%;
 `;

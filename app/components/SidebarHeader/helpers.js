@@ -30,7 +30,7 @@ export const getIcon = (pathname, size) => {
       return iconDictionary('folder', size);
 
     default:
-      return iconDictionary('warning', size);
+      return iconDictionary('profile', size);
   }
 };
 
@@ -49,6 +49,6 @@ export const getTabName = (pathname) => {
       return 'Misc';
 
     default:
-      return 'Not Found';
+      return '-';
   }
 };
