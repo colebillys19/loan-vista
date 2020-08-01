@@ -5,6 +5,7 @@ import {
   FETCH_CALLS_DATA,
   FETCH_CALLS_DATA_FAILURE,
   FETCH_CALLS_DATA_SUCCESS,
+  ON_UNMOUNT,
 } from './constants';
 
 export const initialState = callsInitialState;
@@ -26,6 +27,10 @@ const callsReducer = (state = initialState, { payload, type }) =>
         const { callsData } = payload;
         draft.callsData = callsData;
         draft.loading = false;
+        break;
+      case ON_UNMOUNT:
+        draft.error = false;
+        draft.loading = true;
         break;
     }
   });

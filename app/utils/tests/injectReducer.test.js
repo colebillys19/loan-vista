@@ -46,7 +46,7 @@ describe('injectReducer decorator', () => {
     expect(injectors.injectReducer).toHaveBeenCalledWith('test', reducer);
   });
 
-  it('should set a correct display name', () => {
+  it('should set a emailsect display name', () => {
     expect(ComponentWithReducer.displayName).toBe('withReducer(Component)');
     expect(
       injectReducer({ key: 'test', reducer })(() => null).displayName,

@@ -1,30 +1,33 @@
 /**
- * PaymentsView
+ * EmailsView
  * @description ...
  */
 
 import React from 'react';
 import T from 'prop-types';
 
-import PaymentsList from 'components/PaymentsList';
+import EmailsList from 'components/EmailsList';
 import TabWrapper from 'components/TabWrapper';
 import ConditionalRender from 'components/_baseUI/ConditionalRender';
 import Spinner from 'components/_baseUI/Spinner';
 import NoListDataFallback from 'components/_baseUI/NoListDataFallback';
 
-import { PaymentsViewWrapper } from './styledComponents';
+import { EmailsViewWrapper } from './styledComponents';
 
-const PaymentsView = ({ paymentsData, loading }) => {
-  const noListData = !loading && paymentsData.length === 0;
+const EmailsView = ({ emailsData, loading }) => {
+  const noListData = !loading && emailsData.length === 0;
 
   return (
-    <TabWrapper aria-labelledby="payments-tab" id="payments-view">
-      <PaymentsViewWrapper>
+    <TabWrapper
+      aria-labelledby="emails-and-letters-tab"
+      id="emails-and-letters-view"
+    >
+      <EmailsViewWrapper>
         <ConditionalRender
           Component={
             <ConditionalRender
               Component={
-                <PaymentsList paymentsData={paymentsData} loading={loading} />
+                <EmailsList emailsData={emailsData} loading={loading} />
               }
               FallbackComponent={<Spinner />}
               shouldRender={!loading}
@@ -33,14 +36,14 @@ const PaymentsView = ({ paymentsData, loading }) => {
           FallbackComponent={<NoListDataFallback />}
           shouldRender={!noListData}
         />
-      </PaymentsViewWrapper>
+      </EmailsViewWrapper>
     </TabWrapper>
   );
 };
 
-PaymentsView.propTypes = {
-  paymentsData: T.array.isRequired,
+EmailsView.propTypes = {
+  emailsData: T.array.isRequired,
   loading: T.bool.isRequired,
 };
 
-export default PaymentsView;
+export default EmailsView;

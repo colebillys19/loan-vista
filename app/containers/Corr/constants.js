@@ -1,3 +1,0 @@
-export const FETCH_CORR_DATA = 'app/Corr/FETCH_CORR_DATA';
-export const FETCH_CORR_DATA_FAILURE = 'app/Corr/FETCH_CORR_DATA_FAILURE';
-export const FETCH_CORR_DATA_SUCCESS = 'app/Corr/FETCH_CORR_DATA_SUCCESS';

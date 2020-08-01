@@ -59,7 +59,7 @@ describe('injectSaga decorator', () => {
     );
   });
 
-  it('should eject on unmount with a correct saga key', () => {
+  it('should eject on unmount with a emailsect saga key', () => {
     const props = { test: 'test' };
     const renderedComponent = renderer.create(
       <Provider store={store}>
@@ -72,7 +72,7 @@ describe('injectSaga decorator', () => {
     expect(injectors.ejectSaga).toHaveBeenCalledWith('test');
   });
 
-  it('should set a correct display name', () => {
+  it('should set a emailsect display name', () => {
     expect(ComponentWithSaga.displayName).toBe('withSaga(Component)');
     expect(
       injectSaga({ key: 'test', saga: testSaga })(() => null).displayName,
@@ -134,7 +134,7 @@ describe('useInjectSaga hook', () => {
     });
   });
 
-  it('should eject on unmount with a correct saga key', () => {
+  it('should eject on unmount with a emailsect saga key', () => {
     const props = { test: 'test' };
     const { unmount } = render(
       <Provider store={store}>

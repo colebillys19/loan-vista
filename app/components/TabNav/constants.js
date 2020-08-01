@@ -1,1 +1,1 @@
-export const VALID_ROUTES = ['/calls', '/correspondence', '/payments', '/misc'];
+export const VALID_ROUTES = ['/calls', '/emails', '/payments', '/misc'];

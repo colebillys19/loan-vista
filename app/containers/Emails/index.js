@@ -1,5 +1,5 @@
 /**
- * Calls
+ * Emails
  * @description ...
  */
 
@@ -9,49 +9,49 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
-import CallsView from 'components/CallsView';
+import EmailsView from 'components/EmailsView';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
-import makeSelectCalls, { makeSelectCallsData } from './selectors';
+import makeSelectEmails, { makeSelectEmailsData } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import { fetchCallsData, onUnmount } from './actions';
+import { fetchEmailsData, onUnmount } from './actions';
 
-export const Calls = ({
-  callsData,
-  dispatchFetchCallsData,
+export const Emails = ({
+  emailsData,
+  dispatchFetchEmailsData,
   dispatchOnUnmount,
   loading,
 }) => {
-  useInjectReducer({ key: 'calls', reducer });
-  useInjectSaga({ key: 'calls', saga });
+  useInjectReducer({ key: 'emails', reducer });
+  useInjectSaga({ key: 'emails', saga });
 
   useEffect(() => {
-    dispatchFetchCallsData();
+    dispatchFetchEmailsData();
 
     return () => {
       dispatchOnUnmount();
     };
   }, []);
 
-  return <CallsView callsData={callsData} loading={loading} />;
+  return <EmailsView emailsData={emailsData} loading={loading} />;
 };
 
-Calls.propTypes = {
-  callsData: T.array.isRequired,
-  dispatchFetchCallsData: T.func.isRequired,
+Emails.propTypes = {
+  emailsData: T.array.isRequired,
+  dispatchFetchEmailsData: T.func.isRequired,
   dispatchOnUnmount: T.func.isRequired,
   loading: T.bool.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
-  callsData: makeSelectCallsData(),
-  loading: makeSelectCalls('loading'),
+  emailsData: makeSelectEmailsData(),
+  loading: makeSelectEmails('loading'),
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  dispatchFetchCallsData: () => dispatch(fetchCallsData()),
+  dispatchFetchEmailsData: () => dispatch(fetchEmailsData()),
   dispatchOnUnmount: () => dispatch(onUnmount()),
 });
 
@@ -60,4 +60,4 @@ const withConnect = connect(
   mapDispatchToProps,
 );
 
-export default compose(withConnect)(Calls);
+export default compose(withConnect)(Emails);

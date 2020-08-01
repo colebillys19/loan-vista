@@ -14,7 +14,7 @@ import { push } from 'connected-react-router';
 import GlobalStyle from 'global-styles';
 
 import Calls from 'containers/Calls';
-import Corr from 'containers/Corr';
+import Emails from 'containers/Emails';
 import Main from 'containers/Main';
 import Payments from 'containers/Payments';
 
@@ -43,7 +43,7 @@ const App = ({ dispatchNavigation, pathname }) => (
           <Switch>
             <Route component={HomeView} exact path="/" />
             <Route component={Calls} exact path="/calls" />
-            <Route component={Corr} exact path="/correspondence" />
+            <Route component={Emails} exact path="/emails" />
             <Route component={Payments} exact path="/payments" />
             <Route component={MiscView} exact path="/misc" />
             <Route component={NotFoundView} />
@@ -64,11 +64,11 @@ const mapStateToProps = createStructuredSelector({
   pathname: makeSelectPathname(),
 });
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
   return {
     dispatchNavigation: (pathname) => dispatch(push(pathname)),
   };
-}
+};
 
 const withConnect = connect(
   mapStateToProps,

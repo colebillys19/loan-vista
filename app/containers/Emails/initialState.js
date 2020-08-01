@@ -1,5 +1,5 @@
 const initialState = {
-  corrData: [
+  emailsData: [
     {
       dateSent: '',
       file: '',
@@ -11,7 +11,7 @@ const initialState = {
     },
   ],
   error: false,
-  loading: false,
+  loading: true,
 };
 
 export default initialState;

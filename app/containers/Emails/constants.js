@@ -1,0 +1,4 @@
+export const FETCH_EMAILS_DATA = 'app/Emails/FETCH_EMAILS_DATA';
+export const FETCH_EMAILS_DATA_FAILURE = 'app/Emails/FETCH_EMAILS_DATA_FAILURE';
+export const FETCH_EMAILS_DATA_SUCCESS = 'app/Emails/FETCH_EMAILS_DATA_SUCCESS';
+export const ON_UNMOUNT = 'app/Emails/ON_UNMOUNT';

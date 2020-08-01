@@ -1,5 +1,5 @@
 /**
- * CorrList
+ * EmailsList
  * @description ...
  */
 
@@ -13,7 +13,7 @@ import {
   StyledTableHeader,
 } from './styledComponents';
 
-const CorrList = ({ corrData, headers }) => (
+const EmailsList = ({ emailsData, headers }) => (
   <StyledTable>
     <StyledTableHead>
       <tr>
@@ -25,15 +25,15 @@ const CorrList = ({ corrData, headers }) => (
       </tr>
     </StyledTableHead>
     <tbody>
-      {corrData.map(({ id, ...restData }) => (
+      {emailsData.map(({ id, ...restData }) => (
         <TableRow data={restData} headers={headers} key={id} />
       ))}
     </tbody>
   </StyledTable>
 );
 
-CorrList.propTypes = {
-  corrData: T.arrayOf(
+EmailsList.propTypes = {
+  emailsData: T.arrayOf(
     T.shape({
       dateSent: T.string,
       file: T.string,
@@ -47,8 +47,8 @@ CorrList.propTypes = {
   headers: T.arrayOf(T.string),
 };
 
-CorrList.defaultProps = {
+EmailsList.defaultProps = {
   headers: ['dateSent', 'timeSent', 'type', 'from', 'subject', 'file'],
 };
 
-export default CorrList;
+export default EmailsList;
