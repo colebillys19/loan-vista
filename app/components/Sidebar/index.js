@@ -13,8 +13,7 @@ import ConditionalRender from 'components/_baseUI/ConditionalRender';
 import {
   SidebarContainer,
   SidebarContentContainer,
-  SidebarDetailPlaceholder,
-  SidebarHeaderPlaceholder,
+  SidebarSectionPlaceholder,
 } from './styledComponents';
 
 const Sidebar = ({
@@ -38,29 +37,31 @@ const Sidebar = ({
             sidebarHeaderData={sidebarHeaderData}
           />
         }
-        FallbackComponent={<SidebarHeaderPlaceholder />}
+        FallbackComponent={
+          <SidebarSectionPlaceholder height="24.1rem" isHeader />
+        }
         shouldRender={!loading}
       />
       <ConditionalRender
         Component={
           <SidebarSummary data={loanSummaryData} health={health} title="Loan" />
         }
-        FallbackComponent={<SidebarDetailPlaceholder height="29.4rem" />}
+        FallbackComponent={<SidebarSectionPlaceholder height="31.5rem" />}
         shouldRender={!loading}
       />
       <ConditionalRender
         Component={<SidebarSummary data={paymentSummaryData} title="Payment" />}
-        FallbackComponent={<SidebarDetailPlaceholder height="14.7rem" />}
+        FallbackComponent={<SidebarSectionPlaceholder height="14.7rem" />}
         shouldRender={!loading}
       />
       <ConditionalRender
         Component={<SidebarSummary data={callsSummaryData} title="Calls" />}
-        FallbackComponent={<SidebarDetailPlaceholder height="14.7rem" />}
+        FallbackComponent={<SidebarSectionPlaceholder height="14.7rem" />}
         shouldRender={!loading}
       />
       <ConditionalRender
         Component={<SidebarSummary data={serviceSummaryData} title="Service" />}
-        FallbackComponent={<SidebarDetailPlaceholder height="10.4rem" />}
+        FallbackComponent={<SidebarSectionPlaceholder height="10.4rem" />}
         shouldRender={!loading}
       />
     </SidebarContentContainer>

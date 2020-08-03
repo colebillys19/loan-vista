@@ -16,6 +16,7 @@ import {
   IconWrapper,
   SidebarDetail,
   SidebarHeaderContainer,
+  StyledButton,
   StyledH1,
 } from './styledComponents';
 
@@ -40,6 +41,7 @@ const SidebarHeader = ({
       <SidebarDetail>{name}</SidebarDetail>
       <SidebarDetail>{address1}</SidebarDetail>
       <SidebarDetail>{address2}</SidebarDetail>
+      <StyledButton variant="contained">Switch Loan</StyledButton>
     </SidebarHeaderContainer>
   );
 };

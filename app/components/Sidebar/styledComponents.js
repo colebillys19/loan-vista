@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { appColorC, borderGrey } from 'styleConstants';
+import { borderGrey } from 'styleConstants';
 
 export const SidebarContainer = styled.aside`
   display: inline-block;
@@ -16,18 +16,10 @@ export const SidebarContentContainer = styled.div`
   padding: 0 2.5rem;
 `;
 
-export const SidebarDetailPlaceholder = styled.div`
-  background-color: #eee;
-  border: 0.1rem solid ${borderGrey};
-  height: ${({ height }) => height};
-  margin-bottom: 2.2rem;
-  width: 100%;
-`;
-
-export const SidebarHeaderPlaceholder = styled.div`
-  background-color: white;
-  border: 0.1rem solid ${appColorC};
-  height: 20.6rem;
-  margin-bottom: 4rem;
+export const SidebarSectionPlaceholder = styled.div`
+  border-top: ${({ isHeader }) =>
+    isHeader ? '' : `0.1rem solid ${borderGrey}`};
+  height: ${({ height }) => height || ''};
+  margin-bottom: ${({ isHeader }) => (isHeader ? '4rem' : '2.2rem')};
   width: 100%;
 `;

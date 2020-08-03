@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import Button from '@material-ui/core/Button';
+
+import { appColorA, appColorB } from 'styleConstants';
 
 export const HeadingContainer = styled.div`
   margin: 0.5rem 0 1.1rem;
@@ -27,6 +30,18 @@ export const SidebarDetail = styled.div`
 export const SidebarHeaderContainer = styled.div`
   margin-bottom: 4rem;
   width: 100%;
+`;
+
+export const StyledButton = styled(Button)`
+  background-color: ${appColorA};
+  color: ${appColorB};
+  display: block;
+  font-size: 1.4rem;
+  margin: 1.7rem auto 0;
+  text-transform: none;
+  & :hover {
+    background-color: #9586f1;
+  }
 `;
 
 export const StyledH1 = styled.h1`
