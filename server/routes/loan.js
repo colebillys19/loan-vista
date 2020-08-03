@@ -1,8 +1,8 @@
-const loanData = require('../mockData/loanMockData');
+const loanMockData = require('../mockData/loanMockData');
 
 const getLoanData = (req, res) => {
   setTimeout(() => {
-    res.send(loanData);
+    res.send(loanMockData);
   }, 500);
 };
 

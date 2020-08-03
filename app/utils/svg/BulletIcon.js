@@ -4,7 +4,7 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 
 import { appColorA } from 'styleConstants';
 
-const Bullet = ({ color, size, ...restProps }) => (
+const BulletIcon = ({ color, size, ...restProps }) => (
   <SvgIcon
     viewBox="0 0 64 64"
     style={{ height: size, width: size }}
@@ -15,8 +15,8 @@ const Bullet = ({ color, size, ...restProps }) => (
   </SvgIcon>
 );
 
-Bullet.propTypes = { color: T.string, size: T.string };
+BulletIcon.propTypes = { color: T.string, size: T.string };
 
-Bullet.defaultProps = { color: appColorA, size: '30px' };
+BulletIcon.defaultProps = { color: appColorA };
 
-export default Bullet;
+export default BulletIcon;

@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const Detail = styled.span`
+  color: ${({ color }) => color};
+  font-weight: ${({ color }) => (color ? 'bold' : 'normal')};
+`;
+
 export const DetailLabel = styled.span`
   color: grey;
 `;

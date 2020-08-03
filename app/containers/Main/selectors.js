@@ -23,9 +23,9 @@ const makeSelectMain = (prop) =>
  */
 const makeSelectSidebarHeaderData = () =>
   createSelector(
-    makeSelectMain('loanNumber'),
     makeSelectMain('loanData'),
-    (loanNumber, loanData) => getSidebarHeaderData(loanNumber, loanData),
+    makeSelectMain('loanNumber'),
+    (loanData, loanNumber) => getSidebarHeaderData(loanData, loanNumber),
   );
 
 /**
@@ -35,12 +35,17 @@ const makeSelectSidebarHeaderData = () =>
 const makeSelectSidebarSummariesData = () =>
   createSelector(
     makeSelectMain('loanData'),
-    ({ summaries: { calls, loan, payment, service } }) => ({
-      callsSummaryData: getCallsSummary(calls),
-      loanSummaryData: getLoanSummary(loan),
-      paymentSummaryData: getPaymentSummary(payment),
-      serviceSummaryData: getServiceSummary(service),
-    }),
+    ({ summaries: { calls, loan, payment, service } }) => {
+      const { health } = loan;
+
+      return {
+        callsSummaryData: getCallsSummary(calls),
+        health,
+        loanSummaryData: getLoanSummary(loan),
+        paymentSummaryData: getPaymentSummary(payment),
+        serviceSummaryData: getServiceSummary(service),
+      };
+    },
   );
 
 export default makeSelectMain;

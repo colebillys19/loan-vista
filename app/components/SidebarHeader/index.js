@@ -6,43 +6,43 @@
 import React from 'react';
 import T from 'prop-types';
 
+import BulletIcon from 'utils/svg/BulletIcon';
+import { getHealthColor } from 'utils/globalHelpers';
 import ConditionalRender from 'components/_baseUI/ConditionalRender';
 
-import { getIcon, getTabName, getHealthColor } from './helpers';
+import { getIcon, getTabName } from './helpers';
 import {
-  DetailLabel,
+  HeadingContainer,
   IconWrapper,
   SidebarDetail,
   SidebarHeaderContainer,
-  StatusWrapper,
   StyledH1,
 } from './styledComponents';
 
 const SidebarHeader = ({
   pathname,
-  sidebarHeaderData: { address1, address2, health, loanNumber, name, status },
-}) => (
-  <SidebarHeaderContainer>
-    <IconWrapper>{getIcon(pathname, '8rem')}</IconWrapper>
-    <StyledH1>{pathname === '/' ? loanNumber : getTabName(pathname)}</StyledH1>
-    <SidebarDetail>{name}</SidebarDetail>
-    <SidebarDetail>{address1}</SidebarDetail>
-    <SidebarDetail>{address2}</SidebarDetail>
-    <ConditionalRender
-      Component={
-        <SidebarDetail>
-          <DetailLabel>Loan Number: </DetailLabel>
-          {loanNumber}
-        </SidebarDetail>
-      }
-      shouldRender={pathname !== '/'}
-    />
-    <SidebarDetail>
-      <DetailLabel>Status: </DetailLabel>
-      <StatusWrapper color={getHealthColor(health)}>{status}</StatusWrapper>
-    </SidebarDetail>
-  </SidebarHeaderContainer>
-);
+  sidebarHeaderData: { address1, address2, health, loanNumber, name },
+}) => {
+  const isHome = pathname === '/';
+
+  return (
+    <SidebarHeaderContainer>
+      <IconWrapper>{getIcon(pathname, '8rem')}</IconWrapper>
+      <HeadingContainer>
+        <StyledH1>{isHome ? loanNumber : getTabName(pathname)}</StyledH1>
+        <ConditionalRender
+          Component={
+            <BulletIcon color={getHealthColor(health)} size="2.5rem" />
+          }
+          shouldRender={isHome}
+        />
+      </HeadingContainer>
+      <SidebarDetail>{name}</SidebarDetail>
+      <SidebarDetail>{address1}</SidebarDetail>
+      <SidebarDetail>{address2}</SidebarDetail>
+    </SidebarHeaderContainer>
+  );
+};
 
 SidebarHeader.propTypes = {
   pathname: T.string.isRequired,
@@ -52,7 +52,6 @@ SidebarHeader.propTypes = {
     health: T.number,
     loanNumber: T.string,
     name: T.string,
-    status: T.string,
   }).isRequired,
 };
 

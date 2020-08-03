@@ -4,22 +4,14 @@ import {
   FETCH_LOAN_DATA_SUCCESS,
 } from './constants';
 
-export const fetchLoanData = () => {
-  return {
-    type: FETCH_LOAN_DATA,
-  };
-};
+export const fetchLoanData = () => ({ type: FETCH_LOAN_DATA });
 
-export const fetchLoanDataFailure = (error) => {
-  return {
-    payload: { error },
-    type: FETCH_LOAN_DATA_FAILURE,
-  };
-};
+export const fetchLoanDataFailure = (error) => ({
+  payload: { error },
+  type: FETCH_LOAN_DATA_FAILURE,
+});
 
-export const fetchLoanDataSuccess = (loanData) => {
-  return {
-    payload: { loanData },
-    type: FETCH_LOAN_DATA_SUCCESS,
-  };
-};
+export const fetchLoanDataSuccess = (loanData, loanNumber) => ({
+  payload: { loanData, loanNumber },
+  type: FETCH_LOAN_DATA_SUCCESS,
+});

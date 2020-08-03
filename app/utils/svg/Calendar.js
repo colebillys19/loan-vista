@@ -1,13 +1,14 @@
 import React from 'react';
+import T from 'prop-types';
 import SvgIcon from '@material-ui/core/SvgIcon';
 
 import { appColorA } from 'styleConstants';
 
 /* eslint-disable prettier/prettier */
-const Calendar = (props) => (
-  <SvgIcon height="480px" version="1.1" viewBox="0 0 496 480" width="496px" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" {...props}>
+const Calendar = ({ color, ...restProps }) => (
+  <SvgIcon height="480px" version="1.1" viewBox="0 0 496 480" width="496px" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" {...restProps}>
     <g>
-      <polygon fill={appColorA} points="16 165.712 480 165.712 480 464 16 464"></polygon>
+      <polygon fill={color || appColorA} points="16 165.712 480 165.712 480 464 16 464"></polygon>
       <polygon fill="#000000" points="366.4 213.712 398.4 213.712 398.4 245.712 366.4 245.712"></polygon>
       <polygon fill="#000000" points="97.6 384 129.6 384 129.6 416 97.6 416"></polygon>
       <polygon fill="#000000" points="97.6 298.856 129.6 298.856 129.6 330.856 97.6 330.856"></polygon>
@@ -19,5 +20,7 @@ const Calendar = (props) => (
     </g>
   </SvgIcon>
 );
+
+Calendar.propTypes = { color: T.string };
 
 export default Calendar;

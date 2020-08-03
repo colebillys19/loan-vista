@@ -26,6 +26,7 @@ import { isValidRoute } from './helpers';
 export const Main = ({
   dispatchFetchLoanData,
   loading,
+  loanNumber,
   pathname,
   render,
   sidebarHeaderData,
@@ -35,10 +36,10 @@ export const Main = ({
   useInjectSaga({ key: 'main', saga });
 
   useEffect(() => {
-    if (isValidRoute(pathname)) {
+    if (!loanNumber && isValidRoute(pathname)) {
       dispatchFetchLoanData();
     }
-  }, []);
+  }, [pathname]);
 
   return render({ loading, sidebarHeaderData, sidebarSummariesData });
 };
@@ -46,6 +47,7 @@ export const Main = ({
 Main.propTypes = {
   dispatchFetchLoanData: T.func.isRequired,
   loading: T.bool.isRequired,
+  loanNumber: T.string.isRequired,
   pathname: T.string.isRequired,
   render: T.func.isRequired,
   sidebarHeaderData: T.object.isRequired,
@@ -54,6 +56,7 @@ Main.propTypes = {
 
 const mapStateToProps = createStructuredSelector({
   loading: makeSelectMain('loading'),
+  loanNumber: makeSelectMain('loanNumber'),
   pathname: makeSelectPathname(),
   sidebarHeaderData: makeSelectSidebarHeaderData(),
   sidebarSummariesData: makeSelectSidebarSummariesData(),

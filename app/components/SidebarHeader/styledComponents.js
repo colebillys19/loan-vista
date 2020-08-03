@@ -1,11 +1,19 @@
 import styled from 'styled-components';
 
-export const DetailLabel = styled.span`
-  color: grey;
+export const HeadingContainer = styled.div`
+  margin: 0.5rem 0 1.1rem;
+  position: relative;
+  text-align: center;
+  & svg {
+    display: none;
+    left: 4.9rem;
+    position: absolute;
+    top: 0.1rem;
+  }
 `;
 
 export const IconWrapper = styled.div`
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 `;
 
@@ -21,14 +29,8 @@ export const SidebarHeaderContainer = styled.div`
   width: 100%;
 `;
 
-export const StatusWrapper = styled.span`
-  color: ${({ color }) => color};
-`;
-
 export const StyledH1 = styled.h1`
-  display: block;
   font-size: 2.5rem;
   font-weight: normal;
-  margin: 1rem 0 0.5rem;
-  text-align: center;
+  margin: 0;
 `;

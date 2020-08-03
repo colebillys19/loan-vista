@@ -23,7 +23,8 @@ const mainReducer = (state = initialState, { payload, type }) =>
         draft.loading = false;
         break;
       case FETCH_LOAN_DATA_SUCCESS:
-        const { loanData } = payload;
+        const { loanData, loanNumber } = payload;
+        draft.loanNumber = loanNumber;
         draft.loanData = loanData;
         draft.loading = false;
         break;

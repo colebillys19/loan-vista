@@ -52,7 +52,7 @@ const initialState = {
       },
     },
   },
-  loanNumber: '1590753088',
+  loanNumber: '',
 };
 
 export default initialState;

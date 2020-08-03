@@ -58,14 +58,14 @@ export const getServiceSummary = (serviceSummaryData) => {
  * @description: ...
  */
 export const getSidebarHeaderData = (
-  loanNumber,
   {
     borrower: { name },
     propertyAddress: { city, state, streetAddress, unit, zip },
     summaries: {
-      loan: { health, status },
+      loan: { health },
     },
   },
+  loanNumber,
 ) => {
   const address1 = `${streetAddress}${unit ? `, Unit ${unit}` : ''}`;
   const address2 = `${city}, ${state} ${zip}`;
@@ -76,6 +76,5 @@ export const getSidebarHeaderData = (
     health,
     loanNumber,
     name,
-    status,
   };
 };

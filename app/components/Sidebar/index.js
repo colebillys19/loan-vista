@@ -23,6 +23,7 @@ const Sidebar = ({
   sidebarHeaderData,
   sidebarSummariesData: {
     callsSummaryData,
+    health,
     loanSummaryData,
     paymentSummaryData,
     serviceSummaryData,
@@ -41,7 +42,9 @@ const Sidebar = ({
         shouldRender={!loading}
       />
       <ConditionalRender
-        Component={<SidebarSummary data={loanSummaryData} title="Loan" />}
+        Component={
+          <SidebarSummary data={loanSummaryData} health={health} title="Loan" />
+        }
         FallbackComponent={<SidebarDetailPlaceholder height="29.4rem" />}
         shouldRender={!loading}
       />
@@ -70,6 +73,7 @@ Sidebar.propTypes = {
   sidebarHeaderData: T.object.isRequired,
   sidebarSummariesData: T.shape({
     callsSummaryData: T.array,
+    health: T.number,
     loanSummaryData: T.array,
     paymentSummaryData: T.array,
     serviceSummaryData: T.array,

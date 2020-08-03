@@ -12,8 +12,9 @@ export const SUMMARY_LABEL_DICT = {
     { format: null, key: 'mostFreqReason', label: 'Most Frequent Reason' },
   ],
   loan: [
-    { format: null, key: 'loanType', label: 'Loan Type' },
+    { format: null, key: 'loanNumber', label: 'Loan Number' },
     { format: null, key: 'status', label: 'Status' },
+    { format: null, key: 'loanType', label: 'Loan Type' },
     { format: 'currency', key: 'principalBalance', label: 'Principal Balance' },
     {
       format: 'currency',
