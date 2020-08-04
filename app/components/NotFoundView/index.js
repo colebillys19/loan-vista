@@ -4,24 +4,19 @@
  */
 
 import React from 'react';
-// import T from 'prop-types';
 
 import TabWrapper from 'components/TabWrapper';
-import iconDictionary from 'utils/iconDictionary';
+import { WarningIcon } from 'images/icons';
 
 import { NotFoundViewWrapper, WarningHeading } from './styledComponents';
-
-const WarningIcon = iconDictionary('warning', '12rem');
 
 const NotFoundView = () => (
   <TabWrapper>
     <NotFoundViewWrapper>
-      {WarningIcon}
+      <WarningIcon size="12rem" />
       <WarningHeading>page not found</WarningHeading>
     </NotFoundViewWrapper>
   </TabWrapper>
 );
-
-NotFoundView.propTypes = {};
 
 export default NotFoundView;

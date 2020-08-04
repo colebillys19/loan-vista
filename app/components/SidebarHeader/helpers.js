@@ -1,24 +1,33 @@
-import iconDictionary from 'utils/iconDictionary';
+import React from 'react';
+
+import {
+  CallIcon,
+  CashIcon,
+  FolderIcon,
+  MailIcon,
+  ProfileIcon,
+  WarningIcon,
+} from 'images/icons';
 
 export const getIcon = (pathname, size) => {
   switch (pathname) {
     case '/':
-      return iconDictionary('profile', size);
+      return <ProfileIcon size={size} />;
 
     case '/calls':
-      return iconDictionary('call', size);
+      return <CallIcon size={size} />;
 
     case '/emails':
-      return iconDictionary('mail', size);
+      return <MailIcon size={size} />;
 
     case '/payments':
-      return iconDictionary('money', size);
+      return <CashIcon size={size} />;
 
     case '/misc':
-      return iconDictionary('folder', size);
+      return <FolderIcon size={size} />;
 
     default:
-      return iconDictionary('profile', size);
+      return <WarningIcon size={size} />;
   }
 };
 

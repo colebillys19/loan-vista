@@ -6,9 +6,9 @@
 import React from 'react';
 import T from 'prop-types';
 
-import BulletIcon from 'utils/svg/BulletIcon';
-import { getHealthColor } from 'utils/globalHelpers';
 import ConditionalRender from 'components/_baseUI/ConditionalRender';
+import { getHealthColor } from 'utils/globalHelpers';
+import { BulletIcon } from 'images/icons';
 
 import { getIcon, getTabName } from './helpers';
 import {
