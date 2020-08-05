@@ -1,0 +1,39 @@
+import React, { useState } from 'react';
+import T from 'prop-types';
+import {
+  MuiPickersUtilsProvider,
+  KeyboardDatePicker,
+} from '@material-ui/pickers';
+import MomentUtils from '@date-io/moment';
+import moment from 'moment';
+
+const DatePicker = ({ onChange, value }) => {
+  const [inputValue, setInputValue] = useState(moment().format('M/D/YYYY'));
+
+  const handleChange = (date, dateInputValue) => {
+    onChange(date);
+    setInputValue(dateInputValue);
+  };
+
+  return (
+    <MuiPickersUtilsProvider utils={MomentUtils}>
+      <KeyboardDatePicker
+        autoOk
+        disableFuture
+        disableToolbar
+        format="M/D/YYYY"
+        inputValue={inputValue}
+        onChange={handleChange}
+        value={value}
+        variant="inline"
+      />
+    </MuiPickersUtilsProvider>
+  );
+};
+
+DatePicker.propTypes = {
+  onChange: T.func.isRequired,
+  value: T.object.isRequired,
+};
+
+export default DatePicker;

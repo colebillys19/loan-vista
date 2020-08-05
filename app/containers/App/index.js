@@ -19,6 +19,7 @@ import Main from 'containers/Main';
 import Payments from 'containers/Payments';
 
 import Header from 'components/Header';
+import Sandbox from 'components/Sandbox';
 import HomeView from 'components/HomeView';
 import MiscView from 'components/MiscView';
 import NotFoundView from 'components/NotFoundView';
@@ -47,6 +48,7 @@ const App = ({ dispatchNavigation, pathname }) => (
             <Route component={Emails} exact path="/emails" />
             <Route component={Payments} exact path="/payments" />
             <Route component={MiscView} exact path="/misc" />
+            <Route component={Sandbox} exact path="/test" />
             <Route component={NotFoundView} />
           </Switch>
         </MainContainer>
