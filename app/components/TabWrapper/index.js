@@ -9,7 +9,7 @@ export default styled.section`
   background-color: white;
   display: inline-block;
   margin-bottom: 4rem;
-  min-height: 110rem;
+  min-height: 116rem;
   padding: 0.5rem;
   vertical-align: top;
   width: 83.7rem;

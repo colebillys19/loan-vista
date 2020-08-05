@@ -24,7 +24,7 @@ const loanMockData = {
         assumptionCode: 'A',
         assumptionDate: '2020-06-21',
         graceDays: 15,
-        health: 1,
+        health: -1,
         interestRate: 0.05,
         investorCode: 'N03',
         investorName: 'Nevada Housing',
@@ -35,7 +35,7 @@ const loanMockData = {
         originalLoanAmount: 345678.9,
         originationDate: '2016-01-01',
         principalBalance: 234456.78,
-        status: 'Current',
+        status: '16-29 Days Delinquent',
       },
       payment: {
         badCheckFees: 0,

@@ -10,9 +10,6 @@ export const DetailLabel = styled.span`
 `;
 
 export const SidebarSummaryContainer = styled.section`
-  & :last-of-type {
-    padding-bottom: 2rem;
-  }
   & :not(:last-of-type) {
     margin-bottom: 2.2rem;
   }

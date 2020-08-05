@@ -5,14 +5,14 @@ import { borderGrey } from 'styleConstants';
 export const SidebarContainer = styled.aside`
   display: inline-block;
   margin-right: 0.3rem;
-  min-height: calc(100vh - 14.3rem);
-  padding: 4rem 0 8rem;
-  width: 36rem;
+  padding-top: 4rem;
   vertical-align: top;
+  width: 36rem;
 `;
 
 export const SidebarContentContainer = styled.div`
   border-left: 0.1rem solid ${borderGrey};
+  height: 108rem;
   padding: 0 2.5rem;
 `;
 
