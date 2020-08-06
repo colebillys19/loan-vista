@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import T from 'prop-types';
-import {
-  MuiPickersUtilsProvider,
-  KeyboardDatePicker,
-} from '@material-ui/pickers';
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import MomentUtils from '@date-io/moment';
 import moment from 'moment';
 
-const DatePicker = ({ onChange, value }) => {
+import { StyledKeyboardDatePicker } from './styledComponents';
+
+const DateInput = ({ onChange, value }) => {
   const [inputValue, setInputValue] = useState(moment().format('M/D/YYYY'));
 
   const handleChange = (date, dateInputValue) => {
@@ -17,7 +16,7 @@ const DatePicker = ({ onChange, value }) => {
 
   return (
     <MuiPickersUtilsProvider utils={MomentUtils}>
-      <KeyboardDatePicker
+      <StyledKeyboardDatePicker
         autoOk
         disableFuture
         disableToolbar
@@ -31,9 +30,9 @@ const DatePicker = ({ onChange, value }) => {
   );
 };
 
-DatePicker.propTypes = {
+DateInput.propTypes = {
   onChange: T.func.isRequired,
   value: T.object.isRequired,
 };
 
-export default DatePicker;
+export default DateInput;

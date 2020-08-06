@@ -25,7 +25,6 @@ import 'file-loader?name=.htaccess!./.htaccess';
 /* eslint-enable import/no-unresolved, import/extensions */
 
 import configureStore from './configureStore';
-import './fonts/Lato-Regular.ttf';
 
 // Create redux store with history
 const initialState = {};

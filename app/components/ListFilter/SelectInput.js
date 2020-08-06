@@ -1,27 +1,30 @@
 import React from 'react';
-import { MenuItem, Select } from '@material-ui/core';
 import T from 'prop-types';
+import { Select } from '@material-ui/core';
 
-const RangeSelect = ({ onChange, value }) => (
+import { StyledMenuItem } from './styledComponents';
+
+const SelectInput = ({ onChange, value }) => (
   <Select
-    value={value}
-    onChange={(e) => onChange(e.target.value)}
     displayEmpty
     inputProps={{ 'aria-label': 'date range select' }}
+    MenuProps={{ classes: { list: 'date-range-list' } }}
+    onChange={(e) => onChange(e.target.value)}
+    value={value}
   >
-    <MenuItem value={0} disabled>
-      select a date range
-    </MenuItem>
-    <MenuItem value={1}>last week</MenuItem>
-    <MenuItem value={2}>last 2 weeks</MenuItem>
-    <MenuItem value={3}>last month</MenuItem>
-    <MenuItem value={4}>last 2 months</MenuItem>
+    <StyledMenuItem value={0} disabled>
+      date range
+    </StyledMenuItem>
+    <StyledMenuItem value={1}>last week</StyledMenuItem>
+    <StyledMenuItem value={2}>last 2 weeks</StyledMenuItem>
+    <StyledMenuItem value={3}>last month</StyledMenuItem>
+    <StyledMenuItem value={4}>last 2 months</StyledMenuItem>
   </Select>
 );
 
-RangeSelect.propTypes = {
+SelectInput.propTypes = {
   onChange: T.func.isRequired,
   value: T.number.isRequired,
 };
 
-export default RangeSelect;
+export default SelectInput;

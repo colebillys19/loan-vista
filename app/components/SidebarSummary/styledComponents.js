@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
+import { appTextColorB } from 'styleConstants';
+
 export const Detail = styled.span`
   color: ${({ color }) => color};
   font-weight: ${({ color }) => (color ? 'bold' : 'normal')};
 `;
 
 export const DetailLabel = styled.span`
-  color: grey;
+  color: ${appTextColorB};
 `;
 
 export const SidebarSummaryContainer = styled.section`

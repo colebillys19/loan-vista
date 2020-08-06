@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 
-import { appColorA } from 'styleConstants';
+import { appColorA, appTextColorA } from 'styleConstants';
 
 export const ContentContainer = styled.div`
   height: 6rem;
@@ -19,6 +19,7 @@ export const HomeViewButtonWrapper = styled.div`
 `;
 
 export const StyledButton = styled(Button)`
+  color: ${appTextColorA};
   display: block;
   font-size: 2.2rem;
   height: 6rem;

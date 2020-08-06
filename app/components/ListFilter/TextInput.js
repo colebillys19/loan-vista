@@ -1,14 +1,19 @@
 import React from 'react';
 import T from 'prop-types';
-import { InputBase } from '@material-ui/core';
 
-const KeywordInput = ({ onChange, value }) => (
-  <InputBase onChange={(e) => onChange(e.target.value)} value={value} />
+import { StyledTextField } from './styledComponents';
+
+const TextInput = ({ onChange, value }) => (
+  <StyledTextField
+    onChange={(e) => onChange(e.target.value)}
+    placeholder="keyword search"
+    value={value}
+  />
 );
 
-KeywordInput.propTypes = {
+TextInput.propTypes = {
   onChange: T.func.isRequired,
   value: T.string.isRequired,
 };
 
-export default KeywordInput;
+export default TextInput;
