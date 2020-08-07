@@ -4,6 +4,7 @@ import CashIcon from './CashIcon';
 import FolderIcon from './FolderIcon';
 import MailIcon from './MailIcon';
 import ProfileIcon from './ProfileIcon';
+import RefreshIcon from './RefreshIcon';
 import WarningIcon from './WarningIcon';
 
 export {
@@ -13,5 +14,6 @@ export {
   FolderIcon,
   MailIcon,
   ProfileIcon,
+  RefreshIcon,
   WarningIcon,
 };

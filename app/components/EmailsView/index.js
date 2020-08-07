@@ -7,6 +7,7 @@ import React from 'react';
 import T from 'prop-types';
 
 import EmailsList from 'components/EmailsList';
+import ListFilter from 'components/ListFilter';
 import TabWrapper from 'components/TabWrapper';
 import ConditionalRender from 'components/_baseUI/ConditionalRender';
 import Spinner from 'components/_baseUI/Spinner';
@@ -20,6 +21,7 @@ const EmailsView = ({ emailsData, loading }) => {
       aria-labelledby="emails-and-letters-tab"
       id="emails-and-letters-view"
     >
+      <ListFilter />
       <ConditionalRender
         Component={
           <ConditionalRender

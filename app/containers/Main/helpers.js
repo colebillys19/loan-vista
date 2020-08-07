@@ -48,10 +48,3 @@ export const dataFormatter = (value, format) => {
       return value;
   }
 };
-
-/**
- * isValidRoute
- * @description: ...
- */
-export const isValidRoute = (pathname) =>
-  ['/', '/calls', '/emails', '/payments', '/misc'].indexOf(pathname) !== -1;

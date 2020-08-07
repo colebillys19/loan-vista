@@ -10,7 +10,6 @@ export default styled.section`
   display: inline-block;
   margin-bottom: 4rem;
   min-height: 116rem;
-  padding: 0.5rem;
   vertical-align: top;
   width: 83.7rem;
 `;

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledTable = styled.table`
-  width: 100%;
+  width: 97%;
+  margin: 0 auto;
 
   outline: 1px solid #ccc;
 `;

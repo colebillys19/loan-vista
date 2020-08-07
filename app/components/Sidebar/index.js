@@ -9,6 +9,7 @@ import T from 'prop-types';
 import SidebarHeader from 'components/SidebarHeader';
 import SidebarSummary from 'components/SidebarSummary';
 import ConditionalRender from 'components/_baseUI/ConditionalRender';
+import { isValidRoute } from 'utils/globalHelpers';
 
 import {
   SidebarContainer,
@@ -27,46 +28,58 @@ const Sidebar = ({
     paymentSummaryData,
     serviceSummaryData,
   },
-}) => (
-  <SidebarContainer>
-    <SidebarContentContainer>
-      <ConditionalRender
-        Component={
-          <SidebarHeader
-            pathname={pathname}
-            sidebarHeaderData={sidebarHeaderData}
-          />
-        }
-        FallbackComponent={
-          <SidebarSectionPlaceholder height="24.1rem" isHeader />
-        }
-        shouldRender={!loading}
-      />
-      <ConditionalRender
-        Component={
-          <SidebarSummary data={loanSummaryData} health={health} title="Loan" />
-        }
-        FallbackComponent={<SidebarSectionPlaceholder height="31.5rem" />}
-        shouldRender={!loading}
-      />
-      <ConditionalRender
-        Component={<SidebarSummary data={paymentSummaryData} title="Payment" />}
-        FallbackComponent={<SidebarSectionPlaceholder height="14.7rem" />}
-        shouldRender={!loading}
-      />
-      <ConditionalRender
-        Component={<SidebarSummary data={callsSummaryData} title="Calls" />}
-        FallbackComponent={<SidebarSectionPlaceholder height="14.7rem" />}
-        shouldRender={!loading}
-      />
-      <ConditionalRender
-        Component={<SidebarSummary data={serviceSummaryData} title="Service" />}
-        FallbackComponent={<SidebarSectionPlaceholder height="10.4rem" />}
-        shouldRender={!loading}
-      />
-    </SidebarContentContainer>
-  </SidebarContainer>
-);
+}) => {
+  const showComponents = !loading && isValidRoute(pathname);
+
+  return (
+    <SidebarContainer>
+      <SidebarContentContainer>
+        <ConditionalRender
+          Component={
+            <SidebarHeader
+              pathname={pathname}
+              sidebarHeaderData={sidebarHeaderData}
+            />
+          }
+          FallbackComponent={
+            <SidebarSectionPlaceholder height="24.1rem" isHeader />
+          }
+          shouldRender={showComponents}
+        />
+        <ConditionalRender
+          Component={
+            <SidebarSummary
+              data={loanSummaryData}
+              health={health}
+              title="Loan"
+            />
+          }
+          FallbackComponent={<SidebarSectionPlaceholder height="31.5rem" />}
+          shouldRender={showComponents}
+        />
+        <ConditionalRender
+          Component={
+            <SidebarSummary data={paymentSummaryData} title="Payment" />
+          }
+          FallbackComponent={<SidebarSectionPlaceholder height="14.7rem" />}
+          shouldRender={showComponents}
+        />
+        <ConditionalRender
+          Component={<SidebarSummary data={callsSummaryData} title="Calls" />}
+          FallbackComponent={<SidebarSectionPlaceholder height="14.7rem" />}
+          shouldRender={showComponents}
+        />
+        <ConditionalRender
+          Component={
+            <SidebarSummary data={serviceSummaryData} title="Service" />
+          }
+          FallbackComponent={<SidebarSectionPlaceholder height="10.4rem" />}
+          shouldRender={showComponents}
+        />
+      </SidebarContentContainer>
+    </SidebarContainer>
+  );
+};
 
 Sidebar.propTypes = {
   loading: T.bool.isRequired,

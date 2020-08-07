@@ -13,7 +13,7 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import history from 'utils/history';
 import 'sanitize.css/sanitize.css';
-import { StylesProvider } from '@material-ui/core/styles';
+import { StylesProvider, ThemeProvider } from '@material-ui/core/styles';
 
 // Import root app
 import App from 'containers/App';
@@ -25,6 +25,7 @@ import 'file-loader?name=.htaccess!./.htaccess';
 /* eslint-enable import/no-unresolved, import/extensions */
 
 import configureStore from './configureStore';
+import muiTheme from './muiTheme';
 
 // Create redux store with history
 const initialState = {};
@@ -36,7 +37,9 @@ const render = () => {
     <Provider store={store}>
       <ConnectedRouter history={history}>
         <StylesProvider injectFirst>
-          <App />
+          <ThemeProvider theme={muiTheme}>
+            <App />
+          </ThemeProvider>
         </StylesProvider>
       </ConnectedRouter>
     </Provider>,

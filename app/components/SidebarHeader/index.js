@@ -41,7 +41,7 @@ const SidebarHeader = ({
       <SidebarDetail>{name}</SidebarDetail>
       <SidebarDetail>{address1}</SidebarDetail>
       <SidebarDetail>{address2}</SidebarDetail>
-      <StyledButton variant="contained">Switch Loan</StyledButton>
+      <StyledButton onClick={() => null} text="Switch Loan" />
     </SidebarHeaderContainer>
   );
 };

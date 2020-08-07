@@ -1,0 +1,16 @@
+import styled from 'styled-components';
+import Button from '@material-ui/core/Button';
+
+import { appColorA, appColorB } from 'styleConstants';
+
+export const StyledButton = styled(Button)`
+  background-color: ${appColorA};
+  color: ${appColorB};
+  font-size: 1.4rem;
+  min-width: 0;
+  padding: 0.5rem 1.2rem;
+  text-transform: none;
+  & :hover {
+    background-color: #9586f1;
+  }
+`;

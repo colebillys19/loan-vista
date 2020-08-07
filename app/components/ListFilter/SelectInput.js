@@ -1,11 +1,10 @@
 import React from 'react';
 import T from 'prop-types';
-import { Select } from '@material-ui/core';
 
-import { StyledMenuItem } from './styledComponents';
+import { StyledMenuItem, StyledSelect } from './styledComponents';
 
 const SelectInput = ({ onChange, value }) => (
-  <Select
+  <StyledSelect
     displayEmpty
     inputProps={{ 'aria-label': 'date range select' }}
     MenuProps={{ classes: { list: 'date-range-list' } }}
@@ -19,7 +18,7 @@ const SelectInput = ({ onChange, value }) => (
     <StyledMenuItem value={2}>last 2 weeks</StyledMenuItem>
     <StyledMenuItem value={3}>last month</StyledMenuItem>
     <StyledMenuItem value={4}>last 2 months</StyledMenuItem>
-  </Select>
+  </StyledSelect>
 );
 
 SelectInput.propTypes = {

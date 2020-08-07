@@ -24,3 +24,10 @@ export const getHealthColor = (health) => {
       return null;
   }
 };
+
+/**
+ * isValidRoute
+ * @description: ...
+ */
+export const isValidRoute = (pathname) =>
+  ['/', '/calls', '/emails', '/payments', '/misc'].indexOf(pathname) !== -1;

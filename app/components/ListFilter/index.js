@@ -8,9 +8,10 @@ import React, { useState } from 'react';
 import moment from 'moment';
 
 import DateInput from './DateInput';
-import TextInput from './TextInput';
+import RefreshButton from './RefreshButton';
 import SelectInput from './SelectInput';
-import { StyledForm, StyledLabel } from './styledComponents';
+import TextInput from './TextInput';
+import { StyledButton, StyledForm, StyledLabel } from './styledComponents';
 
 const ListFilter = () => {
   const [dateFromValue, setDateFromValue] = useState(moment());
@@ -20,14 +21,16 @@ const ListFilter = () => {
 
   return (
     <StyledForm>
-      <StyledLabel for="">from</StyledLabel>
+      <StyledLabel htmlFor="">from</StyledLabel>
       <DateInput onChange={setDateFromValue} value={dateFromValue} />
-      <StyledLabel for="">to</StyledLabel>
+      <StyledLabel htmlFor="">to</StyledLabel>
       <DateInput onChange={setDateToValue} value={dateToValue} />
-      <StyledLabel for="">or</StyledLabel>
+      <StyledLabel htmlFor="">or</StyledLabel>
       <SelectInput onChange={setDateRangeValue} value={dateRangeValue} />
-      <StyledLabel for="">and/or</StyledLabel>
+      <StyledLabel htmlFor="">and/or</StyledLabel>
       <TextInput onChange={setKeywordValue} value={keywordValue} />
+      <RefreshButton onClick={() => null} />
+      <StyledButton onClick={() => null} text="find" />
     </StyledForm>
   );
 };

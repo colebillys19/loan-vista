@@ -7,6 +7,7 @@ import React from 'react';
 import T from 'prop-types';
 
 import CallsList from 'components/CallsList';
+import ListFilter from 'components/ListFilter';
 import TabWrapper from 'components/TabWrapper';
 import ConditionalRender from 'components/_baseUI/ConditionalRender';
 import Spinner from 'components/_baseUI/Spinner';
@@ -17,6 +18,7 @@ const CallsView = ({ callsData, loading }) => {
 
   return (
     <TabWrapper aria-labelledby="calls-tab" id="calls-view">
+      <ListFilter />
       <ConditionalRender
         Component={
           <ConditionalRender

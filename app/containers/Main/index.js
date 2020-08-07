@@ -13,6 +13,7 @@ import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
 
 import { makeSelectPathname } from 'containers/App/selectors';
+import { isValidRoute } from 'utils/globalHelpers';
 
 import makeSelectMain, {
   makeSelectSidebarHeaderData,
@@ -21,7 +22,6 @@ import makeSelectMain, {
 import reducer from './reducer';
 import saga from './saga';
 import { fetchLoanData } from './actions';
-import { isValidRoute } from './helpers';
 
 export const Main = ({
   dispatchFetchLoanData,
