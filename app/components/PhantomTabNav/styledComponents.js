@@ -15,6 +15,7 @@ export const StyledTab = styled(Tab)`
   font-size: 1.4rem;
   height: 6rem;
   max-width: 22rem;
+  pointer-events: none;
   text-transform: none;
   & .MuiTab-wrapper {
     visibility: hidden;
