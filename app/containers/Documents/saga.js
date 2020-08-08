@@ -6,7 +6,7 @@ import {
   fetchDocumentsDataFailure,
   fetchDocumentsDataSuccess,
 } from './actions';
-import { FETCH_EMAILS_DATA } from './constants';
+import { FETCH_DOCUMENTS_DATA } from './constants';
 
 export function* fetchDocumentsDataSaga() {
   try {
@@ -18,5 +18,5 @@ export function* fetchDocumentsDataSaga() {
 }
 
 export default function* watcherSaga() {
-  yield takeLatest(FETCH_EMAILS_DATA, fetchDocumentsDataSaga);
+  yield takeLatest(FETCH_DOCUMENTS_DATA, fetchDocumentsDataSaga);
 }

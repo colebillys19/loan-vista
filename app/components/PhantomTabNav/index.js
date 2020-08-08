@@ -16,7 +16,7 @@ const PhantomTabNav = ({ value }) => (
   <PhantomTabNavContainer>
     <StyledTabs value={value}>
       <StyledTab disableRipple label="Calls" />
-      <StyledTab disableRipple label="Emails + Letters" />
+      <StyledTab disableRipple label="Documents + Letters" />
       <StyledTab disableRipple label="Payments" />
       <StyledTab disableRipple label="Misc" />
     </StyledTabs>

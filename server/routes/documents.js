@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-const getEmails = (req, res) => {
-  const jsonData = fs.readFileSync('server/mockData/EMAILS_MOCK_DATA.json');
+const getDocuments = (req, res) => {
+  const jsonData = fs.readFileSync('server/mockData/DOCUMENTS_MOCK_DATA.json');
   const data = JSON.parse(jsonData);
 
   setTimeout(() => {
@@ -9,4 +9,4 @@ const getEmails = (req, res) => {
   }, 500);
 };
 
-module.exports = getEmails;
+module.exports = getDocuments;

@@ -11,7 +11,7 @@ import { Documents } from '../index';
 const initialState = {};
 const store = configureStore(initialState, history);
 
-const WrappedEmails = (props) => (
+const WrappedDocuments = (props) => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <Documents {...props} />
@@ -19,18 +19,18 @@ const WrappedEmails = (props) => (
   </Provider>
 );
 
-describe('<Emails />', () => {
+describe('<Documents />', () => {
   it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     const dispatch = jest.fn();
-    render(<WrappedEmails dispatch={dispatch} />);
+    render(<WrappedDocuments dispatch={dispatch} />);
     expect(spy).not.toHaveBeenCalled();
   });
 
   it.skip('Should render and match the snapshot', () => {
     const {
       container: { firstChild },
-    } = render(<WrappedEmails />);
+    } = render(<WrappedDocuments />);
     expect(firstChild).toMatchSnapshot();
   });
 });
