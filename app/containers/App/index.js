@@ -18,7 +18,7 @@ import Emails from 'containers/Emails';
 import Main from 'containers/Main';
 import Payments from 'containers/Payments';
 
-import Header from 'components/Header';
+import Header from 'components/_baseUI/Header';
 import Sandbox from 'components/Sandbox';
 import HomeView from 'components/HomeView';
 import MiscView from 'components/MiscView';
