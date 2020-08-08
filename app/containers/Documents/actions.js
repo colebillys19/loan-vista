@@ -6,15 +6,15 @@ import {
 } from './constants';
 
 /* eslint-disable arrow-body-style */
-export const fetchEmailsData = () => ({ type: FETCH_EMAILS_DATA });
+export const fetchDocumentsData = () => ({ type: FETCH_EMAILS_DATA });
 
-export const fetchEmailsDataFailure = (error) => ({
+export const fetchDocumentsDataFailure = (error) => ({
   payload: { error },
   type: FETCH_EMAILS_DATA_FAILURE,
 });
 
-export const fetchEmailsDataSuccess = (emailsData) => ({
-  payload: { emailsData },
+export const fetchDocumentsDataSuccess = (documentsData) => ({
+  payload: { documentsData },
   type: FETCH_EMAILS_DATA_SUCCESS,
 });
 

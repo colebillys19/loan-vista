@@ -17,7 +17,7 @@ export const getIcon = (pathname, size) => {
     case '/calls':
       return <CallIcon size={size} />;
 
-    case '/emails':
+    case '/documents':
       return <MailIcon size={size} />;
 
     case '/payments':
@@ -36,8 +36,8 @@ export const getTabName = (pathname) => {
     case '/calls':
       return 'Calls';
 
-    case '/emails':
-      return 'Emails + Letters';
+    case '/documents':
+      return 'Documents';
 
     case '/payments':
       return 'Payments';

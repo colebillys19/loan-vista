@@ -1,5 +1,5 @@
 const initialState = {
-  emailsData: [
+  documentsData: [
     {
       dateSent: '',
       file: '',

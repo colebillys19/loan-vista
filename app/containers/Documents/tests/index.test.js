@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 
 import configureStore from 'configureStore';
 import history from 'utils/history';
-import { Emails } from '../index';
+import { Documents } from '../index';
 
 // Create redux store with history
 const initialState = {};
@@ -14,7 +14,7 @@ const store = configureStore(initialState, history);
 const WrappedEmails = (props) => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Emails {...props} />
+      <Documents {...props} />
     </ConnectedRouter>
   </Provider>
 );

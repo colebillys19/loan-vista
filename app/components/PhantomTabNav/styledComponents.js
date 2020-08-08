@@ -27,5 +27,7 @@ export const StyledTabs = styled(Tabs)`
   & .MuiTabs-indicator {
     background-color: ${appColorC};
     height: 0.3rem;
+    transition-delay: 0.05s;
+    transition-duration: 0.4s;
   }
 `;

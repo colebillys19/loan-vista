@@ -30,4 +30,4 @@ export const getHealthColor = (health) => {
  * @description: ...
  */
 export const isValidRoute = (pathname) =>
-  ['/', '/calls', '/emails', '/payments', '/misc'].indexOf(pathname) !== -1;
+  ['/', '/calls', '/documents', '/payments', '/misc'].indexOf(pathname) !== -1;

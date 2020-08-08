@@ -1,5 +1,5 @@
 /**
- * EmailsList
+ * DocumentsList
  * @description ...
  */
 
@@ -13,7 +13,7 @@ import {
   StyledTableHeader,
 } from './styledComponents';
 
-const EmailsList = ({ emailsData, headers }) => (
+const DocumentsList = ({ documentsData, headers }) => (
   <StyledTable>
     <StyledTableHead>
       <tr>
@@ -25,15 +25,15 @@ const EmailsList = ({ emailsData, headers }) => (
       </tr>
     </StyledTableHead>
     <tbody>
-      {emailsData.map(({ id, ...restData }) => (
+      {documentsData.map(({ id, ...restData }) => (
         <TableRow data={restData} headers={headers} key={id} />
       ))}
     </tbody>
   </StyledTable>
 );
 
-EmailsList.propTypes = {
-  emailsData: T.arrayOf(
+DocumentsList.propTypes = {
+  documentsData: T.arrayOf(
     T.shape({
       dateSent: T.string,
       file: T.string,
@@ -47,8 +47,8 @@ EmailsList.propTypes = {
   headers: T.arrayOf(T.string),
 };
 
-EmailsList.defaultProps = {
+DocumentsList.defaultProps = {
   headers: ['dateSent', 'timeSent', 'type', 'from', 'subject', 'file'],
 };
 
-export default EmailsList;
+export default DocumentsList;

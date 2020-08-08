@@ -1,7 +1,7 @@
-import emailsReducer from '../reducer';
+import documentsReducer from '../reducer';
 
 /* eslint-disable default-case, no-param-reassign */
-describe('emailsReducer', () => {
+describe('documentsReducer', () => {
   let state;
   beforeEach(() => {
     state = {
@@ -11,6 +11,6 @@ describe('emailsReducer', () => {
 
   it('returns the initial state', () => {
     const expectedResult = state;
-    expect(emailsReducer(undefined, {})).toEqual(expectedResult);
+    expect(documentsReducer(undefined, {})).toEqual(expectedResult);
   });
 });

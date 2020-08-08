@@ -2,8 +2,8 @@ import moment from 'moment';
 import startCase from 'lodash/startCase';
 import toLower from 'lodash/toLower';
 
-export const getEmailsData = (emailsData) =>
-  emailsData.map(({ dateSent, file, from, id, subject, timeSent, type }) => {
+export const getDocumentsData = (documentsData) =>
+  documentsData.map(({ dateSent, file, from, id, subject, timeSent, type }) => {
     const dateSentFormatted = moment(dateSent, 'YYYY-MM-DD').format(
       'MM/DD/YYYY',
     );

@@ -14,7 +14,7 @@ import { push } from 'connected-react-router';
 import GlobalStyle from 'global-styles';
 
 import Calls from 'containers/Calls';
-import Emails from 'containers/Emails';
+import Documents from 'containers/Documents';
 import Main from 'containers/Main';
 import Payments from 'containers/Payments';
 
@@ -49,7 +49,7 @@ const App = ({ dispatchNavigation, pathname }) => (
               render={() => <HomeView pathname={pathname} />}
             />
             <Route component={Calls} exact path="/calls" />
-            <Route component={Emails} exact path="/emails" />
+            <Route component={Documents} exact path="/documents" />
             <Route component={Payments} exact path="/payments" />
             <Route
               exact

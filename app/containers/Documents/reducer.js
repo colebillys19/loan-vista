@@ -1,6 +1,6 @@
 import produce from 'immer';
 
-import emailsInitialState from './initialState';
+import documentsInitialState from './initialState';
 import {
   FETCH_EMAILS_DATA,
   FETCH_EMAILS_DATA_FAILURE,
@@ -8,10 +8,10 @@ import {
   ON_UNMOUNT,
 } from './constants';
 
-export const initialState = emailsInitialState;
+export const initialState = documentsInitialState;
 
 /* eslint-disable default-case, no-param-reassign, no-case-declarations */
-const emailsReducer = (state = initialState, { payload, type }) =>
+const documentsReducer = (state = initialState, { payload, type }) =>
   produce(state, (draft) => {
     switch (type) {
       case FETCH_EMAILS_DATA:
@@ -24,8 +24,8 @@ const emailsReducer = (state = initialState, { payload, type }) =>
         draft.loading = false;
         break;
       case FETCH_EMAILS_DATA_SUCCESS:
-        const { emailsData } = payload;
-        draft.emailsData = emailsData;
+        const { documentsData } = payload;
+        draft.documentsData = documentsData;
         draft.loading = false;
         break;
       case ON_UNMOUNT:
@@ -35,4 +35,4 @@ const emailsReducer = (state = initialState, { payload, type }) =>
     }
   });
 
-export default emailsReducer;
+export default documentsReducer;
