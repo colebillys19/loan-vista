@@ -22,7 +22,7 @@ const DateInput = ({ onChange, value }) => (
 
 DateInput.propTypes = {
   onChange: T.func.isRequired,
-  value: T.object.isRequired,
+  value: T.object,
 };
 
 export default DateInput;

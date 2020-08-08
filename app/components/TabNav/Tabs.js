@@ -1,35 +1,40 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { StyledTab, StyledTabs } from './styledComponents';
+import PhantomTabNav from 'components/PhantomTabNav';
+
+import { StyledTab, StyledTabs, TabsContainer } from './styledComponents';
 
 const Tabs = ({ handleChange, value }) => (
-  <StyledTabs value={value} onChange={handleChange}>
-    <StyledTab
-      aria-controls="calls-view"
-      disableRipple
-      id="calls-tab"
-      label="Calls"
-    />
-    <StyledTab
-      aria-controls="emails-letters-view"
-      disableRipple
-      id="emails-letters-tab"
-      label="Emails + Letters"
-    />
-    <StyledTab
-      aria-controls="payments-view"
-      disableRipple
-      id="payments-tab"
-      label="Payments"
-    />
-    <StyledTab
-      aria-controls="misc-view"
-      disableRipple
-      id="misc-tab"
-      label="Misc"
-    />
-  </StyledTabs>
+  <TabsContainer>
+    <StyledTabs value={value} onChange={handleChange}>
+      <StyledTab
+        aria-controls="calls-view"
+        disableRipple
+        id="calls-tab"
+        label="Calls"
+      />
+      <StyledTab
+        aria-controls="emails-letters-view"
+        disableRipple
+        id="emails-letters-tab"
+        label="Emails + Letters"
+      />
+      <StyledTab
+        aria-controls="payments-view"
+        disableRipple
+        id="payments-tab"
+        label="Payments"
+      />
+      <StyledTab
+        aria-controls="misc-view"
+        disableRipple
+        id="misc-tab"
+        label="Misc"
+      />
+    </StyledTabs>
+    <PhantomTabNav value={value} />
+  </TabsContainer>
 );
 
 Tabs.propTypes = {

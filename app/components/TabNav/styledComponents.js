@@ -38,13 +38,11 @@ export const StyledTab = styled(Tab)`
   height: 6rem;
   max-width: 22rem;
   text-transform: none;
+  z-index: 1;
 `;
 
 export const StyledTabs = styled(Tabs)`
-  display: inline-block;
-  left: 36.3rem;
   position: relative;
-  width: 83.7rem;
   & .MuiTabs-indicator {
     background-color: ${appColorC};
     height: 0.3rem;
@@ -53,4 +51,11 @@ export const StyledTabs = styled(Tabs)`
 
 export const TabNavWrapper = styled.div`
   margin-bottom: 0.3rem;
+`;
+
+export const TabsContainer = styled.div`
+  position: relative;
+  display: inline-block;
+  left: 36.3rem;
+  width: 83.7rem;
 `;
