@@ -3,13 +3,13 @@
  * @description ...
  */
 
-import styled from 'styled-components';
+import React from 'react';
+import T from 'prop-types';
 
-export default styled.section`
-  background-color: white;
-  display: inline-block;
-  margin-bottom: 4rem;
-  min-height: 116rem;
-  vertical-align: top;
-  width: 83.7rem;
-`;
+import { StyledSection } from './styledComponents';
+
+const TabWrapper = ({ children }) => <StyledSection>{children}</StyledSection>;
+
+TabWrapper.propTypes = { children: T.node.isRequired };
+
+export default TabWrapper;

@@ -14,6 +14,6 @@ const HomeView = () => (
   </TabWrapper>
 );
 
-HomeView.propTypes = {};
+// HomeView.propTypes = {};
 
 export default HomeView;

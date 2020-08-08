@@ -5,7 +5,6 @@
 
 import React, { useState } from 'react';
 // import T from 'prop-types';
-import moment from 'moment';
 
 import DateInput from './DateInput';
 import RefreshButton from './RefreshButton';
@@ -14,8 +13,8 @@ import TextInput from './TextInput';
 import { StyledButton, StyledForm, StyledLabel } from './styledComponents';
 
 const ListFilter = () => {
-  const [dateFromValue, setDateFromValue] = useState(moment());
-  const [dateToValue, setDateToValue] = useState(moment());
+  const [dateFromValue, setDateFromValue] = useState(null);
+  const [dateToValue, setDateToValue] = useState(null);
   const [dateRangeValue, setDateRangeValue] = useState(0);
   const [keywordValue, setKeywordValue] = useState('');
 

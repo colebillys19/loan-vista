@@ -11,7 +11,7 @@ import { checkRoute } from './helpers';
 import { VALID_ROUTES } from './constants';
 import {
   ContentContainer,
-  HomeViewButtonWrapper,
+  HomeButtonWrapper,
   StyledButton,
   TabNavWrapper,
 } from './styledComponents';
@@ -34,7 +34,7 @@ const TabNav = ({ dispatchNavigation, pathname }) => {
   return (
     <TabNavWrapper>
       <ContentContainer>
-        <HomeViewButtonWrapper>
+        <HomeButtonWrapper>
           <StyledButton
             disableRipple
             id="home-button"
@@ -42,7 +42,7 @@ const TabNav = ({ dispatchNavigation, pathname }) => {
           >
             Loan Profile
           </StyledButton>
-        </HomeViewButtonWrapper>
+        </HomeButtonWrapper>
         <Tabs value={value} handleChange={handleChange} />
       </ContentContainer>
     </TabNavWrapper>

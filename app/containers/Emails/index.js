@@ -10,6 +10,7 @@ import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
 import EmailsView from 'components/EmailsView';
+import { makeSelectPathname } from 'containers/App/selectors';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
@@ -23,6 +24,7 @@ export const Emails = ({
   dispatchFetchEmailsData,
   dispatchOnUnmount,
   loading,
+  pathname,
 }) => {
   useInjectReducer({ key: 'emails', reducer });
   useInjectSaga({ key: 'emails', saga });
@@ -35,7 +37,9 @@ export const Emails = ({
     };
   }, []);
 
-  return <EmailsView emailsData={emailsData} loading={loading} />;
+  return (
+    <EmailsView emailsData={emailsData} loading={loading} pathname={pathname} />
+  );
 };
 
 Emails.propTypes = {
@@ -43,11 +47,13 @@ Emails.propTypes = {
   dispatchFetchEmailsData: T.func.isRequired,
   dispatchOnUnmount: T.func.isRequired,
   loading: T.bool.isRequired,
+  pathname: T.string.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
   emailsData: makeSelectEmailsData(),
   loading: makeSelectEmails('loading'),
+  pathname: makeSelectPathname(),
 });
 
 const mapDispatchToProps = (dispatch) => ({

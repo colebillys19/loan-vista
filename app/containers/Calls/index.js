@@ -10,6 +10,7 @@ import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
 import CallsView from 'components/CallsView';
+import { makeSelectPathname } from 'containers/App/selectors';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
@@ -23,6 +24,7 @@ export const Calls = ({
   dispatchFetchCallsData,
   dispatchOnUnmount,
   loading,
+  pathname,
 }) => {
   useInjectReducer({ key: 'calls', reducer });
   useInjectSaga({ key: 'calls', saga });
@@ -35,7 +37,9 @@ export const Calls = ({
     };
   }, []);
 
-  return <CallsView callsData={callsData} loading={loading} />;
+  return (
+    <CallsView callsData={callsData} loading={loading} pathname={pathname} />
+  );
 };
 
 Calls.propTypes = {
@@ -43,11 +47,13 @@ Calls.propTypes = {
   dispatchFetchCallsData: T.func.isRequired,
   dispatchOnUnmount: T.func.isRequired,
   loading: T.bool.isRequired,
+  pathname: T.string.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
   callsData: makeSelectCallsData(),
   loading: makeSelectCalls('loading'),
+  pathname: makeSelectPathname(),
 });
 
 const mapDispatchToProps = (dispatch) => ({

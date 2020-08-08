@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const StyledTable = styled.table`
-  width: 97%;
-  margin: 0 auto;
-
-  outline: 1px solid #ccc;
+  margin: 1rem auto 0;
+  opacity: 0.3;
+  outline: 1px solid #e8e8e8;
+  width: 81.7rem;
 `;
 
 export const StyledTableData = styled.td`

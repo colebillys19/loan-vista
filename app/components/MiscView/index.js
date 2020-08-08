@@ -14,6 +14,6 @@ const MiscView = () => (
   </TabWrapper>
 );
 
-MiscView.propTypes = {};
+// MiscView.propTypes = {};
 
 export default MiscView;

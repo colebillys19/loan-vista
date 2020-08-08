@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const StyledTable = styled.table`
-  width: 97%;
-  margin: 0 auto;
-
-  outline: 1px solid #ccc;
+  margin: 1rem auto 0;
+  opacity: 0.3;
+  outline: 1px solid #e8e8e8;
+  width: 81.7rem;
 `;
 
 export const StyledTableData = styled.td`
@@ -13,7 +13,7 @@ export const StyledTableData = styled.td`
 `;
 
 export const StyledTableHead = styled.thead`
-  background-color: #eee;
+  background-color: #e8e8e8;
 `;
 
 export const StyledTableHeader = styled.th`

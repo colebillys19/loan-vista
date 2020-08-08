@@ -13,7 +13,7 @@ import ConditionalRender from 'components/_baseUI/ConditionalRender';
 import Spinner from 'components/_baseUI/Spinner';
 import NoListDataFallback from 'components/_baseUI/NoListDataFallback';
 
-const PaymentsView = ({ paymentsData, loading }) => {
+const PaymentsView = ({ loading, paymentsData }) => {
   const noListData = !loading && paymentsData.length === 0;
 
   return (
@@ -37,8 +37,8 @@ const PaymentsView = ({ paymentsData, loading }) => {
 };
 
 PaymentsView.propTypes = {
-  paymentsData: T.array.isRequired,
   loading: T.bool.isRequired,
+  paymentsData: T.array.isRequired,
 };
 
 export default PaymentsView;

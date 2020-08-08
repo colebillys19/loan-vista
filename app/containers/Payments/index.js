@@ -10,6 +10,7 @@ import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
 import PaymentsView from 'components/PaymentsView';
+import { makeSelectPathname } from 'containers/App/selectors';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
@@ -23,6 +24,7 @@ export const Payments = ({
   dispatchOnUnmount,
   loading,
   paymentsData,
+  pathname,
 }) => {
   useInjectReducer({ key: 'payments', reducer });
   useInjectSaga({ key: 'payments', saga });
@@ -35,18 +37,26 @@ export const Payments = ({
     };
   }, []);
 
-  return <PaymentsView loading={loading} paymentsData={paymentsData} />;
+  return (
+    <PaymentsView
+      loading={loading}
+      pathname={pathname}
+      paymentsData={paymentsData}
+    />
+  );
 };
 
 Payments.propTypes = {
   dispatchFetchPaymentsData: T.func.isRequired,
   dispatchOnUnmount: T.func.isRequired,
   loading: T.bool.isRequired,
+  pathname: T.string.isRequired,
   paymentsData: T.array.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
   loading: makeSelectPayments('loading'),
+  pathname: makeSelectPathname(),
   paymentsData: makeSelectPaymentsData(),
 });
 

@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 
-import { appColorA, appTextColorA } from 'styleConstants';
+import { appColorC, appTextColorA } from 'styleConstants';
 
 export const ContentContainer = styled.div`
   height: 6rem;
@@ -11,7 +11,7 @@ export const ContentContainer = styled.div`
   width: 120rem;
 `;
 
-export const HomeViewButtonWrapper = styled.div`
+export const HomeButtonWrapper = styled.div`
   align-items: center;
   display: flex;
   position: absolute;
@@ -46,8 +46,8 @@ export const StyledTabs = styled(Tabs)`
   position: relative;
   width: 83.7rem;
   & .MuiTabs-indicator {
-    background-color: ${appColorA};
-    height: 0.5rem;
+    background-color: ${appColorC};
+    height: 0.3rem;
   }
 `;
 

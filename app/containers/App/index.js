@@ -43,11 +43,19 @@ const App = ({ dispatchNavigation, pathname }) => (
             sidebarSummariesData={sidebarSummariesData}
           />
           <Switch>
-            <Route component={HomeView} exact path="/" />
+            <Route
+              exact
+              path="/"
+              render={() => <HomeView pathname={pathname} />}
+            />
             <Route component={Calls} exact path="/calls" />
             <Route component={Emails} exact path="/emails" />
             <Route component={Payments} exact path="/payments" />
-            <Route component={MiscView} exact path="/misc" />
+            <Route
+              exact
+              path="/misc"
+              render={() => <MiscView pathname={pathname} />}
+            />
             <Route component={Sandbox} exact path="/test" />
             <Route component={NotFoundView} />
           </Switch>
