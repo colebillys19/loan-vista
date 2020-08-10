@@ -38,30 +38,19 @@ export const StyledTab = styled(Tab)`
   height: 6rem;
   max-width: 22rem;
   text-transform: none;
-  transition-duration: 0.3s;
-  z-index: 1;
-  &.Mui-selected {
-    font-size: 1.6rem;
-    transform: translateY(1rem);
-  }
 `;
 
 export const StyledTabs = styled(Tabs)`
+  display: inline-block;
+  left: 36.3rem;
   position: relative;
+  width: 83.7rem;
   & .MuiTabs-indicator {
     background-color: ${appColorC};
     height: 0.3rem;
-    transition-duration: 0.4s;
   }
 `;
 
 export const TabNavWrapper = styled.div`
   margin-bottom: 0.3rem;
-`;
-
-export const TabsContainer = styled.div`
-  position: relative;
-  display: inline-block;
-  left: 36.3rem;
-  width: 83.7rem;
 `;
