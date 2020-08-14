@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import Tab from '@material-ui/core/Tab';
-import Tabs from '@material-ui/core/Tabs';
+import { Tab, Tabs } from '@material-ui/core';
 
 import { appColorC } from 'styleConstants';
 

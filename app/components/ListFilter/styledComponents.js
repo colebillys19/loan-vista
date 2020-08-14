@@ -43,6 +43,9 @@ export const StyledKeyboardDatePicker = styled(KeyboardDatePicker)`
     color: ${({ value }) => (value === null ? appTextColorB : 'inherit')};
     width: 6.8rem;
   }
+  .MuiFormHelperText-root {
+    display: none;
+  }
 `;
 
 export const StyledLabel = styled.label`

@@ -1,6 +1,6 @@
 import React from 'react';
 import T from 'prop-types';
-import SvgIcon from '@material-ui/core/SvgIcon';
+import { SvgIcon } from '@material-ui/core';
 
 import { iconColorA } from 'styleConstants';
 

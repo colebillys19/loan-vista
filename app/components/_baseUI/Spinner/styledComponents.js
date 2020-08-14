@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import { CircularProgress } from '@material-ui/core';
 
 import { appColorA } from 'styleConstants';
 
