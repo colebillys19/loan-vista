@@ -2,14 +2,18 @@ import styled from 'styled-components';
 import { KeyboardDatePicker } from '@material-ui/pickers';
 import { TextField } from '@material-ui/core';
 
-import { appTextColorB } from 'styleConstants';
+import { appColorA, appTextColorB } from 'styleConstants';
+
+import { getColor } from './helpers';
 
 /* eslint-disable indent */
 export const StyledKeyboardDatePicker = styled(KeyboardDatePicker)`
+  width: 11.5rem;
   & .MuiInputBase-input {
-    color: ${({ value }) =>
-      value === null ? appTextColorB : 'inherit'} !important;
-    width: 6.8rem;
+    color: ${({ isError, value }) => getColor(isError, value)} !important;
+  }
+  & .MuiInput-underline.Mui-error:after {
+    border-bottom-color: ${appColorA};
   }
   & .MuiFormHelperText-root {
     display: none;

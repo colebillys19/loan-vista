@@ -31,6 +31,10 @@ const ForwardRefPicker = forwardRef((props, ref) => {
   );
 });
 
-ForwardRefPicker.propTypes = { onChange: T.func.isRequired, value: T.object };
+ForwardRefPicker.propTypes = {
+  isError: T.bool.isRequired,
+  onChange: T.func.isRequired,
+  value: T.object,
+};
 
 export default ForwardRefPicker;

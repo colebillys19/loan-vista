@@ -17,8 +17,8 @@ const ListFilter = () => (
   <ListFilterState
     render={({
       dateFrom,
-      datePickerFromErrors,
-      datePickerToErrors,
+      datePickerFromError,
+      datePickerToError,
       dateRangeValue,
       dateTo,
       handleClearValues,
@@ -32,13 +32,13 @@ const ListFilter = () => (
       <StyledForm>
         <StyledLabel htmlFor="">from</StyledLabel>
         <DateInput
-          errors={datePickerFromErrors}
+          error={datePickerFromError}
           onChange={handleDateFromChange}
           value={dateFrom}
         />
         <StyledLabel htmlFor="">to</StyledLabel>
         <DateInput
-          errors={datePickerToErrors}
+          error={datePickerToError}
           onChange={handleDateToChange}
           value={dateTo}
         />

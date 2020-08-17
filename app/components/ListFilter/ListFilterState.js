@@ -10,23 +10,19 @@ const FilterState = ({ render }) => {
   const [keywordValue, setKeywordValue] = useState('');
 
   // date input errors
-  // const [fromEmptyError, setFromEmptyError] = useState(false);
   const [fromPickerError, setFromPickerError] = useState('');
-  // const [toEmptyError, setToEmptyError] = useState(false);
   const [toPickerError, setToPickerError] = useState('');
 
   const handleDateFromChange = (date) => {
     setDateFrom(date);
     setDateRangeValue(getRangeValue(dateFrom, dateTo));
     setFromPickerError(getError(date, dateTo));
-    // setFromEmptyError(false);
   };
 
   const handleDateToChange = (date) => {
     setDateTo(date);
     setDateRangeValue(getRangeValue(dateFrom, dateTo));
     setToPickerError(getError(dateFrom, date));
-    // setToEmptyError(false);
   };
 
   const handleRangeChange = (value) => {
@@ -57,6 +53,8 @@ const FilterState = ({ render }) => {
     setDateRangeValue(0);
     setDateTo(null);
     setKeywordValue('');
+    setFromPickerError('');
+    setToPickerError('');
 
     // dispatch fetch
   };
@@ -70,22 +68,20 @@ const FilterState = ({ render }) => {
     console.log({ dateFrom: fromStr, dateTo: toStr, keyword: keywordValue });
   };
 
-  const datePickerFromErrors = {
-    // emptyError: fromEmptyError,
-    pickerError: fromPickerError,
-    setPickerError: setFromPickerError,
+  const datePickerFromError = {
+    error: fromPickerError,
+    setError: setFromPickerError,
   };
 
-  const datePickerToErrors = {
-    // emptyError: toEmptyError,
-    pickerError: toPickerError,
-    setPickerError: setToPickerError,
+  const datePickerToError = {
+    error: toPickerError,
+    setError: setToPickerError,
   };
 
   const propsToPassDown = {
     dateFrom,
-    datePickerFromErrors,
-    datePickerToErrors,
+    datePickerFromError,
+    datePickerToError,
     dateRangeValue,
     dateTo,
     handleClearValues,
