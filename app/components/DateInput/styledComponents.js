@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { KeyboardDatePicker } from '@material-ui/pickers';
+import { TextField } from '@material-ui/core';
 
 import { appTextColorB } from 'styleConstants';
 
@@ -12,5 +13,12 @@ export const StyledKeyboardDatePicker = styled(KeyboardDatePicker)`
   }
   & .MuiFormHelperText-root {
     display: none;
+  }
+`;
+
+export const StyledTextField = styled(TextField)`
+  & input::placeholder {
+    color: ${appTextColorB};
+    opacity: 0.6;
   }
 `;

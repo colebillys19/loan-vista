@@ -3,6 +3,7 @@ import T from 'prop-types';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import MomentUtils from '@date-io/moment';
 
+import TextField from './TextField';
 import { StyledKeyboardDatePicker } from './styledComponents';
 
 // eslint-disable-next-line
@@ -16,10 +17,10 @@ const ForwardRefPicker = forwardRef((props, ref) => {
           autoOk
           disableFuture
           disableToolbar
-          emptyLabel="date"
           format="M/D/YYYY"
           invalidDateMessage="invalid date format"
           maxDateMessage="future dates not permitted"
+          TextFieldComponent={TextField}
           variant="inline"
           {...props}
         />

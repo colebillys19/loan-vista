@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { IconButton, MenuItem, Select, TextField } from '@material-ui/core';
-import { KeyboardDatePicker } from '@material-ui/pickers';
 
 import Button from 'components/_baseUI/Button';
 import { appTextColorA, appTextColorB } from 'styleConstants';
@@ -38,16 +37,6 @@ export const StyledIconButton = styled(IconButton)`
   vertical-align: top;
 `;
 
-export const StyledKeyboardDatePicker = styled(KeyboardDatePicker)`
-  & .MuiInputBase-input {
-    color: ${({ value }) => (value === null ? appTextColorB : 'inherit')};
-    width: 6.8rem;
-  }
-  .MuiFormHelperText-root {
-    display: none;
-  }
-`;
-
 export const StyledLabel = styled.label`
   color: ${appTextColorB};
   display: inline-block;
@@ -67,6 +56,7 @@ export const StyledMenuItem = styled(MenuItem)`
   letter-spacing: 0.1rem;
   &.Mui-disabled {
     color: ${appTextColorB};
+    opacity: 0.6;
   }
 `;
 
@@ -75,6 +65,7 @@ export const StyledSelect = styled(Select)`
   min-width: 11rem;
   & .MuiInputBase-input {
     color: ${({ value }) => (value === 0 ? appTextColorB : 'inherit')};
+    opacity: ${({ value }) => (value === 0 ? '0.6' : 'inherit')};
     position: relative;
     top: 0.2rem;
   }
@@ -90,6 +81,6 @@ export const StyledTextField = styled(TextField)`
   min-width: 13.5rem;
   & input::placeholder {
     color: ${appTextColorB};
-    opacity: 1;
+    opacity: 0.6;
   }
 `;
