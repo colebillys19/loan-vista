@@ -11,7 +11,7 @@ import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 import { push } from 'connected-react-router';
 
-import GlobalStyle from 'global-styles';
+import GlobalStyles from 'globalStyles';
 
 import Calls from 'containers/Calls';
 import Documents from 'containers/Documents';
@@ -62,7 +62,7 @@ const App = ({ dispatchNavigation, pathname }) => (
         </MainContainer>
       )}
     />
-    <GlobalStyle />
+    <GlobalStyles />
   </Fragment>
 );
 

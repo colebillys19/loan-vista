@@ -1,19 +1,42 @@
+import React from 'react';
 import styled from 'styled-components';
 import { KeyboardDatePicker } from '@material-ui/pickers';
 import { TextField } from '@material-ui/core';
 
-import { appColorA, appTextColorB } from 'styleConstants';
+import { appErrorColor, appTextColorB } from 'styleConstants';
 
 import { getColor } from './helpers';
 
-/* eslint-disable indent */
-export const StyledKeyboardDatePicker = styled(KeyboardDatePicker)`
+export const ErrorIndicator = styled.div`
+  background-color: ${({ isError }) =>
+    isError ? appErrorColor : 'transparent'};
+  bottom: 0.1rem;
+  height: 0.2rem;
+  position: absolute;
   width: 11.5rem;
-  & .MuiInputBase-input {
-    color: ${({ isError, value }) => getColor(isError, value)} !important;
+`;
+
+export const DatePickerWrapper = styled.span`
+  display: inline-block;
+  height: 2.8rem;
+  position: relative;
+  vertical-align: top;
+  width: 11.5rem;
+`;
+
+/* eslint-disable indent */
+export const StyledKeyboardDatePicker = styled(({ isError, ...restProps }) => (
+  <KeyboardDatePicker {...restProps} />
+))`
+  height: 2.8rem;
+  width: 11.5rem;
+  & .MuiInput-underline:after {
+    transition: none;
   }
-  & .MuiInput-underline.Mui-error:after {
-    border-bottom-color: ${appColorA};
+  & .MuiInputBase-input {
+    color: ${({ isError, value }) => getColor(isError, value)};
+    margin-right: -0.6rem;
+    min-width: 7.4rem;
   }
   & .MuiFormHelperText-root {
     display: none;

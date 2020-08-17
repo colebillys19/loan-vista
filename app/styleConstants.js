@@ -2,6 +2,7 @@ export const appBackgroundColor = '#f8f8ff';
 export const appColorA = '#7b68ee';
 export const appColorB = '#f8f8ff';
 export const appColorC = '#ffa07a';
+export const appErrorColor = '#f44336';
 export const appTextColorA = '#111111';
 export const appTextColorB = '#888888';
 export const borderGrey = '#ccc';

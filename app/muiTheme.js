@@ -1,9 +1,12 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
-import { appColorA, appColorC } from './styleConstants';
+import { appColorA, appColorC, appErrorColor } from './styleConstants';
 
 const muiTheme = createMuiTheme({
   palette: {
+    error: {
+      main: appErrorColor,
+    },
     primary: {
       main: appColorA,
     },
