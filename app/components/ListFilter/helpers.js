@@ -10,10 +10,15 @@ export const getDates = () => ({
   twoWk: moment().subtract(14, 'days'),
 });
 
-export const getError = (fromDate, toDate) =>
-  fromDate && toDate && fromDate.isBefore(toDate)
-    ? ''
-    : 'dates must be in order';
+export const getError = (fromDate, toDate) => {
+  if (fromDate && toDate) {
+    return fromDate.isBefore(toDate)
+      ? ''
+      : 'dates must be in chronological order';
+  }
+
+  return '';
+};
 
 const getDatesArr = () => [
   getDates().now.format(momentFormatStr),

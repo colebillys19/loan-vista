@@ -17,9 +17,11 @@ const ForwardRefPicker = forwardRef((props, ref) => {
           autoOk
           disableFuture
           disableToolbar
-          format="M/D/YYYY"
+          format="MM/DD/YYYY"
           invalidDateMessage="invalid date format"
           maxDateMessage="future dates not permitted"
+          minDate={new Date('1970-01-01')}
+          minDateMessage="pick a more recent date"
           TextFieldComponent={TextField}
           variant="inline"
           {...props}

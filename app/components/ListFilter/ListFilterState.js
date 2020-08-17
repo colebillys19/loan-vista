@@ -10,23 +10,23 @@ const FilterState = ({ render }) => {
   const [keywordValue, setKeywordValue] = useState('');
 
   // date input errors
-  const [fromEmptyError, setFromEmptyError] = useState(false);
+  // const [fromEmptyError, setFromEmptyError] = useState(false);
   const [fromPickerError, setFromPickerError] = useState('');
-  const [toEmptyError, setToEmptyError] = useState(false);
+  // const [toEmptyError, setToEmptyError] = useState(false);
   const [toPickerError, setToPickerError] = useState('');
 
   const handleDateFromChange = (date) => {
     setDateFrom(date);
     setDateRangeValue(getRangeValue(dateFrom, dateTo));
-    setFromPickerError(getError(dateFrom, dateTo));
-    setFromEmptyError(false);
+    setFromPickerError(getError(date, dateTo));
+    // setFromEmptyError(false);
   };
 
   const handleDateToChange = (date) => {
     setDateTo(date);
     setDateRangeValue(getRangeValue(dateFrom, dateTo));
-    setFromPickerError(getError(dateFrom, dateTo));
-    setToEmptyError(false);
+    setToPickerError(getError(dateFrom, date));
+    // setToEmptyError(false);
   };
 
   const handleRangeChange = (value) => {
@@ -71,13 +71,13 @@ const FilterState = ({ render }) => {
   };
 
   const datePickerFromErrors = {
-    emptyError: fromEmptyError,
+    // emptyError: fromEmptyError,
     pickerError: fromPickerError,
     setPickerError: setFromPickerError,
   };
 
   const datePickerToErrors = {
-    emptyError: toEmptyError,
+    // emptyError: toEmptyError,
     pickerError: toPickerError,
     setPickerError: setToPickerError,
   };

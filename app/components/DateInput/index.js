@@ -10,26 +10,29 @@ import ForwardRefPicker from './ForwardRefPicker';
 import Tooltip from './Tooltip';
 
 const DateInput = ({
-  errors: { emptyError, pickerError, setPickerError },
+  errors: { pickerError, setPickerError },
   onChange,
   value,
 }) => {
   const [tooltipOpen, setTooltipOpen] = useState(false);
-  const tooltipMessage = emptyError
-    ? 'please provide a date'
-    : pickerError || '';
+  // const tooltipMessage = emptyError
+  //   ? 'please provide a date'
+  //   : pickerError || '';
+  const tooltipMessage = pickerError || '';
 
   useEffect(() => {
-    if (emptyError || pickerError) {
+    if (pickerError) {
       setTooltipOpen(true);
     } else {
       setTooltipOpen(false);
     }
-  }, [emptyError, pickerError]);
+  }, [pickerError]);
 
   const onError = (err) => {
     if (err.length) {
       setPickerError(err);
+    } else if (pickerError) {
+      setPickerError(pickerError);
     } else {
       setPickerError('');
     }
@@ -44,7 +47,7 @@ const DateInput = ({
 
 DateInput.propTypes = {
   errors: T.shape({
-    emptyError: T.bool,
+    // emptyError: T.bool,
     pickerError: T.string,
     setPickerError: T.func,
   }).isRequired,
