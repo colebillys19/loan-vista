@@ -1,30 +1,31 @@
 import { useState } from 'react';
 import T from 'prop-types';
 
-import { getDates, getRangeValue } from './helpers';
+import { getDates, getError, getRangeValue } from './helpers';
 
 const FilterState = ({ render }) => {
-  const [dateFromValue, setDateFromValue] = useState(null);
+  const [dateFrom, setDateFrom] = useState(null);
   const [dateRangeValue, setDateRangeValue] = useState(0);
-  const [dateToValue, setDateToValue] = useState(null);
+  const [dateTo, setDateTo] = useState(null);
   const [keywordValue, setKeywordValue] = useState('');
 
+  // date input errors
   const [fromEmptyError, setFromEmptyError] = useState(false);
   const [fromPickerError, setFromPickerError] = useState('');
   const [toEmptyError, setToEmptyError] = useState(false);
   const [toPickerError, setToPickerError] = useState('');
 
   const handleDateFromChange = (date) => {
-    setDateFromValue(date);
-    setDateRangeValue(getRangeValue(dateFromValue, dateToValue));
-    setFromPickerError('');
+    setDateFrom(date);
+    setDateRangeValue(getRangeValue(dateFrom, dateTo));
+    setFromPickerError(getError(dateFrom, dateTo));
     setFromEmptyError(false);
   };
 
   const handleDateToChange = (date) => {
-    setDateToValue(date);
-    setDateRangeValue(getRangeValue(dateFromValue, dateToValue));
-    setToPickerError('');
+    setDateTo(date);
+    setDateRangeValue(getRangeValue(dateFrom, dateTo));
+    setFromPickerError(getError(dateFrom, dateTo));
     setToEmptyError(false);
   };
 
@@ -32,27 +33,42 @@ const FilterState = ({ render }) => {
     setDateRangeValue(value);
 
     if (value === 0) {
-      setDateFromValue(null);
-      setDateToValue(null);
+      setDateFrom(null);
+      setDateTo(null);
     } else {
       const { now, oneMo, oneWk, twoMo, twoWk } = getDates();
 
-      setDateToValue(now);
+      setDateTo(now);
 
       if (value === 1) {
-        setDateFromValue(oneWk);
+        setDateFrom(oneWk);
       } else if (value === 2) {
-        setDateFromValue(twoWk);
+        setDateFrom(twoWk);
       } else if (value === 3) {
-        setDateFromValue(oneMo);
+        setDateFrom(oneMo);
       } else {
-        setDateFromValue(twoMo);
+        setDateFrom(twoMo);
       }
     }
   };
 
-  // const handleClearValues = () => {};
-  // const handleSubmitValues = () => {};
+  const handleClearValues = () => {
+    setDateFrom(null);
+    setDateRangeValue(0);
+    setDateTo(null);
+    setKeywordValue('');
+
+    // dispatch fetch
+  };
+
+  const handleSubmitValues = () => {
+    const fromStr = dateFrom ? dateFrom.format('YYYY-MM-DD') : null;
+    const toStr = dateTo ? dateTo.format('YYYY-MM-DD') : null;
+
+    // dispatch fetch
+    console.log('handleSubmitValues');
+    console.log({ dateFrom: fromStr, dateTo: toStr, keyword: keywordValue });
+  };
 
   const datePickerFromErrors = {
     emptyError: fromEmptyError,
@@ -67,14 +83,16 @@ const FilterState = ({ render }) => {
   };
 
   const propsToPassDown = {
-    dateFromValue,
+    dateFrom,
     datePickerFromErrors,
     datePickerToErrors,
     dateRangeValue,
-    dateToValue,
+    dateTo,
+    handleClearValues,
     handleDateFromChange,
     handleDateToChange,
     handleRangeChange,
+    handleSubmitValues,
     keywordValue,
     setKeywordValue,
   };

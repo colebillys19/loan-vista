@@ -16,14 +16,16 @@ import { StyledButton, StyledForm, StyledLabel } from './styledComponents';
 const ListFilter = () => (
   <ListFilterState
     render={({
-      dateFromValue,
+      dateFrom,
       datePickerFromErrors,
       datePickerToErrors,
       dateRangeValue,
-      dateToValue,
+      dateTo,
+      handleClearValues,
       handleDateFromChange,
       handleDateToChange,
       handleRangeChange,
+      handleSubmitValues,
       keywordValue,
       setKeywordValue,
     }) => (
@@ -32,20 +34,20 @@ const ListFilter = () => (
         <DateInput
           errors={datePickerFromErrors}
           onChange={handleDateFromChange}
-          value={dateFromValue}
+          value={dateFrom}
         />
         <StyledLabel htmlFor="">to</StyledLabel>
         <DateInput
           errors={datePickerToErrors}
           onChange={handleDateToChange}
-          value={dateToValue}
+          value={dateTo}
         />
         <StyledLabel htmlFor="">or</StyledLabel>
         <SelectInput onChange={handleRangeChange} value={dateRangeValue} />
         <StyledLabel htmlFor="">and/or</StyledLabel>
         <TextInput onChange={setKeywordValue} value={keywordValue} />
-        <RefreshButton onClick={() => null} />
-        <StyledButton onClick={() => null} text="find" />
+        <RefreshButton onClick={handleClearValues} />
+        <StyledButton onClick={handleSubmitValues} text="find" />
       </StyledForm>
     )}
   />

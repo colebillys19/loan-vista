@@ -20,7 +20,7 @@ const DateInput = ({
     : pickerError || '';
 
   useEffect(() => {
-    if (!!emptyError || !!pickerError) {
+    if (emptyError || pickerError) {
       setTooltipOpen(true);
     } else {
       setTooltipOpen(false);
