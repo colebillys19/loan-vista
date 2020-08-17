@@ -1,36 +1,58 @@
 import { useState } from 'react';
 import T from 'prop-types';
 
+import { getDates, getRangeValue } from './helpers';
+
 const FilterState = ({ render }) => {
   const [dateFromValue, setDateFromValue] = useState(null);
-  const [dateToValue, setDateToValue] = useState(null);
   const [dateRangeValue, setDateRangeValue] = useState(0);
+  const [dateToValue, setDateToValue] = useState(null);
   const [keywordValue, setKeywordValue] = useState('');
 
-  // date inputs error state
   const [fromEmptyError, setFromEmptyError] = useState(false);
   const [fromPickerError, setFromPickerError] = useState('');
   const [toEmptyError, setToEmptyError] = useState(false);
   const [toPickerError, setToPickerError] = useState('');
 
-  // const handleSearchChange = () => {};
-  // const handleSelectChange = () => {};
-  // const handleClearValues = () => {};
-  // const handleSubmitValues = () => {};
-
   const handleDateFromChange = (date) => {
-    setDateRangeValue(0);
     setDateFromValue(date);
+    setDateRangeValue(getRangeValue(dateFromValue, dateToValue));
     setFromPickerError('');
     setFromEmptyError(false);
   };
 
   const handleDateToChange = (date) => {
-    setDateRangeValue(0);
     setDateToValue(date);
+    setDateRangeValue(getRangeValue(dateFromValue, dateToValue));
     setToPickerError('');
     setToEmptyError(false);
   };
+
+  const handleRangeChange = (value) => {
+    setDateRangeValue(value);
+
+    if (value === 0) {
+      setDateFromValue(null);
+      setDateToValue(null);
+    } else {
+      const { now, oneMo, oneWk, twoMo, twoWk } = getDates();
+
+      setDateToValue(now);
+
+      if (value === 1) {
+        setDateFromValue(oneWk);
+      } else if (value === 2) {
+        setDateFromValue(twoWk);
+      } else if (value === 3) {
+        setDateFromValue(oneMo);
+      } else {
+        setDateFromValue(twoMo);
+      }
+    }
+  };
+
+  // const handleClearValues = () => {};
+  // const handleSubmitValues = () => {};
 
   const datePickerFromErrors = {
     emptyError: fromEmptyError,
@@ -52,8 +74,8 @@ const FilterState = ({ render }) => {
     dateToValue,
     handleDateFromChange,
     handleDateToChange,
+    handleRangeChange,
     keywordValue,
-    setDateRangeValue,
     setKeywordValue,
   };
 

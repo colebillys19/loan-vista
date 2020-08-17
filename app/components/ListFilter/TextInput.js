@@ -6,7 +6,7 @@ import { StyledTextField } from './styledComponents';
 const TextInput = ({ onChange, value }) => (
   <StyledTextField
     onChange={(e) => onChange(e.target.value)}
-    placeholder="date"
+    placeholder="keyword search"
     value={value}
   />
 );

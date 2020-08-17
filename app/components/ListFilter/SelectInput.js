@@ -3,23 +3,39 @@ import T from 'prop-types';
 
 import { StyledMenuItem, StyledSelect } from './styledComponents';
 
-const SelectInput = ({ onChange, value }) => (
-  <StyledSelect
-    displayEmpty
-    inputProps={{ 'aria-label': 'date range select' }}
-    MenuProps={{ classes: { list: 'date-range-list' } }}
-    onChange={(e) => onChange(e.target.value)}
-    value={value}
-  >
-    <StyledMenuItem value={0} disabled>
-      date range
-    </StyledMenuItem>
-    <StyledMenuItem value={1}>last week</StyledMenuItem>
-    <StyledMenuItem value={2}>last 2 weeks</StyledMenuItem>
-    <StyledMenuItem value={3}>last month</StyledMenuItem>
-    <StyledMenuItem value={4}>last 2 months</StyledMenuItem>
-  </StyledSelect>
-);
+const SelectInput = ({ onChange, value }) => {
+  const getRenderValue = (val) => {
+    switch (val) {
+      case 1:
+        return 'last week';
+      case 2:
+        return 'last 2 weeks';
+      case 3:
+        return 'last month';
+      case 4:
+        return 'last 2 months';
+      default:
+        return 'date range';
+    }
+  };
+
+  return (
+    <StyledSelect
+      displayEmpty
+      onChange={(e) => onChange(e.target.value)}
+      renderValue={getRenderValue}
+      value={value}
+    >
+      <StyledMenuItem isClear value={0}>
+        clear range
+      </StyledMenuItem>
+      <StyledMenuItem value={1}>last week</StyledMenuItem>
+      <StyledMenuItem value={2}>last 2 weeks</StyledMenuItem>
+      <StyledMenuItem value={3}>last month</StyledMenuItem>
+      <StyledMenuItem value={4}>last 2 months</StyledMenuItem>
+    </StyledSelect>
+  );
+};
 
 SelectInput.propTypes = {
   onChange: T.func.isRequired,

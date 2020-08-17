@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { IconButton, MenuItem, Select, TextField } from '@material-ui/core';
 
@@ -50,14 +51,14 @@ export const StyledLabel = styled.label`
   }
 `;
 
-export const StyledMenuItem = styled(MenuItem)`
+export const StyledMenuItem = styled(({ isClear, ...restProps }) => (
+  <MenuItem {...restProps} />
+))`
+  color: ${({ isClear }) => (isClear ? appTextColorB : 'inherit')};
   font-family: Arial, sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
-  &.Mui-disabled {
-    color: ${appTextColorB};
-    opacity: 0.6;
-  }
+  opacity: ${({ isClear }) => (isClear ? '0.6' : 'inherit')};
 `;
 
 export const StyledSelect = styled(Select)`

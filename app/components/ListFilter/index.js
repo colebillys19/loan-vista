@@ -23,8 +23,8 @@ const ListFilter = () => (
       dateToValue,
       handleDateFromChange,
       handleDateToChange,
+      handleRangeChange,
       keywordValue,
-      setDateRangeValue,
       setKeywordValue,
     }) => (
       <StyledForm>
@@ -41,7 +41,7 @@ const ListFilter = () => (
           value={dateToValue}
         />
         <StyledLabel htmlFor="">or</StyledLabel>
-        <SelectInput onChange={setDateRangeValue} value={dateRangeValue} />
+        <SelectInput onChange={handleRangeChange} value={dateRangeValue} />
         <StyledLabel htmlFor="">and/or</StyledLabel>
         <TextInput onChange={setKeywordValue} value={keywordValue} />
         <RefreshButton onClick={() => null} />
