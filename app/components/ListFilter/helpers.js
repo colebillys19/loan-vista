@@ -2,7 +2,7 @@ import moment from 'moment';
 
 const momentFormatStr = 'YYYY-MM-DD';
 
-export const getDates = () => ({
+const getDates = () => ({
   now: moment(),
   oneMo: moment().subtract(1, 'months'),
   oneWk: moment().subtract(7, 'days'),
@@ -20,18 +20,20 @@ export const getError = (fromDate, toDate) => {
   return '';
 };
 
-const getDatesArr = () => [
-  getDates().now.format(momentFormatStr),
-  getDates().oneWk.format(momentFormatStr),
-  getDates().twoWk.format(momentFormatStr),
-  getDates().oneMo.format(momentFormatStr),
-  getDates().twoMo.format(momentFormatStr),
-];
+export const getDatesArr = () => {
+  const dates = getDates();
+
+  return [dates.now, dates.oneWk, dates.twoWk, dates.oneMo, dates.twoMo];
+};
 
 export const getRangeValue = (fromDate, toDate) => {
   const fromStr = fromDate ? fromDate.format(momentFormatStr) : '';
   const toStr = toDate ? toDate.format(momentFormatStr) : '';
-  const fromIndex = getDatesArr().indexOf(fromStr);
 
-  return fromIndex !== -1 && getDatesArr().indexOf(toStr) === 0 ? fromIndex : 0;
+  const dateStrArr = getDatesArr().map((dateObj) =>
+    dateObj.format(momentFormatStr),
+  );
+  const fromIndex = dateStrArr.indexOf(fromStr);
+
+  return fromIndex !== -1 && dateStrArr.indexOf(toStr) === 0 ? fromIndex : 0;
 };

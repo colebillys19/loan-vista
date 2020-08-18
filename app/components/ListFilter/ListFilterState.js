@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import T from 'prop-types';
 
-import { getDates, getError, getRangeValue } from './helpers';
+import { getDatesArr, getError, getRangeValue } from './helpers';
 
 const FilterState = ({ render }) => {
   const [dateFrom, setDateFrom] = useState(null);
@@ -41,19 +41,10 @@ const FilterState = ({ render }) => {
       setDateFrom(null);
       setDateTo(null);
     } else {
-      const { now, oneMo, oneWk, twoMo, twoWk } = getDates();
+      const dateObjArr = getDatesArr();
 
-      setDateTo(now);
-
-      if (value === 1) {
-        setDateFrom(oneWk);
-      } else if (value === 2) {
-        setDateFrom(twoWk);
-      } else if (value === 3) {
-        setDateFrom(oneMo);
-      } else {
-        setDateFrom(twoMo);
-      }
+      setDateTo(dateObjArr[0]);
+      setDateFrom(dateObjArr[value]);
     }
   };
 

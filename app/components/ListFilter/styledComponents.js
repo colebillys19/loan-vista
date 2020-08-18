@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { IconButton, MenuItem, Select, TextField } from '@material-ui/core';
 
@@ -57,9 +57,12 @@ export const StyledLabel = styled.label`
   vertical-align: top;
 `;
 
-export const StyledMenuItem = styled(({ isClear, ...restProps }) => (
-  <MenuItem {...restProps} />
-))`
+/* eslint-disable react/prop-types */
+export const StyledMenuItem = styled(
+  forwardRef(({ isClear, ...restProps }, ref) => (
+    <MenuItem ref={ref} {...restProps} />
+  )),
+)`
   color: ${({ isClear }) => (isClear ? appTextColorB : 'inherit')};
   font-family: Arial, sans-serif;
   font-size: 1.2rem;
@@ -76,6 +79,9 @@ export const StyledSelect = styled(Select)`
     position: relative;
     top: 0.2rem;
   }
+  &.MuiInput-underline:after {
+    transition: none;
+  }
   & .MuiSelect-icon {
     top: 0.5rem;
   }
@@ -89,5 +95,8 @@ export const StyledTextField = styled(TextField)`
   & input::placeholder {
     color: ${appTextColorB};
     opacity: 0.6;
+  }
+  & .MuiInput-underline:after {
+    transition: none;
   }
 `;

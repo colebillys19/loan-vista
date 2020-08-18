@@ -10,7 +10,6 @@ import {
   StyledKeyboardDatePicker,
 } from './styledComponents';
 
-// eslint-disable-next-line
 const ForwardRefPicker = forwardRef(({ isError, ...restProps }, ref) => (
   <DatePickerWrapper ref={ref}>
     <MuiPickersUtilsProvider utils={MomentUtils}>
