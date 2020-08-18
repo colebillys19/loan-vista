@@ -5,10 +5,19 @@ import { IconButton, MenuItem, Select, TextField } from '@material-ui/core';
 import Button from 'components/_baseUI/Button';
 import { appTextColorA, appTextColorB } from 'styleConstants';
 
+export const DisableWrapper = styled.span`
+  opacity: ${({ disabled }) => (disabled ? '0.5' : '1')};
+  pointer-events: ${({ disabled }) => (disabled ? 'none' : 'all')};
+  display: inline-block;
+  vertical-align: top;
+  & :not(:first-of-type) {
+    margin-left: 2rem;
+  }
+`;
+
 export const StyledButton = styled(Button)`
   display: inline-block;
   height: 3.3rem;
-  margin-left: 2rem;
   position: relative;
   top: -0.3rem;
   vertical-align: top;
@@ -46,9 +55,6 @@ export const StyledLabel = styled.label`
   margin-right: 0.8rem;
   padding-top: 0.7rem;
   vertical-align: top;
-  & :not(:first-of-type) {
-    margin-left: 2rem;
-  }
 `;
 
 export const StyledMenuItem = styled(({ isClear, ...restProps }) => (

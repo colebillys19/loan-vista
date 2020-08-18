@@ -8,8 +8,8 @@ import T from 'prop-types';
 
 import { StyledButton } from './styledComponents';
 
-const Button = ({ className, onClick, text }) => (
-  <StyledButton className={className} onClick={onClick}>
+const Button = ({ className, onClick, text, ...restProps }) => (
+  <StyledButton className={className} onClick={onClick} {...restProps}>
     {text}
   </StyledButton>
 );

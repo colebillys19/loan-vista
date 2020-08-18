@@ -1,28 +1,37 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import T from 'prop-types';
 
 import { getDates, getError, getRangeValue } from './helpers';
 
 const FilterState = ({ render }) => {
   const [dateFrom, setDateFrom] = useState(null);
+  const [dateFromError, setDateFromError] = useState('');
   const [dateRangeValue, setDateRangeValue] = useState(0);
   const [dateTo, setDateTo] = useState(null);
+  const [dateToError, setDateToError] = useState('');
   const [keywordValue, setKeywordValue] = useState('');
+  const [dateErrorIndex, setDateErrorIndex] = useState(-1);
 
-  // date input errors
-  const [fromPickerError, setFromPickerError] = useState('');
-  const [toPickerError, setToPickerError] = useState('');
+  useEffect(() => {
+    if (dateFromError) {
+      setDateErrorIndex(0);
+    } else if (dateToError) {
+      setDateErrorIndex(1);
+    } else {
+      setDateErrorIndex(-1);
+    }
+  }, [dateFromError, dateToError]);
 
   const handleDateFromChange = (date) => {
     setDateFrom(date);
     setDateRangeValue(getRangeValue(dateFrom, dateTo));
-    setFromPickerError(getError(date, dateTo));
+    setDateFromError(getError(date, dateTo));
   };
 
   const handleDateToChange = (date) => {
     setDateTo(date);
     setDateRangeValue(getRangeValue(dateFrom, dateTo));
-    setToPickerError(getError(dateFrom, date));
+    setDateToError(getError(dateFrom, date));
   };
 
   const handleRangeChange = (value) => {
@@ -53,32 +62,35 @@ const FilterState = ({ render }) => {
     setDateRangeValue(0);
     setDateTo(null);
     setKeywordValue('');
-    setFromPickerError('');
-    setToPickerError('');
+    setDateFromError('');
+    setDateToError('');
 
     // dispatch fetch
   };
 
   const handleSubmitValues = () => {
-    const fromStr = dateFrom ? dateFrom.format('YYYY-MM-DD') : null;
-    const toStr = dateTo ? dateTo.format('YYYY-MM-DD') : null;
+    if (!dateFromError && !dateToError) {
+      const fromStr = dateFrom ? dateFrom.format('YYYY-MM-DD') : null;
+      const toStr = dateTo ? dateTo.format('YYYY-MM-DD') : null;
 
-    // dispatch fetch
-    console.log('handleSubmitValues');
-    console.log({ dateFrom: fromStr, dateTo: toStr, keyword: keywordValue });
+      // dispatch fetch
+      console.log('handleSubmitValues');
+      console.log({ dateFrom: fromStr, dateTo: toStr, keyword: keywordValue });
+    }
   };
 
   const datePickerFromError = {
-    error: fromPickerError,
-    setError: setFromPickerError,
+    error: dateFromError,
+    setError: setDateFromError,
   };
 
   const datePickerToError = {
-    error: toPickerError,
-    setError: setToPickerError,
+    error: dateToError,
+    setError: setDateToError,
   };
 
   const propsToPassDown = {
+    dateErrorIndex,
     dateFrom,
     datePickerFromError,
     datePickerToError,

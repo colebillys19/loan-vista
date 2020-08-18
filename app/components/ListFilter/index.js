@@ -11,11 +11,17 @@ import ListFilterState from './ListFilterState';
 import RefreshButton from './RefreshButton';
 import SelectInput from './SelectInput';
 import TextInput from './TextInput';
-import { StyledButton, StyledForm, StyledLabel } from './styledComponents';
+import {
+  DisableWrapper,
+  StyledButton,
+  StyledForm,
+  StyledLabel,
+} from './styledComponents';
 
 const ListFilter = () => (
   <ListFilterState
     render={({
+      dateErrorIndex,
       dateFrom,
       datePickerFromError,
       datePickerToError,
@@ -29,25 +35,39 @@ const ListFilter = () => (
       keywordValue,
       setKeywordValue,
     }) => (
-      <StyledForm>
-        <StyledLabel htmlFor="">from</StyledLabel>
-        <DateInput
-          error={datePickerFromError}
-          onChange={handleDateFromChange}
-          value={dateFrom}
-        />
-        <StyledLabel htmlFor="">to</StyledLabel>
-        <DateInput
-          error={datePickerToError}
-          onChange={handleDateToChange}
-          value={dateTo}
-        />
-        <StyledLabel htmlFor="">or</StyledLabel>
-        <SelectInput onChange={handleRangeChange} value={dateRangeValue} />
-        <StyledLabel htmlFor="">and/or</StyledLabel>
-        <TextInput onChange={setKeywordValue} value={keywordValue} />
+      <StyledForm onSubmit={(e) => e.preventDefault()}>
+        <DisableWrapper disabled={dateErrorIndex === 1}>
+          <StyledLabel htmlFor="">from</StyledLabel>
+          <DateInput
+            error={datePickerFromError}
+            onChange={handleDateFromChange}
+            value={dateFrom}
+          />
+        </DisableWrapper>
+        <DisableWrapper disabled={dateErrorIndex === 0}>
+          <StyledLabel htmlFor="">to</StyledLabel>
+          <DateInput
+            error={datePickerToError}
+            onChange={handleDateToChange}
+            value={dateTo}
+          />
+        </DisableWrapper>
+        <DisableWrapper disabled={dateErrorIndex !== -1}>
+          <StyledLabel htmlFor="">or</StyledLabel>
+          <SelectInput onChange={handleRangeChange} value={dateRangeValue} />
+        </DisableWrapper>
+        <DisableWrapper disabled={dateErrorIndex !== -1}>
+          <StyledLabel htmlFor="">and/or</StyledLabel>
+          <TextInput onChange={setKeywordValue} value={keywordValue} />
+        </DisableWrapper>
         <RefreshButton onClick={handleClearValues} />
-        <StyledButton onClick={handleSubmitValues} text="find" />
+        <DisableWrapper disabled={dateErrorIndex !== -1}>
+          <StyledButton
+            onClick={handleSubmitValues}
+            text="find"
+            type="submit"
+          />
+        </DisableWrapper>
       </StyledForm>
     )}
   />

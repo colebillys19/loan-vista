@@ -11,7 +11,7 @@ export const getDates = () => ({
 });
 
 export const getError = (fromDate, toDate) => {
-  if (fromDate && toDate) {
+  if (fromDate && fromDate.isValid() && toDate && toDate.isValid()) {
     return fromDate.isBefore(toDate)
       ? ''
       : 'dates must be in chronological order';
