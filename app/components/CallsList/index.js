@@ -38,7 +38,7 @@ CallsList.propTypes = {
       audio: T.string,
       date: T.string,
       dept: T.string,
-      details: T.string,
+      desc: T.string,
       id: T.number,
       rep: T.string,
       time: T.string,
@@ -48,7 +48,7 @@ CallsList.propTypes = {
 };
 
 CallsList.defaultProps = {
-  headers: ['date', 'time', 'dept', 'details', 'rep', 'audio'],
+  headers: ['date', 'time', 'dept', 'desc', 'rep', 'audio'],
 };
 
 export default CallsList;

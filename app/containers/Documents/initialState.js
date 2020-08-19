@@ -2,10 +2,10 @@ const initialState = {
   documentsData: [
     {
       dateSent: '',
+      desc: '',
       file: '',
       from: '',
       id: 0,
-      subject: '',
       timeSent: '',
       type: '',
     },

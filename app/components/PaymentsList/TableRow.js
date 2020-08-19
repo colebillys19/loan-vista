@@ -14,7 +14,7 @@ const TableRow = ({ data, headers }) => (
 TableRow.propTypes = {
   data: T.shape({
     date: T.string,
-    description: T.string,
+    desc: T.string,
     escrow: T.string,
     interest: T.string,
     principal: T.string,

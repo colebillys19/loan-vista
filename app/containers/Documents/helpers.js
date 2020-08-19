@@ -3,16 +3,16 @@ import startCase from 'lodash/startCase';
 import toLower from 'lodash/toLower';
 
 export const getDocumentsData = (documentsData) =>
-  documentsData.map(({ dateSent, file, from, id, subject, timeSent, type }) => {
+  documentsData.map(({ dateSent, desc, file, from, id, timeSent, type }) => {
     const dateSentFormatted = moment(dateSent, 'YYYY-MM-DD').format(
       'MM/DD/YYYY',
     );
 
+    const descFormatted = desc === null ? '-' : `${desc.slice(0, 15)}...`;
+
     const fileFormatted = `${file.slice(0, 15)}...`;
 
     const fromFormatted = `${from.slice(0, 15)}...`;
-
-    const subjectFormatted = `${subject.slice(0, 15)}...`;
 
     const timeSentFormatted = timeSent
       ? moment(timeSent, 'HH:mm:ss').format('hh:mm A')
@@ -22,10 +22,10 @@ export const getDocumentsData = (documentsData) =>
 
     return {
       dateSent: dateSentFormatted,
+      desc: descFormatted,
       file: fileFormatted,
       from: fromFormatted,
       id,
-      subject: subjectFormatted,
       timeSent: timeSentFormatted,
       type: typeFormatted,
     };

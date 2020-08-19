@@ -4,7 +4,7 @@ const initialState = {
       audio: '',
       date: '',
       dept: '',
-      details: '',
+      desc: '',
       id: 0,
       rep: '',
       time: '',

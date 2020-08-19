@@ -16,7 +16,7 @@ TableRow.propTypes = {
     audio: T.string,
     date: T.string,
     dept: T.string,
-    details: T.string,
+    desc: T.string,
     rep: T.string,
     time: T.string,
   }),

@@ -36,7 +36,7 @@ PaymentsList.propTypes = {
   paymentsData: T.arrayOf(
     T.shape({
       date: T.string,
-      description: T.string,
+      desc: T.string,
       escrow: T.string,
       id: T.number,
       interest: T.string,
@@ -48,7 +48,7 @@ PaymentsList.propTypes = {
 };
 
 PaymentsList.defaultProps = {
-  headers: ['date', 'description', 'total', 'principal', 'interest', 'escrow'],
+  headers: ['date', 'desc', 'total', 'principal', 'interest', 'escrow'],
 };
 
 export default PaymentsList;

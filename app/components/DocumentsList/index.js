@@ -36,10 +36,10 @@ DocumentsList.propTypes = {
   documentsData: T.arrayOf(
     T.shape({
       dateSent: T.string,
+      desc: T.string,
       file: T.string,
       from: T.string,
       id: T.number,
-      subject: T.string,
       timeSent: T.string,
       type: T.string,
     }),
@@ -48,7 +48,7 @@ DocumentsList.propTypes = {
 };
 
 DocumentsList.defaultProps = {
-  headers: ['dateSent', 'timeSent', 'type', 'from', 'subject', 'file'],
+  headers: ['dateSent', 'timeSent', 'type', 'from', 'desc', 'file'],
 };
 
 export default DocumentsList;

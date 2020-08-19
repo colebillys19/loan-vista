@@ -14,9 +14,9 @@ const TableRow = ({ data, headers }) => (
 TableRow.propTypes = {
   data: T.shape({
     dateSent: T.string,
+    desc: T.string,
     file: T.string,
     from: T.string,
-    subject: T.string,
     timeSent: T.string,
     type: T.string,
   }),
