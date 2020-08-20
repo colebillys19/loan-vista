@@ -7,23 +7,25 @@ import React from 'react';
 import T from 'prop-types';
 
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import LinkButton from 'components/_base-ui/LinkButton';
 import { ArrowDownIcon, ArrowUpIcon } from 'images/icons';
 
-import { ContentContainer } from './styledComponents';
+import { IconWrapper, StyledLinkButton } from './styledComponents';
 
 const ListSortButton = ({ isActive, isDescending, onClick, text }) => {
   const Icon = isDescending ? (
-    <ArrowDownIcon size="1rem" />
+    <ArrowDownIcon size="0.8rem" />
   ) : (
-    <ArrowUpIcon size="1rem" />
+    <ArrowUpIcon size="0.8rem" />
   );
 
   return (
-    <ContentContainer isActive={isActive}>
-      <LinkButton onClick={onClick} text={text} />
-      <ConditionalRender Component={Icon} shouldRender={isActive} />
-    </ContentContainer>
+    <React.Fragment>
+      <StyledLinkButton onClick={onClick} text={text} />
+      <ConditionalRender
+        Component={<IconWrapper>{Icon}</IconWrapper>}
+        shouldRender={isActive}
+      />
+    </React.Fragment>
   );
 };
 

@@ -6,12 +6,12 @@ import { iconColorA } from 'styleConstants';
 
 const ArrowUpIcon = ({ color, size, ...restProps }) => (
   <SvgIcon
-    viewBox="0 0 24 24"
+    viewBox="7 7 10 10"
     style={{ height: size, width: size }}
     {...restProps}
   >
-    <path d="M0 0h24v24H0z" fill={color} />
-    <path d="M7 14l5-5 5 5z" />
+    <path d="M0 0h24v24H0z" fill="none" />
+    <path d="M7 14l5-5 5 5z" fill={color} />
   </SvgIcon>
 );
 
