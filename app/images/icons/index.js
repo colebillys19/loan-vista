@@ -1,3 +1,5 @@
+import ArrowDownIcon from './ArrowDownIcon';
+import ArrowUpIcon from './ArrowUpIcon';
 import BulletIcon from './BulletIcon';
 import CallIcon from './CallIcon';
 import CashIcon from './CashIcon';
@@ -8,6 +10,8 @@ import RefreshIcon from './RefreshIcon';
 import WarningIcon from './WarningIcon';
 
 export {
+  ArrowDownIcon,
+  ArrowUpIcon,
   BulletIcon,
   CallIcon,
   CashIcon,

@@ -9,10 +9,16 @@ export const StyledTableData = styled.td`
 `;
 
 export const StyledTableHeader = styled.th`
-  height: 4rem;
-  margin-bottom: 1rem;
+  font-weight: normal;
+  height: 3.5rem;
+  position: relative;
   text-align: left;
+  text-transform: uppercase;
   &:first-of-type {
     padding-left: 1rem;
+  }
+
+  & button {
+    text-transform: uppercase;
   }
 `;

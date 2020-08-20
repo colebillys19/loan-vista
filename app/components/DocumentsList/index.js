@@ -7,6 +7,7 @@ import React from 'react';
 import T from 'prop-types';
 
 import ListTable from 'components/_base-ui/ListTable';
+import ListTableBody from 'components/_base-ui/ListTableBody';
 import ListTableHead from 'components/_base-ui/ListTableHead';
 
 import TableRow from './TableRow';
@@ -23,23 +24,23 @@ const DocumentsList = ({ documentsData, headers }) => (
         ))}
       </tr>
     </ListTableHead>
-    <tbody>
+    <ListTableBody>
       {documentsData.map(({ id, ...restData }) => (
         <TableRow data={restData} headers={headers} key={id} />
       ))}
-    </tbody>
+    </ListTableBody>
   </ListTable>
 );
 
 DocumentsList.propTypes = {
   documentsData: T.arrayOf(
     T.shape({
-      dateSent: T.string,
+      'date sent': T.string,
       desc: T.string,
       from: T.string,
-      id: T.number,
+      id: T.string,
       pdf: T.string,
-      timeSent: T.string,
+      'time sent': T.string,
       type: T.string,
     }),
   ).isRequired,
@@ -47,7 +48,7 @@ DocumentsList.propTypes = {
 };
 
 DocumentsList.defaultProps = {
-  headers: ['dateSent', 'timeSent', 'type', 'from', 'desc', 'pdf'],
+  headers: ['date sent', 'time sent', 'type', 'from', 'desc', 'pdf'],
 };
 
 export default DocumentsList;

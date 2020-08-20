@@ -23,11 +23,11 @@ const TableRow = ({ data, headers }) => (
 
 TableRow.propTypes = {
   data: T.shape({
-    dateSent: T.string,
+    'date sent': T.string,
     desc: T.string,
     from: T.string,
     pdf: T.string,
-    timeSent: T.string,
+    'time sent': T.string,
     type: T.string,
   }),
   headers: T.arrayOf(T.string).isRequired,

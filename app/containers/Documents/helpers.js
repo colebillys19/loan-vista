@@ -21,12 +21,12 @@ export const getDocumentsData = (documentsData) =>
     const typeFormatted = toTitleCase(type);
 
     return {
-      dateSent: dateSentFormatted,
+      'date sent': dateSentFormatted,
       desc: descFormatted,
       from: fromFormatted,
       id,
       pdf: fileFormatted,
-      timeSent: timeSentFormatted,
+      'time sent': timeSentFormatted,
       type: typeFormatted,
     };
   });

@@ -6,7 +6,9 @@
 import React from 'react';
 import T from 'prop-types';
 
+import ListSortButton from 'components/_base-ui/ListSortButton';
 import ListTable from 'components/_base-ui/ListTable';
+import ListTableBody from 'components/_base-ui/ListTableBody';
 import ListTableHead from 'components/_base-ui/ListTableHead';
 
 import TableRow from './TableRow';
@@ -16,18 +18,33 @@ const CallsList = ({ callsData, headers }) => (
   <ListTable>
     <ListTableHead>
       <tr>
-        {headers.map((header) => (
-          <StyledTableHeader key={header} scope="col">
-            {header}
-          </StyledTableHeader>
-        ))}
+        {headers.map((header) => {
+          if (['date', 'dept', 'rep'].indexOf(header) !== -1) {
+            return (
+              <StyledTableHeader key={header} scope="col">
+                <ListSortButton
+                  isActive
+                  isDescending
+                  onClick={() => null}
+                  text={header}
+                />
+              </StyledTableHeader>
+            );
+          }
+
+          return (
+            <StyledTableHeader key={header} scope="col">
+              {header}
+            </StyledTableHeader>
+          );
+        })}
       </tr>
     </ListTableHead>
-    <tbody>
+    <ListTableBody>
       {callsData.map(({ id, ...restData }) => (
         <TableRow data={restData} headers={headers} key={id} />
       ))}
-    </tbody>
+    </ListTableBody>
   </ListTable>
 );
 
@@ -38,7 +55,7 @@ CallsList.propTypes = {
       date: T.string,
       dept: T.string,
       desc: T.string,
-      id: T.number,
+      id: T.string,
       rep: T.string,
       time: T.string,
     }),

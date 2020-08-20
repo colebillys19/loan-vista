@@ -7,6 +7,7 @@ import React from 'react';
 import T from 'prop-types';
 
 import ListTable from 'components/_base-ui/ListTable';
+import ListTableBody from 'components/_base-ui/ListTableBody';
 import ListTableHead from 'components/_base-ui/ListTableHead';
 
 import TableRow from './TableRow';
@@ -23,11 +24,11 @@ const PaymentsList = ({ paymentsData, headers }) => (
         ))}
       </tr>
     </ListTableHead>
-    <tbody>
+    <ListTableBody>
       {paymentsData.map(({ id, ...restData }) => (
         <TableRow data={restData} headers={headers} key={id} />
       ))}
-    </tbody>
+    </ListTableBody>
   </ListTable>
 );
 
@@ -37,7 +38,7 @@ PaymentsList.propTypes = {
       date: T.string,
       desc: T.string,
       escrow: T.string,
-      id: T.number,
+      id: T.string,
       interest: T.string,
       principal: T.string,
       total: T.string,
