@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { appBackgroundColor, appTextColorA } from 'styleConstants';
+import { backgroundColor, textColorA } from 'styleConstants';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -18,8 +18,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #app {
-    background-color: ${appBackgroundColor};
-    color: ${appTextColorA};
+    background-color: ${backgroundColor};
+    color: ${textColorA};
     font-family: Arial, sans-serif;
     font-size: 1.4rem;
     letter-spacing: 0.1rem;

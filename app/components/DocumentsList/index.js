@@ -6,16 +6,15 @@
 import React from 'react';
 import T from 'prop-types';
 
+import ListTable from 'components/_base-ui/ListTable';
+import ListTableHead from 'components/_base-ui/ListTableHead';
+
 import TableRow from './TableRow';
-import {
-  StyledTable,
-  StyledTableHead,
-  StyledTableHeader,
-} from './styledComponents';
+import { StyledTableHeader } from './styledComponents';
 
 const DocumentsList = ({ documentsData, headers }) => (
-  <StyledTable>
-    <StyledTableHead>
+  <ListTable>
+    <ListTableHead>
       <tr>
         {headers.map((header) => (
           <StyledTableHeader key={header} scope="col">
@@ -23,13 +22,13 @@ const DocumentsList = ({ documentsData, headers }) => (
           </StyledTableHeader>
         ))}
       </tr>
-    </StyledTableHead>
+    </ListTableHead>
     <tbody>
       {documentsData.map(({ id, ...restData }) => (
         <TableRow data={restData} headers={headers} key={id} />
       ))}
     </tbody>
-  </StyledTable>
+  </ListTable>
 );
 
 DocumentsList.propTypes = {
@@ -37,9 +36,9 @@ DocumentsList.propTypes = {
     T.shape({
       dateSent: T.string,
       desc: T.string,
-      file: T.string,
       from: T.string,
       id: T.number,
+      pdf: T.string,
       timeSent: T.string,
       type: T.string,
     }),
@@ -48,7 +47,7 @@ DocumentsList.propTypes = {
 };
 
 DocumentsList.defaultProps = {
-  headers: ['dateSent', 'timeSent', 'type', 'from', 'desc', 'file'],
+  headers: ['dateSent', 'timeSent', 'type', 'from', 'desc', 'pdf'],
 };
 
 export default DocumentsList;

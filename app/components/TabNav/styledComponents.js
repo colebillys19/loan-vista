@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 import { Button, Tab, Tabs } from '@material-ui/core';
 
-import { appColorC, appTextColorA } from 'styleConstants';
-
-export const ContentContainer = styled.div`
-  height: 6rem;
-  margin: 0 auto;
-  width: 120rem;
-`;
+import { appColorB, textColorA } from 'styleConstants';
 
 export const HomeButtonWrapper = styled.div`
   align-items: center;
@@ -17,7 +11,7 @@ export const HomeButtonWrapper = styled.div`
 `;
 
 export const StyledButton = styled(Button)`
-  color: ${appTextColorA};
+  color: ${textColorA};
   display: block;
   font-size: 2.2rem;
   height: 6rem;
@@ -43,12 +37,20 @@ export const StyledTabs = styled(Tabs)`
   left: 36.3rem;
   position: relative;
   width: 83.7rem;
+  overflow: visible;
+  z-index: 100;
   & .MuiTabs-indicator {
-    background-color: ${appColorC};
+    background-color: ${appColorB};
     height: 0.3rem;
+    bottom: -0.3rem;
+  }
+  & .MuiTabs-scroller {
+    overflow: visible !important;
   }
 `;
 
 export const TabNavWrapper = styled.div`
-  margin-bottom: 0.3rem;
+  height: 6rem;
+  margin: 0 auto;
+  width: 120rem;
 `;

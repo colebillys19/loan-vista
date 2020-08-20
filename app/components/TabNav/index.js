@@ -10,7 +10,6 @@ import Tabs from './Tabs';
 import { checkRoute } from './helpers';
 import { VALID_ROUTES } from './constants';
 import {
-  ContentContainer,
   HomeButtonWrapper,
   StyledButton,
   TabNavWrapper,
@@ -33,18 +32,16 @@ const TabNav = ({ dispatchNavigation, pathname }) => {
 
   return (
     <TabNavWrapper>
-      <ContentContainer>
-        <HomeButtonWrapper>
-          <StyledButton
-            disableRipple
-            id="home-button"
-            onClick={handleHomeButtonClick}
-          >
-            Loan Profile
-          </StyledButton>
-        </HomeButtonWrapper>
-        <Tabs value={value} handleChange={handleChange} />
-      </ContentContainer>
+      <HomeButtonWrapper>
+        <StyledButton
+          disableRipple
+          id="home-button"
+          onClick={handleHomeButtonClick}
+        >
+          Loan Profile
+        </StyledButton>
+      </HomeButtonWrapper>
+      <Tabs value={value} handleChange={handleChange} />
     </TabNavWrapper>
   );
 };

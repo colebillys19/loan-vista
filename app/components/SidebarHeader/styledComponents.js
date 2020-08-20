@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import Button from 'components/_baseUI/Button';
+import Button from 'components/_base-ui/Button';
 
 export const HeadingContainer = styled.div`
   margin: 0.5rem 0 1.1rem;

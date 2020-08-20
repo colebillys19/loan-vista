@@ -8,10 +8,10 @@ import T from 'prop-types';
 
 import DocumentsList from 'components/DocumentsList';
 import ListFilter from 'components/ListFilter';
-import TabWrapper from 'components/TabWrapper';
-import ConditionalRender from 'components/_baseUI/ConditionalRender';
-import Spinner from 'components/_baseUI/Spinner';
-import NoListDataFallback from 'components/_baseUI/NoListDataFallback';
+import TabWrapper from 'components/_base-ui/TabWrapper';
+import ConditionalRender from 'components/_base-ui/ConditionalRender';
+import Spinner from 'components/_base-ui/Spinner';
+import NoListDataFallback from 'components/_base-ui/NoListDataFallback';
 
 const DocumentsView = ({ documentsData, loading }) => {
   const noListData = !loading && documentsData.length === 0;

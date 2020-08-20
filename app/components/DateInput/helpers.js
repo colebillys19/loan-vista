@@ -1,4 +1,4 @@
-import { appTextColorB } from 'styleConstants';
+import { textColorB } from 'styleConstants';
 
 export const getColor = (isError, value) => {
   if (value === null) {
@@ -9,5 +9,5 @@ export const getColor = (isError, value) => {
     return 'red';
   }
 
-  return appTextColorB;
+  return textColorB;
 };

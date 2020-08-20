@@ -6,16 +6,15 @@
 import React from 'react';
 import T from 'prop-types';
 
+import ListTable from 'components/_base-ui/ListTable';
+import ListTableHead from 'components/_base-ui/ListTableHead';
+
 import TableRow from './TableRow';
-import {
-  StyledTable,
-  StyledTableHead,
-  StyledTableHeader,
-} from './styledComponents';
+import { StyledTableHeader } from './styledComponents';
 
 const CallsList = ({ callsData, headers }) => (
-  <StyledTable>
-    <StyledTableHead>
+  <ListTable>
+    <ListTableHead>
       <tr>
         {headers.map((header) => (
           <StyledTableHeader key={header} scope="col">
@@ -23,13 +22,13 @@ const CallsList = ({ callsData, headers }) => (
           </StyledTableHeader>
         ))}
       </tr>
-    </StyledTableHead>
+    </ListTableHead>
     <tbody>
       {callsData.map(({ id, ...restData }) => (
         <TableRow data={restData} headers={headers} key={id} />
       ))}
     </tbody>
-  </StyledTable>
+  </ListTable>
 );
 
 CallsList.propTypes = {

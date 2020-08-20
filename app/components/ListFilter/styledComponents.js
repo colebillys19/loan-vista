@@ -2,8 +2,8 @@ import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { IconButton, MenuItem, Select, TextField } from '@material-ui/core';
 
-import Button from 'components/_baseUI/Button';
-import { appTextColorA, appTextColorB } from 'styleConstants';
+import Button from 'components/_base-ui/Button';
+import { backgroundColor, textColorA, textColorB } from 'styleConstants';
 
 export const DisableWrapper = styled.span`
   opacity: ${({ disabled }) => (disabled ? '0.5' : '1')};
@@ -25,13 +25,17 @@ export const StyledButton = styled(Button)`
 
 export const StyledForm = styled.form`
   background: #fff;
-  background: linear-gradient(90deg, #fff 0%, #fff 60%, #f6f6f6 100%);
-  border: 0.3rem solid #ccc;
+  background: linear-gradient(
+    90deg,
+    ${backgroundColor} 0%,
+    #fff 50%,
+    ${backgroundColor} 100%
+  );
   height: 6.4rem;
-  padding: 1.5rem 0 0 2.1rem;
+  padding: 1.8rem 0 1.5rem 2.4rem;
   position: relative;
   & .MuiInputBase-input {
-    color: ${appTextColorA};
+    color: ${textColorA};
     font-family: Arial, sans-serif;
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
@@ -48,7 +52,7 @@ export const StyledIconButton = styled(IconButton)`
 `;
 
 export const StyledLabel = styled.label`
-  color: ${appTextColorB};
+  color: ${textColorB};
   display: inline-block;
   font-size: 1.2rem;
   font-weight: bold;
@@ -63,7 +67,7 @@ export const StyledMenuItem = styled(
     <MenuItem ref={ref} {...restProps} />
   )),
 )`
-  color: ${({ isClear }) => (isClear ? appTextColorB : 'inherit')};
+  color: ${({ isClear }) => (isClear ? textColorB : 'inherit')};
   font-family: Arial, sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
@@ -74,7 +78,7 @@ export const StyledSelect = styled(Select)`
   display: inline-block;
   min-width: 11rem;
   & .MuiInputBase-input {
-    color: ${({ value }) => (value === 0 ? appTextColorB : 'inherit')};
+    color: ${({ value }) => (value === 0 ? textColorB : 'inherit')};
     opacity: ${({ value }) => (value === 0 ? '0.6' : 'inherit')};
     position: relative;
     top: 0.2rem;
@@ -93,7 +97,7 @@ export const StyledSelect = styled(Select)`
 export const StyledTextField = styled(TextField)`
   min-width: 13.5rem;
   & input::placeholder {
-    color: ${appTextColorB};
+    color: ${textColorB};
     opacity: 0.6;
   }
   & .MuiInput-underline:after {

@@ -6,16 +6,15 @@
 import React from 'react';
 import T from 'prop-types';
 
+import ListTable from 'components/_base-ui/ListTable';
+import ListTableHead from 'components/_base-ui/ListTableHead';
+
 import TableRow from './TableRow';
-import {
-  StyledTable,
-  StyledTableHead,
-  StyledTableHeader,
-} from './styledComponents';
+import { StyledTableHeader } from './styledComponents';
 
 const PaymentsList = ({ paymentsData, headers }) => (
-  <StyledTable>
-    <StyledTableHead>
+  <ListTable>
+    <ListTableHead>
       <tr>
         {headers.map((header) => (
           <StyledTableHeader key={header} scope="col">
@@ -23,13 +22,13 @@ const PaymentsList = ({ paymentsData, headers }) => (
           </StyledTableHeader>
         ))}
       </tr>
-    </StyledTableHead>
+    </ListTableHead>
     <tbody>
       {paymentsData.map(({ id, ...restData }) => (
         <TableRow data={restData} headers={headers} key={id} />
       ))}
     </tbody>
-  </StyledTable>
+  </ListTable>
 );
 
 PaymentsList.propTypes = {
@@ -48,7 +47,7 @@ PaymentsList.propTypes = {
 };
 
 PaymentsList.defaultProps = {
-  headers: ['date', 'desc', 'total', 'principal', 'interest', 'escrow'],
+  headers: ['date', 'desc', 'total', 'principal', 'interest', 'escrow', ''],
 };
 
 export default PaymentsList;

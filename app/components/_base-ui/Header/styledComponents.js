@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { appColorA, appColorB, appColorC } from 'styleConstants';
+import { backgroundColor, appColorA, appColorB } from 'styleConstants';
 
 export const HeaderContainer = styled.header`
   background-color: ${appColorA};
@@ -8,7 +8,7 @@ export const HeaderContainer = styled.header`
 `;
 
 export const SwatchA = styled.div`
-  background-color: ${appColorB};
+  background-color: ${backgroundColor};
   height: 4rem;
   left: 2rem;
   position: absolute;
@@ -17,7 +17,7 @@ export const SwatchA = styled.div`
 `;
 
 export const SwatchB = styled.div`
-  background-color: ${appColorC};
+  background-color: ${appColorB};
   height: 2rem;
   left: 8rem;
   position: absolute;

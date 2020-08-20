@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-import TabWrapper from 'components/TabWrapper';
+import TabWrapper from 'components/_base-ui/TabWrapper';
 import { WarningIcon } from 'images/icons';
 
 import { NotFoundViewWrapper, WarningHeading } from './styledComponents';

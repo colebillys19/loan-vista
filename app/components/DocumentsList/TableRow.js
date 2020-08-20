@@ -1,13 +1,23 @@
 import React from 'react';
 import T from 'prop-types';
 
+import LinkButton from 'components/_base-ui/LinkButton';
+
 import { StyledTableData } from './styledComponents';
 
 const TableRow = ({ data, headers }) => (
   <tr>
-    {headers.map((header) => (
-      <StyledTableData key={header}>{data[header]}</StyledTableData>
-    ))}
+    {headers.map((header) => {
+      if (header === 'pdf') {
+        return (
+          <StyledTableData key={header}>
+            <LinkButton onClick={() => null} text="download" />
+          </StyledTableData>
+        );
+      }
+
+      return <StyledTableData key={header}>{data[header]}</StyledTableData>;
+    })}
   </tr>
 );
 
@@ -15,8 +25,8 @@ TableRow.propTypes = {
   data: T.shape({
     dateSent: T.string,
     desc: T.string,
-    file: T.string,
     from: T.string,
+    pdf: T.string,
     timeSent: T.string,
     type: T.string,
   }),

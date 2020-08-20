@@ -3,13 +3,12 @@ import styled from 'styled-components';
 import { KeyboardDatePicker } from '@material-ui/pickers';
 import { TextField } from '@material-ui/core';
 
-import { appErrorColor, appTextColorB } from 'styleConstants';
+import { errorColor, textColorB } from 'styleConstants';
 
 import { getColor } from './helpers';
 
 export const ErrorIndicator = styled.div`
-  background-color: ${({ isError }) =>
-    isError ? appErrorColor : 'transparent'};
+  background-color: ${({ isError }) => (isError ? errorColor : 'transparent')};
   bottom: 0.1rem;
   height: 0.2rem;
   position: absolute;
@@ -45,7 +44,7 @@ export const StyledKeyboardDatePicker = styled(({ isError, ...restProps }) => (
 
 export const StyledTextField = styled(TextField)`
   & input::placeholder {
-    color: ${appTextColorB};
+    color: ${textColorB};
     opacity: 0.6;
   }
 `;

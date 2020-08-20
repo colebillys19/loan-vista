@@ -1,22 +1,18 @@
 import styled from 'styled-components';
 
-export const StyledTable = styled.table`
-  margin: 1rem auto 0;
-  opacity: 0.3;
-  outline: 1px solid #e8e8e8;
-  width: 81.7rem;
-`;
-
 export const StyledTableData = styled.td`
   height: 2.1rem;
   vertical-align: bottom;
-`;
-
-export const StyledTableHead = styled.thead`
-  background-color: #e8e8e8;
+  &:first-of-type {
+    padding-left: 1rem;
+  }
 `;
 
 export const StyledTableHeader = styled.th`
-  height: 3rem;
+  height: 4rem;
+  margin-bottom: 1rem;
   text-align: left;
+  &:first-of-type {
+    padding-left: 1rem;
+  }
 `;

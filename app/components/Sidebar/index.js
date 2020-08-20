@@ -8,7 +8,7 @@ import T from 'prop-types';
 
 import SidebarHeader from 'components/SidebarHeader';
 import SidebarSummary from 'components/SidebarSummary';
-import ConditionalRender from 'components/_baseUI/ConditionalRender';
+import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import { isValidRoute } from 'utils/globalHelpers';
 
 import {

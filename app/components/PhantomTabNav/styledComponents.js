@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Tab, Tabs } from '@material-ui/core';
 
-import { appColorC } from 'styleConstants';
+import { appColorB } from 'styleConstants';
 
 export const PhantomTabNavContainer = styled.div`
   left: 0;
@@ -24,7 +24,7 @@ export const StyledTab = styled(Tab)`
 export const StyledTabs = styled(Tabs)`
   width: 83.7rem;
   & .MuiTabs-indicator {
-    background-color: ${appColorC};
+    background-color: ${appColorB};
     height: 0.3rem;
     transition-delay: 0.05s;
     transition-duration: 0.4s;

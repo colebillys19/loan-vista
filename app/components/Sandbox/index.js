@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ListFilter from 'components/ListFilter';
-import TabWrapper from 'components/TabWrapper';
+import TabWrapper from 'components/_base-ui/TabWrapper';
 
 import { SandboxContainer } from './styledComponents';
 

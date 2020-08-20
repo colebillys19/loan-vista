@@ -18,7 +18,7 @@ import Documents from 'containers/Documents';
 import Main from 'containers/Main';
 import Payments from 'containers/Payments';
 
-import Header from 'components/_baseUI/Header';
+import Header from 'components/_base-ui/Header';
 import Sandbox from 'components/Sandbox';
 import HomeView from 'components/HomeView';
 import MiscView from 'components/MiscView';

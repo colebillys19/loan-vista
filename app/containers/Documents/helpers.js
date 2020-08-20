@@ -23,9 +23,9 @@ export const getDocumentsData = (documentsData) =>
     return {
       dateSent: dateSentFormatted,
       desc: descFormatted,
-      file: fileFormatted,
       from: fromFormatted,
       id,
+      pdf: fileFormatted,
       timeSent: timeSentFormatted,
       type: typeFormatted,
     };

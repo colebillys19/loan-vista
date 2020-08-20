@@ -27,7 +27,7 @@ const SelectInput = ({ onChange, value }) => {
       value={value}
     >
       <StyledMenuItem isClear value={0}>
-        {value === 0 ? '-' : 'clear'}
+        {value === 0 ? 'date range' : 'clear'}
       </StyledMenuItem>
       <StyledMenuItem value={1}>last week</StyledMenuItem>
       <StyledMenuItem value={2}>last 2 weeks</StyledMenuItem>

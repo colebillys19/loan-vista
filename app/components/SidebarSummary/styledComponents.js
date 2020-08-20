@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { appTextColorB } from 'styleConstants';
+import { textColorB } from 'styleConstants';
 
 export const Detail = styled.span`
   color: ${({ color }) => color};
@@ -8,7 +8,7 @@ export const Detail = styled.span`
 `;
 
 export const DetailLabel = styled.span`
-  color: ${appTextColorB};
+  color: ${textColorB};
 `;
 
 export const SidebarSummaryContainer = styled.section`
