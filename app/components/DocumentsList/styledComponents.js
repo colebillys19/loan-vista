@@ -9,7 +9,9 @@ export const StyledTableData = styled.td`
 `;
 
 export const StyledTableHeader = styled.th`
+  font-weight: normal;
   height: 3.5rem;
+  position: relative;
   text-align: left;
   text-transform: uppercase;
   &:first-of-type {

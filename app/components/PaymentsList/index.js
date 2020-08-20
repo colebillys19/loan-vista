@@ -6,6 +6,7 @@
 import React from 'react';
 import T from 'prop-types';
 
+import ListSortButton from 'components/_base-ui/ListSortButton';
 import ListTable from 'components/_base-ui/ListTable';
 import ListTableBody from 'components/_base-ui/ListTableBody';
 import ListTableHead from 'components/_base-ui/ListTableHead';
@@ -13,13 +14,18 @@ import ListTableHead from 'components/_base-ui/ListTableHead';
 import TableRow from './TableRow';
 import { StyledTableHeader } from './styledComponents';
 
-const PaymentsList = ({ paymentsData, headers }) => (
+const PaymentsList = ({ paymentsData, headers, sortAsc, sortColumn }) => (
   <ListTable>
     <ListTableHead>
       <tr>
         {headers.map((header) => (
           <StyledTableHeader key={header} scope="col">
-            {header}
+            <ListSortButton
+              isActive={header === sortColumn}
+              isAscending={sortAsc}
+              onClick={() => null}
+              text={header}
+            />
           </StyledTableHeader>
         ))}
       </tr>
@@ -45,10 +51,13 @@ PaymentsList.propTypes = {
     }),
   ).isRequired,
   headers: T.arrayOf(T.string),
+  sortAsc: T.bool,
+  sortColumn: T.string.isRequired,
 };
 
 PaymentsList.defaultProps = {
-  headers: ['date', 'desc', 'total', 'principal', 'interest', 'escrow', ''],
+  headers: ['date', 'desc', 'total', 'principal', 'interest', 'escrow'],
+  sortAsc: false,
 };
 
 export default PaymentsList;

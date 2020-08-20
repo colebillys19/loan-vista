@@ -14,12 +14,12 @@ import ListTableHead from 'components/_base-ui/ListTableHead';
 import TableRow from './TableRow';
 import { StyledTableHeader } from './styledComponents';
 
-const CallsList = ({ callsData, headers, sortColumn, sortAsc }) => (
+const CallsList = ({ callsData, headers, sortAsc, sortColumn }) => (
   <ListTable>
     <ListTableHead>
       <tr>
         {headers.map((header) => {
-          if (['date', 'desc', 'rep'].includes(header)) {
+          if (['date', 'dept', 'rep'].indexOf(header) !== -1) {
             return (
               <StyledTableHeader key={header} scope="col">
                 <ListSortButton
@@ -61,8 +61,8 @@ CallsList.propTypes = {
     }),
   ).isRequired,
   headers: T.arrayOf(T.string),
-  sortColumn: T.string.isRequired,
   sortAsc: T.bool,
+  sortColumn: T.string.isRequired,
 };
 
 CallsList.defaultProps = {

@@ -17,8 +17,4 @@ export const StyledTableHeader = styled.th`
   &:first-of-type {
     padding-left: 1rem;
   }
-
-  & button {
-    text-transform: uppercase;
-  }
 `;

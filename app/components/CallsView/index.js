@@ -8,11 +8,11 @@ import T from 'prop-types';
 
 import CallsList from 'components/CallsList';
 import ListFilter from 'components/ListFilter';
-import TabWrapper from 'components/_base-ui/TabWrapper';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import TableHeadBorder from 'components/_base-ui/TableHeadBorder';
 import NoListDataFallback from 'components/_base-ui/NoListDataFallback';
 import Spinner from 'components/_base-ui/Spinner';
+import TableHeadBorder from 'components/_base-ui/TableHeadBorder';
+import TabWrapper from 'components/_base-ui/TabWrapper';
 
 const CallsView = ({ callsData, loading }) => {
   const noListData = !loading && callsData.length === 0;
