@@ -28,7 +28,8 @@ export const StyledForm = styled.form`
   background: linear-gradient(
     90deg,
     ${backgroundColor} 0%,
-    #fff 50%,
+    #fff 30%,
+    #fff 70%,
     ${backgroundColor} 100%
   );
   height: 6.4rem;

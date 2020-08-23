@@ -4,7 +4,7 @@ import { CircularProgress } from '@material-ui/core';
 import { appColorA } from 'styleConstants';
 
 export const SpinnerContainer = styled.section`
-  padding-top: 5rem;
+  padding-top: 8.5rem;
   text-align: center;
 `;
 

@@ -2,11 +2,10 @@ import React from 'react';
 import T from 'prop-types';
 
 import LinkButton from 'components/_base-ui/LinkButton';
-
-import { StyledTableData } from './styledComponents';
+import { StyledTableData, StyledTableRow } from 'components/_base-ui/ListTable';
 
 const TableRow = ({ data, headers }) => (
-  <tr>
+  <StyledTableRow>
     {headers.map((header) => {
       if (header === 'audio') {
         return (
@@ -18,7 +17,7 @@ const TableRow = ({ data, headers }) => (
 
       return <StyledTableData key={header}>{data[header]}</StyledTableData>;
     })}
-  </tr>
+  </StyledTableRow>
 );
 
 TableRow.propTypes = {

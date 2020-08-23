@@ -6,18 +6,21 @@
 import React from 'react';
 import T from 'prop-types';
 
+import {
+  StyledTable,
+  StyledTableBody,
+  StyledTableHead,
+  StyledTableHeader,
+  StyledTableRow,
+} from 'components/_base-ui/ListTable';
 import ListSortButton from 'components/_base-ui/ListSortButton';
-import ListTable from 'components/_base-ui/ListTable';
-import ListTableBody from 'components/_base-ui/ListTableBody';
-import ListTableHead from 'components/_base-ui/ListTableHead';
 
 import TableRow from './TableRow';
-import { StyledTableHeader } from './styledComponents';
 
 const PaymentsList = ({ paymentsData, headers, sortAsc, sortColumn }) => (
-  <ListTable>
-    <ListTableHead>
-      <tr>
+  <StyledTable>
+    <StyledTableHead>
+      <StyledTableRow>
         {headers.map((header) => (
           <StyledTableHeader key={header} scope="col">
             <ListSortButton
@@ -28,14 +31,14 @@ const PaymentsList = ({ paymentsData, headers, sortAsc, sortColumn }) => (
             />
           </StyledTableHeader>
         ))}
-      </tr>
-    </ListTableHead>
-    <ListTableBody>
+      </StyledTableRow>
+    </StyledTableHead>
+    <StyledTableBody>
       {paymentsData.map(({ id, ...restData }) => (
         <TableRow data={restData} headers={headers} key={id} />
       ))}
-    </ListTableBody>
-  </ListTable>
+    </StyledTableBody>
+  </StyledTable>
 );
 
 PaymentsList.propTypes = {
