@@ -2,6 +2,24 @@ import moment from 'moment';
 
 const momentFormatStr = 'YYYY-MM-DD';
 
+export const checkPickersStatus = (fromError, toError) => {
+  const crucialErrors = [
+    'invalid date format',
+    'future dates not permitted',
+    'pick a more recent date',
+  ];
+
+  if (crucialErrors.indexOf(fromError) !== -1) {
+    return { from: false, to: true };
+  }
+
+  if (crucialErrors.indexOf(toError) !== -1) {
+    return { from: true, to: false };
+  }
+
+  return { from: false, to: false };
+};
+
 const getDates = () => ({
   now: moment(),
   oneMo: moment().subtract(1, 'months'),
@@ -10,14 +28,20 @@ const getDates = () => ({
   twoWk: moment().subtract(14, 'days'),
 });
 
-export const getError = (fromDate, toDate) => {
-  if (fromDate && fromDate.isValid() && toDate && toDate.isValid()) {
-    return fromDate.isBefore(toDate)
-      ? ''
-      : 'dates must be in chronological order';
+export const getErrors = (fromDate, toDate, activePicker) => {
+  if (
+    fromDate &&
+    fromDate.isValid() &&
+    toDate &&
+    toDate.isValid() &&
+    !fromDate.isBefore(toDate)
+  ) {
+    return activePicker === 'from'
+      ? ['dates must be in chronological order', '']
+      : ['', 'dates must be in chronological order'];
   }
 
-  return '';
+  return ['', ''];
 };
 
 export const getDatesArr = () => {

@@ -5,7 +5,7 @@ const initialState = {
       date: '',
       dept: '',
       desc: '',
-      id: 0,
+      id: '',
       rep: '',
       time: '',
     },

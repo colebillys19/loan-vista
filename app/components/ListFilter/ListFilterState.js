@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import T from 'prop-types';
 
-import { getDatesArr, getError, getRangeValue } from './helpers';
+import { getDatesArr, getErrors, getRangeValue } from './helpers';
 
 const FilterState = ({ render }) => {
   const [dateFrom, setDateFrom] = useState(null);
@@ -10,28 +10,19 @@ const FilterState = ({ render }) => {
   const [dateTo, setDateTo] = useState(null);
   const [dateToError, setDateToError] = useState('');
   const [keywordValue, setKeywordValue] = useState('');
-  const [dateErrorIndex, setDateErrorIndex] = useState(-1);
-
-  useEffect(() => {
-    if (dateFromError) {
-      setDateErrorIndex(0);
-    } else if (dateToError) {
-      setDateErrorIndex(1);
-    } else {
-      setDateErrorIndex(-1);
-    }
-  }, [dateFromError, dateToError]);
 
   const handleDateFromChange = (date) => {
     setDateFrom(date);
     setDateRangeValue(getRangeValue(dateFrom, dateTo));
-    setDateFromError(getError(date, dateTo));
+    setDateFromError(getErrors(date, dateTo, 'from')[0]);
+    setDateToError(getErrors(date, dateTo, 'from')[1]);
   };
 
   const handleDateToChange = (date) => {
     setDateTo(date);
     setDateRangeValue(getRangeValue(dateFrom, dateTo));
-    setDateToError(getError(dateFrom, date));
+    setDateFromError(getErrors(dateFrom, date, 'to')[0]);
+    setDateToError(getErrors(dateFrom, date, 'to')[1]);
   };
 
   const handleRangeChange = (value) => {
@@ -81,7 +72,6 @@ const FilterState = ({ render }) => {
   };
 
   const propsToPassDown = {
-    dateErrorIndex,
     dateFrom,
     datePickerFromError,
     datePickerToError,

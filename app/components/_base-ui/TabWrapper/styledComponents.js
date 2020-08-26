@@ -1,9 +1,16 @@
 import styled from 'styled-components';
 
-import { appColorA } from 'styleConstants';
+import { appColorA, backgroundColor } from 'styleConstants';
 
 export const StyledSection = styled.section`
-  background-color: white;
+  background: ${backgroundColor};
+  background: linear-gradient(
+    90deg,
+    ${backgroundColor} 0%,
+    #fff 30%,
+    #fff 70%,
+    ${backgroundColor} 100%
+  );
   border-top: 0.3rem solid ${appColorA};
   display: inline-block;
   margin-bottom: 4rem;

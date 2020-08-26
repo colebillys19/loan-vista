@@ -11,7 +11,7 @@ const initialState = {
       escrow: 0,
       escrowBalance: 0,
       fees: 0,
-      id: 0,
+      id: '',
       interest: 0,
       lifeInsurance: 0,
       misc: 0,

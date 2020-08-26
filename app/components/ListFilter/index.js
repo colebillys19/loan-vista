@@ -11,6 +11,7 @@ import ListFilterState from './ListFilterState';
 import RefreshButton from './RefreshButton';
 import SelectInput from './SelectInput';
 import TextInput from './TextInput';
+import { checkPickersStatus } from './helpers';
 import {
   DisableWrapper,
   StyledButton,
@@ -21,7 +22,6 @@ import {
 const ListFilter = () => (
   <ListFilterState
     render={({
-      dateErrorIndex,
       dateFrom,
       datePickerFromError,
       datePickerToError,
@@ -34,42 +34,48 @@ const ListFilter = () => (
       handleSubmitValues,
       keywordValue,
       setKeywordValue,
-    }) => (
-      <StyledForm onSubmit={(e) => e.preventDefault()}>
-        <DisableWrapper disabled={dateErrorIndex === 1}>
-          <StyledLabel htmlFor="">from</StyledLabel>
-          <DateInput
-            error={datePickerFromError}
-            onChange={handleDateFromChange}
-            value={dateFrom}
-          />
-        </DisableWrapper>
-        <DisableWrapper disabled={dateErrorIndex === 0}>
-          <StyledLabel htmlFor="">to</StyledLabel>
-          <DateInput
-            error={datePickerToError}
-            onChange={handleDateToChange}
-            value={dateTo}
-          />
-        </DisableWrapper>
-        <DisableWrapper disabled={dateErrorIndex !== -1}>
-          <StyledLabel htmlFor="">or</StyledLabel>
-          <SelectInput onChange={handleRangeChange} value={dateRangeValue} />
-        </DisableWrapper>
-        <DisableWrapper disabled={dateErrorIndex !== -1}>
-          <StyledLabel htmlFor="">and/or</StyledLabel>
-          <TextInput onChange={setKeywordValue} value={keywordValue} />
-        </DisableWrapper>
-        <RefreshButton onClick={handleClearValues} />
-        <DisableWrapper disabled={dateErrorIndex !== -1}>
-          <StyledButton
-            onClick={handleSubmitValues}
-            text="find"
-            type="submit"
-          />
-        </DisableWrapper>
-      </StyledForm>
-    )}
+    }) => {
+      const { error: fromError } = datePickerFromError;
+      const { error: toError } = datePickerToError;
+      const pickersStatus = checkPickersStatus(fromError, toError);
+
+      return (
+        <StyledForm onSubmit={(e) => e.preventDefault()}>
+          <DisableWrapper disabled={pickersStatus.from}>
+            <StyledLabel htmlFor="">from</StyledLabel>
+            <DateInput
+              error={datePickerFromError}
+              onChange={handleDateFromChange}
+              value={dateFrom}
+            />
+          </DisableWrapper>
+          <DisableWrapper disabled={pickersStatus.to}>
+            <StyledLabel htmlFor="">to</StyledLabel>
+            <DateInput
+              error={datePickerToError}
+              onChange={handleDateToChange}
+              value={dateTo}
+            />
+          </DisableWrapper>
+          <DisableWrapper disabled={fromError || toError}>
+            <StyledLabel htmlFor="">or</StyledLabel>
+            <SelectInput onChange={handleRangeChange} value={dateRangeValue} />
+          </DisableWrapper>
+          <DisableWrapper disabled={fromError || toError}>
+            <StyledLabel htmlFor="">and/or</StyledLabel>
+            <TextInput onChange={setKeywordValue} value={keywordValue} />
+          </DisableWrapper>
+          <RefreshButton onClick={handleClearValues} />
+          <DisableWrapper disabled={fromError || toError}>
+            <StyledButton
+              onClick={handleSubmitValues}
+              text="find"
+              type="submit"
+            />
+          </DisableWrapper>
+        </StyledForm>
+      );
+    }}
   />
 );
 

@@ -3,14 +3,6 @@ import styled from 'styled-components';
 import { backgroundColor } from 'styleConstants';
 
 export const StyledTable = styled.table`
-  background: #fff;
-  background: linear-gradient(
-    90deg,
-    ${backgroundColor} 0%,
-    #fff 30%,
-    #fff 70%,
-    ${backgroundColor} 100%
-  );
   width: 100%;
 `;
 

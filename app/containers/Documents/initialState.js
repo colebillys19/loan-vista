@@ -5,7 +5,7 @@ const initialState = {
       desc: '',
       file: '',
       from: '',
-      id: 0,
+      id: '',
       timeSent: '',
       type: '',
     },

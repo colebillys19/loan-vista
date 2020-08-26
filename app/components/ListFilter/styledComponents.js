@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { IconButton, MenuItem, Select, TextField } from '@material-ui/core';
 
 import Button from 'components/_base-ui/Button';
-import { backgroundColor, textColorA, textColorB } from 'styleConstants';
+import { textColorA, textColorB } from 'styleConstants';
 
 export const DisableWrapper = styled.span`
   opacity: ${({ disabled }) => (disabled ? '0.5' : '1')};
@@ -24,14 +24,6 @@ export const StyledButton = styled(Button)`
 `;
 
 export const StyledForm = styled.form`
-  background: #fff;
-  background: linear-gradient(
-    90deg,
-    ${backgroundColor} 0%,
-    #fff 30%,
-    #fff 70%,
-    ${backgroundColor} 100%
-  );
   height: 6.4rem;
   padding: 1.8rem 0 1.5rem 2.4rem;
   position: relative;
