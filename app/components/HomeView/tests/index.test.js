@@ -4,7 +4,7 @@ import { render } from 'react-testing-library';
 import HomeView from '../index';
 
 describe('<HomeView />', () => {
-  it('Expect to not log errors in console', () => {
+  it.skip('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(<HomeView />);
     expect(spy).not.toHaveBeenCalled();

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotFoundView /> Should render and match the snapshot 1`] = `
+<section
+  class="styledComponents__StyledSection-gk85wv-0 eyjsLj"
+>
+  <div
+    class="styledComponents__NotFoundViewWrapper-sc-1xmrwgp-0 gmVMSM"
+  >
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root"
+      focusable="false"
+      style="height: 12rem; width: 12rem;"
+      viewBox="0 0 64 64"
+    >
+      <path
+        d="m31.396 7.5-28.396 48.24v1.76h29 29v-1.76l-28.396-48.24z"
+        fill="transparent"
+      />
+      <path
+        d="m30 47.5h4v4h-4z"
+        fill="#7b68ee"
+      />
+      <path
+        d="m30 24.244h4v19.256h-4z"
+        fill="#7b68ee"
+      />
+      <path
+        d="m33.748 5.5h-3.496l-29.252 49.695v4.305h33v-4h-28.538l26.538-45.084 26.538 45.084h-20.538v4h25v-4.305z"
+        fill="#ffa07a"
+      />
+    </svg>
+    <h1
+      class="styledComponents__WarningHeading-sc-1xmrwgp-1 imDLAA"
+    >
+      page not found
+    </h1>
+  </div>
+</section>
+`;

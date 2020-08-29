@@ -10,7 +10,7 @@ describe('<NotFoundView />', () => {
     expect(spy).not.toHaveBeenCalled();
   });
 
-  it.skip('Should render and match the snapshot', () => {
+  it('Should render and match the snapshot', () => {
     const {
       container: { firstChild },
     } = render(<NotFoundView />);

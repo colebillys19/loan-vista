@@ -19,7 +19,6 @@ import Main from 'containers/Main';
 import Payments from 'containers/Payments';
 
 import Header from 'components/_base-ui/Header';
-import Sandbox from 'components/Sandbox';
 import HomeView from 'components/HomeView';
 import MiscView from 'components/MiscView';
 import NotFoundView from 'components/NotFoundView';
@@ -56,7 +55,6 @@ const App = ({ dispatchNavigation, pathname }) => (
               path="/misc"
               render={() => <MiscView pathname={pathname} />}
             />
-            <Route component={Sandbox} exact path="/test" />
             <Route component={NotFoundView} />
           </Switch>
         </MainContainer>

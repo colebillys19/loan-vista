@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import PhantomTabNav from '../index';
+import Tabs from '../Tabs';
 
-const mockProps = { pathname: 'pathname' };
+const mockProps = { handleChange: jest.fn(), value: 0 };
 
-const Component = <PhantomTabNav {...mockProps} />;
+const Component = <Tabs {...mockProps} />;
 
-describe('<PhantomTabNav />', () => {
+describe('<Tabs />', () => {
   it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

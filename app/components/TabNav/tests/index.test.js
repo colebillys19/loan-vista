@@ -3,7 +3,7 @@ import { render } from 'react-testing-library';
 
 import TabNav from '../index';
 
-const mockProps = { dispatchNavigation: jest.fn(), pathname: 'pathname' };
+const mockProps = { dispatchNavigation: jest.fn(), pathname: '/calls' };
 
 const Component = <TabNav {...mockProps} />;
 
@@ -14,7 +14,7 @@ describe('<TabNav />', () => {
     expect(spy).not.toHaveBeenCalled();
   });
 
-  it.skip('Should render and match the snapshot', () => {
+  it('Should render and match the snapshot', () => {
     const {
       container: { firstChild },
     } = render(Component);

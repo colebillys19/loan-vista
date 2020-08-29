@@ -1,15 +1,21 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import TabWrapper from '../index';
+import TableRow from '../TableRow';
+
+import { MOCK_HEADERS, MOCK_ROW_DATA } from './mockData';
+
+const mockProps = { data: MOCK_ROW_DATA, headers: MOCK_HEADERS };
 
 const Component = (
-  <TabWrapper>
-    <div />
-  </TabWrapper>
+  <table>
+    <tbody>
+      <TableRow {...mockProps} />
+    </tbody>
+  </table>
 );
 
-describe('<TabWrapper />', () => {
+describe('<TableRow />', () => {
   it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

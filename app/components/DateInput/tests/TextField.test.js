@@ -1,12 +1,16 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import ListFilter from '../index';
+import TextField from '../TextField';
 
-describe('<ListFilter />', () => {
+const mockProps = {};
+
+const Component = <TextField {...mockProps} />;
+
+describe('<TextField />', () => {
   it.skip('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
-    render(<ListFilter />);
+    render(Component);
     expect(spy).not.toHaveBeenCalled();
   });
 });
