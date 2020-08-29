@@ -1,6 +1,6 @@
 const initialState = {
   error: false,
-  loading: true,
+  loading: false,
   loanData: {
     balances: {},
     borrower: { name: '-' },

@@ -5,11 +5,15 @@
 
 import React from 'react';
 
-import { SpinnerContainer, StyledCircularProgress } from './styledComponents';
+import { SpinnerIcon } from 'images/icons';
+
+import { AnimationWrapper, SpinnerContainer } from './styledComponents';
 
 const Spinner = () => (
   <SpinnerContainer>
-    <StyledCircularProgress />
+    <AnimationWrapper>
+      <SpinnerIcon size="5rem" />
+    </AnimationWrapper>
   </SpinnerContainer>
 );
 

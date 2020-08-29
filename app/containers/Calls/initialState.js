@@ -11,7 +11,7 @@ const initialState = {
     },
   ],
   error: false,
-  loading: true,
+  loading: false,
 };
 
 export default initialState;

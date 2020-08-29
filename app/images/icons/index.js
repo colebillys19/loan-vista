@@ -7,6 +7,7 @@ import FolderIcon from './FolderIcon';
 import MailIcon from './MailIcon';
 import ProfileIcon from './ProfileIcon';
 import RefreshIcon from './RefreshIcon';
+import SpinnerIcon from './SpinnerIcon';
 import WarningIcon from './WarningIcon';
 
 export {
@@ -19,5 +20,6 @@ export {
   MailIcon,
   ProfileIcon,
   RefreshIcon,
+  SpinnerIcon,
   WarningIcon,
 };

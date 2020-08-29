@@ -42,8 +42,8 @@ export const StyledTableRow = styled.tr`
     background: linear-gradient(
       90deg,
       ${backgroundColor} 0%,
-      #eee 30%,
-      #eee 70%,
+      #f3f3f3 30%,
+      #f3f3f3 70%,
       ${backgroundColor} 100%
     );
   }
