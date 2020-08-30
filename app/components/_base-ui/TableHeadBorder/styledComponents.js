@@ -15,6 +15,7 @@ export const GradientBorder = styled.div`
     #eee 70%,
     ${backgroundColor} 100%
   );
+  display: ${({ hideBottom }) => (hideBottom ? 'none' : 'inherit')};
   height: 0.1rem;
   position: ${({ isBottom }) => (isBottom ? 'absolute' : 'inherit')};
   top: ${({ isBottom }) => (isBottom ? '3.6rem' : 'inherit')};

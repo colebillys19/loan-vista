@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SpinnerContainer = styled.section`
-  padding-top: 8.5rem;
+  padding-top: 5.2rem;
   text-align: center;
 `;
 

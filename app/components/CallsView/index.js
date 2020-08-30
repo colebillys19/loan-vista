@@ -20,7 +20,7 @@ const CallsView = ({ callsData, loading }) => {
   return (
     <TabWrapper aria-labelledby="calls-tab" id="calls-view">
       <ListFilter />
-      <TableHeadBorder />
+      <TableHeadBorder hideBottom={loading || noListData} />
       <ConditionalRender
         Component={
           <ConditionalRender

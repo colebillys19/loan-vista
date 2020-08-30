@@ -20,7 +20,7 @@ const PaymentsView = ({ loading, paymentsData }) => {
   return (
     <TabWrapper aria-labelledby="payments-tab" id="payments-view">
       <ListFilter />
-      <TableHeadBorder />
+      <TableHeadBorder hideBottom={loading || noListData} />
       <ConditionalRender
         Component={
           <ConditionalRender

@@ -6,5 +6,5 @@ export const MessageContainer = styled.div`
   color: ${appColorA};
   font-size: 2rem;
   text-align: center;
-  padding-top: 5rem;
+  padding-top: 4.9rem;
 `;
