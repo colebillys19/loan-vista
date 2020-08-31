@@ -1,0 +1,258 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Sidebar /> Should render and match the snapshot 1`] = `
+<aside
+  class="styledComponents__SidebarContainer-lrjyvq-0 PTzLz"
+>
+  <div
+    class="styledComponents__SidebarContentContainer-lrjyvq-1 kESXzN"
+  >
+    <div
+      class="styledComponents__SidebarHeaderContainer-sc-1xulxiu-3 kmWDmC"
+    >
+      <div
+        class="styledComponents__IconWrapper-sc-1xulxiu-1 hWBNaT"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          style="height: 8rem; width: 8rem;"
+          viewBox="0 0 64 64"
+        >
+          <g>
+            <path
+              d="m3 61a29 29 0 0 1 58 0z"
+              fill="#ffa07a"
+            />
+            <path
+              d="m45.544 33.125a46.326 46.326 0 0 1 -4.15 2.568 27.055 27.055 0 0 1 17.533 23.307h-53.854a27.045 27.045 0 0 1 26.927-25 16.555 16.555 0 1 0 -12.512-5.778c2.374-.7 2.322-.755 4.381-1.248a12.483 12.483 0 1 1 8.131 3.026 31.045 31.045 0 0 0 -31 31v2h62v-2a31.03 31.03 0 0 0 -17.456-27.875z"
+              fill="#7b68ee"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="styledComponents__HeadingContainer-sc-1xulxiu-0 gfBboD"
+      >
+        <h1
+          class="styledComponents__StyledH1-sc-1xulxiu-5 ctUASD"
+        >
+          loanNumber
+        </h1>
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          style="height: 2.5rem; width: 2.5rem;"
+          viewBox="0 0 64 64"
+        >
+          <circle
+            cx="32"
+            cy="31.964"
+            fill="#ff8e27"
+            r="21"
+          />
+        </svg>
+      </div>
+      <div
+        class="styledComponents__SidebarDetail-sc-1xulxiu-2 kNaQso"
+      >
+        name
+      </div>
+      <div
+        class="styledComponents__SidebarDetail-sc-1xulxiu-2 kNaQso"
+      >
+        address1
+      </div>
+      <div
+        class="styledComponents__SidebarDetail-sc-1xulxiu-2 kNaQso"
+      >
+        address2
+      </div>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1xulxiu-4 iPtejO styledComponents__StyledButton-sc-16dlpcm-0 bdTDoz"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Switch Loan
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <section
+      class="styledComponents__SidebarSummaryContainer-sc-1q43yt-2 eBMtkp"
+    >
+      <div
+        class="styledComponents__SummaryTitleWrapper-sc-1q43yt-5 hkLOTY"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          style="height: 1.2rem; width: 1.2rem;"
+          viewBox="0 0 64 64"
+        >
+          <circle
+            cx="32"
+            cy="31.964"
+            fill="#7b68ee"
+            r="21"
+          />
+        </svg>
+        <h3
+          class="styledComponents__StyledH5-sc-1q43yt-3 jejxyz"
+        >
+          Loan
+        </h3>
+      </div>
+      <div
+        class="styledComponents__SummaryDetail-sc-1q43yt-4 cRLBLf"
+      >
+        <span
+          class="styledComponents__DetailLabel-sc-1q43yt-1 fiToch"
+        >
+          label
+          : 
+        </span>
+        <span
+          class="styledComponents__Detail-sc-1q43yt-0 levbeV"
+        >
+          value
+        </span>
+      </div>
+    </section>
+    <section
+      class="styledComponents__SidebarSummaryContainer-sc-1q43yt-2 eBMtkp"
+    >
+      <div
+        class="styledComponents__SummaryTitleWrapper-sc-1q43yt-5 hkLOTY"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          style="height: 1.2rem; width: 1.2rem;"
+          viewBox="0 0 64 64"
+        >
+          <circle
+            cx="32"
+            cy="31.964"
+            fill="#7b68ee"
+            r="21"
+          />
+        </svg>
+        <h3
+          class="styledComponents__StyledH5-sc-1q43yt-3 jejxyz"
+        >
+          Payment
+        </h3>
+      </div>
+      <div
+        class="styledComponents__SummaryDetail-sc-1q43yt-4 cRLBLf"
+      >
+        <span
+          class="styledComponents__DetailLabel-sc-1q43yt-1 fiToch"
+        >
+          label
+          : 
+        </span>
+        <span
+          class="styledComponents__Detail-sc-1q43yt-0 levbeV"
+        >
+          value
+        </span>
+      </div>
+    </section>
+    <section
+      class="styledComponents__SidebarSummaryContainer-sc-1q43yt-2 eBMtkp"
+    >
+      <div
+        class="styledComponents__SummaryTitleWrapper-sc-1q43yt-5 hkLOTY"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          style="height: 1.2rem; width: 1.2rem;"
+          viewBox="0 0 64 64"
+        >
+          <circle
+            cx="32"
+            cy="31.964"
+            fill="#7b68ee"
+            r="21"
+          />
+        </svg>
+        <h3
+          class="styledComponents__StyledH5-sc-1q43yt-3 jejxyz"
+        >
+          Calls
+        </h3>
+      </div>
+      <div
+        class="styledComponents__SummaryDetail-sc-1q43yt-4 cRLBLf"
+      >
+        <span
+          class="styledComponents__DetailLabel-sc-1q43yt-1 fiToch"
+        >
+          label
+          : 
+        </span>
+        <span
+          class="styledComponents__Detail-sc-1q43yt-0 levbeV"
+        >
+          value
+        </span>
+      </div>
+    </section>
+    <section
+      class="styledComponents__SidebarSummaryContainer-sc-1q43yt-2 eBMtkp"
+    >
+      <div
+        class="styledComponents__SummaryTitleWrapper-sc-1q43yt-5 hkLOTY"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          style="height: 1.2rem; width: 1.2rem;"
+          viewBox="0 0 64 64"
+        >
+          <circle
+            cx="32"
+            cy="31.964"
+            fill="#7b68ee"
+            r="21"
+          />
+        </svg>
+        <h3
+          class="styledComponents__StyledH5-sc-1q43yt-3 jejxyz"
+        >
+          Service
+        </h3>
+      </div>
+      <div
+        class="styledComponents__SummaryDetail-sc-1q43yt-4 cRLBLf"
+      >
+        <span
+          class="styledComponents__DetailLabel-sc-1q43yt-1 fiToch"
+        >
+          label
+          : 
+        </span>
+        <span
+          class="styledComponents__Detail-sc-1q43yt-0 levbeV"
+        >
+          value
+        </span>
+      </div>
+    </section>
+  </div>
+</aside>
+`;

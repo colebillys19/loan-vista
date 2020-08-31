@@ -3,12 +3,16 @@ import { render } from 'react-testing-library';
 
 import ForwardRefPicker from '../ForwardRefPicker';
 
-const mockProps = { onChange: jest.fn(), value: null };
+const mockProps = {
+  isError: false,
+  onChange: jest.fn(),
+  value: new Date(),
+};
 
 const Component = <ForwardRefPicker {...mockProps} />;
 
 describe('<ForwardRefPicker />', () => {
-  it.skip('Expect to not log errors in console', () => {
+  it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);
     expect(spy).not.toHaveBeenCalled();

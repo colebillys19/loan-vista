@@ -253,10 +253,10 @@ exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
     class="styledComponents__BorderContainer-sc-5yfsav-0 pPXxO"
   >
     <div
-      class="styledComponents__GradientBorder-sc-5yfsav-1 jkCHPP"
+      class="styledComponents__GradientBorder-sc-5yfsav-1 bUyJyr"
     />
     <div
-      class="styledComponents__GradientBorder-sc-5yfsav-1 gttgAQ"
+      class="styledComponents__GradientBorder-sc-5yfsav-1 fjwxpF"
     />
   </div>
   <table
