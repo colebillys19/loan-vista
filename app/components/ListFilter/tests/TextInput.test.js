@@ -3,10 +3,14 @@ import { render } from 'react-testing-library';
 
 import TextInput from '../TextInput';
 
+const mockProps = { onChange: jest.fn(), value: 'value' };
+
+const Component = <TextInput {...mockProps} />;
+
 describe('<TextInput />', () => {
-  it.skip('Expect to not log errors in console', () => {
+  it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
-    render(<TextInput />);
+    render(Component);
     expect(spy).not.toHaveBeenCalled();
   });
 });
