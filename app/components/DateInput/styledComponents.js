@@ -43,8 +43,13 @@ export const StyledKeyboardDatePicker = styled(({ isError, ...restProps }) => (
 `;
 
 export const StyledTextField = styled(TextField)`
+  & input {
+    text-indent: 0.1rem;
+  }
   & input::placeholder {
     color: ${textColorB};
+    line-height: normal;
     opacity: 0.6;
+    text-indent: 0.1rem;
   }
 `;

@@ -4,6 +4,7 @@ import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import MomentUtils from '@date-io/moment';
 
 import TextField from './TextField';
+import { MAX_DATE, MIN_DATE } from './constants';
 import {
   ErrorIndicator,
   DatePickerWrapper,
@@ -15,14 +16,14 @@ const ForwardRefPicker = forwardRef(({ isError, ...restProps }, ref) => (
     <MuiPickersUtilsProvider utils={MomentUtils}>
       <StyledKeyboardDatePicker
         autoOk
-        disableFuture
         disableToolbar
         format="MM/DD/YYYY"
         invalidDateMessage="invalid date format"
         isError={isError}
-        maxDateMessage="future dates not permitted"
-        minDate={new Date('1970-01-01')}
-        minDateMessage="pick a more recent date"
+        maxDate={MAX_DATE}
+        maxDateMessage="pick a date within 2020"
+        minDate={MIN_DATE}
+        minDateMessage="pick a date within 2020"
         TextFieldComponent={TextField}
         variant="inline"
         {...restProps}

@@ -3,11 +3,7 @@ import moment from 'moment';
 const momentFormatStr = 'YYYY-MM-DD';
 
 export const checkPickersStatus = (fromError, toError) => {
-  const crucialErrors = [
-    'invalid date format',
-    'future dates not permitted',
-    'pick a more recent date',
-  ];
+  const crucialErrors = ['invalid date format', 'pick a date within 2020'];
 
   if (crucialErrors.indexOf(fromError) !== -1) {
     return { from: false, to: true };

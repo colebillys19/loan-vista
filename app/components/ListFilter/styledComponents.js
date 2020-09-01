@@ -74,7 +74,11 @@ export const StyledSelect = styled(Select)`
     color: ${({ value }) => (value === 0 ? textColorB : 'inherit')};
     opacity: ${({ value }) => (value === 0 ? '0.6' : 'inherit')};
     position: relative;
+    text-indent: 0.1rem;
     top: 0.2rem;
+  }
+  & .MuiInputBase-input::placeholder {
+    text-indent: 0.1rem;
   }
   &.MuiInput-underline:after {
     transition: none;
@@ -89,9 +93,14 @@ export const StyledSelect = styled(Select)`
 
 export const StyledTextField = styled(TextField)`
   min-width: 13.5rem;
+  & input {
+    line-height: normal;
+    text-indent: 0.1rem;
+  }
   & input::placeholder {
     color: ${textColorB};
     opacity: 0.6;
+    text-indent: 0.1rem;
   }
   & .MuiInput-underline:after {
     transition: none;
