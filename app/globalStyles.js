@@ -14,11 +14,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    background-color: ${backgroundColor};
     overflow-y: scroll;
   }
 
   #app {
-    background-color: ${backgroundColor};
     color: ${textColorA};
     font-family: Arial, sans-serif;
     font-size: 1.4rem;

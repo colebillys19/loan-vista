@@ -5,6 +5,7 @@ import { backgroundColor, appColorA, appColorB } from 'styleConstants';
 export const HeaderContainer = styled.header`
   background-color: ${appColorA};
   height: 8rem;
+  min-width: 120rem;
 `;
 
 export const SwatchA = styled.div`
