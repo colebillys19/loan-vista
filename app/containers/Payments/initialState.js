@@ -1,5 +1,17 @@
 const initialState = {
   error: false,
+  fetchParams: {
+    currentTotal: 80,
+    dateFrom: '',
+    dateSort: 'desc',
+    dateTo: '',
+    descSort: '',
+    escrowSort: '',
+    interestSort: '',
+    keyword: '',
+    principalSort: '',
+    totalSort: '',
+  },
   loading: false,
   paymentsData: [
     {

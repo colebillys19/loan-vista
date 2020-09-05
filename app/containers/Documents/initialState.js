@@ -11,6 +11,15 @@ const initialState = {
     },
   ],
   error: false,
+  fetchParams: {
+    currentTotal: 80,
+    dateFrom: '',
+    dateSort: 'desc',
+    dateTo: '',
+    fromSort: '',
+    keyword: '',
+    typeSort: '',
+  },
   loading: false,
 };
 
