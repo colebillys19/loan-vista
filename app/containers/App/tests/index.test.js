@@ -23,7 +23,7 @@ const WrappedApp = (props) => (
 const renderer = new ShallowRenderer();
 
 describe('<App />', () => {
-  it.skip('Should render and match the snapshot', () => {
+  it('Should render and match the snapshot', () => {
     renderer.render(<WrappedApp />);
     const renderedOutput = renderer.getRenderOutput();
     expect(renderedOutput).toMatchSnapshot();

@@ -20,7 +20,7 @@ const WrappedPayments = (props) => (
 );
 
 describe('<Payments />', () => {
-  it.skip('Expect to not log errors in console', () => {
+  it.skip('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     const dispatch = jest.fn();
     render(<WrappedPayments dispatch={dispatch} />);
@@ -30,7 +30,7 @@ describe('<Payments />', () => {
   it.skip('Should render and match the snapshot', () => {
     const {
       container: { firstChild },
-    } = render(<WrappedPayments />);
+    } = render(<WrappedPayments dispatch={jest.fn()} />);
     expect(firstChild).toMatchSnapshot();
   });
 });

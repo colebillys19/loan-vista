@@ -93,7 +93,7 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
         </button>
       </div>
       <span
-        class="PrivateTabIndicator-root-5 PrivateTabIndicator-colorSecondary-7 MuiTabs-indicator"
+        class="PrivateTabIndicator-root-9 PrivateTabIndicator-colorSecondary-11 MuiTabs-indicator"
         style="left: 0px; width: 0px;"
       />
     </div>

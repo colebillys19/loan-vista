@@ -20,7 +20,7 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
         class="styledComponents__DatePickerWrapper-sc-1f4ko2w-1 klpbtD"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root styledComponents__StyledKeyboardDatePicker-sc-1f4ko2w-2 iIOCRn styledComponents__StyledTextField-sc-1f4ko2w-3 SodPw"
+          class="MuiFormControl-root MuiTextField-root styledComponents__StyledKeyboardDatePicker-sc-1f4ko2w-2 iIOCRn styledComponents__StyledTextField-sc-1f4ko2w-3 ksEjhR"
           title=""
         >
           <div
@@ -85,7 +85,7 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
         class="styledComponents__DatePickerWrapper-sc-1f4ko2w-1 klpbtD"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root styledComponents__StyledKeyboardDatePicker-sc-1f4ko2w-2 iIOCRn styledComponents__StyledTextField-sc-1f4ko2w-3 SodPw"
+          class="MuiFormControl-root MuiTextField-root styledComponents__StyledKeyboardDatePicker-sc-1f4ko2w-2 iIOCRn styledComponents__StyledTextField-sc-1f4ko2w-3 ksEjhR"
           title=""
         >
           <div
@@ -147,7 +147,7 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
         or
       </label>
       <div
-        class="MuiInputBase-root MuiInput-root MuiInput-underline styledComponents__StyledSelect-jktpt7-6 ciWBEd"
+        class="MuiInputBase-root MuiInput-root MuiInput-underline styledComponents__StyledSelect-jktpt7-6 kpSUjc"
       >
         <div
           aria-haspopup="listbox"
@@ -185,7 +185,7 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
         and/or
       </label>
       <div
-        class="MuiFormControl-root MuiTextField-root styledComponents__StyledTextField-jktpt7-7 dSLhmS"
+        class="MuiFormControl-root MuiTextField-root styledComponents__StyledTextField-jktpt7-7 eyParo"
       >
         <div
           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"

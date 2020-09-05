@@ -20,7 +20,7 @@ const WrappedMain = (props) => (
 );
 
 describe('<Main />', () => {
-  it.skip('Expect to not log errors in console', () => {
+  it.skip('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     const dispatch = jest.fn();
     render(<WrappedMain dispatch={dispatch} />);
@@ -30,7 +30,7 @@ describe('<Main />', () => {
   it.skip('Should render and match the snapshot', () => {
     const {
       container: { firstChild },
-    } = render(<WrappedMain />);
+    } = render(<WrappedMain dispatch={jest.fn()} />);
     expect(firstChild).toMatchSnapshot();
   });
 });

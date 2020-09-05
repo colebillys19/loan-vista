@@ -10,10 +10,15 @@ const mockProps = { paymentsData: MOCK_DATA, loading: false };
 const Component = <PaymentsView {...mockProps} />;
 
 describe('<PaymentsView />', () => {
-  it('Expect to not log errors in console', () => {
+  it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);
     expect(spy).not.toHaveBeenCalled();
+  });
+
+  it('Expect to render', () => {
+    const { container } = render(Component);
+    expect(container.firstChild).toBeDefined();
   });
 
   it('Should render and match the snapshot', () => {

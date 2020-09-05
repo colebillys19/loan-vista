@@ -20,7 +20,7 @@ const WrappedCalls = (props) => (
 );
 
 describe('<Calls />', () => {
-  it.skip('Expect to not log errors in console', () => {
+  it.skip('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     const dispatch = jest.fn();
     render(<WrappedCalls dispatch={dispatch} />);
@@ -30,7 +30,7 @@ describe('<Calls />', () => {
   it.skip('Should render and match the snapshot', () => {
     const {
       container: { firstChild },
-    } = render(<WrappedCalls />);
+    } = render(<WrappedCalls dispatch={jest.fn()} />);
     expect(firstChild).toMatchSnapshot();
   });
 });
