@@ -14,7 +14,10 @@ import { makeSelectPathname } from 'containers/App/selectors';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
-import makeSelectCalls, { makeSelectCallsData } from './selectors';
+import makeSelectCalls, {
+  makeSelectCallsData,
+  makeSelectSortValues,
+} from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import { fetchCallsData, onUnmount } from './actions';
@@ -25,6 +28,7 @@ export const Calls = ({
   dispatchOnUnmount,
   loading,
   pathname,
+  sortValues,
 }) => {
   useInjectReducer({ key: 'calls', reducer });
   useInjectSaga({ key: 'calls', saga });
@@ -38,7 +42,13 @@ export const Calls = ({
   }, []);
 
   return (
-    <CallsView callsData={callsData} loading={loading} pathname={pathname} />
+    <CallsView
+      callsData={callsData}
+      dispatchFetchCallsData={dispatchFetchCallsData}
+      loading={loading}
+      pathname={pathname}
+      sortValues={sortValues}
+    />
   );
 };
 
@@ -48,16 +58,18 @@ Calls.propTypes = {
   dispatchOnUnmount: T.func.isRequired,
   loading: T.bool.isRequired,
   pathname: T.string.isRequired,
+  sortValues: T.object.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
   callsData: makeSelectCallsData(),
   loading: makeSelectCalls('loading'),
   pathname: makeSelectPathname(),
+  sortValues: makeSelectSortValues(),
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  dispatchFetchCallsData: () => dispatch(fetchCallsData()),
+  dispatchFetchCallsData: (props) => dispatch(fetchCallsData(props)),
   dispatchOnUnmount: () => dispatch(onUnmount()),
 });
 

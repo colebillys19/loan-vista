@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-// import T from 'prop-types';
+import T from 'prop-types';
 
 import DateInput from 'components/DateInput';
 import ListFilterState from './ListFilterState';
@@ -19,8 +19,9 @@ import {
   StyledLabel,
 } from './styledComponents';
 
-const ListFilter = () => (
+const ListFilter = ({ dispatchFetchCallsData }) => (
   <ListFilterState
+    dispatchFetchCallsData={dispatchFetchCallsData}
     render={({
       dateFrom,
       datePickerFromError,
@@ -79,6 +80,6 @@ const ListFilter = () => (
   />
 );
 
-ListFilter.propTypes = {};
+ListFilter.propTypes = { dispatchFetchCallsData: T.func.isRequired };
 
 export default ListFilter;

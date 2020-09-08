@@ -14,12 +14,17 @@ import Spinner from 'components/_base-ui/Spinner';
 import TableHeadBorder from 'components/_base-ui/TableHeadBorder';
 import TabWrapper from 'components/_base-ui/TabWrapper';
 
-const CallsView = ({ callsData, loading }) => {
+const CallsView = ({
+  callsData,
+  dispatchFetchCallsData,
+  loading,
+  sortValues,
+}) => {
   const noListData = !loading && callsData.length === 0;
 
   return (
     <TabWrapper aria-labelledby="calls-tab" id="calls-view">
-      <ListFilter />
+      <ListFilter dispatchFetchCallsData={dispatchFetchCallsData} />
       <TableHeadBorder hideBottom={loading || noListData} />
       <ConditionalRender
         Component={
@@ -27,8 +32,9 @@ const CallsView = ({ callsData, loading }) => {
             Component={
               <CallsList
                 callsData={callsData}
+                dispatchFetchCallsData={dispatchFetchCallsData}
                 loading={loading}
-                sortColumn="date"
+                sortValues={sortValues}
               />
             }
             FallbackComponent={<Spinner />}
@@ -44,7 +50,9 @@ const CallsView = ({ callsData, loading }) => {
 
 CallsView.propTypes = {
   callsData: T.array.isRequired,
+  dispatchFetchCallsData: T.func.isRequired,
   loading: T.bool.isRequired,
+  sortValues: T.object.isRequired,
 };
 
 export default CallsView;

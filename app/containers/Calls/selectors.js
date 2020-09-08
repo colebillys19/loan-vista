@@ -21,5 +21,15 @@ const makeSelectCallsData = () =>
     (callsData) => getCallsData(callsData),
   );
 
+/**
+ * makeSelectSortValues
+ * @description ...
+ */
+const makeSelectSortValues = () =>
+  createSelector(
+    makeSelectCalls('fetchParams'),
+    ({ sortCol, sortOrder }) => ({ sortCol, sortOrder }),
+  );
+
 export default makeSelectCalls;
-export { makeSelectCallsData, selectCallsDomain };
+export { makeSelectCallsData, selectCallsDomain, makeSelectSortValues };

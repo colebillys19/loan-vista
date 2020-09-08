@@ -3,7 +3,7 @@ import T from 'prop-types';
 
 import { getDatesArr, getErrors, getRangeValue } from './helpers';
 
-const FilterState = ({ render }) => {
+const ListFilterState = ({ dispatchFetchCallsData, render }) => {
   const [dateFrom, setDateFrom] = useState(null);
   const [dateFromError, setDateFromError] = useState('');
   const [dateRangeValue, setDateRangeValue] = useState(0);
@@ -47,7 +47,12 @@ const FilterState = ({ render }) => {
     setDateFromError('');
     setDateToError('');
 
-    // dispatch fetch
+    dispatchFetchCallsData({
+      currentTotal: 80,
+      dateFrom: '',
+      dateTo: '',
+      keyword: '',
+    });
   };
 
   const handleSubmitValues = () => {
@@ -55,9 +60,11 @@ const FilterState = ({ render }) => {
       const fromStr = dateFrom ? dateFrom.format('YYYY-MM-DD') : null;
       const toStr = dateTo ? dateTo.format('YYYY-MM-DD') : null;
 
-      // dispatch fetch
-      console.log('handleSubmitValues');
-      console.log({ dateFrom: fromStr, dateTo: toStr, keyword: keywordValue });
+      dispatchFetchCallsData({
+        dateFrom: fromStr,
+        dateTo: toStr,
+        keyword: keywordValue,
+      });
     }
   };
 
@@ -89,6 +96,9 @@ const FilterState = ({ render }) => {
   return render(propsToPassDown);
 };
 
-FilterState.propTypes = { render: T.func.isRequired };
+ListFilterState.propTypes = {
+  dispatchFetchCallsData: T.func.isRequired,
+  render: T.func.isRequired,
+};
 
-export default FilterState;
+export default ListFilterState;
