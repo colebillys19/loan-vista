@@ -28,7 +28,7 @@ const CallsList = ({
       dispatchFetchCallsData({ sortCol: header, sortOrder: 'desc' });
     } else {
       dispatchFetchCallsData({
-        sort: { sortCol, sortOrder: sortOrder === 'desc' ? 'asc' : 'desc' },
+        sortOrder: sortOrder === 'desc' ? 'asc' : 'desc',
       });
     }
   };

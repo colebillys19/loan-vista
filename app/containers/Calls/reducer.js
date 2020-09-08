@@ -24,8 +24,9 @@ const callsReducer = (state = initialState, { payload, type }) =>
         draft.loading = false;
         break;
       case FETCH_CALLS_DATA_SUCCESS:
-        const { callsData } = payload;
+        const { callsData, newFetchParams } = payload;
         draft.callsData = callsData;
+        draft.fetchParams = newFetchParams;
         draft.loading = false;
         break;
       case ON_UNMOUNT:

@@ -16,8 +16,8 @@ export const fetchCallsDataFailure = (error) => ({
   type: FETCH_CALLS_DATA_FAILURE,
 });
 
-export const fetchCallsDataSuccess = (callsData) => ({
-  payload: { callsData },
+export const fetchCallsDataSuccess = (callsData, newFetchParams) => ({
+  payload: { callsData, newFetchParams },
   type: FETCH_CALLS_DATA_SUCCESS,
 });
 
