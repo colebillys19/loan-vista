@@ -11,13 +11,16 @@ export function* fetchCallsDataSaga({ payload }) {
   try {
     const { params: newParams } = payload;
     const stateParams = yield select(makeSelectCalls('fetchParams'));
-    const queryParams = querystring.stringify(
-      Object.assign({}, stateParams, newParams),
-    );
+    const combinedParams = Object.assign({}, stateParams, newParams);
+
     const { callsData, newFetchParams } = yield call(
       get,
-      `/api/calls/?${queryParams}`,
+      `/api/calls/?${querystring.stringify(combinedParams)}`,
     );
+
+    console.log('* * * * *');
+    console.log(callsData.slice(0, 3));
+
     yield put(fetchCallsDataSuccess(callsData, newFetchParams));
   } catch (error) {
     yield put(fetchCallsDataFailure(error));
