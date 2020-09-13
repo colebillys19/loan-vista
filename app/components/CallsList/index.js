@@ -15,9 +15,9 @@ import {
 } from 'components/_base-ui/ListTable';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import ListSortButton from 'components/_base-ui/ListSortButton';
-import { CustomTableHead } from './styledComponents';
 
 import TableRow from './TableRow';
+import { CustomTableHead } from './styledComponents';
 
 const CallsList = ({
   callsData,

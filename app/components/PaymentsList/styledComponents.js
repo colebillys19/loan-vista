@@ -4,18 +4,18 @@ import { StyledTableHead } from 'components/_base-ui/ListTable';
 
 export const CustomTableHead = styled(StyledTableHead)`
   & th:nth-of-type(1) {
-    width: 14.2rem;
-  }
-  & th:nth-of-type(2) {
-    width: 11.6rem;
+    width: 13.2rem;
   }
   & th:nth-of-type(3) {
-    width: 8.7rem;
+    width: 10.5rem;
   }
   & th:nth-of-type(4) {
-    width: 9.2rem;
+    width: 13.8rem;
+  }
+  & th:nth-of-type(5) {
+    width: 13.4rem;
   }
   & th:nth-of-type(6) {
-    width: 7rem;
+    width: 9.5rem;
   }
 `;

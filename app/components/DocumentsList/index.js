@@ -6,28 +6,36 @@
 import React from 'react';
 import T from 'prop-types';
 
+import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import {
+  ListBodySpinner,
   StyledTable,
   StyledTableBody,
-  StyledTableHead,
   StyledTableHeader,
   StyledTableRow,
 } from 'components/_base-ui/ListTable';
 import ListSortButton from 'components/_base-ui/ListSortButton';
 
 import TableRow from './TableRow';
+import { CustomTableHead } from './styledComponents';
 
-const DocumentsList = ({ documentsData, headers, sortAsc, sortColumn }) => (
+const DocumentsList = ({
+  documentsData,
+  headers,
+  loading,
+  // sortAsc,
+  // sortColumn,
+}) => (
   <StyledTable>
-    <StyledTableHead>
+    <CustomTableHead>
       <StyledTableRow>
         {headers.map((header) => {
           if (['date sent', 'type', 'from'].indexOf(header) !== -1) {
             return (
               <StyledTableHeader key={header} scope="col">
                 <ListSortButton
-                  isActive={header === sortColumn}
-                  isAscending={sortAsc}
+                  isActive={false}
+                  isAscending={false}
                   onClick={() => null}
                   text={header}
                 />
@@ -42,12 +50,18 @@ const DocumentsList = ({ documentsData, headers, sortAsc, sortColumn }) => (
           );
         })}
       </StyledTableRow>
-    </StyledTableHead>
-    <StyledTableBody>
-      {documentsData.map(({ id, ...restData }) => (
-        <TableRow data={restData} headers={headers} key={id} />
-      ))}
-    </StyledTableBody>
+    </CustomTableHead>
+    <ConditionalRender
+      Component={
+        <StyledTableBody>
+          {documentsData.map(({ id, ...restData }) => (
+            <TableRow data={restData} headers={headers} key={id} />
+          ))}
+        </StyledTableBody>
+      }
+      FallbackComponent={<ListBodySpinner />}
+      shouldRender={!loading}
+    />
   </StyledTable>
 );
 
@@ -64,13 +78,14 @@ DocumentsList.propTypes = {
     }),
   ).isRequired,
   headers: T.arrayOf(T.string),
-  sortAsc: T.bool,
-  sortColumn: T.string.isRequired,
+  loading: T.bool.isRequired,
+  // sortAsc: T.bool,
+  // sortColumn: T.string.isRequired,
 };
 
 DocumentsList.defaultProps = {
   headers: ['date sent', 'time sent', 'type', 'from', 'desc', 'pdf'],
-  sortAsc: false,
+  // sortAsc: false,
 };
 
 export default DocumentsList;

@@ -10,7 +10,6 @@ import ListFilter from 'components/ListFilter';
 import PaymentsList from 'components/PaymentsList';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import NoListDataFallback from 'components/_base-ui/NoListDataFallback';
-import Spinner from 'components/_base-ui/Spinner';
 import TableHeadBorder from 'components/_base-ui/TableHeadBorder';
 import TabWrapper from 'components/_base-ui/TabWrapper';
 
@@ -23,16 +22,10 @@ const PaymentsView = ({ loading, paymentsData }) => {
       <TableHeadBorder hideBottom={loading || noListData} />
       <ConditionalRender
         Component={
-          <ConditionalRender
-            Component={
-              <PaymentsList
-                paymentsData={paymentsData}
-                loading={loading}
-                sortColumn="date"
-              />
-            }
-            FallbackComponent={<Spinner />}
-            shouldRender={!loading}
+          <PaymentsList
+            paymentsData={paymentsData}
+            loading={loading}
+            sortColumn="date"
           />
         }
         FallbackComponent={<NoListDataFallback />}
