@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Button, Tab, Tabs } from '@material-ui/core';
 
-import { appColorB, textColorA } from 'styleConstants';
+import { appColorB, textColorA, textColorB } from 'styleConstants';
 
 export const HomeButtonWrapper = styled.div`
   align-items: center;
@@ -25,11 +25,15 @@ export const StyledButton = styled(Button)`
 `;
 
 export const StyledTab = styled(Tab)`
+  color: ${textColorB};
   flex-grow: 1;
   font-size: 1.4rem;
   height: 6rem;
   max-width: 22rem;
   text-transform: none;
+  &.Mui-selected {
+    color: ${textColorA};
+  }
 `;
 
 export const StyledTabs = styled(Tabs)`

@@ -7,13 +7,15 @@ import React from 'react';
 import T from 'prop-types';
 
 import {
+  ListBodySpinner,
   StyledTable,
   StyledTableBody,
-  StyledTableHead,
   StyledTableHeader,
   StyledTableRow,
 } from 'components/_base-ui/ListTable';
+import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import ListSortButton from 'components/_base-ui/ListSortButton';
+import { CustomTableHead } from './styledComponents';
 
 import TableRow from './TableRow';
 
@@ -21,6 +23,7 @@ const CallsList = ({
   callsData,
   dispatchFetchCallsData,
   headers,
+  loading,
   sortValues: { sortCol, sortOrder },
 }) => {
   const handleSortClick = (header) => {
@@ -35,7 +38,7 @@ const CallsList = ({
 
   return (
     <StyledTable>
-      <StyledTableHead>
+      <CustomTableHead>
         <StyledTableRow>
           {headers.map((header) => {
             if (['date', 'dept', 'rep'].indexOf(header) !== -1) {
@@ -58,12 +61,18 @@ const CallsList = ({
             );
           })}
         </StyledTableRow>
-      </StyledTableHead>
-      <StyledTableBody>
-        {callsData.map(({ id, ...restData }) => (
-          <TableRow data={restData} headers={headers} key={id} />
-        ))}
-      </StyledTableBody>
+      </CustomTableHead>
+      <ConditionalRender
+        Component={
+          <StyledTableBody>
+            {callsData.map(({ id, ...restData }) => (
+              <TableRow data={restData} headers={headers} key={id} />
+            ))}
+          </StyledTableBody>
+        }
+        FallbackComponent={<ListBodySpinner />}
+        shouldRender={!loading}
+      />
     </StyledTable>
   );
 };
@@ -82,11 +91,12 @@ CallsList.propTypes = {
   ).isRequired,
   dispatchFetchCallsData: T.func.isRequired,
   headers: T.arrayOf(T.string),
+  loading: T.bool.isRequired,
   sortValues: T.shape({ sortCol: T.string, sortOrder: T.string }).isRequired,
 };
 
 CallsList.defaultProps = {
-  headers: ['date', 'time', 'dept', 'desc', 'rep', 'audio'],
+  headers: ['date', 'time', 'dept', 'rep', 'desc', 'audio'],
 };
 
 export default CallsList;

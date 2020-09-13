@@ -3,30 +3,41 @@
  * @description ...
  */
 
-import React, { Fragment } from 'react';
+import React from 'react';
 import T from 'prop-types';
 
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
+// import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import { ArrowDownIcon, ArrowUpIcon } from 'images/icons';
+import { appColorA, textColorB } from 'styleConstants';
 
-import { IconWrapper, StyledLinkButton } from './styledComponents';
+import {
+  ButtonContainer,
+  IconWrapper,
+  StyledLinkButton,
+} from './styledComponents';
 
 const ListSortButton = ({ isActive, isAscending, onClick, text }) => {
   const Icon = isAscending ? (
-    <ArrowUpIcon size="0.8rem" />
+    <ArrowUpIcon color={isActive ? appColorA : textColorB} size="0.8rem" />
   ) : (
-    <ArrowDownIcon size="0.8rem" />
+    <ArrowDownIcon color={isActive ? appColorA : textColorB} size="0.8rem" />
   );
 
   return (
-    <Fragment>
-      <StyledLinkButton onClick={onClick} text={text} />
-      <ConditionalRender
-        Component={<IconWrapper>{Icon}</IconWrapper>}
-        shouldRender={isActive}
-      />
-    </Fragment>
+    <ButtonContainer>
+      <StyledLinkButton isActive={isActive} onClick={onClick} text={text} />
+      <IconWrapper>{Icon}</IconWrapper>
+    </ButtonContainer>
   );
+  // return (
+  //   <ButtonContainer>
+  //     <StyledLinkButton onClick={onClick} text={text} />
+  //     <ConditionalRender
+  //       Component={<IconWrapper>{Icon}</IconWrapper>}
+  //       shouldRender={isActive}
+  //     />
+  //   </ButtonContainer>
+  // );
 };
 
 ListSortButton.propTypes = {

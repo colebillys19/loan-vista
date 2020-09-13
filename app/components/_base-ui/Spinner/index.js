@@ -5,16 +5,12 @@
 
 import React from 'react';
 
-import { SpinnerIcon } from 'images/icons';
-
-import { AnimationWrapper, SpinnerContainer } from './styledComponents';
+import { StyledSpinnerIcon } from './styledComponents';
 
 const Spinner = () => (
-  <SpinnerContainer>
-    <AnimationWrapper>
-      <SpinnerIcon size="5rem" />
-    </AnimationWrapper>
-  </SpinnerContainer>
+  <span>
+    <StyledSpinnerIcon size="5rem" />
+  </span>
 );
 
 export default Spinner;

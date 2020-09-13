@@ -1,11 +1,8 @@
 import styled from 'styled-components';
 
-export const SpinnerContainer = styled.section`
-  padding-top: 5.2rem;
-  text-align: center;
-`;
+import { SpinnerIcon } from 'images/icons';
 
-export const AnimationWrapper = styled.span`
+export const StyledSpinnerIcon = styled(SpinnerIcon)`
   animation: spin 1.1s linear infinite;
   display: inline-block;
 
