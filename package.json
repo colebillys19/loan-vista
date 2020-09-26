@@ -1,10 +1,10 @@
 {
-  "name": "loanvista",
+  "name": "loan-vista",
   "version": "1.0.0",
   "description": "Allows for cohesive display of bulk loan data.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/colebillys19/loanvista.git"
+    "url": "git://github.com/colebillys19/loan-vista.git"
   },
   "engines": {
     "npm": ">=5",
