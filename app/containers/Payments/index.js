@@ -14,7 +14,10 @@ import { makeSelectPathname } from 'containers/App/selectors';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
-import makeSelectPayments, { makeSelectPaymentsData } from './selectors';
+import makeSelectPayments, {
+  makeSelectPaymentsData,
+  makeSelectSortValues,
+} from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import { fetchPaymentsData, onUnmount } from './actions';
@@ -25,6 +28,7 @@ export const Payments = ({
   loading,
   paymentsData,
   pathname,
+  sortValues,
 }) => {
   useInjectReducer({ key: 'payments', reducer });
   useInjectSaga({ key: 'payments', saga });
@@ -39,9 +43,11 @@ export const Payments = ({
 
   return (
     <PaymentsView
+      dispatchFetchPaymentsData={dispatchFetchPaymentsData}
       loading={loading}
       pathname={pathname}
       paymentsData={paymentsData}
+      sortValues={sortValues}
     />
   );
 };
@@ -52,12 +58,14 @@ Payments.propTypes = {
   loading: T.bool.isRequired,
   pathname: T.string.isRequired,
   paymentsData: T.array.isRequired,
+  sortValues: T.object.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
   loading: makeSelectPayments('loading'),
   pathname: makeSelectPathname(),
   paymentsData: makeSelectPaymentsData(),
+  sortValues: makeSelectSortValues(),
 });
 
 const mapDispatchToProps = (dispatch) => ({

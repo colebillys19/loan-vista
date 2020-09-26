@@ -6,34 +6,25 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { ArrowDownIcon, ArrowUpIcon } from 'images/icons';
-import { appColorA, textColorB } from 'styleConstants';
+import DefaultButton from './DefaultButton';
+import LoadingButton from './LoadingButton';
 
-import { StyledButton } from './styledComponents';
-
-const ListSortButton = ({ isActive, isAscending, onClick, text }) => {
-  const Icon = isAscending ? (
-    <ArrowUpIcon color={isActive ? appColorA : textColorB} size="0.8rem" />
-  ) : (
-    <ArrowDownIcon color={isActive ? appColorA : textColorB} size="0.8rem" />
-  );
-
-  return (
-    <StyledButton
+const ListSortButton = ({ isActive, isAscending, loading, onClick, text }) =>
+  !loading ? (
+    <DefaultButton
       isActive={isActive}
-      disableElevation
-      disableRipple
-      endIcon={Icon}
+      isAscending={isAscending}
       onClick={onClick}
-    >
-      {text}
-    </StyledButton>
+      text={text}
+    />
+  ) : (
+    <LoadingButton />
   );
-};
 
 ListSortButton.propTypes = {
   isActive: T.bool.isRequired,
   isAscending: T.bool.isRequired,
+  loading: T.bool.isRequired,
   onClick: T.func.isRequired,
   text: T.string.isRequired,
 };

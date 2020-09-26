@@ -3,7 +3,7 @@
  * @description ...
  */
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import T from 'prop-types';
 
 import {
@@ -26,7 +26,15 @@ const CallsList = ({
   loading,
   sortValues: { sortCol, sortOrder },
 }) => {
+  const [colClicked, setColClicked] = useState('');
+
+  useEffect(() => {
+    setColClicked('');
+  }, [sortCol, sortOrder]);
+
   const handleSortClick = (header) => {
+    setColClicked(header);
+
     if (header !== sortCol) {
       dispatchFetchCallsData({ sortCol: header, sortOrder: 'desc' });
     } else {
@@ -47,6 +55,7 @@ const CallsList = ({
                   <ListSortButton
                     isActive={header === sortCol}
                     isAscending={header === sortCol && sortOrder === 'asc'}
+                    loading={loading && header === colClicked}
                     onClick={() => handleSortClick(header)}
                     text={header}
                   />

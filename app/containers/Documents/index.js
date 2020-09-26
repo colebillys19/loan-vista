@@ -14,7 +14,10 @@ import { makeSelectPathname } from 'containers/App/selectors';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
-import makeSelectDocuments, { makeSelectDocumentsData } from './selectors';
+import makeSelectDocuments, {
+  makeSelectDocumentsData,
+  makeSelectSortValues,
+} from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import { fetchDocumentsData, onUnmount } from './actions';
@@ -25,6 +28,7 @@ export const Documents = ({
   dispatchOnUnmount,
   loading,
   pathname,
+  sortValues,
 }) => {
   useInjectReducer({ key: 'documents', reducer });
   useInjectSaga({ key: 'documents', saga });
@@ -39,9 +43,11 @@ export const Documents = ({
 
   return (
     <DocumentsView
+      dispatchFetchDocumentsData={dispatchFetchDocumentsData}
       documentsData={documentsData}
       loading={loading}
       pathname={pathname}
+      sortValues={sortValues}
     />
   );
 };
@@ -52,12 +58,14 @@ Documents.propTypes = {
   dispatchOnUnmount: T.func.isRequired,
   loading: T.bool.isRequired,
   pathname: T.string.isRequired,
+  sortValues: T.object.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
   documentsData: makeSelectDocumentsData(),
   loading: makeSelectDocuments('loading'),
   pathname: makeSelectPathname(),
+  sortValues: makeSelectSortValues(),
 });
 
 const mapDispatchToProps = (dispatch) => ({

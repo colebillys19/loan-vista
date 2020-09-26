@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Button } from '@material-ui/core';
 
+import { SpinnerIcon } from 'images/icons';
 import { appColorA, textColorB } from 'styleConstants';
 
 export const StyledButton = styled(({ isActive, ...restProps }) => (
@@ -21,5 +22,19 @@ export const StyledButton = styled(({ isActive, ...restProps }) => (
   &:hover {
     background-color: transparent;
     text-decoration: underline;
+  }
+`;
+
+export const StyledSpinnerIcon = styled(SpinnerIcon)`
+  animation: spin 1.1s linear infinite;
+  display: inline-block;
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 `;

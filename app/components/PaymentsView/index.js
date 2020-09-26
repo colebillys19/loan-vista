@@ -13,7 +13,12 @@ import NoListDataFallback from 'components/_base-ui/NoListDataFallback';
 import TableHeadBorder from 'components/_base-ui/TableHeadBorder';
 import TabWrapper from 'components/_base-ui/TabWrapper';
 
-const PaymentsView = ({ loading, paymentsData }) => {
+const PaymentsView = ({
+  dispatchFetchPaymentsData,
+  loading,
+  paymentsData,
+  sortValues,
+}) => {
   const noListData = !loading && paymentsData.length === 0;
 
   return (
@@ -24,8 +29,9 @@ const PaymentsView = ({ loading, paymentsData }) => {
         Component={
           <PaymentsList
             paymentsData={paymentsData}
+            dispatchFetchCallsData={dispatchFetchPaymentsData}
             loading={loading}
-            sortColumn="date"
+            sortValues={sortValues}
           />
         }
         FallbackComponent={<NoListDataFallback />}
@@ -36,8 +42,10 @@ const PaymentsView = ({ loading, paymentsData }) => {
 };
 
 PaymentsView.propTypes = {
+  dispatchFetchPaymentsData: T.func.isRequired,
   loading: T.bool.isRequired,
   paymentsData: T.array.isRequired,
+  sortValues: T.object.isRequired,
 };
 
 export default PaymentsView;

@@ -21,5 +21,15 @@ const makeSelectDocumentsData = () =>
     (documentsData) => getDocumentsData(documentsData),
   );
 
+/**
+ * makeSelectSortValues
+ * @description ...
+ */
+const makeSelectSortValues = () =>
+  createSelector(
+    makeSelectDocuments('fetchParams'),
+    ({ sortCol, sortOrder }) => ({ sortCol, sortOrder }),
+  );
+
 export default makeSelectDocuments;
-export { makeSelectDocumentsData, selectDocumentsDomain };
+export { makeSelectDocumentsData, selectDocumentsDomain, makeSelectSortValues };

@@ -13,7 +13,12 @@ import NoListDataFallback from 'components/_base-ui/NoListDataFallback';
 import TableHeadBorder from 'components/_base-ui/TableHeadBorder';
 import TabWrapper from 'components/_base-ui/TabWrapper';
 
-const DocumentsView = ({ documentsData, loading }) => {
+const DocumentsView = ({
+  dispatchFetchDocumentsData,
+  documentsData,
+  loading,
+  sortValues,
+}) => {
   const noListData = !loading && documentsData.length === 0;
 
   return (
@@ -24,8 +29,9 @@ const DocumentsView = ({ documentsData, loading }) => {
         Component={
           <DocumentsList
             documentsData={documentsData}
+            dispatchFetchCallsData={dispatchFetchDocumentsData}
             loading={loading}
-            sortColumn="date sent"
+            sortValues={sortValues}
           />
         }
         FallbackComponent={<NoListDataFallback />}
@@ -38,6 +44,8 @@ const DocumentsView = ({ documentsData, loading }) => {
 DocumentsView.propTypes = {
   documentsData: T.array.isRequired,
   loading: T.bool.isRequired,
+  dispatchFetchDocumentsData: T.func.isRequired,
+  sortValues: T.object.isRequired,
 };
 
 export default DocumentsView;

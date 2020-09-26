@@ -21,5 +21,15 @@ const makeSelectPaymentsData = () =>
     (paymentsData) => getPaymentsData(paymentsData),
   );
 
+/**
+ * makeSelectSortValues
+ * @description ...
+ */
+const makeSelectSortValues = () =>
+  createSelector(
+    makeSelectPayments('fetchParams'),
+    ({ sortCol, sortOrder }) => ({ sortCol, sortOrder }),
+  );
+
 export default makeSelectPayments;
-export { makeSelectPaymentsData, selectPaymentsDomain };
+export { makeSelectPaymentsData, selectPaymentsDomain, makeSelectSortValues };
