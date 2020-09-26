@@ -7,15 +7,15 @@ export const CustomTableHead = styled(StyledTableHead)`
     width: 13.2rem;
   }
   & th:nth-of-type(3) {
-    width: 10.5rem;
+    width: 10.6rem;
   }
   & th:nth-of-type(4) {
-    width: 13.8rem;
+    width: 13.9rem;
   }
   & th:nth-of-type(5) {
-    width: 13.4rem;
+    width: 13.5rem;
   }
   & th:nth-of-type(6) {
-    width: 9.5rem;
+    width: 9.6rem;
   }
 `;
