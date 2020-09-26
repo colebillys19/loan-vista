@@ -1,18 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Button } from '@material-ui/core';
 
-import LinkButton from 'components/_base-ui/LinkButton';
 import { appColorA, textColorB } from 'styleConstants';
 
-export const ButtonContainer = styled.span``;
-
-export const IconWrapper = styled.span`
-  padding-left: 0.6rem;
-`;
-
-export const StyledLinkButton = styled(({ isActive, ...restProps }) => (
-  <LinkButton {...restProps} />
+export const StyledButton = styled(({ isActive, ...restProps }) => (
+  <Button {...restProps} />
 ))`
+  border-radius: 0;
   color: ${({ isActive }) => (isActive ? appColorA : textColorB)};
-  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.4rem;
+  min-width: 0;
+  padding: 0;
+  & .MuiButton-endIcon {
+    margin: 0 0 0 7px;
+  }
+  &:hover {
+    background-color: transparent;
+    text-decoration: underline;
+  }
 `;

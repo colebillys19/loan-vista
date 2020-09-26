@@ -6,15 +6,10 @@
 import React from 'react';
 import T from 'prop-types';
 
-// import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import { ArrowDownIcon, ArrowUpIcon } from 'images/icons';
 import { appColorA, textColorB } from 'styleConstants';
 
-import {
-  ButtonContainer,
-  IconWrapper,
-  StyledLinkButton,
-} from './styledComponents';
+import { StyledButton } from './styledComponents';
 
 const ListSortButton = ({ isActive, isAscending, onClick, text }) => {
   const Icon = isAscending ? (
@@ -24,20 +19,16 @@ const ListSortButton = ({ isActive, isAscending, onClick, text }) => {
   );
 
   return (
-    <ButtonContainer>
-      <StyledLinkButton isActive={isActive} onClick={onClick} text={text} />
-      <IconWrapper>{Icon}</IconWrapper>
-    </ButtonContainer>
+    <StyledButton
+      isActive={isActive}
+      disableElevation
+      disableRipple
+      endIcon={Icon}
+      onClick={onClick}
+    >
+      {text}
+    </StyledButton>
   );
-  // return (
-  //   <ButtonContainer>
-  //     <StyledLinkButton onClick={onClick} text={text} />
-  //     <ConditionalRender
-  //       Component={<IconWrapper>{Icon}</IconWrapper>}
-  //       shouldRender={isActive}
-  //     />
-  //   </ButtonContainer>
-  // );
 };
 
 ListSortButton.propTypes = {

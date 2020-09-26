@@ -18,9 +18,6 @@ export function* fetchCallsDataSaga({ payload }) {
       `/api/calls/?${querystring.stringify(combinedParams)}`,
     );
 
-    console.log('* * * * *');
-    console.log(callsData.slice(0, 3));
-
     yield put(fetchCallsDataSuccess(callsData, newFetchParams));
   } catch (error) {
     yield put(fetchCallsDataFailure(error));
