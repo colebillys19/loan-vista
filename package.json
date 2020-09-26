@@ -1,10 +1,10 @@
 {
-  "name": "loanly",
+  "name": "loanvista",
   "version": "1.0.0",
   "description": "Allows for cohesive display of bulk loan data.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/colebillys19/loanly.git"
+    "url": "git://github.com/colebillys19/loanvista.git"
   },
   "engines": {
     "npm": ">=5",
