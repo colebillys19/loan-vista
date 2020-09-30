@@ -5,12 +5,12 @@
 
 import React from 'react';
 
-import { HeaderContainer, SwatchA, SwatchB } from './styledComponents';
+import { HeaderContainer } from './styledComponents';
 
 const Header = () => (
   <HeaderContainer>
-    <SwatchA />
-    <SwatchB />
+    <span>loan</span>
+    <span>Vista</span>
   </HeaderContainer>
 );
 

@@ -38,7 +38,7 @@ const TabNav = ({ dispatchNavigation, pathname }) => {
           id="home-button"
           onClick={handleHomeButtonClick}
         >
-          Loan Profile
+          Dashboard
         </StyledButton>
       </HomeButtonWrapper>
       <Tabs value={value} handleChange={handleChange} />
