@@ -51,7 +51,11 @@ const CallsList = ({
           {headers.map((header) => {
             if (['date', 'dept', 'rep'].indexOf(header) !== -1) {
               return (
-                <StyledTableHeader key={header} scope="col">
+                <StyledTableHeader
+                  key={header}
+                  loading={loading && header === colClicked}
+                  scope="col"
+                >
                   <ListSortButton
                     isActive={header === sortCol}
                     isAscending={header === sortCol && sortOrder === 'asc'}
