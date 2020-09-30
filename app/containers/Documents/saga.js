@@ -15,6 +15,7 @@ export function* fetchDocumentsDataSaga({ payload }) {
     const { params: newParams } = payload;
     const stateParams = yield select(makeSelectDocuments('fetchParams'));
     const combinedParams = Object.assign({}, stateParams, newParams);
+    console.log('DOCS combinedParams:', combinedParams);
 
     const { documentsData, newFetchParams } = yield call(
       get,

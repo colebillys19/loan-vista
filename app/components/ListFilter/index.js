@@ -19,9 +19,9 @@ import {
   StyledLabel,
 } from './styledComponents';
 
-const ListFilter = ({ dispatchFetchCallsData }) => (
+const ListFilter = ({ dispatchFetchData }) => (
   <ListFilterState
-    dispatchFetchCallsData={dispatchFetchCallsData}
+    dispatchFetchData={dispatchFetchData}
     render={({
       dateFrom,
       datePickerFromError,
@@ -80,6 +80,6 @@ const ListFilter = ({ dispatchFetchCallsData }) => (
   />
 );
 
-ListFilter.propTypes = { dispatchFetchCallsData: T.func.isRequired };
+ListFilter.propTypes = { dispatchFetchData: T.func.isRequired };
 
 export default ListFilter;

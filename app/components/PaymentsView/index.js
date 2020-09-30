@@ -23,13 +23,13 @@ const PaymentsView = ({
 
   return (
     <TabWrapper aria-labelledby="payments-tab" id="payments-view">
-      <ListFilter />
+      <ListFilter dispatchFetchData={dispatchFetchPaymentsData} />
       <TableHeadBorder hideBottom={loading || noListData} />
       <ConditionalRender
         Component={
           <PaymentsList
             paymentsData={paymentsData}
-            dispatchFetchCallsData={dispatchFetchPaymentsData}
+            dispatchFetchPaymentsData={dispatchFetchPaymentsData}
             loading={loading}
             sortValues={sortValues}
           />

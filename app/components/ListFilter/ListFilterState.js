@@ -3,7 +3,7 @@ import T from 'prop-types';
 
 import { getDatesArr, getErrors, getRangeValue } from './helpers';
 
-const ListFilterState = ({ dispatchFetchCallsData, render }) => {
+const ListFilterState = ({ dispatchFetchData, render }) => {
   const [dateFrom, setDateFrom] = useState(null);
   const [dateFromError, setDateFromError] = useState('');
   const [dateRangeValue, setDateRangeValue] = useState(0);
@@ -47,7 +47,7 @@ const ListFilterState = ({ dispatchFetchCallsData, render }) => {
     setDateFromError('');
     setDateToError('');
 
-    dispatchFetchCallsData({
+    dispatchFetchData({
       currentTotal: 80,
       dateFrom: '',
       dateTo: '',
@@ -60,7 +60,7 @@ const ListFilterState = ({ dispatchFetchCallsData, render }) => {
       const fromStr = dateFrom ? dateFrom.format('YYYY-MM-DD') : null;
       const toStr = dateTo ? dateTo.format('YYYY-MM-DD') : null;
 
-      dispatchFetchCallsData({
+      dispatchFetchData({
         dateFrom: fromStr,
         dateTo: toStr,
         keyword: keywordValue,
@@ -97,7 +97,7 @@ const ListFilterState = ({ dispatchFetchCallsData, render }) => {
 };
 
 ListFilterState.propTypes = {
-  dispatchFetchCallsData: T.func.isRequired,
+  dispatchFetchData: T.func.isRequired,
   render: T.func.isRequired,
 };
 

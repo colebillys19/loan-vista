@@ -23,13 +23,13 @@ const DocumentsView = ({
 
   return (
     <TabWrapper aria-labelledby="documents-tab" id="documents-view">
-      <ListFilter />
+      <ListFilter dispatchFetchData={dispatchFetchDocumentsData} />
       <TableHeadBorder hideBottom={loading || noListData} />
       <ConditionalRender
         Component={
           <DocumentsList
             documentsData={documentsData}
-            dispatchFetchCallsData={dispatchFetchDocumentsData}
+            dispatchFetchDocumentsData={dispatchFetchDocumentsData}
             loading={loading}
             sortValues={sortValues}
           />

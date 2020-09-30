@@ -23,7 +23,7 @@ const CallsView = ({
 
   return (
     <TabWrapper aria-labelledby="calls-tab" id="calls-view">
-      <ListFilter dispatchFetchCallsData={dispatchFetchCallsData} />
+      <ListFilter dispatchFetchData={dispatchFetchCallsData} />
       <TableHeadBorder hideBottom={noListData} />
       <ConditionalRender
         Component={

@@ -14,11 +14,10 @@ const initialState = {
   fetchParams: {
     currentTotal: 80,
     dateFrom: '',
-    dateSort: 'desc',
     dateTo: '',
-    fromSort: '',
     keyword: '',
-    typeSort: '',
+    sortCol: 'date sent',
+    sortOrder: 'desc',
   },
   loading: false,
 };

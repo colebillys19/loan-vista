@@ -3,14 +3,10 @@ const initialState = {
   fetchParams: {
     currentTotal: 80,
     dateFrom: '',
-    dateSort: 'desc',
     dateTo: '',
-    descSort: '',
-    escrowSort: '',
-    interestSort: '',
     keyword: '',
-    principalSort: '',
-    totalSort: '',
+    sortCol: 'date',
+    sortOrder: 'desc',
   },
   loading: false,
   paymentsData: [

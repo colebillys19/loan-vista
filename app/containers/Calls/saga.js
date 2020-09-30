@@ -12,6 +12,7 @@ export function* fetchCallsDataSaga({ payload }) {
     const { params: newParams } = payload;
     const stateParams = yield select(makeSelectCalls('fetchParams'));
     const combinedParams = Object.assign({}, stateParams, newParams);
+    console.log('CALLS combinedParams:', combinedParams);
 
     const { callsData, newFetchParams } = yield call(
       get,
