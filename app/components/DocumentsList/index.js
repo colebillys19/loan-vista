@@ -36,7 +36,6 @@ const DocumentsList = ({
     setColClicked(header);
 
     if (header !== sortCol) {
-      console.log('DocumentsList handleSortClick sortCol', sortCol);
       dispatchFetchDocumentsData({ sortCol: header, sortOrder: 'desc' });
     } else {
       dispatchFetchDocumentsData({

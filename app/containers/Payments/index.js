@@ -69,7 +69,7 @@ const mapStateToProps = createStructuredSelector({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  dispatchFetchPaymentsData: () => dispatch(fetchPaymentsData()),
+  dispatchFetchPaymentsData: (props) => dispatch(fetchPaymentsData(props)),
   dispatchOnUnmount: () => dispatch(onUnmount()),
 });
 

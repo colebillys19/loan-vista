@@ -16,8 +16,8 @@ export const fetchDocumentsDataFailure = (error) => ({
   type: FETCH_DOCUMENTS_DATA_FAILURE,
 });
 
-export const fetchDocumentsDataSuccess = (documentsData) => ({
-  payload: { documentsData },
+export const fetchDocumentsDataSuccess = (documentsData, newFetchParams) => ({
+  payload: { documentsData, newFetchParams },
   type: FETCH_DOCUMENTS_DATA_SUCCESS,
 });
 

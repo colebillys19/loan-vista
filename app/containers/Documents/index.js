@@ -69,7 +69,7 @@ const mapStateToProps = createStructuredSelector({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  dispatchFetchDocumentsData: () => dispatch(fetchDocumentsData()),
+  dispatchFetchDocumentsData: (props) => dispatch(fetchDocumentsData(props)),
   dispatchOnUnmount: () => dispatch(onUnmount()),
 });
 

@@ -68,7 +68,7 @@ const sortByDateAsc = (data) =>
  * @description ...
  */
 const sortDocuments = (data, sortCol, sortOrder) => {
-  if (sortCol === 'date') {
+  if (sortCol === 'dateSent') {
     if (sortOrder === 'desc') {
       return data;
     }

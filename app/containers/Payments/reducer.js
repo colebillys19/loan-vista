@@ -24,9 +24,10 @@ const paymentsReducer = (state = initialState, { payload, type }) =>
         draft.loading = false;
         break;
       case FETCH_PAYMENTS_DATA_SUCCESS:
-        const { paymentsData } = payload;
-        draft.paymentsData = paymentsData;
+        const { newFetchParams, paymentsData } = payload;
         draft.loading = false;
+        draft.fetchParams = newFetchParams;
+        draft.paymentsData = paymentsData;
         break;
       case ON_UNMOUNT:
         draft.error = false;

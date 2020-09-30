@@ -24,8 +24,9 @@ const documentsReducer = (state = initialState, { payload, type }) =>
         draft.loading = false;
         break;
       case FETCH_DOCUMENTS_DATA_SUCCESS:
-        const { documentsData } = payload;
+        const { documentsData, newFetchParams } = payload;
         draft.documentsData = documentsData;
+        draft.fetchParams = newFetchParams;
         draft.loading = false;
         break;
       case ON_UNMOUNT:
