@@ -24,7 +24,9 @@ const checkKeyword = (strArr, keyword) => {
     return true;
   }
 
-  const matches = strArr.filter((str) => str !== null && str.includes(keyword));
+  const matches = strArr.filter(
+    (str) => str !== null && str.toString().includes(keyword),
+  );
   return !!matches.length;
 };
 

@@ -6,7 +6,10 @@ import {
 } from './constants';
 
 /* eslint-disable arrow-body-style */
-export const fetchPaymentsData = () => ({ type: FETCH_PAYMENTS_DATA });
+export const fetchPaymentsData = (params) => ({
+  payload: { params },
+  type: FETCH_PAYMENTS_DATA,
+});
 
 export const fetchPaymentsDataFailure = (error) => ({
   payload: { error },

@@ -5,7 +5,6 @@ import { backgroundColor, appColorA, appColorB } from 'styleConstants';
 export const HeaderContainer = styled.header`
   background-color: ${appColorA};
   font-size: 3rem;
-  font-weight: bold;
   height: 8rem;
   letter-spacing: 0.5rem;
   min-width: 120rem;
