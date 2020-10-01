@@ -1,15 +1,5 @@
 const initialState = {
-  documentsData: [
-    {
-      dateSent: '',
-      desc: '',
-      file: '',
-      from: '',
-      id: '',
-      timeSent: '',
-      type: '',
-    },
-  ],
+  documentsData: [],
   error: false,
   fetchParams: {
     currentTotal: 80,

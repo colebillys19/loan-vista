@@ -58,7 +58,7 @@ Calls.propTypes = {
   callsData: T.array.isRequired,
   dispatchFetchCallsData: T.func.isRequired,
   dispatchOnUnmount: T.func.isRequired,
-  error: T.oneOfType([T.bool, T.object]).isRequired,
+  error: T.oneOfType([T.bool, T.string]).isRequired,
   loading: T.bool.isRequired,
   pathname: T.string.isRequired,
   sortValues: T.object.isRequired,

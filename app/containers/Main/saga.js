@@ -10,7 +10,12 @@ export function* fetchLoanDataSaga() {
     const { loanData, loanNumber } = yield call(get, '/api/loan');
     yield put(fetchLoanDataSuccess(loanData, loanNumber));
   } catch (error) {
-    yield put(fetchLoanDataFailure(error));
+    console.error(error); // eslint-disable-line
+    yield put(
+      fetchLoanDataFailure(
+        'something unexpected happened while retrieving data from the server',
+      ),
+    );
   }
 }
 

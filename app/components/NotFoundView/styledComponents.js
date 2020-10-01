@@ -12,6 +12,6 @@ export const NotFoundViewWrapper = styled.div`
 
 export const WarningHeading = styled.h1`
   color: ${appColorA};
-  font-size: 3rem;
+  font-size: 2.2rem;
   padding: 0;
 `;

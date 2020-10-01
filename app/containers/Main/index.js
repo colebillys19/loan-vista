@@ -47,7 +47,7 @@ export const Main = ({
 
 Main.propTypes = {
   dispatchFetchLoanData: T.func.isRequired,
-  error: T.oneOfType([T.bool, T.object]).isRequired,
+  error: T.oneOfType([T.bool, T.string]).isRequired,
   loading: T.bool.isRequired,
   loanNumber: T.string.isRequired,
   pathname: T.string.isRequired,

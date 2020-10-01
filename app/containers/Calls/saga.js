@@ -20,7 +20,12 @@ export function* fetchCallsDataSaga({ payload }) {
 
     yield put(fetchCallsDataSuccess(callsData, newFetchParams));
   } catch (error) {
-    yield put(fetchCallsDataFailure(error));
+    console.error(error); // eslint-disable-line
+    yield put(
+      fetchCallsDataFailure(
+        'something unexpected happened while retrieving data from the server',
+      ),
+    );
   }
 }
 

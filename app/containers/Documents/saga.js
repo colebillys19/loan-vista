@@ -23,7 +23,12 @@ export function* fetchDocumentsDataSaga({ payload }) {
 
     yield put(fetchDocumentsDataSuccess(documentsData, newFetchParams));
   } catch (error) {
-    yield put(fetchDocumentsDataFailure(error));
+    console.error(error); // eslint-disable-line
+    yield put(
+      fetchDocumentsDataFailure(
+        'something unexpected happened while retrieving data from the server',
+      ),
+    );
   }
 }
 

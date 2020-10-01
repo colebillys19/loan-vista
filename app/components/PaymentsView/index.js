@@ -9,13 +9,13 @@ import T from 'prop-types';
 import ListFilter from 'components/ListFilter';
 import PaymentsList from 'components/PaymentsList';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import NoListDataFallback from 'components/_base-ui/NoListDataFallback';
+import ListRenderFallback from 'components/_base-ui/ListRenderFallback';
 import TableHeadBorder from 'components/_base-ui/TableHeadBorder';
 import TabWrapper from 'components/_base-ui/TabWrapper';
 
 const PaymentsView = ({
   dispatchFetchPaymentsData,
-  // error,
+  error,
   loading,
   paymentsData,
   sortValues,
@@ -35,8 +35,8 @@ const PaymentsView = ({
             sortValues={sortValues}
           />
         }
-        FallbackComponent={<NoListDataFallback />}
-        shouldRender={!noListData}
+        FallbackComponent={<ListRenderFallback error={error} />}
+        shouldRender={!error && !noListData}
       />
     </TabWrapper>
   );
@@ -44,7 +44,7 @@ const PaymentsView = ({
 
 PaymentsView.propTypes = {
   dispatchFetchPaymentsData: T.func.isRequired,
-  // error: T.oneOfType([T.bool, T.object]).isRequired,
+  error: T.oneOfType([T.bool, T.string]).isRequired,
   loading: T.bool.isRequired,
   paymentsData: T.array.isRequired,
   sortValues: T.object.isRequired,

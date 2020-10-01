@@ -9,14 +9,14 @@ import T from 'prop-types';
 import CallsList from 'components/CallsList';
 import ListFilter from 'components/ListFilter';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import NoListDataFallback from 'components/_base-ui/NoListDataFallback';
+import ListRenderFallback from 'components/_base-ui/ListRenderFallback';
 import TableHeadBorder from 'components/_base-ui/TableHeadBorder';
 import TabWrapper from 'components/_base-ui/TabWrapper';
 
 const CallsView = ({
   callsData,
   dispatchFetchCallsData,
-  // error,
+  error,
   loading,
   sortValues,
 }) => {
@@ -35,8 +35,8 @@ const CallsView = ({
             sortValues={sortValues}
           />
         }
-        FallbackComponent={<NoListDataFallback />}
-        shouldRender={!noListData}
+        FallbackComponent={<ListRenderFallback error={error} />}
+        shouldRender={!error && !noListData}
       />
     </TabWrapper>
   );
@@ -45,7 +45,7 @@ const CallsView = ({
 CallsView.propTypes = {
   callsData: T.array.isRequired,
   dispatchFetchCallsData: T.func.isRequired,
-  // error: T.oneOfType([T.bool, T.object]).isRequired,
+  error: T.oneOfType([T.bool, T.string]).isRequired,
   loading: T.bool.isRequired,
   sortValues: T.object.isRequired,
 };

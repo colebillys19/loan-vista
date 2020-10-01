@@ -1,15 +1,5 @@
 const initialState = {
-  callsData: [
-    {
-      audio: '',
-      date: '',
-      dept: '',
-      desc: '',
-      id: '',
-      rep: '',
-      time: '',
-    },
-  ],
+  callsData: [],
   error: false,
   fetchParams: {
     currentTotal: 80,
