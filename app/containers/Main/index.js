@@ -25,6 +25,7 @@ import { fetchLoanData } from './actions';
 
 export const Main = ({
   dispatchFetchLoanData,
+  error,
   loading,
   loanNumber,
   pathname,
@@ -41,11 +42,12 @@ export const Main = ({
     }
   }, [pathname]);
 
-  return render({ loading, sidebarHeaderData, sidebarSummariesData });
+  return render({ error, loading, sidebarHeaderData, sidebarSummariesData });
 };
 
 Main.propTypes = {
   dispatchFetchLoanData: T.func.isRequired,
+  error: T.oneOfType([T.bool, T.object]).isRequired,
   loading: T.bool.isRequired,
   loanNumber: T.string.isRequired,
   pathname: T.string.isRequired,
@@ -55,6 +57,7 @@ Main.propTypes = {
 };
 
 const mapStateToProps = createStructuredSelector({
+  error: makeSelectMain('error'),
   loading: makeSelectMain('loading'),
   loanNumber: makeSelectMain('loanNumber'),
   pathname: makeSelectPathname(),

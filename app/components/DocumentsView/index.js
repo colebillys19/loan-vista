@@ -16,6 +16,7 @@ import TabWrapper from 'components/_base-ui/TabWrapper';
 const DocumentsView = ({
   dispatchFetchDocumentsData,
   documentsData,
+  // error,
   loading,
   sortValues,
 }) => {
@@ -43,6 +44,7 @@ const DocumentsView = ({
 
 DocumentsView.propTypes = {
   documentsData: T.array.isRequired,
+  // error: T.oneOfType([T.bool, T.object]).isRequired,
   loading: T.bool.isRequired,
   dispatchFetchDocumentsData: T.func.isRequired,
   sortValues: T.object.isRequired,

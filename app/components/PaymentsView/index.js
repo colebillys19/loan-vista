@@ -15,6 +15,7 @@ import TabWrapper from 'components/_base-ui/TabWrapper';
 
 const PaymentsView = ({
   dispatchFetchPaymentsData,
+  // error,
   loading,
   paymentsData,
   sortValues,
@@ -43,6 +44,7 @@ const PaymentsView = ({
 
 PaymentsView.propTypes = {
   dispatchFetchPaymentsData: T.func.isRequired,
+  // error: T.oneOfType([T.bool, T.object]).isRequired,
   loading: T.bool.isRequired,
   paymentsData: T.array.isRequired,
   sortValues: T.object.isRequired,

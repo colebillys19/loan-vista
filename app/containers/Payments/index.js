@@ -25,6 +25,7 @@ import { fetchPaymentsData, onUnmount } from './actions';
 export const Payments = ({
   dispatchFetchPaymentsData,
   dispatchOnUnmount,
+  error,
   loading,
   paymentsData,
   pathname,
@@ -44,6 +45,7 @@ export const Payments = ({
   return (
     <PaymentsView
       dispatchFetchPaymentsData={dispatchFetchPaymentsData}
+      error={error}
       loading={loading}
       pathname={pathname}
       paymentsData={paymentsData}
@@ -55,6 +57,7 @@ export const Payments = ({
 Payments.propTypes = {
   dispatchFetchPaymentsData: T.func.isRequired,
   dispatchOnUnmount: T.func.isRequired,
+  error: T.oneOfType([T.bool, T.object]).isRequired,
   loading: T.bool.isRequired,
   pathname: T.string.isRequired,
   paymentsData: T.array.isRequired,
@@ -62,6 +65,7 @@ Payments.propTypes = {
 };
 
 const mapStateToProps = createStructuredSelector({
+  error: makeSelectPayments('error'),
   loading: makeSelectPayments('loading'),
   pathname: makeSelectPathname(),
   paymentsData: makeSelectPaymentsData(),

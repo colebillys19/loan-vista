@@ -33,9 +33,10 @@ const App = ({ dispatchNavigation, pathname }) => (
     <Header />
     <TabNav dispatchNavigation={dispatchNavigation} pathname={pathname} />
     <Main
-      render={({ loading, sidebarHeaderData, sidebarSummariesData }) => (
+      render={({ error, loading, sidebarHeaderData, sidebarSummariesData }) => (
         <MainContainer>
           <Sidebar
+            error={error}
             loading={loading}
             pathname={pathname}
             sidebarHeaderData={sidebarHeaderData}
@@ -45,7 +46,9 @@ const App = ({ dispatchNavigation, pathname }) => (
             <Route
               exact
               path="/"
-              render={() => <HomeView pathname={pathname} />}
+              render={() => (
+                <HomeView error={error} loading={loading} pathname={pathname} />
+              )}
             />
             <Route component={Calls} exact path="/calls" />
             <Route component={Documents} exact path="/documents" />
@@ -53,7 +56,9 @@ const App = ({ dispatchNavigation, pathname }) => (
             <Route
               exact
               path="/misc"
-              render={() => <MiscView pathname={pathname} />}
+              render={() => (
+                <MiscView error={error} loading={loading} pathname={pathname} />
+              )}
             />
             <Route component={NotFoundView} />
           </Switch>

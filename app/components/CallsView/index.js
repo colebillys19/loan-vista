@@ -16,6 +16,7 @@ import TabWrapper from 'components/_base-ui/TabWrapper';
 const CallsView = ({
   callsData,
   dispatchFetchCallsData,
+  // error,
   loading,
   sortValues,
 }) => {
@@ -44,6 +45,7 @@ const CallsView = ({
 CallsView.propTypes = {
   callsData: T.array.isRequired,
   dispatchFetchCallsData: T.func.isRequired,
+  // error: T.oneOfType([T.bool, T.object]).isRequired,
   loading: T.bool.isRequired,
   sortValues: T.object.isRequired,
 };

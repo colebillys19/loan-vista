@@ -18,6 +18,7 @@ import {
 } from './styledComponents';
 
 const Sidebar = ({
+  // error,
   loading,
   pathname,
   sidebarHeaderData,
@@ -82,6 +83,7 @@ const Sidebar = ({
 };
 
 Sidebar.propTypes = {
+  // error: T.oneOfType([T.bool, T.object]).isRequired,
   loading: T.bool.isRequired,
   pathname: T.string.isRequired,
   sidebarHeaderData: T.object.isRequired,

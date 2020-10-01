@@ -14,6 +14,10 @@ const HomeView = () => (
   </TabWrapper>
 );
 
-// HomeView.propTypes = {};
+HomeView.propTypes = {
+  // error: T.oneOfType([T.bool, T.object]).isRequired,
+  // loading: T.bool.isRequired,
+  // pathname: T.string.isRequired,
+};
 
 export default HomeView;

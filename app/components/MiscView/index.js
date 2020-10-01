@@ -14,6 +14,10 @@ const MiscView = () => (
   </TabWrapper>
 );
 
-// MiscView.propTypes = {};
+MiscView.propTypes = {
+  // error: T.oneOfType([T.bool, T.object]).isRequired,
+  // loading: T.bool.isRequired,
+  // pathname: T.string.isRequired,
+};
 
 export default MiscView;

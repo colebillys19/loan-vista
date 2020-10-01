@@ -26,6 +26,7 @@ export const Documents = ({
   documentsData,
   dispatchFetchDocumentsData,
   dispatchOnUnmount,
+  error,
   loading,
   pathname,
   sortValues,
@@ -45,6 +46,7 @@ export const Documents = ({
     <DocumentsView
       dispatchFetchDocumentsData={dispatchFetchDocumentsData}
       documentsData={documentsData}
+      error={error}
       loading={loading}
       pathname={pathname}
       sortValues={sortValues}
@@ -56,6 +58,7 @@ Documents.propTypes = {
   documentsData: T.array.isRequired,
   dispatchFetchDocumentsData: T.func.isRequired,
   dispatchOnUnmount: T.func.isRequired,
+  error: T.oneOfType([T.bool, T.object]).isRequired,
   loading: T.bool.isRequired,
   pathname: T.string.isRequired,
   sortValues: T.object.isRequired,
@@ -63,6 +66,7 @@ Documents.propTypes = {
 
 const mapStateToProps = createStructuredSelector({
   documentsData: makeSelectDocumentsData(),
+  error: makeSelectDocuments('error'),
   loading: makeSelectDocuments('loading'),
   pathname: makeSelectPathname(),
   sortValues: makeSelectSortValues(),
