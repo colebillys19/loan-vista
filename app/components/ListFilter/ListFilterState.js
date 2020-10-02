@@ -3,7 +3,7 @@ import T from 'prop-types';
 
 import { getDatesArr, getErrors, getRangeValue } from './helpers';
 
-const ListFilterState = ({ dispatchFetchData, render }) => {
+const ListFilterState = ({ dispatchFetchData, fetchParams, render }) => {
   const [dateFrom, setDateFrom] = useState(null);
   const [dateFromError, setDateFromError] = useState('');
   const [dateRangeValue, setDateRangeValue] = useState(0);
@@ -47,12 +47,20 @@ const ListFilterState = ({ dispatchFetchData, render }) => {
     setDateFromError('');
     setDateToError('');
 
-    dispatchFetchData({
-      currentTotal: 80,
-      dateFrom: '',
-      dateTo: '',
-      keyword: '',
-    });
+    const {
+      dateFrom: reduxDateFrom,
+      dateTo: reduxDateTo,
+      keyword: reduxKeyword,
+    } = fetchParams;
+
+    if (reduxDateFrom !== '' || reduxDateTo !== '' || reduxKeyword !== '') {
+      dispatchFetchData({
+        currentTotal: 80,
+        dateFrom: '',
+        dateTo: '',
+        keyword: '',
+      });
+    }
   };
 
   const handleSubmitValues = () => {
@@ -98,6 +106,7 @@ const ListFilterState = ({ dispatchFetchData, render }) => {
 
 ListFilterState.propTypes = {
   dispatchFetchData: T.func.isRequired,
+  fetchParams: T.object.isRequired,
   render: T.func.isRequired,
 };
 

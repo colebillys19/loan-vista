@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { backgroundColor } from 'styleConstants';
+import { backgroundColor, borderGrey } from 'styleConstants';
 
 export const BorderContainer = styled.div`
   position: relative;
@@ -11,8 +11,8 @@ export const GradientBorder = styled.div`
   background: linear-gradient(
     90deg,
     ${backgroundColor} 0%,
-    #eee 30%,
-    #eee 70%,
+    ${borderGrey} 40%,
+    ${borderGrey} 60%,
     ${backgroundColor} 100%
   );
   display: ${({ hideBottom }) => (hideBottom ? 'none' : 'inherit')};

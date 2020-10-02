@@ -17,6 +17,7 @@ const CallsView = ({
   callsData,
   dispatchFetchCallsData,
   error,
+  fetchParams,
   loading,
   sortValues,
 }) => {
@@ -24,7 +25,10 @@ const CallsView = ({
 
   return (
     <TabWrapper aria-labelledby="calls-tab" id="calls-view">
-      <ListFilter dispatchFetchData={dispatchFetchCallsData} />
+      <ListFilter
+        dispatchFetchData={dispatchFetchCallsData}
+        fetchParams={fetchParams}
+      />
       <TableHeadBorder hideBottom={noListData} />
       <ConditionalRender
         Component={
@@ -46,6 +50,7 @@ CallsView.propTypes = {
   callsData: T.array.isRequired,
   dispatchFetchCallsData: T.func.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
+  fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
   sortValues: T.object.isRequired,
 };

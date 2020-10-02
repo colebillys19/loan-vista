@@ -27,6 +27,7 @@ export const Calls = ({
   dispatchFetchCallsData,
   dispatchOnUnmount,
   error,
+  fetchParams,
   loading,
   pathname,
   sortValues,
@@ -47,6 +48,7 @@ export const Calls = ({
       callsData={callsData}
       dispatchFetchCallsData={dispatchFetchCallsData}
       error={error}
+      fetchParams={fetchParams}
       loading={loading}
       pathname={pathname}
       sortValues={sortValues}
@@ -59,6 +61,7 @@ Calls.propTypes = {
   dispatchFetchCallsData: T.func.isRequired,
   dispatchOnUnmount: T.func.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
+  fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
   pathname: T.string.isRequired,
   sortValues: T.object.isRequired,
@@ -67,6 +70,7 @@ Calls.propTypes = {
 const mapStateToProps = createStructuredSelector({
   callsData: makeSelectCallsData(),
   error: makeSelectCalls('error'),
+  fetchParams: makeSelectCalls('fetchParams'),
   loading: makeSelectCalls('loading'),
   pathname: makeSelectPathname(),
   sortValues: makeSelectSortValues(),
