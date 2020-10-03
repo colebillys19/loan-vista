@@ -12,7 +12,8 @@ import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import { isValidRoute } from 'utils/globalHelpers';
 
 import {
-  LeftBorder,
+  BottomBorder,
+  // LeftBorder,
   SidebarContainer,
   SidebarContentContainer,
   SidebarSectionPlaceholder,
@@ -38,7 +39,8 @@ const Sidebar = ({
     <SidebarContainer>
       <SidebarContentContainer>
         <TopBorder />
-        <LeftBorder />
+        <BottomBorder />
+        {/* <LeftBorder /> */}
         <ConditionalRender
           Component={
             <SidebarHeader

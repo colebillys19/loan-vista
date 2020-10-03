@@ -6,9 +6,14 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { StyledSection } from './styledComponents';
+import { BottomBorder, StyledSection } from './styledComponents';
 
-const TabWrapper = ({ children }) => <StyledSection>{children}</StyledSection>;
+const TabWrapper = ({ children }) => (
+  <StyledSection>
+    {children}
+    <BottomBorder />
+  </StyledSection>
+);
 
 TabWrapper.propTypes = { children: T.node.isRequired };
 

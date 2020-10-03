@@ -2,22 +2,42 @@ import styled from 'styled-components';
 
 import { backgroundColor, borderGrey } from 'styleConstants';
 
+export const BottomBorder = styled.div`
+  background: linear-gradient(
+    90deg,
+    ${backgroundColor} 0%,
+    ${borderGrey} 50%,
+    ${backgroundColor} 100%
+  );
+  height: 0.1rem;
+  left: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 34rem;
+`;
+
 export const LeftBorder = styled.div`
   background: linear-gradient(
     0deg,
     ${backgroundColor} 0%,
-    ${borderGrey} 10%,
-    ${borderGrey} 90%,
+    ${borderGrey} 50%,
     ${backgroundColor} 100%
   );
   height: 108rem;
-  left: 0;
+  left: -0.1rem;
   position: absolute;
   top: 0;
   width: 0.1rem;
 `;
 
 export const SidebarContainer = styled.aside`
+  background: ${backgroundColor};
+  background: linear-gradient(
+    90deg,
+    ${backgroundColor} 0%,
+    #fff 50%,
+    ${backgroundColor} 100%
+  );
   display: inline-block;
   margin-right: 0.3rem;
   padding-top: 4rem;
@@ -43,13 +63,12 @@ export const TopBorder = styled.div`
   background: linear-gradient(
     90deg,
     ${backgroundColor} 0%,
-    ${borderGrey} 30%,
-    ${borderGrey} 70%,
+    ${borderGrey} 50%,
     ${backgroundColor} 100%
   );
   height: 0.1rem;
-  left: 4.9rem;
+  left: 1rem;
   position: absolute;
   top: -4rem;
-  width: 26rem;
+  width: 34rem;
 `;
