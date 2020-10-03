@@ -26,6 +26,7 @@ export const Payments = ({
   dispatchFetchPaymentsData,
   dispatchOnUnmount,
   error,
+  fetchParams,
   loading,
   paymentsData,
   pathname,
@@ -46,6 +47,7 @@ export const Payments = ({
     <PaymentsView
       dispatchFetchPaymentsData={dispatchFetchPaymentsData}
       error={error}
+      fetchParams={fetchParams}
       loading={loading}
       pathname={pathname}
       paymentsData={paymentsData}
@@ -58,6 +60,7 @@ Payments.propTypes = {
   dispatchFetchPaymentsData: T.func.isRequired,
   dispatchOnUnmount: T.func.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
+  fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
   pathname: T.string.isRequired,
   paymentsData: T.array.isRequired,
@@ -66,6 +69,7 @@ Payments.propTypes = {
 
 const mapStateToProps = createStructuredSelector({
   error: makeSelectPayments('error'),
+  fetchParams: makeSelectPayments('fetchParams'),
   loading: makeSelectPayments('loading'),
   pathname: makeSelectPathname(),
   paymentsData: makeSelectPaymentsData(),

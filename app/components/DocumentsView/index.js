@@ -17,6 +17,7 @@ const DocumentsView = ({
   dispatchFetchDocumentsData,
   documentsData,
   error,
+  fetchParams,
   loading,
   sortValues,
 }) => {
@@ -24,7 +25,10 @@ const DocumentsView = ({
 
   return (
     <TabWrapper aria-labelledby="documents-tab" id="documents-view">
-      <ListFilter dispatchFetchData={dispatchFetchDocumentsData} />
+      <ListFilter
+        fetchParams={fetchParams}
+        dispatchFetchData={dispatchFetchDocumentsData}
+      />
       <TableHeadBorder hideBottom={loading || noListData} />
       <ConditionalRender
         Component={
@@ -45,6 +49,7 @@ const DocumentsView = ({
 DocumentsView.propTypes = {
   documentsData: T.array.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
+  fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
   dispatchFetchDocumentsData: T.func.isRequired,
   sortValues: T.object.isRequired,

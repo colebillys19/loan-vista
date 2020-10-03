@@ -16,6 +16,7 @@ import TabWrapper from 'components/_base-ui/TabWrapper';
 const PaymentsView = ({
   dispatchFetchPaymentsData,
   error,
+  fetchParams,
   loading,
   paymentsData,
   sortValues,
@@ -24,7 +25,10 @@ const PaymentsView = ({
 
   return (
     <TabWrapper aria-labelledby="payments-tab" id="payments-view">
-      <ListFilter dispatchFetchData={dispatchFetchPaymentsData} />
+      <ListFilter
+        fetchParams={fetchParams}
+        dispatchFetchData={dispatchFetchPaymentsData}
+      />
       <TableHeadBorder hideBottom={loading || noListData} />
       <ConditionalRender
         Component={
@@ -45,6 +49,7 @@ const PaymentsView = ({
 PaymentsView.propTypes = {
   dispatchFetchPaymentsData: T.func.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
+  fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
   paymentsData: T.array.isRequired,
   sortValues: T.object.isRequired,
