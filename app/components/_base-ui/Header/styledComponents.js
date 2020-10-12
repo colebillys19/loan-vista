@@ -8,7 +8,7 @@ export const HeaderContainer = styled.header`
   height: 8rem;
   letter-spacing: 0.5rem;
   min-width: 120rem;
-  padding: 2.4rem 0 0 3rem;
+  padding: 2.4rem 0 0 5rem;
   & span:first-of-type {
     color: ${backgroundColor};
   }

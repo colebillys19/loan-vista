@@ -40,7 +40,7 @@ export const Main = ({
     if (!loanNumber && isValidRoute(pathname)) {
       dispatchFetchLoanData();
     }
-  }, [pathname]);
+  }, []);
 
   return render({ error, loading, sidebarHeaderData, sidebarSummariesData });
 };

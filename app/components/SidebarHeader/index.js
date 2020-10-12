@@ -25,12 +25,13 @@ const SidebarHeader = ({
   sidebarHeaderData: { address1, address2, health, loanNumber, name },
 }) => {
   const isHome = pathname === '/';
+  const headingText = isHome ? loanNumber : getTabName(pathname);
 
   return (
     <SidebarHeaderContainer>
       <IconWrapper>{getIcon(pathname, '8rem')}</IconWrapper>
       <HeadingContainer>
-        <StyledH1>{isHome ? loanNumber : getTabName(pathname)}</StyledH1>
+        <StyledH1>{loanNumber.length ? headingText : '-'}</StyledH1>
         <ConditionalRender
           Component={
             <BulletIcon color={getHealthColor(health)} size="2.5rem" />

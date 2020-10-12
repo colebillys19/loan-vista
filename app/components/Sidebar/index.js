@@ -40,18 +40,10 @@ const Sidebar = ({
       <SidebarContentContainer>
         <TopBorder />
         <BottomBorder />
-        {/* <LeftBorder /> */}
-        <ConditionalRender
-          Component={
-            <SidebarHeader
-              pathname={pathname}
-              sidebarHeaderData={sidebarHeaderData}
-            />
-          }
-          FallbackComponent={
-            <SidebarSectionPlaceholder height="24.1rem" isHeader />
-          }
-          shouldRender={showComponents}
+        <SidebarHeader
+          loading={loading}
+          pathname={pathname}
+          sidebarHeaderData={sidebarHeaderData}
         />
         <ConditionalRender
           Component={
