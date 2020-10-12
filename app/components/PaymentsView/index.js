@@ -29,7 +29,7 @@ const PaymentsView = ({
         fetchParams={fetchParams}
         dispatchFetchData={dispatchFetchPaymentsData}
       />
-      <TableHeadBorder hideBottom={loading || noListData} />
+      <TableHeadBorder hideBottom={noListData} />
       <ConditionalRender
         Component={
           <PaymentsList

@@ -29,7 +29,7 @@ const DocumentsView = ({
         fetchParams={fetchParams}
         dispatchFetchData={dispatchFetchDocumentsData}
       />
-      <TableHeadBorder hideBottom={loading || noListData} />
+      <TableHeadBorder hideBottom={noListData} />
       <ConditionalRender
         Component={
           <DocumentsList

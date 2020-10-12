@@ -24,8 +24,8 @@ export const StyledButton = styled(Button)`
 `;
 
 export const StyledForm = styled.form`
-  height: 6.4rem;
-  padding: 1.8rem 0 1.5rem 2.4rem;
+  margin: 1.6rem 0;
+  padding: 0.6rem 0 0 2.4rem;
   position: relative;
   & .MuiInputBase-input {
     color: ${textColorA};
