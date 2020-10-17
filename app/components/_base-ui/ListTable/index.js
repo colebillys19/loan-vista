@@ -5,6 +5,7 @@ import {
   StyledTableHead,
   StyledTableHeader,
   StyledTableRow,
+  TableWrapper,
 } from './styledComponents';
 
 export {
@@ -14,4 +15,5 @@ export {
   StyledTableHead,
   StyledTableHeader,
   StyledTableRow,
+  TableWrapper,
 };

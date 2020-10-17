@@ -38,7 +38,7 @@ const PaymentsView = ({
           />
         }
         FallbackComponent={<ListFallback error={error} loading={loading} />}
-        shouldRender={!error && !noListData}
+        shouldRender={!error && !loading && !noListData}
       />
     </TabWrapper>
   );

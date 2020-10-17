@@ -19,7 +19,3 @@ export const CustomTableHead = styled(StyledTableHead)`
     width: 5.6rem;
   }
 `;
-
-export const TableWrapper = styled.div`
-  position: relative;
-`;

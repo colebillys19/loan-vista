@@ -6,17 +6,18 @@
 import React, { useEffect, useState } from 'react';
 import T from 'prop-types';
 
+import ListBorders from 'components/_base-ui/ListBorders';
+import ListSortButton from 'components/_base-ui/ListSortButton';
 import {
   StyledTable,
   StyledTableBody,
   StyledTableHeader,
   StyledTableRow,
+  TableWrapper,
 } from 'components/_base-ui/ListTable';
-import ListBorders from 'components/_base-ui/ListBorders';
-import ListSortButton from 'components/_base-ui/ListSortButton';
 
 import TableRow from './TableRow';
-import { CustomTableHead, TableWrapper } from './styledComponents';
+import { CustomTableHead } from './styledComponents';
 
 const CallsList = ({
   callsData,

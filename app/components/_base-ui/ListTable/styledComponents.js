@@ -68,3 +68,7 @@ export const StyledTableRow = styled.tr`
     );
   }
 `;
+
+export const TableWrapper = styled.div`
+  position: relative;
+`;
