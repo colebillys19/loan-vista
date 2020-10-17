@@ -7,17 +7,16 @@ import React, { useEffect, useState } from 'react';
 import T from 'prop-types';
 
 import {
-  ListBodySpinner,
   StyledTable,
   StyledTableBody,
   StyledTableHeader,
   StyledTableRow,
 } from 'components/_base-ui/ListTable';
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
+import ListBorders from 'components/_base-ui/ListBorders';
 import ListSortButton from 'components/_base-ui/ListSortButton';
 
 import TableRow from './TableRow';
-import { CustomTableHead } from './styledComponents';
+import { CustomTableHead, TableWrapper } from './styledComponents';
 
 const CallsList = ({
   callsData,
@@ -45,48 +44,45 @@ const CallsList = ({
   };
 
   return (
-    <StyledTable>
-      <CustomTableHead>
-        <StyledTableRow>
-          {headers.map((header) => {
-            if (['date', 'dept', 'rep'].indexOf(header) !== -1) {
-              return (
-                <StyledTableHeader
-                  key={header}
-                  loading={loading && header === colClicked}
-                  scope="col"
-                >
-                  <ListSortButton
-                    isActive={header === sortCol}
-                    isAscending={header === sortCol && sortOrder === 'asc'}
+    <TableWrapper>
+      <ListBorders />
+      <StyledTable>
+        <CustomTableHead>
+          <StyledTableRow>
+            {headers.map((header) => {
+              if (['date', 'dept', 'rep'].indexOf(header) !== -1) {
+                return (
+                  <StyledTableHeader
+                    key={header}
                     loading={loading && header === colClicked}
-                    onClick={() => handleSortClick(header)}
-                    text={header}
-                  />
+                    scope="col"
+                  >
+                    <ListSortButton
+                      isActive={header === sortCol}
+                      isAscending={header === sortCol && sortOrder === 'asc'}
+                      loading={loading && header === colClicked}
+                      onClick={() => handleSortClick(header)}
+                      text={header}
+                    />
+                  </StyledTableHeader>
+                );
+              }
+
+              return (
+                <StyledTableHeader key={header} scope="col">
+                  {header}
                 </StyledTableHeader>
               );
-            }
-
-            return (
-              <StyledTableHeader key={header} scope="col">
-                {header}
-              </StyledTableHeader>
-            );
-          })}
-        </StyledTableRow>
-      </CustomTableHead>
-      <ConditionalRender
-        Component={
-          <StyledTableBody>
-            {callsData.map(({ id, ...restData }) => (
-              <TableRow data={restData} headers={headers} key={id} />
-            ))}
-          </StyledTableBody>
-        }
-        FallbackComponent={<ListBodySpinner />}
-        shouldRender={!loading}
-      />
-    </StyledTable>
+            })}
+          </StyledTableRow>
+        </CustomTableHead>
+        <StyledTableBody>
+          {callsData.map(({ id, ...restData }) => (
+            <TableRow data={restData} headers={headers} key={id} />
+          ))}
+        </StyledTableBody>
+      </StyledTable>
+    </TableWrapper>
   );
 };
 

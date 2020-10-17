@@ -6,9 +6,7 @@
 import React, { useEffect, useState } from 'react';
 import T from 'prop-types';
 
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import {
-  ListBodySpinner,
   StyledTable,
   StyledTableBody,
   StyledTableHeader,
@@ -61,17 +59,11 @@ const PaymentsList = ({
           ))}
         </StyledTableRow>
       </CustomTableHead>
-      <ConditionalRender
-        Component={
-          <StyledTableBody>
-            {paymentsData.map(({ id, ...restData }) => (
-              <TableRow data={restData} headers={headers} key={id} />
-            ))}
-          </StyledTableBody>
-        }
-        FallbackComponent={<ListBodySpinner />}
-        shouldRender={!loading}
-      />
+      <StyledTableBody>
+        {paymentsData.map(({ id, ...restData }) => (
+          <TableRow data={restData} headers={headers} key={id} />
+        ))}
+      </StyledTableBody>
     </StyledTable>
   );
 };

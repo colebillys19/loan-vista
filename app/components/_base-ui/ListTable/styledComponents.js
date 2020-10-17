@@ -4,15 +4,28 @@ import { backgroundColor, textColorB } from 'styleConstants';
 
 export const ListSpinnerWrapper = styled.span`
   left: 39.2rem;
+  display: inline-block;
+  padding: 10rem 0;
   position: relative;
-  top: 5rem;
 `;
 
 export const StyledTable = styled.table`
+  background: ${backgroundColor};
+  background: linear-gradient(
+    90deg,
+    ${backgroundColor} 0%,
+    #fff 50%,
+    ${backgroundColor} 100%
+  );
   width: 100%;
 `;
 
 export const StyledTableBody = styled.tbody`
+  &:after {
+    content: '';
+    display: block;
+    height: 0.6rem;
+  }
   &:before {
     content: '';
     display: block;

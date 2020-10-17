@@ -9,8 +9,7 @@ import T from 'prop-types';
 import CallsList from 'components/CallsList';
 import ListFilter from 'components/ListFilter';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import ListRenderFallback from 'components/_base-ui/ListRenderFallback';
-import TableHeadBorder from 'components/_base-ui/TableHeadBorder';
+import ListFallback from 'components/_base-ui/ListFallback';
 import TabWrapper from 'components/_base-ui/TabWrapper';
 
 const CallsView = ({
@@ -29,7 +28,6 @@ const CallsView = ({
         dispatchFetchData={dispatchFetchCallsData}
         fetchParams={fetchParams}
       />
-      <TableHeadBorder hideBottom={noListData} />
       <ConditionalRender
         Component={
           <CallsList
@@ -39,8 +37,8 @@ const CallsView = ({
             sortValues={sortValues}
           />
         }
-        FallbackComponent={<ListRenderFallback error={error} />}
-        shouldRender={!error && !noListData}
+        FallbackComponent={<ListFallback error={error} loading={loading} />}
+        shouldRender={!error && !loading && !noListData}
       />
     </TabWrapper>
   );

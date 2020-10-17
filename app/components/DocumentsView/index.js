@@ -9,8 +9,7 @@ import T from 'prop-types';
 import DocumentsList from 'components/DocumentsList';
 import ListFilter from 'components/ListFilter';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import ListRenderFallback from 'components/_base-ui/ListRenderFallback';
-import TableHeadBorder from 'components/_base-ui/TableHeadBorder';
+import ListFallback from 'components/_base-ui/ListFallback';
 import TabWrapper from 'components/_base-ui/TabWrapper';
 
 const DocumentsView = ({
@@ -29,7 +28,6 @@ const DocumentsView = ({
         fetchParams={fetchParams}
         dispatchFetchData={dispatchFetchDocumentsData}
       />
-      <TableHeadBorder hideBottom={noListData} />
       <ConditionalRender
         Component={
           <DocumentsList
@@ -39,7 +37,7 @@ const DocumentsView = ({
             sortValues={sortValues}
           />
         }
-        FallbackComponent={<ListRenderFallback error={error} />}
+        FallbackComponent={<ListFallback error={error} loading={loading} />}
         shouldRender={!error && !noListData}
       />
     </TabWrapper>

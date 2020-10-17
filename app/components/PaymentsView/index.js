@@ -9,8 +9,7 @@ import T from 'prop-types';
 import ListFilter from 'components/ListFilter';
 import PaymentsList from 'components/PaymentsList';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import ListRenderFallback from 'components/_base-ui/ListRenderFallback';
-import TableHeadBorder from 'components/_base-ui/TableHeadBorder';
+import ListFallback from 'components/_base-ui/ListFallback';
 import TabWrapper from 'components/_base-ui/TabWrapper';
 
 const PaymentsView = ({
@@ -29,7 +28,6 @@ const PaymentsView = ({
         fetchParams={fetchParams}
         dispatchFetchData={dispatchFetchPaymentsData}
       />
-      <TableHeadBorder hideBottom={noListData} />
       <ConditionalRender
         Component={
           <PaymentsList
@@ -39,7 +37,7 @@ const PaymentsView = ({
             sortValues={sortValues}
           />
         }
-        FallbackComponent={<ListRenderFallback error={error} />}
+        FallbackComponent={<ListFallback error={error} loading={loading} />}
         shouldRender={!error && !noListData}
       />
     </TabWrapper>
