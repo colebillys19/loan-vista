@@ -34,6 +34,13 @@ export const StyledTab = styled(Tab)`
   &.Mui-selected {
     color: ${textColorA};
   }
+  & :hover {
+    color: ${textColorA};
+    text-decoration: underline;
+  }
+  &.Mui-selected {
+    text-decoration: none;
+  }
 `;
 
 export const StyledTabs = styled(Tabs)`
