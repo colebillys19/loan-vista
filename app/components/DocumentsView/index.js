@@ -18,6 +18,7 @@ const DocumentsView = ({
   error,
   fetchParams,
   loading,
+  sortLoading,
   sortValues,
 }) => {
   const noListData = !loading && documentsData.length === 0;
@@ -33,7 +34,7 @@ const DocumentsView = ({
           <DocumentsList
             documentsData={documentsData}
             dispatchFetchDocumentsData={dispatchFetchDocumentsData}
-            loading={loading}
+            sortLoading={sortLoading}
             sortValues={sortValues}
           />
         }
@@ -50,6 +51,7 @@ DocumentsView.propTypes = {
   fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
   dispatchFetchDocumentsData: T.func.isRequired,
+  sortLoading: T.bool.isRequired,
   sortValues: T.object.isRequired,
 };
 

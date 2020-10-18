@@ -23,7 +23,7 @@ const PaymentsList = ({
   paymentsData,
   dispatchFetchPaymentsData,
   headers,
-  loading,
+  sortLoading,
   sortValues: { sortCol, sortOrder },
 }) => {
   const [colClicked, setColClicked] = useState('');
@@ -55,7 +55,7 @@ const PaymentsList = ({
                 <ListSortButton
                   isActive={header === sortCol}
                   isAscending={header === sortCol && sortOrder === 'asc'}
-                  loading={loading && header === colClicked}
+                  loading={sortLoading && header === colClicked}
                   onClick={() => handleSortClick(header)}
                   text={header}
                 />
@@ -76,7 +76,6 @@ const PaymentsList = ({
 PaymentsList.propTypes = {
   dispatchFetchPaymentsData: T.func.isRequired,
   headers: T.arrayOf(T.string),
-  loading: T.bool.isRequired,
   paymentsData: T.arrayOf(
     T.shape({
       date: T.string,
@@ -88,6 +87,7 @@ PaymentsList.propTypes = {
       total: T.string,
     }),
   ).isRequired,
+  sortLoading: T.bool.isRequired,
   sortValues: T.shape({ sortCol: T.string, sortOrder: T.string }).isRequired,
 };
 

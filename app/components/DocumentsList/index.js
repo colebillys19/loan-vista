@@ -23,7 +23,7 @@ const DocumentsList = ({
   documentsData,
   dispatchFetchDocumentsData,
   headers,
-  loading,
+  sortLoading,
   sortValues: { sortCol, sortOrder },
 }) => {
   const [colClicked, setColClicked] = useState('');
@@ -57,7 +57,7 @@ const DocumentsList = ({
                     <ListSortButton
                       isActive={header === sortCol}
                       isAscending={header === sortCol && sortOrder === 'asc'}
-                      loading={loading && header === colClicked}
+                      loading={sortLoading && header === colClicked}
                       onClick={() => handleSortClick(header)}
                       text={header}
                     />
@@ -97,7 +97,7 @@ DocumentsList.propTypes = {
     }),
   ).isRequired,
   headers: T.arrayOf(T.string),
-  loading: T.bool.isRequired,
+  sortLoading: T.bool.isRequired,
   sortValues: T.shape({ sortCol: T.string, sortOrder: T.string }).isRequired,
 };
 

@@ -30,6 +30,7 @@ export const Calls = ({
   fetchParams,
   loading,
   pathname,
+  sortLoading,
   sortValues,
 }) => {
   useInjectReducer({ key: 'calls', reducer });
@@ -49,6 +50,7 @@ export const Calls = ({
       fetchParams={fetchParams}
       loading={loading}
       pathname={pathname}
+      sortLoading={sortLoading}
       sortValues={sortValues}
     />
   );
@@ -62,6 +64,7 @@ Calls.propTypes = {
   fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
   pathname: T.string.isRequired,
+  sortLoading: T.bool.isRequired,
   sortValues: T.object.isRequired,
 };
 
@@ -71,6 +74,7 @@ const mapStateToProps = createStructuredSelector({
   fetchParams: makeSelectCalls('fetchParams'),
   loading: makeSelectCalls('loading'),
   pathname: makeSelectPathname(),
+  sortLoading: makeSelectCalls('sortLoading'),
   sortValues: makeSelectSortValues(),
 });
 

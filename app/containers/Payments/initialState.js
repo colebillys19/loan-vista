@@ -10,6 +10,7 @@ const initialState = {
   },
   loading: false,
   paymentsData: [],
+  sortLoading: false,
 };
 
 export default initialState;

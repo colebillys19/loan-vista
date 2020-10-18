@@ -18,6 +18,7 @@ const PaymentsView = ({
   fetchParams,
   loading,
   paymentsData,
+  sortLoading,
   sortValues,
 }) => {
   const noListData = !loading && paymentsData.length === 0;
@@ -33,7 +34,7 @@ const PaymentsView = ({
           <PaymentsList
             paymentsData={paymentsData}
             dispatchFetchPaymentsData={dispatchFetchPaymentsData}
-            loading={loading}
+            sortLoading={sortLoading}
             sortValues={sortValues}
           />
         }
@@ -50,6 +51,7 @@ PaymentsView.propTypes = {
   fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
   paymentsData: T.array.isRequired,
+  sortLoading: T.bool.isRequired,
   sortValues: T.object.isRequired,
 };
 

@@ -18,6 +18,7 @@ const CallsView = ({
   error,
   fetchParams,
   loading,
+  sortLoading,
   sortValues,
 }) => {
   const noListData = !loading && callsData.length === 0;
@@ -34,6 +35,7 @@ const CallsView = ({
             callsData={callsData}
             dispatchFetchCallsData={dispatchFetchCallsData}
             loading={loading}
+            sortLoading={sortLoading}
             sortValues={sortValues}
           />
         }
@@ -50,6 +52,7 @@ CallsView.propTypes = {
   error: T.oneOfType([T.bool, T.string]).isRequired,
   fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
+  sortLoading: T.bool.isRequired,
   sortValues: T.object.isRequired,
 };
 

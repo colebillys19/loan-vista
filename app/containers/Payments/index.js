@@ -30,6 +30,7 @@ export const Payments = ({
   loading,
   paymentsData,
   pathname,
+  sortLoading,
   sortValues,
 }) => {
   useInjectReducer({ key: 'payments', reducer });
@@ -49,6 +50,7 @@ export const Payments = ({
       loading={loading}
       pathname={pathname}
       paymentsData={paymentsData}
+      sortLoading={sortLoading}
       sortValues={sortValues}
     />
   );
@@ -62,6 +64,7 @@ Payments.propTypes = {
   loading: T.bool.isRequired,
   pathname: T.string.isRequired,
   paymentsData: T.array.isRequired,
+  sortLoading: T.bool.isRequired,
   sortValues: T.object.isRequired,
 };
 
@@ -71,6 +74,7 @@ const mapStateToProps = createStructuredSelector({
   loading: makeSelectPayments('loading'),
   pathname: makeSelectPathname(),
   paymentsData: makeSelectPaymentsData(),
+  sortLoading: makeSelectPayments('sortLoading'),
   sortValues: makeSelectSortValues(),
 });
 

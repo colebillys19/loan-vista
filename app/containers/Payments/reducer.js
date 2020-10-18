@@ -15,24 +15,32 @@ const paymentsReducer = (state = initialState, { payload, type }) =>
   produce(state, (draft) => {
     switch (type) {
       case FETCH_PAYMENTS_DATA:
+        const { params } = payload;
         draft.error = false;
-        draft.loading = true;
+        if (params && params.sortOrder) {
+          draft.sortLoading = true;
+        } else {
+          draft.loading = true;
+        }
         break;
       case FETCH_PAYMENTS_DATA_FAILURE:
         const { error } = payload;
         draft.error = error;
         draft.loading = false;
+        draft.sortLoading = false;
         break;
       case FETCH_PAYMENTS_DATA_SUCCESS:
         const { newFetchParams, paymentsData } = payload;
         draft.loading = false;
         draft.fetchParams = newFetchParams;
         draft.paymentsData = paymentsData;
+        draft.sortLoading = false;
         break;
       case ON_UNMOUNT:
         draft.error = false;
-        draft.loading = true;
         draft.fetchParams = initialState.fetchParams;
+        draft.loading = false;
+        draft.sortLoading = false;
         break;
     }
   });
