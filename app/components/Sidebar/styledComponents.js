@@ -16,20 +16,6 @@ export const BottomBorder = styled.div`
   width: 34rem;
 `;
 
-export const LeftBorder = styled.div`
-  background: linear-gradient(
-    0deg,
-    ${backgroundColor} 0%,
-    ${borderGrey} 50%,
-    ${backgroundColor} 100%
-  );
-  height: 108rem;
-  left: -0.1rem;
-  position: absolute;
-  top: 0;
-  width: 0.1rem;
-`;
-
 export const SidebarContainer = styled.aside`
   background: ${backgroundColor};
   background: linear-gradient(

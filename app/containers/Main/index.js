@@ -42,7 +42,13 @@ export const Main = ({
     }
   }, []);
 
-  return render({ error, loading, sidebarHeaderData, sidebarSummariesData });
+  return render({
+    error,
+    loading,
+    loanNumber,
+    sidebarHeaderData,
+    sidebarSummariesData,
+  });
 };
 
 Main.propTypes = {
