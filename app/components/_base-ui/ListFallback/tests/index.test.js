@@ -1,17 +1,17 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import ListRenderFallback from '../index';
+import ListFallback from '../index';
 
-describe('<ListRenderFallback />', () => {
+describe('<ListFallback />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
-    render(<ListRenderFallback />);
+    render(<ListFallback />);
     expect(spy).not.toHaveBeenCalled();
   });
 
   it('Expect to render', () => {
-    const { container } = render(<ListRenderFallback />);
+    const { container } = render(<ListFallback />);
     expect(container.firstChild).toBeDefined();
   });
 });

@@ -13,7 +13,6 @@ import { isValidRoute } from 'utils/globalHelpers';
 
 import {
   BottomBorder,
-  // LeftBorder,
   SidebarContainer,
   SidebarContentContainer,
   SidebarSectionPlaceholder,
@@ -21,8 +20,9 @@ import {
 } from './styledComponents';
 
 const Sidebar = ({
-  // error,
+  error,
   loading,
+  loanNumber,
   pathname,
   sidebarHeaderData,
   sidebarSummariesData: {
@@ -33,7 +33,8 @@ const Sidebar = ({
     serviceSummaryData,
   },
 }) => {
-  const showComponents = !loading && isValidRoute(pathname);
+  const showComponents =
+    isValidRoute(pathname) && !error && !!loanNumber && !loading;
 
   return (
     <SidebarContainer>
@@ -81,8 +82,9 @@ const Sidebar = ({
 };
 
 Sidebar.propTypes = {
-  // error: T.oneOfType([T.bool, T.string]).isRequired,
+  error: T.oneOfType([T.bool, T.string]).isRequired,
   loading: T.bool.isRequired,
+  loanNumber: T.string.isRequired,
   pathname: T.string.isRequired,
   sidebarHeaderData: T.object.isRequired,
   sidebarSummariesData: T.shape({

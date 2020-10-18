@@ -1,4 +1,3 @@
-import ListBodySpinner from './ListBodySpinner';
 import {
   StyledTable,
   StyledTableBody,
@@ -6,14 +5,15 @@ import {
   StyledTableHead,
   StyledTableHeader,
   StyledTableRow,
+  TableWrapper,
 } from './styledComponents';
 
 export {
-  ListBodySpinner,
   StyledTable,
   StyledTableBody,
   StyledTableData,
   StyledTableHead,
   StyledTableHeader,
   StyledTableRow,
+  TableWrapper,
 };

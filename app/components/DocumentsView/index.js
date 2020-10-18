@@ -9,8 +9,7 @@ import T from 'prop-types';
 import DocumentsList from 'components/DocumentsList';
 import ListFilter from 'components/ListFilter';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import ListRenderFallback from 'components/_base-ui/ListRenderFallback';
-import TableHeadBorder from 'components/_base-ui/TableHeadBorder';
+import ListFallback from 'components/_base-ui/ListFallback';
 import TabWrapper from 'components/_base-ui/TabWrapper';
 
 const DocumentsView = ({
@@ -19,6 +18,7 @@ const DocumentsView = ({
   error,
   fetchParams,
   loading,
+  sortLoading,
   sortValues,
 }) => {
   const noListData = !loading && documentsData.length === 0;
@@ -29,18 +29,17 @@ const DocumentsView = ({
         fetchParams={fetchParams}
         dispatchFetchData={dispatchFetchDocumentsData}
       />
-      <TableHeadBorder hideBottom={noListData} />
       <ConditionalRender
         Component={
           <DocumentsList
             documentsData={documentsData}
             dispatchFetchDocumentsData={dispatchFetchDocumentsData}
-            loading={loading}
+            sortLoading={sortLoading}
             sortValues={sortValues}
           />
         }
-        FallbackComponent={<ListRenderFallback error={error} />}
-        shouldRender={!error && !noListData}
+        FallbackComponent={<ListFallback error={error} loading={loading} />}
+        shouldRender={!error && !loading && !noListData}
       />
     </TabWrapper>
   );
@@ -52,6 +51,7 @@ DocumentsView.propTypes = {
   fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
   dispatchFetchDocumentsData: T.func.isRequired,
+  sortLoading: T.bool.isRequired,
   sortValues: T.object.isRequired,
 };
 

@@ -9,8 +9,7 @@ import T from 'prop-types';
 import ListFilter from 'components/ListFilter';
 import PaymentsList from 'components/PaymentsList';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import ListRenderFallback from 'components/_base-ui/ListRenderFallback';
-import TableHeadBorder from 'components/_base-ui/TableHeadBorder';
+import ListFallback from 'components/_base-ui/ListFallback';
 import TabWrapper from 'components/_base-ui/TabWrapper';
 
 const PaymentsView = ({
@@ -19,6 +18,7 @@ const PaymentsView = ({
   fetchParams,
   loading,
   paymentsData,
+  sortLoading,
   sortValues,
 }) => {
   const noListData = !loading && paymentsData.length === 0;
@@ -29,18 +29,17 @@ const PaymentsView = ({
         fetchParams={fetchParams}
         dispatchFetchData={dispatchFetchPaymentsData}
       />
-      <TableHeadBorder hideBottom={noListData} />
       <ConditionalRender
         Component={
           <PaymentsList
             paymentsData={paymentsData}
             dispatchFetchPaymentsData={dispatchFetchPaymentsData}
-            loading={loading}
+            sortLoading={sortLoading}
             sortValues={sortValues}
           />
         }
-        FallbackComponent={<ListRenderFallback error={error} />}
-        shouldRender={!error && !noListData}
+        FallbackComponent={<ListFallback error={error} loading={loading} />}
+        shouldRender={!error && !loading && !noListData}
       />
     </TabWrapper>
   );
@@ -52,6 +51,7 @@ PaymentsView.propTypes = {
   fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
   paymentsData: T.array.isRequired,
+  sortLoading: T.bool.isRequired,
   sortValues: T.object.isRequired,
 };
 

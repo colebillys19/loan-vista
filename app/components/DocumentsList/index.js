@@ -6,15 +6,15 @@
 import React, { useEffect, useState } from 'react';
 import T from 'prop-types';
 
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
+import ListBorders from 'components/_base-ui/ListBorders';
+import ListSortButton from 'components/_base-ui/ListSortButton';
 import {
-  ListBodySpinner,
   StyledTable,
   StyledTableBody,
   StyledTableHeader,
   StyledTableRow,
+  TableWrapper,
 } from 'components/_base-ui/ListTable';
-import ListSortButton from 'components/_base-ui/ListSortButton';
 
 import TableRow from './TableRow';
 import { CustomTableHead } from './styledComponents';
@@ -23,7 +23,7 @@ const DocumentsList = ({
   documentsData,
   dispatchFetchDocumentsData,
   headers,
-  loading,
+  sortLoading,
   sortValues: { sortCol, sortOrder },
 }) => {
   const [colClicked, setColClicked] = useState('');
@@ -45,44 +45,41 @@ const DocumentsList = ({
   };
 
   return (
-    <StyledTable>
-      <CustomTableHead>
-        <StyledTableRow>
-          {headers.map((header) => {
-            if (['date sent', 'type', 'from'].indexOf(header) !== -1) {
+    <TableWrapper>
+      <ListBorders />
+      <StyledTable>
+        <CustomTableHead>
+          <StyledTableRow>
+            {headers.map((header) => {
+              if (['date sent', 'type', 'from'].indexOf(header) !== -1) {
+                return (
+                  <StyledTableHeader key={header} scope="col">
+                    <ListSortButton
+                      isActive={header === sortCol}
+                      isAscending={header === sortCol && sortOrder === 'asc'}
+                      loading={sortLoading && header === colClicked}
+                      onClick={() => handleSortClick(header)}
+                      text={header}
+                    />
+                  </StyledTableHeader>
+                );
+              }
+
               return (
                 <StyledTableHeader key={header} scope="col">
-                  <ListSortButton
-                    isActive={header === sortCol}
-                    isAscending={header === sortCol && sortOrder === 'asc'}
-                    loading={loading && header === colClicked}
-                    onClick={() => handleSortClick(header)}
-                    text={header}
-                  />
+                  {header}
                 </StyledTableHeader>
               );
-            }
-
-            return (
-              <StyledTableHeader key={header} scope="col">
-                {header}
-              </StyledTableHeader>
-            );
-          })}
-        </StyledTableRow>
-      </CustomTableHead>
-      <ConditionalRender
-        Component={
-          <StyledTableBody>
-            {documentsData.map(({ id, ...restData }) => (
-              <TableRow data={restData} headers={headers} key={id} />
-            ))}
-          </StyledTableBody>
-        }
-        FallbackComponent={<ListBodySpinner />}
-        shouldRender={!loading}
-      />
-    </StyledTable>
+            })}
+          </StyledTableRow>
+        </CustomTableHead>
+        <StyledTableBody>
+          {documentsData.map(({ id, ...restData }) => (
+            <TableRow data={restData} headers={headers} key={id} />
+          ))}
+        </StyledTableBody>
+      </StyledTable>
+    </TableWrapper>
   );
 };
 
@@ -100,7 +97,7 @@ DocumentsList.propTypes = {
     }),
   ).isRequired,
   headers: T.arrayOf(T.string),
-  loading: T.bool.isRequired,
+  sortLoading: T.bool.isRequired,
   sortValues: T.shape({ sortCol: T.string, sortOrder: T.string }).isRequired,
 };
 

@@ -33,11 +33,18 @@ const App = ({ dispatchNavigation, pathname }) => (
     <Header />
     <TabNav dispatchNavigation={dispatchNavigation} pathname={pathname} />
     <Main
-      render={({ error, loading, sidebarHeaderData, sidebarSummariesData }) => (
+      render={({
+        error,
+        loading,
+        loanNumber,
+        sidebarHeaderData,
+        sidebarSummariesData,
+      }) => (
         <MainContainer>
           <Sidebar
             error={error}
             loading={loading}
+            loanNumber={loanNumber}
             pathname={pathname}
             sidebarHeaderData={sidebarHeaderData}
             sidebarSummariesData={sidebarSummariesData}
