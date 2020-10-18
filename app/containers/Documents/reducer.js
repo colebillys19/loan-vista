@@ -32,6 +32,7 @@ const documentsReducer = (state = initialState, { payload, type }) =>
       case ON_UNMOUNT:
         draft.error = false;
         draft.loading = true;
+        draft.fetchParams = initialState.fetchParams;
         break;
     }
   });

@@ -21,15 +21,10 @@ export const StyledTable = styled.table`
 `;
 
 export const StyledTableBody = styled.tbody`
-  &:after {
-    content: '';
-    display: block;
-    height: 0.6rem;
-  }
   &:before {
     content: '';
     display: block;
-    height: 0.5rem;
+    height: 0.2rem;
   }
 `;
 

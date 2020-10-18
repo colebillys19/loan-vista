@@ -38,9 +38,7 @@ export const Calls = ({
   useEffect(() => {
     dispatchFetchCallsData();
 
-    return () => {
-      dispatchOnUnmount();
-    };
+    return () => dispatchOnUnmount();
   }, []);
 
   return (

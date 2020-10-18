@@ -38,9 +38,7 @@ export const Payments = ({
   useEffect(() => {
     dispatchFetchPaymentsData();
 
-    return () => {
-      dispatchOnUnmount();
-    };
+    return () => dispatchOnUnmount();
   }, []);
 
   return (

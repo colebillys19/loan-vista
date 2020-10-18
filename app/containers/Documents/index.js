@@ -38,9 +38,7 @@ export const Documents = ({
   useEffect(() => {
     dispatchFetchDocumentsData();
 
-    return () => {
-      dispatchOnUnmount();
-    };
+    return () => dispatchOnUnmount();
   }, []);
 
   return (
