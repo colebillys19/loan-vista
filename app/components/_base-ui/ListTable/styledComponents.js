@@ -62,6 +62,10 @@ export const StyledTableRow = styled.tr`
       ${backgroundColor} 100%
     );
   }
+  &:last-of-type td {
+    padding-bottom: 0.4rem;
+    padding-top: 0.2rem;
+  }
 `;
 
 export const TableWrapper = styled.div`
