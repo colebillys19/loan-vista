@@ -4,9 +4,10 @@ import { GradientBorder } from './styledComponents';
 
 const ListBorders = () => (
   <Fragment>
-    <GradientBorder bottom="-0.1rem" top="" />
-    <GradientBorder bottom="" top="3.4rem" />
     <GradientBorder bottom="" top="-0.1rem" />
+    <GradientBorder bottom="" top="3.4rem" />
+    <GradientBorder bottom="3.4rem" top="" />
+    <GradientBorder bottom="-0.1rem" top="" />
   </Fragment>
 );
 

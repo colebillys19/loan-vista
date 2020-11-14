@@ -1,3 +1,4 @@
+import TableFooter from './TableFooter';
 import {
   StyledTable,
   StyledTableBody,
@@ -15,5 +16,6 @@ export {
   StyledTableHead,
   StyledTableHeader,
   StyledTableRow,
+  TableFooter,
   TableWrapper,
 };

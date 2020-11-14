@@ -13,6 +13,7 @@ import {
   StyledTableBody,
   StyledTableHeader,
   StyledTableRow,
+  TableFooter,
   TableWrapper,
 } from 'components/_base-ui/ListTable';
 
@@ -82,6 +83,7 @@ const CallsList = ({
             <TableRow data={restData} headers={headers} key={id} />
           ))}
         </StyledTableBody>
+        <TableFooter />
       </StyledTable>
     </TableWrapper>
   );
