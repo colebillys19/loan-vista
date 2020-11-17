@@ -70,7 +70,7 @@ export const StyledTableRow = styled.tr`
 
 export const TableFooterCell = styled.td`
   color: transparent;
-  line-height: 3.5rem;
+  line-height: 3.3rem;
 `;
 
 export const TableWrapper = styled.div`
