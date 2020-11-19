@@ -12,11 +12,10 @@ import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import { isValidRoute } from 'utils/globalHelpers';
 
 import {
-  BottomBorder,
+  Gradient,
   SidebarContainer,
   SidebarContentContainer,
   SidebarSectionPlaceholder,
-  TopBorder,
 } from './styledComponents';
 
 const Sidebar = ({
@@ -39,8 +38,7 @@ const Sidebar = ({
   return (
     <SidebarContainer>
       <SidebarContentContainer>
-        <TopBorder />
-        <BottomBorder />
+        <Gradient position="top" />
         <SidebarHeader
           loading={loading}
           pathname={pathname}
@@ -76,6 +74,7 @@ const Sidebar = ({
           FallbackComponent={<SidebarSectionPlaceholder height="10.4rem" />}
           shouldRender={showComponents}
         />
+        <Gradient position="bottom" />
       </SidebarContentContainer>
     </SidebarContainer>
   );

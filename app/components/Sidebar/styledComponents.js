@@ -2,17 +2,20 @@ import styled from 'styled-components';
 
 import { backgroundColor, borderGrey } from 'styleConstants';
 
-export const BottomBorder = styled.div`
+export const Gradient = styled.div`
   background: linear-gradient(
     90deg,
     ${backgroundColor} 0%,
+    ${backgroundColor} 8%,
     ${borderGrey} 50%,
+    ${backgroundColor} 92%,
     ${backgroundColor} 100%
   );
+  bottom: ${({ position }) => (position === 'top' ? 'inherit' : '0')};
   height: 0.1rem;
   left: 1rem;
   position: absolute;
-  bottom: 0;
+  top: ${({ position }) => (position === 'top' ? '-4rem' : 'inherit')};
   width: 34rem;
 `;
 
@@ -43,18 +46,4 @@ export const SidebarSectionPlaceholder = styled.div`
   height: ${({ height }) => height || ''};
   margin-bottom: ${({ isHeader }) => (isHeader ? '4rem' : '2.2rem')};
   width: 100%;
-`;
-
-export const TopBorder = styled.div`
-  background: linear-gradient(
-    90deg,
-    ${backgroundColor} 0%,
-    ${borderGrey} 50%,
-    ${backgroundColor} 100%
-  );
-  height: 0.1rem;
-  left: 1rem;
-  position: absolute;
-  top: -4rem;
-  width: 34rem;
 `;
