@@ -22,9 +22,31 @@ const filterCalls = (data, dateFrom, dateTo, keyword) => {
     ? moment(`${dateTo} 23:59:59`, MOCK_DATA_DATE_FORMAT)
     : now;
 
-  return data.filter(({ date, dept, desc, rep, time }) => {
+  return data.filter((row) => {
+    const { date, time } = row;
     const dateMatch = checkDate(date, dateFromMoment, dateToMoment, time);
-    const keywordMatch = checkKeyword([dept, desc, rep], keyword);
+
+    let keywordMatch = true;
+    if (keyword !== '') {
+      const rowVals = Object.keys(row).reduce((acc, key) => {
+        switch (key) {
+          case 'date':
+            acc.push(moment(row[key], 'YYYY-MM-DD').format('MM/DD/YYYY'));
+            break;
+          case 'time':
+            acc.push(row[key].slice(0, -3));
+            break;
+          case 'id':
+            break;
+          default:
+            acc.push(row[key]);
+        }
+
+        return acc;
+      }, []);
+
+      keywordMatch = checkKeyword(rowVals, keyword);
+    }
 
     return dateMatch && keywordMatch;
   });
