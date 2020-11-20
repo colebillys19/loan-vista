@@ -1,13 +1,5 @@
 const moment = require('moment');
 
-// "dateSent": "2020-12-29", * * * * *
-// "desc": null, * * * * *
-// "file": "integer_aliquet.pdf",
-// "from": "JPP", * * * * *
-// "id": "1311f935-a8f4-4c63-b339-a3b4cd93c287",
-// "timeSent": "20:59:44", * * * * *
-// "type": "email"
-
 const { MOCK_DATA_DATE_FORMAT } = require('../constants');
 const { checkDate, checkKeyword } = require('../helpers');
 
@@ -25,18 +17,46 @@ const filterDocuments = (data, dateFrom, dateTo, keyword) => {
     ? moment(`${dateTo} 23:59:59`, MOCK_DATA_DATE_FORMAT)
     : now;
 
-  return data.filter(({ dateSent, desc, from, timeSent }) => {
+  return data.filter((row) => {
+    const { dateSent, timeSent } = row;
     const dateMatch = checkDate(
       dateSent,
       dateFromMoment,
       dateToMoment,
       timeSent,
     );
-    const keywordMatch = checkKeyword([desc, from], keyword);
+
+    let keywordMatch = true;
+    if (keyword !== '') {
+      const rowVals = getFormattedRowValuesArray(row);
+      keywordMatch = checkKeyword(rowVals, keyword);
+    }
 
     return dateMatch && keywordMatch;
   });
 };
+
+/**
+ * getFormattedRowValuesArray
+ * @description ...
+ */
+const getFormattedRowValuesArray = (rowObj) =>
+  Object.keys(rowObj).reduce((acc, key) => {
+    switch (key) {
+      case 'dateSent':
+        acc.push(moment(rowObj[key], 'YYYY-MM-DD').format('MM/DD/YYYY'));
+        break;
+      case 'id':
+        break;
+      case 'timeSent':
+        acc.push(rowObj[key].slice(0, -3));
+        break;
+      default:
+        acc.push(rowObj[key]);
+    }
+
+    return acc;
+  }, []);
 
 /**
  * getTargetDocumentsData

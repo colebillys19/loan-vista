@@ -28,29 +28,35 @@ const filterCalls = (data, dateFrom, dateTo, keyword) => {
 
     let keywordMatch = true;
     if (keyword !== '') {
-      const rowVals = Object.keys(row).reduce((acc, key) => {
-        switch (key) {
-          case 'date':
-            acc.push(moment(row[key], 'YYYY-MM-DD').format('MM/DD/YYYY'));
-            break;
-          case 'time':
-            acc.push(row[key].slice(0, -3));
-            break;
-          case 'id':
-            break;
-          default:
-            acc.push(row[key]);
-        }
-
-        return acc;
-      }, []);
-
+      const rowVals = getFormattedRowValuesArray(row);
       keywordMatch = checkKeyword(rowVals, keyword);
     }
 
     return dateMatch && keywordMatch;
   });
 };
+
+/**
+ * getFormattedRowValuesArray
+ * @description ...
+ */
+const getFormattedRowValuesArray = (rowObj) =>
+  Object.keys(rowObj).reduce((acc, key) => {
+    switch (key) {
+      case 'date':
+        acc.push(moment(rowObj[key], 'YYYY-MM-DD').format('MM/DD/YYYY'));
+        break;
+      case 'id':
+        break;
+      case 'time':
+        acc.push(rowObj[key].slice(0, -3));
+        break;
+      default:
+        acc.push(rowObj[key]);
+    }
+
+    return acc;
+  }, []);
 
 /**
  * getTargetCallsData

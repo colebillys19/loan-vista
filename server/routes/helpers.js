@@ -20,13 +20,10 @@ const checkDate = (date, dateFromMoment, dateToMoment, time) => {
  * @description ...
  */
 const checkKeyword = (strArr, keyword) => {
-  if (keyword === '') {
-    return true;
-  }
-
   const matches = strArr.filter(
     (str) => str !== null && str.toString().includes(keyword),
   );
+
   return !!matches.length;
 };
 

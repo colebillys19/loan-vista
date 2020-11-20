@@ -9,6 +9,16 @@ const {
 } = require('../helpers');
 
 /**
+ * convertNumToPercentage
+ * @description: ...
+ */
+const convertNumToCurrency = (num, withAdorn = true) => {
+  const split = num.toFixed(2).split('.');
+  split[0] = split[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return `${withAdorn ? '$' : ''}${split.join('.')}`;
+};
+
+/**
  * filterPayments
  * @description ...
  */
@@ -22,20 +32,47 @@ const filterPayments = (data, dateFrom, dateTo, keyword) => {
     ? moment(`${dateTo} 23:59:59`, MOCK_DATA_DATE_FORMAT)
     : now;
 
-  return data.filter(
-    ({ date, desc, escrow, interest, principal, time, total }) => {
-      const dateMatch = checkDate(date, dateFromMoment, dateToMoment, time);
+  return data.filter((row) => {
+    const { date, time } = row;
+    const dateMatch = checkDate(date, dateFromMoment, dateToMoment, time);
 
-      const formattedKeyword = keyword[0] === '$' ? keyword.slice(1) : keyword;
-      const keywordMatch = checkKeyword(
-        [desc, escrow, interest, principal, total],
-        formattedKeyword,
-      );
+    let keywordMatch = true;
+    if (keyword !== '') {
+      const rowVals = getFormattedRowValuesArray(row);
+      keywordMatch = checkKeyword(rowVals, keyword);
+    }
 
-      return dateMatch && keywordMatch;
-    },
-  );
+    return dateMatch && keywordMatch;
+  });
 };
+
+/**
+ * getFormattedRowValuesArray
+ * @description ...
+ */
+const getFormattedRowValuesArray = (rowObj) =>
+  Object.keys(rowObj).reduce((acc, key) => {
+    switch (key) {
+      case 'date':
+        acc.push(moment(rowObj[key], 'YYYY-MM-DD').format('MM/DD/YYYY'));
+        break;
+      case 'desc':
+        acc.push(rowObj[key]);
+        break;
+      case 'effectiveDate':
+        acc.push(rowObj[key]);
+        break;
+      case 'id':
+        break;
+      case 'time':
+        acc.push(rowObj[key].slice(0, -3));
+        break;
+      default:
+        acc.push(convertNumToCurrency(rowObj[key]));
+    }
+
+    return acc;
+  }, []);
 
 /**
  * getTargetPaymentsData
