@@ -28,6 +28,20 @@ const checkKeyword = (strArr, keyword) => {
 };
 
 /**
+ * getDateTimeFormatted
+ * @description ...
+ */
+const getDateTimeFormatted = (dateTime) => {
+  const dateTimeFormatted = moment(dateTime, 'YYYY-MM-DD HH:mm:ss').format(
+    'MM/DD/YYYY hh:mm A',
+  );
+  const [dateFormatted, t, m] = dateTimeFormatted.split(' ');
+  const timeFormatted = `${t} ${m}`;
+
+  return [dateFormatted, timeFormatted];
+};
+
+/**
  * sortByDateAsc
  * @description ...
  */
@@ -47,4 +61,10 @@ const sortByString = (data, str, order) =>
     ? data.sort((a, b) => b[str].localeCompare(a[str]))
     : data.sort((a, b) => a[str].localeCompare(b[str]));
 
-module.exports = { checkDate, checkKeyword, sortByDateAsc, sortByString };
+module.exports = {
+  checkDate,
+  checkKeyword,
+  getDateTimeFormatted,
+  sortByDateAsc,
+  sortByString,
+};

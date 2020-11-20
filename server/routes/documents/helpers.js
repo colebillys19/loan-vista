@@ -1,7 +1,7 @@
 const moment = require('moment');
 
 const { MOCK_DATA_DATE_FORMAT } = require('../constants');
-const { checkDate, checkKeyword } = require('../helpers');
+const { checkDate, checkKeyword, getDateTimeFormatted } = require('../helpers');
 
 /**
  * filterDocuments
@@ -40,16 +40,22 @@ const filterDocuments = (data, dateFrom, dateTo, keyword) => {
  * getFormattedRowValuesArray
  * @description ...
  */
-const getFormattedRowValuesArray = (rowObj) =>
-  Object.keys(rowObj).reduce((acc, key) => {
+const getFormattedRowValuesArray = (rowObj) => {
+  const { dateSent, timeSent } = rowObj;
+  const dateTime = `${dateSent} ${timeSent || '00:00:00'}`;
+  const [dateFormatted, timeFormatted] = getDateTimeFormatted(dateTime);
+
+  return Object.keys(rowObj).reduce((acc, key) => {
     switch (key) {
       case 'dateSent':
-        acc.push(moment(rowObj[key], 'YYYY-MM-DD').format('MM/DD/YYYY'));
+        acc.push(dateFormatted);
         break;
       case 'id':
         break;
       case 'timeSent':
-        acc.push(rowObj[key].slice(0, -3));
+        if (rowObj[key] !== null) {
+          acc.push(timeFormatted);
+        }
         break;
       default:
         acc.push(rowObj[key]);
@@ -57,6 +63,7 @@ const getFormattedRowValuesArray = (rowObj) =>
 
     return acc;
   }, []);
+};
 
 /**
  * getTargetDocumentsData

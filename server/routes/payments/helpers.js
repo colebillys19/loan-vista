@@ -65,7 +65,6 @@ const getFormattedRowValuesArray = (rowObj) =>
       case 'id':
         break;
       case 'time':
-        acc.push(rowObj[key].slice(0, -3));
         break;
       default:
         acc.push(convertNumToCurrency(rowObj[key]));

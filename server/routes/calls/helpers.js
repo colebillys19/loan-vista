@@ -4,6 +4,7 @@ const { MOCK_DATA_DATE_FORMAT } = require('../constants');
 const {
   checkDate,
   checkKeyword,
+  getDateTimeFormatted,
   sortByDateAsc,
   sortByString,
 } = require('../helpers');
@@ -40,16 +41,20 @@ const filterCalls = (data, dateFrom, dateTo, keyword) => {
  * getFormattedRowValuesArray
  * @description ...
  */
-const getFormattedRowValuesArray = (rowObj) =>
-  Object.keys(rowObj).reduce((acc, key) => {
+const getFormattedRowValuesArray = (rowObj) => {
+  const { date, time } = rowObj;
+  const dateTime = `${date} ${time}`;
+  const [dateFormatted, timeFormatted] = getDateTimeFormatted(dateTime);
+
+  return Object.keys(rowObj).reduce((acc, key) => {
     switch (key) {
       case 'date':
-        acc.push(moment(rowObj[key], 'YYYY-MM-DD').format('MM/DD/YYYY'));
+        acc.push(dateFormatted);
         break;
       case 'id':
         break;
       case 'time':
-        acc.push(rowObj[key].slice(0, -3));
+        acc.push(timeFormatted);
         break;
       default:
         acc.push(rowObj[key]);
@@ -57,6 +62,7 @@ const getFormattedRowValuesArray = (rowObj) =>
 
     return acc;
   }, []);
+};
 
 /**
  * getTargetCallsData
