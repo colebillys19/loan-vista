@@ -66,18 +66,6 @@ export const isSameParams = ({
 }) => {
   const fromStr = dateFrom ? dateFrom.format('YYYY-MM-DD') : '';
   const toStr = dateTo ? dateTo.format('YYYY-MM-DD') : '';
-  // console.log('- -- --- -- - -- --- -- - -- --- -- - -- --- -- - -- --- -- -');
-  // console.log('* * * reduxFrom * * *');
-  // console.log(reduxFrom);
-  // console.log('* * * reduxTo * * *');
-  // console.log(reduxTo);
-  // console.log('* * * keyword * * *');
-  // console.log(keyword);
-  // console.log('* * * fromStr * * *');
-  // console.log(fromStr);
-  // console.log('* * * toStr * * *');
-  // console.log(toStr);
-  // console.log('* * * keywordValue * * *');
-  // console.log(keywordValue);
+
   return reduxFrom === fromStr && reduxTo === toStr && keyword === keywordValue;
 };
