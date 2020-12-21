@@ -29,13 +29,14 @@ const ListFilter = ({ dispatchFetchData, fetchParams }) => (
       datePickerToError,
       dateRangeValue,
       dateTo,
+      disableSubmit,
       handleClearValues,
       handleDateFromChange,
       handleDateToChange,
+      handleKeywordChange,
       handleRangeChange,
       handleSubmitValues,
       keywordValue,
-      setKeywordValue,
     }) => {
       const { error: fromError } = datePickerFromError;
       const { error: toError } = datePickerToError;
@@ -65,11 +66,12 @@ const ListFilter = ({ dispatchFetchData, fetchParams }) => (
           </DisableWrapper>
           <DisableWrapper disabled={fromError || toError}>
             <StyledLabel htmlFor="">and/or</StyledLabel>
-            <TextInput onChange={setKeywordValue} value={keywordValue} />
+            <TextInput onChange={handleKeywordChange} value={keywordValue} />
           </DisableWrapper>
           <RefreshButton onClick={handleClearValues} />
           <DisableWrapper disabled={fromError || toError}>
             <StyledButton
+              disabled={disableSubmit}
               onClick={handleSubmitValues}
               text="find"
               type="submit"
