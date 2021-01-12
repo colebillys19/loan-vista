@@ -3,7 +3,11 @@ import moment from 'moment';
 const momentFormatStr = 'YYYY-MM-DD';
 
 export const checkPickersStatus = (fromError, toError) => {
-  const crucialErrors = ['invalid date format', 'pick a date within 2020'];
+  const crucialErrors = [
+    'future dates not permitted',
+    'invalid date format',
+    'pick a more recent date',
+  ];
 
   if (crucialErrors.indexOf(fromError) !== -1) {
     return { from: false, to: true };
@@ -56,16 +60,4 @@ export const getRangeValue = (fromDate, toDate) => {
   const fromIndex = dateStrArr.indexOf(fromStr);
 
   return fromIndex !== -1 && dateStrArr.indexOf(toStr) === 0 ? fromIndex : 0;
-};
-
-export const isSameParams = ({
-  fetchParams: { dateFrom: reduxFrom, dateTo: reduxTo, keyword },
-  dateFrom,
-  dateTo,
-  keywordValue,
-}) => {
-  const fromStr = dateFrom ? dateFrom.format('YYYY-MM-DD') : '';
-  const toStr = dateTo ? dateTo.format('YYYY-MM-DD') : '';
-
-  return reduxFrom === fromStr && reduxTo === toStr && keyword === keywordValue;
 };

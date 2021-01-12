@@ -29,7 +29,6 @@ const ListFilter = ({ dispatchFetchData, fetchParams }) => (
       datePickerToError,
       dateRangeValue,
       dateTo,
-      disableSubmit,
       handleClearValues,
       handleDateFromChange,
       handleDateToChange,
@@ -71,7 +70,6 @@ const ListFilter = ({ dispatchFetchData, fetchParams }) => (
           <RefreshButton onClick={handleClearValues} />
           <DisableWrapper disabled={fromError || toError}>
             <StyledButton
-              disabled={disableSubmit}
               onClick={handleSubmitValues}
               text="find"
               type="submit"

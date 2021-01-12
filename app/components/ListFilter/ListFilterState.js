@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import T from 'prop-types';
 
-import { getDatesArr, getErrors, getRangeValue, isSameParams } from './helpers';
+import { getDatesArr, getErrors, getRangeValue } from './helpers';
 
 const ListFilterState = ({ dispatchFetchData, fetchParams, render }) => {
   const [dateFrom, setDateFrom] = useState(null);
@@ -9,30 +9,9 @@ const ListFilterState = ({ dispatchFetchData, fetchParams, render }) => {
   const [dateRangeValue, setDateRangeValue] = useState(0);
   const [dateTo, setDateTo] = useState(null);
   const [dateToError, setDateToError] = useState('');
-  const [disableSubmit, setDisableSubmit] = useState(false);
   const [keywordValue, setKeywordValue] = useState('');
 
-  useEffect(() => {
-    if (
-      !disableSubmit &&
-      isSameParams({ fetchParams, dateFrom, dateTo, keywordValue })
-    ) {
-      setDisableSubmit(true);
-    } else {
-      setDisableSubmit(false);
-    }
-  }, []);
-
   const handleDateFromChange = (date) => {
-    if (
-      !disableSubmit &&
-      isSameParams({ fetchParams, dateFrom: date, dateTo, keywordValue })
-    ) {
-      setDisableSubmit(true);
-    } else {
-      setDisableSubmit(false);
-    }
-
     setDateFrom(date);
     setDateRangeValue(getRangeValue(dateFrom, dateTo));
     setDateFromError(getErrors(date, dateTo, 'from')[0]);
@@ -40,15 +19,6 @@ const ListFilterState = ({ dispatchFetchData, fetchParams, render }) => {
   };
 
   const handleDateToChange = (date) => {
-    if (
-      !disableSubmit &&
-      isSameParams({ fetchParams, dateFrom, dateTo: date, keywordValue })
-    ) {
-      setDisableSubmit(true);
-    } else {
-      setDisableSubmit(false);
-    }
-
     setDateTo(date);
     setDateRangeValue(getRangeValue(dateFrom, dateTo));
     setDateFromError(getErrors(dateFrom, date, 'to')[0]);
@@ -59,54 +29,16 @@ const ListFilterState = ({ dispatchFetchData, fetchParams, render }) => {
     setDateRangeValue(value);
 
     if (value === 0) {
-      if (
-        !disableSubmit &&
-        isSameParams({
-          fetchParams,
-          dateFrom: null,
-          dateTo: null,
-          keywordValue,
-        })
-      ) {
-        setDisableSubmit(true);
-      } else {
-        setDisableSubmit(false);
-      }
-
       setDateFrom(null);
       setDateTo(null);
     } else {
       const dateObjArr = getDatesArr();
-
-      if (
-        !disableSubmit &&
-        isSameParams({
-          fetchParams,
-          dateFrom: dateObjArr[value],
-          dateTo: dateObjArr[0],
-          keywordValue,
-        })
-      ) {
-        setDisableSubmit(true);
-      } else {
-        setDisableSubmit(false);
-      }
-
       setDateTo(dateObjArr[0]);
       setDateFrom(dateObjArr[value]);
     }
   };
 
   const handleKeywordChange = (value) => {
-    if (
-      !disableSubmit &&
-      isSameParams({ fetchParams, dateFrom, dateTo, keywordValue: value })
-    ) {
-      setDisableSubmit(true);
-    } else {
-      setDisableSubmit(false);
-    }
-
     setKeywordValue(value);
   };
 
@@ -163,7 +95,6 @@ const ListFilterState = ({ dispatchFetchData, fetchParams, render }) => {
     datePickerToError,
     dateRangeValue,
     dateTo,
-    disableSubmit,
     handleClearValues,
     handleDateFromChange,
     handleDateToChange,

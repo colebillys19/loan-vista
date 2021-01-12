@@ -21,9 +21,9 @@ const ForwardRefPicker = forwardRef(({ isError, ...restProps }, ref) => (
         invalidDateMessage="invalid date format"
         isError={isError}
         maxDate={MAX_DATE}
-        maxDateMessage="pick a date within 2020"
+        maxDateMessage="future dates not permitted"
         minDate={MIN_DATE}
-        minDateMessage="pick a date within 2020"
+        minDateMessage="pick a more recent date"
         TextFieldComponent={TextField}
         variant="inline"
         {...restProps}
