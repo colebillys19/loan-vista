@@ -7,9 +7,10 @@ import { MOCK_DATA, MOCK_HEADERS } from './mockData';
 
 const mockProps = {
   callsData: MOCK_DATA,
+  dispatchFetchCallsData: jest.fn(),
   headers: MOCK_HEADERS,
-  sortAsc: true,
-  sortColumn: 'date',
+  sortLoading: false,
+  sortValues: { sortCol: '', sortOrder: '' },
 };
 
 const Component = <CallsList {...mockProps} />;

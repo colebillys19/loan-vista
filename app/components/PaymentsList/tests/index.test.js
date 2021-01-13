@@ -6,10 +6,11 @@ import PaymentsList from '../index';
 import { MOCK_DATA, MOCK_HEADERS } from './mockData';
 
 const mockProps = {
-  paymentsData: MOCK_DATA,
+  dispatchFetchPaymentsData: jest.fn(),
   headers: MOCK_HEADERS,
-  sortAsc: true,
-  sortColumn: 'date',
+  paymentsData: MOCK_DATA,
+  sortLoading: false,
+  sortValues: { sortCol: '', sortOrder: '' },
 };
 
 const Component = <PaymentsList {...mockProps} />;

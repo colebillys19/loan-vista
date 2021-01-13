@@ -2,25 +2,27 @@
 
 exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
 <section
-  class="styledComponents__StyledSection-gk85wv-0 eyjsLj"
+  aria-labelledby="documents-tab"
+  class="TabWrapper-xht0pf-0 hVyZPG"
+  id="documents-view"
 >
   <form
-    class="styledComponents__StyledForm-jktpt7-2 PcimG"
+    class="styledComponents__StyledForm-sc-6nnwf7-2 kpDAEG"
   >
     <span
-      class="styledComponents__DisableWrapper-jktpt7-0 bPcUDV"
+      class="styledComponents__DisableWrapper-sc-6nnwf7-0 emJxZD"
     >
       <label
-        class="styledComponents__StyledLabel-jktpt7-4 caqLpo"
+        class="styledComponents__StyledLabel-sc-6nnwf7-4 fnnyyM"
         for=""
       >
         from
       </label>
       <span
-        class="styledComponents__DatePickerWrapper-sc-1f4ko2w-1 klpbtD"
+        class="styledComponents__DatePickerWrapper-sc-1wk5y4r-1 sdcXD"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root styledComponents__StyledKeyboardDatePicker-sc-1f4ko2w-2 iIOCRn styledComponents__StyledTextField-sc-1f4ko2w-3 ksEjhR"
+          class="MuiFormControl-root MuiTextField-root styledComponents__StyledKeyboardDatePicker-sc-1wk5y4r-2 doVNdr styledComponents__StyledTextField-sc-1wk5y4r-3 eubNBY"
           title=""
         >
           <div
@@ -68,24 +70,24 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
           
         </div>
         <div
-          class="styledComponents__ErrorIndicator-sc-1f4ko2w-0 kHGJQz"
+          class="styledComponents__ErrorIndicator-sc-1wk5y4r-0 oDsFE"
         />
       </span>
     </span>
     <span
-      class="styledComponents__DisableWrapper-jktpt7-0 bPcUDV"
+      class="styledComponents__DisableWrapper-sc-6nnwf7-0 emJxZD"
     >
       <label
-        class="styledComponents__StyledLabel-jktpt7-4 caqLpo"
+        class="styledComponents__StyledLabel-sc-6nnwf7-4 fnnyyM"
         for=""
       >
         to
       </label>
       <span
-        class="styledComponents__DatePickerWrapper-sc-1f4ko2w-1 klpbtD"
+        class="styledComponents__DatePickerWrapper-sc-1wk5y4r-1 sdcXD"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root styledComponents__StyledKeyboardDatePicker-sc-1f4ko2w-2 iIOCRn styledComponents__StyledTextField-sc-1f4ko2w-3 ksEjhR"
+          class="MuiFormControl-root MuiTextField-root styledComponents__StyledKeyboardDatePicker-sc-1wk5y4r-2 doVNdr styledComponents__StyledTextField-sc-1wk5y4r-3 eubNBY"
           title=""
         >
           <div
@@ -133,21 +135,21 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
           
         </div>
         <div
-          class="styledComponents__ErrorIndicator-sc-1f4ko2w-0 kHGJQz"
+          class="styledComponents__ErrorIndicator-sc-1wk5y4r-0 oDsFE"
         />
       </span>
     </span>
     <span
-      class="styledComponents__DisableWrapper-jktpt7-0 bPcUDV"
+      class="styledComponents__DisableWrapper-sc-6nnwf7-0 emJxZD"
     >
       <label
-        class="styledComponents__StyledLabel-jktpt7-4 caqLpo"
+        class="styledComponents__StyledLabel-sc-6nnwf7-4 fnnyyM"
         for=""
       >
         or
       </label>
       <div
-        class="MuiInputBase-root MuiInput-root MuiInput-underline styledComponents__StyledSelect-jktpt7-6 kpSUjc"
+        class="MuiInputBase-root MuiInput-root MuiInput-underline styledComponents__StyledSelect-sc-6nnwf7-6 dzbarT"
       >
         <div
           aria-haspopup="listbox"
@@ -176,16 +178,16 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
       </div>
     </span>
     <span
-      class="styledComponents__DisableWrapper-jktpt7-0 bPcUDV"
+      class="styledComponents__DisableWrapper-sc-6nnwf7-0 emJxZD"
     >
       <label
-        class="styledComponents__StyledLabel-jktpt7-4 caqLpo"
+        class="styledComponents__StyledLabel-sc-6nnwf7-4 fnnyyM"
         for=""
       >
         and/or
       </label>
       <div
-        class="MuiFormControl-root MuiTextField-root styledComponents__StyledTextField-jktpt7-7 eyParo"
+        class="MuiFormControl-root MuiTextField-root styledComponents__StyledTextField-sc-6nnwf7-7 bukyEO"
       >
         <div
           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
@@ -202,7 +204,7 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
     </span>
     <button
       aria-label="delete"
-      class="MuiButtonBase-root MuiIconButton-root styledComponents__StyledIconButton-jktpt7-3 fcspiV"
+      class="MuiButtonBase-root MuiIconButton-root styledComponents__StyledIconButton-sc-6nnwf7-3 LvLiT"
       tabindex="0"
       type="button"
     >
@@ -231,10 +233,10 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
       />
     </button>
     <span
-      class="styledComponents__DisableWrapper-jktpt7-0 bPcUDV"
+      class="styledComponents__DisableWrapper-sc-6nnwf7-0 emJxZD"
     >
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-jktpt7-1 iHqWBQ styledComponents__StyledButton-sc-16dlpcm-0 bdTDoz"
+        class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-6nnwf7-1 fyzjVE styledComponents__StyledButton-sc-86ulmm-0 exBHac"
         tabindex="0"
         type="submit"
       >
@@ -250,144 +252,211 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
     </span>
   </form>
   <div
-    class="styledComponents__BorderContainer-sc-5yfsav-0 pPXxO"
+    class="styledComponents__TableWrapper-qh5wjg-8 hoogGb"
   >
     <div
-      class="styledComponents__GradientBorder-sc-5yfsav-1 bUyJyr"
+      class="styledComponents__GradientBorder-sc-16ewd9t-0 cERlnS"
     />
     <div
-      class="styledComponents__GradientBorder-sc-5yfsav-1 fjwxpF"
+      class="styledComponents__GradientBorder-sc-16ewd9t-0 bWdJUA"
     />
-  </div>
-  <table
-    class="ListTable__StyledTable-sc-1hzu2k7-0 iusylK"
-  >
-    <thead
-      class="ListTable__StyledTableHead-sc-1hzu2k7-3 cPUzcu"
+    <div
+      class="styledComponents__GradientBorder-sc-16ewd9t-0 cPJiSx"
+    />
+    <div
+      class="styledComponents__GradientBorder-sc-16ewd9t-0 bJrMFD"
+    />
+    <table
+      class="styledComponents__StyledTable-qh5wjg-1 hxxaBn"
     >
-      <tr
-        class="ListTable__StyledTableRow-sc-1hzu2k7-5 fSRHID"
+      <thead
+        class="styledComponents__StyledTableHead-qh5wjg-4 styledComponents__CustomTableHead-sc-13flwk-0 ihNRbH"
       >
-        <th
-          class="ListTable__StyledTableHeader-sc-1hzu2k7-4 RlHJw"
-          scope="col"
+        <tr
+          class="styledComponents__StyledTableRow-qh5wjg-6 hCqVZR"
         >
-          <button
-            class="MuiButtonBase-root styledComponents__StyledLinkButton-welgtx-1 khaskL styledComponents__StyledButton-yeygs4-0 kGEvYE"
-            tabindex="0"
-            type="button"
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-5 gupKNG"
+            scope="col"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 fqrnhO MuiButton-disableElevation"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                date sent
+                <span
+                  class="MuiButton-endIcon MuiButton-iconSizeMedium"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    style="height: 0.8rem; width: 0.8rem;"
+                    viewBox="7 7 10 10"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M7 10l5 5 5-5z"
+                      fill="#888888"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </button>
+          </th>
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-5 gupKNG"
+            scope="col"
+          >
+            time sent
+          </th>
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-5 gupKNG"
+            scope="col"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 fqrnhO MuiButton-disableElevation"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                type
+                <span
+                  class="MuiButton-endIcon MuiButton-iconSizeMedium"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    style="height: 0.8rem; width: 0.8rem;"
+                    viewBox="7 7 10 10"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M7 10l5 5 5-5z"
+                      fill="#888888"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </button>
+          </th>
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-5 gupKNG"
+            scope="col"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 fqrnhO MuiButton-disableElevation"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                from
+                <span
+                  class="MuiButton-endIcon MuiButton-iconSizeMedium"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    style="height: 0.8rem; width: 0.8rem;"
+                    viewBox="7 7 10 10"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M7 10l5 5 5-5z"
+                      fill="#888888"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </button>
+          </th>
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-5 gupKNG"
+            scope="col"
+          >
+            desc
+          </th>
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-5 gupKNG"
+            scope="col"
+          >
+            pdf
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="styledComponents__StyledTableBody-qh5wjg-2 iHTrkK"
+      >
+        <tr
+          class="styledComponents__StyledTableRow-qh5wjg-6 hCqVZR"
+        >
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-3 hpnAfB"
           >
             date sent
-          </button>
-          <span
-            class="styledComponents__IconWrapper-welgtx-0 hjNViJ"
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-3 hpnAfB"
           >
-            <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root"
-              focusable="false"
-              style="height: 0.8rem; width: 0.8rem;"
-              viewBox="7 7 10 10"
-            >
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-              />
-              <path
-                d="M7 10l5 5 5-5z"
-                fill="#7b68ee"
-              />
-            </svg>
-          </span>
-        </th>
-        <th
-          class="ListTable__StyledTableHeader-sc-1hzu2k7-4 RlHJw"
-          scope="col"
-        >
-          time sent
-        </th>
-        <th
-          class="ListTable__StyledTableHeader-sc-1hzu2k7-4 RlHJw"
-          scope="col"
-        >
-          <button
-            class="MuiButtonBase-root styledComponents__StyledLinkButton-welgtx-1 khaskL styledComponents__StyledButton-yeygs4-0 kGEvYE"
-            tabindex="0"
-            type="button"
+            time sent
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-3 hpnAfB"
           >
             type
-          </button>
-        </th>
-        <th
-          class="ListTable__StyledTableHeader-sc-1hzu2k7-4 RlHJw"
-          scope="col"
-        >
-          <button
-            class="MuiButtonBase-root styledComponents__StyledLinkButton-welgtx-1 khaskL styledComponents__StyledButton-yeygs4-0 kGEvYE"
-            tabindex="0"
-            type="button"
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-3 hpnAfB"
           >
             from
-          </button>
-        </th>
-        <th
-          class="ListTable__StyledTableHeader-sc-1hzu2k7-4 RlHJw"
-          scope="col"
-        >
-          desc
-        </th>
-        <th
-          class="ListTable__StyledTableHeader-sc-1hzu2k7-4 RlHJw"
-          scope="col"
-        >
-          pdf
-        </th>
-      </tr>
-    </thead>
-    <tbody
-      class="ListTable__StyledTableBody-sc-1hzu2k7-1 gfJpgA"
-    >
-      <tr
-        class="ListTable__StyledTableRow-sc-1hzu2k7-5 fSRHID"
-      >
-        <td
-          class="ListTable__StyledTableData-sc-1hzu2k7-2 kWdquE"
-        >
-          date sent
-        </td>
-        <td
-          class="ListTable__StyledTableData-sc-1hzu2k7-2 kWdquE"
-        >
-          time sent
-        </td>
-        <td
-          class="ListTable__StyledTableData-sc-1hzu2k7-2 kWdquE"
-        >
-          type
-        </td>
-        <td
-          class="ListTable__StyledTableData-sc-1hzu2k7-2 kWdquE"
-        >
-          from
-        </td>
-        <td
-          class="ListTable__StyledTableData-sc-1hzu2k7-2 kWdquE"
-        >
-          desc
-        </td>
-        <td
-          class="ListTable__StyledTableData-sc-1hzu2k7-2 kWdquE"
-        >
-          <button
-            class="MuiButtonBase-root styledComponents__StyledButton-yeygs4-0 kGEvYE"
-            tabindex="0"
-            type="button"
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-3 hpnAfB"
           >
-            download
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+            desc
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-3 hpnAfB"
+          >
+            <button
+              class="MuiButtonBase-root styledComponents__StyledButton-sc-9o47wt-0 fgJPGq"
+              tabindex="0"
+              type="button"
+            >
+              download
+            </button>
+          </td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr>
+          <td
+            class="styledComponents__TableFooterCell-qh5wjg-7 jVHZPT"
+          >
+            hidden text
+          </td>
+        </tr>
+      </thead>
+    </table>
+  </div>
 </section>
 `;

@@ -6,8 +6,8 @@ import MomentUtils from '@date-io/moment';
 import TextField from './TextField';
 import { MAX_DATE, MIN_DATE } from './constants';
 import {
-  ErrorIndicator,
   DatePickerWrapper,
+  ErrorIndicator,
   StyledKeyboardDatePicker,
 } from './styledComponents';
 

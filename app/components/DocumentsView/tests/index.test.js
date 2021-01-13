@@ -5,7 +5,15 @@ import DocumentsView from '../index';
 
 import { MOCK_DATA } from './mockData';
 
-const mockProps = { documentsData: MOCK_DATA, loading: false };
+const mockProps = {
+  dispatchFetchDocumentsData: jest.fn(),
+  documentsData: MOCK_DATA,
+  error: false,
+  fetchParams: {},
+  loading: false,
+  sortLoading: false,
+  sortValues: {},
+};
 
 const Component = <DocumentsView {...mockProps} />;
 

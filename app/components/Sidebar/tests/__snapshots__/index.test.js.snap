@@ -2,16 +2,19 @@
 
 exports[`<Sidebar /> Should render and match the snapshot 1`] = `
 <aside
-  class="styledComponents__SidebarContainer-lrjyvq-0 PTzLz"
+  class="styledComponents__SidebarContainer-sc-86r93y-1 ftHRGU"
 >
   <div
-    class="styledComponents__SidebarContentContainer-lrjyvq-1 kESXzN"
+    class="styledComponents__SidebarContentContainer-sc-86r93y-2 cczAau"
   >
     <div
-      class="styledComponents__SidebarHeaderContainer-sc-1xulxiu-3 kmWDmC"
+      class="styledComponents__Gradient-sc-86r93y-0 TrHiZ"
+    />
+    <div
+      class="styledComponents__SidebarHeaderContainer-n9yhwx-3 lwhPb"
     >
       <div
-        class="styledComponents__IconWrapper-sc-1xulxiu-1 hWBNaT"
+        class="styledComponents__IconWrapper-n9yhwx-1 VYTTc"
       >
         <svg
           aria-hidden="true"
@@ -33,10 +36,10 @@ exports[`<Sidebar /> Should render and match the snapshot 1`] = `
         </svg>
       </div>
       <div
-        class="styledComponents__HeadingContainer-sc-1xulxiu-0 gfBboD"
+        class="styledComponents__HeadingContainer-n9yhwx-0 iALmws"
       >
         <h1
-          class="styledComponents__StyledH1-sc-1xulxiu-5 ctUASD"
+          class="styledComponents__StyledH1-n9yhwx-5 cDHiJi"
         >
           loanNumber
         </h1>
@@ -56,22 +59,22 @@ exports[`<Sidebar /> Should render and match the snapshot 1`] = `
         </svg>
       </div>
       <div
-        class="styledComponents__SidebarDetail-sc-1xulxiu-2 kNaQso"
+        class="styledComponents__SidebarDetail-n9yhwx-2 dfDpUI"
       >
         name
       </div>
       <div
-        class="styledComponents__SidebarDetail-sc-1xulxiu-2 kNaQso"
+        class="styledComponents__SidebarDetail-n9yhwx-2 dfDpUI"
       >
         address1
       </div>
       <div
-        class="styledComponents__SidebarDetail-sc-1xulxiu-2 kNaQso"
+        class="styledComponents__SidebarDetail-n9yhwx-2 dfDpUI"
       >
         address2
       </div>
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1xulxiu-4 iPtejO styledComponents__StyledButton-sc-16dlpcm-0 bdTDoz"
+        class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-n9yhwx-4 jhAcXN styledComponents__StyledButton-sc-86ulmm-0 exBHac"
         tabindex="0"
         type="button"
       >
@@ -85,174 +88,25 @@ exports[`<Sidebar /> Should render and match the snapshot 1`] = `
         />
       </button>
     </div>
-    <section
-      class="styledComponents__SidebarSummaryContainer-sc-1q43yt-2 eBMtkp"
-    >
-      <div
-        class="styledComponents__SummaryTitleWrapper-sc-1q43yt-5 hkLOTY"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root"
-          focusable="false"
-          style="height: 1.2rem; width: 1.2rem;"
-          viewBox="0 0 64 64"
-        >
-          <circle
-            cx="32"
-            cy="31.964"
-            fill="#7b68ee"
-            r="21"
-          />
-        </svg>
-        <h3
-          class="styledComponents__StyledH5-sc-1q43yt-3 jejxyz"
-        >
-          Loan
-        </h3>
-      </div>
-      <div
-        class="styledComponents__SummaryDetail-sc-1q43yt-4 cRLBLf"
-      >
-        <span
-          class="styledComponents__DetailLabel-sc-1q43yt-1 fiToch"
-        >
-          label
-          : 
-        </span>
-        <span
-          class="styledComponents__Detail-sc-1q43yt-0 levbeV"
-        >
-          value
-        </span>
-      </div>
-    </section>
-    <section
-      class="styledComponents__SidebarSummaryContainer-sc-1q43yt-2 eBMtkp"
-    >
-      <div
-        class="styledComponents__SummaryTitleWrapper-sc-1q43yt-5 hkLOTY"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root"
-          focusable="false"
-          style="height: 1.2rem; width: 1.2rem;"
-          viewBox="0 0 64 64"
-        >
-          <circle
-            cx="32"
-            cy="31.964"
-            fill="#7b68ee"
-            r="21"
-          />
-        </svg>
-        <h3
-          class="styledComponents__StyledH5-sc-1q43yt-3 jejxyz"
-        >
-          Payment
-        </h3>
-      </div>
-      <div
-        class="styledComponents__SummaryDetail-sc-1q43yt-4 cRLBLf"
-      >
-        <span
-          class="styledComponents__DetailLabel-sc-1q43yt-1 fiToch"
-        >
-          label
-          : 
-        </span>
-        <span
-          class="styledComponents__Detail-sc-1q43yt-0 levbeV"
-        >
-          value
-        </span>
-      </div>
-    </section>
-    <section
-      class="styledComponents__SidebarSummaryContainer-sc-1q43yt-2 eBMtkp"
-    >
-      <div
-        class="styledComponents__SummaryTitleWrapper-sc-1q43yt-5 hkLOTY"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root"
-          focusable="false"
-          style="height: 1.2rem; width: 1.2rem;"
-          viewBox="0 0 64 64"
-        >
-          <circle
-            cx="32"
-            cy="31.964"
-            fill="#7b68ee"
-            r="21"
-          />
-        </svg>
-        <h3
-          class="styledComponents__StyledH5-sc-1q43yt-3 jejxyz"
-        >
-          Calls
-        </h3>
-      </div>
-      <div
-        class="styledComponents__SummaryDetail-sc-1q43yt-4 cRLBLf"
-      >
-        <span
-          class="styledComponents__DetailLabel-sc-1q43yt-1 fiToch"
-        >
-          label
-          : 
-        </span>
-        <span
-          class="styledComponents__Detail-sc-1q43yt-0 levbeV"
-        >
-          value
-        </span>
-      </div>
-    </section>
-    <section
-      class="styledComponents__SidebarSummaryContainer-sc-1q43yt-2 eBMtkp"
-    >
-      <div
-        class="styledComponents__SummaryTitleWrapper-sc-1q43yt-5 hkLOTY"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root"
-          focusable="false"
-          style="height: 1.2rem; width: 1.2rem;"
-          viewBox="0 0 64 64"
-        >
-          <circle
-            cx="32"
-            cy="31.964"
-            fill="#7b68ee"
-            r="21"
-          />
-        </svg>
-        <h3
-          class="styledComponents__StyledH5-sc-1q43yt-3 jejxyz"
-        >
-          Service
-        </h3>
-      </div>
-      <div
-        class="styledComponents__SummaryDetail-sc-1q43yt-4 cRLBLf"
-      >
-        <span
-          class="styledComponents__DetailLabel-sc-1q43yt-1 fiToch"
-        >
-          label
-          : 
-        </span>
-        <span
-          class="styledComponents__Detail-sc-1q43yt-0 levbeV"
-        >
-          value
-        </span>
-      </div>
-    </section>
+    <div
+      class="styledComponents__SidebarSectionPlaceholder-sc-86r93y-3 fwgRgf"
+      height="31.5rem"
+    />
+    <div
+      class="styledComponents__SidebarSectionPlaceholder-sc-86r93y-3 uJfRJ"
+      height="14.7rem"
+    />
+    <div
+      class="styledComponents__SidebarSectionPlaceholder-sc-86r93y-3 uJfRJ"
+      height="14.7rem"
+    />
+    <div
+      class="styledComponents__SidebarSectionPlaceholder-sc-86r93y-3 eWgbkM"
+      height="10.4rem"
+    />
+    <div
+      class="styledComponents__Gradient-sc-86r93y-0 dgRQcX"
+    />
   </div>
 </aside>
 `;

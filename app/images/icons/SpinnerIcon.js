@@ -6,8 +6,8 @@ import { iconColorA } from 'styleConstants';
 
 const SpinnerIcon = ({ color, size, ...restProps }) => (
   <SvgIcon
-    viewBox="0 0 16 16"
     style={{ height: size, width: size }}
+    viewBox="0 0 16 16"
     {...restProps}
   >
     <path

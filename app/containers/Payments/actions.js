@@ -17,7 +17,7 @@ export const fetchPaymentsDataFailure = (error) => ({
 });
 
 export const fetchPaymentsDataSuccess = (paymentsData, newFetchParams) => ({
-  payload: { paymentsData, newFetchParams },
+  payload: { newFetchParams, paymentsData },
   type: FETCH_PAYMENTS_DATA_SUCCESS,
 });
 

@@ -5,7 +5,15 @@ import CallsView from '../index';
 
 import { MOCK_DATA } from './mockData';
 
-const mockProps = { callsData: MOCK_DATA, loading: false };
+const mockProps = {
+  callsData: MOCK_DATA,
+  dispatchFetchCallsData: jest.fn(),
+  error: false,
+  fetchParams: {},
+  loading: false,
+  sortLoading: false,
+  sortValues: {},
+};
 
 const Component = <CallsView {...mockProps} />;
 

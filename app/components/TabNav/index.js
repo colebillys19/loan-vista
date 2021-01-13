@@ -41,7 +41,7 @@ const TabNav = ({ dispatchNavigation, pathname }) => {
           Dashboard
         </StyledButton>
       </HomeButtonWrapper>
-      <Tabs value={value} handleChange={handleChange} />
+      <Tabs handleChange={handleChange} value={value} />
     </TabNavWrapper>
   );
 };

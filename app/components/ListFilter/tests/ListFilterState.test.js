@@ -3,7 +3,11 @@ import { render } from 'react-testing-library';
 
 import ListFilterState from '../ListFilterState';
 
-const mockProps = { render: () => <div /> };
+const mockProps = {
+  dispatchFetchData: jest.fn(),
+  fetchParams: {},
+  render: () => <div />,
+};
 
 const Component = <ListFilterState {...mockProps} />;
 

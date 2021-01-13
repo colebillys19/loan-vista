@@ -4,7 +4,9 @@ import { render } from 'react-testing-library';
 import Sidebar from '../index';
 
 const mockProps = {
+  error: false,
   loading: false,
+  loanNumber: '',
   pathname: '/',
   sidebarHeaderData: {
     address1: 'address1',

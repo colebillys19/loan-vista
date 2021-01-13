@@ -6,8 +6,8 @@ import { iconColorA } from 'styleConstants';
 
 const BulletIcon = ({ color, size, ...restProps }) => (
   <SvgIcon
-    viewBox="0 0 64 64"
     style={{ height: size, width: size }}
+    viewBox="0 0 64 64"
     {...restProps}
   >
     <circle cx="32" cy="31.964" fill={color} r="21" />

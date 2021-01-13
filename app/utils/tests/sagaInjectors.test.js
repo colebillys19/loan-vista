@@ -7,13 +7,13 @@ import { put } from 'redux-saga/effects';
 
 import configureStore from '../../configureStore';
 import getInjectors, {
-  injectSagaFactory,
   ejectSagaFactory,
+  injectSagaFactory,
 } from '../sagaInjectors';
 import { DAEMON, ONCE_TILL_UNMOUNT, RESTART_ON_REMOUNT } from '../constants';
 
 function* testSaga() {
-  yield put({ type: 'TEST', payload: 'yup' });
+  yield put({ payload: 'yup', type: 'TEST' });
 }
 
 describe('injectors', () => {
@@ -30,8 +30,8 @@ describe('injectors', () => {
     it('should return injectors', () => {
       expect(getInjectors(store)).toEqual(
         expect.objectContaining({
-          injectSaga: expect.any(Function),
           ejectSaga: expect.any(Function),
+          injectSaga: expect.any(Function),
         }),
       );
     });
@@ -70,7 +70,7 @@ describe('injectors', () => {
 
     it('should cancel a saga in RESTART_ON_REMOUNT mode', () => {
       const cancel = jest.fn();
-      store.injectedSagas.test = { task: { cancel }, mode: RESTART_ON_REMOUNT };
+      store.injectedSagas.test = { mode: RESTART_ON_REMOUNT, task: { cancel } };
       ejectSaga('test');
 
       expect(cancel).toHaveBeenCalled();
@@ -78,7 +78,7 @@ describe('injectors', () => {
 
     it('should not cancel a daemon saga', () => {
       const cancel = jest.fn();
-      store.injectedSagas.test = { task: { cancel }, mode: DAEMON };
+      store.injectedSagas.test = { mode: DAEMON, task: { cancel } };
       ejectSaga('test');
 
       expect(cancel).not.toHaveBeenCalled();
@@ -90,8 +90,8 @@ describe('injectors', () => {
 
     it("should remove non daemon saga's descriptor in production", () => {
       process.env.NODE_ENV = 'production';
-      injectSaga('test', { saga: testSaga, mode: RESTART_ON_REMOUNT });
-      injectSaga('test1', { saga: testSaga, mode: ONCE_TILL_UNMOUNT });
+      injectSaga('test', { mode: RESTART_ON_REMOUNT, saga: testSaga });
+      injectSaga('test1', { mode: ONCE_TILL_UNMOUNT, saga: testSaga });
 
       ejectSaga('test');
       ejectSaga('test1');
@@ -103,7 +103,7 @@ describe('injectors', () => {
 
     it("should not remove daemon saga's descriptor in production", () => {
       process.env.NODE_ENV = 'production';
-      injectSaga('test', { saga: testSaga, mode: DAEMON });
+      injectSaga('test', { mode: DAEMON, saga: testSaga });
       ejectSaga('test');
 
       expect(store.injectedSagas.test.saga).toBe(testSaga);
@@ -111,7 +111,7 @@ describe('injectors', () => {
     });
 
     it("should not remove daemon saga's descriptor in development", () => {
-      injectSaga('test', { saga: testSaga, mode: DAEMON });
+      injectSaga('test', { mode: DAEMON, saga: testSaga });
       ejectSaga('test');
 
       expect(store.injectedSagas.test.saga).toBe(testSaga);
@@ -146,17 +146,17 @@ describe('injectors', () => {
       expect(() => injectSaga('test')).toThrow();
       expect(() => injectSaga('test', { saga: 1 })).toThrow();
       expect(() =>
-        injectSaga('test', { saga: testSaga, mode: 'testMode' }),
+        injectSaga('test', { mode: 'testMode', saga: testSaga }),
       ).toThrow();
-      expect(() => injectSaga('test', { saga: testSaga, mode: 1 })).toThrow();
+      expect(() => injectSaga('test', { mode: 1, saga: testSaga })).toThrow();
       expect(() =>
-        injectSaga('test', { saga: testSaga, mode: RESTART_ON_REMOUNT }),
+        injectSaga('test', { mode: RESTART_ON_REMOUNT, saga: testSaga }),
       ).not.toThrow();
       expect(() =>
-        injectSaga('test', { saga: testSaga, mode: DAEMON }),
+        injectSaga('test', { mode: DAEMON, saga: testSaga }),
       ).not.toThrow();
       expect(() =>
-        injectSaga('test', { saga: testSaga, mode: ONCE_TILL_UNMOUNT }),
+        injectSaga('test', { mode: ONCE_TILL_UNMOUNT, saga: testSaga }),
       ).not.toThrow();
     });
 
@@ -171,10 +171,10 @@ describe('injectors', () => {
     it('should not start daemon and once-till-unmount sagas if were started before', () => {
       store.runSaga = jest.fn();
 
-      injectSaga('test1', { saga: testSaga, mode: DAEMON });
-      injectSaga('test1', { saga: testSaga, mode: DAEMON });
-      injectSaga('test2', { saga: testSaga, mode: ONCE_TILL_UNMOUNT });
-      injectSaga('test2', { saga: testSaga, mode: ONCE_TILL_UNMOUNT });
+      injectSaga('test1', { mode: DAEMON, saga: testSaga });
+      injectSaga('test1', { mode: DAEMON, saga: testSaga });
+      injectSaga('test2', { mode: ONCE_TILL_UNMOUNT, saga: testSaga });
+      injectSaga('test2', { mode: ONCE_TILL_UNMOUNT, saga: testSaga });
 
       expect(store.runSaga).toHaveBeenCalledTimes(2);
     });
@@ -183,8 +183,8 @@ describe('injectors', () => {
       store.runSaga = jest.fn();
 
       injectSaga('test1', { saga: testSaga });
-      injectSaga('test2', { saga: testSaga, mode: DAEMON });
-      injectSaga('test3', { saga: testSaga, mode: ONCE_TILL_UNMOUNT });
+      injectSaga('test2', { mode: DAEMON, saga: testSaga });
+      injectSaga('test3', { mode: ONCE_TILL_UNMOUNT, saga: testSaga });
 
       expect(store.runSaga).toHaveBeenCalledTimes(3);
     });
@@ -195,7 +195,7 @@ describe('injectors', () => {
       store.runSaga = jest.fn();
 
       function* testSaga1() {
-        yield put({ type: 'TEST', payload: 'yup' });
+        yield put({ payload: 'yup', type: 'TEST' });
       }
 
       injectSaga('test', { saga: testSaga1 });
@@ -208,23 +208,23 @@ describe('injectors', () => {
       process.env.NODE_ENV = 'production';
       const cancel = jest.fn();
       store.injectedSagas.test = {
+        mode: RESTART_ON_REMOUNT,
         saga: testSaga,
         task: { cancel },
-        mode: RESTART_ON_REMOUNT,
       };
 
       function* testSaga1() {
-        yield put({ type: 'TEST', payload: 'yup' });
+        yield put({ payload: 'yup', type: 'TEST' });
       }
 
-      injectSaga('test', { saga: testSaga1, mode: DAEMON });
+      injectSaga('test', { mode: DAEMON, saga: testSaga1 });
 
       expect(cancel).toHaveBeenCalledTimes(0);
       process.env.NODE_ENV = originalNodeEnv;
     });
 
     it('should save an entire descriptor in the saga registry', () => {
-      injectSaga('test', { saga: testSaga, foo: 'bar' });
+      injectSaga('test', { foo: 'bar', saga: testSaga });
       expect(store.injectedSagas.test.foo).toBe('bar');
     });
   });

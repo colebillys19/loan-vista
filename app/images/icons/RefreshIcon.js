@@ -6,8 +6,8 @@ import { iconColorA } from 'styleConstants';
 
 const RefreshIcon = ({ color, size, ...restProps }) => (
   <SvgIcon
-    viewBox="0 0 24 24"
     style={{ height: size, width: size }}
+    viewBox="0 0 24 24"
     {...restProps}
   >
     <path d="M0 0h24v24H0V0z" fill="transparent" />

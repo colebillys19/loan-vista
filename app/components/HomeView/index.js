@@ -9,7 +9,7 @@ import React from 'react';
 import TabWrapper from 'components/_base-ui/TabWrapper';
 
 const HomeView = () => (
-  <TabWrapper aria-labelledby="home-button" id="home-view">
+  <TabWrapper aria-labelledby="home-tab" id="home-view">
     <div style={{ padding: '1rem' }}>HomeView</div>
   </TabWrapper>
 );

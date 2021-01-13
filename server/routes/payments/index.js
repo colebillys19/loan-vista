@@ -11,8 +11,8 @@ const getPayments = (req, res) => {
 
   setTimeout(() => {
     res.send({
-      paymentsData: targetPaymentsData,
       newFetchParams: fetchParams,
+      paymentsData: targetPaymentsData,
     });
   }, 500);
 };

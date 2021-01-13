@@ -26,14 +26,14 @@ const DocumentsView = ({
   return (
     <TabWrapper aria-labelledby="documents-tab" id="documents-view">
       <ListFilter
-        fetchParams={fetchParams}
         dispatchFetchData={dispatchFetchDocumentsData}
+        fetchParams={fetchParams}
       />
       <ConditionalRender
         Component={
           <DocumentsList
-            documentsData={documentsData}
             dispatchFetchDocumentsData={dispatchFetchDocumentsData}
+            documentsData={documentsData}
             sortLoading={sortLoading}
             sortValues={sortValues}
           />
@@ -46,11 +46,11 @@ const DocumentsView = ({
 };
 
 DocumentsView.propTypes = {
+  dispatchFetchDocumentsData: T.func.isRequired,
   documentsData: T.array.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
   fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
-  dispatchFetchDocumentsData: T.func.isRequired,
   sortLoading: T.bool.isRequired,
   sortValues: T.object.isRequired,
 };

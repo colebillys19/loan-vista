@@ -2,7 +2,9 @@
 
 exports[`<MiscView /> Should render and match the snapshot 1`] = `
 <section
-  class="styledComponents__StyledSection-gk85wv-0 eyjsLj"
+  aria-labelledby="misc-tab"
+  class="TabWrapper-xht0pf-0 hVyZPG"
+  id="misc-view"
 >
   <div
     style="padding: 1rem;"

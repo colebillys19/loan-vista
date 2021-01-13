@@ -15,10 +15,10 @@ const DefaultButton = ({ isActive, isAscending, onClick, text }) => {
 
   return (
     <StyledButton
-      isActive={isActive}
       disableElevation
       disableRipple
       endIcon={Icon}
+      isActive={isActive}
       onClick={onClick}
     >
       {text}

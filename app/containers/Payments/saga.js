@@ -13,7 +13,7 @@ export function* fetchPaymentsDataSaga({ payload }) {
     const stateParams = yield select(makeSelectPayments('fetchParams'));
     const combinedParams = Object.assign({}, stateParams, newParams);
 
-    const { paymentsData, newFetchParams } = yield call(
+    const { newFetchParams, paymentsData } = yield call(
       get,
       `/api/payments/?${querystring.stringify(combinedParams)}`,
     );

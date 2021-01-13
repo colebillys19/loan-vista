@@ -4,7 +4,7 @@ import T from 'prop-types';
 import { StyledTab, StyledTabs } from './styledComponents';
 
 const Tabs = ({ handleChange, value }) => (
-  <StyledTabs value={value} onChange={handleChange}>
+  <StyledTabs onChange={handleChange} value={value}>
     <StyledTab
       aria-controls="calls-view"
       disableRipple

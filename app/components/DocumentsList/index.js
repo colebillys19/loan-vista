@@ -21,8 +21,8 @@ import TableRow from './TableRow';
 import { CustomTableHead } from './styledComponents';
 
 const DocumentsList = ({
-  documentsData,
   dispatchFetchDocumentsData,
+  documentsData,
   headers,
   sortLoading,
   sortValues: { sortCol, sortOrder },
@@ -76,7 +76,7 @@ const DocumentsList = ({
         </CustomTableHead>
         <StyledTableBody>
           {documentsData.map(({ id, ...restData }) => (
-            <TableRow data={restData} headers={headers} key={id} />
+            <TableRow key={id} data={restData} headers={headers} />
           ))}
         </StyledTableBody>
         <TableFooter />

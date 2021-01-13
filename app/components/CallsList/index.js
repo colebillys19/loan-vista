@@ -80,7 +80,7 @@ const CallsList = ({
         </CustomTableHead>
         <StyledTableBody>
           {callsData.map(({ id, ...restData }) => (
-            <TableRow data={restData} headers={headers} key={id} />
+            <TableRow key={id} data={restData} headers={headers} />
           ))}
         </StyledTableBody>
         <TableFooter />

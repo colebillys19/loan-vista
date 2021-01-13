@@ -17,7 +17,7 @@ import * as sagaInjectors from '../sagaInjectors';
 const Component = () => null;
 
 function* testSaga() {
-  yield put({ type: 'TEST', payload: 'yup' });
+  yield put({ payload: 'yup', type: 'TEST' });
 }
 
 describe('injectSaga decorator', () => {
@@ -32,13 +32,13 @@ describe('injectSaga decorator', () => {
   beforeEach(() => {
     store = configureStore({}, memoryHistory);
     injectors = {
-      injectSaga: jest.fn(),
       ejectSaga: jest.fn(),
+      injectSaga: jest.fn(),
     };
     ComponentWithSaga = injectSaga({
       key: 'test',
-      saga: testSaga,
       mode: 'testMode',
+      saga: testSaga,
     })(Component);
     sagaInjectors.default.mockClear();
   });
@@ -54,7 +54,7 @@ describe('injectSaga decorator', () => {
     expect(injectors.injectSaga).toHaveBeenCalledTimes(1);
     expect(injectors.injectSaga).toHaveBeenCalledWith(
       'test',
-      { saga: testSaga, mode: 'testMode' },
+      { mode: 'testMode', saga: testSaga },
       props,
     );
   });
@@ -105,14 +105,14 @@ describe('useInjectSaga hook', () => {
   beforeEach(() => {
     store = configureStore({}, memoryHistory);
     injectors = {
-      injectSaga: jest.fn(),
       ejectSaga: jest.fn(),
+      injectSaga: jest.fn(),
     };
     ComponentWithSaga = () => {
       useInjectSaga({
         key: 'test',
-        saga: testSaga,
         mode: 'testMode',
+        saga: testSaga,
       });
       return null;
     };
@@ -129,8 +129,8 @@ describe('useInjectSaga hook', () => {
 
     expect(injectors.injectSaga).toHaveBeenCalledTimes(1);
     expect(injectors.injectSaga).toHaveBeenCalledWith('test', {
-      saga: testSaga,
       mode: 'testMode',
+      saga: testSaga,
     });
   });
 

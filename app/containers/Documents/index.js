@@ -23,9 +23,9 @@ import saga from './saga';
 import { fetchDocumentsData, onUnmount } from './actions';
 
 export const Documents = ({
-  documentsData,
   dispatchFetchDocumentsData,
   dispatchOnUnmount,
+  documentsData,
   error,
   fetchParams,
   loading,
@@ -57,9 +57,9 @@ export const Documents = ({
 };
 
 Documents.propTypes = {
-  documentsData: T.array.isRequired,
   dispatchFetchDocumentsData: T.func.isRequired,
   dispatchOnUnmount: T.func.isRequired,
+  documentsData: T.array.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
   fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,

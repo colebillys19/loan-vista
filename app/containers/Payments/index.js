@@ -28,8 +28,8 @@ export const Payments = ({
   error,
   fetchParams,
   loading,
-  paymentsData,
   pathname,
+  paymentsData,
   sortLoading,
   sortValues,
 }) => {

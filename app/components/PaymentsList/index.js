@@ -21,9 +21,9 @@ import TableRow from './TableRow';
 import { CustomTableHead } from './styledComponents';
 
 const PaymentsList = ({
-  paymentsData,
   dispatchFetchPaymentsData,
   headers,
+  paymentsData,
   sortLoading,
   sortValues: { sortCol, sortOrder },
 }) => {
@@ -66,7 +66,7 @@ const PaymentsList = ({
         </CustomTableHead>
         <StyledTableBody>
           {paymentsData.map(({ id, ...restData }) => (
-            <TableRow data={restData} headers={headers} key={id} />
+            <TableRow key={id} data={restData} headers={headers} />
           ))}
         </StyledTableBody>
         <TableFooter />

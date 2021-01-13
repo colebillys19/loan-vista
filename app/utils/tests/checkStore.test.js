@@ -10,12 +10,12 @@ describe('checkStore', () => {
   beforeEach(() => {
     store = {
       dispatch: () => {},
-      subscribe: () => {},
       getState: () => {},
-      replaceReducer: () => {},
-      runSaga: () => {},
       injectedReducers: {},
       injectedSagas: {},
+      replaceReducer: () => {},
+      runSaga: () => {},
+      subscribe: () => {},
     };
   });
 

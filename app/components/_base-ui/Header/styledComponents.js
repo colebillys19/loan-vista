@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { backgroundColor, appColorA, appColorB } from 'styleConstants';
+import { appColorA, appColorB, backgroundColor } from 'styleConstants';
 
 export const HeaderContainer = styled.header`
   background-color: ${appColorA};

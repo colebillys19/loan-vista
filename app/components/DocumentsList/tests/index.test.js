@@ -6,10 +6,11 @@ import DocumentsList from '../index';
 import { MOCK_DATA, MOCK_HEADERS } from './mockData';
 
 const mockProps = {
+  dispatchFetchDocumentsData: jest.fn(),
   documentsData: MOCK_DATA,
   headers: MOCK_HEADERS,
-  sortAsc: true,
-  sortColumn: 'date sent',
+  sortLoading: false,
+  sortValues: { sortCol: '', sortOrder: '' },
 };
 
 const Component = <DocumentsList {...mockProps} />;

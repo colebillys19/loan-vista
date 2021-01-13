@@ -5,7 +5,15 @@ import PaymentsView from '../index';
 
 import { MOCK_DATA } from './mockData';
 
-const mockProps = { paymentsData: MOCK_DATA, loading: false };
+const mockProps = {
+  dispatchFetchPaymentsData: jest.fn(),
+  error: false,
+  fetchParams: {},
+  loading: false,
+  paymentsData: MOCK_DATA,
+  sortLoading: false,
+  sortValues: {},
+};
 
 const Component = <PaymentsView {...mockProps} />;
 
