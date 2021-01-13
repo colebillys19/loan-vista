@@ -9,6 +9,7 @@ import { FETCH_CALLS_DATA } from './constants';
 
 export function* fetchCallsDataSaga({ payload }) {
   try {
+    // throw new Error('err');
     const { params: newParams } = payload;
     const stateParams = yield select(makeSelectCalls('fetchParams'));
     const combinedParams = Object.assign({}, stateParams, newParams);

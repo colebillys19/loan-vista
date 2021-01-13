@@ -2,6 +2,12 @@ import moment from 'moment';
 
 const momentFormatStr = 'YYYY-MM-DD';
 
+export const checkParamsNotEmpty = ({
+  dateFrom: reduxDateFrom,
+  dateTo: reduxDateTo,
+  keyword: reduxKeyword,
+}) => reduxDateFrom !== '' || reduxDateTo !== '' || reduxKeyword !== '';
+
 export const checkPickersStatus = (fromError, toError) => {
   const crucialErrors = [
     'future dates not permitted',

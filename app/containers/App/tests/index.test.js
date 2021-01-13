@@ -1,14 +1,13 @@
 import React from 'react';
+import { render } from 'react-testing-library';
 import { ConnectedRouter } from 'connected-react-router';
 import { Provider } from 'react-redux';
-import ShallowRenderer from 'react-test-renderer/shallow';
 
 import configureStore from 'configureStore';
 import history from 'utils/history';
 
 import App from '../index';
 
-// Create redux store with history
 const initialState = {};
 const store = configureStore(initialState, history);
 
@@ -20,12 +19,17 @@ const WrappedApp = (props) => (
   </Provider>
 );
 
-const renderer = new ShallowRenderer();
-
 describe('<App />', () => {
-  it('Should render and match the snapshot', () => {
-    renderer.render(<WrappedApp />);
-    const renderedOutput = renderer.getRenderOutput();
-    expect(renderedOutput).toMatchSnapshot();
+  it('Expect not to log errors in console', () => {
+    const spy = jest.spyOn(global.console, 'error');
+    const dispatch = jest.fn();
+    render(<WrappedApp dispatch={dispatch} />);
+    expect(spy).not.toHaveBeenCalled();
+  });
+
+  it('Expect to render', () => {
+    const dispatch = jest.fn();
+    const { container } = render(<WrappedApp dispatch={dispatch} />);
+    expect(container.firstChild).toBeDefined();
   });
 });

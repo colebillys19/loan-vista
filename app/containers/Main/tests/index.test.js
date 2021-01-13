@@ -7,7 +7,6 @@ import configureStore from 'configureStore';
 import history from 'utils/history';
 import { Main } from '../index';
 
-// Create redux store with history
 const initialState = {};
 const store = configureStore(initialState, history);
 
@@ -42,12 +41,5 @@ describe('<Main />', () => {
     const dispatch = jest.fn();
     const { container } = render(<WrappedMain dispatch={dispatch} />);
     expect(container.firstChild).toBeDefined();
-  });
-
-  it('Should render and match the snapshot', () => {
-    const {
-      container: { firstChild },
-    } = render(<WrappedMain dispatch={jest.fn()} />);
-    expect(firstChild).toMatchSnapshot();
   });
 });

@@ -1,7 +1,12 @@
 import { useState } from 'react';
 import T from 'prop-types';
 
-import { getDatesArr, getErrors, getRangeValue } from './helpers';
+import {
+  checkParamsNotEmpty,
+  getDatesArr,
+  getErrors,
+  getRangeValue,
+} from './helpers';
 
 const ListFilterState = ({ dispatchFetchData, fetchParams, render }) => {
   const [dateFrom, setDateFrom] = useState(null);
@@ -11,6 +16,7 @@ const ListFilterState = ({ dispatchFetchData, fetchParams, render }) => {
   const [dateToError, setDateToError] = useState('');
   const [keywordValue, setKeywordValue] = useState('');
 
+  //
   const handleDateFromChange = (date) => {
     setDateFrom(date);
     setDateRangeValue(getRangeValue(dateFrom, dateTo));
@@ -18,6 +24,7 @@ const ListFilterState = ({ dispatchFetchData, fetchParams, render }) => {
     setDateToError(getErrors(date, dateTo, 'from')[1]);
   };
 
+  //
   const handleDateToChange = (date) => {
     setDateTo(date);
     setDateRangeValue(getRangeValue(dateFrom, dateTo));
@@ -25,6 +32,7 @@ const ListFilterState = ({ dispatchFetchData, fetchParams, render }) => {
     setDateToError(getErrors(dateFrom, date, 'to')[1]);
   };
 
+  //
   const handleRangeChange = (value) => {
     setDateRangeValue(value);
 
@@ -38,10 +46,12 @@ const ListFilterState = ({ dispatchFetchData, fetchParams, render }) => {
     }
   };
 
+  //
   const handleKeywordChange = (value) => {
     setKeywordValue(value);
   };
 
+  //
   const handleClearValues = () => {
     setDateFrom(null);
     setDateRangeValue(0);
@@ -50,15 +60,10 @@ const ListFilterState = ({ dispatchFetchData, fetchParams, render }) => {
     setDateFromError('');
     setDateToError('');
 
-    const {
-      dateFrom: reduxDateFrom,
-      dateTo: reduxDateTo,
-      keyword: reduxKeyword,
-    } = fetchParams;
+    const paramsNotEmpty = checkParamsNotEmpty(fetchParams);
 
-    if (reduxDateFrom !== '' || reduxDateTo !== '' || reduxKeyword !== '') {
+    if (paramsNotEmpty) {
       dispatchFetchData({
-        currentTotal: 80,
         dateFrom: '',
         dateTo: '',
         keyword: '',
@@ -66,10 +71,11 @@ const ListFilterState = ({ dispatchFetchData, fetchParams, render }) => {
     }
   };
 
+  //
   const handleSubmitValues = () => {
     if (!dateFromError && !dateToError) {
-      const fromStr = dateFrom ? dateFrom.format('YYYY-MM-DD') : null;
-      const toStr = dateTo ? dateTo.format('YYYY-MM-DD') : null;
+      const fromStr = dateFrom ? dateFrom.format('YYYY-MM-DD') : '';
+      const toStr = dateTo ? dateTo.format('YYYY-MM-DD') : '';
 
       dispatchFetchData({
         dateFrom: fromStr,

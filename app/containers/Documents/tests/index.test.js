@@ -8,7 +8,6 @@ import history from 'utils/history';
 import { Documents } from '../index';
 import { MOCK_DATA } from './mockData';
 
-// Create redux store with history
 const initialState = {};
 const store = configureStore(initialState, history);
 
@@ -44,12 +43,5 @@ describe('<Documents />', () => {
     const dispatch = jest.fn();
     const { container } = render(<WrappedDocuments dispatch={dispatch} />);
     expect(container.firstChild).toBeDefined();
-  });
-
-  it('Should render and match the snapshot', () => {
-    const {
-      container: { firstChild },
-    } = render(<WrappedDocuments dispatch={jest.fn()} />);
-    expect(firstChild).toMatchSnapshot();
   });
 });
