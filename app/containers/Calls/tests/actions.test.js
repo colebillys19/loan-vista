@@ -15,8 +15,8 @@ import { MOCK_DATA } from './mockData';
 describe('fetchCallsData', () => {
   it('has correct payload and type', () => {
     const params = {
-      dateFrom: '2020-10-13',
-      dateTo: '2020-11-18',
+      dateFrom: '2020-01-01',
+      dateTo: '2020-02-01',
       keyword: 'test',
     };
     const expected = { payload: { params }, type: FETCH_CALLS_DATA };
