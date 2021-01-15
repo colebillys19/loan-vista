@@ -1,6 +1,7 @@
-import { call, put, select, takeLatest } from 'redux-saga/effects';
+import { all, call, put, select, takeLatest } from 'redux-saga/effects';
 import querystring from 'querystring';
 
+import { REQUEST_ERROR_MESSAGE } from 'utils/globalConstants';
 import { get } from 'utils/request';
 
 import {
@@ -24,14 +25,14 @@ export function* fetchDocumentsDataSaga({ payload }) {
     yield put(fetchDocumentsDataSuccess(documentsData, newFetchParams));
   } catch (error) {
     console.error(error); // eslint-disable-line
-    yield put(
-      fetchDocumentsDataFailure(
-        'something unexpected happened while retrieving data',
-      ),
-    );
+    yield put(fetchDocumentsDataFailure(REQUEST_ERROR_MESSAGE));
   }
 }
 
-export default function* watcherSaga() {
+export function* fetchDocumentsData() {
   yield takeLatest(FETCH_DOCUMENTS_DATA, fetchDocumentsDataSaga);
+}
+
+export default function* watcherSaga() {
+  yield all([fetchDocumentsData()]);
 }

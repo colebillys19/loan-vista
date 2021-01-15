@@ -1,10 +1,11 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects';
 import querystring from 'querystring';
 
+import { REQUEST_ERROR_MESSAGE } from 'utils/globalConstants';
 import { get } from 'utils/request';
 
 import { fetchCallsDataFailure } from '../actions';
-import { FETCH_CALLS_DATA, fetchCallsDataErrorMessage } from '../constants';
+import { FETCH_CALLS_DATA } from '../constants';
 import watcherSaga, { fetchCallsData, fetchCallsDataSaga } from '../saga';
 
 describe('fetchCallsData Saga', () => {
@@ -65,7 +66,7 @@ describe('fetchCallsDataSaga Saga', () => {
 
   it('updates state with error message (if request unsuccessful)', () => {
     generatorB.next();
-    const err = fetchCallsDataErrorMessage;
+    const err = REQUEST_ERROR_MESSAGE;
     const actualEffect = generatorB.throw(err).value;
     const expectedEffect = put(fetchCallsDataFailure(err));
 
@@ -76,8 +77,9 @@ describe('fetchCallsDataSaga Saga', () => {
 describe('watcherSaga Saga', () => {
   const generator = watcherSaga();
 
-  it('should yield watcher sagas', () => {
+  it('should yield watcher saga', () => {
     const expectedEffect = all([fetchCallsData()]);
+
     expect(generator.next().value).toEqual(expectedEffect);
   });
 });

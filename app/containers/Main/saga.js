@@ -1,5 +1,6 @@
-import { call, put, takeLatest } from 'redux-saga/effects';
+import { all, call, put, takeLatest } from 'redux-saga/effects';
 
+import { REQUEST_ERROR_MESSAGE } from 'utils/globalConstants';
 import { get } from 'utils/request';
 
 import { fetchLoanDataFailure, fetchLoanDataSuccess } from './actions';
@@ -11,14 +12,14 @@ export function* fetchLoanDataSaga() {
     yield put(fetchLoanDataSuccess(loanData, loanNumber));
   } catch (error) {
     console.error(error); // eslint-disable-line
-    yield put(
-      fetchLoanDataFailure(
-        'something unexpected happened while retrieving data',
-      ),
-    );
+    yield put(fetchLoanDataFailure(REQUEST_ERROR_MESSAGE));
   }
 }
 
-export default function* watcherSaga() {
+export function* fetchLoanData() {
   yield takeLatest(FETCH_LOAN_DATA, fetchLoanDataSaga);
+}
+
+export default function* watcherSaga() {
+  yield all([fetchLoanData()]);
 }

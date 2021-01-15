@@ -1,11 +1,12 @@
 import { all, call, put, select, takeLatest } from 'redux-saga/effects';
 import querystring from 'querystring';
 
+import { REQUEST_ERROR_MESSAGE } from 'utils/globalConstants';
 import { get } from 'utils/request';
 
 import { fetchCallsDataFailure, fetchCallsDataSuccess } from './actions';
 import makeSelectCalls from './selectors';
-import { FETCH_CALLS_DATA, fetchCallsDataErrorMessage } from './constants';
+import { FETCH_CALLS_DATA } from './constants';
 
 export function* fetchCallsDataSaga({ payload }) {
   try {
@@ -21,7 +22,7 @@ export function* fetchCallsDataSaga({ payload }) {
     yield put(fetchCallsDataSuccess(callsData, newFetchParams));
   } catch (error) {
     console.error(error); // eslint-disable-line
-    yield put(fetchCallsDataFailure(fetchCallsDataErrorMessage));
+    yield put(fetchCallsDataFailure(REQUEST_ERROR_MESSAGE));
   }
 }
 
