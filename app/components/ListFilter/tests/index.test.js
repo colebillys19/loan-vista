@@ -1,47 +1,35 @@
-// import React from 'react';
-// import { configure, mount, render, shallow } from 'enzyme';
-// import Adapter from 'enzyme-adapter-react-16';
+import React from 'react';
+import { render } from 'react-testing-library';
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import MomentUtils from '@date-io/moment';
 
-// import ListFilter from '../index';
-// import ListFilterState from '../ListFilterState';
+import { checkBasicRendering } from 'utils/testingHelpers';
+import ListFilter from '../index';
+const mockData = {
+  dispatchFetchData: jest.fn(),
+  fetchParams: {
+    currentTotal: '80',
+    dateFrom: '',
+    dateTo: '',
+    keyword: '',
+    sortCol: 'date',
+    sortOrder: 'desc',
+  },
+};
 
-// const mockProps = {
-//   dateFrom: null,
-//   datePickerFromError: '',
-//   datePickerToError: '',
-//   dateRangeValue: 0,
-//   dateTo: null,
-//   handleClearValues: jest.fn(),
-//   handleDateFromChange: jest.fn(),
-//   handleDateToChange: jest.fn(),
-//   handleRangeChange: jest.fn(),
-//   handleSubmitValues: jest.fn(),
-//   keywordValue: '',
-//   setKeywordValue: jest.fn(),
-// };
+const component = (
+  <MuiPickersUtilsProvider utils={MomentUtils}>
+    <ListFilter {...mockData} />
+  </MuiPickersUtilsProvider>
+);
 
 describe('<ListFilter />', () => {
-  // configure({ adapter: new Adapter() });
+  it('Expect to not log errors in console', () => {
+    const spy = jest.spyOn(global.console, 'error');
+    render(component);
 
-  it('', () => {
-    // const renderMock = jest.fn();
-    // const wrapper = shallow(<ListFilter render={renderMock} />);
-    // console.log(wrapper.debug());
-    // // expect(wrapper.find('ListFilterState').exists()).toBeTruthy();
-    // expect(renderMock).toHaveBeenCalled();
-    expect(true).toBeTruthy();
+    expect(spy).not.toHaveBeenCalled();
   });
+
+  checkBasicRendering(component);
 });
-
-// describe('<ListFilter />', () => {
-//   configure({ adapter: new Adapter() });
-
-//   it('', () => {
-//     const listFilterRender = mount(<ListFilter />)
-//       .find(ListFilterState)
-//       .prop(render);
-//     const wrapper = render(listFilterRender({ ...mockProps }));
-//     console.log(wrapper.debug());
-//     expect(true).toBeTruthy();
-//   });
-// });
