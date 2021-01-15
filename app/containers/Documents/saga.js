@@ -26,7 +26,7 @@ export function* fetchDocumentsDataSaga({ payload }) {
     console.error(error); // eslint-disable-line
     yield put(
       fetchDocumentsDataFailure(
-        'something unexpected happened while retrieving data from the server',
+        'something unexpected happened while retrieving data',
       ),
     );
   }

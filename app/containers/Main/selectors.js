@@ -50,7 +50,7 @@ const makeSelectSidebarSummariesData = () =>
 
 export default makeSelectMain;
 export {
-  selectMainDomain,
   makeSelectSidebarHeaderData,
   makeSelectSidebarSummariesData,
+  selectMainDomain,
 };

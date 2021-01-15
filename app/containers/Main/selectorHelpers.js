@@ -61,9 +61,6 @@ export const getSidebarHeaderData = (
   {
     borrower: { name },
     propertyAddress: { city, state, streetAddress, unit, zip },
-    summaries: {
-      loan: { health },
-    },
   },
   loanNumber,
 ) => {
@@ -73,7 +70,6 @@ export const getSidebarHeaderData = (
   return {
     address1,
     address2,
-    health,
     loanNumber,
     name,
   };

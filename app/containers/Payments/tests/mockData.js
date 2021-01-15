@@ -31,7 +31,7 @@ export const MOCK_RAW_DATA = [
     desc: 'principal curtailment',
     effectiveDate: '2019-10-19',
     escrow: 41.02,
-    escrowBalance: 41.02,
+    escrowBalance: 38.82,
     fees: 74.24,
     id: '29ba8a70-19d3-4ddf-b4ff-879b4f8c8fe6',
     interest: 25,

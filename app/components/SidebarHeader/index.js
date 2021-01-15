@@ -6,13 +6,8 @@
 import React from 'react';
 import T from 'prop-types';
 
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import { getHealthColor } from 'utils/globalHelpers';
-import { BulletIcon } from 'images/icons';
-
 import { getIcon, getTabName } from './helpers';
 import {
-  HeadingContainer,
   IconWrapper,
   SidebarDetail,
   SidebarHeaderContainer,
@@ -22,7 +17,7 @@ import {
 
 const SidebarHeader = ({
   pathname,
-  sidebarHeaderData: { address1, address2, health, loanNumber, name },
+  sidebarHeaderData: { address1, address2, loanNumber, name },
 }) => {
   const isHome = pathname === '/';
   const headingText = isHome ? loanNumber : getTabName(pathname);
@@ -30,15 +25,7 @@ const SidebarHeader = ({
   return (
     <SidebarHeaderContainer>
       <IconWrapper>{getIcon(pathname, '8rem')}</IconWrapper>
-      <HeadingContainer>
-        <StyledH1>{loanNumber.length ? headingText : '-'}</StyledH1>
-        <ConditionalRender
-          Component={
-            <BulletIcon color={getHealthColor(health)} size="2.5rem" />
-          }
-          shouldRender={isHome}
-        />
-      </HeadingContainer>
+      <StyledH1>{loanNumber.length ? headingText : '-'}</StyledH1>
       <SidebarDetail>{name}</SidebarDetail>
       <SidebarDetail>{address1}</SidebarDetail>
       <SidebarDetail>{address2}</SidebarDetail>

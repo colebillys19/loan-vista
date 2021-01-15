@@ -1,15 +1,14 @@
-import { call, put, select, takeLatest } from 'redux-saga/effects';
+import { all, call, put, select, takeLatest } from 'redux-saga/effects';
 import querystring from 'querystring';
 
 import { get } from 'utils/request';
 
 import { fetchCallsDataFailure, fetchCallsDataSuccess } from './actions';
 import makeSelectCalls from './selectors';
-import { FETCH_CALLS_DATA } from './constants';
+import { FETCH_CALLS_DATA, fetchCallsDataErrorMessage } from './constants';
 
 export function* fetchCallsDataSaga({ payload }) {
   try {
-    // throw new Error('err');
     const { params: newParams } = payload;
     const stateParams = yield select(makeSelectCalls('fetchParams'));
     const combinedParams = Object.assign({}, stateParams, newParams);
@@ -22,14 +21,14 @@ export function* fetchCallsDataSaga({ payload }) {
     yield put(fetchCallsDataSuccess(callsData, newFetchParams));
   } catch (error) {
     console.error(error); // eslint-disable-line
-    yield put(
-      fetchCallsDataFailure(
-        'something unexpected happened while retrieving data from the server',
-      ),
-    );
+    yield put(fetchCallsDataFailure(fetchCallsDataErrorMessage));
   }
 }
 
-export default function* watcherSaga() {
+export function* fetchCallsData() {
   yield takeLatest(FETCH_CALLS_DATA, fetchCallsDataSaga);
+}
+
+export default function* watcherSaga() {
+  yield all([fetchCallsData()]);
 }

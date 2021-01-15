@@ -23,7 +23,7 @@ export function* fetchPaymentsDataSaga({ payload }) {
     console.error(error); // eslint-disable-line
     yield put(
       fetchPaymentsDataFailure(
-        'something unexpected happened while retrieving data from the server',
+        'something unexpected happened while retrieving data',
       ),
     );
   }
