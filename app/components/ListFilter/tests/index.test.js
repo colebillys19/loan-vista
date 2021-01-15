@@ -4,8 +4,10 @@ import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import MomentUtils from '@date-io/moment';
 
 import { checkBasicRendering } from 'utils/testingHelpers';
+
 import ListFilter from '../index';
-const mockData = {
+
+const mockProps = {
   dispatchFetchData: jest.fn(),
   fetchParams: {
     currentTotal: '80',
@@ -19,7 +21,7 @@ const mockData = {
 
 const component = (
   <MuiPickersUtilsProvider utils={MomentUtils}>
-    <ListFilter {...mockData} />
+    <ListFilter {...mockProps} />
   </MuiPickersUtilsProvider>
 );
 

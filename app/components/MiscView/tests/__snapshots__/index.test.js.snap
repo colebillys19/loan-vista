@@ -9,7 +9,7 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
   <div
     style="padding: 1rem;"
   >
-    HomeView
+    MiscView
   </div>
 </section>
 `;

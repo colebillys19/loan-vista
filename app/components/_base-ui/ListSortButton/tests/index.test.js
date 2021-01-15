@@ -6,6 +6,7 @@ import ListSortButton from '../index';
 const mockProps = {
   isActive: true,
   isAscending: true,
+  loading: false,
   onClick: jest.fn(),
   text: 'text',
 };

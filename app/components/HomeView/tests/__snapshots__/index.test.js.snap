@@ -2,7 +2,7 @@
 
 exports[`<HomeView /> Should render and match the snapshot 1`] = `
 <section
-  aria-labelledby="home-button"
+  aria-labelledby="home-tab"
   class="TabWrapper-xht0pf-0 hVyZPG"
   id="home-view"
 >
