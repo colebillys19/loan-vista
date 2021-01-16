@@ -1,19 +1,19 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import HomeView from '../index';
+import DashboardView from '../index';
 
-describe('<HomeView />', () => {
+describe('<DashboardView />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
-    render(<HomeView />);
+    render(<DashboardView />);
     expect(spy).not.toHaveBeenCalled();
   });
 
   it('Should render and match the snapshot', () => {
     const {
       container: { firstChild },
-    } = render(<HomeView />);
+    } = render(<DashboardView />);
     expect(firstChild).toMatchSnapshot();
   });
 });

@@ -3,7 +3,7 @@ import { Button, Tab, Tabs } from '@material-ui/core';
 
 import { appColorB, textColorA, textColorB } from 'styleConstants';
 
-export const HomeButtonWrapper = styled.div`
+export const DashboardButtonWrapper = styled.div`
   align-items: center;
   display: flex;
   position: absolute;

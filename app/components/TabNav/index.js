@@ -10,7 +10,7 @@ import Tabs from './Tabs';
 import { checkRoute } from './helpers';
 import { VALID_ROUTES } from './constants';
 import {
-  HomeButtonWrapper,
+  DashboardButtonWrapper,
   StyledButton,
   TabNavWrapper,
 } from './styledComponents';
@@ -24,7 +24,7 @@ const TabNav = ({ dispatchNavigation, pathname }) => {
     dispatchNavigation(VALID_ROUTES[newValue]);
   };
 
-  const handleHomeButtonClick = (e) => {
+  const handleDashboardButtonClick = (e) => {
     e.preventDefault();
     setValue(false);
     dispatchNavigation('/');
@@ -32,15 +32,15 @@ const TabNav = ({ dispatchNavigation, pathname }) => {
 
   return (
     <TabNavWrapper>
-      <HomeButtonWrapper>
+      <DashboardButtonWrapper>
         <StyledButton
           disableRipple
-          id="home-button"
-          onClick={handleHomeButtonClick}
+          id="dashboard-button"
+          onClick={handleDashboardButtonClick}
         >
           Dashboard
         </StyledButton>
-      </HomeButtonWrapper>
+      </DashboardButtonWrapper>
       <Tabs handleChange={handleChange} value={value} />
     </TabNavWrapper>
   );

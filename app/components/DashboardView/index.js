@@ -1,5 +1,5 @@
 /**
- * HomeView
+ * DashboardView
  * @description ...
  */
 
@@ -8,16 +8,16 @@ import React from 'react';
 
 import TabWrapper from 'components/_base-ui/TabWrapper';
 
-const HomeView = () => (
-  <TabWrapper aria-labelledby="home-tab" id="home-view">
-    <div style={{ padding: '1rem' }}>HomeView</div>
+const DashboardView = () => (
+  <TabWrapper aria-labelledby="dashboard-tab" id="dashboard-view">
+    <div style={{ padding: '1rem' }}>DashboardView</div>
   </TabWrapper>
 );
 
-HomeView.propTypes = {
+DashboardView.propTypes = {
   // error: T.oneOfType([T.bool, T.string]).isRequired,
   // loading: T.bool.isRequired,
   // pathname: T.string.isRequired,
 };
 
-export default HomeView;
+export default DashboardView;

@@ -19,8 +19,8 @@ const SidebarHeader = ({
   pathname,
   sidebarHeaderData: { address1, address2, loanNumber, name },
 }) => {
-  const isHome = pathname === '/';
-  const headingText = isHome ? loanNumber : getTabName(pathname);
+  const isDashboard = pathname === '/';
+  const headingText = isDashboard ? loanNumber : getTabName(pathname);
 
   return (
     <SidebarHeaderContainer>

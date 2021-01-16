@@ -18,13 +18,13 @@ import Documents from 'containers/Documents';
 import Main from 'containers/Main';
 import Payments from 'containers/Payments';
 
-import HomeView from 'components/HomeView';
+import DashboardView from 'components/DashboardView';
+import Header from 'components/_base-ui/Header';
+import MainContainer from 'components/_base-ui/MainContainer';
 import MiscView from 'components/MiscView';
 import NotFoundView from 'components/NotFoundView';
 import Sidebar from 'components/Sidebar';
 import TabNav from 'components/TabNav';
-import Header from 'components/_base-ui/Header';
-import MainContainer from 'components/_base-ui/MainContainer';
 
 import { makeSelectPathname } from './selectors';
 
@@ -54,7 +54,11 @@ const App = ({ dispatchNavigation, pathname }) => (
               exact
               path="/"
               render={() => (
-                <HomeView error={error} loading={loading} pathname={pathname} />
+                <DashboardView
+                  error={error}
+                  loading={loading}
+                  pathname={pathname}
+                />
               )}
             />
             <Route component={Calls} exact path="/calls" />
