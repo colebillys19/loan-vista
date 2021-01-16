@@ -6,83 +6,257 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
   class="TabWrapper-xht0pf-0 hVyZPG"
   id="dashboard-view"
 >
-  <div
-    style="outline: 1px solid green;"
+  <section
+    class="styledComponents__SectionContainer-sc-1t59z9k-1 iMiTCh"
   >
-    <div
-      style="margin-bottom: 3rem;"
+    <h2
+      class="styledComponents__StyledH2-sc-1t59z9k-2 cduHnq"
     >
-      <div>
-        DashboardBorrower
+      Borrower Information
+    </h2>
+    <div
+      class="styledComponents__ListsContainer-sc-1t59z9k-0 jjIreI"
+    >
+      <div
+        class="styledComponents__StyledKeyValueList-sc-1t59z9k-3 fWwIta"
+      >
+        <h3
+          class="styledComponents__ListHeading-sc-2j4uwb-1 bLPRRJ"
+        >
+          Borrower 1
+        </h3>
+        <div
+          class="styledComponents__Row-sc-2j4uwb-2 kqFBGX"
+        >
+          <span
+            class="styledComponents__Key-sc-2j4uwb-0 fSrbBp"
+          >
+            name
+          </span>
+          <span
+            class="styledComponents__Value-sc-2j4uwb-3 hYULd"
+          >
+            John Smith
+          </span>
+        </div>
+        <div
+          class="styledComponents__Row-sc-2j4uwb-2 kqFBGX"
+        >
+          <span
+            class="styledComponents__Key-sc-2j4uwb-0 fSrbBp"
+          >
+            address
+          </span>
+          <span
+            class="styledComponents__Value-sc-2j4uwb-3 hYULd"
+          >
+            123 Main St
+          </span>
+        </div>
+        <div
+          class="styledComponents__Row-sc-2j4uwb-2 eDGcPi"
+        >
+          <span
+            class="styledComponents__Key-sc-2j4uwb-0 fSrbBp"
+          />
+          <span
+            class="styledComponents__Value-sc-2j4uwb-3 hYULd"
+          >
+            Westport, CT 06880
+          </span>
+        </div>
+        <div
+          class="styledComponents__Row-sc-2j4uwb-2 kqFBGX"
+        >
+          <span
+            class="styledComponents__Key-sc-2j4uwb-0 fSrbBp"
+          >
+            phone
+          </span>
+          <span
+            class="styledComponents__Value-sc-2j4uwb-3 hYULd"
+          >
+            (123) 456 7890
+          </span>
+        </div>
+        <div
+          class="styledComponents__Row-sc-2j4uwb-2 kqFBGX"
+        >
+          <span
+            class="styledComponents__Key-sc-2j4uwb-0 fSrbBp"
+          >
+            email
+          </span>
+          <span
+            class="styledComponents__Value-sc-2j4uwb-3 hYULd"
+          >
+            yo@hey.com
+          </span>
+        </div>
+        <div
+          class="styledComponents__Row-sc-2j4uwb-2 kqFBGX"
+        >
+          <span
+            class="styledComponents__Key-sc-2j4uwb-0 fSrbBp"
+          >
+            yeet
+          </span>
+          <span
+            class="styledComponents__Value-sc-2j4uwb-3 hYULd"
+          >
+            boy
+          </span>
+        </div>
       </div>
       <div
-        style="padding-left: 1rem;"
+        class="styledComponents__StyledKeyValueList-sc-1t59z9k-3 fWwIta"
       >
-        Borrower 1
-      </div>
-      <div
-        style="padding-left: 1rem;"
-      >
-        Borrower 2
+        <h3
+          class="styledComponents__ListHeading-sc-2j4uwb-1 bLPRRJ"
+        >
+          Borrower 2
+        </h3>
+        <div
+          class="styledComponents__Row-sc-2j4uwb-2 kqFBGX"
+        >
+          <span
+            class="styledComponents__Key-sc-2j4uwb-0 fSrbBp"
+          >
+            name
+          </span>
+          <span
+            class="styledComponents__Value-sc-2j4uwb-3 hYULd"
+          >
+            Claudia Dawson
+          </span>
+        </div>
+        <div
+          class="styledComponents__Row-sc-2j4uwb-2 kqFBGX"
+        >
+          <span
+            class="styledComponents__Key-sc-2j4uwb-0 fSrbBp"
+          >
+            address
+          </span>
+          <span
+            class="styledComponents__Value-sc-2j4uwb-3 hYULd"
+          >
+            456 South Ave
+          </span>
+        </div>
+        <div
+          class="styledComponents__Row-sc-2j4uwb-2 eDGcPi"
+        >
+          <span
+            class="styledComponents__Key-sc-2j4uwb-0 fSrbBp"
+          />
+          <span
+            class="styledComponents__Value-sc-2j4uwb-3 hYULd"
+          >
+            New Canaan, CT 06840
+          </span>
+        </div>
+        <div
+          class="styledComponents__Row-sc-2j4uwb-2 kqFBGX"
+        >
+          <span
+            class="styledComponents__Key-sc-2j4uwb-0 fSrbBp"
+          >
+            phone
+          </span>
+          <span
+            class="styledComponents__Value-sc-2j4uwb-3 hYULd"
+          >
+            (789) 456 1230
+          </span>
+        </div>
+        <div
+          class="styledComponents__Row-sc-2j4uwb-2 kqFBGX"
+        >
+          <span
+            class="styledComponents__Key-sc-2j4uwb-0 fSrbBp"
+          >
+            email
+          </span>
+          <span
+            class="styledComponents__Value-sc-2j4uwb-3 hYULd"
+          >
+            sup@hey.com
+          </span>
+        </div>
+        <div
+          class="styledComponents__Row-sc-2j4uwb-2 kqFBGX"
+        >
+          <span
+            class="styledComponents__Key-sc-2j4uwb-0 fSrbBp"
+          >
+            yes
+          </span>
+          <span
+            class="styledComponents__Value-sc-2j4uwb-3 hYULd"
+          >
+            no
+          </span>
+        </div>
       </div>
     </div>
-    <div
-      style="margin-bottom: 3rem;"
-    >
-      <div>
-        DashboardLoan
-      </div>
-      <div
-        style="padding-left: 1rem;"
-      >
-        Balances
-      </div>
-      <div
-        style="padding-left: 1rem;"
-      >
-        Payment
-      </div>
-      <div
-        style="padding-left: 1rem;"
-      >
-        Stops
-      </div>
+  </section>
+  <div
+    style="margin-bottom: 3rem;"
+  >
+    <div>
+      DashboardLoan
     </div>
     <div
-      style="margin-bottom: 3rem;"
+      style="padding-left: 1rem;"
     >
-      <div>
-        DashboardList
-      </div>
-      <div
-        style="padding-left: 1rem;"
-      >
-        Calls
-      </div>
+      Balances
     </div>
     <div
-      style="margin-bottom: 3rem;"
+      style="padding-left: 1rem;"
     >
-      <div>
-        DashboardList
-      </div>
-      <div
-        style="padding-left: 1rem;"
-      >
-        Documents
-      </div>
+      Payment
     </div>
     <div
-      style="margin-bottom: 3rem;"
+      style="padding-left: 1rem;"
     >
-      <div>
-        DashboardList
-      </div>
-      <div
-        style="padding-left: 1rem;"
-      >
-        Payments
-      </div>
+      Stops
+    </div>
+  </div>
+  <div
+    style="margin-bottom: 3rem;"
+  >
+    <div>
+      DashboardList
+    </div>
+    <div
+      style="padding-left: 1rem;"
+    >
+      Calls
+    </div>
+  </div>
+  <div
+    style="margin-bottom: 3rem;"
+  >
+    <div>
+      DashboardList
+    </div>
+    <div
+      style="padding-left: 1rem;"
+    >
+      Documents
+    </div>
+  </div>
+  <div
+    style="margin-bottom: 3rem;"
+  >
+    <div>
+      DashboardList
+    </div>
+    <div
+      style="padding-left: 1rem;"
+    >
+      Payments
     </div>
   </div>
 </section>

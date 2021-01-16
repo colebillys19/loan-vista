@@ -12,9 +12,9 @@ import { BulletIcon } from 'images/icons';
 import {
   Detail,
   DetailLabel,
+  Row,
   SidebarSummaryContainer,
   StyledH5,
-  SummaryDetail,
   SummaryTitleWrapper,
 } from './styledComponents';
 
@@ -29,10 +29,10 @@ const SidebarSummary = ({ data, health, title }) => (
         label === 'Status' ? getHealthColor(health) : null;
 
       return (
-        <SummaryDetail key={label}>
+        <Row key={label}>
           <DetailLabel>{label}: </DetailLabel>
           <Detail color={statusHealthColor}>{value}</Detail>
-        </SummaryDetail>
+        </Row>
       );
     })}
   </SidebarSummaryContainer>

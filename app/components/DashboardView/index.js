@@ -13,13 +13,11 @@ import DashboardLoan from 'components/DashboardLoan';
 
 const DashboardView = () => (
   <TabWrapper aria-labelledby="dashboard-tab" id="dashboard-view">
-    <div style={{ outline: '1px solid green' }}>
-      <DashboardBorrower />
-      <DashboardLoan />
-      <DashboardList>Calls</DashboardList>
-      <DashboardList>Documents</DashboardList>
-      <DashboardList>Payments</DashboardList>
-    </div>
+    <DashboardBorrower />
+    <DashboardLoan />
+    <DashboardList>Calls</DashboardList>
+    <DashboardList>Documents</DashboardList>
+    <DashboardList>Payments</DashboardList>
   </TabWrapper>
 );
 

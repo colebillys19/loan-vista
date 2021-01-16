@@ -11,6 +11,15 @@ export const DetailLabel = styled.span`
   color: ${textColorB};
 `;
 
+export const Row = styled.div`
+  & span:last-of-type {
+    margin-left: 0.3rem;
+  }
+  & :not(:last-of-type) {
+    margin-bottom: 0.5rem;
+  }
+`;
+
 export const SidebarSummaryContainer = styled.section`
   & :not(:last-of-type) {
     margin-bottom: 2.2rem;
@@ -20,15 +29,6 @@ export const SidebarSummaryContainer = styled.section`
 export const StyledH5 = styled.h3`
   margin: 0;
   display: inline-block;
-`;
-
-export const SummaryDetail = styled.div`
-  & span:last-of-type {
-    margin-left: 0.3rem;
-  }
-  & :not(:last-of-type) {
-    margin-bottom: 0.5rem;
-  }
 `;
 
 export const SummaryTitleWrapper = styled.div`

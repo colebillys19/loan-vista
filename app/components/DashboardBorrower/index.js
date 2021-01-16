@@ -4,16 +4,31 @@
  */
 
 import React from 'react';
-// import T from 'prop-types';
+import T from 'prop-types';
 
-const DashboardBorrower = () => (
-  <div style={{ marginBottom: '3rem' }}>
-    <div>DashboardBorrower</div>
-    <div style={{ paddingLeft: '1rem' }}>Borrower 1</div>
-    <div style={{ paddingLeft: '1rem' }}>Borrower 2</div>
-  </div>
+import {
+  ListsContainer,
+  SectionContainer,
+  StyledH2,
+  StyledKeyValueList,
+} from './styledComponents';
+import { MOCK_DATA } from './tests/mockData';
+
+/* eslint-disable react/no-array-index-key */
+const DashboardBorrower = ({ data }) => (
+  <SectionContainer>
+    <StyledH2>Borrower Information</StyledH2>
+    <ListsContainer>
+      {data.map((listData, i) => (
+        <StyledKeyValueList key={i} data={listData} />
+      ))}
+    </ListsContainer>
+  </SectionContainer>
 );
 
-// DashboardBorrower.propTypes = {};
+DashboardBorrower.propTypes = { data: T.arrayOf(T.object) };
+
+// temp
+DashboardBorrower.defaultProps = { data: MOCK_DATA };
 
 export default DashboardBorrower;

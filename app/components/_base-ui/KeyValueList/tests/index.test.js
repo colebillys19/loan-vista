@@ -1,14 +1,14 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import DashboardBorrower from '../index';
+import KeyValueList from '../index';
 import { MOCK_DATA } from './mockData';
 
 const mockProps = { data: MOCK_DATA };
 
-const Component = <DashboardBorrower {...mockProps} />;
+const Component = <KeyValueList {...mockProps} />;
 
-describe('<DashboardBorrower />', () => {
+describe('<KeyValueList />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);
