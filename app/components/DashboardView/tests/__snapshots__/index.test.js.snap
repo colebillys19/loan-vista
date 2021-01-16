@@ -1,15 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<HomeView /> Should render and match the snapshot 1`] = `
+exports[`<DashboardView /> Should render and match the snapshot 1`] = `
 <section
-  aria-labelledby="home-tab"
+  aria-labelledby="dashboard-tab"
   class="TabWrapper-xht0pf-0 hVyZPG"
-  id="home-view"
+  id="dashboard-view"
 >
   <div
-    style="padding: 1rem;"
+    style="outline: 1px solid green;"
   >
-    HomeView
+    <div
+      style="margin-bottom: 3rem;"
+    >
+      <div>
+        DashboardBorrower
+      </div>
+      <div
+        style="padding-left: 1rem;"
+      >
+        Borrower 1
+      </div>
+      <div
+        style="padding-left: 1rem;"
+      >
+        Borrower 2
+      </div>
+    </div>
+    <div
+      style="margin-bottom: 3rem;"
+    >
+      <div>
+        DashboardLoan
+      </div>
+      <div
+        style="padding-left: 1rem;"
+      >
+        Balances
+      </div>
+      <div
+        style="padding-left: 1rem;"
+      >
+        Payment
+      </div>
+      <div
+        style="padding-left: 1rem;"
+      >
+        Stops
+      </div>
+    </div>
+    <div
+      style="margin-bottom: 3rem;"
+    >
+      <div>
+        DashboardList
+      </div>
+      <div
+        style="padding-left: 1rem;"
+      >
+        Calls
+      </div>
+    </div>
+    <div
+      style="margin-bottom: 3rem;"
+    >
+      <div>
+        DashboardList
+      </div>
+      <div
+        style="padding-left: 1rem;"
+      >
+        Documents
+      </div>
+    </div>
+    <div
+      style="margin-bottom: 3rem;"
+    >
+      <div>
+        DashboardList
+      </div>
+      <div
+        style="padding-left: 1rem;"
+      >
+        Payments
+      </div>
+    </div>
   </div>
 </section>
 `;

@@ -7,10 +7,19 @@ import React from 'react';
 // import T from 'prop-types';
 
 import TabWrapper from 'components/_base-ui/TabWrapper';
+import DashboardBorrower from 'components/DashboardBorrower';
+import DashboardList from 'components/DashboardList';
+import DashboardLoan from 'components/DashboardLoan';
 
 const DashboardView = () => (
   <TabWrapper aria-labelledby="dashboard-tab" id="dashboard-view">
-    <div style={{ padding: '1rem' }}>DashboardView</div>
+    <div style={{ outline: '1px solid green' }}>
+      <DashboardBorrower />
+      <DashboardLoan />
+      <DashboardList>Calls</DashboardList>
+      <DashboardList>Documents</DashboardList>
+      <DashboardList>Payments</DashboardList>
+    </div>
   </TabWrapper>
 );
 

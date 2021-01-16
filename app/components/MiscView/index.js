@@ -6,11 +6,20 @@
 import React from 'react';
 // import T from 'prop-types';
 
+import MiscEscrow from 'components/MiscEscrow';
+import MiscHomeowners from 'components/MiscHomeowners';
+import MiscMortgage from 'components/MiscMortgage';
+import MiscTaxes from 'components/MiscTaxes';
 import TabWrapper from 'components/_base-ui/TabWrapper';
 
 const MiscView = () => (
   <TabWrapper aria-labelledby="misc-tab" id="misc-view">
-    <div style={{ padding: '1rem' }}>MiscView</div>
+    <div style={{ outline: '1px solid green' }}>
+      <MiscEscrow />
+      <MiscTaxes />
+      <MiscHomeowners />
+      <MiscMortgage />
+    </div>
   </TabWrapper>
 );
 

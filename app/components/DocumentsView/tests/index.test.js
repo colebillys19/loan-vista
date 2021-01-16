@@ -24,11 +24,6 @@ describe('<DocumentsView />', () => {
     expect(spy).not.toHaveBeenCalled();
   });
 
-  it('Expect to render', () => {
-    const { container } = render(Component);
-    expect(container.firstChild).toBeDefined();
-  });
-
   it('Should render and match the snapshot', () => {
     const {
       container: { firstChild },

@@ -5,11 +5,11 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
   class="styledComponents__TabNavWrapper-ift0se-4 dktHlw"
 >
   <div
-    class="styledComponents__HomeButtonWrapper-ift0se-0 iZKRmS"
+    class="styledComponents__DashboardButtonWrapper-ift0se-0 bLBlqB"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-ift0se-1 cftdcj"
-      id="home-button"
+      id="dashboard-button"
       tabindex="0"
       type="button"
     >
@@ -93,7 +93,7 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
         </button>
       </div>
       <span
-        class="PrivateTabIndicator-root-9 PrivateTabIndicator-colorSecondary-11 MuiTabs-indicator"
+        class="PrivateTabIndicator-root-5 PrivateTabIndicator-colorSecondary-7 MuiTabs-indicator"
         style="left: 0px; width: 0px;"
       />
     </div>

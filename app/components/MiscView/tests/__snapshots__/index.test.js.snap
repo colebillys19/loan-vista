@@ -7,9 +7,28 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
   id="misc-view"
 >
   <div
-    style="padding: 1rem;"
+    style="outline: 1px solid green;"
   >
-    MiscView
+    <div
+      style="margin-bottom: 3rem;"
+    >
+      MiscEscrow
+    </div>
+    <div
+      style="margin-bottom: 3rem;"
+    >
+      MiscTaxes
+    </div>
+    <div
+      style="margin-bottom: 3rem;"
+    >
+      MiscHomeowners
+    </div>
+    <div
+      style="margin-bottom: 3rem;"
+    >
+      MiscMortgage
+    </div>
   </div>
 </section>
 `;
