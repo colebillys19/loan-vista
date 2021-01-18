@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import { GradientBorder } from './styledComponents';
+import GradientBorder from 'components/_base-ui/GradientBorder';
 
 const ListBorders = () => (
   <Fragment>

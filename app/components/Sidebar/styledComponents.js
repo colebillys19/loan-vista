@@ -11,22 +11,14 @@ export const Gradient = styled.div`
     ${backgroundColor} 92%,
     ${backgroundColor} 100%
   );
-  bottom: ${({ position }) => (position === 'top' ? 'inherit' : '0')};
   height: 0.1rem;
   left: 1rem;
   position: absolute;
-  top: ${({ position }) => (position === 'top' ? '-4rem' : 'inherit')};
+  top: -4rem;
   width: 34rem;
 `;
 
 export const SidebarContainer = styled.aside`
-  background: ${backgroundColor};
-  background: linear-gradient(
-    90deg,
-    ${backgroundColor} 0%,
-    #fff 50%,
-    ${backgroundColor} 100%
-  );
   display: inline-block;
   margin-right: 0.3rem;
   padding-top: 4rem;

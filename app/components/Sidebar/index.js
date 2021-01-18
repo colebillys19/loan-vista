@@ -74,7 +74,6 @@ const Sidebar = ({
           FallbackComponent={<SidebarSectionPlaceholder height="10.4rem" />}
           shouldRender={showComponents}
         />
-        <Gradient position="bottom" />
       </SidebarContentContainer>
     </SidebarContainer>
   );

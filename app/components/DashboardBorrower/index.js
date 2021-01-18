@@ -6,6 +6,8 @@
 import React from 'react';
 import T from 'prop-types';
 
+import GradientBorder from 'components/_base-ui/GradientBorder';
+
 import {
   ListsContainer,
   SectionContainer,
@@ -17,12 +19,14 @@ import { MOCK_DATA } from './tests/mockData';
 /* eslint-disable react/no-array-index-key */
 const DashboardBorrower = ({ data }) => (
   <SectionContainer>
+    <GradientBorder bottom="" top="-0.1rem" />
     <StyledH2>Borrower Information</StyledH2>
     <ListsContainer>
       {data.map((listData, i) => (
         <StyledKeyValueList key={i} data={listData} />
       ))}
     </ListsContainer>
+    <GradientBorder bottom="-0.1rem" top="" />
   </SectionContainer>
 );
 

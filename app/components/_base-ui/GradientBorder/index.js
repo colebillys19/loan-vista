@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { backgroundColor, borderGrey } from 'styleConstants';
 
-export const GradientBorder = styled.div`
+const GradientBorder = styled.div`
   background: linear-gradient(
     90deg,
     ${backgroundColor} 0%,
@@ -16,3 +16,5 @@ export const GradientBorder = styled.div`
   top: ${({ top }) => top};
   width: 83.7rem;
 `;
+
+export default GradientBorder;

@@ -1,13 +1,11 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import TableHeadBorder from '../index';
+import GradientBorder from '../index';
 
-const mockProps = { hideBottom: false };
+const Component = <GradientBorder />;
 
-const Component = <TableHeadBorder {...mockProps} />;
-
-describe('<TableHeadBorder />', () => {
+describe('<GradientBorder />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);
