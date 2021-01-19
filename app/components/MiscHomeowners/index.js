@@ -6,8 +6,12 @@
 import React from 'react';
 // import T from 'prop-types';
 
+import GradientCard from 'components/_base-ui/GradientCard';
+
 const MiscHomeowners = () => (
-  <div style={{ marginBottom: '3rem' }}>MiscHomeowners</div>
+  <GradientCard heading="Homeowner's/Hazard Insurance">
+    <div>yooo</div>
+  </GradientCard>
 );
 
 // MiscHomeowners.propTypes = {};

@@ -6,7 +6,13 @@
 import React from 'react';
 // import T from 'prop-types';
 
-const MiscTaxes = () => <div style={{ marginBottom: '3rem' }}>MiscTaxes</div>;
+import GradientCard from 'components/_base-ui/GradientCard';
+
+const MiscTaxes = () => (
+  <GradientCard heading="Taxes">
+    <div>yooo</div>
+  </GradientCard>
+);
 
 // MiscTaxes.propTypes = {};
 

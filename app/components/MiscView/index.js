@@ -14,12 +14,10 @@ import TabWrapper from 'components/_base-ui/TabWrapper';
 
 const MiscView = () => (
   <TabWrapper aria-labelledby="misc-tab" id="misc-view">
-    <div style={{ outline: '1px solid green' }}>
-      <MiscEscrow />
-      <MiscTaxes />
-      <MiscHomeowners />
-      <MiscMortgage />
-    </div>
+    <MiscEscrow />
+    <MiscTaxes />
+    <MiscHomeowners />
+    <MiscMortgage />
   </TabWrapper>
 );
 

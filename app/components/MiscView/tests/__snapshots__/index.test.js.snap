@@ -6,29 +6,93 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
   class="TabWrapper-xht0pf-0 hVyZPG"
   id="misc-view"
 >
-  <div
-    style="outline: 1px solid green;"
+  <section
+    class="styledComponents__CardContainer-sc-1glo3a7-0 fizWtA"
   >
     <div
-      style="margin-bottom: 3rem;"
+      class="styledComponents__Stripe-sc-1glo3a7-1 jjgAHP"
+    />
+    <div
+      class="styledComponents__SummaryTitleWrapper-sc-1glo3a7-3 dkCrAL"
     >
-      MiscEscrow
+      <h2
+        class="styledComponents__StyledH2-sc-1glo3a7-2 cjmroC"
+      >
+        Escrow
+      </h2>
+    </div>
+    <div>
+      yooo
     </div>
     <div
-      style="margin-bottom: 3rem;"
+      class="GradientBorder-sc-1rv7gqq-0 dmTzmF"
+    />
+  </section>
+  <section
+    class="styledComponents__CardContainer-sc-1glo3a7-0 fizWtA"
+  >
+    <div
+      class="styledComponents__Stripe-sc-1glo3a7-1 jjgAHP"
+    />
+    <div
+      class="styledComponents__SummaryTitleWrapper-sc-1glo3a7-3 dkCrAL"
     >
-      MiscTaxes
+      <h2
+        class="styledComponents__StyledH2-sc-1glo3a7-2 cjmroC"
+      >
+        Taxes
+      </h2>
+    </div>
+    <div>
+      yooo
     </div>
     <div
-      style="margin-bottom: 3rem;"
+      class="GradientBorder-sc-1rv7gqq-0 dmTzmF"
+    />
+  </section>
+  <section
+    class="styledComponents__CardContainer-sc-1glo3a7-0 fizWtA"
+  >
+    <div
+      class="styledComponents__Stripe-sc-1glo3a7-1 jjgAHP"
+    />
+    <div
+      class="styledComponents__SummaryTitleWrapper-sc-1glo3a7-3 dkCrAL"
     >
-      MiscHomeowners
+      <h2
+        class="styledComponents__StyledH2-sc-1glo3a7-2 cjmroC"
+      >
+        Homeowner's/Hazard Insurance
+      </h2>
+    </div>
+    <div>
+      yooo
     </div>
     <div
-      style="margin-bottom: 3rem;"
+      class="GradientBorder-sc-1rv7gqq-0 dmTzmF"
+    />
+  </section>
+  <section
+    class="styledComponents__CardContainer-sc-1glo3a7-0 fizWtA"
+  >
+    <div
+      class="styledComponents__Stripe-sc-1glo3a7-1 jjgAHP"
+    />
+    <div
+      class="styledComponents__SummaryTitleWrapper-sc-1glo3a7-3 dkCrAL"
     >
-      MiscMortgage
+      <h2
+        class="styledComponents__StyledH2-sc-1glo3a7-2 cjmroC"
+      >
+        Mortgage Insurance
+      </h2>
     </div>
-  </div>
+    <div>
+      yooo
+    </div>
+    <div
+      class="GradientBorder-sc-1rv7gqq-0 dmTzmF"
+    />
+  </section>
 </section>
 `;

@@ -8,9 +8,9 @@ import React from 'react';
 
 import GradientCard from 'components/_base-ui/GradientCard';
 import { CallIcon } from 'images/icons';
-import { appColorA } from 'styleConstants';
+import { appColorAOpaque } from 'styleConstants';
 
-const Icon = <CallIcon colorA="black" colorB={appColorA} size="4rem" />;
+const Icon = <CallIcon colorA="black" colorB={appColorAOpaque} size="4rem" />;
 
 const DashboardCalls = () => (
   <GradientCard heading="Calls" Icon={Icon}>

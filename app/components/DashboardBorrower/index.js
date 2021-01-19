@@ -8,11 +8,12 @@ import T from 'prop-types';
 
 import GradientCard from 'components/_base-ui/GradientCard';
 import { GroupIcon } from 'images/icons';
+import { appColorAOpaque } from 'styleConstants';
 
 import { ListsContainer, StyledKeyValueList } from './styledComponents';
 import { MOCK_DATA } from './tests/mockData';
 
-const Icon = <GroupIcon size="4rem" />;
+const Icon = <GroupIcon color={appColorAOpaque} size="4rem" />;
 
 /* eslint-disable react/no-array-index-key */
 const DashboardBorrower = ({ data }) => (

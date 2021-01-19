@@ -8,9 +8,9 @@ import React from 'react';
 
 import GradientCard from 'components/_base-ui/GradientCard';
 import { MailIcon } from 'images/icons';
-import { appColorA } from 'styleConstants';
+import { appColorAOpaque } from 'styleConstants';
 
-const Icon = <MailIcon colorA="black" colorB={appColorA} size="4rem" />;
+const Icon = <MailIcon colorA="black" colorB={appColorAOpaque} size="4rem" />;
 
 const DashboardDocuments = () => (
   <GradientCard heading="Documents" Icon={Icon}>

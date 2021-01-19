@@ -8,9 +8,9 @@ import React from 'react';
 
 import GradientCard from 'components/_base-ui/GradientCard';
 import { CashIcon } from 'images/icons';
-import { appColorA } from 'styleConstants';
+import { appColorAOpaque } from 'styleConstants';
 
-const Icon = <CashIcon colorA="black" colorB={appColorA} size="4rem" />;
+const Icon = <CashIcon colorA="black" colorB={appColorAOpaque} size="4rem" />;
 
 const DashboardPayments = () => (
   <GradientCard heading="Payments" Icon={Icon}>
