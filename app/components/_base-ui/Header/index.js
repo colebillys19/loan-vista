@@ -1,8 +1,3 @@
-/**
- * Header
- * @description ...
- */
-
 import React from 'react';
 
 import { HeaderContainer } from './styledComponents';

@@ -1,8 +1,3 @@
-/**
- * Spinner
- * @description ...
- */
-
 import React from 'react';
 
 import { StyledSpinnerIcon } from './styledComponents';

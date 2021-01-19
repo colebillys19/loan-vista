@@ -6,28 +6,20 @@
 import React from 'react';
 import T from 'prop-types';
 
-import GradientBorder from 'components/_base-ui/GradientBorder';
+import GradientCard from 'components/_base-ui/GradientCard';
 
-import {
-  ListsContainer,
-  SectionContainer,
-  StyledH2,
-  StyledKeyValueList,
-} from './styledComponents';
+import { ListsContainer, StyledKeyValueList } from './styledComponents';
 import { MOCK_DATA } from './tests/mockData';
 
 /* eslint-disable react/no-array-index-key */
 const DashboardBorrower = ({ data }) => (
-  <SectionContainer>
-    <GradientBorder bottom="" top="-0.1rem" />
-    <StyledH2>Borrower Information</StyledH2>
+  <GradientCard heading="Borrower Information">
     <ListsContainer>
       {data.map((listData, i) => (
         <StyledKeyValueList key={i} data={listData} />
       ))}
     </ListsContainer>
-    <GradientBorder bottom="-0.1rem" top="" />
-  </SectionContainer>
+  </GradientCard>
 );
 
 DashboardBorrower.propTypes = { data: T.arrayOf(T.object) };

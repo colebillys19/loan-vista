@@ -1,8 +1,3 @@
-/**
- * TabWrapper
- * @description ...
- */
-
 import styled from 'styled-components';
 
 import { appColorA } from 'styleConstants';

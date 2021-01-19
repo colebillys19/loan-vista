@@ -20,7 +20,7 @@ import Payments from 'containers/Payments';
 
 import DashboardView from 'components/DashboardView';
 import Header from 'components/_base-ui/Header';
-import MainContainer from 'components/_base-ui/MainContainer';
+import MainContainer from 'components/MainContainer';
 import MiscView from 'components/MiscView';
 import NotFoundView from 'components/NotFoundView';
 import Sidebar from 'components/Sidebar';

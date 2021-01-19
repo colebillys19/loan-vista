@@ -20,10 +20,6 @@ export const SectionContainer = styled.section`
   position: relative;
 `;
 
-export const StyledH2 = styled.h2`
-  margin: 0 0 2rem;
-`;
-
 export const StyledKeyValueList = styled(KeyValueList)`
   width: 37rem;
 `;

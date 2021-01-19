@@ -6,13 +6,12 @@
 import React from 'react';
 // import T from 'prop-types';
 
+import GradientCard from 'components/_base-ui/GradientCard';
+
 const DashboardLoan = () => (
-  <div style={{ marginBottom: '3rem' }}>
-    <div>DashboardLoan</div>
-    <div style={{ paddingLeft: '1rem' }}>Balances</div>
-    <div style={{ paddingLeft: '1rem' }}>Payment</div>
-    <div style={{ paddingLeft: '1rem' }}>Stops</div>
-  </div>
+  <GradientCard heading="Loan Information">
+    <div>yooo</div>
+  </GradientCard>
 );
 
 // DashboardLoan.propTypes = {};
