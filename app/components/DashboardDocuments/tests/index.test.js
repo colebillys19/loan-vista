@@ -1,16 +1,13 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import GradientCard from '../index';
+import DashboardDocuments from '../index';
 
-const mockProps = {
-  children: <div />,
-  heading: 'Heading',
-};
+const mockProps = {};
 
-const Component = <GradientCard {...mockProps} />;
+const Component = <DashboardDocuments {...mockProps} />;
 
-describe('<GradientCard />', () => {
+describe('<DashboardDocuments />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

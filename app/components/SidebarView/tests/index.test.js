@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import Sidebar from '../index';
+import SidebarView from '../index';
 
 const mockProps = {
   error: false,
@@ -24,9 +24,9 @@ const mockProps = {
   },
 };
 
-const Component = <Sidebar {...mockProps} />;
+const Component = <SidebarView {...mockProps} />;
 
-describe('<Sidebar />', () => {
+describe('<SidebarView />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

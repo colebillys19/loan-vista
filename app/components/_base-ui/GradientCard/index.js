@@ -3,12 +3,20 @@ import T from 'prop-types';
 
 import GradientBorder from 'components/_base-ui/GradientBorder';
 
-import { CardContainer, StyledH2 } from './styledComponents';
+import {
+  CardContainer,
+  Stripe,
+  StyledH2,
+  SummaryTitleWrapper,
+} from './styledComponents';
 
-const GradientCard = ({ children, heading, ...restProps }) => (
+const GradientCard = ({ children, heading, Icon, ...restProps }) => (
   <CardContainer {...restProps}>
-    <StyledH2>{heading}</StyledH2>
-    <GradientBorder bottom="" top="-0.1rem" />
+    <Stripe />
+    <SummaryTitleWrapper>
+      {Icon && Icon}
+      <StyledH2>{heading}</StyledH2>
+    </SummaryTitleWrapper>
     {children}
     <GradientBorder bottom="-0.1rem" top="" />
   </CardContainer>
@@ -17,6 +25,7 @@ const GradientCard = ({ children, heading, ...restProps }) => (
 GradientCard.propTypes = {
   children: T.node.isRequired,
   heading: T.string.isRequired,
+  Icon: T.node,
 };
 
 export default GradientCard;

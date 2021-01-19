@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import DashboardList from '../index';
+import DashboardCalls from '../index';
 
 const mockProps = {};
 
-const Component = <DashboardList {...mockProps} />;
+const Component = <DashboardCalls {...mockProps} />;
 
-describe('<DashboardList />', () => {
+describe('<DashboardCalls />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

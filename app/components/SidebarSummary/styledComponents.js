@@ -27,13 +27,13 @@ export const SidebarSummaryContainer = styled.section`
 `;
 
 export const StyledH5 = styled.h3`
-  margin: 0;
   display: inline-block;
+  margin: 0;
 `;
 
 export const SummaryTitleWrapper = styled.div`
-  display: flex;
   align-items: center;
+  display: flex;
   margin-bottom: 0.8rem;
   & svg {
     margin-right: 0.5rem;

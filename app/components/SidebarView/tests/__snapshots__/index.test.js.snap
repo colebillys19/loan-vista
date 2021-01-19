@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Sidebar /> Should render and match the snapshot 1`] = `
+exports[`<SidebarView /> Should render and match the snapshot 1`] = `
 <aside
-  class="styledComponents__SidebarContainer-sc-86r93y-1 ftHRGU"
+  class="styledComponents__SidebarContainer-ilr151-1 joXIQJ"
 >
   <div
-    class="styledComponents__SidebarContentContainer-sc-86r93y-2 cczAau"
+    class="styledComponents__SidebarContentContainer-ilr151-2 mpHlw"
   >
     <div
-      class="styledComponents__Gradient-sc-86r93y-0 TrHiZ"
+      class="styledComponents__Gradient-ilr151-0 etoVkp"
     />
     <div
       class="styledComponents__SidebarHeaderContainer-n9yhwx-2 kGJGvg"
@@ -71,23 +71,20 @@ exports[`<Sidebar /> Should render and match the snapshot 1`] = `
       </button>
     </div>
     <div
-      class="styledComponents__SidebarSectionPlaceholder-sc-86r93y-3 fwgRgf"
+      class="styledComponents__SidebarSectionPlaceholder-ilr151-3 bAWduo"
       height="31.5rem"
     />
     <div
-      class="styledComponents__SidebarSectionPlaceholder-sc-86r93y-3 uJfRJ"
+      class="styledComponents__SidebarSectionPlaceholder-ilr151-3 jOecvx"
       height="14.7rem"
     />
     <div
-      class="styledComponents__SidebarSectionPlaceholder-sc-86r93y-3 uJfRJ"
+      class="styledComponents__SidebarSectionPlaceholder-ilr151-3 jOecvx"
       height="14.7rem"
     />
     <div
-      class="styledComponents__SidebarSectionPlaceholder-sc-86r93y-3 eWgbkM"
+      class="styledComponents__SidebarSectionPlaceholder-ilr151-3 cHnrML"
       height="10.4rem"
-    />
-    <div
-      class="styledComponents__Gradient-sc-86r93y-0 dgRQcX"
     />
   </div>
 </aside>

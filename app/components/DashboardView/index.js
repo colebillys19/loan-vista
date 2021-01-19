@@ -6,18 +6,20 @@
 import React from 'react';
 // import T from 'prop-types';
 
-import TabWrapper from 'components/_base-ui/TabWrapper';
 import DashboardBorrower from 'components/DashboardBorrower';
-import DashboardList from 'components/DashboardList';
+import DashboardCalls from 'components/DashboardCalls';
+import DashboardDocuments from 'components/DashboardDocuments';
 import DashboardLoan from 'components/DashboardLoan';
+import DashboardPayments from 'components/DashboardPayments';
+import TabWrapper from 'components/_base-ui/TabWrapper';
 
 const DashboardView = () => (
   <TabWrapper aria-labelledby="dashboard-tab" id="dashboard-view">
     <DashboardBorrower />
     <DashboardLoan />
-    <DashboardList>Calls</DashboardList>
-    <DashboardList>Documents</DashboardList>
-    <DashboardList>Payments</DashboardList>
+    <DashboardCalls />
+    <DashboardDocuments />
+    <DashboardPayments />
   </TabWrapper>
 );
 

@@ -255,16 +255,16 @@ exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
     class="styledComponents__TableWrapper-qh5wjg-8 hoogGb"
   >
     <div
-      class="styledComponents__GradientBorder-sc-16ewd9t-0 cERlnS"
+      class="GradientBorder-sc-1rv7gqq-0 hyonyR"
     />
     <div
-      class="styledComponents__GradientBorder-sc-16ewd9t-0 bWdJUA"
+      class="GradientBorder-sc-1rv7gqq-0 dfrFlw"
     />
     <div
-      class="styledComponents__GradientBorder-sc-16ewd9t-0 cPJiSx"
+      class="GradientBorder-sc-1rv7gqq-0 fJnNtj"
     />
     <div
-      class="styledComponents__GradientBorder-sc-16ewd9t-0 bJrMFD"
+      class="GradientBorder-sc-1rv7gqq-0 dmTzmF"
     />
     <table
       class="styledComponents__StyledTable-qh5wjg-1 hxxaBn"

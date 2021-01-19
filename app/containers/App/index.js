@@ -23,7 +23,7 @@ import Header from 'components/_base-ui/Header';
 import MainContainer from 'components/MainContainer';
 import MiscView from 'components/MiscView';
 import NotFoundView from 'components/NotFoundView';
-import Sidebar from 'components/Sidebar';
+import SidebarView from 'components/SidebarView';
 import TabNav from 'components/TabNav';
 
 import { makeSelectPathname } from './selectors';
@@ -41,7 +41,7 @@ const App = ({ dispatchNavigation, pathname }) => (
         sidebarSummariesData,
       }) => (
         <MainContainer>
-          <Sidebar
+          <SidebarView
             error={error}
             loading={loading}
             loanNumber={loanNumber}

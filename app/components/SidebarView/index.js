@@ -1,5 +1,5 @@
 /**
- * Sidebar
+ * SidebarView
  * @description ...
  */
 
@@ -18,7 +18,7 @@ import {
   SidebarSectionPlaceholder,
 } from './styledComponents';
 
-const Sidebar = ({
+const SidebarView = ({
   error,
   loading,
   loanNumber,
@@ -79,7 +79,7 @@ const Sidebar = ({
   );
 };
 
-Sidebar.propTypes = {
+SidebarView.propTypes = {
   error: T.oneOfType([T.bool, T.string]).isRequired,
   loading: T.bool.isRequired,
   loanNumber: T.string.isRequired,
@@ -94,4 +94,4 @@ Sidebar.propTypes = {
   }).isRequired,
 };
 
-export default Sidebar;
+export default SidebarView;
