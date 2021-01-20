@@ -15,7 +15,7 @@ import {
   StyledTableRow,
   TableContainer,
   TableFooter,
-} from 'components/_base-ui/ListTable';
+} from 'components/_base-ui/GradientListTable';
 
 import TableRow from './TableRow';
 import { CustomTableHead } from './styledComponents';

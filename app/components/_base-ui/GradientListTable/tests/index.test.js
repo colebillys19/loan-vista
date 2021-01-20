@@ -25,7 +25,7 @@ const Component = (
   </StyledTable>
 );
 
-describe('<ListTable />', () => {
+describe('<GradientListTable />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

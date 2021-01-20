@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { StyledTableHead } from 'components/_base-ui/ListTable';
+import { StyledTableHead } from 'components/_base-ui/GradientListTable';
 
 export const CustomTableHead = styled(StyledTableHead)`
   & th:nth-of-type(1) {

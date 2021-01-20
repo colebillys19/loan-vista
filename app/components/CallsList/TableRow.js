@@ -2,7 +2,10 @@ import React from 'react';
 import T from 'prop-types';
 
 import LinkButton from 'components/_base-ui/LinkButton';
-import { StyledTableData, StyledTableRow } from 'components/_base-ui/ListTable';
+import {
+  StyledTableData,
+  StyledTableRow,
+} from 'components/_base-ui/GradientListTable';
 
 const TableRow = ({ data, headers }) => (
   <StyledTableRow>
