@@ -1,0 +1,56 @@
+export const MOCK_DATA = [
+  {
+    date: 'date',
+    desc: 'desc',
+    escrow: 'escrow',
+    id: '1',
+    interest: 'interest',
+    principal: 'principal',
+    total: 'total',
+  },
+  {
+    date: 'date',
+    desc: 'desc',
+    escrow: 'escrow',
+    id: '2',
+    interest: 'interest',
+    principal: 'principal',
+    total: 'total',
+  },
+  {
+    date: 'date',
+    desc: 'desc',
+    escrow: 'escrow',
+    id: '3',
+    interest: 'interest',
+    principal: 'principal',
+    total: 'total',
+  },
+  {
+    date: 'date',
+    desc: 'desc',
+    escrow: 'escrow',
+    id: '4',
+    interest: 'interest',
+    principal: 'principal',
+    total: 'total',
+  },
+  {
+    date: 'date',
+    desc: 'desc',
+    escrow: 'escrow',
+    id: '5',
+    interest: 'interest',
+    principal: 'principal',
+    total: 'total',
+  },
+];
+
+export const MOCK_HEADERS = [
+  'date',
+  'desc',
+  'total',
+  'principal',
+  'interest',
+  'escrow',
+];

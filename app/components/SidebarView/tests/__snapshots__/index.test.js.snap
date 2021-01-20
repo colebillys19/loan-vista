@@ -14,7 +14,7 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
       class="styledComponents__SidebarHeaderContainer-n9yhwx-2 kGJGvg"
     >
       <div
-        class="styledComponents__IconWrapper-n9yhwx-0 deJuzd"
+        class="styledComponents__IconContainer-n9yhwx-0 eSNqrl"
       >
         <svg
           aria-hidden="true"
@@ -40,21 +40,21 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
       >
         loanNumber
       </h1>
-      <div
-        class="styledComponents__SidebarDetail-n9yhwx-1 kevOMD"
+      <span
+        class="styledComponents__SidebarDetail-n9yhwx-1 cOJLcR"
       >
         name
-      </div>
-      <div
-        class="styledComponents__SidebarDetail-n9yhwx-1 kevOMD"
+      </span>
+      <span
+        class="styledComponents__SidebarDetail-n9yhwx-1 cOJLcR"
       >
         address1
-      </div>
-      <div
-        class="styledComponents__SidebarDetail-n9yhwx-1 kevOMD"
+      </span>
+      <span
+        class="styledComponents__SidebarDetail-n9yhwx-1 cOJLcR"
       >
         address2
-      </div>
+      </span>
       <button
         class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-n9yhwx-3 bYdeTO styledComponents__StyledButton-sc-86ulmm-0 exBHac"
         tabindex="0"
@@ -70,19 +70,19 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
         />
       </button>
     </div>
-    <div
+    <section
       class="styledComponents__SidebarSectionPlaceholder-ilr151-3 bAWduo"
       height="31.5rem"
     />
-    <div
+    <section
       class="styledComponents__SidebarSectionPlaceholder-ilr151-3 jOecvx"
       height="14.7rem"
     />
-    <div
+    <section
       class="styledComponents__SidebarSectionPlaceholder-ilr151-3 jOecvx"
       height="14.7rem"
     />
-    <div
+    <section
       class="styledComponents__SidebarSectionPlaceholder-ilr151-3 cHnrML"
       height="10.4rem"
     />

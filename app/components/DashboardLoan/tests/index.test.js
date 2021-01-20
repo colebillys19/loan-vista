@@ -2,8 +2,19 @@ import React from 'react';
 import { render } from 'react-testing-library';
 
 import DashboardLoan from '../index';
+import {
+  MOCK_BALANCES_DATA,
+  MOCK_PAYMENT_DATA,
+  MOCK_STOPS_DATA,
+} from './mockData';
 
-const mockProps = {};
+const mockProps = {
+  data: {
+    balancesData: MOCK_BALANCES_DATA,
+    paymentData: MOCK_PAYMENT_DATA,
+    stopsData: MOCK_STOPS_DATA,
+  },
+};
 
 const Component = <DashboardLoan {...mockProps} />;
 

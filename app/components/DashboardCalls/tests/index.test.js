@@ -2,8 +2,9 @@ import React from 'react';
 import { render } from 'react-testing-library';
 
 import DashboardCalls from '../index';
+import { MOCK_DATA, MOCK_HEADERS } from './mockData';
 
-const mockProps = {};
+const mockProps = { data: MOCK_DATA, headers: MOCK_HEADERS };
 
 const Component = <DashboardCalls {...mockProps} />;
 

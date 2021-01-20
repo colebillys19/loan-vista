@@ -10,7 +10,8 @@ export const CardContainer = styled.section`
     ${backgroundColor} 100%
   );
   margin-top: 2.5rem;
-  padding: 2.5rem 2.5rem 4rem;
+  padding: 2.5rem 2.5rem
+    ${({ reduceBottomPadding }) => (reduceBottomPadding ? '2rem' : '4rem')};
   position: relative;
 `;
 

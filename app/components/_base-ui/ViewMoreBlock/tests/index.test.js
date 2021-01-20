@@ -1,14 +1,13 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import DashboardPayments from '../index';
-import { MOCK_DATA, MOCK_HEADERS } from './mockData';
+import LinkButton from '../index';
 
-const mockProps = { data: MOCK_DATA, headers: MOCK_HEADERS };
+const mockProps = { route: '/calls' };
 
-const Component = <DashboardPayments {...mockProps} />;
+const Component = <LinkButton {...mockProps} />;
 
-describe('<DashboardPayments />', () => {
+describe('<LinkButton />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

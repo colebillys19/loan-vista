@@ -5,10 +5,10 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
   class="styledComponents__TabNavWrapper-ift0se-4 dktHlw"
 >
   <div
-    class="styledComponents__DashboardButtonWrapper-ift0se-0 bLBlqB"
+    class="styledComponents__DashboardButtonContainer-ift0se-0 icKrvz"
   >
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-ift0se-1 cftdcj"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-ift0se-1 jWTCSK"
       id="dashboard-button"
       tabindex="0"
       type="button"
@@ -21,7 +21,7 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
     </button>
   </div>
   <div
-    class="MuiTabs-root styledComponents__StyledTabs-ift0se-3 dEkAci"
+    class="MuiTabs-root styledComponents__StyledTabs-ift0se-3 dShpDX"
   >
     <div
       class="MuiTabs-scroller MuiTabs-fixed"

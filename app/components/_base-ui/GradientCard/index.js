@@ -10,8 +10,8 @@ import {
   SummaryTitleContainer,
 } from './styledComponents';
 
-const GradientCard = ({ children, heading, Icon, ...restProps }) => (
-  <CardContainer {...restProps}>
+const GradientCard = ({ children, heading, Icon, reduceBottomPadding }) => (
+  <CardContainer reduceBottomPadding={reduceBottomPadding}>
     <Stripe />
     <SummaryTitleContainer>
       {Icon && Icon}
@@ -26,6 +26,9 @@ GradientCard.propTypes = {
   children: T.node.isRequired,
   heading: T.string.isRequired,
   Icon: T.node,
+  reduceBottomPadding: T.bool,
 };
+
+GradientCard.defaultProps = { reduceBottomPadding: false };
 
 export default GradientCard;

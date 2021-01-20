@@ -3,7 +3,7 @@ import T from 'prop-types';
 
 import { StyledTableData, StyledTableRow } from 'components/_base-ui/ListTable';
 
-const StopsListRow = ({ data, headers }) => (
+const TableRow = ({ data, headers }) => (
   <StyledTableRow>
     {headers.map((header) => (
       <StyledTableData key={header}>{data[header]}</StyledTableData>
@@ -11,6 +11,6 @@ const StopsListRow = ({ data, headers }) => (
   </StyledTableRow>
 );
 
-StopsListRow.propTypes = { data: T.object, headers: T.array };
+TableRow.propTypes = { data: T.object, headers: T.array };
 
-export default StopsListRow;
+export default TableRow;

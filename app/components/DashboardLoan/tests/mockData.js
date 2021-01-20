@@ -38,61 +38,73 @@ export const MOCK_STOPS_DATA = [
   {
     date: '02/03/2019',
     desc: 'User Defined - 1',
+    id: '1',
     name: 'Process',
   },
   {
     date: '06/19/2020',
     desc: 'Cash will assign. Lorem ipsum dolor sit amet...',
+    id: '2',
     name: 'Bad Check',
   },
   {
     date: '11/01/2019',
     desc: 'Normal or early payoff. Lorem ipsum dolor sit amet...',
+    id: '3',
     name: 'Paid In Full',
   },
   {
     date: '09/28/2019',
     desc: 'Marked for deletion. Lorem ipsum dolor sit amet...',
+    id: '4',
     name: 'Foreclosure Status',
   },
   {
     date: '04/14/2020',
     desc: 'User Defined - 3',
+    id: '5',
     name: 'No Notice',
   },
   {
     date: '01/02/2021',
     desc: 'Exceeds max hazard lines.',
+    id: '6',
     name: 'Do Not Analyze',
   },
   {
     date: '10/22/2020',
     desc: 'Solicitation allowed. Lorem ipsum dolor sit amet...',
+    id: '7',
     name: 'Accident & Health',
   },
   {
     date: '04/25/2020',
     desc: 'Solicitation not allowed. Lorem ipsum dolor sit amet...',
+    id: '8',
     name: 'Life Insurance',
   },
   {
     date: '11/11/2019',
     desc: 'User Defined - 4',
+    id: '9',
     name: 'Disbursement',
   },
   {
     date: '05/06/2019',
     desc: 'Lorem ipsum dolor sit amet...',
+    id: '10',
     name: 'Cashier',
   },
   {
     date: '06/07/2020',
     desc: 'Not accruing. Greater than or equal to accruing stop day.',
+    id: '11',
     name: 'Accrual Status',
   },
   {
     date: '07/08/2020',
     desc: 'User Defined - 1',
+    id: '12',
     name: 'Late Charge',
   },
 ];

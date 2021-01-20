@@ -3,17 +3,17 @@
 exports[`<MiscView /> Should render and match the snapshot 1`] = `
 <section
   aria-labelledby="misc-tab"
-  class="TabContainer-xht0pf-0 hVyZPG"
+  class="TabContainer-sc-1us62xt-0 geMfQv"
   id="misc-view"
 >
   <section
-    class="styledComponents__CardContainer-sc-1glo3a7-0 fizWtA"
+    class="styledComponents__CardContainer-sc-1glo3a7-0 cvPeDL"
   >
     <div
-      class="styledComponents__Stripe-sc-1glo3a7-1 jjgAHP"
+      class="styledComponents__Stripe-sc-1glo3a7-1 gnZrrp"
     />
     <div
-      class="styledComponents__SummaryTitleWrapper-sc-1glo3a7-3 dkCrAL"
+      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-3 guICBB"
     >
       <h2
         class="styledComponents__StyledH2-sc-1glo3a7-2 cjmroC"
@@ -29,13 +29,13 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
     />
   </section>
   <section
-    class="styledComponents__CardContainer-sc-1glo3a7-0 fizWtA"
+    class="styledComponents__CardContainer-sc-1glo3a7-0 cvPeDL"
   >
     <div
-      class="styledComponents__Stripe-sc-1glo3a7-1 jjgAHP"
+      class="styledComponents__Stripe-sc-1glo3a7-1 gnZrrp"
     />
     <div
-      class="styledComponents__SummaryTitleWrapper-sc-1glo3a7-3 dkCrAL"
+      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-3 guICBB"
     >
       <h2
         class="styledComponents__StyledH2-sc-1glo3a7-2 cjmroC"
@@ -51,13 +51,13 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
     />
   </section>
   <section
-    class="styledComponents__CardContainer-sc-1glo3a7-0 fizWtA"
+    class="styledComponents__CardContainer-sc-1glo3a7-0 cvPeDL"
   >
     <div
-      class="styledComponents__Stripe-sc-1glo3a7-1 jjgAHP"
+      class="styledComponents__Stripe-sc-1glo3a7-1 gnZrrp"
     />
     <div
-      class="styledComponents__SummaryTitleWrapper-sc-1glo3a7-3 dkCrAL"
+      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-3 guICBB"
     >
       <h2
         class="styledComponents__StyledH2-sc-1glo3a7-2 cjmroC"
@@ -73,13 +73,13 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
     />
   </section>
   <section
-    class="styledComponents__CardContainer-sc-1glo3a7-0 fizWtA"
+    class="styledComponents__CardContainer-sc-1glo3a7-0 cvPeDL"
   >
     <div
-      class="styledComponents__Stripe-sc-1glo3a7-1 jjgAHP"
+      class="styledComponents__Stripe-sc-1glo3a7-1 gnZrrp"
     />
     <div
-      class="styledComponents__SummaryTitleWrapper-sc-1glo3a7-3 dkCrAL"
+      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-3 guICBB"
     >
       <h2
         class="styledComponents__StyledH2-sc-1glo3a7-2 cjmroC"

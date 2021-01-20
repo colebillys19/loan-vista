@@ -13,7 +13,7 @@ export const ListsContainer = styled.div`
 `;
 
 export const StopsListContainer = styled.div`
-  border-top: 0.2rem solid ${borderGrey};
+  border-top: 0.1rem solid ${borderGrey};
   margin-top: 3.5rem;
   padding-top: 3.5rem;
 `;

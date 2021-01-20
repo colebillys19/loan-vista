@@ -1,14 +1,20 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import DashboardPayments from '../index';
+import TableRow from '../TableRow';
 import { MOCK_DATA, MOCK_HEADERS } from './mockData';
 
-const mockProps = { data: MOCK_DATA, headers: MOCK_HEADERS };
+const mockProps = { data: MOCK_DATA[0], headers: MOCK_HEADERS };
 
-const Component = <DashboardPayments {...mockProps} />;
+const Component = (
+  <table>
+    <tbody>
+      <TableRow {...mockProps} />
+    </tbody>
+  </table>
+);
 
-describe('<DashboardPayments />', () => {
+describe('<TableRow />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

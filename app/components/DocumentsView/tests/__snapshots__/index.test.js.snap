@@ -3,14 +3,14 @@
 exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
 <section
   aria-labelledby="documents-tab"
-  class="TabContainer-xht0pf-0 hVyZPG"
+  class="TabContainer-sc-1us62xt-0 geMfQv"
   id="documents-view"
 >
   <form
     class="styledComponents__StyledForm-sc-6nnwf7-2 kpDAEG"
   >
     <span
-      class="styledComponents__DisableWrapper-sc-6nnwf7-0 emJxZD"
+      class="styledComponents__DisableWrapper-sc-6nnwf7-0 fNPNLa"
     >
       <label
         class="styledComponents__StyledLabel-sc-6nnwf7-4 fnnyyM"
@@ -75,7 +75,7 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
       </span>
     </span>
     <span
-      class="styledComponents__DisableWrapper-sc-6nnwf7-0 emJxZD"
+      class="styledComponents__DisableWrapper-sc-6nnwf7-0 fNPNLa"
     >
       <label
         class="styledComponents__StyledLabel-sc-6nnwf7-4 fnnyyM"
@@ -140,7 +140,7 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
       </span>
     </span>
     <span
-      class="styledComponents__DisableWrapper-sc-6nnwf7-0 emJxZD"
+      class="styledComponents__DisableWrapper-sc-6nnwf7-0 fNPNLa"
     >
       <label
         class="styledComponents__StyledLabel-sc-6nnwf7-4 fnnyyM"
@@ -178,7 +178,7 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
       </div>
     </span>
     <span
-      class="styledComponents__DisableWrapper-sc-6nnwf7-0 emJxZD"
+      class="styledComponents__DisableWrapper-sc-6nnwf7-0 fNPNLa"
     >
       <label
         class="styledComponents__StyledLabel-sc-6nnwf7-4 fnnyyM"
@@ -233,7 +233,7 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
       />
     </button>
     <span
-      class="styledComponents__DisableWrapper-sc-6nnwf7-0 emJxZD"
+      class="styledComponents__DisableWrapper-sc-6nnwf7-0 fNPNLa"
     >
       <button
         class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-6nnwf7-1 fyzjVE styledComponents__StyledButton-sc-86ulmm-0 exBHac"
@@ -252,7 +252,7 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
     </span>
   </form>
   <div
-    class="styledComponents__TableContainer-qh5wjg-8 hoogGb"
+    class="styledComponents__TableContainer-vlp0pm-7 jqujHF"
   >
     <div
       class="GradientBorder-sc-1rv7gqq-0 hyonyR"
@@ -267,16 +267,16 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
       class="GradientBorder-sc-1rv7gqq-0 dmTzmF"
     />
     <table
-      class="styledComponents__StyledTable-qh5wjg-1 hxxaBn"
+      class="styledComponents__StyledTable-vlp0pm-1 ecXuWn"
     >
       <thead
-        class="styledComponents__StyledTableHead-qh5wjg-4 styledComponents__CustomTableHead-sc-13flwk-0 ihNRbH"
+        class="styledComponents__StyledTableHead-vlp0pm-4 styledComponents__CustomTableHead-sc-13flwk-0 ihNRbH"
       >
         <tr
-          class="styledComponents__StyledTableRow-qh5wjg-6 hCqVZR"
+          class="styledComponents__StyledTableRow-vlp0pm-6 eXzxfo"
         >
           <th
-            class="styledComponents__StyledTableHeader-qh5wjg-5 gupKNG"
+            class="styledComponents__StyledTableHeader-vlp0pm-5 jzAiFL"
             scope="col"
           >
             <button
@@ -312,13 +312,13 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
             </button>
           </th>
           <th
-            class="styledComponents__StyledTableHeader-qh5wjg-5 gupKNG"
+            class="styledComponents__StyledTableHeader-vlp0pm-5 jzAiFL"
             scope="col"
           >
             time sent
           </th>
           <th
-            class="styledComponents__StyledTableHeader-qh5wjg-5 gupKNG"
+            class="styledComponents__StyledTableHeader-vlp0pm-5 jzAiFL"
             scope="col"
           >
             <button
@@ -354,7 +354,7 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
             </button>
           </th>
           <th
-            class="styledComponents__StyledTableHeader-qh5wjg-5 gupKNG"
+            class="styledComponents__StyledTableHeader-vlp0pm-5 jzAiFL"
             scope="col"
           >
             <button
@@ -390,13 +390,13 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
             </button>
           </th>
           <th
-            class="styledComponents__StyledTableHeader-qh5wjg-5 gupKNG"
+            class="styledComponents__StyledTableHeader-vlp0pm-5 jzAiFL"
             scope="col"
           >
             desc
           </th>
           <th
-            class="styledComponents__StyledTableHeader-qh5wjg-5 gupKNG"
+            class="styledComponents__StyledTableHeader-vlp0pm-5 jzAiFL"
             scope="col"
           >
             pdf
@@ -404,38 +404,38 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
         </tr>
       </thead>
       <tbody
-        class="styledComponents__StyledTableBody-qh5wjg-2 iHTrkK"
+        class="styledComponents__StyledTableBody-vlp0pm-2 hzYCgB"
       >
         <tr
-          class="styledComponents__StyledTableRow-qh5wjg-6 hCqVZR"
+          class="styledComponents__StyledTableRow-vlp0pm-6 eXzxfo"
         >
           <td
-            class="styledComponents__StyledTableData-qh5wjg-3 hpnAfB"
+            class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
           >
             date sent
           </td>
           <td
-            class="styledComponents__StyledTableData-qh5wjg-3 hpnAfB"
+            class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
           >
             time sent
           </td>
           <td
-            class="styledComponents__StyledTableData-qh5wjg-3 hpnAfB"
+            class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
           >
             type
           </td>
           <td
-            class="styledComponents__StyledTableData-qh5wjg-3 hpnAfB"
+            class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
           >
             from
           </td>
           <td
-            class="styledComponents__StyledTableData-qh5wjg-3 hpnAfB"
+            class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
           >
             desc
           </td>
           <td
-            class="styledComponents__StyledTableData-qh5wjg-3 hpnAfB"
+            class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
           >
             <button
               class="MuiButtonBase-root styledComponents__StyledButton-sc-9o47wt-0 fgJPGq"
@@ -450,7 +450,7 @@ exports[`<DocumentsView /> Should render and match the snapshot 1`] = `
       <thead>
         <tr>
           <td
-            class="styledComponents__TableFooterCell-qh5wjg-7 jVHZPT"
+            class="styledComponents__TableFooterCell-vlp0pm-8 dEwaCH"
           >
             hidden text
           </td>

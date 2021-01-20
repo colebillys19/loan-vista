@@ -1,12 +1,12 @@
 export const MOCK_DATA = [
   {
-    date: 'audio',
-    desc: 'date',
-    escrow: 'dept',
-    id: 'desc',
-    interest: 'id',
-    principal: 'rep',
-    total: 'time',
+    date: 'date',
+    desc: 'desc',
+    escrow: 'escrow',
+    id: 'id',
+    interest: 'interest',
+    principal: 'principal',
+    total: 'total',
   },
 ];
 
