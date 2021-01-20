@@ -3,7 +3,7 @@
 exports[`<MiscView /> Should render and match the snapshot 1`] = `
 <section
   aria-labelledby="misc-tab"
-  class="TabWrapper-xht0pf-0 hVyZPG"
+  class="TabContainer-xht0pf-0 hVyZPG"
   id="misc-view"
 >
   <section

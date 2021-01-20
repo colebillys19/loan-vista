@@ -8,7 +8,7 @@ import T from 'prop-types';
 
 import { getIcon, getTabName } from './helpers';
 import {
-  IconWrapper,
+  IconContainer,
   SidebarDetail,
   SidebarHeaderContainer,
   StyledButton,
@@ -24,7 +24,7 @@ const SidebarHeader = ({
 
   return (
     <SidebarHeaderContainer>
-      <IconWrapper>{getIcon(pathname, '8rem')}</IconWrapper>
+      <IconContainer>{getIcon(pathname, '8rem')}</IconContainer>
       <StyledH1>{loanNumber.length ? headingText : '-'}</StyledH1>
       <SidebarDetail>{name}</SidebarDetail>
       <SidebarDetail>{address1}</SidebarDetail>

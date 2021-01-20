@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 
 import configureStore from 'configureStore';
 import history from 'utils/history';
+
 import { Main } from '../index';
 
 const initialState = {};

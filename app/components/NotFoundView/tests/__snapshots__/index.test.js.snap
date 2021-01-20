@@ -2,10 +2,10 @@
 
 exports[`<NotFoundView /> Should render and match the snapshot 1`] = `
 <section
-  class="TabWrapper-xht0pf-0 hVyZPG"
+  class="TabContainer-xht0pf-0 hVyZPG"
 >
   <div
-    class="styledComponents__NotFoundViewWrapper-sc-1yh80ac-0 euhpdX"
+    class="styledComponents__NotFoundViewContainer-sc-1yh80ac-0 euhpdX"
   >
     <svg
       aria-hidden="true"

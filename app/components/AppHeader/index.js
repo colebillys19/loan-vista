@@ -2,11 +2,11 @@ import React from 'react';
 
 import { HeaderContainer } from './styledComponents';
 
-const Header = () => (
+const AppHeader = () => (
   <HeaderContainer>
     <span>loan</span>
     <span>Vista</span>
   </HeaderContainer>
 );
 
-export default Header;
+export default AppHeader;

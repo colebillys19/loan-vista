@@ -10,7 +10,7 @@ import CallsList from 'components/CallsList';
 import ListFilter from 'components/ListFilter';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import ListFallback from 'components/_base-ui/ListFallback';
-import TabWrapper from 'components/_base-ui/TabWrapper';
+import TabContainer from 'components/_base-ui/TabContainer';
 
 const CallsView = ({
   callsData,
@@ -24,7 +24,7 @@ const CallsView = ({
   const noListData = !loading && callsData.length === 0;
 
   return (
-    <TabWrapper aria-labelledby="calls-tab" id="calls-view">
+    <TabContainer aria-labelledby="calls-tab" id="calls-view">
       <ListFilter
         dispatchFetchData={dispatchFetchCallsData}
         fetchParams={fetchParams}
@@ -42,7 +42,7 @@ const CallsView = ({
         FallbackComponent={<ListFallback error={error} loading={loading} />}
         shouldRender={!error && !loading && !noListData}
       />
-    </TabWrapper>
+    </TabContainer>
   );
 };
 

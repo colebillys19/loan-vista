@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { appColorA } from 'styleConstants';
 
-export const NotFoundViewWrapper = styled.div`
+export const NotFoundViewContainer = styled.div`
   align-items: center;
   display: inline-flex;
   flex-direction: column;

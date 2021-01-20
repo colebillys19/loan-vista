@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import { appColorA } from 'styleConstants';
+import { appColorB } from 'styleConstants';
 
-const TabWrapper = styled.section`
-  border-top: 0.3rem solid ${appColorA};
+const TabContainer = styled.section`
+  border-top: 0.3rem solid ${appColorB};
   display: inline-block;
   margin-bottom: 4rem;
   position: relative;
@@ -11,4 +11,4 @@ const TabWrapper = styled.section`
   width: 83.7rem;
 `;
 
-export default TabWrapper;
+export default TabContainer;

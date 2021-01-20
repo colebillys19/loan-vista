@@ -5,18 +5,18 @@
 
 import React from 'react';
 
-import TabWrapper from 'components/_base-ui/TabWrapper';
+import TabContainer from 'components/_base-ui/TabContainer';
 import { WarningIcon } from 'images/icons';
 
-import { NotFoundViewWrapper, WarningHeading } from './styledComponents';
+import { NotFoundViewContainer, WarningHeading } from './styledComponents';
 
 const NotFoundView = () => (
-  <TabWrapper>
-    <NotFoundViewWrapper>
+  <TabContainer>
+    <NotFoundViewContainer>
       <WarningIcon size="8rem" />
       <WarningHeading>page not found</WarningHeading>
-    </NotFoundViewWrapper>
-  </TabWrapper>
+    </NotFoundViewContainer>
+  </TabContainer>
 );
 
 export default NotFoundView;

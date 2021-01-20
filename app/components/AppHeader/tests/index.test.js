@@ -1,23 +1,17 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import TabWrapper from '../index';
+import AppHeader from '../index';
 
-const Component = (
-  <TabWrapper>
-    <div />
-  </TabWrapper>
-);
-
-describe('<TabWrapper />', () => {
+describe('<AppHeader />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
-    render(Component);
+    render(<AppHeader />);
     expect(spy).not.toHaveBeenCalled();
   });
 
   it('Expect to render', () => {
-    const { container } = render(Component);
+    const { container } = render(<AppHeader />);
     expect(container.firstChild).toBeDefined();
   });
 });

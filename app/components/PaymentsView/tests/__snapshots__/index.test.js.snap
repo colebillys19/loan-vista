@@ -3,7 +3,7 @@
 exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
 <section
   aria-labelledby="payments-tab"
-  class="TabWrapper-xht0pf-0 hVyZPG"
+  class="TabContainer-xht0pf-0 hVyZPG"
   id="payments-view"
 >
   <form
@@ -252,7 +252,7 @@ exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
     </span>
   </form>
   <div
-    class="styledComponents__TableWrapper-qh5wjg-8 hoogGb"
+    class="styledComponents__TableContainer-qh5wjg-8 hoogGb"
   >
     <div
       class="GradientBorder-sc-1rv7gqq-0 hyonyR"

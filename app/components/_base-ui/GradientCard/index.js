@@ -7,16 +7,16 @@ import {
   CardContainer,
   Stripe,
   StyledH2,
-  SummaryTitleWrapper,
+  SummaryTitleContainer,
 } from './styledComponents';
 
 const GradientCard = ({ children, heading, Icon, ...restProps }) => (
   <CardContainer {...restProps}>
     <Stripe />
-    <SummaryTitleWrapper>
+    <SummaryTitleContainer>
       {Icon && Icon}
       <StyledH2>{heading}</StyledH2>
-    </SummaryTitleWrapper>
+    </SummaryTitleContainer>
     {children}
     <GradientBorder bottom="-0.1rem" top="" />
   </CardContainer>

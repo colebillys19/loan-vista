@@ -10,7 +10,7 @@ import ListFilter from 'components/ListFilter';
 import PaymentsList from 'components/PaymentsList';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import ListFallback from 'components/_base-ui/ListFallback';
-import TabWrapper from 'components/_base-ui/TabWrapper';
+import TabContainer from 'components/_base-ui/TabContainer';
 
 const PaymentsView = ({
   dispatchFetchPaymentsData,
@@ -24,7 +24,7 @@ const PaymentsView = ({
   const noListData = !loading && paymentsData.length === 0;
 
   return (
-    <TabWrapper aria-labelledby="payments-tab" id="payments-view">
+    <TabContainer aria-labelledby="payments-tab" id="payments-view">
       <ListFilter
         dispatchFetchData={dispatchFetchPaymentsData}
         fetchParams={fetchParams}
@@ -41,7 +41,7 @@ const PaymentsView = ({
         FallbackComponent={<ListFallback error={error} loading={loading} />}
         shouldRender={!error && !loading && !noListData}
       />
-    </TabWrapper>
+    </TabContainer>
   );
 };
 

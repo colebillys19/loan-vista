@@ -13,8 +13,8 @@ import {
   StyledTableBody,
   StyledTableHeader,
   StyledTableRow,
+  TableContainer,
   TableFooter,
-  TableWrapper,
 } from 'components/_base-ui/ListTable';
 
 import TableRow from './TableRow';
@@ -46,7 +46,7 @@ const CallsList = ({
   };
 
   return (
-    <TableWrapper>
+    <TableContainer>
       <ListBorders />
       <StyledTable>
         <CustomTableHead>
@@ -85,7 +85,7 @@ const CallsList = ({
         </StyledTableBody>
         <TableFooter />
       </StyledTable>
-    </TableWrapper>
+    </TableContainer>
   );
 };
 

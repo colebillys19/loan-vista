@@ -10,15 +10,15 @@ import MiscEscrow from 'components/MiscEscrow';
 import MiscHomeowners from 'components/MiscHomeowners';
 import MiscMortgage from 'components/MiscMortgage';
 import MiscTaxes from 'components/MiscTaxes';
-import TabWrapper from 'components/_base-ui/TabWrapper';
+import TabContainer from 'components/_base-ui/TabContainer';
 
 const MiscView = () => (
-  <TabWrapper aria-labelledby="misc-tab" id="misc-view">
+  <TabContainer aria-labelledby="misc-tab" id="misc-view">
     <MiscEscrow />
     <MiscTaxes />
     <MiscHomeowners />
     <MiscMortgage />
-  </TabWrapper>
+  </TabContainer>
 );
 
 MiscView.propTypes = {

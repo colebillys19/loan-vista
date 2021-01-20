@@ -14,7 +14,6 @@ export const Row = styled.div`
   height: 1.6rem;
   position: relative;
   width: 100%;
-
   &:not(:first-of-type) {
     margin-top: ${({ $reduceMargin }) => ($reduceMargin ? '0' : '0.5rem')};
   }

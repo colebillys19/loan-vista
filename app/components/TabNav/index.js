@@ -10,7 +10,7 @@ import Tabs from './Tabs';
 import { checkRoute } from './helpers';
 import { VALID_ROUTES } from './constants';
 import {
-  DashboardButtonWrapper,
+  DashboardButtonContainer,
   StyledButton,
   TabNavWrapper,
 } from './styledComponents';
@@ -32,15 +32,16 @@ const TabNav = ({ dispatchNavigation, pathname }) => {
 
   return (
     <TabNavWrapper>
-      <DashboardButtonWrapper>
+      <DashboardButtonContainer>
         <StyledButton
           disableRipple
           id="dashboard-button"
+          isOpaque={pathname !== '/'}
           onClick={handleDashboardButtonClick}
         >
           Dashboard
         </StyledButton>
-      </DashboardButtonWrapper>
+      </DashboardButtonContainer>
       <Tabs handleChange={handleChange} value={value} />
     </TabNavWrapper>
   );

@@ -6,9 +6,9 @@ import Button from 'components/_base-ui/Button';
 import { textColorA, textColorB } from 'styleConstants';
 
 export const DisableWrapper = styled.span`
+  display: inline-block;
   opacity: ${({ disabled }) => (disabled ? '0.5' : '1')};
   pointer-events: ${({ disabled }) => (disabled ? 'none' : 'all')};
-  display: inline-block;
   vertical-align: top;
   & :not(:first-of-type) {
     margin-left: 2rem;

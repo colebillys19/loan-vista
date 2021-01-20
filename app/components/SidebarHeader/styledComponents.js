@@ -2,12 +2,13 @@ import styled from 'styled-components';
 
 import Button from 'components/_base-ui/Button';
 
-export const IconWrapper = styled.div`
+export const IconContainer = styled.div`
   margin-bottom: 1.5rem;
   text-align: center;
 `;
 
-export const SidebarDetail = styled.div`
+export const SidebarDetail = styled.span`
+  display: block;
   text-align: center;
   & :not(:last-of-type) {
     margin-bottom: 0.3rem;

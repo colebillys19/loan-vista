@@ -10,7 +10,7 @@ import DocumentsList from 'components/DocumentsList';
 import ListFilter from 'components/ListFilter';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import ListFallback from 'components/_base-ui/ListFallback';
-import TabWrapper from 'components/_base-ui/TabWrapper';
+import TabContainer from 'components/_base-ui/TabContainer';
 
 const DocumentsView = ({
   dispatchFetchDocumentsData,
@@ -24,7 +24,7 @@ const DocumentsView = ({
   const noListData = !loading && documentsData.length === 0;
 
   return (
-    <TabWrapper aria-labelledby="documents-tab" id="documents-view">
+    <TabContainer aria-labelledby="documents-tab" id="documents-view">
       <ListFilter
         dispatchFetchData={dispatchFetchDocumentsData}
         fetchParams={fetchParams}
@@ -41,7 +41,7 @@ const DocumentsView = ({
         FallbackComponent={<ListFallback error={error} loading={loading} />}
         shouldRender={!error && !loading && !noListData}
       />
-    </TabWrapper>
+    </TabContainer>
   );
 };
 

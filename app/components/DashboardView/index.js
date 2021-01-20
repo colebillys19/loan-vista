@@ -11,16 +11,16 @@ import DashboardCalls from 'components/DashboardCalls';
 import DashboardDocuments from 'components/DashboardDocuments';
 import DashboardLoan from 'components/DashboardLoan';
 import DashboardPayments from 'components/DashboardPayments';
-import TabWrapper from 'components/_base-ui/TabWrapper';
+import TabContainer from 'components/_base-ui/TabContainer';
 
 const DashboardView = () => (
-  <TabWrapper aria-labelledby="dashboard-tab" id="dashboard-view">
+  <TabContainer aria-labelledby="dashboard-tab" id="dashboard-view">
     <DashboardBorrower />
     <DashboardLoan />
     <DashboardCalls />
     <DashboardDocuments />
     <DashboardPayments />
-  </TabWrapper>
+  </TabContainer>
 );
 
 DashboardView.propTypes = {

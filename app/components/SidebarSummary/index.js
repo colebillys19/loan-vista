@@ -15,15 +15,15 @@ import {
   Row,
   SidebarSummaryContainer,
   StyledH5,
-  SummaryTitleWrapper,
+  SummaryTitleContainer,
 } from './styledComponents';
 
 const SidebarSummary = ({ data, health, title }) => (
   <SidebarSummaryContainer>
-    <SummaryTitleWrapper>
+    <SummaryTitleContainer>
       <BulletIcon size="1.2rem" />
       <StyledH5>{title}</StyledH5>
-    </SummaryTitleWrapper>
+    </SummaryTitleContainer>
     {data.map(({ label, value }) => {
       const statusHealthColor =
         label === 'Status' ? getHealthColor(health) : null;

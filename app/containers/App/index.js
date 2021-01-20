@@ -19,7 +19,7 @@ import Main from 'containers/Main';
 import Payments from 'containers/Payments';
 
 import DashboardView from 'components/DashboardView';
-import Header from 'components/_base-ui/Header';
+import AppHeader from 'components/AppHeader';
 import MainContainer from 'components/MainContainer';
 import MiscView from 'components/MiscView';
 import NotFoundView from 'components/NotFoundView';
@@ -30,7 +30,7 @@ import { makeSelectPathname } from './selectors';
 
 const App = ({ dispatchNavigation, pathname }) => (
   <Fragment>
-    <Header />
+    <AppHeader />
     <TabNav dispatchNavigation={dispatchNavigation} pathname={pathname} />
     <Main
       render={({

@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { backgroundColor, textColorB } from 'styleConstants';
 
 export const ListSpinnerWrapper = styled.span`
-  left: 39.2rem;
   display: inline-block;
+  left: 39.2rem;
   padding: 10rem 0;
   position: relative;
 `;
@@ -68,11 +68,11 @@ export const StyledTableRow = styled.tr`
   }
 `;
 
+export const TableContainer = styled.div`
+  position: relative;
+`;
+
 export const TableFooterCell = styled.td`
   color: transparent;
   line-height: 3.3rem;
-`;
-
-export const TableWrapper = styled.div`
-  position: relative;
 `;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { appColorA } from 'styleConstants';
 
-export const FallbackContainer = styled.div`
+export const FallbackContainer = styled.section`
   color: ${appColorA};
   font-size: 2.2rem;
   text-align: center;

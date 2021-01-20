@@ -2,7 +2,6 @@ import React from 'react';
 import { render } from 'react-testing-library';
 
 import DocumentsView from '../index';
-
 import { MOCK_DATA } from './mockData';
 
 const mockProps = {

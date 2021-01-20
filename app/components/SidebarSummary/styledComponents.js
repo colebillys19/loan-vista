@@ -31,7 +31,7 @@ export const StyledH5 = styled.h3`
   margin: 0;
 `;
 
-export const SummaryTitleWrapper = styled.div`
+export const SummaryTitleContainer = styled.div`
   align-items: center;
   display: flex;
   margin-bottom: 0.8rem;

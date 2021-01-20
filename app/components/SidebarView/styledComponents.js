@@ -32,7 +32,7 @@ export const SidebarContentContainer = styled.div`
   position: relative;
 `;
 
-export const SidebarSectionPlaceholder = styled.div`
+export const SidebarSectionPlaceholder = styled.section`
   border-top: ${({ isHeader }) =>
     isHeader ? '' : `0.1rem solid ${borderGrey}`};
   height: ${({ height }) => height || ''};
