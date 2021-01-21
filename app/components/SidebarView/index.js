@@ -8,7 +8,7 @@ import T from 'prop-types';
 
 import SidebarHeader from 'components/SidebarHeader';
 import SidebarSummary from 'components/SidebarSummary';
-// import { isValidRoute } from 'utils/globalHelpers';
+import { isValidRoute } from 'utils/globalHelpers';
 
 import {
   Gradient,
@@ -17,9 +17,9 @@ import {
 } from './styledComponents';
 
 const SidebarView = ({
-  // error,
+  error,
   loading,
-  // loanNumber,
+  loanNumber,
   pathname,
   sidebarHeaderData,
   sidebarSummariesData: {
@@ -30,9 +30,8 @@ const SidebarView = ({
     serviceSummaryData,
   },
 }) => {
-  // const showComponents =
-  //   isValidRoute(pathname) && !error && !!loanNumber && !loading;
-  const showComponents = false;
+  const showComponents =
+    isValidRoute(pathname) && !error && !!loanNumber && !loading;
 
   return (
     <SidebarContainer>
@@ -47,26 +46,26 @@ const SidebarView = ({
         <SidebarSummary
           data={loanSummaryData}
           health={health}
+          numRows={14}
           renderLoading={!showComponents}
-          skeletonHeight="28.9rem"
           title="Loan"
         />
         <SidebarSummary
           data={paymentSummaryData}
+          numRows={6}
           renderLoading={!showComponents}
-          skeletonHeight="12.1rem"
           title="Payment"
         />
         <SidebarSummary
           data={callsSummaryData}
+          numRows={6}
           renderLoading={!showComponents}
-          skeletonHeight="12.1rem"
           title="Calls"
         />
         <SidebarSummary
           data={serviceSummaryData}
+          numRows={3}
           renderLoading={!showComponents}
-          skeletonHeight="5.8rem"
           title="Service"
         />
       </SidebarContentContainer>
@@ -75,9 +74,9 @@ const SidebarView = ({
 };
 
 SidebarView.propTypes = {
-  // error: T.oneOfType([T.bool, T.string]).isRequired,
+  error: T.oneOfType([T.bool, T.string]).isRequired,
   loading: T.bool.isRequired,
-  // loanNumber: T.string.isRequired,
+  loanNumber: T.string.isRequired,
   pathname: T.string.isRequired,
   sidebarHeaderData: T.object.isRequired,
   sidebarSummariesData: T.shape({

@@ -3,23 +3,26 @@
 exports[`<MiscView /> Should render and match the snapshot 1`] = `
 <section
   aria-labelledby="misc-tab"
-  class="TabContainer-sc-1us62xt-0 geMfQv"
+  class="TabContainer-sc-1us62xt-0 kDDxVM"
   id="misc-view"
 >
   <section
     class="styledComponents__CardContainer-sc-1glo3a7-0 cvPeDL"
   >
     <div
-      class="styledComponents__Stripe-sc-1glo3a7-1 gnZrrp"
+      class="styledComponents__TopStripe-sc-1glo3a7-4 dySDft"
     />
     <div
-      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-3 guICBB"
+      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 dpVkuc"
     >
       <h2
-        class="styledComponents__StyledH2-sc-1glo3a7-2 cjmroC"
+        class="styledComponents__StyledH2-sc-1glo3a7-1 kipGlV"
       >
         Escrow
       </h2>
+      <div
+        class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
+      />
     </div>
     <div>
       yooo
@@ -32,16 +35,19 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
     class="styledComponents__CardContainer-sc-1glo3a7-0 cvPeDL"
   >
     <div
-      class="styledComponents__Stripe-sc-1glo3a7-1 gnZrrp"
+      class="styledComponents__TopStripe-sc-1glo3a7-4 dySDft"
     />
     <div
-      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-3 guICBB"
+      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 dpVkuc"
     >
       <h2
-        class="styledComponents__StyledH2-sc-1glo3a7-2 cjmroC"
+        class="styledComponents__StyledH2-sc-1glo3a7-1 kipGlV"
       >
         Taxes
       </h2>
+      <div
+        class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
+      />
     </div>
     <div>
       yooo
@@ -54,16 +60,19 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
     class="styledComponents__CardContainer-sc-1glo3a7-0 cvPeDL"
   >
     <div
-      class="styledComponents__Stripe-sc-1glo3a7-1 gnZrrp"
+      class="styledComponents__TopStripe-sc-1glo3a7-4 dySDft"
     />
     <div
-      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-3 guICBB"
+      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 dpVkuc"
     >
       <h2
-        class="styledComponents__StyledH2-sc-1glo3a7-2 cjmroC"
+        class="styledComponents__StyledH2-sc-1glo3a7-1 kipGlV"
       >
         Homeowner's/Hazard Insurance
       </h2>
+      <div
+        class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
+      />
     </div>
     <div>
       yooo
@@ -76,16 +85,19 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
     class="styledComponents__CardContainer-sc-1glo3a7-0 cvPeDL"
   >
     <div
-      class="styledComponents__Stripe-sc-1glo3a7-1 gnZrrp"
+      class="styledComponents__TopStripe-sc-1glo3a7-4 dySDft"
     />
     <div
-      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-3 guICBB"
+      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 dpVkuc"
     >
       <h2
-        class="styledComponents__StyledH2-sc-1glo3a7-2 cjmroC"
+        class="styledComponents__StyledH2-sc-1glo3a7-1 kipGlV"
       >
         Mortgage Insurance
       </h2>
+      <div
+        class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
+      />
     </div>
     <div>
       yooo

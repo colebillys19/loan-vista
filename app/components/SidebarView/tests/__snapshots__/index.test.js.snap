@@ -10,7 +10,7 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
     <div
       class="styledComponents__Gradient-ilr151-0 etoVkp"
     />
-    <div
+    <section
       class="styledComponents__SidebarHeaderContainer-n9yhwx-2 kGJGvg"
     >
       <div
@@ -35,28 +35,26 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
           </g>
         </svg>
       </div>
-      <h1
-        class="styledComponents__StyledH1-n9yhwx-4 kotSro"
+      <div
+        class="styledComponents__SpinnerBlockContainer-n9yhwx-3 cXJVFp"
       >
-        loanNumber
-      </h1>
-      <span
-        class="styledComponents__SidebarDetail-n9yhwx-1 cOJLcR"
-      >
-        name
-      </span>
-      <span
-        class="styledComponents__SidebarDetail-n9yhwx-1 cOJLcR"
-      >
-        address1
-      </span>
-      <span
-        class="styledComponents__SidebarDetail-n9yhwx-1 cOJLcR"
-      >
-        address2
-      </span>
+        <span>
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root styledComponents__StyledSpinnerIcon-evygym-0 gvlvsG"
+            focusable="false"
+            style="height: 5rem; width: 5rem;"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M12.9 3.1c1.3 1.2 2.1 3 2.1 4.9 0 3.9-3.1 7-7 7s-7-3.1-7-7c0-1.9 0.8-3.7 2.1-4.9l-0.8-0.8c-1.4 1.5-2.3 3.5-2.3 5.7 0 4.4 3.6 8 8 8s8-3.6 8-8c0-2.2-0.9-4.2-2.3-5.7l-0.8 0.8z"
+              fill="#7b68ee"
+            />
+          </svg>
+        </span>
+      </div>
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-n9yhwx-3 bYdeTO styledComponents__StyledButton-sc-86ulmm-0 exBHac"
+        class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-n9yhwx-4 fMHSTS styledComponents__StyledButton-sc-86ulmm-0 exBHac"
         tabindex="0"
         type="button"
       >
@@ -69,23 +67,326 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
           class="MuiTouchRipple-root"
         />
       </button>
-    </div>
+    </section>
     <section
-      class="styledComponents__SidebarSectionPlaceholder-ilr151-3 bAWduo"
-      height="31.5rem"
-    />
+      class="styledComponents__SidebarSummaryContainer-sc-15x7lk9-3 zJimF"
+    >
+      <div
+        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-8 crEWRT"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          style="height: 1.2rem; width: 1.2rem;"
+          viewBox="0 0 64 64"
+        >
+          <circle
+            cx="32"
+            cy="31.964"
+            fill="#7b68ee"
+            r="21"
+          />
+        </svg>
+        <h3
+          class="styledComponents__StyledH5-sc-15x7lk9-6 kbeCSM"
+        >
+          Loan
+        </h3>
+      </div>
+      <div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+      </div>
+    </section>
     <section
-      class="styledComponents__SidebarSectionPlaceholder-ilr151-3 jOecvx"
-      height="14.7rem"
-    />
+      class="styledComponents__SidebarSummaryContainer-sc-15x7lk9-3 zJimF"
+    >
+      <div
+        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-8 crEWRT"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          style="height: 1.2rem; width: 1.2rem;"
+          viewBox="0 0 64 64"
+        >
+          <circle
+            cx="32"
+            cy="31.964"
+            fill="#7b68ee"
+            r="21"
+          />
+        </svg>
+        <h3
+          class="styledComponents__StyledH5-sc-15x7lk9-6 kbeCSM"
+        >
+          Payment
+        </h3>
+      </div>
+      <div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+      </div>
+    </section>
     <section
-      class="styledComponents__SidebarSectionPlaceholder-ilr151-3 jOecvx"
-      height="14.7rem"
-    />
+      class="styledComponents__SidebarSummaryContainer-sc-15x7lk9-3 zJimF"
+    >
+      <div
+        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-8 crEWRT"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          style="height: 1.2rem; width: 1.2rem;"
+          viewBox="0 0 64 64"
+        >
+          <circle
+            cx="32"
+            cy="31.964"
+            fill="#7b68ee"
+            r="21"
+          />
+        </svg>
+        <h3
+          class="styledComponents__StyledH5-sc-15x7lk9-6 kbeCSM"
+        >
+          Calls
+        </h3>
+      </div>
+      <div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+      </div>
+    </section>
     <section
-      class="styledComponents__SidebarSectionPlaceholder-ilr151-3 cHnrML"
-      height="10.4rem"
-    />
+      class="styledComponents__SidebarSummaryContainer-sc-15x7lk9-3 zJimF"
+    >
+      <div
+        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-8 crEWRT"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          style="height: 1.2rem; width: 1.2rem;"
+          viewBox="0 0 64 64"
+        >
+          <circle
+            cx="32"
+            cy="31.964"
+            fill="#7b68ee"
+            r="21"
+          />
+        </svg>
+        <h3
+          class="styledComponents__StyledH5-sc-15x7lk9-6 kbeCSM"
+        >
+          Service
+        </h3>
+      </div>
+      <div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+        <div
+          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
+        >
+          <div
+            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
+          />
+        </div>
+      </div>
+    </section>
   </div>
 </aside>
 `;

@@ -3,7 +3,7 @@
 exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
 <section
   aria-labelledby="payments-tab"
-  class="TabContainer-sc-1us62xt-0 geMfQv"
+  class="TabContainer-sc-1us62xt-0 kDDxVM"
   id="payments-view"
 >
   <form
@@ -273,7 +273,7 @@ exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableHead-vlp0pm-4 styledComponents__CustomTableHead-sc-10ou2rk-0 QJFkg"
       >
         <tr
-          class="styledComponents__StyledTableRow-vlp0pm-6 eXzxfo"
+          class="styledComponents__StyledTableRow-vlp0pm-6 hnHTeC"
         >
           <th
             class="styledComponents__StyledTableHeader-vlp0pm-5 jzAiFL"
@@ -497,7 +497,7 @@ exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableBody-vlp0pm-2 hzYCgB"
       >
         <tr
-          class="styledComponents__StyledTableRow-vlp0pm-6 eXzxfo"
+          class="styledComponents__StyledTableRow-vlp0pm-6 hnHTeC"
         >
           <td
             class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"

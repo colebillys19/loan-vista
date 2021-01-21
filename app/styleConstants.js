@@ -11,3 +11,4 @@ export const iconColorB = '#ffa07a';
 export const backgroundColor = '#f8f8ff';
 export const borderGrey = '#ccc';
 export const errorColor = '#f44336';
+export const skeletonGrey = '#e6e6e6';

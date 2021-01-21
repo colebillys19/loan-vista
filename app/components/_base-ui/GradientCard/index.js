@@ -5,17 +5,19 @@ import GradientBorder from 'components/_base-ui/GradientBorder';
 
 import {
   CardContainer,
-  Stripe,
   StyledH2,
   SummaryTitleContainer,
+  ThinStripe,
+  TopStripe,
 } from './styledComponents';
 
 const GradientCard = ({ children, heading, Icon, reduceBottomPadding }) => (
   <CardContainer reduceBottomPadding={reduceBottomPadding}>
-    <Stripe />
+    <TopStripe />
     <SummaryTitleContainer>
       {Icon && Icon}
       <StyledH2>{heading}</StyledH2>
+      <ThinStripe />
     </SummaryTitleContainer>
     {children}
     <GradientBorder bottom="-0.1rem" top="" />

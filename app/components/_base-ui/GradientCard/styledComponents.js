@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { appColorA, backgroundColor } from 'styleConstants';
+import { appColorA, backgroundColor, borderGrey } from 'styleConstants';
 
 export const CardContainer = styled.section`
   background: linear-gradient(
@@ -15,18 +15,8 @@ export const CardContainer = styled.section`
   position: relative;
 `;
 
-export const Stripe = styled.div`
-  background-color: ${appColorA};
-  height: 0.6rem;
-  left: 0;
-  margin-bottom: 2rem;
-  position: absolute;
-  top: 0;
-  width: 100%;
-`;
-
 export const StyledH2 = styled.h2`
-  margin: 0;
+  margin: 0 2rem 0 0;
 `;
 
 export const SummaryTitleContainer = styled.div`
@@ -36,4 +26,20 @@ export const SummaryTitleContainer = styled.div`
   & svg {
     margin-right: 1.8rem;
   }
+`;
+
+export const ThinStripe = styled.div`
+  background-color: ${borderGrey};
+  flex-grow: 1;
+  height: 0.1rem;
+`;
+
+export const TopStripe = styled.div`
+  background-color: ${appColorA};
+  height: 0.6rem;
+  left: 0;
+  margin-bottom: 2rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
 `;

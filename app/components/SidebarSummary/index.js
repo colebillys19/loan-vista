@@ -3,31 +3,24 @@
  * @description ...
  */
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import T from 'prop-types';
 
 import { getHealthColor } from 'utils/globalHelpers';
 import { BulletIcon } from 'images/icons';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 
+import Skeleton from './Skeleton';
 import {
   Detail,
   DetailLabel,
   Row,
   SidebarSummaryContainer,
-  Skeleton,
   StyledH5,
-  SummaryDetails,
   SummaryTitleContainer,
 } from './styledComponents';
 
-const SidebarSummary = ({
-  data,
-  health,
-  renderLoading,
-  skeletonHeight,
-  title,
-}) => (
+const SidebarSummary = ({ data, health, numRows, renderLoading, title }) => (
   <SidebarSummaryContainer>
     <SummaryTitleContainer>
       <BulletIcon size="1.2rem" />
@@ -35,7 +28,7 @@ const SidebarSummary = ({
     </SummaryTitleContainer>
     <ConditionalRender
       Component={
-        <SummaryDetails>
+        <Fragment>
           {data.map(({ label, value }) => {
             const statusHealthColor =
               label === 'Status' ? getHealthColor(health) : null;
@@ -47,9 +40,9 @@ const SidebarSummary = ({
               </Row>
             );
           })}
-        </SummaryDetails>
+        </Fragment>
       }
-      FallbackComponent={<Skeleton height={skeletonHeight} />}
+      FallbackComponent={<Skeleton numRows={numRows} />}
       shouldRender={!renderLoading}
     />
   </SidebarSummaryContainer>
@@ -58,8 +51,8 @@ const SidebarSummary = ({
 SidebarSummary.propTypes = {
   data: T.array.isRequired,
   health: T.number,
+  numRows: T.number,
   renderLoading: T.bool.isRequired,
-  skeletonHeight: T.string.isRequired,
   title: T.string.isRequired,
 };
 

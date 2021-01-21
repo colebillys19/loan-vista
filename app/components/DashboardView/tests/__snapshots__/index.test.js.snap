@@ -3,17 +3,17 @@
 exports[`<DashboardView /> Should render and match the snapshot 1`] = `
 <section
   aria-labelledby="dashboard-tab"
-  class="TabContainer-sc-1us62xt-0 geMfQv"
+  class="TabContainer-sc-1us62xt-0 kDDxVM"
   id="dashboard-view"
 >
   <section
     class="styledComponents__CardContainer-sc-1glo3a7-0 cvPeDL"
   >
     <div
-      class="styledComponents__Stripe-sc-1glo3a7-1 gnZrrp"
+      class="styledComponents__TopStripe-sc-1glo3a7-4 dySDft"
     />
     <div
-      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-3 guICBB"
+      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 dpVkuc"
     >
       <svg
         aria-hidden="true"
@@ -33,10 +33,13 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
         </g>
       </svg>
       <h2
-        class="styledComponents__StyledH2-sc-1glo3a7-2 cjmroC"
+        class="styledComponents__StyledH2-sc-1glo3a7-1 kipGlV"
       >
         Borrower Information
       </h2>
+      <div
+        class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
+      />
     </div>
     <div
       class="styledComponents__ListsContainer-sc-1t59z9k-0 jjIreI"
@@ -232,10 +235,10 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
     class="styledComponents__CardContainer-sc-1glo3a7-0 cvPeDL"
   >
     <div
-      class="styledComponents__Stripe-sc-1glo3a7-1 gnZrrp"
+      class="styledComponents__TopStripe-sc-1glo3a7-4 dySDft"
     />
     <div
-      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-3 guICBB"
+      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 dpVkuc"
     >
       <svg
         aria-hidden="true"
@@ -262,10 +265,13 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
         />
       </svg>
       <h2
-        class="styledComponents__StyledH2-sc-1glo3a7-2 cjmroC"
+        class="styledComponents__StyledH2-sc-1glo3a7-1 kipGlV"
       >
         Loan Information
       </h2>
+      <div
+        class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
+      />
     </div>
     <div
       class="styledComponents__ListsContainer-sc-1881tcc-1 hUewNp"
@@ -875,13 +881,13 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
     />
   </section>
   <section
-    class="styledComponents__CardContainer-sc-1glo3a7-0 cFsCAD"
+    class="styledComponents__CardContainer-sc-1glo3a7-0 aksCt"
   >
     <div
-      class="styledComponents__Stripe-sc-1glo3a7-1 gnZrrp"
+      class="styledComponents__TopStripe-sc-1glo3a7-4 dySDft"
     />
     <div
-      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-3 guICBB"
+      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 dpVkuc"
     >
       <svg
         aria-hidden="true"
@@ -902,10 +908,13 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
         </g>
       </svg>
       <h2
-        class="styledComponents__StyledH2-sc-1glo3a7-2 cjmroC"
+        class="styledComponents__StyledH2-sc-1glo3a7-1 kipGlV"
       >
         Calls
       </h2>
+      <div
+        class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
+      />
     </div>
     <table
       class="ListTable__StyledTable-vv57q9-0 jXLfgu"
@@ -1116,7 +1125,7 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
       </tbody>
     </table>
     <div
-      class="styledComponents__ViewMoreContainer-hcrd2u-0 ktdFJZ"
+      class="styledComponents__ViewMoreContainer-hcrd2u-0 boVtYd"
     >
       <button
         class="MuiButtonBase-root styledComponents__StyledButton-sc-9o47wt-0 fgJPGq"
@@ -1131,13 +1140,13 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
     />
   </section>
   <section
-    class="styledComponents__CardContainer-sc-1glo3a7-0 cFsCAD"
+    class="styledComponents__CardContainer-sc-1glo3a7-0 aksCt"
   >
     <div
-      class="styledComponents__Stripe-sc-1glo3a7-1 gnZrrp"
+      class="styledComponents__TopStripe-sc-1glo3a7-4 dySDft"
     />
     <div
-      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-3 guICBB"
+      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 dpVkuc"
     >
       <svg
         aria-hidden="true"
@@ -1158,10 +1167,13 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
         </g>
       </svg>
       <h2
-        class="styledComponents__StyledH2-sc-1glo3a7-2 cjmroC"
+        class="styledComponents__StyledH2-sc-1glo3a7-1 kipGlV"
       >
         Documents
       </h2>
+      <div
+        class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
+      />
     </div>
     <table
       class="ListTable__StyledTable-vv57q9-0 jXLfgu"
@@ -1372,7 +1384,7 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
       </tbody>
     </table>
     <div
-      class="styledComponents__ViewMoreContainer-hcrd2u-0 ktdFJZ"
+      class="styledComponents__ViewMoreContainer-hcrd2u-0 boVtYd"
     >
       <button
         class="MuiButtonBase-root styledComponents__StyledButton-sc-9o47wt-0 fgJPGq"
@@ -1387,13 +1399,13 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
     />
   </section>
   <section
-    class="styledComponents__CardContainer-sc-1glo3a7-0 cFsCAD"
+    class="styledComponents__CardContainer-sc-1glo3a7-0 aksCt"
   >
     <div
-      class="styledComponents__Stripe-sc-1glo3a7-1 gnZrrp"
+      class="styledComponents__TopStripe-sc-1glo3a7-4 dySDft"
     />
     <div
-      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-3 guICBB"
+      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 dpVkuc"
     >
       <svg
         aria-hidden="true"
@@ -1418,10 +1430,13 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
         </g>
       </svg>
       <h2
-        class="styledComponents__StyledH2-sc-1glo3a7-2 cjmroC"
+        class="styledComponents__StyledH2-sc-1glo3a7-1 kipGlV"
       >
         Payments
       </h2>
+      <div
+        class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
+      />
     </div>
     <table
       class="ListTable__StyledTable-vv57q9-0 jXLfgu"
@@ -1602,7 +1617,7 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
       </tbody>
     </table>
     <div
-      class="styledComponents__ViewMoreContainer-hcrd2u-0 ktdFJZ"
+      class="styledComponents__ViewMoreContainer-hcrd2u-0 boVtYd"
     >
       <button
         class="MuiButtonBase-root styledComponents__StyledButton-sc-9o47wt-0 fgJPGq"
