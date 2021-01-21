@@ -18,12 +18,3 @@ export const MOCK_HEADERS = [
   'desc',
   'pdf',
 ];
-
-export const MOCK_ROW_DATA = {
-  'date sent': 'date sent',
-  desc: 'desc',
-  from: 'from',
-  pdf: 'pdf',
-  'time sent': 'time sent',
-  type: 'type',
-};

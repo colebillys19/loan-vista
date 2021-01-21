@@ -3,10 +3,13 @@
  * @description ...
  */
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import T from 'prop-types';
 
+import ConditionalRender from 'components/_base-ui/ConditionalRender';
+
 import { getIcon, getTabName } from './helpers';
+import SpinnerBlock from './SpinnerBlock';
 import {
   IconContainer,
   SidebarDetail,
@@ -17,6 +20,7 @@ import {
 
 const SidebarHeader = ({
   pathname,
+  renderLoading,
   sidebarHeaderData: { address1, address2, loanNumber, name },
 }) => {
   const isDashboard = pathname === '/';
@@ -25,17 +29,30 @@ const SidebarHeader = ({
   return (
     <SidebarHeaderContainer>
       <IconContainer>{getIcon(pathname, '8rem')}</IconContainer>
-      <StyledH1>{loanNumber.length ? headingText : '-'}</StyledH1>
-      <SidebarDetail>{name}</SidebarDetail>
-      <SidebarDetail>{address1}</SidebarDetail>
-      <SidebarDetail>{address2}</SidebarDetail>
-      <StyledButton onClick={() => null} text="Switch Loan" />
+      <ConditionalRender
+        Component={
+          <Fragment>
+            <StyledH1>{headingText}</StyledH1>
+            <SidebarDetail>{name}</SidebarDetail>
+            <SidebarDetail>{address1}</SidebarDetail>
+            <SidebarDetail>{address2}</SidebarDetail>
+          </Fragment>
+        }
+        FallbackComponent={<SpinnerBlock />}
+        shouldRender={!renderLoading}
+      />
+      <StyledButton
+        isGhost={renderLoading}
+        onClick={() => null}
+        text="Switch Loan"
+      />
     </SidebarHeaderContainer>
   );
 };
 
 SidebarHeader.propTypes = {
   pathname: T.string.isRequired,
+  renderLoading: T.bool.isRequired,
   sidebarHeaderData: T.shape({
     address1: T.string,
     address2: T.string,

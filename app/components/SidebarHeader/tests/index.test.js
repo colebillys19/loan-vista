@@ -5,6 +5,7 @@ import SidebarHeader from '../index';
 
 const mockProps = {
   pathname: '/',
+  renderLoading: false,
   sidebarHeaderData: {
     address1: 'address1',
     address2: 'address2',

@@ -6,6 +6,7 @@ import SidebarSummary from '../index';
 const mockProps = {
   data: [{ label: 'label', value: 'value' }],
   health: 0,
+  renderLoading: false,
   title: 'title',
 };
 

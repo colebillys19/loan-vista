@@ -31,11 +31,3 @@ export const SidebarContentContainer = styled.div`
   padding: 0 2.5rem;
   position: relative;
 `;
-
-export const SidebarSectionPlaceholder = styled.section`
-  border-top: ${({ isHeader }) =>
-    isHeader ? '' : `0.1rem solid ${borderGrey}`};
-  height: ${({ height }) => height || ''};
-  margin-bottom: ${({ isHeader }) => (isHeader ? '4rem' : '2.2rem')};
-  width: 100%;
-`;

@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 
 import Button from 'components/_base-ui/Button';
@@ -15,14 +16,27 @@ export const SidebarDetail = styled.span`
   }
 `;
 
-export const SidebarHeaderContainer = styled.div`
+export const SidebarHeaderContainer = styled.section`
   margin-bottom: 4rem;
   width: 100%;
 `;
 
-export const StyledButton = styled(Button)`
+export const SpinnerBlockContainer = styled.div`
+  height: 9.3rem;
+  padding-top: 2.1rem;
+  text-align: center;
+`;
+
+export const StyledButton = styled(({ isGhost, ...restProps }) => (
+  <Button {...restProps} />
+))`
   display: block;
   margin: 1.6rem auto 0;
+  opacity: ${({ isGhost }) => (isGhost ? '0.5' : '1')};
+  pointer-events: ${({ isGhost }) => (isGhost ? 'none' : 'all')};
+  & span {
+    opacity: ${({ isGhost }) => (isGhost ? '0' : '1')};
+  }
 `;
 
 export const StyledH1 = styled.h1`

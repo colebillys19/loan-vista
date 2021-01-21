@@ -3,9 +3,9 @@ import { render } from 'react-testing-library';
 
 import TableRow from '../TableRow';
 
-import { MOCK_HEADERS, MOCK_ROW_DATA } from './mockData';
+import { MOCK_DATA, MOCK_HEADERS } from './mockData';
 
-const mockProps = { data: MOCK_ROW_DATA, headers: MOCK_HEADERS };
+const mockProps = { data: MOCK_DATA[0], headers: MOCK_HEADERS };
 
 const Component = (
   <table>

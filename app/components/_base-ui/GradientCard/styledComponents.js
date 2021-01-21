@@ -11,7 +11,7 @@ export const CardContainer = styled.section`
   );
   margin-top: 2.5rem;
   padding: 2.5rem 2.5rem
-    ${({ reduceBottomPadding }) => (reduceBottomPadding ? '2rem' : '4rem')};
+    ${({ reduceBottomPadding }) => (reduceBottomPadding ? '1.5rem' : '4rem')};
   position: relative;
 `;
 

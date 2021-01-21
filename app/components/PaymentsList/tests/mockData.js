@@ -18,12 +18,3 @@ export const MOCK_HEADERS = [
   'interest',
   'escrow',
 ];
-
-export const MOCK_ROW_DATA = {
-  date: 'date',
-  desc: 'desc',
-  escrow: 'escrow',
-  interest: 'interest',
-  principal: 'principal',
-  total: 'total',
-};

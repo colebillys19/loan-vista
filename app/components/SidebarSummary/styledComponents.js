@@ -26,8 +26,17 @@ export const SidebarSummaryContainer = styled.section`
   }
 `;
 
+export const Skeleton = styled.section`
+  height: ${({ height }) => height};
+  outline: 1px solid green;
+`;
+
 export const StyledH5 = styled.h3`
   display: inline-block;
+  margin: 0;
+`;
+
+export const SummaryDetails = styled.p`
   margin: 0;
 `;
 
