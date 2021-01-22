@@ -13,6 +13,7 @@ import SpinnerBlock from './SpinnerBlock';
 import {
   IconContainer,
   SidebarDetail,
+  SidebarDetailsContainer,
   SidebarHeaderContainer,
   StyledButton,
   StyledH1,
@@ -32,12 +33,12 @@ const SidebarHeader = ({
       <ConditionalRender
         // div used instead of fragment to ensure skeleton height consistency
         Component={
-          <div>
+          <SidebarDetailsContainer>
             <StyledH1>{headingText}</StyledH1>
             <SidebarDetail>{name}</SidebarDetail>
             <SidebarDetail>{address1}</SidebarDetail>
             <SidebarDetail>{address2}</SidebarDetail>
-          </div>
+          </SidebarDetailsContainer>
         }
         FallbackComponent={<SpinnerBlock />}
         shouldRender={!renderLoading}

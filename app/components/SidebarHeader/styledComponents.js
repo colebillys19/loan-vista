@@ -16,13 +16,17 @@ export const SidebarDetail = styled.span`
   }
 `;
 
+export const SidebarDetailsContainer = styled.div`
+  height: 9.4rem;
+`;
+
 export const SidebarHeaderContainer = styled.section`
   margin-bottom: 4rem;
   width: 100%;
 `;
 
 export const SpinnerBlockContainer = styled.div`
-  height: 9.3rem;
+  height: 9.4rem;
   padding-top: 2.1rem;
   text-align: center;
 `;
