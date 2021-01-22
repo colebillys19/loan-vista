@@ -1,14 +1,11 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import StopsList from '../StopsList';
-import { MOCK_STOPS_DATA } from './mockData';
+import Skeleton from '../Skeleton';
 
-const mockProps = { data: MOCK_STOPS_DATA, renderLoading: false };
+const Component = <Skeleton />;
 
-const Component = <StopsList {...mockProps} />;
-
-describe('<StopsList />', () => {
+describe('<Skeleton />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

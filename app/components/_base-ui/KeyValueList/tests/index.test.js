@@ -4,7 +4,7 @@ import { render } from 'react-testing-library';
 import KeyValueList from '../index';
 import { MOCK_DATA } from './mockData';
 
-const mockProps = { data: MOCK_DATA };
+const mockProps = { data: MOCK_DATA, numRows: 1, renderLoading: false };
 
 const Component = <KeyValueList {...mockProps} />;
 

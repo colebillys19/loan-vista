@@ -4,7 +4,7 @@ import { render } from 'react-testing-library';
 import DashboardBorrower from '../index';
 import { MOCK_DATA } from './mockData';
 
-const mockProps = { data: MOCK_DATA };
+const mockProps = { data: MOCK_DATA, renderLoading: false };
 
 const Component = <DashboardBorrower {...mockProps} />;
 

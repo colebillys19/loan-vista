@@ -1,29 +1,39 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import T from 'prop-types';
 
+import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import { StyledTable, StyledTableBody } from 'components/_base-ui/ListTable';
+import Skeleton from 'components/_base-ui/ListTable/Skeleton';
 
 import { StopsListContainer, StopsListHeading } from './styledComponents';
 import StopsListRow from './StopsListRow';
 
-const StopsList = ({ data, headers }) => { // eslint-disable-line
-  //
+const StopsList = ({ data, headers, renderLoading }) => (
+  <StopsListContainer>
+    <StopsListHeading>Stops</StopsListHeading>
+    <StyledTable>
+      <StyledTableBody>
+        <ConditionalRender
+          Component={
+            <Fragment>
+              {data.map(({ id, ...restData }) => (
+                <StopsListRow key={id} data={restData} headers={headers} />
+              ))}
+            </Fragment>
+          }
+          FallbackComponent={<Skeleton numRows={12} />}
+          shouldRender={!renderLoading}
+        />
+      </StyledTableBody>
+    </StyledTable>
+  </StopsListContainer>
+);
 
-  return (
-    <StopsListContainer>
-      <StopsListHeading>Stops</StopsListHeading>
-      <StyledTable>
-        <StyledTableBody>
-          {data.map(({ id, ...restData }) => (
-            <StopsListRow key={id} data={restData} headers={headers} />
-          ))}
-        </StyledTableBody>
-      </StyledTable>
-    </StopsListContainer>
-  );
+StopsList.propTypes = {
+  data: T.array,
+  headers: T.array,
+  renderLoading: T.bool.isRequired,
 };
-
-StopsList.propTypes = { data: T.array, headers: T.array };
 
 StopsList.defaultProps = {
   headers: ['name', 'desc', 'date'],

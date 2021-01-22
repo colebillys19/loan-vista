@@ -1,14 +1,15 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import StopsList from '../StopsList';
-import { MOCK_STOPS_DATA } from './mockData';
+import TableFooter from '../TableFooter';
 
-const mockProps = { data: MOCK_STOPS_DATA, renderLoading: false };
+const Component = (
+  <table>
+    <TableFooter />
+  </table>
+);
 
-const Component = <StopsList {...mockProps} />;
-
-describe('<StopsList />', () => {
+describe('<TableFooter />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

@@ -14,6 +14,7 @@ const mockProps = {
     paymentData: MOCK_PAYMENT_DATA,
     stopsData: MOCK_STOPS_DATA,
   },
+  renderLoading: false,
 };
 
 const Component = <DashboardLoan {...mockProps} />;

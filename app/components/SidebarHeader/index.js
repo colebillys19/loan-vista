@@ -3,7 +3,7 @@
  * @description ...
  */
 
-import React, { Fragment } from 'react';
+import React from 'react';
 import T from 'prop-types';
 
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
@@ -30,13 +30,14 @@ const SidebarHeader = ({
     <SidebarHeaderContainer>
       <IconContainer>{getIcon(pathname, '8rem')}</IconContainer>
       <ConditionalRender
+        // div used instead of fragment to ensure skeleton height consistency
         Component={
-          <Fragment>
+          <div>
             <StyledH1>{headingText}</StyledH1>
             <SidebarDetail>{name}</SidebarDetail>
             <SidebarDetail>{address1}</SidebarDetail>
             <SidebarDetail>{address2}</SidebarDetail>
-          </Fragment>
+          </div>
         }
         FallbackComponent={<SpinnerBlock />}
         shouldRender={!renderLoading}

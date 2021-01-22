@@ -12,12 +12,9 @@ export const DetailLabel = styled.span`
 `;
 
 export const Row = styled.div`
-  min-height: 2.1rem;
+  height: 2.1rem;
   & span:last-of-type {
     margin-left: 0.3rem;
-  }
-  & :not(:last-of-type) {
-    height: 1.6rem;
   }
 `;
 
@@ -28,15 +25,12 @@ export const SidebarSummaryContainer = styled.section`
 `;
 
 export const SkeletonRowContainer = styled.div`
-  min-height: 2.1rem;
-  & :not(:last-of-type) {
-    height: 1.6rem;
-  }
+  height: 2.1rem;
 `;
 
 export const SkeletonRowStripe = styled.div`
   background-color: ${skeletonGrey};
-  height: 1.2rem;
+  height: 1rem;
   position: relative;
   top: 0.4rem;
 `;

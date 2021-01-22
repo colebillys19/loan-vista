@@ -72,7 +72,7 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
       class="styledComponents__SidebarSummaryContainer-sc-15x7lk9-3 zJimF"
     >
       <div
-        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-8 crEWRT"
+        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-7 bszysq"
       >
         <svg
           aria-hidden="true"
@@ -94,112 +94,110 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
           Loan
         </h3>
       </div>
-      <div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
       </div>
     </section>
     <section
       class="styledComponents__SidebarSummaryContainer-sc-15x7lk9-3 zJimF"
     >
       <div
-        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-8 crEWRT"
+        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-7 bszysq"
       >
         <svg
           aria-hidden="true"
@@ -221,56 +219,54 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
           Payment
         </h3>
       </div>
-      <div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
       </div>
     </section>
     <section
       class="styledComponents__SidebarSummaryContainer-sc-15x7lk9-3 zJimF"
     >
       <div
-        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-8 crEWRT"
+        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-7 bszysq"
       >
         <svg
           aria-hidden="true"
@@ -292,56 +288,54 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
           Calls
         </h3>
       </div>
-      <div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
       </div>
     </section>
     <section
       class="styledComponents__SidebarSummaryContainer-sc-15x7lk9-3 zJimF"
     >
       <div
-        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-8 crEWRT"
+        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-7 bszysq"
       >
         <svg
           aria-hidden="true"
@@ -363,28 +357,26 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
           Service
         </h3>
       </div>
-      <div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
+      </div>
+      <div
+        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+      >
         <div
-          class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 cLuxGv"
-        >
-          <div
-            class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 cugJdF"
-          />
-        </div>
+          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+        />
       </div>
     </section>
   </div>

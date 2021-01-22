@@ -13,15 +13,19 @@ import DashboardLoan from 'components/DashboardLoan';
 import DashboardPayments from 'components/DashboardPayments';
 import TabContainer from 'components/_base-ui/TabContainer';
 
-const DashboardView = () => (
-  <TabContainer aria-labelledby="dashboard-tab" id="dashboard-view">
-    <DashboardBorrower />
-    <DashboardLoan />
-    <DashboardCalls />
-    <DashboardDocuments />
-    <DashboardPayments />
-  </TabContainer>
-);
+const DashboardView = () => {
+  const showComponents = true;
+
+  return (
+    <TabContainer aria-labelledby="dashboard-tab" id="dashboard-view">
+      <DashboardBorrower renderLoading={!showComponents} />
+      <DashboardLoan renderLoading={!showComponents} />
+      <DashboardCalls renderLoading={!showComponents} />
+      <DashboardDocuments renderLoading={!showComponents} />
+      <DashboardPayments renderLoading={!showComponents} />
+    </TabContainer>
+  );
+};
 
 DashboardView.propTypes = {
   // error: T.oneOfType([T.bool, T.string]).isRequired,

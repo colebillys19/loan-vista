@@ -20,13 +20,24 @@ import {
 
 const Icon = <TextIcon color={appColorAOpaque} size="4rem" />;
 
-const DashboardLoan = ({ data: { balancesData, paymentData, stopsData } }) => (
+const DashboardLoan = ({
+  data: { balancesData, paymentData, stopsData },
+  renderLoading,
+}) => (
   <GradientCard heading="Loan Information" Icon={Icon}>
     <ListsContainer>
-      <StyledKeyValueList data={balancesData} />
-      <StyledKeyValueList data={paymentData} />
+      <StyledKeyValueList
+        data={balancesData}
+        numRows={12}
+        renderLoading={renderLoading}
+      />
+      <StyledKeyValueList
+        data={paymentData}
+        numRows={12}
+        renderLoading={renderLoading}
+      />
     </ListsContainer>
-    <StopsList data={stopsData} />
+    <StopsList data={stopsData} renderLoading={renderLoading} />
   </GradientCard>
 );
 
@@ -36,6 +47,7 @@ DashboardLoan.propTypes = {
     paymentData: T.object,
     stopsData: T.arrayOf(T.object),
   }),
+  renderLoading: T.bool.isRequired,
 };
 
 // temp
