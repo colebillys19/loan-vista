@@ -3,7 +3,7 @@ export const MOCK_DATA = {
     balances: {},
     borrower: { name: 'John Doe' },
     payment: {},
-    propertyAddress: {
+    property: {
       city: 'Carson City',
       state: 'NV',
       streetAddress: '43 Heritage Knoll Ct',

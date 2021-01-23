@@ -27,7 +27,7 @@ describe('fetchLoanDataSaga Saga', () => {
   const generatorA = fetchLoanDataSaga();
   const generatorB = fetchLoanDataSaga();
 
-  it(`sends a get request to the server`, () => {
+  it('sends a get request to the server', () => {
     const expectedEffect = call(get, '/api/loan');
 
     expect(generatorA.next().value).toEqual(expectedEffect);

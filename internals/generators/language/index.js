@@ -96,7 +96,7 @@ module.exports = {
         'What is the language you want to add i18n support for (e.g. "fr", "de")?',
       name: 'language',
       type: 'input',
-      validate: value => {
+      validate: (value) => {
         if (/.+/.test(value) && value.length === 2) {
           return languageIsSupported(value)
             ? `The language "${value}" is already supported.`

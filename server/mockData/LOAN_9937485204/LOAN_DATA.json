@@ -1,0 +1,166 @@
+
+{
+   "balances":{
+      "advance":0.11,
+      "deficit":891.2,
+      "discBal":3.9,
+      "escrow":1090.33,
+      "hud":2.22,
+      "interestDue":5.02,
+      "lateChargeDue":4,
+      "originalDisbursement":2,
+      "originalLoan":95000,
+      "replacementReserve":11,
+      "resEsc":20.6,
+      "suspense":33.84
+   },
+   "borrower":{
+      "city":"SPARKS",
+      "email":"a.dailor@mail.com",
+      "name":"ALEXA DAILOR",
+      "phone":"7753224192",
+      "ssn":"*****2891",
+      "state":"NV",
+      "streetAddressA":"22 LYON CIR",
+      "streetAddressB":null,
+      "unit":null,
+      "zip":"89431"
+   },
+   "coBorrower":{
+      "city":"RENO",
+      "email":"j.simms@mail.com",
+      "name":"JIM SIMMS",
+      "phone":"7758511113",
+      "ssn":"*****3511",
+      "state":"NV",
+      "streetAddressA":"CANYON WAY",
+      "streetAddressB":"BLDG 2",
+      "unit":"4",
+      "zip":"89521"
+   },
+   "payment":{
+      "accidentAndHealth":3.1,
+      "bsc":2,
+      "escrow":3121.1,
+      "hudP":2,
+      "lifeInsurance":11,
+      "miscellaneous":5.5,
+      "netPayment":11301.91,
+      "paymentFrequency":17,
+      "principalAndInterest1":823.3,
+      "principalAndInterest2":98,
+      "replacementReserve":22.99,
+      "total":11301.91
+   },
+   "property":{
+      "city":"CARSON CITY",
+      "resident":"PETER KNOWLES",
+      "state":"NV",
+      "streetAddressA":"43 HERITAGE KNOLL CT",
+      "streetAddressB":null,
+      "unit":null,
+      "zip":"89701"
+   },
+   "stops":[
+      {
+         "date":"2019-02-03",
+         "desc":"User Defined - 1",
+         "name":"PROCESS"
+      },
+      {
+         "date":"2020-06-19",
+         "desc":"Cash will assign. Est pellentesque elit ullamcorper dignissim.",
+         "name":"BAD_CHECK"
+      },
+      {
+         "date":"2019-11-01",
+         "desc":"Normal or early payoff. Diam vulputate ut pharetra sit amet aliquam id. Eu lobortis elementum nibh.",
+         "name":"PAID_IN_FULL"
+      },
+      {
+         "date":"2019-09-28",
+         "desc":"Marked for deletion. Vitae ultricies leo integer malesuada",
+         "name":"FORECLOSURE_STATUS"
+      },
+      {
+         "date":"2020-04-14",
+         "desc":"User Defined - 3",
+         "name":"NO_NOTICE"
+      },
+      {
+         "date":"2021-01-02",
+         "desc":"Exceeds max hazard lines.",
+         "name":"DO_NOT_ANALYZE"
+      },
+      {
+         "date":"2020-10-22",
+         "desc":"Solicitation allowed. Ac turpis.",
+         "name":"ACCIDENT_AND_HEALTH"
+      },
+      {
+         "date":"2020-04-25",
+         "desc":"Solicitation not allowed. Sed adipiscing diam donec adipiscing tristique risus nec feugiat. Sed adipiscing.",
+         "name":"LIFE_INSURANCE"
+      },
+      {
+         "date":"2019-11-11",
+         "desc":"User Defined - 4",
+         "name":"DISBURSEMENT"
+      },
+      {
+         "date":"2019-05-06",
+         "desc":"Velit laoreet id donec ultrices tincidunt arcu non.",
+         "name":"CASHIER"
+      },
+      {
+         "date":"2020-06-07",
+         "desc":"Not accruing. Greater than or equal to accruing stop day.",
+         "name":"ACCRUAL_STATUS"
+      },
+      {
+         "date":"2020-07-08",
+         "desc":"User Defined - 1",
+         "name":"LATE_CHARGE"
+      }
+   ],
+   "summaries":{
+      "calls":{
+         "avgCallsQuarter":4,
+         "avgTimeCall":3.61,
+         "callsLast30Days":3,
+         "mostFreqReason":"A100",
+         "totalCalls":82,
+         "totalNotes":27
+      },
+      "loan":{
+         "assumptionCode":"A",
+         "assumptionDate":"2020-06-21",
+         "graceDays":15,
+         "health":-1,
+         "interestRate":0.05,
+         "investorCode":"N03",
+         "investorName":"NEVADA HOUSING",
+         "lienPosition":"1ST MORTGAGE",
+         "loanNumber":"0123456789",
+         "loanType":"FHA RESIDENTIAL",
+         "maturityDate":"2046-01-01",
+         "originalLoanAmount":345678.9,
+         "originationDate":"2016-01-01",
+         "principalBalance":234456.78,
+         "status":"16-29 DAYS DELINQUENT"
+      },
+      "payment":{
+         "badCheckFees":0,
+         "dueDate":"2020-09-21",
+         "lateChargesDue":0,
+         "otherFees":123.45,
+         "paymentDue":2345.67,
+         "totalDue":2469.12
+      },
+      "service":{
+         "eStatements":"YES",
+         "webAccess":"REGISTERED",
+         "welcomeCall":"YES"
+      }
+   }
+}

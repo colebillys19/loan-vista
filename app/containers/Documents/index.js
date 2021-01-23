@@ -40,7 +40,7 @@ export const Documents = ({
     dispatchFetchDocumentsData();
 
     return () => dispatchOnUnmount();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <DocumentsView

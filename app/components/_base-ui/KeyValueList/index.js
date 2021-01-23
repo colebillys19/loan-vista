@@ -18,9 +18,9 @@ const KeyValueList = ({
     <ConditionalRender
       Component={
         <Fragment>
-          {listData.map(({ key, value }, i) => (
-            <Row key={`${key}-${value}`} reduceHeight={smallRows.includes(i)}>
-              <Key>{key}</Key>
+          {listData.map(({ label, value }, i) => (
+            <Row key={`${label}-${value}`} reduceHeight={smallRows.includes(i)}>
+              <Key>{label}</Key>
               <Value>{value}</Value>
             </Row>
           ))}

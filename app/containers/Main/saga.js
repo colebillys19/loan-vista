@@ -6,9 +6,13 @@ import { get } from 'utils/request';
 import { fetchLoanDataFailure, fetchLoanDataSuccess } from './actions';
 import { FETCH_LOAN_DATA } from './constants';
 
-export function* fetchLoanDataSaga() {
+export function* fetchLoanDataSaga({ payload }) {
   try {
-    const { loanData, loanNumber } = yield call(get, '/api/loan');
+    const { loanNumber: targetLoanNumber } = payload;
+    const { loanData, loanNumber } = yield call(
+      get,
+      `/api/loan?loanNumber=${targetLoanNumber}`,
+    );
     yield put(fetchLoanDataSuccess(loanData, loanNumber));
   } catch (error) {
     console.error(error); // eslint-disable-line

@@ -40,7 +40,7 @@ export const Calls = ({
     dispatchFetchCallsData();
 
     return () => dispatchOnUnmount();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <CallsView

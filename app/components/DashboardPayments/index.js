@@ -14,7 +14,6 @@ import GradientCard from 'components/_base-ui/GradientCard';
 import Skeleton from 'components/_base-ui/ListTable/Skeleton';
 import ViewMoreBlock from 'components/_base-ui/ViewMoreBlock';
 
-import { MOCK_DATA } from './tests/mockData';
 import TableRow from './TableRow';
 
 const Icon = (
@@ -49,7 +48,6 @@ DashboardPayments.propTypes = {
 };
 
 DashboardPayments.defaultProps = {
-  data: MOCK_DATA,
   headers: ['date', 'desc', 'total', 'principal', 'interest', 'escrow'],
 };
 

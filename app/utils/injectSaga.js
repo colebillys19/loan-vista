@@ -55,7 +55,7 @@ const useInjectSaga = ({ key, mode, saga }) => {
     return () => {
       injectors.ejectSaga(key);
     };
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 };
 
 export { useInjectSaga };

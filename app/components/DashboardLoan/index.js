@@ -12,11 +12,6 @@ import { appColorAOpaque } from 'styleConstants';
 
 import StopsList from './StopsList';
 import { ListsContainer, StyledKeyValueList } from './styledComponents';
-import {
-  MOCK_BALANCES_DATA,
-  MOCK_PAYMENT_DATA,
-  MOCK_STOPS_DATA,
-} from './tests/mockData';
 
 const Icon = <TextIcon color={appColorAOpaque} size="4rem" />;
 
@@ -48,15 +43,6 @@ DashboardLoan.propTypes = {
     stopsData: T.arrayOf(T.object),
   }),
   renderLoading: T.bool.isRequired,
-};
-
-// temp
-DashboardLoan.defaultProps = {
-  data: {
-    balancesData: MOCK_BALANCES_DATA,
-    paymentData: MOCK_PAYMENT_DATA,
-    stopsData: MOCK_STOPS_DATA,
-  },
 };
 
 export default DashboardLoan;

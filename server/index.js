@@ -7,12 +7,14 @@ const argv = require('./argv');
 const port = require('./port');
 const setup = require('./middlewares/frontendMiddleware');
 const api = require('./routes');
+const { resolve } = require('path');
+
 const isDev = process.env.NODE_ENV !== 'production';
 const ngrok =
   (isDev && process.env.ENABLE_TUNNEL) || argv.tunnel
     ? require('ngrok')
     : false;
-const { resolve } = require('path');
+
 const app = express();
 
 // implement routes for data fetching

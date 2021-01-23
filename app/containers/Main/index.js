@@ -13,9 +13,13 @@ import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
 
 import { makeSelectPathname } from 'containers/App/selectors';
+import { usePrevious } from 'utils/customHooks';
 import { isValidRoute } from 'utils/globalHelpers';
 
 import makeSelectMain, {
+  makeSelectDashboardBorrowerData,
+  makeSelectDashboardListsData,
+  makeSelectDashboardLoanData,
   makeSelectSidebarHeaderData,
   makeSelectSidebarSummariesData,
 } from './selectors';
@@ -24,6 +28,9 @@ import saga from './saga';
 import { fetchLoanData } from './actions';
 
 export const Main = ({
+  dashboardBorrowerData,
+  dashboardListsData,
+  dashboardLoanData,
   dispatchFetchLoanData,
   error,
   loading,
@@ -36,13 +43,22 @@ export const Main = ({
   useInjectReducer({ key: 'main', reducer });
   useInjectSaga({ key: 'main', saga });
 
+  const prevLoanNumber = usePrevious(loanNumber);
+
   useEffect(() => {
-    if (!loanNumber && isValidRoute(pathname)) {
-      dispatchFetchLoanData();
+    if (isValidRoute(pathname)) {
+      if (!loanNumber) {
+        dispatchFetchLoanData('9937485204');
+      } else if (loanNumber !== prevLoanNumber) {
+        dispatchFetchLoanData(loanNumber);
+      }
     }
-  }, []);
+  }, [dispatchFetchLoanData, loanNumber, pathname, prevLoanNumber]);
 
   return render({
+    dashboardBorrowerData,
+    dashboardListsData,
+    dashboardLoanData,
     error,
     loading,
     loanNumber,
@@ -52,6 +68,9 @@ export const Main = ({
 };
 
 Main.propTypes = {
+  dashboardBorrowerData: T.array.isRequired,
+  dashboardListsData: T.object.isRequired,
+  dashboardLoanData: T.object.isRequired,
   dispatchFetchLoanData: T.func.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
   loading: T.bool.isRequired,
@@ -63,6 +82,9 @@ Main.propTypes = {
 };
 
 const mapStateToProps = createStructuredSelector({
+  dashboardBorrowerData: makeSelectDashboardBorrowerData(),
+  dashboardListsData: makeSelectDashboardListsData(),
+  dashboardLoanData: makeSelectDashboardLoanData(),
   error: makeSelectMain('error'),
   loading: makeSelectMain('loading'),
   loanNumber: makeSelectMain('loanNumber'),
@@ -72,7 +94,7 @@ const mapStateToProps = createStructuredSelector({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  dispatchFetchLoanData: () => dispatch(fetchLoanData()),
+  dispatchFetchLoanData: (loanNumber) => dispatch(fetchLoanData(loanNumber)),
 });
 
 const withConnect = connect(

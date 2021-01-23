@@ -34,6 +34,9 @@ const App = ({ dispatchNavigation, pathname }) => (
     <TabNav dispatchNavigation={dispatchNavigation} pathname={pathname} />
     <Main
       render={({
+        dashboardBorrowerData,
+        dashboardListsData,
+        dashboardLoanData,
         error,
         loading,
         loanNumber,
@@ -55,6 +58,9 @@ const App = ({ dispatchNavigation, pathname }) => (
               path="/"
               render={() => (
                 <DashboardView
+                  dashboardBorrowerData={dashboardBorrowerData}
+                  dashboardListsData={dashboardListsData}
+                  dashboardLoanData={dashboardLoanData}
                   error={error}
                   loading={loading}
                   pathname={pathname}

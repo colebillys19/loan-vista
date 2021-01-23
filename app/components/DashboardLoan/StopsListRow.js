@@ -11,6 +11,9 @@ const StopsListRow = ({ data, headers }) => (
   </StyledTableRow>
 );
 
-StopsListRow.propTypes = { data: T.object, headers: T.array };
+StopsListRow.propTypes = {
+  data: T.shape({ date: T.string, desc: T.string, name: T.string }),
+  headers: T.array,
+};
 
 export default StopsListRow;

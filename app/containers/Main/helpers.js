@@ -2,6 +2,8 @@ import moment from 'moment';
 
 import { convertNumToCurrency } from 'utils/globalHelpers';
 
+import { DASHBOARD_BORROWER_LABEL_DICT } from './constants';
+
 /**
  * convertNumToPercentage
  * @description: ...
@@ -44,7 +46,54 @@ export const dataFormatter = (value, format) => {
       return `${value} minutes`;
     case 'percentage':
       return convertNumToPercentage(value);
+    case 'string':
+      return `${value}`;
     default:
       return value;
   }
+};
+
+/**
+ * getBorrowerKeyValues
+ * @description: ...
+ */
+export const getBorrowerKeyValues = (data) => {
+  const { email, name, phone, ssn, ...restData } = data;
+
+  const { addressA, addressB } = getFormattedAddress({ ...restData });
+
+  const valuesToBeFormatted = {
+    addressA,
+    addressB,
+    email,
+    name,
+    phone,
+    ssn,
+  };
+
+  return DASHBOARD_BORROWER_LABEL_DICT.map(({ format, key, label }) => ({
+    label,
+    value: dataFormatter(valuesToBeFormatted[key], format),
+  }));
+};
+
+/**
+ * getFormattedAddress
+ * @description: ...
+ */
+export const getFormattedAddress = ({
+  city,
+  state,
+  streetAddressA,
+  streetAddressB,
+  unit,
+  zip,
+}) => {
+  const addressA = `${streetAddressA}${
+    streetAddressB ? `, ${streetAddressB}` : ''
+  }${unit ? `, Unit ${unit}` : ''}`;
+
+  const addressB = `${city}, ${state} ${zip}`;
+
+  return { addressA, addressB };
 };

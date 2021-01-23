@@ -5,7 +5,7 @@
 const componentExists = require('../utils/componentExists');
 
 module.exports = {
-  actions: data => {
+  actions: (data) => {
     // Generate index.js and index.test.js
     const actions = [
       {
@@ -126,7 +126,7 @@ module.exports = {
       message: 'What should it be called?',
       name: 'name',
       type: 'input',
-      validate: value => {
+      validate: (value) => {
         if (/.+/.test(value)) {
           return componentExists(value)
             ? 'A component or container with this name already exists'

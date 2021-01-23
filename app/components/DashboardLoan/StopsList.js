@@ -16,8 +16,12 @@ const StopsList = ({ data, headers, renderLoading }) => (
         <ConditionalRender
           Component={
             <Fragment>
-              {data.map(({ id, ...restData }) => (
-                <StopsListRow key={id} data={restData} headers={headers} />
+              {data.map((rowData) => (
+                <StopsListRow
+                  key={rowData.name}
+                  data={rowData}
+                  headers={headers}
+                />
               ))}
             </Fragment>
           }

@@ -4,7 +4,10 @@ import {
   FETCH_LOAN_DATA_SUCCESS,
 } from './constants';
 
-export const fetchLoanData = () => ({ type: FETCH_LOAN_DATA });
+export const fetchLoanData = (loanNumber) => ({
+  payload: { loanNumber },
+  type: FETCH_LOAN_DATA,
+});
 
 export const fetchLoanDataFailure = (error) => ({
   payload: { error },

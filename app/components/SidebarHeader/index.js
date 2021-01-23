@@ -22,7 +22,7 @@ import {
 const SidebarHeader = ({
   pathname,
   renderLoading,
-  sidebarHeaderData: { address1, address2, loanNumber, name },
+  sidebarHeaderData: { addressA, addressB, loanNumber, name },
 }) => {
   const isDashboard = pathname === '/';
   const headingText = isDashboard ? loanNumber : getTabName(pathname);
@@ -36,8 +36,8 @@ const SidebarHeader = ({
           <SidebarDetailsContainer>
             <StyledH1>{headingText}</StyledH1>
             <SidebarDetail>{name}</SidebarDetail>
-            <SidebarDetail>{address1}</SidebarDetail>
-            <SidebarDetail>{address2}</SidebarDetail>
+            <SidebarDetail>{addressA}</SidebarDetail>
+            <SidebarDetail>{addressB}</SidebarDetail>
           </SidebarDetailsContainer>
         }
         FallbackComponent={<SpinnerBlock />}
@@ -56,8 +56,8 @@ SidebarHeader.propTypes = {
   pathname: T.string.isRequired,
   renderLoading: T.bool.isRequired,
   sidebarHeaderData: T.shape({
-    address1: T.string,
-    address2: T.string,
+    addressA: T.string,
+    addressB: T.string,
     health: T.number,
     loanNumber: T.string,
     name: T.string,

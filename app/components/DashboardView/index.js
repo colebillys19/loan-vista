@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-// import T from 'prop-types';
+import T from 'prop-types';
 
 import DashboardBorrower from 'components/DashboardBorrower';
 import DashboardCalls from 'components/DashboardCalls';
@@ -13,23 +13,43 @@ import DashboardLoan from 'components/DashboardLoan';
 import DashboardPayments from 'components/DashboardPayments';
 import TabContainer from 'components/_base-ui/TabContainer';
 
-const DashboardView = () => {
-  const showComponents = true;
+const DashboardView = ({
+  dashboardBorrowerData,
+  dashboardListsData: { callsData, documentsData, paymentsData },
+  dashboardLoanData,
+  error,
+  loading,
+  // pathname,
+}) => {
+  const showComponents = !error && !loading;
 
   return (
     <TabContainer aria-labelledby="dashboard-tab" id="dashboard-view">
-      <DashboardBorrower renderLoading={!showComponents} />
-      <DashboardLoan renderLoading={!showComponents} />
-      <DashboardCalls renderLoading={!showComponents} />
-      <DashboardDocuments renderLoading={!showComponents} />
-      <DashboardPayments renderLoading={!showComponents} />
+      <DashboardBorrower
+        data={dashboardBorrowerData}
+        renderLoading={!showComponents}
+      />
+      <DashboardLoan data={dashboardLoanData} renderLoading={!showComponents} />
+      <DashboardCalls data={callsData} renderLoading={!showComponents} />
+      <DashboardDocuments
+        data={documentsData}
+        renderLoading={!showComponents}
+      />
+      <DashboardPayments data={paymentsData} renderLoading={!showComponents} />
     </TabContainer>
   );
 };
 
 DashboardView.propTypes = {
-  // error: T.oneOfType([T.bool, T.string]).isRequired,
-  // loading: T.bool.isRequired,
+  dashboardBorrowerData: T.array.isRequired,
+  dashboardListsData: T.shape({
+    callsData: T.array,
+    documentsData: T.array,
+    paymentsData: T.array,
+  }).isRequired,
+  dashboardLoanData: T.object.isRequired,
+  error: T.oneOfType([T.bool, T.string]).isRequired,
+  loading: T.bool.isRequired,
   // pathname: T.string.isRequired,
 };
 

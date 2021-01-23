@@ -44,7 +44,7 @@ describe('fetchDocumentsDataSaga Saga', () => {
     expect(generatorA.next().value.type).toEqual('SELECT');
   });
 
-  it(`sends a get request to the server`, () => {
+  it('sends a get request to the server', () => {
     const expectedEffect = call(
       get,
       `/api/documents/?${querystring.stringify(params)}`,

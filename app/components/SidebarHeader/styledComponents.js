@@ -17,7 +17,7 @@ export const SidebarDetail = styled.span`
 `;
 
 export const SidebarDetailsContainer = styled.div`
-  height: 9.4rem;
+  height: 9.3rem;
 `;
 
 export const SidebarHeaderContainer = styled.section`
@@ -26,7 +26,7 @@ export const SidebarHeaderContainer = styled.section`
 `;
 
 export const SpinnerBlockContainer = styled.div`
-  height: 9.4rem;
+  height: 9.3rem;
   padding-top: 2.1rem;
   text-align: center;
 `;

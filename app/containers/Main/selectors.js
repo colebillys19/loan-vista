@@ -3,6 +3,9 @@ import { createSelector } from 'reselect';
 import { initialState } from './reducer';
 import {
   getCallsSummary,
+  getDashboardBorrowerData,
+  getDashboardListsData,
+  getDashboardLoanData,
   getLoanSummary,
   getPaymentSummary,
   getServiceSummary,
@@ -18,6 +21,39 @@ const makeSelectMain = (prop) =>
   );
 
 /**
+ * makeSelectDashboardBorrowerData
+ * @description ...
+ */
+const makeSelectDashboardBorrowerData = () =>
+  createSelector(
+    makeSelectMain('loanData'),
+    ({ borrower, coBorrower }) =>
+      getDashboardBorrowerData(borrower, coBorrower),
+  );
+
+/**
+ * makeSelectDashboardListsData
+ * @description ...
+ */
+const makeSelectDashboardListsData = () =>
+  createSelector(
+    makeSelectMain('loanData'),
+    ({ recentCalls, recentDocuments, recentPayments }) =>
+      getDashboardListsData(recentCalls, recentDocuments, recentPayments),
+  );
+
+/**
+ * makeSelectDashboardLoanData
+ * @description ...
+ */
+const makeSelectDashboardLoanData = () =>
+  createSelector(
+    makeSelectMain('loanData'),
+    ({ balances, payment, stops }) =>
+      getDashboardLoanData(balances, payment, stops),
+  );
+
+/**
  * makeSelectSidebarHeaderData
  * @description ...
  */
@@ -25,7 +61,7 @@ const makeSelectSidebarHeaderData = () =>
   createSelector(
     makeSelectMain('loanData'),
     makeSelectMain('loanNumber'),
-    (loanData, loanNumber) => getSidebarHeaderData(loanData, loanNumber),
+    ({ property }, loanNumber) => getSidebarHeaderData(property, loanNumber),
   );
 
 /**
@@ -50,6 +86,9 @@ const makeSelectSidebarSummariesData = () =>
 
 export default makeSelectMain;
 export {
+  makeSelectDashboardBorrowerData,
+  makeSelectDashboardListsData,
+  makeSelectDashboardLoanData,
   makeSelectSidebarHeaderData,
   makeSelectSidebarSummariesData,
   selectMainDomain,

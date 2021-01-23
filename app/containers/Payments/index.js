@@ -40,7 +40,7 @@ export const Payments = ({
     dispatchFetchPaymentsData();
 
     return () => dispatchOnUnmount();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <PaymentsView
