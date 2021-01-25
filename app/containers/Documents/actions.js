@@ -3,6 +3,7 @@ import {
   FETCH_DOCUMENTS_DATA_FAILURE,
   FETCH_DOCUMENTS_DATA_SUCCESS,
   ON_UNMOUNT,
+  SET_LOADING_TRUE,
 } from './constants';
 
 /* eslint-disable arrow-body-style */
@@ -22,3 +23,5 @@ export const fetchDocumentsDataSuccess = (documentsData, newFetchParams) => ({
 });
 
 export const onUnmount = () => ({ type: ON_UNMOUNT });
+
+export const setLoadingTrue = () => ({ type: SET_LOADING_TRUE });

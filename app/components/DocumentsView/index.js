@@ -18,32 +18,29 @@ const DocumentsView = ({
   error,
   fetchParams,
   loading,
+  noDataFetched,
   sortLoading,
   sortValues,
-}) => {
-  const noListData = !loading && documentsData.length === 0;
-
-  return (
-    <TabContainer aria-labelledby="documents-tab" id="documents-view">
-      <ListFilter
-        dispatchFetchData={dispatchFetchDocumentsData}
-        fetchParams={fetchParams}
-      />
-      <ConditionalRender
-        Component={
-          <DocumentsList
-            dispatchFetchDocumentsData={dispatchFetchDocumentsData}
-            documentsData={documentsData}
-            sortLoading={sortLoading}
-            sortValues={sortValues}
-          />
-        }
-        FallbackComponent={<ListFallback error={error} loading={loading} />}
-        shouldRender={!error && !loading && !noListData}
-      />
-    </TabContainer>
-  );
-};
+}) => (
+  <TabContainer aria-labelledby="documents-tab" id="documents-view">
+    <ListFilter
+      dispatchFetchData={dispatchFetchDocumentsData}
+      fetchParams={fetchParams}
+    />
+    <ConditionalRender
+      Component={
+        <DocumentsList
+          dispatchFetchDocumentsData={dispatchFetchDocumentsData}
+          documentsData={documentsData}
+          sortLoading={sortLoading}
+          sortValues={sortValues}
+        />
+      }
+      FallbackComponent={<ListFallback error={error} loading={loading} />}
+      shouldRender={!error && !loading && !noDataFetched}
+    />
+  </TabContainer>
+);
 
 DocumentsView.propTypes = {
   dispatchFetchDocumentsData: T.func.isRequired,
@@ -51,6 +48,7 @@ DocumentsView.propTypes = {
   error: T.oneOfType([T.bool, T.string]).isRequired,
   fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
+  noDataFetched: T.bool.isRequired,
   sortLoading: T.bool.isRequired,
   sortValues: T.object.isRequired,
 };

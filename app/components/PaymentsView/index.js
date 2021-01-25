@@ -17,39 +17,37 @@ const PaymentsView = ({
   error,
   fetchParams,
   loading,
+  noDataFetched,
   paymentsData,
   sortLoading,
   sortValues,
-}) => {
-  const noListData = !loading && paymentsData.length === 0;
-
-  return (
-    <TabContainer aria-labelledby="payments-tab" id="payments-view">
-      <ListFilter
-        dispatchFetchData={dispatchFetchPaymentsData}
-        fetchParams={fetchParams}
-      />
-      <ConditionalRender
-        Component={
-          <PaymentsList
-            dispatchFetchPaymentsData={dispatchFetchPaymentsData}
-            paymentsData={paymentsData}
-            sortLoading={sortLoading}
-            sortValues={sortValues}
-          />
-        }
-        FallbackComponent={<ListFallback error={error} loading={loading} />}
-        shouldRender={!error && !loading && !noListData}
-      />
-    </TabContainer>
-  );
-};
+}) => (
+  <TabContainer aria-labelledby="payments-tab" id="payments-view">
+    <ListFilter
+      dispatchFetchData={dispatchFetchPaymentsData}
+      fetchParams={fetchParams}
+    />
+    <ConditionalRender
+      Component={
+        <PaymentsList
+          dispatchFetchPaymentsData={dispatchFetchPaymentsData}
+          paymentsData={paymentsData}
+          sortLoading={sortLoading}
+          sortValues={sortValues}
+        />
+      }
+      FallbackComponent={<ListFallback error={error} loading={loading} />}
+      shouldRender={!error && !loading && !noDataFetched}
+    />
+  </TabContainer>
+);
 
 PaymentsView.propTypes = {
   dispatchFetchPaymentsData: T.func.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
   fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
+  noDataFetched: T.bool.isRequired,
   paymentsData: T.array.isRequired,
   sortLoading: T.bool.isRequired,
   sortValues: T.object.isRequired,

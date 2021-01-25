@@ -6,6 +6,7 @@ import {
   FETCH_PAYMENTS_DATA_FAILURE,
   FETCH_PAYMENTS_DATA_SUCCESS,
   ON_UNMOUNT,
+  SET_LOADING_TRUE,
 } from './constants';
 
 export const initialState = paymentsInitialState;
@@ -31,6 +32,7 @@ const paymentsReducer = (state = initialState, { payload, type }) =>
         break;
       case FETCH_PAYMENTS_DATA_SUCCESS:
         const { newFetchParams, paymentsData } = payload;
+        draft.noDataFetched = !paymentsData.length;
         draft.loading = false;
         draft.fetchParams = newFetchParams;
         draft.paymentsData = paymentsData;
@@ -41,6 +43,9 @@ const paymentsReducer = (state = initialState, { payload, type }) =>
         draft.fetchParams = initialState.fetchParams;
         draft.loading = false;
         draft.sortLoading = false;
+        break;
+      case SET_LOADING_TRUE:
+        draft.loading = true;
         break;
     }
   });

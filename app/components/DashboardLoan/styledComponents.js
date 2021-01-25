@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { borderGrey } from 'styleConstants';
+import { StyledTableRow } from 'components/_base-ui/ListTable';
 import KeyValueList from 'components/_base-ui/KeyValueList';
 
 export const StopsListHeading = styled.h3`
@@ -20,4 +21,10 @@ export const StopsListContainer = styled.div`
 
 export const StyledKeyValueList = styled(KeyValueList)`
   width: 37rem;
+`;
+
+export const CustomTableRow = styled(StyledTableRow)`
+  & td:nth-of-type(2) {
+    width: 47rem;
+  }
 `;

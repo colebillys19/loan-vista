@@ -3,6 +3,7 @@ import querystring from 'querystring';
 
 import { REQUEST_ERROR_MESSAGE } from 'utils/globalConstants';
 import { get } from 'utils/request';
+import makeSelectMain from 'containers/Main/selectors';
 
 import { fetchCallsDataFailure, fetchCallsDataSuccess } from './actions';
 import makeSelectCalls from './selectors';
@@ -10,16 +11,25 @@ import { FETCH_CALLS_DATA } from './constants';
 
 export function* fetchCallsDataSaga({ payload }) {
   try {
-    const { params: newParams } = payload;
-    const stateParams = yield select(makeSelectCalls('fetchParams'));
-    const combinedParams = Object.assign({}, stateParams, newParams);
+    const { params: payloadFetchParams } = payload;
+    const stateFetchParams = yield select(makeSelectCalls('fetchParams'));
+    const loanNumber = yield select(makeSelectMain('loanNumber'));
 
-    const { callsData, newFetchParams } = yield call(
-      get,
-      `/api/calls/?${querystring.stringify(combinedParams)}`,
-    );
+    if (loanNumber) {
+      const queryParams = Object.assign(
+        {},
+        { loanNumber },
+        payloadFetchParams,
+        stateFetchParams,
+      );
 
-    yield put(fetchCallsDataSuccess(callsData, newFetchParams));
+      const { callsData, newFetchParams } = yield call(
+        get,
+        `/api/calls/?${querystring.stringify(queryParams)}`,
+      );
+
+      yield put(fetchCallsDataSuccess(callsData, newFetchParams));
+    }
   } catch (error) {
     console.error(error); // eslint-disable-line
     yield put(fetchCallsDataFailure(REQUEST_ERROR_MESSAGE));

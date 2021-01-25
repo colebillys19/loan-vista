@@ -9,26 +9,31 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
-import DocumentsView from 'components/DocumentsView';
 import { makeSelectPathname } from 'containers/App/selectors';
-
-import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
+import { useInjectSaga } from 'utils/injectSaga';
+import { usePrevious } from 'utils/customHooks';
+import DocumentsView from 'components/DocumentsView';
+import makeSelectMain from 'containers/Main/selectors';
+
 import makeSelectDocuments, {
   makeSelectDocumentsData,
   makeSelectSortValues,
 } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import { fetchDocumentsData, onUnmount } from './actions';
+import { fetchDocumentsData, onUnmount, setLoadingTrue } from './actions';
 
 export const Documents = ({
   dispatchFetchDocumentsData,
   dispatchOnUnmount,
+  dispatchSetLoadingTrue,
   documentsData,
   error,
   fetchParams,
   loading,
+  loanNumber,
+  noDataFetched,
   pathname,
   sortLoading,
   sortValues,
@@ -36,11 +41,24 @@ export const Documents = ({
   useInjectReducer({ key: 'documents', reducer });
   useInjectSaga({ key: 'documents', saga });
 
-  useEffect(() => {
-    dispatchFetchDocumentsData();
+  const prevLoanNumber = usePrevious(loanNumber);
 
-    return () => dispatchOnUnmount();
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => () => dispatchOnUnmount(), []);
+
+  useEffect(() => {
+    if (!loanNumber) {
+      dispatchSetLoadingTrue();
+    } else if (loanNumber !== prevLoanNumber) {
+      dispatchFetchDocumentsData();
+    }
+  }, [
+    dispatchFetchDocumentsData,
+    dispatchSetLoadingTrue,
+    loanNumber,
+    pathname,
+    prevLoanNumber,
+  ]);
 
   return (
     <DocumentsView
@@ -49,6 +67,7 @@ export const Documents = ({
       error={error}
       fetchParams={fetchParams}
       loading={loading}
+      noDataFetched={noDataFetched}
       pathname={pathname}
       sortLoading={sortLoading}
       sortValues={sortValues}
@@ -59,10 +78,13 @@ export const Documents = ({
 Documents.propTypes = {
   dispatchFetchDocumentsData: T.func.isRequired,
   dispatchOnUnmount: T.func.isRequired,
+  dispatchSetLoadingTrue: T.func.isRequired,
   documentsData: T.array.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
   fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
+  loanNumber: T.string.isRequired,
+  noDataFetched: T.bool.isRequired,
   pathname: T.string.isRequired,
   sortLoading: T.bool.isRequired,
   sortValues: T.object.isRequired,
@@ -73,6 +95,8 @@ const mapStateToProps = createStructuredSelector({
   error: makeSelectDocuments('error'),
   fetchParams: makeSelectDocuments('fetchParams'),
   loading: makeSelectDocuments('loading'),
+  loanNumber: makeSelectMain('loanNumber'),
+  noDataFetched: makeSelectDocuments('noDataFetched'),
   pathname: makeSelectPathname(),
   sortLoading: makeSelectDocuments('sortLoading'),
   sortValues: makeSelectSortValues(),
@@ -81,6 +105,7 @@ const mapStateToProps = createStructuredSelector({
 const mapDispatchToProps = (dispatch) => ({
   dispatchFetchDocumentsData: (props) => dispatch(fetchDocumentsData(props)),
   dispatchOnUnmount: () => dispatch(onUnmount()),
+  dispatchSetLoadingTrue: () => dispatch(setLoadingTrue()),
 });
 
 const withConnect = connect(

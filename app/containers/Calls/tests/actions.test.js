@@ -59,3 +59,9 @@ describe('onUnmount', () => {
     expect(onUnmount()).toEqual({ type: ON_UNMOUNT });
   });
 });
+
+describe('setLoadingTrue', () => {
+  it('has correct type', () => {
+    expect(false).toBeTruthy();
+  });
+});

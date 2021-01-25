@@ -9,12 +9,11 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
-import { useInjectSaga } from 'utils/injectSaga';
-import { useInjectReducer } from 'utils/injectReducer';
-
-import { makeSelectPathname } from 'containers/App/selectors';
-import { usePrevious } from 'utils/customHooks';
 import { isValidRoute } from 'utils/globalHelpers';
+import { makeSelectPathname } from 'containers/App/selectors';
+import { useInjectReducer } from 'utils/injectReducer';
+import { useInjectSaga } from 'utils/injectSaga';
+import { usePrevious } from 'utils/customHooks';
 
 import makeSelectMain, {
   makeSelectDashboardBorrowerData,
@@ -49,7 +48,7 @@ export const Main = ({
     if (isValidRoute(pathname)) {
       if (!loanNumber) {
         dispatchFetchLoanData('9937485204');
-      } else if (loanNumber !== prevLoanNumber) {
+      } else if (prevLoanNumber !== '' && loanNumber !== prevLoanNumber) {
         dispatchFetchLoanData(loanNumber);
       }
     }

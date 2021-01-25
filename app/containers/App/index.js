@@ -63,6 +63,7 @@ const App = ({ dispatchNavigation, pathname }) => (
                   dashboardLoanData={dashboardLoanData}
                   error={error}
                   loading={loading}
+                  loanNumber={loanNumber}
                   pathname={pathname}
                 />
               )}

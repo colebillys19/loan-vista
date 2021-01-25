@@ -19,9 +19,9 @@ const DashboardView = ({
   dashboardLoanData,
   error,
   loading,
-  // pathname,
+  loanNumber,
 }) => {
-  const showComponents = !error && !loading;
+  const showComponents = loanNumber && !error && !loading;
 
   return (
     <TabContainer aria-labelledby="dashboard-tab" id="dashboard-view">
@@ -50,7 +50,7 @@ DashboardView.propTypes = {
   dashboardLoanData: T.object.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
   loading: T.bool.isRequired,
-  // pathname: T.string.isRequired,
+  loanNumber: T.string.isRequired,
 };
 
 export default DashboardView;

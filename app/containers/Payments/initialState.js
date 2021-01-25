@@ -9,6 +9,7 @@ const initialState = {
     sortOrder: 'desc',
   },
   loading: false,
+  noDataFetched: false,
   paymentsData: [],
   sortLoading: false,
 };

@@ -18,33 +18,30 @@ const CallsView = ({
   error,
   fetchParams,
   loading,
+  noDataFetched,
   sortLoading,
   sortValues,
-}) => {
-  const noListData = !loading && callsData.length === 0;
-
-  return (
-    <TabContainer aria-labelledby="calls-tab" id="calls-view">
-      <ListFilter
-        dispatchFetchData={dispatchFetchCallsData}
-        fetchParams={fetchParams}
-      />
-      <ConditionalRender
-        Component={
-          <CallsList
-            callsData={callsData}
-            dispatchFetchCallsData={dispatchFetchCallsData}
-            loading={loading}
-            sortLoading={sortLoading}
-            sortValues={sortValues}
-          />
-        }
-        FallbackComponent={<ListFallback error={error} loading={loading} />}
-        shouldRender={!error && !loading && !noListData}
-      />
-    </TabContainer>
-  );
-};
+}) => (
+  <TabContainer aria-labelledby="calls-tab" id="calls-view">
+    <ListFilter
+      dispatchFetchData={dispatchFetchCallsData}
+      fetchParams={fetchParams}
+    />
+    <ConditionalRender
+      Component={
+        <CallsList
+          callsData={callsData}
+          dispatchFetchCallsData={dispatchFetchCallsData}
+          loading={loading}
+          sortLoading={sortLoading}
+          sortValues={sortValues}
+        />
+      }
+      FallbackComponent={<ListFallback error={error} loading={loading} />}
+      shouldRender={!error && !loading && !noDataFetched}
+    />
+  </TabContainer>
+);
 
 CallsView.propTypes = {
   callsData: T.array.isRequired,
@@ -52,6 +49,7 @@ CallsView.propTypes = {
   error: T.oneOfType([T.bool, T.string]).isRequired,
   fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
+  noDataFetched: T.bool.isRequired,
   sortLoading: T.bool.isRequired,
   sortValues: T.object.isRequired,
 };

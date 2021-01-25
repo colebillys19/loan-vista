@@ -6,6 +6,7 @@ import {
   FETCH_DOCUMENTS_DATA_FAILURE,
   FETCH_DOCUMENTS_DATA_SUCCESS,
   ON_UNMOUNT,
+  SET_LOADING_TRUE,
 } from './constants';
 
 export const initialState = documentsInitialState;
@@ -31,6 +32,7 @@ const documentsReducer = (state = initialState, { payload, type }) =>
         break;
       case FETCH_DOCUMENTS_DATA_SUCCESS:
         const { documentsData, newFetchParams } = payload;
+        draft.noDataFetched = !documentsData.length;
         draft.documentsData = documentsData;
         draft.fetchParams = newFetchParams;
         draft.loading = false;
@@ -41,6 +43,9 @@ const documentsReducer = (state = initialState, { payload, type }) =>
         draft.fetchParams = initialState.fetchParams;
         draft.loading = false;
         draft.sortLoading = false;
+        break;
+      case SET_LOADING_TRUE:
+        draft.loading = true;
         break;
     }
   });

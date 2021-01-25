@@ -3,10 +3,10 @@ const fs = require('fs');
 const { getTargetDocumentsData } = require('./helpers');
 
 const getDocuments = (req, res) => {
-  const fetchParams = req.query;
+  const { loanNumber, ...fetchParams } = req.query;
 
   const jsonData = fs.readFileSync(
-    `server/mockData/${fetchParams.loanNumber}/DOCUMENTS_DATA.json`,
+    `server/mockData/LOAN_${loanNumber}/DOCUMENTS_DATA.json`,
   );
   const documentsData = JSON.parse(jsonData);
 

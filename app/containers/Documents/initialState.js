@@ -10,6 +10,7 @@ const initialState = {
     sortOrder: 'desc',
   },
   loading: false,
+  noDataFetched: false,
   sortLoading: false,
 };
 

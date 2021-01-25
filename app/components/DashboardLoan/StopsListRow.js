@@ -1,14 +1,16 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { StyledTableData, StyledTableRow } from 'components/_base-ui/ListTable';
+import { StyledTableData } from 'components/_base-ui/ListTable';
+
+import { CustomTableRow } from './styledComponents';
 
 const StopsListRow = ({ data, headers }) => (
-  <StyledTableRow>
+  <CustomTableRow>
     {headers.map((header) => (
       <StyledTableData key={header}>{data[header]}</StyledTableData>
     ))}
-  </StyledTableRow>
+  </CustomTableRow>
 );
 
 StopsListRow.propTypes = {

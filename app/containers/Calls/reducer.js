@@ -6,6 +6,7 @@ import {
   FETCH_CALLS_DATA_FAILURE,
   FETCH_CALLS_DATA_SUCCESS,
   ON_UNMOUNT,
+  SET_LOADING_TRUE,
 } from './constants';
 
 export const initialState = callsInitialState;
@@ -31,6 +32,7 @@ const callsReducer = (state = initialState, { payload, type }) =>
         break;
       case FETCH_CALLS_DATA_SUCCESS:
         const { callsData, newFetchParams } = payload;
+        draft.noDataFetched = !callsData.length;
         draft.callsData = callsData;
         draft.fetchParams = newFetchParams;
         draft.loading = false;
@@ -41,6 +43,9 @@ const callsReducer = (state = initialState, { payload, type }) =>
         draft.fetchParams = initialState.fetchParams;
         draft.loading = false;
         draft.sortLoading = false;
+        break;
+      case SET_LOADING_TRUE:
+        draft.loading = true;
         break;
     }
   });
