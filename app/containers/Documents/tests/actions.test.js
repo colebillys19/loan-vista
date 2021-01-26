@@ -3,12 +3,14 @@ import {
   fetchDocumentsDataFailure,
   fetchDocumentsDataSuccess,
   onUnmount,
+  setLoadingTrue,
 } from '../actions';
 import {
   FETCH_DOCUMENTS_DATA,
   FETCH_DOCUMENTS_DATA_FAILURE,
   FETCH_DOCUMENTS_DATA_SUCCESS,
   ON_UNMOUNT,
+  SET_LOADING_TRUE,
 } from '../constants';
 import { MOCK_DATA } from './mockData';
 
@@ -59,5 +61,11 @@ describe('fetchDocumentsDataSuccess', () => {
 describe('onUnmount', () => {
   it('has correct type', () => {
     expect(onUnmount()).toEqual({ type: ON_UNMOUNT });
+  });
+});
+
+describe('setLoadingTrue', () => {
+  it('has correct type', () => {
+    expect(setLoadingTrue()).toEqual({ type: SET_LOADING_TRUE });
   });
 });

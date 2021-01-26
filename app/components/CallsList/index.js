@@ -25,22 +25,22 @@ const CallsList = ({
   dispatchFetchCallsData,
   headers,
   sortLoading,
-  sortValues: { sortCol, sortOrder },
+  sortValues: { sortCol: currentSortCol, sortOrder: currentSortOrder },
 }) => {
   const [colClicked, setColClicked] = useState('');
 
   useEffect(() => {
     setColClicked('');
-  }, [sortCol, sortOrder]);
+  }, [currentSortCol, currentSortOrder]);
 
   const handleSortClick = (header) => {
     setColClicked(header);
 
-    if (header !== sortCol) {
+    if (header !== currentSortCol) {
       dispatchFetchCallsData({ sortCol: header, sortOrder: 'desc' });
     } else {
       dispatchFetchCallsData({
-        sortOrder: sortOrder === 'desc' ? 'asc' : 'desc',
+        sortOrder: currentSortOrder === 'desc' ? 'asc' : 'desc',
       });
     }
   };
@@ -60,8 +60,10 @@ const CallsList = ({
                     scope="col"
                   >
                     <ListSortButton
-                      isActive={header === sortCol}
-                      isAscending={header === sortCol && sortOrder === 'asc'}
+                      isActive={header === currentSortCol}
+                      isAscending={
+                        header === currentSortCol && currentSortOrder === 'asc'
+                      }
                       loading={sortLoading && header === colClicked}
                       onClick={() => handleSortClick(header)}
                       text={header}

@@ -11,7 +11,7 @@ import { TextIcon } from 'images/icons';
 import { appColorAOpaque } from 'styleConstants';
 
 import StopsList from './StopsList';
-import { ListsContainer, StyledKeyValueList } from './styledComponents';
+import { ListsContainer, StyledTwoColumnList } from './styledComponents';
 
 const Icon = <TextIcon color={appColorAOpaque} size="4rem" />;
 
@@ -21,12 +21,12 @@ const DashboardLoan = ({
 }) => (
   <GradientCard heading="Loan Information" Icon={Icon}>
     <ListsContainer>
-      <StyledKeyValueList
+      <StyledTwoColumnList
         data={balancesData}
         numRows={12}
         renderLoading={renderLoading}
       />
-      <StyledKeyValueList
+      <StyledTwoColumnList
         data={paymentData}
         numRows={12}
         renderLoading={renderLoading}

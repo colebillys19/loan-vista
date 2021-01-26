@@ -15,9 +15,12 @@ const store = configureStore(initialState, history);
 const mockProps = {
   dispatchFetchPaymentsData: jest.fn(),
   dispatchOnUnmount: jest.fn(),
+  dispatchSetLoadingTrue: jest.fn(),
   error: false,
   fetchParams: {},
   loading: false,
+  loanNumber: '1234567890',
+  noDataFetched: false,
   pathname: '',
   paymentsData: MOCK_DATA,
   sortLoading: false,

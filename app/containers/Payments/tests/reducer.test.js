@@ -5,6 +5,7 @@ import {
   fetchPaymentsDataFailure,
   fetchPaymentsDataSuccess,
   onUnmount,
+  setLoadingTrue,
 } from '../actions';
 import initialState from '../initialState';
 import paymentsReducer from '../reducer';
@@ -86,7 +87,39 @@ describe('paymentsReducer', () => {
     ).toEqual(expected);
   });
 
+  it('should handle fetchPaymentsDataSuccess correctly when no data was fetched', () => {
+    const paymentsData = [];
+    const newFetchParams = {
+      currentTotal: '80',
+      dateFrom: '2020-01-01',
+      dateTo: '2020-02-01',
+      keyword: 'test',
+      sortCol: 'date',
+      sortOrder: 'desc',
+    };
+    const expected = produce(state, (draft) => {
+      draft.paymentsData = paymentsData;
+      draft.fetchParams = newFetchParams;
+      draft.noDataFetched = true;
+    });
+
+    expect(
+      paymentsReducer(
+        state,
+        fetchPaymentsDataSuccess(paymentsData, newFetchParams),
+      ),
+    ).toEqual(expected);
+  });
+
   it('should handle onUnmount correctly', () => {
     expect(paymentsReducer(state, onUnmount())).toEqual(initialState);
+  });
+
+  it('should handle setLoadingTrue correctly', () => {
+    const expected = produce(state, (draft) => {
+      draft.loading = true;
+    });
+
+    expect(paymentsReducer(state, setLoadingTrue())).toEqual(expected);
   });
 });

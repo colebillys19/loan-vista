@@ -8,10 +8,13 @@ import T from 'prop-types';
 
 import { appColorAOpaque, textColorA } from 'styleConstants';
 import { MailIcon } from 'images/icons';
-import { StyledTable, StyledTableBody } from 'components/_base-ui/ListTable';
+import {
+  Skeleton,
+  StyledTable,
+  StyledTableBody,
+} from 'components/_base-ui/ListTable';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import GradientCard from 'components/_base-ui/GradientCard';
-import Skeleton from 'components/_base-ui/ListTable/Skeleton';
 import ViewMoreBlock from 'components/_base-ui/ViewMoreBlock';
 
 import TableRow from './TableRow';

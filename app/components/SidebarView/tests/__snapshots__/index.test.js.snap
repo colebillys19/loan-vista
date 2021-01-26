@@ -11,7 +11,7 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
       class="styledComponents__Gradient-ilr151-0 etoVkp"
     />
     <section
-      class="styledComponents__SidebarHeaderContainer-n9yhwx-2 kGJGvg"
+      class="styledComponents__SidebarHeaderContainer-n9yhwx-3 lwhPb"
     >
       <div
         class="styledComponents__IconContainer-n9yhwx-0 eSNqrl"
@@ -36,7 +36,7 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
         </svg>
       </div>
       <div
-        class="styledComponents__SpinnerBlockContainer-n9yhwx-3 cXJVFp"
+        class="styledComponents__SpinnerBlockContainer-n9yhwx-4 dBJSGD"
       >
         <span>
           <svg
@@ -54,7 +54,7 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
         </span>
       </div>
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-n9yhwx-4 fMHSTS styledComponents__StyledButton-sc-86ulmm-0 exBHac"
+        class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-n9yhwx-5 dWrZle styledComponents__StyledButton-sc-86ulmm-0 exBHac"
         tabindex="0"
         type="button"
       >

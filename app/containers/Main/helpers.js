@@ -38,6 +38,8 @@ export const dataFormatter = (value, format) => {
   switch (format) {
     case 'currency':
       return convertNumToCurrency(value);
+    case 'currencyNoAdorn':
+      return convertNumToCurrency(value, false);
     case 'date':
       return value !== '-'
         ? moment(value, 'YYYY-MM-DD').format('M/D/YYYY')
@@ -46,6 +48,8 @@ export const dataFormatter = (value, format) => {
       return `${value} minutes`;
     case 'percentage':
       return convertNumToPercentage(value);
+    case 'phone':
+      return formatPhoneNumber(value);
     case 'string':
       return `${value}`;
     default:
@@ -96,4 +100,16 @@ export const getFormattedAddress = ({
   const addressB = `${city}, ${state} ${zip}`;
 
   return { addressA, addressB };
+};
+
+/**
+ * formatPhoneNumber
+ * @description: ...
+ */
+export const formatPhoneNumber = (numStr) => {
+  const a = numStr.slice(0, 3);
+  const b = numStr.slice(3, 6);
+  const c = numStr.slice(-4);
+
+  return `(${a}) ${b}-${c}`;
 };

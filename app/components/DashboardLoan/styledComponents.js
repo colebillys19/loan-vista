@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { borderGrey } from 'styleConstants';
 import { StyledTableRow } from 'components/_base-ui/ListTable';
-import KeyValueList from 'components/_base-ui/KeyValueList';
+import TwoColumnList from 'components/_base-ui/TwoColumnList';
 
 export const StopsListHeading = styled.h3`
   margin: 0 0 1rem;
@@ -19,7 +19,7 @@ export const StopsListContainer = styled.div`
   padding-top: 3.5rem;
 `;
 
-export const StyledKeyValueList = styled(KeyValueList)`
+export const StyledTwoColumnList = styled(TwoColumnList)`
   width: 37rem;
 `;
 

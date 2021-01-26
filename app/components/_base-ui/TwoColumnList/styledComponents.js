@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { skeletonGrey, textColorB } from 'styleConstants';
 
-export const Key = styled.span`
+export const Label = styled.span`
   color: ${textColorB};
 `;
 

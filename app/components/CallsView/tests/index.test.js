@@ -10,6 +10,7 @@ const mockProps = {
   error: false,
   fetchParams: {},
   loading: false,
+  noDataFetched: false,
   sortLoading: false,
   sortValues: {},
 };

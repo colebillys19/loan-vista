@@ -3,12 +3,14 @@ import {
   fetchCallsDataFailure,
   fetchCallsDataSuccess,
   onUnmount,
+  setLoadingTrue,
 } from '../actions';
 import {
   FETCH_CALLS_DATA,
   FETCH_CALLS_DATA_FAILURE,
   FETCH_CALLS_DATA_SUCCESS,
   ON_UNMOUNT,
+  SET_LOADING_TRUE,
 } from '../constants';
 import { MOCK_DATA } from './mockData';
 
@@ -62,6 +64,6 @@ describe('onUnmount', () => {
 
 describe('setLoadingTrue', () => {
   it('has correct type', () => {
-    expect(false).toBeTruthy();
+    expect(setLoadingTrue()).toEqual({ type: SET_LOADING_TRUE });
   });
 });

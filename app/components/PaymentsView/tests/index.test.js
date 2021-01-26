@@ -9,6 +9,7 @@ const mockProps = {
   error: false,
   fetchParams: {},
   loading: false,
+  noDataFetched: false,
   paymentsData: MOCK_DATA,
   sortLoading: false,
   sortValues: {},

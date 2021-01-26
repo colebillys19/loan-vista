@@ -4,9 +4,9 @@ import T from 'prop-types';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 
 import Skeleton from './Skeleton';
-import { Key, ListHeading, Row, Value } from './styledComponents';
+import { Label, ListHeading, Row, Value } from './styledComponents';
 
-const KeyValueList = ({
+const TwoColumnList = ({
   className,
   data: { listData, title },
   numRows,
@@ -20,7 +20,7 @@ const KeyValueList = ({
         <Fragment>
           {listData.map(({ label, value }, i) => (
             <Row key={`${label}-${value}`} reduceHeight={smallRows.includes(i)}>
-              <Key>{label}</Key>
+              <Label>{label}</Label>
               <Value>{value}</Value>
             </Row>
           ))}
@@ -32,7 +32,7 @@ const KeyValueList = ({
   </div>
 );
 
-KeyValueList.propTypes = {
+TwoColumnList.propTypes = {
   className: T.string,
   data: T.shape({
     listData: T.arrayOf(T.shape({ key: T.string, value: T.string })),
@@ -43,6 +43,6 @@ KeyValueList.propTypes = {
   smallRows: T.array,
 };
 
-KeyValueList.defaultProps = { smallRows: [] };
+TwoColumnList.defaultProps = { smallRows: [] };
 
-export default KeyValueList;
+export default TwoColumnList;

@@ -85,7 +85,7 @@ export const getDashboardLoanData = (balancesData, paymentData, stopsData) => {
 
   const formattedStopsData = stopsData.map(({ date, desc, name }) => ({
     date: dataFormatter(date, 'date'),
-    desc,
+    desc: desc.length > 60 ? `${desc.slice(0, 57)}...` : desc,
     name,
   }));
 

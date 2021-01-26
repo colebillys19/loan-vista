@@ -10,7 +10,7 @@ import GradientCard from 'components/_base-ui/GradientCard';
 import { GroupIcon } from 'images/icons';
 import { appColorAOpaque } from 'styleConstants';
 
-import { ListsContainer, StyledKeyValueList } from './styledComponents';
+import { ListsContainer, StyledTwoColumnList } from './styledComponents';
 
 const Icon = <GroupIcon color={appColorAOpaque} size="4rem" />;
 
@@ -19,7 +19,7 @@ const DashboardBorrower = ({ data, renderLoading }) => (
   <GradientCard heading="Borrower Information" Icon={Icon}>
     <ListsContainer>
       {data.map((listData, i) => (
-        <StyledKeyValueList
+        <StyledTwoColumnList
           key={i}
           data={listData}
           numRows={6}

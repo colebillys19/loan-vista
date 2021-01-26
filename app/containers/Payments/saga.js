@@ -19,8 +19,8 @@ export function* fetchPaymentsDataSaga({ payload }) {
       const queryParams = Object.assign(
         {},
         { loanNumber },
-        payloadFetchParams,
         stateFetchParams,
+        payloadFetchParams,
       );
 
       const { newFetchParams, paymentsData } = yield call(
