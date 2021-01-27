@@ -1,6 +1,7 @@
 import { getCallsData } from 'containers/Calls/helpers';
 import { getDocumentsData } from 'containers/Documents/helpers';
 import { getPaymentsData } from 'containers/Payments/helpers';
+import { toTitleCase } from 'utils/globalHelpers';
 
 import {
   DASHBOARD_LOAN_LABEL_DICT,
@@ -148,6 +149,6 @@ export const getSidebarHeaderData = (property, loanNumber) => {
     addressA,
     addressB,
     loanNumber,
-    name: resident,
+    name: toTitleCase(resident),
   };
 };

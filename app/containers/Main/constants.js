@@ -3,11 +3,11 @@ export const FETCH_LOAN_DATA_FAILURE = 'app/Main/FETCH_LOAN_DATA_FAILURE';
 export const FETCH_LOAN_DATA_SUCCESS = 'app/Main/FETCH_LOAN_DATA_SUCCESS';
 
 export const DASHBOARD_BORROWER_LABEL_DICT = [
-  { format: null, key: 'name', label: 'Name' },
+  { format: 'stringTitleCase', key: 'name', label: 'Name' },
   { format: null, key: 'addressA', label: 'Address' },
   { format: null, key: 'addressB', label: '' },
   { format: 'phone', key: 'phone', label: 'Phone' },
-  { format: null, key: 'email', label: 'Email' },
+  { format: 'stringLowerCase', key: 'email', label: 'Email' },
   { format: null, key: 'ssn', label: 'SSN' },
 ];
 
@@ -85,7 +85,7 @@ export const SIDEBAR_SUMMARY_LABEL_DICT = {
   ],
   loan: [
     { format: null, key: 'loanNumber', label: 'Loan Number' },
-    { format: null, key: 'status', label: 'Status' },
+    { format: 'stringTitleCase', key: 'status', label: 'Status' },
     { format: null, key: 'loanType', label: 'Loan Type' },
     { format: 'currency', key: 'principalBalance', label: 'Principal Balance' },
     {
@@ -93,7 +93,7 @@ export const SIDEBAR_SUMMARY_LABEL_DICT = {
       key: 'originalLoanAmount',
       label: 'Original Loan Amount',
     },
-    { format: null, key: 'investorName', label: 'Investor Name' },
+    { format: 'stringTitleCase', key: 'investorName', label: 'Investor Name' },
     { format: null, key: 'investorCode', label: 'Investor Code' },
     { format: null, key: 'assumptionCode', label: 'Assumption Code' },
     { format: 'date', key: 'assumptionDate', label: 'Assumption Date' },
@@ -101,7 +101,7 @@ export const SIDEBAR_SUMMARY_LABEL_DICT = {
     { format: 'date', key: 'originationDate', label: 'Origination Date' },
     { format: 'date', key: 'maturityDate', label: 'Maturity Date' },
     { format: null, key: 'graceDays', label: 'Grace Days' },
-    { format: null, key: 'lienPosition', label: 'Lien Position' },
+    { format: 'stringTitleCase', key: 'lienPosition', label: 'Lien Position' },
   ],
   payment: [
     { format: 'currency', key: 'paymentDue', label: 'Payment Due' },
@@ -112,8 +112,8 @@ export const SIDEBAR_SUMMARY_LABEL_DICT = {
     { format: 'date', key: 'dueDate', label: 'Due Date' },
   ],
   service: [
-    { format: null, key: 'eStatements', label: 'E-Statements' },
-    { format: null, key: 'webAccess', label: 'Web Access' },
-    { format: null, key: 'welcomeCall', label: 'Welcome Call' },
+    { format: 'stringTitleCase', key: 'eStatements', label: 'E-Statements' },
+    { format: 'stringTitleCase', key: 'webAccess', label: 'Web Access' },
+    { format: 'stringTitleCase', key: 'welcomeCall', label: 'Welcome Call' },
   ],
 };

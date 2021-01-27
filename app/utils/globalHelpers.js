@@ -1,3 +1,5 @@
+import { capitalize } from 'lodash';
+
 /**
  * convertNumToPercentage
  * @description: ...
@@ -31,3 +33,9 @@ export const getHealthColor = (health) => {
  */
 export const isValidRoute = (pathname) =>
   ['/', '/calls', '/documents', '/payments', '/misc'].indexOf(pathname) !== -1;
+
+/**
+ * toTitleCase
+ * @description ...
+ */
+export const toTitleCase = (str) => str.replace(/\w+/g, capitalize);

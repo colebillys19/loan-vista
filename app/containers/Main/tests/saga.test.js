@@ -8,7 +8,7 @@ import { FETCH_LOAN_DATA } from '../constants';
 import watcherSaga, { fetchLoanData, fetchLoanDataSaga } from '../saga';
 
 describe('fetchLoanData Saga', () => {
-  const generator = fetchLoanData();
+  const generator = fetchLoanData('1234567890');
 
   it('should yield takeLatest FETCH_LOAN_DATA', () => {
     const expectedEffect = takeLatest(FETCH_LOAN_DATA, fetchLoanDataSaga);
@@ -24,11 +24,12 @@ describe('fetchLoanData Saga', () => {
 });
 
 describe('fetchLoanDataSaga Saga', () => {
-  const generatorA = fetchLoanDataSaga();
-  const generatorB = fetchLoanDataSaga();
+  const payload = { loanNumber: '1234567890' };
+  const generatorA = fetchLoanDataSaga({ payload });
+  const generatorB = fetchLoanDataSaga({ payload });
 
   it('sends a get request to the server', () => {
-    const expectedEffect = call(get, '/api/loan');
+    const expectedEffect = call(get, '/api/loan?loanNumber=1234567890');
 
     expect(generatorA.next().value).toEqual(expectedEffect);
   });

@@ -11,8 +11,14 @@ import {
 import { MOCK_DATA } from './mockData';
 
 describe('fetchLoanData', () => {
-  it('has correct type', () => {
-    expect(fetchLoanData()).toEqual({ type: FETCH_LOAN_DATA });
+  it('has correct payload and type', () => {
+    const loanNumber = '0123456789';
+    const expected = {
+      payload: { loanNumber },
+      type: FETCH_LOAN_DATA,
+    };
+
+    expect(fetchLoanData(loanNumber)).toEqual(expected);
   });
 });
 

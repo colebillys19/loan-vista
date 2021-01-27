@@ -1,6 +1,5 @@
 import moment from 'moment';
-import startCase from 'lodash/startCase';
-import toLower from 'lodash/toLower';
+import { toTitleCase } from 'utils/globalHelpers';
 
 export const getDocumentsData = (documentsData) =>
   documentsData.map(({ dateSent, desc, file, from, id, timeSent, type }) => {
@@ -30,5 +29,3 @@ export const getDocumentsData = (documentsData) =>
       type: typeFormatted,
     };
   });
-
-export const toTitleCase = (str) => startCase(toLower(str));

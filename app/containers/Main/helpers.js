@@ -1,6 +1,7 @@
 import moment from 'moment';
+import { lowerCase } from 'lodash';
 
-import { convertNumToCurrency } from 'utils/globalHelpers';
+import { convertNumToCurrency, toTitleCase } from 'utils/globalHelpers';
 
 import { DASHBOARD_BORROWER_LABEL_DICT } from './constants';
 
@@ -52,6 +53,10 @@ export const dataFormatter = (value, format) => {
       return formatPhoneNumber(value);
     case 'string':
       return `${value}`;
+    case 'stringLowerCase':
+      return toLowerCase(value);
+    case 'stringTitleCase':
+      return toTitleCase(value);
     default:
       return value;
   }
@@ -93,11 +98,13 @@ export const getFormattedAddress = ({
   unit,
   zip,
 }) => {
-  const addressA = `${streetAddressA}${
+  const addressAUnformatted = `${streetAddressA}${
     streetAddressB ? `, ${streetAddressB}` : ''
   }${unit ? `, Unit ${unit}` : ''}`;
 
-  const addressB = `${city}, ${state} ${zip}`;
+  const addressA = toTitleCase(addressAUnformatted);
+
+  const addressB = `${toTitleCase(city)}, ${state} ${zip}`;
 
   return { addressA, addressB };
 };
@@ -113,3 +120,9 @@ export const formatPhoneNumber = (numStr) => {
 
   return `(${a}) ${b}-${c}`;
 };
+
+/**
+ * toLowerCase
+ * @description ...
+ */
+const toLowerCase = (str) => str.replace(/\w+/g, lowerCase);

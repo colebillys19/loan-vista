@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-import { convertNumToCurrency } from 'utils/globalHelpers';
+import { convertNumToCurrency, toTitleCase } from 'utils/globalHelpers';
 
 export const getPaymentsData = (paymentsData) =>
   paymentsData.map(
@@ -41,7 +41,7 @@ export const getPaymentsData = (paymentsData) =>
         accidentHealthInsurance: convertNumToCurrency(accidentHealthInsurance),
         accruedLateCharge: convertNumToCurrency(accruedLateCharge),
         date: dateFormatted,
-        desc,
+        desc: toTitleCase(desc),
         effectiveDate: effectiveDateFormatted,
         escrow: convertNumToCurrency(escrow),
         escrowBalance: convertNumToCurrency(escrowBalance),

@@ -12,10 +12,13 @@ const initialState = {};
 const store = configureStore(initialState, history);
 
 const mockProps = {
+  dashboardBorrowerData: [{ listData: [], title: 'title' }],
+  dashboardListsData: { callsData: [], documentsData: [], paymentsData: [] },
+  dashboardLoanData: { balancesData: [], paymentData: [], stopsData: [] },
   dispatchFetchLoanData: jest.fn(),
   error: false,
   loading: false,
-  loanNumber: '',
+  loanNumber: '1234567890',
   pathname: '',
   render: () => <div />,
   sidebarHeaderData: {},

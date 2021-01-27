@@ -1,4 +1,7 @@
 import makeSelectMain, {
+  makeSelectDashboardBorrowerData,
+  makeSelectDashboardListsData,
+  makeSelectDashboardLoanData,
   makeSelectSidebarHeaderData,
   makeSelectSidebarSummariesData,
   selectMainDomain,
@@ -25,14 +28,156 @@ describe('makeSelectMain', () => {
   });
 });
 
+describe('makeSelectDashboardBorrowerData', () => {
+  const dashboardBorrowerDataSelector = makeSelectDashboardBorrowerData();
+  const mockedState = { main: MOCK_DATA };
+  const expected = [
+    {
+      listData: [
+        { label: 'Name', value: 'Alexa Dailor' },
+        { label: 'Address', value: '22 Lyon Cir' },
+        { label: '', value: 'Sparks, NV 89431' },
+        { label: 'Phone', value: '(775) 322-4192' },
+        { label: 'Email', value: 'a.dailor@mail.com' },
+        { label: 'SSN', value: '*****2891' },
+      ],
+      title: 'Borrower 1',
+    },
+    {
+      listData: [
+        { label: 'Name', value: 'Jim Simms' },
+        { label: 'Address', value: '6 Canyon Way, Bldg 2, Unit 4' },
+        { label: '', value: 'Reno, NV 89521' },
+        { label: 'Phone', value: '(775) 851-1113' },
+        { label: 'Email', value: 'j.simms@mail.com' },
+        { label: 'SSN', value: '*****3511' },
+      ],
+      title: 'Borrower 2',
+    },
+  ];
+
+  it('selects the dashboard borrower data', () => {
+    expect(dashboardBorrowerDataSelector(mockedState)).toEqual(expected);
+  });
+});
+
+describe('makeSelectDashboardListsData', () => {
+  const dashboardListsDataSelector = makeSelectDashboardListsData();
+  const mockedState = { main: MOCK_DATA };
+  const expected = {
+    callsData: [
+      {
+        audio: 'iaculis_diam.mp3...',
+        date: '12/29/2020',
+        dept: 'BSDV',
+        desc: 'magna bibendum imper...',
+        id: 'cb50e5c5-fed2-43da-8a47-fc8f7df96222',
+        rep: 'MNL',
+        time: '08:13 AM',
+      },
+    ],
+    documentsData: [
+      {
+        'date sent': '12/29/2020',
+        desc: '-',
+        from: 'JPP...',
+        id: '1311f935-a8f4-4c63-b339-a3b4cd93c287',
+        pdf: 'integer_aliquet...',
+        'time sent': '08:59 PM',
+        type: 'Email',
+      },
+    ],
+    paymentsData: [
+      {
+        accidentHealthInsurance: '$66.86',
+        accruedLateCharge: '$70.42',
+        date: '12/30/2020',
+        desc: 'Principal Curtailment',
+        effectiveDate: '01/02/2020',
+        escrow: '$41.02',
+        escrowBalance: '$38.82',
+        fees: '$74.24',
+        id: '29ba8a70-19d3-4ddf-b4ff-879b4f8c8fe6',
+        interest: '$25.00',
+        lifeInsurance: '$55.66',
+        misc: '$45.28',
+        otherTotal: '$11.32',
+        principal: '$36.02',
+        principalBalance: '$8.68',
+        replacementReserve: '$97.76',
+        restrictedReserve: '$15.48',
+        suspense: '$83.46',
+        time: '04:12 AM',
+        total: '$14.93',
+      },
+    ],
+  };
+
+  it('selects the dashboard lists data', () => {
+    expect(dashboardListsDataSelector(mockedState)).toEqual(expected);
+  });
+});
+
+describe('makeSelectDashboardLoanData', () => {
+  const dashboardLoanDataSelector = makeSelectDashboardLoanData();
+  const mockedState = { main: MOCK_DATA };
+  const expected = {
+    balancesData: {
+      listData: [
+        { label: 'Escrow', value: '1,090.33' },
+        { label: 'Advance', value: '0.11' },
+        { label: 'Suspense', value: '33.84' },
+        { label: 'Late Charge Due', value: '4.00' },
+        { label: 'Replacement Reserve', value: '11.00' },
+        { label: 'Res Esc', value: '20.60' },
+        { label: 'Interest Due', value: '5.02' },
+        { label: 'HUD', value: '2.22' },
+        { label: 'Deficit', value: '891.20' },
+        { label: 'Disc Bal', value: '3.90' },
+        { label: 'Original Disbursement', value: '2.00' },
+        { label: 'Original Loan', value: '95,000.00' },
+      ],
+      title: 'Balances',
+    },
+    paymentData: {
+      listData: [
+        { label: 'Principal & Interest', value: '823.30' },
+        { label: '2nd Principal & Interest', value: '98.00' },
+        { label: 'Escrow', value: '3,121.10' },
+        { label: 'Replacement Reserve', value: '22.99' },
+        { label: 'Miscellaneous', value: '5.50' },
+        { label: 'Life Insurance', value: '11.00' },
+        { label: 'Accident & Health', value: '3.10' },
+        { label: 'BSC', value: '2.00' },
+        { label: 'Total', value: '11,301.91' },
+        { label: 'HUD-P', value: '2.00' },
+        { label: 'Net Payment', value: '11,301.91' },
+        { label: 'Payment Frequency', value: '17' },
+      ],
+      title: 'Payment',
+    },
+    stopsData: [
+      {
+        date: '2/3/2019',
+        desc: 'User Defined - 1',
+        name: 'PROCESS',
+      },
+    ],
+  };
+
+  it('selects the dashboard loan data', () => {
+    expect(dashboardLoanDataSelector(mockedState)).toEqual(expected);
+  });
+});
+
 describe('makeSelectSidebarHeaderData', () => {
   const sidebarHeaderDataSelector = makeSelectSidebarHeaderData();
   const mockedState = { main: MOCK_DATA };
   const expected = {
-    address1: '43 Heritage Knoll Ct',
-    address2: 'Carson City, NV 89701',
-    loanNumber: '0123456789',
-    name: 'John Doe',
+    addressA: '43 Heritage Knoll Ct',
+    addressB: 'Carson City, NV 89701',
+    loanNumber: '1234567890',
+    name: 'Peter Knowles',
   };
 
   it('selects the sidebar header data', () => {
@@ -56,7 +201,7 @@ describe('makeSelectSidebarSummariesData', () => {
     loanSummaryData: [
       { label: 'Loan Number', value: '0123456789' },
       { label: 'Status', value: '16-29 Days Delinquent' },
-      { label: 'Loan Type', value: 'FHA Residential' },
+      { label: 'Loan Type', value: 'FHA RESIDENTIAL' },
       { label: 'Principal Balance', value: '$234,456.78' },
       { label: 'Original Loan Amount', value: '$345,678.90' },
       { label: 'Investor Name', value: 'Nevada Housing' },
