@@ -3,7 +3,7 @@ export const MOCK_DATA = [
     accidentHealthInsurance: '$66.86',
     accruedLateCharge: '$70.42',
     date: '12/30/2020',
-    desc: 'principal curtailment',
+    desc: 'Principal Curtailment',
     effectiveDate: '10/19/2019',
     escrow: '$41.02',
     escrowBalance: '$38.82',

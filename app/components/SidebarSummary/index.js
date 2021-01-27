@@ -49,7 +49,9 @@ const SidebarSummary = ({ data, health, numRows, renderLoading, title }) => (
 );
 
 SidebarSummary.propTypes = {
-  data: T.array.isRequired,
+  data: T.arrayOf(
+    T.shape({ label: T.string, value: T.oneOfType([T.number, T.string]) }),
+  ).isRequired,
   health: T.number,
   numRows: T.number,
   renderLoading: T.bool.isRequired,

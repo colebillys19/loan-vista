@@ -2,15 +2,10 @@ import React from 'react';
 import { render } from 'react-testing-library';
 
 import DashboardDocuments from '../index';
-import { MOCK_DATA, MOCK_HEADERS } from './mockData';
+import { MOCK_DATA } from './mockData';
 
-const mockProps = {
-  data: MOCK_DATA,
-  headers: MOCK_HEADERS,
-  renderLoading: false,
-};
-
-const Component = <DashboardDocuments {...mockProps} />;
+const Component = <DashboardDocuments data={MOCK_DATA} renderLoading={false} />;
+const ComponentLoading = <DashboardDocuments data={[]} renderLoading />;
 
 describe('<DashboardDocuments />', () => {
   it('Expect not to log errors in console', () => {
@@ -21,6 +16,19 @@ describe('<DashboardDocuments />', () => {
 
   it('Expect to render', () => {
     const { container } = render(Component);
+    expect(container.firstChild).toBeDefined();
+  });
+});
+
+describe('<DashboardDocuments /> loading state', () => {
+  it('Expect not to log errors in console', () => {
+    const spy = jest.spyOn(global.console, 'error');
+    render(ComponentLoading);
+    expect(spy).not.toHaveBeenCalled();
+  });
+
+  it('Expect to render', () => {
+    const { container } = render(ComponentLoading);
     expect(container.firstChild).toBeDefined();
   });
 });

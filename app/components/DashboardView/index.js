@@ -13,15 +13,14 @@ import DashboardLoan from 'components/DashboardLoan';
 import DashboardPayments from 'components/DashboardPayments';
 import TabContainer from 'components/_base-ui/TabContainer';
 
-const DashboardView = (props) => {
-  const {
-    dashboardBorrowerData,
-    dashboardListsData: { callsData, documentsData, paymentsData },
-    dashboardLoanData,
-    error,
-    loading,
-    loanNumber,
-  } = props;
+const DashboardView = ({
+  dashboardBorrowerData,
+  dashboardListsData: { callsData, documentsData, paymentsData },
+  dashboardLoanData,
+  error,
+  loading,
+  loanNumber,
+}) => {
   const showComponents = loanNumber && !error && !loading;
 
   return (
