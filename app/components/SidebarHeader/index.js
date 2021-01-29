@@ -9,7 +9,7 @@ import T from 'prop-types';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 
 import { getIcon, getTabName } from './helpers';
-import SpinnerBlock from './SpinnerBlock';
+import LoadingBlock from './LoadingBlock';
 import {
   IconContainer,
   SidebarDetail,
@@ -20,6 +20,7 @@ import {
 } from './styledComponents';
 
 const SidebarHeader = ({
+  error,
   pathname,
   renderLoading,
   sidebarHeaderData: { addressA, addressB, loanNumber, name },
@@ -40,7 +41,7 @@ const SidebarHeader = ({
             <SidebarDetail>{addressB}</SidebarDetail>
           </SidebarDetailsContainer>
         }
-        FallbackComponent={<SpinnerBlock />}
+        FallbackComponent={<LoadingBlock error={error} />}
         shouldRender={!renderLoading}
       />
       <StyledButton
@@ -53,6 +54,7 @@ const SidebarHeader = ({
 };
 
 SidebarHeader.propTypes = {
+  error: T.oneOfType([T.bool, T.string]).isRequired,
   pathname: T.string.isRequired,
   renderLoading: T.bool.isRequired,
   sidebarHeaderData: T.shape({

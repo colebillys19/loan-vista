@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import SpinnerBlock from '../SpinnerBlock';
+import LoadingBlock from '../LoadingBlock';
 
-const Component = <SpinnerBlock />;
+const Component = <LoadingBlock />;
 
-describe('<SpinnerBlock />', () => {
+describe('<LoadingBlock />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

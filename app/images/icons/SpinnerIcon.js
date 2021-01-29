@@ -19,6 +19,6 @@ const SpinnerIcon = ({ color, size, ...restProps }) => (
 
 SpinnerIcon.propTypes = { color: T.string, size: T.string };
 
-SpinnerIcon.defaultProps = { color: iconColorA, size: '3rem' };
+SpinnerIcon.defaultProps = { color: iconColorA, size: '5rem' };
 
 export default SpinnerIcon;

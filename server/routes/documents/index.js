@@ -2,25 +2,31 @@ const fs = require('fs');
 
 const { getTargetDocumentsData } = require('./helpers');
 
-const getDocuments = (req, res) => {
-  const { loanNumber, ...fetchParams } = req.query;
+const getDocuments = (req, res, next) => {
+  try {
+    const {
+      query: { loanNumber, ...fetchParams },
+    } = req;
 
-  const jsonData = fs.readFileSync(
-    `server/mockData/LOAN_${loanNumber}/DOCUMENTS_DATA.json`,
-  );
-  const documentsData = JSON.parse(jsonData);
+    const documentsDataJson = fs.readFileSync(
+      `server/mockData/LOAN_${loanNumber}/DOCUMENTS_DATA.json`,
+    );
+    const documentsData = JSON.parse(documentsDataJson);
 
-  const targetDocumentsData = getTargetDocumentsData(
-    documentsData,
-    fetchParams,
-  );
+    const targetDocumentsData = getTargetDocumentsData(
+      documentsData,
+      fetchParams,
+    );
 
-  setTimeout(() => {
-    res.send({
-      documentsData: targetDocumentsData,
-      newFetchParams: fetchParams,
-    });
-  }, 500);
+    setTimeout(() => {
+      res.send({
+        documentsData: targetDocumentsData,
+        newFetchParams: fetchParams,
+      });
+    }, 500);
+  } catch (error) {
+    next(error);
+  }
 };
 
 module.exports = getDocuments;

@@ -38,6 +38,7 @@ const SidebarView = ({
       <SidebarContentContainer>
         <Gradient />
         <SidebarHeader
+          error={error}
           loading={loading}
           pathname={pathname}
           renderLoading={!showComponents}

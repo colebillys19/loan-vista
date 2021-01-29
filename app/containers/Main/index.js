@@ -46,13 +46,20 @@ export const Main = ({
 
   useEffect(() => {
     if (isValidRoute(pathname)) {
-      if (!loanNumber) {
+      if (!loanNumber && !error && !loading) {
         dispatchFetchLoanData('9937485204');
       } else if (prevLoanNumber !== '' && loanNumber !== prevLoanNumber) {
         dispatchFetchLoanData(loanNumber);
       }
     }
-  }, [dispatchFetchLoanData, loanNumber, pathname, prevLoanNumber]);
+  }, [
+    dispatchFetchLoanData,
+    error,
+    loading,
+    loanNumber,
+    pathname,
+    prevLoanNumber,
+  ]);
 
   return render({
     dashboardBorrowerData,

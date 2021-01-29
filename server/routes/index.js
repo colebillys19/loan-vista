@@ -7,9 +7,9 @@ const getDocuments = require('./documents');
 const getLoanData = require('./loan');
 const getPayments = require('./payments');
 
-router.use('/calls', getCalls);
-router.use('/documents', getDocuments);
-router.use('/loan', getLoanData);
-router.use('/payments', getPayments);
+router.get('/calls', getCalls);
+router.get('/documents', getDocuments);
+router.get('/loan', getLoanData);
+router.get('/payments', getPayments);
 
 module.exports = router;

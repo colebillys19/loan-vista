@@ -1,20 +1,29 @@
 import React from 'react';
 import T from 'prop-types';
 
-import DefaultButton from './DefaultButton';
-import LoadingButton from './LoadingButton';
+import { appColorA, textColorB } from 'styleConstants';
+import ConditionalRender from 'components/_base-ui/ConditionalRender';
+import Spinner from 'components/_base-ui/Spinner';
 
-const ListSortButton = ({ isActive, isAscending, loading, onClick, text }) =>
-  !loading ? (
-    <DefaultButton
-      isActive={isActive}
-      isAscending={isAscending}
-      onClick={onClick}
-      text={text}
-    />
-  ) : (
-    <LoadingButton />
-  );
+import Button from './Button';
+
+const ListSortButton = ({ isActive, isAscending, loading, onClick, text }) => (
+  <ConditionalRender
+    Component={
+      <Button
+        isActive={isActive}
+        isAscending={isAscending}
+        loading={loading}
+        onClick={onClick}
+        text={text}
+      />
+    }
+    FallbackComponent={
+      <Spinner color={isActive ? appColorA : textColorB} size="1.7rem" />
+    }
+    shouldRender={!loading}
+  />
+);
 
 ListSortButton.propTypes = {
   isActive: T.bool.isRequired,

@@ -6,18 +6,18 @@ import { appColorA, textColorB } from 'styleConstants';
 
 import { StyledButton } from './styledComponents';
 
-const DefaultButton = ({ isActive, isAscending, onClick, text }) => {
-  const Icon = isAscending ? (
-    <ArrowUpIcon color={isActive ? appColorA : textColorB} size="0.8rem" />
-  ) : (
-    <ArrowDownIcon color={isActive ? appColorA : textColorB} size="0.8rem" />
-  );
+const Button = ({ isActive, isAscending, onClick, text }) => {
+  const iconProps = {
+    color: isActive ? appColorA : textColorB,
+    size: '0.8rem',
+  };
+  const Icon = isAscending ? ArrowUpIcon : ArrowDownIcon;
 
   return (
     <StyledButton
       disableElevation
       disableRipple
-      endIcon={Icon}
+      endIcon={<Icon {...iconProps} />}
       isActive={isActive}
       onClick={onClick}
     >
@@ -26,11 +26,11 @@ const DefaultButton = ({ isActive, isAscending, onClick, text }) => {
   );
 };
 
-DefaultButton.propTypes = {
+Button.propTypes = {
   isActive: T.bool.isRequired,
   isAscending: T.bool.isRequired,
   onClick: T.func.isRequired,
   text: T.string.isRequired,
 };
 
-export default DefaultButton;
+export default Button;

@@ -2,10 +2,6 @@ import React from 'react';
 
 import { StyledSpinnerIcon } from './styledComponents';
 
-const Spinner = () => (
-  <span>
-    <StyledSpinnerIcon size="5rem" />
-  </span>
-);
+const Spinner = (props) => <StyledSpinnerIcon {...props} />;
 
 export default Spinner;
