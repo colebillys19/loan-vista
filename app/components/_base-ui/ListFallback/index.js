@@ -22,7 +22,7 @@ const ListFallback = ({ error, loading }) => {
   if (loading) {
     return (
       <FallbackContainer>
-        <Spinner />
+        <Spinner size="5rem" />
       </FallbackContainer>
     );
   }

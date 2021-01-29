@@ -12,6 +12,7 @@ import DashboardDocuments from 'components/DashboardDocuments';
 import DashboardLoan from 'components/DashboardLoan';
 import DashboardPayments from 'components/DashboardPayments';
 import TabContainer from 'components/_base-ui/TabContainer';
+import ErrorModal from 'components/_base-ui/ErrorModal';
 
 const DashboardView = ({
   dashboardBorrowerData,
@@ -36,6 +37,7 @@ const DashboardView = ({
         renderLoading={!showComponents}
       />
       <DashboardPayments data={paymentsData} renderLoading={!showComponents} />
+      <ErrorModal error={error} />
     </TabContainer>
   );
 };

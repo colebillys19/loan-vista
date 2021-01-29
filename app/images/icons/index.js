@@ -3,6 +3,7 @@ import ArrowUpIcon from './ArrowUpIcon';
 import BulletIcon from './BulletIcon';
 import CallIcon from './CallIcon';
 import CashIcon from './CashIcon';
+import CloseIcon from './CloseIcon';
 import FolderIcon from './FolderIcon';
 import GroupIcon from './GroupIcon';
 import MailIcon from './MailIcon';
@@ -18,6 +19,7 @@ export {
   BulletIcon,
   CallIcon,
   CashIcon,
+  CloseIcon,
   FolderIcon,
   GroupIcon,
   MailIcon,
