@@ -1,25 +1,17 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import Skeleton from '../Skeleton';
+import Row from '../Row';
 
-const Component = (
-  <table>
-    <tbody>
-      <Skeleton />
-    </tbody>
-  </table>
-);
-
-describe('<Skeleton />', () => {
+describe('<Row />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
-    render(Component);
+    render(<Row />);
     expect(spy).not.toHaveBeenCalled();
   });
 
   it('Expect to render', () => {
-    const { container } = render(Component);
+    const { container } = render(<Row />);
     expect(container.firstChild).toBeDefined();
   });
 });

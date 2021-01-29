@@ -1,4 +1,3 @@
-import Skeleton from './Skeleton';
 import {
   StyledTable,
   StyledTableBody,
@@ -10,7 +9,6 @@ import {
 } from './styledComponents';
 
 export {
-  Skeleton,
   StyledTable,
   StyledTableBody,
   StyledTableData,

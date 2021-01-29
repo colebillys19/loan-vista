@@ -6,11 +6,11 @@
 import React, { Fragment } from 'react';
 import T from 'prop-types';
 
-import { getHealthColor } from 'utils/globalHelpers';
 import { BulletIcon } from 'images/icons';
+import { getHealthColor } from 'utils/globalHelpers';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
+import ListSkeleton from 'components/_base-ui/ListSkeleton';
 
-import Skeleton from './Skeleton';
 import {
   Detail,
   DetailLabel,
@@ -42,7 +42,7 @@ const SidebarSummary = ({ data, health, numRows, renderLoading, title }) => (
           })}
         </Fragment>
       }
-      FallbackComponent={<Skeleton numRows={numRows} />}
+      FallbackComponent={<ListSkeleton numRows={numRows} />}
       shouldRender={!renderLoading}
     />
   </SidebarSummaryContainer>

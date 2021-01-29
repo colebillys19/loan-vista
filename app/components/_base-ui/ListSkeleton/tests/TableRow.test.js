@@ -1,21 +1,17 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import Skeleton from '../Skeleton';
+import TableRow from '../TableRow';
 
-const mockProps = { numRows: 1 };
-
-const Component = <Skeleton {...mockProps} />;
-
-describe('<Skeleton />', () => {
+describe('<TableRow />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
-    render(Component);
+    render(<TableRow />);
     expect(spy).not.toHaveBeenCalled();
   });
 
   it('Expect to render', () => {
-    const { container } = render(Component);
+    const { container } = render(<TableRow />);
     expect(container.firstChild).toBeDefined();
   });
 });

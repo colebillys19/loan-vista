@@ -3,7 +3,7 @@ import T from 'prop-types';
 
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import { StyledTable, StyledTableBody } from 'components/_base-ui/ListTable';
-import Skeleton from 'components/_base-ui/ListTable/Skeleton';
+import ListSkeleton from 'components/_base-ui/ListSkeleton';
 
 import { StopsListContainer, StopsListHeading } from './styledComponents';
 import StopsListRow from './StopsListRow';
@@ -25,7 +25,7 @@ const StopsList = ({ data, headers, renderLoading }) => (
               ))}
             </Fragment>
           }
-          FallbackComponent={<Skeleton numRows={12} />}
+          FallbackComponent={<ListSkeleton isTable numRows={12} />}
           shouldRender={!renderLoading}
         />
       </StyledTableBody>

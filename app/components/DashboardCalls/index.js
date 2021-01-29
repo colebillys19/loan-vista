@@ -8,13 +8,10 @@ import T from 'prop-types';
 
 import { appColorAOpaque, textColorA } from 'styleConstants';
 import { CallIcon } from 'images/icons';
-import {
-  Skeleton,
-  StyledTable,
-  StyledTableBody,
-} from 'components/_base-ui/ListTable';
+import { StyledTable, StyledTableBody } from 'components/_base-ui/ListTable';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import GradientCard from 'components/_base-ui/GradientCard';
+import ListSkeleton from 'components/_base-ui/ListSkeleton';
 import ViewMoreBlock from 'components/_base-ui/ViewMoreBlock';
 
 import TableRow from './TableRow';
@@ -35,7 +32,7 @@ const DashboardCalls = ({ data, headers, renderLoading }) => (
               ))}
             </Fragment>
           }
-          FallbackComponent={<Skeleton numRows={5} />}
+          FallbackComponent={<ListSkeleton isTable numRows={5} />}
           shouldRender={!renderLoading}
         />
       </StyledTableBody>

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { skeletonGrey, textColorB } from 'styleConstants';
+import { textColorB } from 'styleConstants';
 
 export const Detail = styled.span`
   color: ${({ color }) => color};
@@ -22,17 +22,6 @@ export const SidebarSummaryContainer = styled.section`
   & :not(:last-of-type) {
     margin-bottom: 2.2rem;
   }
-`;
-
-export const SkeletonRowContainer = styled.div`
-  height: 2.1rem;
-`;
-
-export const SkeletonRowStripe = styled.div`
-  background-color: ${skeletonGrey};
-  height: 1rem;
-  position: relative;
-  top: 0.4rem;
 `;
 
 export const StyledH5 = styled.h3`

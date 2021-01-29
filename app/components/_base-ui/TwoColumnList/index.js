@@ -2,8 +2,8 @@ import React, { Fragment } from 'react';
 import T from 'prop-types';
 
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
+import ListSkeleton from 'components/_base-ui/ListSkeleton';
 
-import Skeleton from './Skeleton';
 import { Label, ListHeading, Row, Value } from './styledComponents';
 
 const TwoColumnList = ({
@@ -26,7 +26,9 @@ const TwoColumnList = ({
           ))}
         </Fragment>
       }
-      FallbackComponent={<Skeleton numRows={numRows} smallRows={smallRows} />}
+      FallbackComponent={
+        <ListSkeleton numRows={numRows} smallRows={smallRows} />
+      }
       shouldRender={!renderLoading}
     />
   </div>

@@ -1,19 +1,6 @@
 import styled from 'styled-components';
 
-import { skeletonGrey, textColorA } from 'styleConstants';
-
-export const SkeletonRowContainer = styled.tr`
-  display: block;
-  height: 2.1rem;
-`;
-
-export const SkeletonRowStripe = styled.td`
-  background-color: ${skeletonGrey};
-  display: block;
-  height: 1rem;
-  position: relative;
-  top: 0.4rem;
-`;
+import { textColorA } from 'styleConstants';
 
 export const StyledTable = styled.table`
   width: 100%;

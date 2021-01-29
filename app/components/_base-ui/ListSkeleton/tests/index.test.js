@@ -1,11 +1,13 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import Skeleton from '../Skeleton';
+import ListSkeleton from '../index';
 
-const Component = <Skeleton />;
+const mockProps = { numRows: 1 };
 
-describe('<Skeleton />', () => {
+const Component = <ListSkeleton {...mockProps} />;
+
+describe('<ListSkeleton />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);
