@@ -7,12 +7,13 @@ const Component = (
   <SidebarSummary
     data={[{ label: 'label', value: 'value' }]}
     health={0}
+    numRows={1}
     renderLoading={false}
     title="title"
   />
 );
 const ComponentLoading = (
-  <SidebarSummary data={[]} health={0} renderLoading title="" />
+  <SidebarSummary data={[]} health={0} numRows={1} renderLoading title="" />
 );
 
 describe('<SidebarSummary />', () => {

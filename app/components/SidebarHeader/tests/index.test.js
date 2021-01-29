@@ -5,6 +5,7 @@ import SidebarHeader from '../index';
 
 const Component = (
   <SidebarHeader
+    error={false}
     pathname="/"
     renderLoading={false}
     sidebarHeaderData={{
@@ -17,6 +18,7 @@ const Component = (
 );
 const ComponentLoading = (
   <SidebarHeader
+    error={false}
     pathname="/"
     renderLoading
     sidebarHeaderData={{

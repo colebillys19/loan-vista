@@ -3,7 +3,9 @@ import { render } from 'react-testing-library';
 
 import LoadingBlock from '../LoadingBlock';
 
-const Component = <LoadingBlock />;
+const mockProps = { error: false };
+
+const Component = <LoadingBlock {...mockProps} />;
 
 describe('<LoadingBlock />', () => {
   it('Expect not to log errors in console', () => {

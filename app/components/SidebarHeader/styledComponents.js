@@ -8,6 +8,12 @@ export const IconContainer = styled.div`
   text-align: center;
 `;
 
+export const LoadingBlockContainer = styled.div`
+  height: 9.3rem;
+  padding-top: 2.1rem;
+  text-align: center;
+`;
+
 export const SidebarDetail = styled.span`
   display: block;
   text-align: center;
@@ -23,12 +29,6 @@ export const SidebarDetailsContainer = styled.div`
 export const SidebarHeaderContainer = styled.section`
   margin-bottom: 4rem;
   width: 100%;
-`;
-
-export const SpinnerBlockContainer = styled.div`
-  height: 9.3rem;
-  padding-top: 2.1rem;
-  text-align: center;
 `;
 
 export const StyledButton = styled(({ isGhost, ...restProps }) => (

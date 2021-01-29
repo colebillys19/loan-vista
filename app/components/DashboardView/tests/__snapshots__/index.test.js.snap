@@ -131,10 +131,10 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
         Stops
       </h3>
       <table
-        class="styledComponents__StyledTable-qh5wjg-2 bLidnO"
+        class="styledComponents__StyledTable-qh5wjg-0 iUJMBY"
       >
         <tbody
-          class="styledComponents__StyledTableBody-qh5wjg-3 bOIUbF"
+          class="styledComponents__StyledTableBody-qh5wjg-1 efBlkm"
         />
       </table>
     </div>
@@ -179,10 +179,10 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
       />
     </div>
     <table
-      class="styledComponents__StyledTable-qh5wjg-2 bLidnO"
+      class="styledComponents__StyledTable-qh5wjg-0 iUJMBY"
     >
       <tbody
-        class="styledComponents__StyledTableBody-qh5wjg-3 bOIUbF"
+        class="styledComponents__StyledTableBody-qh5wjg-1 efBlkm"
       />
     </table>
     <div
@@ -237,10 +237,10 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
       />
     </div>
     <table
-      class="styledComponents__StyledTable-qh5wjg-2 bLidnO"
+      class="styledComponents__StyledTable-qh5wjg-0 iUJMBY"
     >
       <tbody
-        class="styledComponents__StyledTableBody-qh5wjg-3 bOIUbF"
+        class="styledComponents__StyledTableBody-qh5wjg-1 efBlkm"
       />
     </table>
     <div
@@ -299,10 +299,10 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
       />
     </div>
     <table
-      class="styledComponents__StyledTable-qh5wjg-2 bLidnO"
+      class="styledComponents__StyledTable-qh5wjg-0 iUJMBY"
     >
       <tbody
-        class="styledComponents__StyledTableBody-qh5wjg-3 bOIUbF"
+        class="styledComponents__StyledTableBody-qh5wjg-1 efBlkm"
       />
     </table>
     <div

@@ -11,7 +11,7 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
       class="styledComponents__Gradient-ilr151-0 etoVkp"
     />
     <section
-      class="styledComponents__SidebarHeaderContainer-n9yhwx-3 lwhPb"
+      class="styledComponents__SidebarHeaderContainer-n9yhwx-4 iRJJuF"
     >
       <div
         class="styledComponents__IconContainer-n9yhwx-0 eSNqrl"
@@ -36,22 +36,20 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
         </svg>
       </div>
       <div
-        class="styledComponents__SpinnerBlockContainer-n9yhwx-4 dBJSGD"
+        class="styledComponents__LoadingBlockContainer-n9yhwx-1 kMZyvl"
       >
-        <span>
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root styledComponents__StyledSpinnerIcon-evygym-0 gvlvsG"
-            focusable="false"
-            style="height: 5rem; width: 5rem;"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M12.9 3.1c1.3 1.2 2.1 3 2.1 4.9 0 3.9-3.1 7-7 7s-7-3.1-7-7c0-1.9 0.8-3.7 2.1-4.9l-0.8-0.8c-1.4 1.5-2.3 3.5-2.3 5.7 0 4.4 3.6 8 8 8s8-3.6 8-8c0-2.2-0.9-4.2-2.3-5.7l-0.8 0.8z"
-              fill="#7b68ee"
-            />
-          </svg>
-        </span>
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root styledComponents__StyledSpinnerIcon-evygym-0 gvlvsG"
+          focusable="false"
+          style="height: 5rem; width: 5rem;"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M12.9 3.1c1.3 1.2 2.1 3 2.1 4.9 0 3.9-3.1 7-7 7s-7-3.1-7-7c0-1.9 0.8-3.7 2.1-4.9l-0.8-0.8c-1.4 1.5-2.3 3.5-2.3 5.7 0 4.4 3.6 8 8 8s8-3.6 8-8c0-2.2-0.9-4.2-2.3-5.7l-0.8 0.8z"
+            fill="#7b68ee"
+          />
+        </svg>
       </div>
       <button
         class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-n9yhwx-5 dWrZle styledComponents__StyledButton-sc-86ulmm-0 exBHac"
@@ -72,7 +70,7 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
       class="styledComponents__SidebarSummaryContainer-sc-15x7lk9-3 zJimF"
     >
       <div
-        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-7 bszysq"
+        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-5 RZLMv"
       >
         <svg
           aria-hidden="true"
@@ -89,107 +87,107 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
           />
         </svg>
         <h3
-          class="styledComponents__StyledH5-sc-15x7lk9-6 kbeCSM"
+          class="styledComponents__StyledH5-sc-15x7lk9-4 jyHLSN"
         >
           Loan
         </h3>
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
     </section>
@@ -197,7 +195,7 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
       class="styledComponents__SidebarSummaryContainer-sc-15x7lk9-3 zJimF"
     >
       <div
-        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-7 bszysq"
+        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-5 RZLMv"
       >
         <svg
           aria-hidden="true"
@@ -214,51 +212,51 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
           />
         </svg>
         <h3
-          class="styledComponents__StyledH5-sc-15x7lk9-6 kbeCSM"
+          class="styledComponents__StyledH5-sc-15x7lk9-4 jyHLSN"
         >
           Payment
         </h3>
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
     </section>
@@ -266,7 +264,7 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
       class="styledComponents__SidebarSummaryContainer-sc-15x7lk9-3 zJimF"
     >
       <div
-        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-7 bszysq"
+        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-5 RZLMv"
       >
         <svg
           aria-hidden="true"
@@ -283,51 +281,51 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
           />
         </svg>
         <h3
-          class="styledComponents__StyledH5-sc-15x7lk9-6 kbeCSM"
+          class="styledComponents__StyledH5-sc-15x7lk9-4 jyHLSN"
         >
           Calls
         </h3>
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
     </section>
@@ -335,7 +333,7 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
       class="styledComponents__SidebarSummaryContainer-sc-15x7lk9-3 zJimF"
     >
       <div
-        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-7 bszysq"
+        class="styledComponents__SummaryTitleContainer-sc-15x7lk9-5 RZLMv"
       >
         <svg
           aria-hidden="true"
@@ -352,30 +350,30 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
           />
         </svg>
         <h3
-          class="styledComponents__StyledH5-sc-15x7lk9-6 kbeCSM"
+          class="styledComponents__StyledH5-sc-15x7lk9-4 jyHLSN"
         >
           Service
         </h3>
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
       <div
-        class="styledComponents__SkeletonRowContainer-sc-15x7lk9-4 jyovwl"
+        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
       >
         <div
-          class="styledComponents__SkeletonRowStripe-sc-15x7lk9-5 jUhcBU"
+          class="styledComponents__RowStripe-sc-12zmidq-1 eINmdW"
         />
       </div>
     </section>
