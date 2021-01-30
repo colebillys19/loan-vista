@@ -1,20 +1,16 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { WarningIcon } from 'images/icons';
-
 import Spinner from 'components/_base-ui/Spinner';
 
-import { FallbackContainer, IconContainer } from './styledComponents';
+import { FallbackContainer } from './styledComponents';
+import ErrorBlock from '../ErrorBlock';
 
 const ListFallback = ({ error, loading }) => {
   if (error) {
     return (
       <FallbackContainer>
-        <IconContainer>
-          <WarningIcon size="8rem" />
-        </IconContainer>
-        {error}
+        <ErrorBlock error={error} />
       </FallbackContainer>
     );
   }

@@ -37,7 +37,7 @@ const DashboardPayments = ({ data, headers, renderLoading }) => (
         />
       </StyledTableBody>
     </StyledTable>
-    <ViewMoreBlock route="/payments" />
+    <ViewMoreBlock isActive={!renderLoading} route="/payments" />
   </GradientCard>
 );
 

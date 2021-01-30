@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import T from 'prop-types';
 import Modal from '@material-ui/core/Modal';
 
-import { CloseIcon, WarningIcon } from 'images/icons';
+import { CloseIcon } from 'images/icons';
 import { textColorB } from 'styleConstants';
+import ErrorBlock from 'components/_base-ui/ErrorBlock';
 
 import {
   ContentContainer,
   FlexContainer,
-  Message,
   StyledIconButton,
 } from './styledComponents';
 
@@ -38,8 +38,7 @@ const ErrorModal = ({ error }) => {
           >
             <CloseIcon color={textColorB} size="2.5rem" />
           </StyledIconButton>
-          <WarningIcon size="10rem" />
-          <Message>{error}</Message>
+          <ErrorBlock error={error} />
         </ContentContainer>
       </FlexContainer>
     </Modal>

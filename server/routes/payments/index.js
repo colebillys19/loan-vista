@@ -20,7 +20,7 @@ const getPayments = (req, res, next) => {
         newFetchParams: fetchParams,
         paymentsData: targetPaymentsData,
       });
-    }, 500);
+    }, 1000);
   } catch (error) {
     next(error);
   }

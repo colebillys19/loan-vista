@@ -33,6 +33,7 @@ export const Calls = ({
   fetchParams,
   loading,
   loanNumber,
+  mainError,
   noDataFetched,
   pathname,
   sortLoading,
@@ -64,7 +65,7 @@ export const Calls = ({
     <CallsView
       callsData={callsData}
       dispatchFetchCallsData={dispatchFetchCallsData}
-      error={error}
+      error={mainError || error}
       fetchParams={fetchParams}
       loading={loading}
       noDataFetched={noDataFetched}
@@ -84,6 +85,7 @@ Calls.propTypes = {
   fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
   loanNumber: T.string.isRequired,
+  mainError: T.oneOfType([T.bool, T.string]).isRequired,
   noDataFetched: T.bool.isRequired,
   pathname: T.string.isRequired,
   sortLoading: T.bool.isRequired,
@@ -96,6 +98,7 @@ const mapStateToProps = createStructuredSelector({
   fetchParams: makeSelectCalls('fetchParams'),
   loading: makeSelectCalls('loading'),
   loanNumber: makeSelectMain('loanNumber'),
+  mainError: makeSelectMain('error'),
   noDataFetched: makeSelectCalls('noDataFetched'),
   pathname: makeSelectPathname(),
   sortLoading: makeSelectCalls('sortLoading'),

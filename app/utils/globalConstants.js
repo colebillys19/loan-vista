@@ -1,2 +1,2 @@
 export const REQUEST_ERROR_MESSAGE =
-  'something unexpected happened while retrieving data';
+  'Something unexpected happened while retrieving data.';

@@ -37,7 +37,7 @@ const DashboardCalls = ({ data, headers, renderLoading }) => (
         />
       </StyledTableBody>
     </StyledTable>
-    <ViewMoreBlock route="/calls" />
+    <ViewMoreBlock isActive={!renderLoading} route="/calls" />
   </GradientCard>
 );
 

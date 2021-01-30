@@ -33,6 +33,7 @@ export const Documents = ({
   fetchParams,
   loading,
   loanNumber,
+  mainError,
   noDataFetched,
   pathname,
   sortLoading,
@@ -64,7 +65,7 @@ export const Documents = ({
     <DocumentsView
       dispatchFetchDocumentsData={dispatchFetchDocumentsData}
       documentsData={documentsData}
-      error={error}
+      error={mainError || error}
       fetchParams={fetchParams}
       loading={loading}
       noDataFetched={noDataFetched}
@@ -84,6 +85,7 @@ Documents.propTypes = {
   fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
   loanNumber: T.string.isRequired,
+  mainError: T.oneOfType([T.bool, T.string]).isRequired,
   noDataFetched: T.bool.isRequired,
   pathname: T.string.isRequired,
   sortLoading: T.bool.isRequired,
@@ -96,6 +98,7 @@ const mapStateToProps = createStructuredSelector({
   fetchParams: makeSelectDocuments('fetchParams'),
   loading: makeSelectDocuments('loading'),
   loanNumber: makeSelectMain('loanNumber'),
+  mainError: makeSelectMain('error'),
   noDataFetched: makeSelectDocuments('noDataFetched'),
   pathname: makeSelectPathname(),
   sortLoading: makeSelectDocuments('sortLoading'),

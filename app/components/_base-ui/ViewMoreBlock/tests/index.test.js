@@ -3,7 +3,7 @@ import { render } from 'react-testing-library';
 
 import LinkButton from '../index';
 
-const mockProps = { route: '/calls' };
+const mockProps = { isActive: true, route: '/calls' };
 
 const Component = <LinkButton {...mockProps} />;
 

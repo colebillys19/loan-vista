@@ -9,7 +9,7 @@ const getDocuments = (req, res, next) => {
     } = req;
 
     const documentsDataJson = fs.readFileSync(
-      `server/mockData/LOAN_${loanNumber}/DOCUMENTS_DATA.json`,
+      `server/mockData/LAN_${loanNumber}/DOCUMENTS_DATA.json`,
     );
     const documentsData = JSON.parse(documentsDataJson);
 
@@ -23,7 +23,7 @@ const getDocuments = (req, res, next) => {
         documentsData: targetDocumentsData,
         newFetchParams: fetchParams,
       });
-    }, 500);
+    }, 1000);
   } catch (error) {
     next(error);
   }

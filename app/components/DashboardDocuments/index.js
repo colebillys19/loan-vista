@@ -37,7 +37,7 @@ const DashboardDocuments = ({ data, headers, renderLoading }) => (
         />
       </StyledTableBody>
     </StyledTable>
-    <ViewMoreBlock route="/documents" />
+    <ViewMoreBlock isActive={!renderLoading} route="/documents" />
   </GradientCard>
 );
 
