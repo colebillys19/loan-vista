@@ -1,21 +1,17 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import ListFallback from '../index';
+import NoDataBlock from '../index';
 
-const mockProps = { loading: false };
-
-const Component = <ListFallback {...mockProps} />;
-
-describe('<ListFallback />', () => {
+describe('<NoDataBlock />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
-    render(Component);
+    render(<NoDataBlock />);
     expect(spy).not.toHaveBeenCalled();
   });
 
   it('Expect to render', () => {
-    const { container } = render(Component);
+    const { container } = render(<NoDataBlock />);
     expect(container.firstChild).toBeDefined();
   });
 });

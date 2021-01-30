@@ -3,7 +3,7 @@ import { render } from 'react-testing-library';
 
 import ListFallback from '../index';
 
-const mockProps = { loading: false };
+const mockProps = { error: 'error' };
 
 const Component = <ListFallback {...mockProps} />;
 

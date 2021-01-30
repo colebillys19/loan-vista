@@ -12,6 +12,7 @@ import { StyledTable, StyledTableBody } from 'components/_base-ui/ListTable';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import GradientCard from 'components/_base-ui/GradientCard';
 import ListSkeleton from 'components/_base-ui/ListSkeleton';
+import NoDataBlock from 'components/_base-ui/NoDataBlock';
 import ViewMoreBlock from 'components/_base-ui/ViewMoreBlock';
 
 import TableRow from './TableRow';
@@ -22,6 +23,10 @@ const Icon = (
 
 const DashboardDocuments = ({ data, headers, renderLoading }) => (
   <GradientCard heading="Documents" Icon={Icon} reduceBottomPadding>
+    <ConditionalRender
+      Component={<NoDataBlock />}
+      shouldRender={!renderLoading && !data.length}
+    />
     <StyledTable>
       <StyledTableBody>
         <ConditionalRender
@@ -37,7 +42,10 @@ const DashboardDocuments = ({ data, headers, renderLoading }) => (
         />
       </StyledTableBody>
     </StyledTable>
-    <ViewMoreBlock isActive={!renderLoading} route="/documents" />
+    <ViewMoreBlock
+      isActive={!renderLoading && !!data.length}
+      route="/documents"
+    />
   </GradientCard>
 );
 

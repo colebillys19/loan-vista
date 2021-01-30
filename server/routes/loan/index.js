@@ -9,7 +9,7 @@ const getLoanData = (req, res, next) => {
     } = req;
 
     const loanDataJson = fs.readFileSync(
-      `server/mockData/LAN_${loanNumber}/LOAN_DATA.json`,
+      `server/mockData/LOAN_${loanNumber}/LOAN_DATA.json`,
     );
     const loanData = JSON.parse(loanDataJson);
 

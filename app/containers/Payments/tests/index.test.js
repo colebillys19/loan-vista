@@ -20,6 +20,7 @@ const mockProps = {
   fetchParams: {},
   loading: false,
   loanNumber: '1234567890',
+  mainError: false,
   noDataFetched: false,
   pathname: '',
   paymentsData: MOCK_DATA,

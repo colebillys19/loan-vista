@@ -1,30 +1,12 @@
 import React from 'react';
 import T from 'prop-types';
 
-import Spinner from 'components/_base-ui/Spinner';
-
 import { FallbackContainer } from './styledComponents';
-import ErrorBlock from '../ErrorBlock';
+import { getComponent } from './helpers';
 
-const ListFallback = ({ error, loading }) => {
-  if (error) {
-    return (
-      <FallbackContainer>
-        <ErrorBlock error={error} />
-      </FallbackContainer>
-    );
-  }
-
-  if (loading) {
-    return (
-      <FallbackContainer>
-        <Spinner size="5rem" />
-      </FallbackContainer>
-    );
-  }
-
-  return <FallbackContainer>no data to display</FallbackContainer>;
-};
+const ListFallback = ({ error, loading }) => (
+  <FallbackContainer>{getComponent(error, loading)}</FallbackContainer>
+);
 
 ListFallback.propTypes = {
   error: T.oneOfType([T.bool, T.string]),

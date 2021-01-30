@@ -178,6 +178,11 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
         class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
       />
     </div>
+    <div
+      class="styledComponents__Message-sc-29kat5-0 iDuhyl"
+    >
+      No data to display.
+    </div>
     <table
       class="styledComponents__StyledTable-qh5wjg-0 iUJMBY"
     >
@@ -186,7 +191,7 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
       />
     </table>
     <div
-      class="styledComponents__ViewMoreContainer-hcrd2u-0 boVtYd"
+      class="styledComponents__ViewMoreContainer-hcrd2u-0 jaYATG"
     >
       <button
         class="MuiButtonBase-root styledComponents__StyledButton-sc-9o47wt-0 fgJPGq"
@@ -236,6 +241,11 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
         class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
       />
     </div>
+    <div
+      class="styledComponents__Message-sc-29kat5-0 iDuhyl"
+    >
+      No data to display.
+    </div>
     <table
       class="styledComponents__StyledTable-qh5wjg-0 iUJMBY"
     >
@@ -244,7 +254,7 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
       />
     </table>
     <div
-      class="styledComponents__ViewMoreContainer-hcrd2u-0 boVtYd"
+      class="styledComponents__ViewMoreContainer-hcrd2u-0 jaYATG"
     >
       <button
         class="MuiButtonBase-root styledComponents__StyledButton-sc-9o47wt-0 fgJPGq"
@@ -298,6 +308,11 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
         class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
       />
     </div>
+    <div
+      class="styledComponents__Message-sc-29kat5-0 iDuhyl"
+    >
+      No data to display.
+    </div>
     <table
       class="styledComponents__StyledTable-qh5wjg-0 iUJMBY"
     >
@@ -306,7 +321,7 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
       />
     </table>
     <div
-      class="styledComponents__ViewMoreContainer-hcrd2u-0 boVtYd"
+      class="styledComponents__ViewMoreContainer-hcrd2u-0 jaYATG"
     >
       <button
         class="MuiButtonBase-root styledComponents__StyledButton-sc-9o47wt-0 fgJPGq"
