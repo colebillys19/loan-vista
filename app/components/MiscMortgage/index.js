@@ -60,7 +60,7 @@ MiscTaxes.propTypes = {
 
 MiscTaxes.defaultProps = {
   data: MOCK_DATA,
-  headers: ['company', 'insuranceId', 'premiumAmount', 'premiumDue'],
+  headers: ['Company', 'Insurance ID', 'Premium Amount', 'Premium Due'],
 };
 
 export default MiscTaxes;

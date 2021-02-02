@@ -60,14 +60,7 @@ MiscTaxes.propTypes = {
 
 MiscTaxes.defaultProps = {
   data: MOCK_DATA,
-  headers: [
-    'taxType',
-    'paidTo',
-    'taxId',
-    'payFrequency',
-    'nextDue',
-    'expectedAmount',
-  ],
+  headers: ['Tax Type', 'Paid To', 'Tax ID', 'Next Due', 'Expected Amount'],
 };
 
 export default MiscTaxes;

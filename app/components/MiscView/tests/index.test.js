@@ -3,42 +3,18 @@ import { render } from 'react-testing-library';
 
 import MiscView from '../index';
 
+import {
+  MOCK_ESCROW_DATA as miscEscrowData,
+  MOCK_HOMEOWNERS_DATA as miscHomeownersData,
+  MOCK_MORTGAGE_DATA as miscMortgageData,
+  MOCK_TAXES_DATA as miscTaxesData,
+} from './mockData';
+
 const mockProps = {
-  miscEscrowData: [
-    {
-      listData: [{ label: 'label', value: 'value' }],
-    },
-  ],
-  miscHomeownersData: [
-    {
-      annualPremium: 'annualPremium',
-      company: 'company',
-      id: '1',
-      insuranceType: 'insuranceType',
-      policyExpiration: 'policyExpiration',
-      policyType: 'policyType',
-    },
-  ],
-  miscMortgageData: [
-    {
-      company: 'company',
-      id: '1',
-      insuranceId: 'insuranceId',
-      premiumAmount: 'premiumAmount',
-      premiumDue: 'premiumDue',
-    },
-  ],
-  miscTaxesData: [
-    {
-      expectedAmount: 'expectedAmount',
-      id: '1',
-      nextDue: 'nextDue',
-      paidTo: 'paidTo',
-      payFrequency: 'payFrequency',
-      taxId: 'taxId',
-      taxType: 'taxType',
-    },
-  ],
+  miscEscrowData,
+  miscHomeownersData,
+  miscMortgageData,
+  miscTaxesData,
 };
 
 const Component = <MiscView {...mockProps} />;

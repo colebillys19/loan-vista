@@ -61,11 +61,11 @@ MiscTaxes.propTypes = {
 MiscTaxes.defaultProps = {
   data: MOCK_DATA,
   headers: [
-    'insuranceType',
-    'policyType',
-    'company',
-    'policyExpiration',
-    'annualPremium',
+    'Insurance Type',
+    'Policy Type',
+    'Company',
+    'Policy Expiration',
+    'Annual Premium',
   ],
 };
 
