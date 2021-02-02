@@ -1,0 +1,38 @@
+export const MOCK_DATA = [
+  {
+    expectedAmount: 'expectedAmount',
+    id: '1',
+    nextDue: 'nextDue',
+    paidTo: 'paidTo',
+    payFrequency: 'payFrequency',
+    taxId: 'taxId',
+    taxType: 'taxType',
+  },
+  {
+    expectedAmount: 'expectedAmount',
+    id: '2',
+    nextDue: 'nextDue',
+    paidTo: 'paidTo',
+    payFrequency: 'payFrequency',
+    taxId: 'taxId',
+    taxType: 'taxType',
+  },
+  {
+    expectedAmount: 'expectedAmount',
+    id: '3',
+    nextDue: 'nextDue',
+    paidTo: 'paidTo',
+    payFrequency: 'payFrequency',
+    taxId: 'taxId',
+    taxType: 'taxType',
+  },
+  {
+    expectedAmount: 'expectedAmount',
+    id: '4',
+    nextDue: 'nextDue',
+    paidTo: 'paidTo',
+    payFrequency: 'payFrequency',
+    taxId: 'taxId',
+    taxType: 'taxType',
+  },
+];

@@ -5,19 +5,22 @@ import { WarningIcon } from 'images/icons';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import Spinner from 'components/_base-ui/Spinner';
 
-import { LoadingBlockContainer } from './styledComponents';
+import { FallbackBlockContainer } from './styledComponents';
 
-const LoadingBlock = ({ error }) => (
-  <LoadingBlockContainer>
+const FallbackBlock = ({ error, hideIcon }) => (
+  <FallbackBlockContainer>
     <ConditionalRender
       Component={WarningIcon}
-      FallbackComponent={Spinner}
+      FallbackComponent={!hideIcon && Spinner}
       propsToPassDown={{ size: '5rem' }}
       shouldRender={!!error}
     />
-  </LoadingBlockContainer>
+  </FallbackBlockContainer>
 );
 
-LoadingBlock.propTypes = { error: T.oneOfType([T.bool, T.string]).isRequired };
+FallbackBlock.propTypes = {
+  error: T.oneOfType([T.bool, T.string]).isRequired,
+  hideIcon: T.bool,
+};
 
-export default LoadingBlock;
+export default FallbackBlock;

@@ -6,7 +6,7 @@
 import React, { Fragment } from 'react';
 import T from 'prop-types';
 
-import { appColorAOpaque, textColorA } from 'styleConstants';
+import { iconColorBOpaque, textColorA } from 'styleConstants';
 import { CallIcon } from 'images/icons';
 import { StyledTable, StyledTableBody } from 'components/_base-ui/ListTable';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
@@ -15,10 +15,10 @@ import ListSkeleton from 'components/_base-ui/ListSkeleton';
 import NoDataBlock from 'components/_base-ui/NoDataBlock';
 import ViewMoreBlock from 'components/_base-ui/ViewMoreBlock';
 
-import TableRow from './TableRow';
+import CustomTableRow from './CustomTableRow';
 
 const Icon = (
-  <CallIcon colorA={textColorA} colorB={appColorAOpaque} size="4rem" />
+  <CallIcon colorA={textColorA} colorB={iconColorBOpaque} size="4rem" />
 );
 
 const DashboardCalls = ({ data, headers, renderLoading }) => (
@@ -33,7 +33,7 @@ const DashboardCalls = ({ data, headers, renderLoading }) => (
           Component={
             <Fragment>
               {data.map(({ id, ...restData }) => (
-                <TableRow key={id} data={restData} headers={headers} />
+                <CustomTableRow key={id} data={restData} headers={headers} />
               ))}
             </Fragment>
           }

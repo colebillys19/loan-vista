@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import TableRow from '../TableRow';
+import CustomTableRow from '../CustomTableRow';
 import { MOCK_DATA, MOCK_HEADERS } from './mockData';
 
 const mockProps = { data: MOCK_DATA[0], headers: MOCK_HEADERS };
@@ -9,12 +9,12 @@ const mockProps = { data: MOCK_DATA[0], headers: MOCK_HEADERS };
 const Component = (
   <table>
     <tbody>
-      <TableRow {...mockProps} />
+      <CustomTableRow {...mockProps} />
     </tbody>
   </table>
 );
 
-describe('<TableRow />', () => {
+describe('<CustomTableRow />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

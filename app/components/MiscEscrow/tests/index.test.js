@@ -2,8 +2,9 @@ import React from 'react';
 import { render } from 'react-testing-library';
 
 import MiscEscrow from '../index';
+import { MOCK_DATA } from './mockData';
 
-const mockProps = {};
+const mockProps = { data: MOCK_DATA, renderLoading: false };
 
 const Component = <MiscEscrow {...mockProps} />;
 

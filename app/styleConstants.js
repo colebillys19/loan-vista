@@ -7,6 +7,7 @@ export const textColorB = '#888888';
 
 export const iconColorA = '#7b68ee';
 export const iconColorB = '#ffa07a';
+export const iconColorBOpaque = '#fdbba4';
 
 export const backgroundColor = '#f8f8ff';
 export const borderGrey = '#ccc';

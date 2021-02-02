@@ -24,8 +24,101 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
         class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
       />
     </div>
-    <div>
-      yooo
+    <div
+      class="styledComponents__ListsContainer-n5d7a5-0 egtCcM"
+    >
+      <div
+        class="styledComponents__StyledTwoColumnList-n5d7a5-1 bNCOBx"
+      >
+        <div
+          class="styledComponents__Row-oikso6-2 xZptA"
+        >
+          <span
+            class="styledComponents__Label-oikso6-0 epkAqy"
+          >
+            Current Due Date
+          </span>
+          <span
+            class="styledComponents__Value-oikso6-3 eccUXR"
+          >
+            05/06/2021
+          </span>
+        </div>
+        <div
+          class="styledComponents__Row-oikso6-2 xZptA"
+        >
+          <span
+            class="styledComponents__Label-oikso6-0 epkAqy"
+          >
+            Current Escrow Payment
+          </span>
+          <span
+            class="styledComponents__Value-oikso6-3 eccUXR"
+          >
+            $123.45
+          </span>
+        </div>
+        <div
+          class="styledComponents__Row-oikso6-2 xZptA"
+        >
+          <span
+            class="styledComponents__Label-oikso6-0 epkAqy"
+          >
+            Current Escrow Balance
+          </span>
+          <span
+            class="styledComponents__Value-oikso6-3 eccUXR"
+          >
+            $876.54
+          </span>
+        </div>
+      </div>
+      <div
+        class="styledComponents__StyledTwoColumnList-n5d7a5-1 bNCOBx"
+      >
+        <div
+          class="styledComponents__Row-oikso6-2 xZptA"
+        >
+          <span
+            class="styledComponents__Label-oikso6-0 epkAqy"
+          >
+            Last/Next Escrow Analysis Date
+          </span>
+          <span
+            class="styledComponents__Value-oikso6-3 eccUXR"
+          >
+            May 2022
+          </span>
+        </div>
+        <div
+          class="styledComponents__Row-oikso6-2 xZptA"
+        >
+          <span
+            class="styledComponents__Label-oikso6-0 epkAqy"
+          >
+            Effective Due Date
+          </span>
+          <span
+            class="styledComponents__Value-oikso6-3 eccUXR"
+          >
+            02/20
+          </span>
+        </div>
+        <div
+          class="styledComponents__Row-oikso6-2 xZptA"
+        >
+          <span
+            class="styledComponents__Label-oikso6-0 epkAqy"
+          >
+            Effective Escrow Payment
+          </span>
+          <span
+            class="styledComponents__Value-oikso6-3 eccUXR"
+          >
+            $654.32
+          </span>
+        </div>
+      </div>
     </div>
     <div
       class="GradientBorder-sc-1rv7gqq-0 dmTzmF"
@@ -49,9 +142,188 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
         class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
       />
     </div>
-    <div>
-      yooo
-    </div>
+    <table
+      class="styledComponents__StyledTable-qh5wjg-0 iUJMBY"
+    >
+      <thead
+        class="styledComponents__StyledTableHead-qh5wjg-3 bocbRy"
+      >
+        <tr
+          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
+        >
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
+          >
+            taxType
+          </th>
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
+          >
+            paidTo
+          </th>
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
+          >
+            taxId
+          </th>
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
+          >
+            payFrequency
+          </th>
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
+          >
+            nextDue
+          </th>
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
+          >
+            expectedAmount
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="styledComponents__StyledTableBody-qh5wjg-1 efBlkm"
+      >
+        <tr
+          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
+        >
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            taxType
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            paidTo
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            taxId
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            payFrequency
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            nextDue
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            expectedAmount
+          </td>
+        </tr>
+        <tr
+          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
+        >
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            taxType
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            paidTo
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            taxId
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            payFrequency
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            nextDue
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            expectedAmount
+          </td>
+        </tr>
+        <tr
+          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
+        >
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            taxType
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            paidTo
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            taxId
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            payFrequency
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            nextDue
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            expectedAmount
+          </td>
+        </tr>
+        <tr
+          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
+        >
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            taxType
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            paidTo
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            taxId
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            payFrequency
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            nextDue
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            expectedAmount
+          </td>
+        </tr>
+      </tbody>
+    </table>
     <div
       class="GradientBorder-sc-1rv7gqq-0 dmTzmF"
     />
@@ -74,9 +346,163 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
         class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
       />
     </div>
-    <div>
-      yooo
-    </div>
+    <table
+      class="styledComponents__StyledTable-qh5wjg-0 iUJMBY"
+    >
+      <thead
+        class="styledComponents__StyledTableHead-qh5wjg-3 bocbRy"
+      >
+        <tr
+          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
+        >
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
+          >
+            insuranceType
+          </th>
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
+          >
+            policyType
+          </th>
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
+          >
+            company
+          </th>
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
+          >
+            policyExpiration
+          </th>
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
+          >
+            annualPremium
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="styledComponents__StyledTableBody-qh5wjg-1 efBlkm"
+      >
+        <tr
+          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
+        >
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            insuranceType
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            policyType
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            company
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            policyExpiration
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            annualPremium
+          </td>
+        </tr>
+        <tr
+          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
+        >
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            insuranceType
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            policyType
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            company
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            policyExpiration
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            annualPremium
+          </td>
+        </tr>
+        <tr
+          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
+        >
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            insuranceType
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            policyType
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            company
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            policyExpiration
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            annualPremium
+          </td>
+        </tr>
+        <tr
+          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
+        >
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            insuranceType
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            policyType
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            company
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            policyExpiration
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            annualPremium
+          </td>
+        </tr>
+      </tbody>
+    </table>
     <div
       class="GradientBorder-sc-1rv7gqq-0 dmTzmF"
     />
@@ -99,9 +525,114 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
         class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
       />
     </div>
-    <div>
-      yooo
-    </div>
+    <table
+      class="styledComponents__StyledTable-qh5wjg-0 iUJMBY"
+    >
+      <thead
+        class="styledComponents__StyledTableHead-qh5wjg-3 bocbRy"
+      >
+        <tr
+          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
+        >
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
+          >
+            company
+          </th>
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
+          >
+            insuranceId
+          </th>
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
+          >
+            premiumAmount
+          </th>
+          <th
+            class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
+          >
+            premiumDue
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="styledComponents__StyledTableBody-qh5wjg-1 efBlkm"
+      >
+        <tr
+          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
+        >
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            company
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            insuranceId
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            premiumAmount
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            premiumDue
+          </td>
+        </tr>
+        <tr
+          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
+        >
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            company
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            insuranceId
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            premiumAmount
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            premiumDue
+          </td>
+        </tr>
+        <tr
+          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
+        >
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            company
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            insuranceId
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            premiumAmount
+          </td>
+          <td
+            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+          >
+            premiumDue
+          </td>
+        </tr>
+      </tbody>
+    </table>
     <div
       class="GradientBorder-sc-1rv7gqq-0 dmTzmF"
     />

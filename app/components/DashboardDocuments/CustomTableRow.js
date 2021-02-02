@@ -4,7 +4,7 @@ import T from 'prop-types';
 import { StyledTableData, StyledTableRow } from 'components/_base-ui/ListTable';
 import LinkButton from 'components/_base-ui/LinkButton';
 
-const TableRow = ({ data, headers }) => (
+const CustomTableRow = ({ data, headers }) => (
   <StyledTableRow>
     {headers.map((header) => {
       if (header === 'pdf') {
@@ -20,6 +20,6 @@ const TableRow = ({ data, headers }) => (
   </StyledTableRow>
 );
 
-TableRow.propTypes = { data: T.object, headers: T.array };
+CustomTableRow.propTypes = { data: T.object, headers: T.array };
 
-export default TableRow;
+export default CustomTableRow;

@@ -1,20 +1,13 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import TableRow from '../TableRow';
-import { MOCK_DATA, MOCK_HEADERS } from './mockData';
+import FallbackBlock from '../FallbackBlock';
 
-const mockProps = { data: MOCK_DATA[0], headers: MOCK_HEADERS };
+const mockProps = { error: false };
 
-const Component = (
-  <table>
-    <tbody>
-      <TableRow {...mockProps} />
-    </tbody>
-  </table>
-);
+const Component = <FallbackBlock {...mockProps} />;
 
-describe('<TableRow />', () => {
+describe('<FallbackBlock />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

@@ -2,8 +2,9 @@ import React from 'react';
 import { render } from 'react-testing-library';
 
 import MiscHomeowners from '../index';
+import { MOCK_DATA } from './mockData';
 
-const mockProps = {};
+const mockProps = { data: MOCK_DATA, renderLoading: false };
 
 const Component = <MiscHomeowners {...mockProps} />;
 

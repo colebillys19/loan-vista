@@ -3,14 +3,14 @@ import styled from 'styled-components';
 
 import Button from 'components/_base-ui/Button';
 
-export const IconContainer = styled.div`
-  margin-bottom: 1.5rem;
+export const FallbackBlockContainer = styled.div`
+  height: 9.3rem;
+  padding-top: 2.1rem;
   text-align: center;
 `;
 
-export const LoadingBlockContainer = styled.div`
-  height: 9.3rem;
-  padding-top: 2.1rem;
+export const IconContainer = styled.div`
+  margin-bottom: 1.5rem;
   text-align: center;
 `;
 

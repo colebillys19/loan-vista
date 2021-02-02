@@ -7,6 +7,7 @@ import {
   StyledTableRow,
   TableContainer,
 } from './styledComponents';
+import TableRow from './TableRow';
 
 export {
   StyledTable,
@@ -16,4 +17,5 @@ export {
   StyledTableHeader,
   StyledTableRow,
   TableContainer,
+  TableRow,
 };

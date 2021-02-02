@@ -6,10 +6,11 @@
 import React from 'react';
 import T from 'prop-types';
 
+import { isValidRoute } from 'utils/globalHelpers';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 
 import { getIcon, getTabName } from './helpers';
-import LoadingBlock from './LoadingBlock';
+import FallbackBlock from './FallbackBlock';
 import {
   IconContainer,
   SidebarDetail,
@@ -41,7 +42,9 @@ const SidebarHeader = ({
             <SidebarDetail>{addressB}</SidebarDetail>
           </SidebarDetailsContainer>
         }
-        FallbackComponent={<LoadingBlock error={error} />}
+        FallbackComponent={
+          <FallbackBlock error={error} hideIcon={!isValidRoute(pathname)} />
+        }
         shouldRender={!renderLoading}
       />
       <StyledButton
