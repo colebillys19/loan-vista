@@ -11,7 +11,6 @@ import {
   StyledTableBody,
   StyledTableHead,
   StyledTableHeader,
-  StyledTableRow,
   TableRow,
 } from 'components/_base-ui/ListTable';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
@@ -20,6 +19,7 @@ import ListSkeleton from 'components/_base-ui/ListSkeleton';
 import NoDataBlock from 'components/_base-ui/NoDataBlock';
 
 import { MOCK_DATA } from './tests/mockData';
+import { TableHeadRow } from './styledComponents';
 
 const MiscTaxes = ({ data, headers, renderLoading }) => (
   <GradientCard heading="Mortgage Insurance">
@@ -29,11 +29,11 @@ const MiscTaxes = ({ data, headers, renderLoading }) => (
     />
     <StyledTable>
       <StyledTableHead>
-        <StyledTableRow>
+        <TableHeadRow>
           {headers.map((header) => (
             <StyledTableHeader key={header}>{header}</StyledTableHeader>
           ))}
-        </StyledTableRow>
+        </TableHeadRow>
       </StyledTableHead>
       <StyledTableBody>
         <ConditionalRender
