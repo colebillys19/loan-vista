@@ -66,12 +66,14 @@ export const RowStripe = styled(({ reduceHeight, ...restProps }) => (
 export const TableRowContainer = styled.tr`
   display: block;
   height: 2.1rem;
+  position: relative;
 `;
 
 export const TableRowStripe = styled.td`
   display: block;
   height: 1rem;
-  position: relative;
+  position: absolute;
   top: 0.4rem;
+  width: 78.7rem;
   ${animationStyles}
 `;

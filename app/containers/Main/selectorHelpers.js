@@ -30,14 +30,14 @@ export const getCallsSummary = (callsSummaryData) => {
  * getDashboardBorrowerData
  * @description: ...
  */
-export const getDashboardBorrowerData = (borrower, coBorrower) => {
+export const getDashboardBorrowerData = (borrowerData, coBorrowerData) => {
   const formattedData = [
-    { listData: getBorrowerKeyValues(borrower), title: 'Borrower 1' },
+    { listData: getBorrowerKeyValues(borrowerData), title: 'Borrower 1' },
   ];
 
-  if (Object.keys(coBorrower).length) {
+  if (Object.keys(coBorrowerData).length) {
     formattedData.push({
-      listData: getBorrowerKeyValues(coBorrower),
+      listData: getBorrowerKeyValues(coBorrowerData),
       title: 'Borrower 2',
     });
   }
@@ -108,6 +108,47 @@ export const getLoanSummary = (loanSummaryData) => {
     label,
     value: dataFormatter(loanSummaryData[key], format),
   }));
+};
+
+/**
+ * getMiscEscrow
+ * @description: ...
+ */
+export const getMiscEscrow = (escrowData) => {
+  console.log('* * * PRE SELECTOR * * *');
+  console.log(escrowData);
+
+  return escrowData;
+};
+
+/**
+ * getMiscHomeowners
+ * @description: ...
+ */
+export const getMiscHomeowners = (homeownersData) => { // eslint-disable-line
+  //
+
+  return homeownersData;
+};
+
+/**
+ * getMiscMortgage
+ * @description: ...
+ */
+export const getMiscMortgage = (mortgageData) => { // eslint-disable-line
+  //
+
+  return mortgageData;
+};
+
+/**
+ * getMiscTaxes
+ * @description: ...
+ */
+export const getMiscTaxes = (taxesData) => { // eslint-disable-line
+  //
+
+  return taxesData;
 };
 
 /**

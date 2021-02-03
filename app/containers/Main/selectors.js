@@ -7,6 +7,10 @@ import {
   getDashboardListsData,
   getDashboardLoanData,
   getLoanSummary,
+  getMiscEscrow,
+  getMiscHomeowners,
+  getMiscMortgage,
+  getMiscTaxes,
   getPaymentSummary,
   getServiceSummary,
   getSidebarHeaderData,
@@ -54,6 +58,46 @@ const makeSelectDashboardLoanData = () =>
   );
 
 /**
+ * makeSelectMiscEscrow
+ * @description ...
+ */
+const makeSelectMiscEscrow = () =>
+  createSelector(
+    makeSelectMain('escrow'),
+    (escrowData) => getMiscEscrow(escrowData),
+  );
+
+/**
+ * makeSelectMiscHomeowners
+ * @description ...
+ */
+const makeSelectMiscHomeowners = () =>
+  createSelector(
+    makeSelectMain('homeownersHazard'),
+    (homeownersData) => getMiscHomeowners(homeownersData),
+  );
+
+/**
+ * makeSelectMiscMortgage
+ * @description ...
+ */
+const makeSelectMiscMortgage = () =>
+  createSelector(
+    makeSelectMain('escrow'),
+    (mortgageData) => getMiscMortgage(mortgageData),
+  );
+
+/**
+ * makeSelectMiscTaxes
+ * @description ...
+ */
+const makeSelectMiscTaxes = () =>
+  createSelector(
+    makeSelectMain('escrow'),
+    (taxesData) => getMiscTaxes(taxesData),
+  );
+
+/**
  * makeSelectSidebarHeaderData
  * @description ...
  */
@@ -89,6 +133,10 @@ export {
   makeSelectDashboardBorrowerData,
   makeSelectDashboardListsData,
   makeSelectDashboardLoanData,
+  makeSelectMiscEscrow,
+  makeSelectMiscHomeowners,
+  makeSelectMiscMortgage,
+  makeSelectMiscTaxes,
   makeSelectSidebarHeaderData,
   makeSelectSidebarSummariesData,
   selectMainDomain,

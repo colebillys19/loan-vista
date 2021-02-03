@@ -21,7 +21,7 @@ export const Gradient = styled.div`
 export const SidebarContainer = styled.aside`
   display: inline-block;
   margin-right: 0.3rem;
-  padding-top: 4rem;
+  padding: 4rem 0;
   vertical-align: top;
   width: 36rem;
 `;

@@ -40,6 +40,10 @@ const App = ({ dispatchNavigation, pathname }) => (
         error,
         loading,
         loanNumber,
+        miscEscrowData,
+        miscHomeownersData,
+        miscMortgageData,
+        miscTaxesData,
         sidebarHeaderData,
         sidebarSummariesData,
       }) => (
@@ -75,7 +79,14 @@ const App = ({ dispatchNavigation, pathname }) => (
               exact
               path="/misc"
               render={() => (
-                <MiscView error={error} loading={loading} pathname={pathname} />
+                <MiscView
+                  error={error}
+                  loading={loading}
+                  miscEscrowData={miscEscrowData}
+                  miscHomeownersData={miscHomeownersData}
+                  miscMortgageData={miscMortgageData}
+                  miscTaxesData={miscTaxesData}
+                />
               )}
             />
             <Route component={NotFoundView} />
