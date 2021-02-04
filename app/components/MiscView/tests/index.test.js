@@ -11,6 +11,8 @@ import {
 } from './mockData';
 
 const mockProps = {
+  error: false,
+  loading: false,
   miscEscrowData,
   miscHomeownersData,
   miscMortgageData,

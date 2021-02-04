@@ -2,7 +2,7 @@
 
 exports[`<SidebarView /> Should render and match the snapshot 1`] = `
 <aside
-  class="styledComponents__SidebarContainer-ilr151-1 joXIQJ"
+  class="styledComponents__SidebarContainer-ilr151-1 bvmzBY"
 >
   <div
     class="styledComponents__SidebarContentContainer-ilr151-2 mpHlw"
@@ -14,7 +14,7 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
       class="styledComponents__SidebarHeaderContainer-n9yhwx-4 iRJJuF"
     >
       <div
-        class="styledComponents__IconContainer-n9yhwx-0 eSNqrl"
+        class="styledComponents__IconContainer-n9yhwx-1 ddRivE"
       >
         <svg
           aria-hidden="true"
@@ -36,7 +36,7 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
         </svg>
       </div>
       <div
-        class="styledComponents__LoadingBlockContainer-n9yhwx-1 kMZyvl"
+        class="styledComponents__FallbackBlockContainer-n9yhwx-0 lkEeUI"
       >
         <svg
           aria-hidden="true"

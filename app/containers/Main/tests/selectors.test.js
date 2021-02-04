@@ -2,6 +2,10 @@ import makeSelectMain, {
   makeSelectDashboardBorrowerData,
   makeSelectDashboardListsData,
   makeSelectDashboardLoanData,
+  makeSelectMiscEscrow,
+  makeSelectMiscHomeowners,
+  makeSelectMiscMortgage,
+  makeSelectMiscTaxes,
   makeSelectSidebarHeaderData,
   makeSelectSidebarSummariesData,
   selectMainDomain,
@@ -167,6 +171,87 @@ describe('makeSelectDashboardLoanData', () => {
 
   it('selects the dashboard loan data', () => {
     expect(dashboardLoanDataSelector(mockedState)).toEqual(expected);
+  });
+});
+
+describe('makeSelectMiscEscrow', () => {
+  const miscEscrowDataSelector = makeSelectMiscEscrow();
+  const mockedState = { main: MOCK_DATA };
+  const expected = [
+    {
+      listData: [
+        { label: 'Current Due Date', value: '5/6/2021' },
+        { label: 'Current Escrow Payment', value: '$122.49' },
+        { label: 'Current Escrow Balance', value: '$816.24' },
+      ],
+    },
+    {
+      listData: [
+        { label: 'Last/Next Escrow Analysis Date', value: 'May 2022' },
+        { label: 'Effective Due Date', value: 'Feb 2020' },
+        { label: 'Effective Escrow Payment', value: '$599.32' },
+      ],
+    },
+  ];
+
+  it('selects the misc escrow data', () => {
+    expect(miscEscrowDataSelector(mockedState)).toEqual(expected);
+  });
+});
+
+describe('makeSelectMiscHomeowners', () => {
+  const miscHomeownersDataSelector = makeSelectMiscHomeowners();
+  const mockedState = { main: MOCK_DATA };
+  const expected = [
+    {
+      'Annual Premium': '$67.55',
+      Company: '90105',
+      id: '78f016c8-3903-474d-92b0-d12151a6b258',
+      'Insurance Type': 'Hazard',
+      'Policy Expiration': '9/20/2022',
+      'Policy Type': 'H',
+    },
+  ];
+
+  it('selects the misc homeowners data', () => {
+    expect(miscHomeownersDataSelector(mockedState)).toEqual(expected);
+  });
+});
+
+describe('makeSelectMiscMortgage', () => {
+  const miscMortgageDataSelector = makeSelectMiscMortgage();
+  const mockedState = { main: MOCK_DATA };
+  const expected = [
+    {
+      Company: 'Geico',
+      id: '2cb873c2-9800-450a-aacd-dafde84b1e8e',
+      'Insurance ID': 'GE57A',
+      'Premium Amount': '$690.00',
+      'Premium Due': '5/1/2021',
+    },
+  ];
+
+  it('selects the misc mortgage data', () => {
+    expect(miscMortgageDataSelector(mockedState)).toEqual(expected);
+  });
+});
+
+describe('makeSelectMiscTaxes', () => {
+  const miscTaxesDataSelector = makeSelectMiscTaxes();
+  const mockedState = { main: MOCK_DATA };
+  const expected = [
+    {
+      'Expected Amount': '$1,211.31',
+      id: '123c3ac3-dbf4-459d-b7bb-ecfbeef593ff',
+      'Next Due': '7/1/2021',
+      'Paid To': '*****1313',
+      'Tax ID': '497382197',
+      'Tax Type': 'County/City',
+    },
+  ];
+
+  it('selects the misc taxes data', () => {
+    expect(miscTaxesDataSelector(mockedState)).toEqual(expected);
   });
 });
 

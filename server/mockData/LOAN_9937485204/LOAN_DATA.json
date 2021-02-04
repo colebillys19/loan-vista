@@ -89,25 +89,25 @@
    ],
    "mortgage":[
       {
-         "company":"GEICO",
-         "id":"2cb873c2-9800-450a-aacd-dafde84b1e8e",
-         "insuranceId":"GE57A",
          "amount":690,
-         "due":"2021-05-01"
+         "company":"GEICO",
+         "due":"2021-05-01",
+         "id":"2cb873c2-9800-450a-aacd-dafde84b1e8e",
+         "insuranceId":"GE57A"
       },
       {
-         "company":null,
-         "id":"3e18232c-cccc-4a7f-b587-6326c8d69765",
-         "insuranceId":"SL842",
          "amount":825.5,
-         "due":"2021-04-01"
+         "company":null,
+         "due":"2021-04-01",
+         "id":"3e18232c-cccc-4a7f-b587-6326c8d69765",
+         "insuranceId":"SL842"
       },
       {
-         "company":"ALLSTATE",
-         "id":"15dc3bc8-c6b2-4ed8-a9ea-c3feffaf8abc",
-         "insuranceId":"AQ7308",
          "amount":1150,
-         "due":"2021-06-01"
+         "company":"ALLSTATE",
+         "due":"2021-06-01",
+         "id":"15dc3bc8-c6b2-4ed8-a9ea-c3feffaf8abc",
+         "insuranceId":"AQ7308"
       }
    ],
    "payment":{
@@ -238,40 +238,40 @@
    "taxes":[
       {
          "amount":1211.31,
-         "id":"123c3ac3-dbf4-459d-b7bb-ecfbeef593ff",
          "due":"2021-07-01",
+         "id":"123c3ac3-dbf4-459d-b7bb-ecfbeef593ff",
          "paidTo":"917851313",
          "taxId":"497382197",
          "type":"county/city"
       },
       {
          "amount":60,
-         "id":"0da4c7eb-6497-4b55-be03-45f6c5c8ead5",
          "due":"2021-05-01",
+         "id":"0da4c7eb-6497-4b55-be03-45f6c5c8ead5",
          "paidTo":"47926155",
          "taxId":"546721800",
          "type":"other"
       },
       {
          "amount":150.45,
-         "id":"85ef6fd7-f44f-4893-8ebc-928cb739e74e",
          "due":"2021-06-01",
+         "id":"85ef6fd7-f44f-4893-8ebc-928cb739e74e",
          "paidTo":"9748525087",
          "taxId":"497005813",
          "type":"county"
       },
       {
          "amount":85.12,
-         "id":"dc1baf67-7b10-4a70-87d3-eaa1443d44ea",
          "due":"2021/05/01",
+         "id":"dc1baf67-7b10-4a70-87d3-eaa1443d44ea",
          "paidTo":"315474518",
          "taxId":"146791211",
          "type":"county"
       },
       {
          "amount":795.5,
-         "id":"c084f491-80ef-4f18-be0a-5a12a1b246dc",
          "due":"2021-04-01",
+         "id":"c084f491-80ef-4f18-be0a-5a12a1b246dc",
          "paidTo":"3040010525",
          "taxId":"864302598",
          "type":"city"

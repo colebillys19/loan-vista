@@ -40,6 +40,33 @@ export const MOCK_DATA = {
       unit: '4',
       zip: '89521',
     },
+    escrow: {
+      analysisDate: '2022-05',
+      balance: 816.24,
+      currentDueDate: '2021-05-06',
+      currentPayment: 122.49,
+      effectiveDueDate: '2020-02',
+      effectivePayment: 599.32,
+    },
+    homeownersHazard: [
+      {
+        annualPremium: 67.55,
+        company: '90105',
+        id: '78f016c8-3903-474d-92b0-d12151a6b258',
+        insuranceType: 'HAZARD',
+        policyExpiration: '2022-09-20',
+        policyType: 'H',
+      },
+    ],
+    mortgage: [
+      {
+        amount: 690,
+        company: 'GEICO',
+        due: '2021-05-01',
+        id: '2cb873c2-9800-450a-aacd-dafde84b1e8e',
+        insuranceId: 'GE57A',
+      },
+    ],
     payment: {
       accidentAndHealth: 3.1,
       bsc: 2,
@@ -156,6 +183,16 @@ export const MOCK_DATA = {
         welcomeCall: 'YES',
       },
     },
+    taxes: [
+      {
+        amount: 1211.31,
+        due: '2021-07-01',
+        id: '123c3ac3-dbf4-459d-b7bb-ecfbeef593ff',
+        paidTo: '917851313',
+        taxId: '497382197',
+        type: 'county/city',
+      },
+    ],
   },
   loanNumber: '1234567890',
 };
