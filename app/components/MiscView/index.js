@@ -15,19 +15,23 @@ import TabContainer from 'components/_base-ui/TabContainer';
 const MiscView = ({
   error,
   loading,
+  loanNumber,
   miscEscrowData,
   miscHomeownersData,
   miscMortgageData,
   miscTaxesData,
 }) => {
-  const renderLoading = !!error || loading;
+  const showComponents = loanNumber && !error && !loading;
 
   return (
     <TabContainer aria-labelledby="misc-tab" id="misc-view">
-      <MiscEscrow data={miscEscrowData} renderLoading={renderLoading} />
-      <MiscTaxes data={miscTaxesData} renderLoading={renderLoading} />
-      <MiscHomeowners data={miscHomeownersData} renderLoading={renderLoading} />
-      <MiscMortgage data={miscMortgageData} renderLoading={renderLoading} />
+      <MiscEscrow data={miscEscrowData} renderLoading={!showComponents} />
+      <MiscTaxes data={miscTaxesData} renderLoading={!showComponents} />
+      <MiscHomeowners
+        data={miscHomeownersData}
+        renderLoading={!showComponents}
+      />
+      <MiscMortgage data={miscMortgageData} renderLoading={!showComponents} />
     </TabContainer>
   );
 };
@@ -35,6 +39,7 @@ const MiscView = ({
 MiscView.propTypes = {
   error: T.oneOfType([T.bool, T.string]).isRequired,
   loading: T.bool.isRequired,
+  loanNumber: T.string.isRequired,
   miscEscrowData: T.array.isRequired,
   miscHomeownersData: T.array.isRequired,
   miscMortgageData: T.array.isRequired,

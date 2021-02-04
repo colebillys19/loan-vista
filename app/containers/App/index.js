@@ -68,7 +68,6 @@ const App = ({ dispatchNavigation, pathname }) => (
                   error={error}
                   loading={loading}
                   loanNumber={loanNumber}
-                  pathname={pathname}
                 />
               )}
             />
@@ -82,6 +81,7 @@ const App = ({ dispatchNavigation, pathname }) => (
                 <MiscView
                   error={error}
                   loading={loading}
+                  loanNumber={loanNumber}
                   miscEscrowData={miscEscrowData}
                   miscHomeownersData={miscHomeownersData}
                   miscMortgageData={miscMortgageData}
