@@ -16,20 +16,18 @@ const MiscView = ({
   error,
   loading,
   miscEscrowData,
-  // miscHomeownersData,
-  // miscMortgageData,
-  // miscTaxesData,
+  miscHomeownersData,
+  miscMortgageData,
+  miscTaxesData,
 }) => {
   const renderLoading = !!error || loading;
-  console.log('* * * COMPONENT * * *');
-  console.log(miscEscrowData);
 
   return (
     <TabContainer aria-labelledby="misc-tab" id="misc-view">
-      <MiscEscrow renderLoading={renderLoading} />
-      <MiscTaxes renderLoading={renderLoading} />
-      <MiscHomeowners renderLoading={renderLoading} />
-      <MiscMortgage renderLoading={renderLoading} />
+      <MiscEscrow data={miscEscrowData} renderLoading={renderLoading} />
+      <MiscTaxes data={miscTaxesData} renderLoading={renderLoading} />
+      <MiscHomeowners data={miscHomeownersData} renderLoading={renderLoading} />
+      <MiscMortgage data={miscMortgageData} renderLoading={renderLoading} />
     </TabContainer>
   );
 };
@@ -38,9 +36,9 @@ MiscView.propTypes = {
   error: T.oneOfType([T.bool, T.string]).isRequired,
   loading: T.bool.isRequired,
   miscEscrowData: T.array.isRequired,
-  // miscHomeownersData: T.array.isRequired,
-  // miscMortgageData: T.array.isRequired,
-  // miscTaxesData: T.array.isRequired,
+  miscHomeownersData: T.array.isRequired,
+  miscMortgageData: T.array.isRequired,
+  miscTaxesData: T.array.isRequired,
 };
 
 export default MiscView;

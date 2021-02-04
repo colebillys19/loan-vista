@@ -18,7 +18,6 @@ import GradientCard from 'components/_base-ui/GradientCard';
 import ListSkeleton from 'components/_base-ui/ListSkeleton';
 import NoDataBlock from 'components/_base-ui/NoDataBlock';
 
-import { MOCK_DATA } from './tests/mockData';
 import { TableHeadRow } from './styledComponents';
 
 const MiscTaxes = ({ data, headers, renderLoading }) => (
@@ -59,7 +58,6 @@ MiscTaxes.propTypes = {
 };
 
 MiscTaxes.defaultProps = {
-  data: MOCK_DATA,
   headers: [
     'Insurance Type',
     'Policy Type',

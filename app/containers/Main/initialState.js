@@ -40,6 +40,16 @@ const initialState = {
       unit: '',
       zip: '',
     },
+    escrow: {
+      analysisDate: '',
+      balance: 0,
+      currentDueDate: '',
+      currentPayment: 0,
+      effectiveDueDate: '',
+      effectivePayment: 0,
+    },
+    homeownersHazard: [],
+    mortgage: [],
     payment: {
       accidentAndHealth: 0,
       bsc: 0,
@@ -106,6 +116,7 @@ const initialState = {
         welcomeCall: '',
       },
     },
+    taxes: [],
   },
   loanNumber: '',
 };

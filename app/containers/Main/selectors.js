@@ -63,8 +63,8 @@ const makeSelectDashboardLoanData = () =>
  */
 const makeSelectMiscEscrow = () =>
   createSelector(
-    makeSelectMain('escrow'),
-    (escrowData) => getMiscEscrow(escrowData),
+    makeSelectMain('loanData'),
+    ({ escrow }) => getMiscEscrow(escrow),
   );
 
 /**
@@ -73,8 +73,8 @@ const makeSelectMiscEscrow = () =>
  */
 const makeSelectMiscHomeowners = () =>
   createSelector(
-    makeSelectMain('homeownersHazard'),
-    (homeownersData) => getMiscHomeowners(homeownersData),
+    makeSelectMain('loanData'),
+    ({ homeownersHazard }) => getMiscHomeowners(homeownersHazard),
   );
 
 /**
@@ -83,8 +83,8 @@ const makeSelectMiscHomeowners = () =>
  */
 const makeSelectMiscMortgage = () =>
   createSelector(
-    makeSelectMain('escrow'),
-    (mortgageData) => getMiscMortgage(mortgageData),
+    makeSelectMain('loanData'),
+    ({ mortgage }) => getMiscMortgage(mortgage),
   );
 
 /**
@@ -93,8 +93,8 @@ const makeSelectMiscMortgage = () =>
  */
 const makeSelectMiscTaxes = () =>
   createSelector(
-    makeSelectMain('escrow'),
-    (taxesData) => getMiscTaxes(taxesData),
+    makeSelectMain('loanData'),
+    ({ taxes }) => getMiscTaxes(taxes),
   );
 
 /**

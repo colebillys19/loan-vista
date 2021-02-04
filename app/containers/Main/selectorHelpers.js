@@ -6,7 +6,7 @@ import { toTitleCase } from 'utils/globalHelpers';
 import {
   DASHBOARD_LOAN_LABEL_DICT,
   SIDEBAR_SUMMARY_LABEL_DICT,
-} from './constants';
+} from './selectorConstants';
 import {
   dataFormatter,
   getBorrowerKeyValues,
@@ -114,42 +114,97 @@ export const getLoanSummary = (loanSummaryData) => {
  * getMiscEscrow
  * @description: ...
  */
-export const getMiscEscrow = (escrowData) => {
-  console.log('* * * PRE SELECTOR * * *');
-  console.log(escrowData);
-
-  return escrowData;
-};
+export const getMiscEscrow = ({
+  analysisDate,
+  balance,
+  currentDueDate,
+  currentPayment,
+  effectiveDueDate,
+  effectivePayment,
+}) => [
+  {
+    listData: [
+      {
+        label: 'Current Due Date',
+        value: dataFormatter(currentDueDate, 'date'),
+      },
+      {
+        label: 'Current Escrow Payment',
+        value: dataFormatter(currentPayment, 'currency'),
+      },
+      {
+        label: 'Current Escrow Balance',
+        value: dataFormatter(balance, 'currency'),
+      },
+    ],
+  },
+  {
+    listData: [
+      {
+        label: 'Last/Next Escrow Analysis Date',
+        value: dataFormatter(analysisDate, 'monthYear'),
+      },
+      {
+        label: 'Effective Due Date',
+        value: dataFormatter(effectiveDueDate, 'monthYear'),
+      },
+      {
+        label: 'Effective Escrow Payment',
+        value: dataFormatter(effectivePayment, 'currency'),
+      },
+    ],
+  },
+];
 
 /**
  * getMiscHomeowners
  * @description: ...
  */
-export const getMiscHomeowners = (homeownersData) => { // eslint-disable-line
-  //
-
-  return homeownersData;
-};
+export const getMiscHomeowners = (homeownersData) =>
+  homeownersData.map(
+    ({
+      annualPremium,
+      company,
+      id,
+      insuranceType,
+      policyExpiration,
+      policyType,
+    }) => ({
+      'Annual Premium': dataFormatter(annualPremium, 'currency'),
+      Company: company,
+      id,
+      'Insurance Type': dataFormatter(insuranceType, 'stringTitleCase'),
+      'Policy Expiration': dataFormatter(policyExpiration, 'date'),
+      'Policy Type': policyType,
+    }),
+  );
 
 /**
  * getMiscMortgage
  * @description: ...
  */
-export const getMiscMortgage = (mortgageData) => { // eslint-disable-line
-  //
-
-  return mortgageData;
-};
+export const getMiscMortgage = (mortgageData) =>
+  mortgageData.map(({ amount, company, due, id, insuranceId }) => ({
+    Company: dataFormatter(company, 'stringTitleCase'),
+    id,
+    'Insurance ID': insuranceId,
+    'Premium Amount': dataFormatter(amount, 'currency'),
+    'Premium Due': dataFormatter(due, 'date'),
+  }));
 
 /**
  * getMiscTaxes
  * @description: ...
  */
-export const getMiscTaxes = (taxesData) => { // eslint-disable-line
-  //
-
-  return taxesData;
-};
+export const getMiscTaxes = (taxesData) =>
+  taxesData.map(({ amount, due, id, paidTo, taxId, type }) => ({
+    'Expected Amount': dataFormatter(amount, 'currency'),
+    id,
+    'Next Due': dataFormatter(due, 'date'),
+    'Paid To': dataFormatter(paidTo, 'maskedLoanNumber'),
+    'Tax ID': taxId,
+    'Tax Type': dataFormatter(type, 'stringTitleCase'),
+  }));
 
 /**
  * getPaymentSummary

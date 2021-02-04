@@ -3,7 +3,7 @@ import { lowerCase } from 'lodash';
 
 import { convertNumToCurrency, toTitleCase } from 'utils/globalHelpers';
 
-import { DASHBOARD_BORROWER_LABEL_DICT } from './constants';
+import { DASHBOARD_BORROWER_LABEL_DICT } from './selectorConstants';
 
 /**
  * convertNumToPercentage
@@ -35,7 +35,10 @@ const convertNumToPercentage = (n) => {
  * @description: ...
  */
 export const dataFormatter = (value, format) => {
-  /* eslint-disable yeet */
+  if (value === null) {
+    return '-';
+  }
+
   switch (format) {
     case 'currency':
       return convertNumToCurrency(value);
@@ -45,8 +48,12 @@ export const dataFormatter = (value, format) => {
       return value !== '-'
         ? moment(value, 'YYYY-MM-DD').format('M/D/YYYY')
         : '-';
+    case 'maskedLoanNumber':
+      return getMaskedLoanNumber(value);
     case 'minutes':
       return `${value} minutes`;
+    case 'monthYear':
+      return getMonthYear(value);
     case 'percentage':
       return convertNumToPercentage(value);
     case 'phone':
@@ -60,6 +67,18 @@ export const dataFormatter = (value, format) => {
     default:
       return value;
   }
+};
+
+/**
+ * formatPhoneNumber
+ * @description: ...
+ */
+export const formatPhoneNumber = (numStr) => {
+  const a = numStr.slice(0, 3);
+  const b = numStr.slice(3, 6);
+  const c = numStr.slice(-4);
+
+  return `(${a}) ${b}-${c}`;
 };
 
 /**
@@ -110,15 +129,20 @@ export const getFormattedAddress = ({
 };
 
 /**
- * formatPhoneNumber
- * @description: ...
+ * getMaskedLoanNumber
+ * @description ...
  */
-export const formatPhoneNumber = (numStr) => {
-  const a = numStr.slice(0, 3);
-  const b = numStr.slice(3, 6);
-  const c = numStr.slice(-4);
+export const getMaskedLoanNumber = (loanNumber) =>
+  `${'*'.repeat(loanNumber.length - 4)}${loanNumber.slice(-4)}`;
 
-  return `(${a}) ${b}-${c}`;
+/**
+ * getMonthYear
+ * @description ...
+ */
+export const getMonthYear = (date) => {
+  const formattedDate = moment(date, 'YYYY-MM').format('ll');
+  const [m, d, y] = formattedDate.split(' '); // eslint-disable-line
+  return `${m} ${y}`;
 };
 
 /**
