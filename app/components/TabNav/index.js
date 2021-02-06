@@ -3,7 +3,7 @@
  * @description ...
  */
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import T from 'prop-types';
 
 import Tabs from './Tabs';
@@ -16,17 +16,19 @@ import {
 } from './styledComponents';
 
 const TabNav = ({ dispatchNavigation, pathname }) => {
-  const [value, setValue] = useState(checkRoute(pathname));
+  const [route, setRoute] = useState(checkRoute(pathname));
+
+  useEffect(() => {
+    setRoute(checkRoute(pathname));
+  }, [pathname]);
 
   const handleChange = (e, newValue) => {
     e.preventDefault();
-    setValue(newValue);
     dispatchNavigation(VALID_ROUTES[newValue]);
   };
 
   const handleDashboardButtonClick = (e) => {
     e.preventDefault();
-    setValue(false);
     dispatchNavigation('/');
   };
 
@@ -42,7 +44,7 @@ const TabNav = ({ dispatchNavigation, pathname }) => {
           Dashboard
         </StyledButton>
       </DashboardButtonContainer>
-      <Tabs handleChange={handleChange} value={value} />
+      <Tabs handleChange={handleChange} value={route} />
     </TabNavWrapper>
   );
 };

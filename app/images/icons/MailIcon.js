@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 import { SvgIcon } from '@material-ui/core';
 
-import { iconColorA, iconColorB } from 'styleConstants';
+import { appColorA, appColorB } from 'styleConstants';
 
 const MailIcon = ({ colorA, colorB, size, ...restProps }) => (
   <SvgIcon
@@ -23,8 +23,8 @@ const MailIcon = ({ colorA, colorB, size, ...restProps }) => (
 MailIcon.propTypes = { colorA: T.string, colorB: T.string, size: T.string };
 
 MailIcon.defaultProps = {
-  colorA: iconColorA,
-  colorB: iconColorB,
+  colorA: appColorA,
+  colorB: appColorB,
   size: '3rem',
 };
 

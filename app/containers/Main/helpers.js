@@ -17,8 +17,7 @@ const convertNumToPercentage = (n) => {
 
   const num = n * 100;
   const numStr = num.toString();
-  const isLongDecimal =
-    numStr.indexOf('.') !== -1 && numStr.split('.')[1].length > 5;
+  const isLongDecimal = numStr.includes('.') && numStr.split('.')[1].length > 5;
 
   if (isLongDecimal) {
     return `${num

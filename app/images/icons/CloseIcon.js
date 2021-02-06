@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 import { SvgIcon } from '@material-ui/core';
 
-import { iconColorA } from 'styleConstants';
+import { appColorA } from 'styleConstants';
 
 const CloseIcon = ({ color, size, ...restProps }) => (
   <SvgIcon
@@ -19,6 +19,6 @@ const CloseIcon = ({ color, size, ...restProps }) => (
 
 CloseIcon.propTypes = { color: T.string, size: T.string };
 
-CloseIcon.defaultProps = { color: iconColorA, size: '3rem' };
+CloseIcon.defaultProps = { color: appColorA, size: '3rem' };
 
 export default CloseIcon;

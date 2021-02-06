@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 import { SvgIcon } from '@material-ui/core';
 
-import { iconColorA } from 'styleConstants';
+import { appColorA } from 'styleConstants';
 
 const ArrowUpIcon = ({ color, size, ...restProps }) => (
   <SvgIcon
@@ -17,6 +17,6 @@ const ArrowUpIcon = ({ color, size, ...restProps }) => (
 
 ArrowUpIcon.propTypes = { color: T.string, size: T.string };
 
-ArrowUpIcon.defaultProps = { color: iconColorA, size: '3rem' };
+ArrowUpIcon.defaultProps = { color: appColorA, size: '3rem' };
 
 export default ArrowUpIcon;

@@ -11,7 +11,7 @@ const FallbackBlock = ({ error, hideIcon }) => (
   <FallbackBlockContainer>
     <ConditionalRender
       Component={WarningIcon}
-      FallbackComponent={!hideIcon && Spinner}
+      FallbackComponent={!hideIcon ? Spinner : null}
       propsToPassDown={{ size: '5rem' }}
       shouldRender={!!error}
     />

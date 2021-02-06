@@ -65,6 +65,7 @@ const App = ({ dispatchNavigation, pathname }) => (
                   dashboardBorrowerData={dashboardBorrowerData}
                   dashboardListsData={dashboardListsData}
                   dashboardLoanData={dashboardLoanData}
+                  dispatchNavigation={dispatchNavigation}
                   error={error}
                   loading={loading}
                   loanNumber={loanNumber}

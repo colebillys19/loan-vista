@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 import { SvgIcon } from '@material-ui/core';
 
-import { iconColorA } from 'styleConstants';
+import { appColorA } from 'styleConstants';
 
 const BulletIcon = ({ color, size, ...restProps }) => (
   <SvgIcon
@@ -16,6 +16,6 @@ const BulletIcon = ({ color, size, ...restProps }) => (
 
 BulletIcon.propTypes = { color: T.string, size: T.string };
 
-BulletIcon.defaultProps = { color: iconColorA, size: '3rem' };
+BulletIcon.defaultProps = { color: appColorA, size: '3rem' };
 
 export default BulletIcon;

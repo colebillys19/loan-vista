@@ -6,7 +6,7 @@
 import React, { Fragment } from 'react';
 import T from 'prop-types';
 
-import { iconColorBOpaque, textColorA } from 'styleConstants';
+import { appColorA, appColorB, textColorA } from 'styleConstants';
 import { MailIcon } from 'images/icons';
 import { StyledTable, StyledTableBody } from 'components/_base-ui/ListTable';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
@@ -17,12 +17,20 @@ import ViewMoreBlock from 'components/_base-ui/ViewMoreBlock';
 
 import CustomTableRow from './CustomTableRow';
 
-const Icon = (
-  <MailIcon colorA={textColorA} colorB={iconColorBOpaque} size="4rem" />
-);
+const Icon = <MailIcon colorA={textColorA} colorB={appColorA} size="4rem" />;
 
-const DashboardDocuments = ({ data, headers, renderLoading }) => (
-  <GradientCard heading="Documents" Icon={Icon} reduceBottomPadding>
+const DashboardDocuments = ({
+  data,
+  dispatchNavigation,
+  headers,
+  renderLoading,
+}) => (
+  <GradientCard
+    color={appColorB}
+    heading="Documents"
+    Icon={Icon}
+    reduceBottomPadding
+  >
     <ConditionalRender
       Component={<NoDataBlock />}
       shouldRender={!renderLoading && !data.length}
@@ -44,13 +52,14 @@ const DashboardDocuments = ({ data, headers, renderLoading }) => (
     </StyledTable>
     <ViewMoreBlock
       isActive={!renderLoading && !!data.length}
-      route="/documents"
+      navigate={() => dispatchNavigation('/documents')}
     />
   </GradientCard>
 );
 
 DashboardDocuments.propTypes = {
   data: T.array,
+  dispatchNavigation: T.func.isRequired,
   headers: T.array,
   renderLoading: T.bool.isRequired,
 };

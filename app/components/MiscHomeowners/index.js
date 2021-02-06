@@ -13,7 +13,7 @@ import {
   StyledTableHeader,
   TableRow,
 } from 'components/_base-ui/ListTable';
-import { appColorB } from 'styleConstants';
+// import { appColorB } from 'styleConstants';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import GradientCard from 'components/_base-ui/GradientCard';
 import ListSkeleton from 'components/_base-ui/ListSkeleton';
@@ -22,7 +22,7 @@ import NoDataBlock from 'components/_base-ui/NoDataBlock';
 import { TableHeadRow } from './styledComponents';
 
 const MiscTaxes = ({ data, headers, renderLoading }) => (
-  <GradientCard color={appColorB} heading="Homeowner's/Hazard Insurance">
+  <GradientCard heading="Homeowner's/Hazard Insurance">
     <ConditionalRender
       Component={<NoDataBlock />}
       shouldRender={!renderLoading && !data.length}

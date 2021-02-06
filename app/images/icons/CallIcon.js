@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 import { SvgIcon } from '@material-ui/core';
 
-import { iconColorA, iconColorB } from 'styleConstants';
+import { appColorA, appColorB } from 'styleConstants';
 
 const CallIcon = ({ colorA, colorB, size, ...restProps }) => (
   <SvgIcon
@@ -26,8 +26,8 @@ const CallIcon = ({ colorA, colorB, size, ...restProps }) => (
 CallIcon.propTypes = { colorA: T.string, colorB: T.string, size: T.string };
 
 CallIcon.defaultProps = {
-  colorA: iconColorA,
-  colorB: iconColorB,
+  colorA: appColorA,
+  colorB: appColorB,
   size: '3rem',
 };
 

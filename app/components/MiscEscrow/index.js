@@ -6,14 +6,14 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { appColorB } from 'styleConstants';
+// import { appColorB } from 'styleConstants';
 import GradientCard from 'components/_base-ui/GradientCard';
 
 import { ListsContainer, StyledTwoColumnList } from './styledComponents';
 
 /* eslint-disable react/no-array-index-key */
 const MiscEscrow = ({ data, renderLoading }) => (
-  <GradientCard color={appColorB} heading="Escrow">
+  <GradientCard heading="Escrow">
     <ListsContainer>
       {data.map((listDataObj, i) => (
         <StyledTwoColumnList

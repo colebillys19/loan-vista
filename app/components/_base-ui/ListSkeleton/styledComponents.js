@@ -1,4 +1,3 @@
-import React from 'react';
 import styled, { css } from 'styled-components';
 
 import { backgroundColor, skeletonGrey } from 'styleConstants';
@@ -48,15 +47,11 @@ const animationStyles = css`
   }
 `;
 
-export const RowContainer = styled(({ reduceHeight, ...restProps }) => (
-  <div {...restProps} />
-))`
+export const RowContainer = styled.div`
   height: ${({ reduceHeight }) => (reduceHeight ? '1.6rem' : '2.1rem')};
 `;
 
-export const RowStripe = styled(({ reduceHeight, ...restProps }) => (
-  <div {...restProps} />
-))`
+export const RowStripe = styled.div`
   height: 1rem;
   position: relative;
   top: 0.4rem;

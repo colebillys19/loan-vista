@@ -15,11 +15,11 @@ export const checkPickersStatus = (fromError, toError) => {
     'pick a more recent date',
   ];
 
-  if (crucialErrors.indexOf(fromError) !== -1) {
+  if (crucialErrors.includes(fromError)) {
     return { from: false, to: true };
   }
 
-  if (crucialErrors.indexOf(toError) !== -1) {
+  if (crucialErrors.includes(toError)) {
     return { from: true, to: false };
   }
 

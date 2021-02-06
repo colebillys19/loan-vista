@@ -52,7 +52,7 @@ const CallsList = ({
         <CustomTableHead>
           <StyledTableRow>
             {headers.map((header) => {
-              if (['date', 'dept', 'rep'].indexOf(header) !== -1) {
+              if (['date', 'dept', 'rep'].includes(header)) {
                 return (
                   <StyledTableHeader
                     key={header}

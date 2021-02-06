@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import T from 'prop-types';
 import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
 
 import { CloseIcon } from 'images/icons';
 import { textColorB } from 'styleConstants';
@@ -28,6 +29,7 @@ const ErrorModal = ({ error }) => {
 
   return (
     <Modal
+      BackdropComponent={Backdrop}
       BackdropProps={{ transitionDuration: 200 }}
       onBackdropClick={closeModal}
       onEscapeKeyDown={closeModal}

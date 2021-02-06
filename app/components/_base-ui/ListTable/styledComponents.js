@@ -6,6 +6,7 @@ export const StyledTable = styled.table`
   width: 100%;
 `;
 
+// keep?
 export const StyledTableBody = styled.tbody``;
 
 export const StyledTableData = styled.td`
@@ -15,6 +16,7 @@ export const StyledTableData = styled.td`
   }
 `;
 
+// keep?
 export const StyledTableHead = styled.thead``;
 
 export const StyledTableHeader = styled.th`
@@ -28,4 +30,5 @@ export const StyledTableRow = styled.tr`
   height: 2.1rem;
 `;
 
+// keep?
 export const TableContainer = styled.div``;

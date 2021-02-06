@@ -52,7 +52,7 @@ const DocumentsList = ({
         <CustomTableHead>
           <StyledTableRow>
             {headers.map((header) => {
-              if (['date sent', 'type', 'from'].indexOf(header) !== -1) {
+              if (['date sent', 'type', 'from'].includes(header)) {
                 return (
                   <StyledTableHeader key={header} scope="col">
                     <ListSortButton

@@ -1,13 +1,10 @@
-import React from 'react';
 import styled from 'styled-components';
 import { Button } from '@material-ui/core';
 
 import { SpinnerIcon } from 'images/icons';
 import { appColorA, textColorB } from 'styleConstants';
 
-export const StyledButton = styled(({ isActive, ...restProps }) => (
-  <Button {...restProps} />
-))`
+export const StyledButton = styled(Button)`
   border-radius: 0;
   color: ${({ isActive }) => (isActive ? appColorA : textColorB)};
   font-family: Arial, sans-serif;

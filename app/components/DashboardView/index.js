@@ -18,6 +18,7 @@ const DashboardView = ({
   dashboardBorrowerData,
   dashboardListsData: { callsData, documentsData, paymentsData },
   dashboardLoanData,
+  dispatchNavigation,
   error,
   loading,
   loanNumber,
@@ -31,12 +32,21 @@ const DashboardView = ({
         renderLoading={!showComponents}
       />
       <DashboardLoan data={dashboardLoanData} renderLoading={!showComponents} />
-      <DashboardCalls data={callsData} renderLoading={!showComponents} />
-      <DashboardDocuments
-        data={documentsData}
+      <DashboardCalls
+        data={callsData}
+        dispatchNavigation={dispatchNavigation}
         renderLoading={!showComponents}
       />
-      <DashboardPayments data={paymentsData} renderLoading={!showComponents} />
+      <DashboardDocuments
+        data={documentsData}
+        dispatchNavigation={dispatchNavigation}
+        renderLoading={!showComponents}
+      />
+      <DashboardPayments
+        data={paymentsData}
+        dispatchNavigation={dispatchNavigation}
+        renderLoading={!showComponents}
+      />
       <ErrorModal error={error} />
     </TabContainer>
   );
@@ -50,6 +60,7 @@ DashboardView.propTypes = {
     paymentsData: T.array,
   }).isRequired,
   dashboardLoanData: T.object.isRequired,
+  dispatchNavigation: T.func.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
   loading: T.bool.isRequired,
   loanNumber: T.string.isRequired,

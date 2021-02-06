@@ -5,9 +5,10 @@ import LinkButton from 'components/_base-ui/LinkButton';
 
 import { ViewMoreContainer } from './styledComponents';
 
-const ViewMoreBlock = ({ isActive, route }) => {
+const ViewMoreBlock = ({ isActive, navigate }) => {
   const handleClick = () => {
-    console.log(route); // eslint-disable-line
+    window.scrollTo(0, 0);
+    navigate();
   };
 
   return (
@@ -19,7 +20,7 @@ const ViewMoreBlock = ({ isActive, route }) => {
 
 ViewMoreBlock.propTypes = {
   isActive: T.bool.isRequired,
-  route: T.string.isRequired,
+  navigate: T.func.isRequired,
 };
 
 export default ViewMoreBlock;

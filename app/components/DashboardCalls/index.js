@@ -6,7 +6,7 @@
 import React, { Fragment } from 'react';
 import T from 'prop-types';
 
-import { iconColorBOpaque, textColorA } from 'styleConstants';
+import { appColorB, textColorA } from 'styleConstants';
 import { CallIcon } from 'images/icons';
 import { StyledTable, StyledTableBody } from 'components/_base-ui/ListTable';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
@@ -17,11 +17,14 @@ import ViewMoreBlock from 'components/_base-ui/ViewMoreBlock';
 
 import CustomTableRow from './CustomTableRow';
 
-const Icon = (
-  <CallIcon colorA={textColorA} colorB={iconColorBOpaque} size="4rem" />
-);
+const Icon = <CallIcon colorA={textColorA} colorB={appColorB} size="4rem" />;
 
-const DashboardCalls = ({ data, headers, renderLoading }) => (
+const DashboardCalls = ({
+  data,
+  dispatchNavigation,
+  headers,
+  renderLoading,
+}) => (
   <GradientCard heading="Calls" Icon={Icon} reduceBottomPadding>
     <ConditionalRender
       Component={<NoDataBlock />}
@@ -42,12 +45,16 @@ const DashboardCalls = ({ data, headers, renderLoading }) => (
         />
       </StyledTableBody>
     </StyledTable>
-    <ViewMoreBlock isActive={!renderLoading && !!data.length} route="/calls" />
+    <ViewMoreBlock
+      isActive={!renderLoading && !!data.length}
+      navigate={() => dispatchNavigation('/calls')}
+    />
   </GradientCard>
 );
 
 DashboardCalls.propTypes = {
   data: T.array,
+  dispatchNavigation: T.func.isRequired,
   headers: T.array,
   renderLoading: T.bool.isRequired,
 };
