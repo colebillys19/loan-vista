@@ -3,25 +3,40 @@
 exports[`<MiscView /> Should render and match the snapshot 1`] = `
 <section
   aria-labelledby="misc-tab"
-  class="TabContainer-sc-1us62xt-0 kDDxVM"
+  class="TabContainer-sc-1us62xt-0 fqhtXT"
   id="misc-view"
 >
   <section
-    class="styledComponents__CardContainer-sc-1glo3a7-0 cvPeDL"
+    class="styledComponents__CardContainer-sc-1glo3a7-0 hVJZWB"
   >
     <div
-      class="styledComponents__TopStripe-sc-1glo3a7-4 dySDft"
+      class="styledComponents__TopStripe-sc-1glo3a7-4 dlaTng"
+      color="rgb(70, 99, 51)"
     />
     <div
-      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 dpVkuc"
+      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 fMbEKU"
     >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        style="height: 1.8rem; width: 1.8rem;"
+        viewBox="0 0 64 64"
+      >
+        <circle
+          cx="32"
+          cy="31.964"
+          fill="rgb(255, 191, 0)"
+          r="21"
+        />
+      </svg>
       <h2
         class="styledComponents__StyledH2-sc-1glo3a7-1 kipGlV"
       >
         Escrow
       </h2>
       <div
-        class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
+        class="styledComponents__ThinStripe-sc-1glo3a7-3 jEBAxK"
       />
     </div>
     <div
@@ -31,41 +46,63 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTwoColumnList-n5d7a5-1 bNCOBx"
       >
         <div
-          class="styledComponents__Row-oikso6-2 xZptA"
+          class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
         >
-          <span
-            class="styledComponents__Label-oikso6-0 epkAqy"
-          >
-            label
-          </span>
-          <span
-            class="styledComponents__Value-oikso6-3 eccUXR"
-          >
-            value
-          </span>
+          <div
+            class="styledComponents__RowStripe-sc-12zmidq-1 kfiWNi"
+          />
+        </div>
+        <div
+          class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        >
+          <div
+            class="styledComponents__RowStripe-sc-12zmidq-1 kfiWNi"
+          />
+        </div>
+        <div
+          class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        >
+          <div
+            class="styledComponents__RowStripe-sc-12zmidq-1 kfiWNi"
+          />
         </div>
       </div>
     </div>
     <div
-      class="GradientBorder-sc-1rv7gqq-0 dmTzmF"
+      class="GradientBorder-sc-1rv7gqq-0 yNJzF"
     />
   </section>
   <section
-    class="styledComponents__CardContainer-sc-1glo3a7-0 cvPeDL"
+    class="styledComponents__CardContainer-sc-1glo3a7-0 hVJZWB"
   >
     <div
-      class="styledComponents__TopStripe-sc-1glo3a7-4 dySDft"
+      class="styledComponents__TopStripe-sc-1glo3a7-4 kJMcOS"
+      color="rgb(255, 191, 0)"
     />
     <div
-      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 dpVkuc"
+      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 fMbEKU"
     >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        style="height: 1.8rem; width: 1.8rem;"
+        viewBox="0 0 64 64"
+      >
+        <circle
+          cx="32"
+          cy="31.964"
+          fill="rgb(70, 99, 51)"
+          r="21"
+        />
+      </svg>
       <h2
         class="styledComponents__StyledH2-sc-1glo3a7-1 kipGlV"
       >
         Taxes
       </h2>
       <div
-        class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
+        class="styledComponents__ThinStripe-sc-1glo3a7-3 jEBAxK"
       />
     </div>
     <table
@@ -75,7 +112,7 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableHead-qh5wjg-3 bocbRy"
       >
         <tr
-          class="styledComponents__StyledTableRow-qh5wjg-5 styledComponents__TableHeadRow-sc-1c5jbsq-0 emJIWc"
+          class="styledComponents__StyledTableRow-qh5wjg-5 styledComponents__TableHeadRow-sc-1c5jbsq-0 bzMUIp"
         >
           <th
             class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
@@ -108,46 +145,77 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableBody-qh5wjg-1 efBlkm"
       >
         <tr
-          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
+          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
         >
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
+        >
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
+        >
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
+        >
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
+        >
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
           />
         </tr>
       </tbody>
     </table>
     <div
-      class="GradientBorder-sc-1rv7gqq-0 dmTzmF"
+      class="GradientBorder-sc-1rv7gqq-0 yNJzF"
     />
   </section>
   <section
-    class="styledComponents__CardContainer-sc-1glo3a7-0 cvPeDL"
+    class="styledComponents__CardContainer-sc-1glo3a7-0 hVJZWB"
   >
     <div
-      class="styledComponents__TopStripe-sc-1glo3a7-4 dySDft"
+      class="styledComponents__TopStripe-sc-1glo3a7-4 dlaTng"
+      color="rgb(70, 99, 51)"
     />
     <div
-      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 dpVkuc"
+      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 fMbEKU"
     >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        style="height: 1.8rem; width: 1.8rem;"
+        viewBox="0 0 64 64"
+      >
+        <circle
+          cx="32"
+          cy="31.964"
+          fill="rgb(255, 191, 0)"
+          r="21"
+        />
+      </svg>
       <h2
         class="styledComponents__StyledH2-sc-1glo3a7-1 kipGlV"
       >
         Homeowner's/Hazard Insurance
       </h2>
       <div
-        class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
+        class="styledComponents__ThinStripe-sc-1glo3a7-3 jEBAxK"
       />
     </div>
     <table
@@ -157,7 +225,7 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableHead-qh5wjg-3 bocbRy"
       >
         <tr
-          class="styledComponents__StyledTableRow-qh5wjg-5 styledComponents__TableHeadRow-sc-1a6ncbm-0 fdUOju"
+          class="styledComponents__StyledTableRow-qh5wjg-5 styledComponents__TableHeadRow-sc-1a6ncbm-0 hFKiqn"
         >
           <th
             class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
@@ -190,46 +258,77 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableBody-qh5wjg-1 efBlkm"
       >
         <tr
-          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
+          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
         >
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
+        >
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
+        >
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
+        >
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
+        >
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
           />
         </tr>
       </tbody>
     </table>
     <div
-      class="GradientBorder-sc-1rv7gqq-0 dmTzmF"
+      class="GradientBorder-sc-1rv7gqq-0 yNJzF"
     />
   </section>
   <section
-    class="styledComponents__CardContainer-sc-1glo3a7-0 cvPeDL"
+    class="styledComponents__CardContainer-sc-1glo3a7-0 hVJZWB"
   >
     <div
-      class="styledComponents__TopStripe-sc-1glo3a7-4 dySDft"
+      class="styledComponents__TopStripe-sc-1glo3a7-4 kJMcOS"
+      color="rgb(255, 191, 0)"
     />
     <div
-      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 dpVkuc"
+      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 fMbEKU"
     >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        style="height: 1.8rem; width: 1.8rem;"
+        viewBox="0 0 64 64"
+      >
+        <circle
+          cx="32"
+          cy="31.964"
+          fill="rgb(70, 99, 51)"
+          r="21"
+        />
+      </svg>
       <h2
         class="styledComponents__StyledH2-sc-1glo3a7-1 kipGlV"
       >
         Mortgage Insurance
       </h2>
       <div
-        class="styledComponents__ThinStripe-sc-1glo3a7-3 huuNUm"
+        class="styledComponents__ThinStripe-sc-1glo3a7-3 jEBAxK"
       />
     </div>
     <table
@@ -239,7 +338,7 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableHead-qh5wjg-3 bocbRy"
       >
         <tr
-          class="styledComponents__StyledTableRow-qh5wjg-5 styledComponents__TableHeadRow-hl8zyi-0 kMFfnv"
+          class="styledComponents__StyledTableRow-qh5wjg-5 styledComponents__TableHeadRow-hl8zyi-0 knOpzV"
         >
           <th
             class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
@@ -267,25 +366,44 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableBody-qh5wjg-1 efBlkm"
       >
         <tr
-          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
+          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
         >
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
+        >
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
+        >
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
+        >
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jTxobe"
+            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
+          />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
+        >
+          <td
+            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
           />
         </tr>
       </tbody>
     </table>
     <div
-      class="GradientBorder-sc-1rv7gqq-0 dmTzmF"
+      class="GradientBorder-sc-1rv7gqq-0 yNJzF"
     />
   </section>
 </section>

@@ -15,6 +15,7 @@ const mockProps = {
     paymentData: { listData: [], title: 'title' },
     stopsData: [],
   },
+  dispatchNavigation: jest.fn(),
   error: false,
   loading: false,
   loanNumber: '1234567890',

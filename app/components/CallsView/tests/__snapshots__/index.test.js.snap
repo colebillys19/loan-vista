@@ -3,17 +3,17 @@
 exports[`<CallsView /> Should render and match the snapshot 1`] = `
 <section
   aria-labelledby="calls-tab"
-  class="TabContainer-sc-1us62xt-0 kDDxVM"
+  class="TabContainer-sc-1us62xt-0 fqhtXT"
   id="calls-view"
 >
   <form
-    class="styledComponents__StyledForm-sc-6nnwf7-2 kpDAEG"
+    class="styledComponents__StyledForm-sc-6nnwf7-2 gfsxzJ"
   >
     <span
       class="styledComponents__DisableWrapper-sc-6nnwf7-0 fNPNLa"
     >
       <label
-        class="styledComponents__StyledLabel-sc-6nnwf7-4 fnnyyM"
+        class="styledComponents__StyledLabel-sc-6nnwf7-4 heLHQY"
         for=""
       >
         from
@@ -22,7 +22,7 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
         class="styledComponents__DatePickerWrapper-sc-1wk5y4r-1 sdcXD"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root styledComponents__StyledKeyboardDatePicker-sc-1wk5y4r-2 doVNdr styledComponents__StyledTextField-sc-1wk5y4r-3 eubNBY"
+          class="MuiFormControl-root MuiTextField-root styledComponents__StyledKeyboardDatePicker-sc-1wk5y4r-2 doVNdr styledComponents__StyledTextField-sc-1wk5y4r-3 drlHCB"
           title=""
         >
           <div
@@ -78,7 +78,7 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
       class="styledComponents__DisableWrapper-sc-6nnwf7-0 fNPNLa"
     >
       <label
-        class="styledComponents__StyledLabel-sc-6nnwf7-4 fnnyyM"
+        class="styledComponents__StyledLabel-sc-6nnwf7-4 heLHQY"
         for=""
       >
         to
@@ -87,7 +87,7 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
         class="styledComponents__DatePickerWrapper-sc-1wk5y4r-1 sdcXD"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root styledComponents__StyledKeyboardDatePicker-sc-1wk5y4r-2 doVNdr styledComponents__StyledTextField-sc-1wk5y4r-3 eubNBY"
+          class="MuiFormControl-root MuiTextField-root styledComponents__StyledKeyboardDatePicker-sc-1wk5y4r-2 doVNdr styledComponents__StyledTextField-sc-1wk5y4r-3 drlHCB"
           title=""
         >
           <div
@@ -143,13 +143,13 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
       class="styledComponents__DisableWrapper-sc-6nnwf7-0 fNPNLa"
     >
       <label
-        class="styledComponents__StyledLabel-sc-6nnwf7-4 fnnyyM"
+        class="styledComponents__StyledLabel-sc-6nnwf7-4 heLHQY"
         for=""
       >
         or
       </label>
       <div
-        class="MuiInputBase-root MuiInput-root MuiInput-underline styledComponents__StyledSelect-sc-6nnwf7-6 dzbarT"
+        class="MuiInputBase-root MuiInput-root MuiInput-underline styledComponents__StyledSelect-sc-6nnwf7-6 hRWvFa"
       >
         <div
           aria-haspopup="listbox"
@@ -181,13 +181,13 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
       class="styledComponents__DisableWrapper-sc-6nnwf7-0 fNPNLa"
     >
       <label
-        class="styledComponents__StyledLabel-sc-6nnwf7-4 fnnyyM"
+        class="styledComponents__StyledLabel-sc-6nnwf7-4 heLHQY"
         for=""
       >
         and/or
       </label>
       <div
-        class="MuiFormControl-root MuiTextField-root styledComponents__StyledTextField-sc-6nnwf7-7 bukyEO"
+        class="MuiFormControl-root MuiTextField-root styledComponents__StyledTextField-sc-6nnwf7-7 clWGyR"
       >
         <div
           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
@@ -224,7 +224,7 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
           />
           <path
             d="M17.65 6.35c-1.63-1.63-3.94-2.57-6.48-2.31-3.67.37-6.69 3.35-7.1 7.02C3.52 15.91 7.27 20 12 20c3.19 0 5.93-1.87 7.21-4.56.32-.67-.16-1.44-.9-1.44-.37 0-.72.2-.88.53-1.13 2.43-3.84 3.97-6.8 3.31-2.22-.49-4.01-2.3-4.48-4.52C5.31 9.44 8.26 6 12 6c1.66 0 3.14.69 4.22 1.78l-1.51 1.51c-.63.63-.19 1.71.7 1.71H19c.55 0 1-.45 1-1V6.41c0-.89-1.08-1.34-1.71-.71l-.64.65z"
-            fill="#7b68ee"
+            fill="rgb(70, 99, 51)"
           />
         </svg>
       </span>
@@ -236,7 +236,7 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
       class="styledComponents__DisableWrapper-sc-6nnwf7-0 fNPNLa"
     >
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-6nnwf7-1 fyzjVE styledComponents__StyledButton-sc-86ulmm-0 exBHac"
+        class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-6nnwf7-1 fyzjVE styledComponents__StyledButton-sc-86ulmm-0 gNAehT"
         tabindex="0"
         type="submit"
       >
@@ -255,32 +255,32 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
     class="styledComponents__TableContainer-vlp0pm-7 jqujHF"
   >
     <div
-      class="GradientBorder-sc-1rv7gqq-0 hyonyR"
+      class="GradientBorder-sc-1rv7gqq-0 fQQJcU"
     />
     <div
-      class="GradientBorder-sc-1rv7gqq-0 dfrFlw"
+      class="GradientBorder-sc-1rv7gqq-0 gmyLkZ"
     />
     <div
-      class="GradientBorder-sc-1rv7gqq-0 fJnNtj"
+      class="GradientBorder-sc-1rv7gqq-0 gnegQe"
     />
     <div
-      class="GradientBorder-sc-1rv7gqq-0 dmTzmF"
+      class="GradientBorder-sc-1rv7gqq-0 yNJzF"
     />
     <table
-      class="styledComponents__StyledTable-vlp0pm-1 ecXuWn"
+      class="styledComponents__StyledTable-vlp0pm-1 isdduh"
     >
       <thead
         class="styledComponents__StyledTableHead-vlp0pm-4 styledComponents__CustomTableHead-dnzlrp-0 ifSOoJ"
       >
         <tr
-          class="styledComponents__StyledTableRow-vlp0pm-6 hnHTeC"
+          class="styledComponents__StyledTableRow-vlp0pm-6 ldLzdU"
         >
           <th
-            class="styledComponents__StyledTableHeader-vlp0pm-5 jzAiFL"
+            class="styledComponents__StyledTableHeader-vlp0pm-5 bVVwbq"
             scope="col"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 fqrnhO MuiButton-disableElevation"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 gBupFP MuiButton-disableElevation"
               tabindex="0"
               type="button"
             >
@@ -304,7 +304,7 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
                     />
                     <path
                       d="M7 10l5 5 5-5z"
-                      fill="#888888"
+                      fill="rgb(136, 136, 136)"
                     />
                   </svg>
                 </span>
@@ -312,17 +312,17 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
             </button>
           </th>
           <th
-            class="styledComponents__StyledTableHeader-vlp0pm-5 jzAiFL"
+            class="styledComponents__StyledTableHeader-vlp0pm-5 bVVwbq"
             scope="col"
           >
             time
           </th>
           <th
-            class="styledComponents__StyledTableHeader-vlp0pm-5 jzAiFL"
+            class="styledComponents__StyledTableHeader-vlp0pm-5 bVVwbq"
             scope="col"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 fqrnhO MuiButton-disableElevation"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 gBupFP MuiButton-disableElevation"
               tabindex="0"
               type="button"
             >
@@ -346,7 +346,7 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
                     />
                     <path
                       d="M7 10l5 5 5-5z"
-                      fill="#888888"
+                      fill="rgb(136, 136, 136)"
                     />
                   </svg>
                 </span>
@@ -354,11 +354,11 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
             </button>
           </th>
           <th
-            class="styledComponents__StyledTableHeader-vlp0pm-5 jzAiFL"
+            class="styledComponents__StyledTableHeader-vlp0pm-5 bVVwbq"
             scope="col"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 fqrnhO MuiButton-disableElevation"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 gBupFP MuiButton-disableElevation"
               tabindex="0"
               type="button"
             >
@@ -382,7 +382,7 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
                     />
                     <path
                       d="M7 10l5 5 5-5z"
-                      fill="#888888"
+                      fill="rgb(136, 136, 136)"
                     />
                   </svg>
                 </span>
@@ -390,13 +390,13 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
             </button>
           </th>
           <th
-            class="styledComponents__StyledTableHeader-vlp0pm-5 jzAiFL"
+            class="styledComponents__StyledTableHeader-vlp0pm-5 bVVwbq"
             scope="col"
           >
             desc
           </th>
           <th
-            class="styledComponents__StyledTableHeader-vlp0pm-5 jzAiFL"
+            class="styledComponents__StyledTableHeader-vlp0pm-5 bVVwbq"
             scope="col"
           >
             audio
@@ -407,7 +407,7 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableBody-vlp0pm-2 hzYCgB"
       >
         <tr
-          class="styledComponents__StyledTableRow-vlp0pm-6 hnHTeC"
+          class="styledComponents__StyledTableRow-vlp0pm-6 ldLzdU"
         >
           <td
             class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
@@ -438,7 +438,7 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
             class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
           >
             <button
-              class="MuiButtonBase-root styledComponents__StyledButton-sc-9o47wt-0 fgJPGq"
+              class="MuiButtonBase-root styledComponents__StyledButton-sc-9o47wt-0 edMUeY"
               tabindex="0"
               type="button"
             >

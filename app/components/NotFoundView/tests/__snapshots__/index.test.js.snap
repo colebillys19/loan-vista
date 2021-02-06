@@ -2,7 +2,7 @@
 
 exports[`<NotFoundView /> Should render and match the snapshot 1`] = `
 <section
-  class="TabContainer-sc-1us62xt-0 kDDxVM"
+  class="TabContainer-sc-1us62xt-0 fqhtXT"
 >
   <div
     class="styledComponents__NotFoundViewContainer-sc-1yh80ac-0 dpVXfe"
@@ -20,19 +20,19 @@ exports[`<NotFoundView /> Should render and match the snapshot 1`] = `
       />
       <path
         d="m30 47.5h4v4h-4z"
-        fill="#7b68ee"
+        fill="rgb(70, 99, 51)"
       />
       <path
         d="m30 24.244h4v19.256h-4z"
-        fill="#7b68ee"
+        fill="rgb(70, 99, 51)"
       />
       <path
         d="m33.748 5.5h-3.496l-29.252 49.695v4.305h33v-4h-28.538l26.538-45.084 26.538 45.084h-20.538v4h25v-4.305z"
-        fill="#ffa07a"
+        fill="rgb(255, 191, 0)"
       />
     </svg>
     <h1
-      class="styledComponents__WarningHeading-sc-1yh80ac-1 FdGJt"
+      class="styledComponents__WarningHeading-sc-1yh80ac-1 jeBtyN"
     >
       page not found
     </h1>

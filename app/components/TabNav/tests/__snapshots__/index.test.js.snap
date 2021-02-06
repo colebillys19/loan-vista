@@ -8,7 +8,7 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
     class="styledComponents__DashboardButtonContainer-ift0se-0 icKrvz"
   >
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-ift0se-1 jWTCSK"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-ift0se-1 cJmxCt"
       id="dashboard-button"
       tabindex="0"
       type="button"
@@ -21,7 +21,7 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
     </button>
   </div>
   <div
-    class="MuiTabs-root styledComponents__StyledTabs-ift0se-3 dShpDX"
+    class="MuiTabs-root styledComponents__StyledTabs-ift0se-3 gyTtfk"
   >
     <div
       class="MuiTabs-scroller MuiTabs-fixed"
@@ -34,7 +34,7 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
         <button
           aria-controls="calls-view"
           aria-selected="true"
-          class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-ift0se-2 hiQMrK Mui-selected"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-ift0se-2 ixtBFt Mui-selected"
           id="calls-tab"
           role="tab"
           tabindex="0"
@@ -49,7 +49,7 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
         <button
           aria-controls="documents-view"
           aria-selected="false"
-          class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-ift0se-2 hiQMrK"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-ift0se-2 ixtBFt"
           id="documents-tab"
           role="tab"
           tabindex="-1"
@@ -64,7 +64,7 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
         <button
           aria-controls="payments-view"
           aria-selected="false"
-          class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-ift0se-2 hiQMrK"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-ift0se-2 ixtBFt"
           id="payments-tab"
           role="tab"
           tabindex="-1"
@@ -79,7 +79,7 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
         <button
           aria-controls="misc-view"
           aria-selected="false"
-          class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-ift0se-2 hiQMrK"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-ift0se-2 ixtBFt"
           id="misc-tab"
           role="tab"
           tabindex="-1"

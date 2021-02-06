@@ -4,8 +4,16 @@ import { render } from 'react-testing-library';
 import DashboardDocuments from '../index';
 import { MOCK_DATA } from './mockData';
 
-const Component = <DashboardDocuments data={MOCK_DATA} renderLoading={false} />;
-const ComponentLoading = <DashboardDocuments data={[]} renderLoading />;
+const Component = (
+  <DashboardDocuments
+    data={MOCK_DATA}
+    dispatchNavigation={jest.fn()}
+    renderLoading={false}
+  />
+);
+const ComponentLoading = (
+  <DashboardDocuments data={[]} dispatchNavigation={jest.fn()} renderLoading />
+);
 
 describe('<DashboardDocuments />', () => {
   it('Expect not to log errors in console', () => {
