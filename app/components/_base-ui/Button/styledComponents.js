@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Button } from '@material-ui/core';
 
-import { appColorA, backgroundColor } from 'styleConstants';
+import { appColorA, appColorAOpaque, backgroundColor } from 'styleConstants';
 
 export const StyledButton = styled(Button)`
   background-color: ${appColorA};
@@ -11,6 +11,6 @@ export const StyledButton = styled(Button)`
   padding: 0.5rem 1.2rem;
   text-transform: none;
   & :hover {
-    background-color: #9586f1;
+    background-color: ${appColorAOpaque};
   }
 `;

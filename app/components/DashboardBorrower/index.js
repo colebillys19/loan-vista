@@ -6,9 +6,9 @@
 import React from 'react';
 import T from 'prop-types';
 
-import GradientCard from 'components/_base-ui/GradientCard';
 import { GroupIcon } from 'images/icons';
 import { iconColorBOpaque } from 'styleConstants';
+import GradientCard from 'components/_base-ui/GradientCard';
 
 import { ListsContainer, StyledTwoColumnList } from './styledComponents';
 

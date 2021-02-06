@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-import { appColorA, backgroundColor, borderGrey } from 'styleConstants';
+import { backgroundColor, borderGrey } from 'styleConstants';
 
 export const CardContainer = styled.section`
   background: linear-gradient(
     90deg,
     ${backgroundColor} 0%,
-    #fff 50%,
+    #ffffff 50%,
     ${backgroundColor} 100%
   );
   margin-top: 2.5rem;
@@ -24,7 +24,8 @@ export const SummaryTitleContainer = styled.div`
   display: flex;
   margin-bottom: 2rem;
   & svg {
-    margin-right: 1.8rem;
+    margin-left: ${({ noIcon }) => (noIcon ? '-0.2rem' : '0')};
+    margin-right: ${({ noIcon }) => (noIcon ? '0.6rem' : '1.8rem')};
   }
 `;
 
@@ -35,7 +36,7 @@ export const ThinStripe = styled.div`
 `;
 
 export const TopStripe = styled.div`
-  background-color: ${appColorA};
+  background-color: ${({ color }) => color};
   height: 0.6rem;
   left: 0;
   margin-bottom: 2rem;

@@ -14,7 +14,7 @@ export const StyledTable = styled.table`
   background: linear-gradient(
     90deg,
     ${backgroundColor} 0%,
-    #fff 50%,
+    #ffffff 50%,
     ${backgroundColor} 100%
   );
   width: 100%;

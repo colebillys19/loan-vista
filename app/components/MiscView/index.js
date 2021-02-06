@@ -6,6 +6,7 @@
 import React from 'react';
 import T from 'prop-types';
 
+import ErrorModal from 'components/_base-ui/ErrorModal';
 import MiscEscrow from 'components/MiscEscrow';
 import MiscHomeowners from 'components/MiscHomeowners';
 import MiscMortgage from 'components/MiscMortgage';
@@ -32,6 +33,7 @@ const MiscView = ({
         renderLoading={!showComponents}
       />
       <MiscMortgage data={miscMortgageData} renderLoading={!showComponents} />
+      <ErrorModal error={error} />
     </TabContainer>
   );
 };

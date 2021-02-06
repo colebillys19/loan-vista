@@ -1,15 +1,15 @@
-export const appColorA = '#7b68ee';
-export const appColorAOpaque = '#c0b7f6';
-export const appColorB = '#ffa07a';
+export const appColorA = 'rgb(70, 99, 51)';
+export const appColorAOpaque = 'rgba(70, 99, 51, 0.5)';
+export const appColorB = 'rgb(255, 191, 0)';
 
-export const textColorA = '#111111';
-export const textColorB = '#888888';
+export const textColorA = 'rgb(17, 17, 17)';
+export const textColorB = 'rgb(136, 136, 136)';
 
-export const iconColorA = '#7b68ee';
-export const iconColorB = '#ffa07a';
-export const iconColorBOpaque = '#fdbba4';
+export const iconColorA = 'rgb(70, 99, 51)';
+export const iconColorB = 'rgb(255, 191, 0)';
+export const iconColorBOpaque = 'rgb(255, 191, 0, 0.5)';
 
-export const backgroundColor = '#f8f8ff';
-export const borderGrey = '#ccc';
-export const errorColor = '#f44336';
-export const skeletonGrey = '#e8e8e8';
+export const backgroundColor = 'rgb(248, 248, 255)';
+export const borderGrey = 'rgb(204, 204, 204)';
+export const errorColor = 'rgb(244, 67, 54)';
+export const skeletonGrey = 'rgb(232, 232, 232)';

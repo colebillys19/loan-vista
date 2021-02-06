@@ -5,12 +5,14 @@ import { backgroundColor } from 'styleConstants';
 
 export const ContentContainer = styled.div`
   background-color: ${backgroundColor};
+  border-radius: 0.5rem;
   max-width: 72rem;
+  opacity: ${({ opacity }) => opacity};
   padding: 6rem;
   pointer-events: all;
   position: relative;
   text-align: center;
-  border-radius: 0.5rem;
+  transition: opacity 0.2s linear;
 `;
 
 export const FlexContainer = styled.div`

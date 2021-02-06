@@ -5,7 +5,7 @@ import { backgroundColor, skeletonGrey } from 'styleConstants';
 
 const animationStyles = css`
   background: linear-gradient(45deg, ${skeletonGrey}, ${backgroundColor});
-  background-size: 200% 200%;
+  background-size: 500% 500%;
 
   -webkit-animation: Webkit 2s ease infinite;
   -moz-animation: Moz 2s ease infinite;
@@ -13,37 +13,37 @@ const animationStyles = css`
 
   @-webkit-keyframes Webkit {
     0% {
-      background-position: 0% 50%;
+      background-position: 0% 100%;
     }
     50% {
-      background-position: 100% 50%;
+      background-position: 100% 0%;
     }
     100% {
-      background-position: 0% 50%;
+      background-position: 0% 100%;
     }
   }
 
   @-moz-keyframes Moz {
     0% {
-      background-position: 0% 50%;
+      background-position: 0% 100%;
     }
     50% {
-      background-position: 100% 50%;
+      background-position: 100% 0%;
     }
     100% {
-      background-position: 0% 50%;
+      background-position: 0% 100%;
     }
   }
 
   @keyframes Standard {
     0% {
-      background-position: 0% 50%;
+      background-position: 0% 100%;
     }
     50% {
-      background-position: 100% 50%;
+      background-position: 100% 0%;
     }
     100% {
-      background-position: 0% 50%;
+      background-position: 0% 100%;
     }
   }
 `;

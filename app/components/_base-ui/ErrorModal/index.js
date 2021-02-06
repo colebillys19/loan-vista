@@ -14,6 +14,7 @@ import {
 
 const ErrorModal = ({ error }) => {
   const [open, setOpen] = useState(false);
+  const [opacity, setOpacity] = useState('0');
 
   useEffect(() => {
     if (error && error.length) {
@@ -23,14 +24,18 @@ const ErrorModal = ({ error }) => {
 
   const closeModal = () => setOpen(false);
 
+  const removeOpacity = () => setOpacity('1');
+
   return (
     <Modal
+      BackdropProps={{ transitionDuration: 200 }}
       onBackdropClick={closeModal}
       onEscapeKeyDown={closeModal}
+      onRendered={removeOpacity}
       open={open}
     >
       <FlexContainer>
-        <ContentContainer>
+        <ContentContainer opacity={opacity}>
           <StyledIconButton
             aria-label="delete"
             disableRipple
