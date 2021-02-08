@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 
 import Button from 'components/_base-ui/Button';
@@ -30,7 +31,9 @@ export const SidebarHeaderContainer = styled.section`
   width: 100%;
 `;
 
-export const StyledButton = styled(Button)`
+export const StyledButton = styled(({ isGhost, ...restProps }) => (
+  <Button {...restProps} />
+))`
   display: block;
   margin: 1.6rem auto 0;
   opacity: ${({ isGhost }) => (isGhost ? '0.5' : '1')};

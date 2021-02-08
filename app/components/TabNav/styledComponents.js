@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { Button, Tab, Tabs } from '@material-ui/core';
 
@@ -10,7 +11,9 @@ export const DashboardButtonContainer = styled.div`
   width: 36rem;
 `;
 
-export const StyledButton = styled(Button)`
+export const StyledButton = styled(({ isOpaque, ...restProps }) => (
+  <Button {...restProps} />
+))`
   color: ${textColorA};
   display: block;
   font-size: 2.2rem;

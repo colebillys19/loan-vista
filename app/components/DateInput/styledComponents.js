@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { KeyboardDatePicker } from '@material-ui/pickers';
 import { TextField } from '@material-ui/core';
@@ -23,7 +24,9 @@ export const DatePickerWrapper = styled.span`
 `;
 
 /* eslint-disable indent */
-export const StyledKeyboardDatePicker = styled(KeyboardDatePicker)`
+export const StyledKeyboardDatePicker = styled(({ isError, ...restProps }) => (
+  <KeyboardDatePicker {...restProps} />
+))`
   height: 2.8rem;
   width: 11.5rem;
   & .MuiInput-underline:after {

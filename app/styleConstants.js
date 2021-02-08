@@ -1,5 +1,5 @@
-export const appColorA = 'rgb(70, 99, 51)';
-export const appColorAOpaque = 'rgba(70, 99, 51, 0.5)';
+export const appColorA = 'rgb(110, 115, 59)';
+export const appColorAOpaque = 'rgba(110, 115, 59, 0.5)';
 export const appColorB = 'rgb(255, 191, 0)';
 export const appColorBOpaque = 'rgb(255, 191, 0, 0.5)';
 
