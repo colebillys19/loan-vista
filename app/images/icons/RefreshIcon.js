@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 import { SvgIcon } from '@material-ui/core';
 
-import { appColorA } from 'styleConstants';
+import { iconColorC } from 'styleConstants';
 
 const RefreshIcon = ({ color, size, ...restProps }) => (
   <SvgIcon
@@ -20,6 +20,6 @@ const RefreshIcon = ({ color, size, ...restProps }) => (
 
 RefreshIcon.propTypes = { color: T.string, size: T.string };
 
-RefreshIcon.defaultProps = { color: appColorA, size: '3rem' };
+RefreshIcon.defaultProps = { color: iconColorC, size: '3rem' };
 
 export default RefreshIcon;

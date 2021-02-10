@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 import { SvgIcon } from '@material-ui/core';
 
-import { appColorA } from 'styleConstants';
+import { iconColorC } from 'styleConstants';
 
 const SpinnerIcon = ({ color, size, ...restProps }) => (
   <SvgIcon
@@ -19,6 +19,6 @@ const SpinnerIcon = ({ color, size, ...restProps }) => (
 
 SpinnerIcon.propTypes = { color: T.string, size: T.string };
 
-SpinnerIcon.defaultProps = { color: appColorA, size: '3rem' };
+SpinnerIcon.defaultProps = { color: iconColorC, size: '3rem' };
 
 export default SpinnerIcon;

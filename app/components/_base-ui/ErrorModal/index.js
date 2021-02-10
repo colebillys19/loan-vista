@@ -4,7 +4,6 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 
 import { CloseIcon } from 'images/icons';
-import { textColorB } from 'styleConstants';
 import ErrorBlock from 'components/_base-ui/ErrorBlock';
 
 import {
@@ -43,7 +42,7 @@ const ErrorModal = ({ error }) => {
             disableRipple
             onClick={closeModal}
           >
-            <CloseIcon color={textColorB} size="2.5rem" />
+            <CloseIcon size="2.5rem" />
           </StyledIconButton>
           <ErrorBlock error={error} />
         </ContentContainer>

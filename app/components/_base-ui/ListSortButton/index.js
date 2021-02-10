@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { appColorA, textColorB } from 'styleConstants';
+import { iconColorC, textColorB } from 'styleConstants';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import Spinner from 'components/_base-ui/Spinner';
 
@@ -19,7 +19,7 @@ const ListSortButton = ({ isActive, isAscending, loading, onClick, text }) => (
       />
     }
     FallbackComponent={
-      <Spinner color={isActive ? appColorA : textColorB} size="1.7rem" />
+      <Spinner color={isActive ? iconColorC : textColorB} size="1.7rem" />
     }
     shouldRender={!loading}
   />

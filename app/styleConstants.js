@@ -1,7 +1,11 @@
-export const appColorA = 'rgb(110, 115, 59)';
-export const appColorAOpaque = 'rgba(110, 115, 59, 0.5)';
-export const appColorB = 'rgb(255, 191, 0)';
-export const appColorBOpaque = 'rgb(255, 191, 0, 0.5)';
+export const appColorA = 'rgb(80, 103, 55)';
+export const appColorAOpaque = 'rgba(80, 103, 55, 0.5)';
+export const appColorB = 'rgb(253, 211, 51)';
+export const appColorBOpaque = 'rgb(253, 211, 51, 0.5)';
+
+export const iconColorA = 'rgb(253, 211, 51)';
+export const iconColorB = 'rgba(80, 103, 55, 0.5)';
+export const iconColorC = 'rgb(80, 103, 55)';
 
 export const textColorA = 'rgb(17, 17, 17)';
 export const textColorB = 'rgb(136, 136, 136)';

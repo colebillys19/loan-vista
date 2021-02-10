@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 import { SvgIcon } from '@material-ui/core';
 
-import { appColorA, appColorB } from 'styleConstants';
+import { iconColorA, iconColorC } from 'styleConstants';
 
 const FolderIcon = ({ colorA, colorB, size, ...restProps }) => (
   <SvgIcon
@@ -23,8 +23,8 @@ const FolderIcon = ({ colorA, colorB, size, ...restProps }) => (
 FolderIcon.propTypes = { colorA: T.string, colorB: T.string, size: T.string };
 
 FolderIcon.defaultProps = {
-  colorA: appColorA,
-  colorB: appColorB,
+  colorA: iconColorC,
+  colorB: iconColorA,
   size: '3rem',
 };
 

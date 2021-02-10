@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 
 import { BulletIcon } from 'images/icons';
-import { appColorA, appColorB } from 'styleConstants';
+import { appColorB, iconColorA, iconColorC } from 'styleConstants';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import GradientBorder from 'components/_base-ui/GradientBorder';
 
@@ -23,7 +23,7 @@ const GradientCard = ({
 }) => {
   const FallbackIcon = (
     <BulletIcon
-      color={color === appColorB ? appColorA : appColorB}
+      color={color === appColorB ? iconColorC : iconColorA}
       size="1.8rem"
     />
   );
@@ -54,6 +54,6 @@ GradientCard.propTypes = {
   reduceBottomPadding: T.bool,
 };
 
-GradientCard.defaultProps = { color: appColorA, reduceBottomPadding: false };
+GradientCard.defaultProps = { color: iconColorC, reduceBottomPadding: false };
 
 export default GradientCard;

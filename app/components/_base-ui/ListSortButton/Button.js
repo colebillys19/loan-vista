@@ -2,13 +2,13 @@ import React from 'react';
 import T from 'prop-types';
 
 import { ArrowDownIcon, ArrowUpIcon } from 'images/icons';
-import { appColorA, textColorB } from 'styleConstants';
+import { iconColorC, textColorB } from 'styleConstants';
 
 import { StyledButton } from './styledComponents';
 
 const Button = ({ isActive, isAscending, onClick, text }) => {
   const iconProps = {
-    color: isActive ? appColorA : textColorB,
+    color: isActive ? iconColorC : textColorB,
     size: '0.8rem',
   };
   const Icon = isAscending ? ArrowUpIcon : ArrowDownIcon;

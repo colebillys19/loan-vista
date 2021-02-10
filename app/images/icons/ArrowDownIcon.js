@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 import { SvgIcon } from '@material-ui/core';
 
-import { appColorA } from 'styleConstants';
+import { iconColorC } from 'styleConstants';
 
 const ArrowDownIcon = ({ color, size, ...restProps }) => (
   <SvgIcon
@@ -17,6 +17,6 @@ const ArrowDownIcon = ({ color, size, ...restProps }) => (
 
 ArrowDownIcon.propTypes = { color: T.string, size: T.string };
 
-ArrowDownIcon.defaultProps = { color: appColorA, size: '3rem' };
+ArrowDownIcon.defaultProps = { color: iconColorC, size: '3rem' };
 
 export default ArrowDownIcon;

@@ -6,7 +6,6 @@
 import React, { Fragment } from 'react';
 import T from 'prop-types';
 
-import { appColorB, textColorA } from 'styleConstants';
 import { CashIcon } from 'images/icons';
 import { StyledTable, StyledTableBody } from 'components/_base-ui/ListTable';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
@@ -17,7 +16,7 @@ import ViewMoreBlock from 'components/_base-ui/ViewMoreBlock';
 
 import CustomTableRow from './CustomTableRow';
 
-const Icon = <CashIcon colorA={textColorA} colorB={appColorB} size="4rem" />;
+const Icon = <CashIcon size="4rem" />;
 
 const DashboardPayments = ({
   data,

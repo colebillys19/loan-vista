@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 import { SvgIcon } from '@material-ui/core';
 
-import { appColorA, appColorB } from 'styleConstants';
+import { iconColorA, iconColorC } from 'styleConstants';
 
 const WarningIcon = ({ colorA, colorB, size, ...restProps }) => (
   <SvgIcon
@@ -26,8 +26,8 @@ const WarningIcon = ({ colorA, colorB, size, ...restProps }) => (
 WarningIcon.propTypes = { colorA: T.string, colorB: T.string, size: T.string };
 
 WarningIcon.defaultProps = {
-  colorA: appColorA,
-  colorB: appColorB,
+  colorA: iconColorC,
+  colorB: iconColorA,
   size: '3rem',
 };
 

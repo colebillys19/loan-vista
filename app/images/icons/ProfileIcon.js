@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 import { SvgIcon } from '@material-ui/core';
 
-import { appColorA, appColorB } from 'styleConstants';
+import { iconColorA, iconColorC } from 'styleConstants';
 
 const ProfileIcon = ({ colorA, colorB, size, ...restProps }) => (
   <SvgIcon
@@ -23,8 +23,8 @@ const ProfileIcon = ({ colorA, colorB, size, ...restProps }) => (
 ProfileIcon.propTypes = { colorA: T.string, colorB: T.string, size: T.string };
 
 ProfileIcon.defaultProps = {
-  colorA: appColorA,
-  colorB: appColorB,
+  colorA: iconColorC,
+  colorB: iconColorA,
   size: '3rem',
 };
 
