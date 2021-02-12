@@ -10,8 +10,8 @@ export const handleMouseOut = (setFocusedSlice) => [
 export const handleMouseOver = (setFocusedSlice) => [
   { mutation: () => ({ active: true }), target: 'labels' },
   {
-    mutation: ({ datum: { x } }) => {
-      setFocusedSlice(x);
+    mutation: ({ datum: { _x } }) => {
+      setFocusedSlice(_x);
     },
   },
 ];

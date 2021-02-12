@@ -21,7 +21,7 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
     </button>
   </div>
   <div
-    class="MuiTabs-root styledComponents__StyledTabs-ift0se-3 gyTtfk"
+    class="MuiTabs-root styledComponents__StyledTabs-ift0se-3 btkJpE"
   >
     <div
       class="MuiTabs-scroller MuiTabs-fixed"

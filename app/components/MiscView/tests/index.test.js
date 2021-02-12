@@ -13,6 +13,7 @@ import {
 const mockProps = {
   error: false,
   loading: false,
+  loanNumber: '1234567890',
   miscEscrowData,
   miscHomeownersData,
   miscMortgageData,

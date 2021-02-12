@@ -4,7 +4,7 @@ import { Slice as VictorySlice } from 'victory-pie';
 
 const Slice = (props) => {
   const {
-    datum: { x },
+    datum: { _x },
     focusedSlice,
     style,
   } = props;
@@ -14,7 +14,7 @@ const Slice = (props) => {
       {...props}
       style={{
         ...style,
-        opacity: !!focusedSlice && focusedSlice !== x ? 0.3 : 1,
+        opacity: !!focusedSlice && focusedSlice !== _x ? 0.3 : 1,
       }}
     />
   );

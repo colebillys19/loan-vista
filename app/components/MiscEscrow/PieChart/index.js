@@ -2,20 +2,20 @@ import React, { useState } from 'react';
 import T from 'prop-types';
 import { VictoryPie } from 'victory-pie';
 
+import { PIE_MOCK_DATA } from '../tests/mockData';
 import { ChartWrapper } from '../styledComponents';
 import Slice from './Slice';
 import Tooltip from './Tooltip';
-import { colorScale, mockData } from './constants';
 import { handleMouseOut, handleMouseOver } from './helpers';
 
-const PieChart = ({ data }) => {
+const PieChart = ({ data, tooltipPlacement }) => {
   const [focusedSlice, setFocusedSlice] = useState('');
 
   return (
     <ChartWrapper>
-      <svg viewBox="0 0 220 220">
+      <svg viewBox="0 0 180 180">
         <VictoryPie
-          colorScale={colorScale}
+          colorScale={['#dc3644', '#28a744', '#007bff']}
           data={data}
           dataComponent={<Slice focusedSlice={focusedSlice} />}
           events={[
@@ -27,21 +27,30 @@ const PieChart = ({ data }) => {
               target: 'data',
             },
           ]}
-          height={220}
-          innerRadius={55}
-          labelComponent={<Tooltip focusedSlice={focusedSlice} />}
-          labelRadius={120}
+          height={180}
+          innerRadius={45}
+          labelComponent={
+            <Tooltip
+              focusedSlice={focusedSlice}
+              tooltipPlacement={tooltipPlacement}
+            />
+          }
           padding={0}
           standalone={false}
-          width={220}
+          width={180}
+          x="name"
+          y="value"
         />
       </svg>
     </ChartWrapper>
   );
 };
 
-PieChart.propTypes = { data: T.arrayOf(T.object) };
+PieChart.propTypes = {
+  data: T.arrayOf(T.object),
+  tooltipPlacement: T.string.isRequired,
+};
 
-PieChart.defaultProps = { data: mockData };
+PieChart.defaultProps = { data: PIE_MOCK_DATA };
 
 export default PieChart;

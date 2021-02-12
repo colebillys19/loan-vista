@@ -14,3 +14,9 @@ export const MOCK_DATA = [
     ],
   },
 ];
+
+export const PIE_MOCK_DATA = [
+  { name: 'County/City Tax', value: 100 },
+  { name: 'Earthquake Insurance', value: 100 },
+  { name: 'Mortgage Insurance (Allstate)', value: 100 },
+];

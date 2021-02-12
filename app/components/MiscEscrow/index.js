@@ -6,12 +6,14 @@
 import React from 'react';
 import T from 'prop-types';
 
-// import { appColorB } from 'styleConstants';
 import GradientCard from 'components/_base-ui/GradientCard';
 
 import PieChart from './PieChart';
 import {
   ChartContainer,
+  ChartDivider,
+  ChartHeading,
+  ChartsSection,
   ListsContainer,
   StyledTwoColumnList,
 } from './styledComponents';
@@ -29,9 +31,17 @@ const MiscEscrow = ({ data, renderLoading }) => (
         />
       ))}
     </ListsContainer>
-    <ChartContainer>
-      <PieChart />
-    </ChartContainer>
+    <ChartsSection>
+      <ChartContainer>
+        <ChartHeading>Current Escrow Breakdown</ChartHeading>
+        <PieChart tooltipPlacement="right" />
+      </ChartContainer>
+      <ChartDivider />
+      <ChartContainer>
+        <ChartHeading>Effective Escrow Breakdown</ChartHeading>
+        <PieChart tooltipPlacement="left" />
+      </ChartContainer>
+    </ChartsSection>
   </GradientCard>
 );
 
