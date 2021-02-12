@@ -9,7 +9,12 @@ import T from 'prop-types';
 // import { appColorB } from 'styleConstants';
 import GradientCard from 'components/_base-ui/GradientCard';
 
-import { ListsContainer, StyledTwoColumnList } from './styledComponents';
+import PieChart from './PieChart';
+import {
+  ChartContainer,
+  ListsContainer,
+  StyledTwoColumnList,
+} from './styledComponents';
 
 /* eslint-disable react/no-array-index-key */
 const MiscEscrow = ({ data, renderLoading }) => (
@@ -24,6 +29,9 @@ const MiscEscrow = ({ data, renderLoading }) => (
         />
       ))}
     </ListsContainer>
+    <ChartContainer>
+      <PieChart />
+    </ChartContainer>
   </GradientCard>
 );
 
