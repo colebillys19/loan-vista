@@ -6,11 +6,11 @@ import {
   getDashboardBorrowerData,
   getDashboardListsData,
   getDashboardLoanData,
+  getEscrowEscrow,
+  getEscrowHomeowners,
+  getEscrowMortgage,
+  getEscrowTaxes,
   getLoanSummary,
-  getMiscEscrow,
-  getMiscHomeowners,
-  getMiscMortgage,
-  getMiscTaxes,
   getPaymentSummary,
   getServiceSummary,
   getSidebarHeaderData,
@@ -58,43 +58,43 @@ const makeSelectDashboardLoanData = () =>
   );
 
 /**
- * makeSelectMiscEscrow
+ * makeSelectEscrowEscrow
  * @description ...
  */
-const makeSelectMiscEscrow = () =>
+const makeSelectEscrowEscrow = () =>
   createSelector(
     makeSelectMain('loanData'),
-    ({ escrow }) => getMiscEscrow(escrow),
+    ({ escrow }) => getEscrowEscrow(escrow),
   );
 
 /**
- * makeSelectMiscHomeowners
+ * makeSelectEscrowHomeowners
  * @description ...
  */
-const makeSelectMiscHomeowners = () =>
+const makeSelectEscrowHomeowners = () =>
   createSelector(
     makeSelectMain('loanData'),
-    ({ homeownersHazard }) => getMiscHomeowners(homeownersHazard),
+    ({ homeownersHazard }) => getEscrowHomeowners(homeownersHazard),
   );
 
 /**
- * makeSelectMiscMortgage
+ * makeSelectEscrowMortgage
  * @description ...
  */
-const makeSelectMiscMortgage = () =>
+const makeSelectEscrowMortgage = () =>
   createSelector(
     makeSelectMain('loanData'),
-    ({ mortgage }) => getMiscMortgage(mortgage),
+    ({ mortgage }) => getEscrowMortgage(mortgage),
   );
 
 /**
- * makeSelectMiscTaxes
+ * makeSelectEscrowTaxes
  * @description ...
  */
-const makeSelectMiscTaxes = () =>
+const makeSelectEscrowTaxes = () =>
   createSelector(
     makeSelectMain('loanData'),
-    ({ taxes }) => getMiscTaxes(taxes),
+    ({ taxes }) => getEscrowTaxes(taxes),
   );
 
 /**
@@ -133,10 +133,10 @@ export {
   makeSelectDashboardBorrowerData,
   makeSelectDashboardListsData,
   makeSelectDashboardLoanData,
-  makeSelectMiscEscrow,
-  makeSelectMiscHomeowners,
-  makeSelectMiscMortgage,
-  makeSelectMiscTaxes,
+  makeSelectEscrowEscrow,
+  makeSelectEscrowHomeowners,
+  makeSelectEscrowMortgage,
+  makeSelectEscrowTaxes,
   makeSelectSidebarHeaderData,
   makeSelectSidebarSummariesData,
   selectMainDomain,

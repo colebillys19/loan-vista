@@ -32,7 +32,7 @@ export const getHealthColor = (health) => {
  * @description: ...
  */
 export const isValidRoute = (pathname) =>
-  ['/', '/calls', '/documents', '/payments', '/misc'].includes(pathname);
+  ['/', '/calls', '/documents', '/payments', '/escrow'].includes(pathname);
 
 /**
  * toTitleCase

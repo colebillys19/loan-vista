@@ -1,28 +1,28 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import MiscView from '../index';
+import EscrowView from '../index';
 
 import {
-  MOCK_ESCROW_DATA as miscEscrowData,
-  MOCK_HOMEOWNERS_DATA as miscHomeownersData,
-  MOCK_MORTGAGE_DATA as miscMortgageData,
-  MOCK_TAXES_DATA as miscTaxesData,
+  MOCK_ESCROW_DATA as escrowEscrowData,
+  MOCK_HOMEOWNERS_DATA as escrowHomeownersData,
+  MOCK_MORTGAGE_DATA as escrowMortgageData,
+  MOCK_TAXES_DATA as escrowTaxesData,
 } from './mockData';
 
 const mockProps = {
   error: false,
+  escrowEscrowData,
+  escrowHomeownersData,
+  escrowMortgageData,
+  escrowTaxesData,
   loading: false,
   loanNumber: '1234567890',
-  miscEscrowData,
-  miscHomeownersData,
-  miscMortgageData,
-  miscTaxesData,
 };
 
-const Component = <MiscView {...mockProps} />;
+const Component = <EscrowView {...mockProps} />;
 
-describe('<MiscView />', () => {
+describe('<EscrowView />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

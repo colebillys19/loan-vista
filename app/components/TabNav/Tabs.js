@@ -24,10 +24,10 @@ const Tabs = ({ handleChange, value }) => (
       label="Payments"
     />
     <StyledTab
-      aria-controls="misc-view"
+      aria-controls="escrow-view"
       disableRipple
-      id="misc-tab"
-      label="Misc"
+      id="escrow-tab"
+      label="Escrow"
     />
   </StyledTabs>
 );

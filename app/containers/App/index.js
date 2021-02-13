@@ -21,7 +21,7 @@ import Payments from 'containers/Payments';
 import DashboardView from 'components/DashboardView';
 import AppHeader from 'components/AppHeader';
 import MainContainer from 'components/MainContainer';
-import MiscView from 'components/MiscView';
+import EscrowView from 'components/EscrowView';
 import NotFoundView from 'components/NotFoundView';
 import SidebarView from 'components/SidebarView';
 import TabNav from 'components/TabNav';
@@ -38,12 +38,12 @@ const App = ({ dispatchNavigation, pathname }) => (
         dashboardListsData,
         dashboardLoanData,
         error,
+        escrowEscrowData,
+        escrowHomeownersData,
+        escrowMortgageData,
+        escrowTaxesData,
         loading,
         loanNumber,
-        miscEscrowData,
-        miscHomeownersData,
-        miscMortgageData,
-        miscTaxesData,
         sidebarHeaderData,
         sidebarSummariesData,
       }) => (
@@ -77,16 +77,16 @@ const App = ({ dispatchNavigation, pathname }) => (
             <Route component={Payments} exact path="/payments" />
             <Route
               exact
-              path="/misc"
+              path="/escrow"
               render={() => (
-                <MiscView
+                <EscrowView
                   error={error}
+                  escrowEscrowData={escrowEscrowData}
+                  escrowHomeownersData={escrowHomeownersData}
+                  escrowMortgageData={escrowMortgageData}
+                  escrowTaxesData={escrowTaxesData}
                   loading={loading}
                   loanNumber={loanNumber}
-                  miscEscrowData={miscEscrowData}
-                  miscHomeownersData={miscHomeownersData}
-                  miscMortgageData={miscMortgageData}
-                  miscTaxesData={miscTaxesData}
                 />
               )}
             />

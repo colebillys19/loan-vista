@@ -1,5 +1,5 @@
 /**
- * MiscTaxes
+ * EscrowTaxes
  * @description ...
  */
 
@@ -21,7 +21,7 @@ import NoDataBlock from 'components/_base-ui/NoDataBlock';
 
 import { TableHeadRow } from './styledComponents';
 
-const MiscTaxes = ({ data, headers, renderLoading }) => (
+const EscrowTaxes = ({ data, headers, renderLoading }) => (
   <GradientCard color={appColorB} heading="Mortgage Insurance">
     <ConditionalRender
       Component={<NoDataBlock />}
@@ -52,14 +52,14 @@ const MiscTaxes = ({ data, headers, renderLoading }) => (
   </GradientCard>
 );
 
-MiscTaxes.propTypes = {
+EscrowTaxes.propTypes = {
   data: T.array,
   headers: T.array,
   renderLoading: T.bool.isRequired,
 };
 
-MiscTaxes.defaultProps = {
+EscrowTaxes.defaultProps = {
   headers: ['Company', 'Insurance ID', 'Premium Amount', 'Premium Due'],
 };
 
-export default MiscTaxes;
+export default EscrowTaxes;

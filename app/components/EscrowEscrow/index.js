@@ -1,5 +1,5 @@
 /**
- * MiscEscrow
+ * EscrowEscrow
  * @description ...
  */
 
@@ -19,7 +19,7 @@ import {
 } from './styledComponents';
 
 /* eslint-disable react/no-array-index-key */
-const MiscEscrow = ({ data, renderLoading }) => (
+const EscrowEscrow = ({ data, renderLoading }) => (
   <GradientCard heading="Escrow">
     <ListsContainer>
       {data.map((listDataObj, i) => (
@@ -45,9 +45,9 @@ const MiscEscrow = ({ data, renderLoading }) => (
   </GradientCard>
 );
 
-MiscEscrow.propTypes = {
+EscrowEscrow.propTypes = {
   data: T.arrayOf(T.object).isRequired,
   renderLoading: T.bool.isRequired,
 };
 
-export default MiscEscrow;
+export default EscrowEscrow;

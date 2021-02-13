@@ -23,7 +23,7 @@ export const getIcon = (pathname, size) => {
     case '/payments':
       return <CashIcon size={size} />;
 
-    case '/misc':
+    case '/escrow':
       return <FolderIcon size={size} />;
 
     default:
@@ -42,8 +42,8 @@ export const getTabName = (pathname) => {
     case '/payments':
       return 'Payments';
 
-    case '/misc':
-      return 'Misc';
+    case '/escrow':
+      return 'Escrow';
 
     default:
       return '-';

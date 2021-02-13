@@ -2,10 +2,10 @@ import makeSelectMain, {
   makeSelectDashboardBorrowerData,
   makeSelectDashboardListsData,
   makeSelectDashboardLoanData,
-  makeSelectMiscEscrow,
-  makeSelectMiscHomeowners,
-  makeSelectMiscMortgage,
-  makeSelectMiscTaxes,
+  makeSelectEscrowEscrow,
+  makeSelectEscrowHomeowners,
+  makeSelectEscrowMortgage,
+  makeSelectEscrowTaxes,
   makeSelectSidebarHeaderData,
   makeSelectSidebarSummariesData,
   selectMainDomain,
@@ -174,8 +174,8 @@ describe('makeSelectDashboardLoanData', () => {
   });
 });
 
-describe('makeSelectMiscEscrow', () => {
-  const miscEscrowDataSelector = makeSelectMiscEscrow();
+describe('makeSelectEscrowEscrow', () => {
+  const escrowEscrowDataSelector = makeSelectEscrowEscrow();
   const mockedState = { main: MOCK_DATA };
   const expected = [
     {
@@ -194,13 +194,13 @@ describe('makeSelectMiscEscrow', () => {
     },
   ];
 
-  it('selects the misc escrow data', () => {
-    expect(miscEscrowDataSelector(mockedState)).toEqual(expected);
+  it('selects the escrow escrow data', () => {
+    expect(escrowEscrowDataSelector(mockedState)).toEqual(expected);
   });
 });
 
-describe('makeSelectMiscHomeowners', () => {
-  const miscHomeownersDataSelector = makeSelectMiscHomeowners();
+describe('makeSelectEscrowHomeowners', () => {
+  const escrowHomeownersDataSelector = makeSelectEscrowHomeowners();
   const mockedState = { main: MOCK_DATA };
   const expected = [
     {
@@ -213,13 +213,13 @@ describe('makeSelectMiscHomeowners', () => {
     },
   ];
 
-  it('selects the misc homeowners data', () => {
-    expect(miscHomeownersDataSelector(mockedState)).toEqual(expected);
+  it('selects the escrow homeowners data', () => {
+    expect(escrowHomeownersDataSelector(mockedState)).toEqual(expected);
   });
 });
 
-describe('makeSelectMiscMortgage', () => {
-  const miscMortgageDataSelector = makeSelectMiscMortgage();
+describe('makeSelectEscrowMortgage', () => {
+  const escrowMortgageDataSelector = makeSelectEscrowMortgage();
   const mockedState = { main: MOCK_DATA };
   const expected = [
     {
@@ -231,13 +231,13 @@ describe('makeSelectMiscMortgage', () => {
     },
   ];
 
-  it('selects the misc mortgage data', () => {
-    expect(miscMortgageDataSelector(mockedState)).toEqual(expected);
+  it('selects the escrow mortgage data', () => {
+    expect(escrowMortgageDataSelector(mockedState)).toEqual(expected);
   });
 });
 
-describe('makeSelectMiscTaxes', () => {
-  const miscTaxesDataSelector = makeSelectMiscTaxes();
+describe('makeSelectEscrowTaxes', () => {
+  const escrowTaxesDataSelector = makeSelectEscrowTaxes();
   const mockedState = { main: MOCK_DATA };
   const expected = [
     {
@@ -250,8 +250,8 @@ describe('makeSelectMiscTaxes', () => {
     },
   ];
 
-  it('selects the misc taxes data', () => {
-    expect(miscTaxesDataSelector(mockedState)).toEqual(expected);
+  it('selects the escrow taxes data', () => {
+    expect(escrowTaxesDataSelector(mockedState)).toEqual(expected);
   });
 });
 

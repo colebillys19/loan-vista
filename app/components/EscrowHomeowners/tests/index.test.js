@@ -1,14 +1,14 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import MiscEscrow from '../index';
+import EscrowHomeowners from '../index';
 import { MOCK_DATA } from './mockData';
 
 const mockProps = { data: MOCK_DATA, renderLoading: false };
 
-const Component = <MiscEscrow {...mockProps} />;
+const Component = <EscrowHomeowners {...mockProps} />;
 
-describe('<MiscEscrow />', () => {
+describe('<EscrowHomeowners />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

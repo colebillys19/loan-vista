@@ -111,10 +111,10 @@ export const getLoanSummary = (loanSummaryData) => {
 };
 
 /**
- * getMiscEscrow
+ * getEscrowEscrow
  * @description: ...
  */
-export const getMiscEscrow = ({
+export const getEscrowEscrow = ({
   analysisDate,
   balance,
   currentDueDate,
@@ -157,10 +157,10 @@ export const getMiscEscrow = ({
 ];
 
 /**
- * getMiscHomeowners
+ * getEscrowHomeowners
  * @description: ...
  */
-export const getMiscHomeowners = (homeownersData) =>
+export const getEscrowHomeowners = (homeownersData) =>
   homeownersData.map(
     ({
       annualPremium,
@@ -180,10 +180,10 @@ export const getMiscHomeowners = (homeownersData) =>
   );
 
 /**
- * getMiscMortgage
+ * getEscrowMortgage
  * @description: ...
  */
-export const getMiscMortgage = (mortgageData) =>
+export const getEscrowMortgage = (mortgageData) =>
   mortgageData.map(({ amount, company, due, id, insuranceId }) => ({
     Company: dataFormatter(company, 'stringTitleCase'),
     id,
@@ -193,10 +193,10 @@ export const getMiscMortgage = (mortgageData) =>
   }));
 
 /**
- * getMiscTaxes
+ * getEscrowTaxes
  * @description: ...
  */
-export const getMiscTaxes = (taxesData) =>
+export const getEscrowTaxes = (taxesData) =>
   taxesData.map(({ amount, due, id, paidTo, taxId, type }) => ({
     'Expected Amount': dataFormatter(amount, 'currency'),
     id,
