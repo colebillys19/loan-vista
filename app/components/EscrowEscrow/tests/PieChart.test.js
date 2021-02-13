@@ -2,9 +2,9 @@ import React from 'react';
 import { render } from 'react-testing-library';
 
 import PieChart from '../PieChart';
-import { PIE_MOCK_DATA } from './mockData';
+import { CURRENT_PIE_MOCK_DATA } from './mockData';
 
-const mockProps = { data: PIE_MOCK_DATA, tooltipPlacement: 'left' };
+const mockProps = { data: CURRENT_PIE_MOCK_DATA, tooltipPlacement: 'left' };
 
 const Component = <PieChart {...mockProps} />;
 

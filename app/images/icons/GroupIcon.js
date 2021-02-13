@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 import { SvgIcon } from '@material-ui/core';
 
-import { iconColorA, iconColorC } from 'styleConstants';
+import { iconColorA, textColorA } from 'styleConstants';
 
 const GroupIcon = ({ colorA, colorB, size, ...restProps }) => (
   <SvgIcon
@@ -27,7 +27,7 @@ GroupIcon.propTypes = { colorA: T.string, colorB: T.string, size: T.string };
 
 GroupIcon.defaultProps = {
   colorA: iconColorA,
-  colorB: iconColorC,
+  colorB: textColorA,
   size: '3rem',
 };
 

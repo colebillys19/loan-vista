@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import T from 'prop-types';
 
+import { convertNumToCurrency } from 'utils/globalHelpers';
+
 import {
   TooltipMetric as Metric,
   StyledTooltip,
@@ -14,7 +16,7 @@ const Tooltip = ({ active, datum: { name, value }, tooltipPlacement }) => (
     title={
       <Fragment>
         <Metric>{name}</Metric>
-        <Value>{value}</Value>
+        <Value>{convertNumToCurrency(value)}</Value>
       </Fragment>
     }
     TransitionProps={{ timeout: 0 }}

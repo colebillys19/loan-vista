@@ -1,3 +1,35 @@
+export const CURRENT_PIE_MOCK_DATA = [
+  { name: 'County/City Tax', value: 1211.31 },
+  { name: 'Other Tax', value: 60 },
+  { name: 'County Tax', value: 150.45 },
+  { name: 'County Tax', value: 85.12 },
+  { name: 'City Tax', value: 795.5 },
+  { name: 'Hazard Insurance', value: 67.55 },
+  { name: 'Contents/NACCA Loans', value: 49.5 },
+  { name: 'Earthquake Insurance', value: 0 },
+  { name: 'Liability/Windstorm/Hurricane Insurance', value: 0 },
+  { name: 'Flood Insurance', value: 85 },
+  { name: 'Mortgage Insurance (Geico)', value: 690 },
+  { name: 'Mortgage Insurance', value: 825.5 },
+  { name: 'Mortgage Insurance (Allstate)', value: 1150 },
+];
+
+export const EFFECTIVE_PIE_MOCK_DATA = [
+  { name: 'County/City Tax', value: 997.23 },
+  { name: 'Other Tax', value: 45.3 },
+  { name: 'County Tax', value: 179.56 },
+  { name: 'County Tax', value: 79.2 },
+  { name: 'City Tax', value: 821.44 },
+  { name: 'Hazard Insurance', value: 61.55 },
+  { name: 'Contents/NACCA Loans', value: 62.81 },
+  { name: 'Earthquake Insurance', value: 0 },
+  { name: 'Liability/Windstorm/Hurricane Insurance', value: 0 },
+  { name: 'Flood Insurance', value: 82.82 },
+  { name: 'Mortgage Insurance (Geico)', value: 717.77 },
+  { name: 'Mortgage Insurance', value: 808.33 },
+  { name: 'Mortgage Insurance (Allstate)', value: 1192 },
+];
+
 export const MOCK_DATA = [
   {
     listData: [
@@ -13,10 +45,4 @@ export const MOCK_DATA = [
       { label: 'Effective Escrow Payment', value: '$654.32' },
     ],
   },
-];
-
-export const PIE_MOCK_DATA = [
-  { name: 'County/City Tax', value: 100 },
-  { name: 'Earthquake Insurance', value: 100 },
-  { name: 'Mortgage Insurance (Allstate)', value: 100 },
 ];

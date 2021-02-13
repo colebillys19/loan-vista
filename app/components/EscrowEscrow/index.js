@@ -17,6 +17,10 @@ import {
   ListsContainer,
   StyledTwoColumnList,
 } from './styledComponents';
+import {
+  CURRENT_PIE_MOCK_DATA,
+  EFFECTIVE_PIE_MOCK_DATA,
+} from './tests/mockData';
 
 /* eslint-disable react/no-array-index-key */
 const EscrowEscrow = ({ data, renderLoading }) => (
@@ -34,12 +38,12 @@ const EscrowEscrow = ({ data, renderLoading }) => (
     <ChartsSection>
       <ChartContainer>
         <ChartHeading>Current Escrow Breakdown</ChartHeading>
-        <PieChart tooltipPlacement="right" />
+        <PieChart data={CURRENT_PIE_MOCK_DATA} tooltipPlacement="right" />
       </ChartContainer>
       <ChartDivider />
       <ChartContainer>
         <ChartHeading>Effective Escrow Breakdown</ChartHeading>
-        <PieChart tooltipPlacement="left" />
+        <PieChart data={EFFECTIVE_PIE_MOCK_DATA} tooltipPlacement="left" />
       </ChartContainer>
     </ChartsSection>
   </GradientCard>

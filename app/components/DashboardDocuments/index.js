@@ -6,7 +6,7 @@
 import React, { Fragment } from 'react';
 import T from 'prop-types';
 
-import { appColorB, iconColorB } from 'styleConstants';
+import { appColorB, iconColorB, textColorA } from 'styleConstants';
 import { MailIcon } from 'images/icons';
 import { StyledTable, StyledTableBody } from 'components/_base-ui/ListTable';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
@@ -17,7 +17,7 @@ import ViewMoreBlock from 'components/_base-ui/ViewMoreBlock';
 
 import CustomTableRow from './CustomTableRow';
 
-const Icon = <MailIcon colorA={iconColorB} size="4rem" />;
+const Icon = <MailIcon colorA={iconColorB} colorB={textColorA} size="4rem" />;
 
 const DashboardDocuments = ({
   data,

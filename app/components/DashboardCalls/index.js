@@ -8,6 +8,7 @@ import T from 'prop-types';
 
 import { CallIcon } from 'images/icons';
 import { StyledTable, StyledTableBody } from 'components/_base-ui/ListTable';
+import { textColorA } from 'styleConstants';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import GradientCard from 'components/_base-ui/GradientCard';
 import ListSkeleton from 'components/_base-ui/ListSkeleton';
@@ -16,7 +17,7 @@ import ViewMoreBlock from 'components/_base-ui/ViewMoreBlock';
 
 import CustomTableRow from './CustomTableRow';
 
-const Icon = <CallIcon size="4rem" />;
+const Icon = <CallIcon colorB={textColorA} size="4rem" />;
 
 const DashboardCalls = ({
   data,
