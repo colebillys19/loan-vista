@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MiscView /> Should render and match the snapshot 1`] = `
+exports[`<EscrowView /> Should render and match the snapshot 1`] = `
 <section
-  aria-labelledby="misc-tab"
+  aria-labelledby="escrow-tab"
   class="TabContainer-sc-1us62xt-0 fqhtXT"
-  id="misc-view"
+  id="escrow-view"
 >
   <section
     class="styledComponents__CardContainer-sc-1glo3a7-0 hVJZWB"
@@ -40,148 +40,532 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
       />
     </div>
     <div
-      class="styledComponents__ListsContainer-n5d7a5-5 dCUGIv"
+      class="styledComponents__ListsContainer-vwc47z-1 gQnTSI"
     >
       <div
-        class="styledComponents__StyledTwoColumnList-n5d7a5-6 gwEUKF"
+        class="styledComponents__StyledTwoColumnList-vwc47z-2 jesBqZ"
       >
         <div
-          class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+          class="styledComponents__Row-oikso6-2 xZptA"
         >
-          <div
-            class="styledComponents__RowStripe-sc-12zmidq-1 kfiWNi"
-          />
+          <span
+            class="styledComponents__Label-oikso6-0 gAQhRb"
+          >
+            Current Due Date
+          </span>
+          <span
+            class="styledComponents__Value-oikso6-3 eccUXR"
+          >
+            05/06/2021
+          </span>
         </div>
         <div
-          class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+          class="styledComponents__Row-oikso6-2 xZptA"
         >
-          <div
-            class="styledComponents__RowStripe-sc-12zmidq-1 kfiWNi"
-          />
+          <span
+            class="styledComponents__Label-oikso6-0 gAQhRb"
+          >
+            Current Escrow Payment
+          </span>
+          <span
+            class="styledComponents__Value-oikso6-3 eccUXR"
+          >
+            $123.45
+          </span>
         </div>
         <div
-          class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+          class="styledComponents__Row-oikso6-2 xZptA"
         >
-          <div
-            class="styledComponents__RowStripe-sc-12zmidq-1 kfiWNi"
-          />
+          <span
+            class="styledComponents__Label-oikso6-0 gAQhRb"
+          >
+            Current Escrow Balance
+          </span>
+          <span
+            class="styledComponents__Value-oikso6-3 eccUXR"
+          >
+            $876.54
+          </span>
+        </div>
+      </div>
+      <div
+        class="styledComponents__StyledTwoColumnList-vwc47z-2 jesBqZ"
+      >
+        <div
+          class="styledComponents__Row-oikso6-2 xZptA"
+        >
+          <span
+            class="styledComponents__Label-oikso6-0 gAQhRb"
+          >
+            Last/Next Escrow Analysis Date
+          </span>
+          <span
+            class="styledComponents__Value-oikso6-3 eccUXR"
+          >
+            May 2022
+          </span>
+        </div>
+        <div
+          class="styledComponents__Row-oikso6-2 xZptA"
+        >
+          <span
+            class="styledComponents__Label-oikso6-0 gAQhRb"
+          >
+            Effective Due Date
+          </span>
+          <span
+            class="styledComponents__Value-oikso6-3 eccUXR"
+          >
+            02/20
+          </span>
+        </div>
+        <div
+          class="styledComponents__Row-oikso6-2 xZptA"
+        >
+          <span
+            class="styledComponents__Label-oikso6-0 gAQhRb"
+          >
+            Effective Escrow Payment
+          </span>
+          <span
+            class="styledComponents__Value-oikso6-3 eccUXR"
+          >
+            $654.32
+          </span>
         </div>
       </div>
     </div>
     <div
-      class="styledComponents__ChartsSection-n5d7a5-3 csNcFo"
+      class="styledComponents__ChartsSection-vwc47z-0 hKeGca"
     >
       <div
-        class="styledComponents__ChartContainer-n5d7a5-0 gDgvbk"
+        class="styledComponents__ChartsSubsection-sc-1b51i62-3 eYGgFD"
       >
         <h3
-          class="styledComponents__ChartHeading-n5d7a5-2 PVdSL"
+          class="styledComponents__ChartHeading-sc-1b51i62-2 gYYKse"
         >
           Current Escrow Breakdown
         </h3>
         <div
-          class="styledComponents__ChartWrapper-n5d7a5-4 eNPnLn"
+          class="styledComponents__ChartContainer-sc-1b51i62-1 bFJUam"
         >
-          <svg
-            viewBox="0 0 180 180"
+          <div
+            class="styledComponents__TempWrapper-sc-1b51i62-0 diksmK"
           >
-            <g>
-              <path
-                d="M5.5109105961630896e-15,-90A90,90,0,0,1,77.94228634059948,44.999999999999986L38.97114317029974,22.499999999999993A45,45,0,0,0,2.7554552980815448e-15,-45Z"
-                role="presentation"
-                shape-rendering="auto"
-                style="fill: #dc3644; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
-                transform="translate(90, 90)"
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              style="height: 8.4rem; width: 8.4rem;"
+              viewBox="0 0 84 84"
+            >
+              <circle
+                fill="#ffffff"
+                r="50%"
+                transform="translate(42, 42)"
               />
-              <path
-                d="M77.94228634059948,44.999999999999986A90,90,0,0,1,-77.94228634059947,45.00000000000003L-38.97114317029973,22.500000000000014A45,45,0,0,0,38.97114317029974,22.499999999999993Z"
-                role="presentation"
-                shape-rendering="auto"
-                style="fill: #28a744; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
-                transform="translate(90, 90)"
-              />
-              <path
-                d="M-77.94228634059947,45.00000000000003A90,90,0,0,1,-1.6532731788489267e-14,-90L-8.266365894244634e-15,-45A45,45,0,0,0,-38.97114317029973,22.500000000000014Z"
-                role="presentation"
-                shape-rendering="auto"
-                style="fill: #007bff; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
-                transform="translate(90, 90)"
-              />
+            </svg>
+          </div>
+          <div
+            class="styledComponents__ChartWrapper-sc-1b51i62-4 JknIf"
+          >
+            <div
+              class="VictoryContainer"
+              style="height: 100%; width: 100%; pointer-events: none; position: relative;"
+            >
               <svg
-                class=""
-                x="180"
-                y="90"
-              />
-              <svg
-                class=""
-                x="180"
-                y="90"
-              />
-              <svg
-                class=""
-                x="180"
-                y="90"
-              />
-            </g>
-          </svg>
+                height="180"
+                role="img"
+                style="pointer-events: all; width: 100%; height: 100%;"
+                viewBox="0 0 180 180"
+                width="180"
+              >
+                <g>
+                  <path
+                    d="M5.5109105961630896e-15,-90A90,90,0,0,1,89.56240885808128,-8.864249519157482L44.78120442904064,-4.432124759578741A45,45,0,0,0,2.7554552980815448e-15,-45Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: orange; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M89.56240885808128,-8.864249519157482A90,90,0,0,1,89.97020638201599,-2.3155914098667667L44.985103191007994,-1.1577957049333834A45,45,0,0,0,44.78120442904064,-4.432124759578741Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: blue; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M89.97020638201599,-2.3155914098667667A90,90,0,0,1,88.89145010667933,14.082261818747L44.445725053339665,7.0411309093735A45,45,0,0,0,44.985103191007994,-1.1577957049333834Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: yellow; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M88.89145010667933,14.082261818747A90,90,0,0,1,86.96202769854912,23.18632654296011L43.48101384927456,11.593163271480055A45,45,0,0,0,44.445725053339665,7.0411309093735Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: indigo; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M86.96202769854912,23.18632654296011A90,90,0,0,1,30.30509703452871,84.74432779677824L15.152548517264355,42.37216389838912A45,45,0,0,0,43.48101384927456,11.593163271480055Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: red; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M30.30509703452871,84.74432779677824A90,90,0,0,1,23.2536955504716,86.9440374220451L11.6268477752358,43.47201871102255A45,45,0,0,0,15.152548517264355,42.37216389838912Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: violet; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M23.2536955504716,86.9440374220451A90,90,0,0,1,17.98431996315752,88.18482996220366L8.99215998157876,44.09241498110183A45,45,0,0,0,11.6268477752358,43.47201871102255Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: green; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M17.98431996315752,88.18482996220366L8.99215998157876,44.09241498110183Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: orange; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M17.98431996315752,88.18482996220366L8.99215998157876,44.09241498110183Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: blue; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M17.98431996315752,88.18482996220366A90,90,0,0,1,8.794856182890499,89.56924977201871L4.397428091445249,44.784624886009354A45,45,0,0,0,8.99215998157876,44.09241498110183Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: yellow; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M8.794856182890499,89.56924977201871A90,90,0,0,1,-60.732605466694835,66.41950491555015L-30.366302733347418,33.209752457775075A45,45,0,0,0,4.397428091445249,44.784624886009354Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: indigo; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M-60.732605466694835,66.41950491555015A90,90,0,0,1,-88.6540141634796,-15.506958847612843L-44.3270070817398,-7.7534794238064215A45,45,0,0,0,-30.366302733347418,33.209752457775075Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: red; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M-88.6540141634796,-15.506958847612843A90,90,0,0,1,-9.646878956150053e-14,-90L-4.8234394780750264e-14,-45A45,45,0,0,0,-44.3270070817398,-7.7534794238064215Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: violet; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <svg
+                    class=""
+                    x="180"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="180"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="180"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="180"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="180"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="180"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="180"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="180"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="180"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="180"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="180"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="180"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="180"
+                    y="90"
+                  />
+                </g>
+              </svg>
+              <div
+                style="z-index: 99; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"
+              >
+                <svg
+                  height="180"
+                  style="overflow: visible; width: 100%; height: 100%;"
+                  viewBox="0 0 180 180"
+                  width="180"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div
-        class="styledComponents__ChartDivider-n5d7a5-1 hSRIZR"
-      />
-      <div
-        class="styledComponents__ChartContainer-n5d7a5-0 gDgvbk"
+        class="styledComponents__ChartsSubsection-sc-1b51i62-3 eYGgFD"
       >
         <h3
-          class="styledComponents__ChartHeading-n5d7a5-2 PVdSL"
+          class="styledComponents__ChartHeading-sc-1b51i62-2 gYYKse"
         >
           Effective Escrow Breakdown
         </h3>
         <div
-          class="styledComponents__ChartWrapper-n5d7a5-4 eNPnLn"
+          class="styledComponents__ChartContainer-sc-1b51i62-1 bFJUam"
         >
-          <svg
-            viewBox="0 0 180 180"
+          <div
+            class="styledComponents__TempWrapper-sc-1b51i62-0 diksmK"
           >
-            <g>
-              <path
-                d="M5.5109105961630896e-15,-90A90,90,0,0,1,77.94228634059948,44.999999999999986L38.97114317029974,22.499999999999993A45,45,0,0,0,2.7554552980815448e-15,-45Z"
-                role="presentation"
-                shape-rendering="auto"
-                style="fill: #dc3644; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
-                transform="translate(90, 90)"
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              style="height: 8.4rem; width: 8.4rem;"
+              viewBox="0 0 84 84"
+            >
+              <circle
+                fill="#ffffff"
+                r="50%"
+                transform="translate(42, 42)"
               />
-              <path
-                d="M77.94228634059948,44.999999999999986A90,90,0,0,1,-77.94228634059947,45.00000000000003L-38.97114317029973,22.500000000000014A45,45,0,0,0,38.97114317029974,22.499999999999993Z"
-                role="presentation"
-                shape-rendering="auto"
-                style="fill: #28a744; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
-                transform="translate(90, 90)"
-              />
-              <path
-                d="M-77.94228634059947,45.00000000000003A90,90,0,0,1,-1.6532731788489267e-14,-90L-8.266365894244634e-15,-45A45,45,0,0,0,-38.97114317029973,22.500000000000014Z"
-                role="presentation"
-                shape-rendering="auto"
-                style="fill: #007bff; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
-                transform="translate(90, 90)"
-              />
+            </svg>
+          </div>
+          <div
+            class="styledComponents__ChartWrapper-sc-1b51i62-4 JknIf"
+          >
+            <div
+              class="VictoryContainer"
+              style="height: 100%; width: 100%; pointer-events: none; position: relative;"
+            >
               <svg
-                class=""
-                x="0"
-                y="90"
-              />
-              <svg
-                class=""
-                x="0"
-                y="90"
-              />
-              <svg
-                class=""
-                x="0"
-                y="90"
-              />
-            </g>
-          </svg>
+                height="180"
+                role="img"
+                style="pointer-events: all; width: 100%; height: 100%;"
+                viewBox="0 0 180 180"
+                width="180"
+              >
+                <g>
+                  <path
+                    d="M5.5109105961630896e-15,-90A90,90,0,0,1,85.15667801768538,-29.126280040407845L42.57833900884269,-14.563140020203923A45,45,0,0,0,2.7554552980815448e-15,-45Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: red; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M85.15667801768538,-29.126280040407845A90,90,0,0,1,86.66274311050189,-24.28104109306595L43.331371555250946,-12.140520546532976A45,45,0,0,0,42.57833900884269,-14.563140020203923Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: violet; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M86.66274311050189,-24.28104109306595A90,90,0,0,1,89.8889648763957,-4.4692273884977025L44.94448243819785,-2.2346136942488513A45,45,0,0,0,43.331371555250946,-12.140520546532976Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: green; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M89.8889648763957,-4.4692273884977025A90,90,0,0,1,89.89241441620241,4.399298856150151L44.94620720810121,2.1996494280750754A45,45,0,0,0,44.94448243819785,-2.2346136942488513Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: orange; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M89.89241441620241,4.399298856150151A90,90,0,0,1,43.10573729244724,79.00566696430404L21.55286864622362,39.50283348215202A45,45,0,0,0,44.94620720810121,2.1996494280750754Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: blue; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M43.10573729244724,79.00566696430404A90,90,0,0,1,36.93256538959811,82.07305047177825L18.466282694799055,41.03652523588912A45,45,0,0,0,21.55286864622362,39.50283348215202Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: yellow; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M36.93256538959811,82.07305047177825A90,90,0,0,1,30.40992810830544,84.70676639116674L15.20496405415272,42.35338319558337A45,45,0,0,0,18.466282694799055,41.03652523588912Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: indigo; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M30.40992810830544,84.70676639116674L15.20496405415272,42.35338319558337Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: red; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M30.40992810830544,84.70676639116674L15.20496405415272,42.35338319558337Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: violet; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M30.40992810830544,84.70676639116674A90,90,0,0,1,21.53196740057297,87.38635122180501L10.765983700286485,43.69317561090251A45,45,0,0,0,15.20496405415272,42.35338319558337Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: green; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M21.53196740057297,87.38635122180501A90,90,0,0,1,-54.59642126081424,71.54880002845408L-27.29821063040712,35.77440001422704A45,45,0,0,0,10.765983700286485,43.69317561090251Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: orange; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M-54.59642126081424,71.54880002845408A90,90,0,0,1,-89.65858376954492,-7.831880772809024L-44.82929188477246,-3.915940386404512A45,45,0,0,0,-27.29821063040712,35.77440001422704Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: blue; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <path
+                    d="M-89.65858376954492,-7.831880772809024A90,90,0,0,1,-1.6532731788489267e-14,-90L-8.266365894244634e-15,-45A45,45,0,0,0,-44.82929188477246,-3.915940386404512Z"
+                    role="presentation"
+                    shape-rendering="auto"
+                    style="fill: yellow; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
+                    transform="translate(90, 90)"
+                  />
+                  <svg
+                    class=""
+                    x="0"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="0"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="0"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="0"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="0"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="0"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="0"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="0"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="0"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="0"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="0"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="0"
+                    y="90"
+                  />
+                  <svg
+                    class=""
+                    x="0"
+                    y="90"
+                  />
+                </g>
+              </svg>
+              <div
+                style="z-index: 99; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"
+              >
+                <svg
+                  height="180"
+                  style="overflow: visible; width: 100%; height: 100%;"
+                  viewBox="0 0 180 180"
+                  width="180"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -229,7 +613,7 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableHead-qh5wjg-3 bocbRy"
       >
         <tr
-          class="styledComponents__StyledTableRow-qh5wjg-5 styledComponents__TableHeadRow-sc-1c5jbsq-0 bzMUIp"
+          class="styledComponents__StyledTableRow-qh5wjg-5 styledComponents__TableHeadRow-z9y5qg-0 kOHsGY"
         >
           <th
             class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
@@ -262,38 +646,22 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableBody-qh5wjg-1 efBlkm"
       >
         <tr
-          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
+          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
         >
           <td
-            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
+            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
           />
-        </tr>
-        <tr
-          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
-        >
           <td
-            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
+            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
           />
-        </tr>
-        <tr
-          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
-        >
           <td
-            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
+            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
           />
-        </tr>
-        <tr
-          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
-        >
           <td
-            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
+            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
           />
-        </tr>
-        <tr
-          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
-        >
           <td
-            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
+            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
           />
         </tr>
       </tbody>
@@ -342,7 +710,7 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableHead-qh5wjg-3 bocbRy"
       >
         <tr
-          class="styledComponents__StyledTableRow-qh5wjg-5 styledComponents__TableHeadRow-sc-1a6ncbm-0 hFKiqn"
+          class="styledComponents__StyledTableRow-qh5wjg-5 styledComponents__TableHeadRow-sc-1kf9ny6-0 hGxBGx"
         >
           <th
             class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
@@ -375,38 +743,22 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableBody-qh5wjg-1 efBlkm"
       >
         <tr
-          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
+          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
         >
           <td
-            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
+            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
           />
-        </tr>
-        <tr
-          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
-        >
           <td
-            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
+            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
           />
-        </tr>
-        <tr
-          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
-        >
           <td
-            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
+            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
           />
-        </tr>
-        <tr
-          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
-        >
           <td
-            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
+            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
           />
-        </tr>
-        <tr
-          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
-        >
           <td
-            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
+            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
           />
         </tr>
       </tbody>
@@ -455,7 +807,7 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableHead-qh5wjg-3 bocbRy"
       >
         <tr
-          class="styledComponents__StyledTableRow-qh5wjg-5 styledComponents__TableHeadRow-hl8zyi-0 knOpzV"
+          class="styledComponents__StyledTableRow-qh5wjg-5 styledComponents__TableHeadRow-veq70c-0 clgIdK"
         >
           <th
             class="styledComponents__StyledTableHeader-qh5wjg-4 hbNGRP"
@@ -483,38 +835,19 @@ exports[`<MiscView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableBody-qh5wjg-1 efBlkm"
       >
         <tr
-          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
+          class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
         >
           <td
-            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
+            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
           />
-        </tr>
-        <tr
-          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
-        >
           <td
-            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
+            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
           />
-        </tr>
-        <tr
-          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
-        >
           <td
-            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
+            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
           />
-        </tr>
-        <tr
-          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
-        >
           <td
-            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
-          />
-        </tr>
-        <tr
-          class="styledComponents__TableRowContainer-sc-12zmidq-2 kYPaow"
-        >
-          <td
-            class="styledComponents__TableRowStripe-sc-12zmidq-3 bDTZYp"
+            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
           />
         </tr>
       </tbody>

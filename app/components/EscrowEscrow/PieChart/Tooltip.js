@@ -3,11 +3,7 @@ import T from 'prop-types';
 
 import { convertNumToCurrency } from 'utils/globalHelpers';
 
-import {
-  TooltipMetric as Metric,
-  StyledTooltip,
-  TooltipValue as Value,
-} from '../styledComponents';
+import { Metric, StyledTooltip, Value } from './styledComponents';
 
 const Tooltip = ({ active, datum: { name, value }, tooltipPlacement }) => (
   <StyledTooltip

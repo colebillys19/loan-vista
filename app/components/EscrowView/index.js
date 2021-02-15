@@ -43,7 +43,7 @@ const EscrowView = ({
 
 EscrowView.propTypes = {
   error: T.oneOfType([T.bool, T.string]).isRequired,
-  escrowEscrowData: T.array.isRequired,
+  escrowEscrowData: T.object.isRequired,
   escrowHomeownersData: T.array.isRequired,
   escrowMortgageData: T.array.isRequired,
   escrowTaxesData: T.array.isRequired,

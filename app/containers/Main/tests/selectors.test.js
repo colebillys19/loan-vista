@@ -177,22 +177,22 @@ describe('makeSelectDashboardLoanData', () => {
 describe('makeSelectEscrowEscrow', () => {
   const escrowEscrowDataSelector = makeSelectEscrowEscrow();
   const mockedState = { main: MOCK_DATA };
-  const expected = [
-    {
+  const expected = {
+    currentData: {
       listData: [
         { label: 'Current Due Date', value: '5/6/2021' },
         { label: 'Current Escrow Payment', value: '$122.49' },
         { label: 'Current Escrow Balance', value: '$816.24' },
       ],
     },
-    {
+    effectiveData: {
       listData: [
         { label: 'Last/Next Escrow Analysis Date', value: 'May 2022' },
         { label: 'Effective Due Date', value: 'Feb 2020' },
         { label: 'Effective Escrow Payment', value: '$599.32' },
       ],
     },
-  ];
+  };
 
   it('selects the escrow escrow data', () => {
     expect(escrowEscrowDataSelector(mockedState)).toEqual(expected);

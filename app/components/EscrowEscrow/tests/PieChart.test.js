@@ -4,7 +4,12 @@ import { render } from 'react-testing-library';
 import PieChart from '../PieChart';
 import { CURRENT_PIE_MOCK_DATA } from './mockData';
 
-const mockProps = { data: CURRENT_PIE_MOCK_DATA, tooltipPlacement: 'left' };
+const mockProps = {
+  data: CURRENT_PIE_MOCK_DATA,
+  heading: 'heading',
+  id: 'current',
+  renderLoading: false,
+};
 
 const Component = <PieChart {...mockProps} />;
 

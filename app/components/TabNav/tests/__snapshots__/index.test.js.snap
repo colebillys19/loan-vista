@@ -77,10 +77,10 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
           </span>
         </button>
         <button
-          aria-controls="misc-view"
+          aria-controls="escrow-view"
           aria-selected="false"
           class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-ift0se-2 ixtBFt"
-          id="misc-tab"
+          id="escrow-tab"
           role="tab"
           tabindex="-1"
           type="button"
@@ -88,7 +88,7 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
           <span
             class="MuiTab-wrapper"
           >
-            Misc
+            Escrow
           </span>
         </button>
       </div>

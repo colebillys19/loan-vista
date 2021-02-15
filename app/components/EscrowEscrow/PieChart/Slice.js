@@ -14,7 +14,7 @@ const Slice = (props) => {
       {...props}
       style={{
         ...style,
-        opacity: !!focusedSlice && focusedSlice !== _x ? 0.3 : 1,
+        opacity: focusedSlice !== -1 && focusedSlice !== _x ? 0.3 : 1,
       }}
     />
   );
@@ -22,7 +22,7 @@ const Slice = (props) => {
 
 Slice.propTypes = {
   datum: T.object,
-  focusedSlice: T.string,
+  focusedSlice: T.number,
   style: T.object,
 };
 

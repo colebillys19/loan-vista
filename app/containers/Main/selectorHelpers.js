@@ -121,8 +121,8 @@ export const getEscrowEscrow = ({
   currentPayment,
   effectiveDueDate,
   effectivePayment,
-}) => [
-  {
+}) => ({
+  currentData: {
     listData: [
       {
         label: 'Current Due Date',
@@ -138,7 +138,7 @@ export const getEscrowEscrow = ({
       },
     ],
   },
-  {
+  effectiveData: {
     listData: [
       {
         label: 'Last/Next Escrow Analysis Date',
@@ -154,7 +154,7 @@ export const getEscrowEscrow = ({
       },
     ],
   },
-];
+});
 
 /**
  * getEscrowHomeowners

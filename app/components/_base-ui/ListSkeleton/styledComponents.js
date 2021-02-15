@@ -1,61 +1,23 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-import { backgroundColor, skeletonGrey } from 'styleConstants';
-
-const animationStyles = css`
-  background: linear-gradient(45deg, ${skeletonGrey}, ${backgroundColor});
-  background-size: 500% 500%;
-
-  -webkit-animation: Webkit 2s ease infinite;
-  -moz-animation: Moz 2s ease infinite;
-  animation: Standard 2s ease infinite;
-
-  @-webkit-keyframes Webkit {
-    0% {
-      background-position: 0% 100%;
-    }
-    50% {
-      background-position: 100% 0%;
-    }
-    100% {
-      background-position: 0% 100%;
-    }
-  }
-
-  @-moz-keyframes Moz {
-    0% {
-      background-position: 0% 100%;
-    }
-    50% {
-      background-position: 100% 0%;
-    }
-    100% {
-      background-position: 0% 100%;
-    }
-  }
-
-  @keyframes Standard {
-    0% {
-      background-position: 0% 100%;
-    }
-    50% {
-      background-position: 100% 0%;
-    }
-    100% {
-      background-position: 0% 100%;
-    }
-  }
-`;
+import {
+  backgroundColor,
+  loadingAnimation,
+  skeletonGrey,
+} from 'styleConstants';
 
 export const RowContainer = styled.div`
   height: ${({ reduceHeight }) => (reduceHeight ? '1.6rem' : '2.1rem')};
 `;
 
 export const RowStripe = styled.div`
+  background-size: 500% 500%;
+  background: linear-gradient(45deg, ${skeletonGrey}, ${backgroundColor});
   height: 1rem;
   position: relative;
   top: 0.4rem;
-  ${({ reduceHeight }) => !reduceHeight && animationStyles}
+  visibility: ${({ reduceHeight }) => (reduceHeight ? 'hidden' : 'visible')};
+  ${loadingAnimation}
 `;
 
 export const TableRowContainer = styled.tr`
@@ -65,10 +27,12 @@ export const TableRowContainer = styled.tr`
 `;
 
 export const TableRowStripe = styled.td`
+  background-size: 500% 500%;
+  background: linear-gradient(45deg, ${skeletonGrey}, ${backgroundColor});
   display: block;
   height: 1rem;
   position: absolute;
   top: 0.4rem;
   width: 78.7rem;
-  ${animationStyles}
+  ${loadingAnimation}
 `;

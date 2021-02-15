@@ -1,4 +1,11 @@
+import { backgroundColor, borderGrey, skeletonGrey } from 'styleConstants';
+
 import { PIE_COLORS } from './constants';
+
+export const getChartBackground = (renderLoading) =>
+  renderLoading
+    ? `linear-gradient(45deg, ${skeletonGrey}, ${backgroundColor})`
+    : borderGrey;
 
 export const getColorScale = (dataLength, startingIndex) => {
   let loopingIndex = startingIndex;
@@ -19,7 +26,7 @@ export const handleMouseOut = (setFocusedSlice) => [
   { mutation: () => ({ active: undefined }), target: 'labels' },
   {
     mutation: () => {
-      setFocusedSlice('');
+      setFocusedSlice(-1);
     },
   },
 ];

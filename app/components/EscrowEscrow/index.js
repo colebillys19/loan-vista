@@ -10,9 +10,6 @@ import GradientCard from 'components/_base-ui/GradientCard';
 
 import PieChart from './PieChart';
 import {
-  ChartContainer,
-  ChartDivider,
-  ChartHeading,
   ChartsSection,
   ListsContainer,
   StyledTwoColumnList,
@@ -23,34 +20,45 @@ import {
 } from './tests/mockData';
 
 /* eslint-disable react/no-array-index-key */
-const EscrowEscrow = ({ data, renderLoading }) => (
+const EscrowEscrow = ({
+  data: { currentData, effectiveData },
+  renderLoading,
+}) => (
   <GradientCard heading="Escrow">
     <ListsContainer>
-      {data.map((listDataObj, i) => (
-        <StyledTwoColumnList
-          key={i}
-          data={listDataObj}
-          numRows={3}
-          renderLoading={renderLoading}
-        />
-      ))}
+      <StyledTwoColumnList
+        data={currentData}
+        numRows={3}
+        renderLoading={renderLoading}
+      />
+      <StyledTwoColumnList
+        data={effectiveData}
+        numRows={3}
+        renderLoading={renderLoading}
+      />
     </ListsContainer>
     <ChartsSection>
-      <ChartContainer>
-        <ChartHeading>Current Escrow Breakdown</ChartHeading>
-        <PieChart data={CURRENT_PIE_MOCK_DATA} tooltipPlacement="right" />
-      </ChartContainer>
-      <ChartDivider />
-      <ChartContainer>
-        <ChartHeading>Effective Escrow Breakdown</ChartHeading>
-        <PieChart data={EFFECTIVE_PIE_MOCK_DATA} tooltipPlacement="left" />
-      </ChartContainer>
+      <PieChart
+        data={CURRENT_PIE_MOCK_DATA}
+        heading="Current Escrow Breakdown"
+        id="current"
+        renderLoading={renderLoading}
+      />
+      <PieChart
+        data={EFFECTIVE_PIE_MOCK_DATA}
+        heading="Effective Escrow Breakdown"
+        id="effective"
+        renderLoading={renderLoading}
+      />
     </ChartsSection>
   </GradientCard>
 );
 
 EscrowEscrow.propTypes = {
-  data: T.arrayOf(T.object).isRequired,
+  data: T.shape({
+    currentData: T.object,
+    effectiveData: T.object,
+  }).isRequired,
   renderLoading: T.bool.isRequired,
 };
 

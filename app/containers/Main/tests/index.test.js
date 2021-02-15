@@ -17,6 +17,13 @@ const mockProps = {
   dashboardLoanData: { balancesData: [], paymentData: [], stopsData: [] },
   dispatchFetchLoanData: jest.fn(),
   error: false,
+  escrowEscrowData: {
+    currentData: { listData: [] },
+    effectiveData: { listData: [] },
+  },
+  escrowHomeownersData: [],
+  escrowMortgageData: [],
+  escrowTaxesData: [],
   loading: false,
   loanNumber: '1234567890',
   pathname: '',
