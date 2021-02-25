@@ -7,7 +7,7 @@ import React, { Fragment } from 'react';
 import T from 'prop-types';
 
 import { appColorB, iconColorB, textColorA } from 'styleConstants';
-import { MailIcon } from 'images/icons';
+import { MailIcon } from 'images/iconComponents';
 import { StyledTable, StyledTableBody } from 'components/_base-ui/ListTable';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import GradientCard from 'components/_base-ui/GradientCard';

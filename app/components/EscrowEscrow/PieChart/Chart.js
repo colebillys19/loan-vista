@@ -7,13 +7,13 @@ import Slice from './Slice';
 import Tooltip from './Tooltip';
 import { handleMouseOut, handleMouseOver } from './helpers';
 
-const PieChart = ({ data: { colorScale, data }, id }) => {
+const PieChart = ({ data, id }) => {
   const [focusedSlice, setFocusedSlice] = useState(-1);
 
   return (
     <ChartWrapper>
       <VictoryPie
-        colorScale={colorScale}
+        colorScale={data.map(({ color }) => color)}
         data={data}
         dataComponent={<Slice focusedSlice={focusedSlice} />}
         events={[
@@ -25,8 +25,8 @@ const PieChart = ({ data: { colorScale, data }, id }) => {
             target: 'data',
           },
         ]}
-        height={180}
-        innerRadius={45}
+        height={200}
+        innerRadius={56}
         labelComponent={
           <Tooltip
             focusedSlice={focusedSlice}
@@ -34,7 +34,7 @@ const PieChart = ({ data: { colorScale, data }, id }) => {
           />
         }
         padding={0}
-        width={180}
+        width={200}
         x="name"
         y="value"
       />
@@ -43,10 +43,7 @@ const PieChart = ({ data: { colorScale, data }, id }) => {
 };
 
 PieChart.propTypes = {
-  data: T.shape({
-    colorScale: T.arrayOf(T.string),
-    data: T.arrayOf(T.object),
-  }).isRequired,
+  data: T.arrayOf(T.object).isRequired,
   id: T.oneOf(['current', 'effective']).isRequired,
 };
 

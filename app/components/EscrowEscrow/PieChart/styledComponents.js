@@ -8,25 +8,12 @@ import {
   loadingAnimation,
   textColorA,
 } from 'styleConstants';
-import { getChartBackground } from './helpers';
-
-// temppp
-export const TempWrapper = styled.div`
-  height: 2rem;
-  left: calc(50% - 4.2rem);
-  top: calc(50% - 4.2rem);
-  position: absolute;
-  width: 2rem;
-`;
 
 export const ChartContainer = styled.div`
-  background: ${({ renderLoading }) => getChartBackground(renderLoading)};
-  background-size: 500% 500%;
-  clip-path: circle(50%);
-  height: 18.6rem;
+  height: 20rem;
   margin: 0 auto;
   position: relative;
-  width: 18.6rem;
+  width: 20rem;
   ${loadingAnimation}
 `;
 
@@ -45,11 +32,11 @@ export const ChartsSubsection = styled.div`
 `;
 
 export const ChartWrapper = styled.div`
-  height: 18rem;
-  left: 0.3rem;
+  height: 19.8rem;
+  left: 0.1rem;
   position: absolute;
-  top: 0.3rem;
-  width: 18rem;
+  top: 0.1rem;
+  width: 19.8rem;
 `;
 
 export const Metric = styled.h3`

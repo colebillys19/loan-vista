@@ -7,8 +7,7 @@ import React from 'react';
 import T from 'prop-types';
 
 import GradientCard from 'components/_base-ui/GradientCard';
-import { TextIcon } from 'images/icons';
-import { appColorB } from 'styleConstants';
+import { TextIcon } from 'images/iconComponents';
 
 import StopsList from './StopsList';
 import { ListsContainer, StyledTwoColumnList } from './styledComponents';
@@ -19,7 +18,7 @@ const DashboardLoan = ({
   data: { balancesData, paymentData, stopsData },
   renderLoading,
 }) => (
-  <GradientCard color={appColorB} heading="Loan Information" Icon={Icon}>
+  <GradientCard heading="Loan Information" Icon={Icon}>
     <ListsContainer>
       <StyledTwoColumnList
         data={balancesData}

@@ -7,7 +7,7 @@ import {
   MailIcon,
   ProfileIcon,
   WarningIcon,
-} from 'images/icons';
+} from 'images/iconComponents';
 
 export const getIcon = (pathname, size) => {
   switch (pathname) {

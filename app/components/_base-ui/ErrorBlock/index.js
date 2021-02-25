@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import T from 'prop-types';
 
-import { WarningIcon } from 'images/icons';
+import { WarningIcon } from 'images/iconComponents';
 
 import { Message } from './styledComponents';
 

@@ -1,68 +1,44 @@
-export const CURRENT_PIE_MOCK_DATA = {
-  colorScale: [
-    'orange',
-    'blue',
-    'yellow',
-    'indigo',
-    'red',
-    'violet',
-    'green',
-    'orange',
-    'blue',
-    'yellow',
-    'indigo',
-    'red',
-    'violet',
-  ],
-  data: [
-    { name: 'County/City Tax', value: 1211.31 },
-    { name: 'Other Tax', value: 60 },
-    { name: 'County Tax', value: 150.45 },
-    { name: 'County Tax', value: 85.12 },
-    { name: 'City Tax', value: 795.5 },
-    { name: 'Hazard Insurance', value: 67.55 },
-    { name: 'Contents/NACCA Loans', value: 49.5 },
-    { name: 'Earthquake Insurance', value: 0 },
-    { name: 'Liability/Windstorm/Hurricane Insurance', value: 0 },
-    { name: 'Flood Insurance', value: 85 },
-    { name: 'Mortgage Insurance (Geico)', value: 690 },
-    { name: 'Mortgage Insurance', value: 825.5 },
-    { name: 'Mortgage Insurance (Allstate)', value: 1150 },
-  ],
-};
+import { appColorA, appColorB, appColorC } from 'styleConstants';
 
-export const EFFECTIVE_PIE_MOCK_DATA = {
-  colorScale: [
-    'red',
-    'violet',
-    'green',
-    'orange',
-    'blue',
-    'yellow',
-    'indigo',
-    'red',
-    'violet',
-    'green',
-    'orange',
-    'blue',
-    'yellow',
-  ],
-  data: [
-    { name: 'County/City Tax', value: 997.23 },
-    { name: 'Other Tax', value: 45.3 },
-    { name: 'County Tax', value: 179.56 },
-    { name: 'County Tax', value: 79.2 },
-    { name: 'City Tax', value: 821.44 },
-    { name: 'Hazard Insurance', value: 61.55 },
-    { name: 'Contents/NACCA Loans', value: 62.81 },
-    { name: 'Earthquake Insurance', value: 0 },
-    { name: 'Liability/Windstorm/Hurricane Insurance', value: 0 },
-    { name: 'Flood Insurance', value: 82.82 },
-    { name: 'Mortgage Insurance (Geico)', value: 717.77 },
-    { name: 'Mortgage Insurance', value: 808.33 },
-    { name: 'Mortgage Insurance (Allstate)', value: 1192 },
-  ],
-};
+export const CURRENT_PIE_MOCK_DATA = [
+  { color: appColorA, name: 'County/City Tax', value: 1211.31 },
+  { color: appColorB, name: 'Other Tax', value: 60 },
+  { color: appColorC, name: 'County Tax', value: 150.45 },
+  { color: appColorA, name: 'County Tax', value: 85.12 },
+  { color: appColorB, name: 'City Tax', value: 795.5 },
+  { color: appColorC, name: 'Hazard Insurance', value: 67.55 },
+  { color: appColorA, name: 'Contents/NACCA Loans', value: 49.5 },
+  { color: appColorB, name: 'Earthquake Insurance', value: 0 },
+  {
+    color: appColorC,
+    name: 'Liability/Windstorm/Hurricane Insurance',
+    value: 0,
+  },
+  { color: appColorA, name: 'Flood Insurance', value: 85 },
+  { color: appColorB, name: 'Mortgage Insurance (Geico)', value: 690 },
+  { color: appColorC, name: 'Mortgage Insurance', value: 825.5 },
+  { color: appColorA, name: 'Mortgage Insurance (Allstate)', value: 1150 },
+];
+
+export const EFFECTIVE_PIE_MOCK_DATA = [
+  { color: appColorA, name: 'County/City Tax', value: 997.23 },
+  { color: appColorB, name: 'Other Tax', value: 45.3 },
+  { color: appColorC, name: 'County Tax', value: 179.56 },
+  { color: appColorA, name: 'County Tax', value: 79.2 },
+  { color: appColorB, name: 'City Tax', value: 821.44 },
+  { color: appColorC, name: 'Hazard Insurance', value: 61.55 },
+  { color: appColorA, name: 'Contents/NACCA Loans', value: 62.81 },
+  { color: appColorB, name: 'Earthquake Insurance', value: 0 },
+  {
+    color: appColorC,
+    name: 'Liability/Windstorm/Hurricane Insurance',
+    value: 0,
+  },
+  { color: appColorA, name: 'Flood Insurance', value: 82.82 },
+  { color: appColorB, name: 'Mortgage Insurance (Geico)', value: 717.77 },
+  { color: appColorC, name: 'Mortgage Insurance', value: 808.33 },
+  { color: appColorA, name: 'Mortgage Insurance (Allstate)', value: 1192 },
+];
 
 export const MOCK_DATA = {
   currentData: {

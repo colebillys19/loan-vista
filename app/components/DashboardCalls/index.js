@@ -6,9 +6,9 @@
 import React, { Fragment } from 'react';
 import T from 'prop-types';
 
-import { CallIcon } from 'images/icons';
+import { CallIcon } from 'images/iconComponents';
 import { StyledTable, StyledTableBody } from 'components/_base-ui/ListTable';
-import { textColorA } from 'styleConstants';
+import { appColorB, iconColorB, textColorA } from 'styleConstants';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import GradientCard from 'components/_base-ui/GradientCard';
 import ListSkeleton from 'components/_base-ui/ListSkeleton';
@@ -17,7 +17,7 @@ import ViewMoreBlock from 'components/_base-ui/ViewMoreBlock';
 
 import CustomTableRow from './CustomTableRow';
 
-const Icon = <CallIcon colorB={textColorA} size="4rem" />;
+const Icon = <CallIcon colorA={iconColorB} colorB={textColorA} size="4rem" />;
 
 const DashboardCalls = ({
   data,
@@ -25,7 +25,12 @@ const DashboardCalls = ({
   headers,
   renderLoading,
 }) => (
-  <GradientCard heading="Calls" Icon={Icon} reduceBottomPadding>
+  <GradientCard
+    color={appColorB}
+    heading="Calls"
+    Icon={Icon}
+    reduceBottomPadding
+  >
     <ConditionalRender
       Component={<NoDataBlock />}
       shouldRender={!renderLoading && !data.length}

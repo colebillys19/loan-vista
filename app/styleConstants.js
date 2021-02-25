@@ -4,6 +4,7 @@ export const appColorA = 'rgb(80, 103, 55)';
 export const appColorAOpaque = 'rgba(80, 103, 55, 0.5)';
 export const appColorB = 'rgb(255, 191, 0)';
 export const appColorBOpaque = 'rgb(255, 191, 0, 0.5)';
+export const appColorC = 'rgb(110, 112, 197)';
 
 export const iconColorA = 'rgba(255, 191, 0, 0.5)';
 export const iconColorB = 'rgba(80, 103, 55, 0.5)';

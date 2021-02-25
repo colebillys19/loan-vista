@@ -6,9 +6,9 @@
 import React, { Fragment } from 'react';
 import T from 'prop-types';
 
-import { CashIcon } from 'images/icons';
+import { CashIcon } from 'images/iconComponents';
 import { StyledTable, StyledTableBody } from 'components/_base-ui/ListTable';
-import { textColorA } from 'styleConstants';
+import { appColorB, iconColorB, textColorA } from 'styleConstants';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import GradientCard from 'components/_base-ui/GradientCard';
 import ListSkeleton from 'components/_base-ui/ListSkeleton';
@@ -17,7 +17,7 @@ import ViewMoreBlock from 'components/_base-ui/ViewMoreBlock';
 
 import CustomTableRow from './CustomTableRow';
 
-const Icon = <CashIcon colorB={textColorA} size="4rem" />;
+const Icon = <CashIcon colorA={iconColorB} colorB={textColorA} size="4rem" />;
 
 const DashboardPayments = ({
   data,
@@ -25,7 +25,12 @@ const DashboardPayments = ({
   headers,
   renderLoading,
 }) => (
-  <GradientCard heading="Payments" Icon={Icon} reduceBottomPadding>
+  <GradientCard
+    color={appColorB}
+    heading="Payments"
+    Icon={Icon}
+    reduceBottomPadding
+  >
     <ConditionalRender
       Component={<NoDataBlock />}
       shouldRender={!renderLoading && !data.length}

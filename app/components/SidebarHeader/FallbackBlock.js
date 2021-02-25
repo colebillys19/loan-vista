@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { WarningIcon } from 'images/icons';
+import { WarningIcon } from 'images/iconComponents';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import Spinner from 'components/_base-ui/Spinner';
 

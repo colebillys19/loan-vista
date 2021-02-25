@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { SpinnerIcon } from 'images/icons';
+import { SpinnerIcon } from 'images/iconComponents';
 
 export const StyledSpinnerIcon = styled(SpinnerIcon)`
   animation: spin 1.1s linear infinite;

@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { BulletIcon } from 'images/icons';
+import { BulletIcon } from 'images/iconComponents';
 import { appColorA, appColorB } from 'styleConstants';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import GradientBorder from 'components/_base-ui/GradientBorder';

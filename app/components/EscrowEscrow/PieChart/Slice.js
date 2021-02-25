@@ -6,15 +6,15 @@ const Slice = (props) => {
   const {
     datum: { _x },
     focusedSlice,
-    style,
+    style: { fill, ...restStyle },
   } = props;
 
   return (
     <VictorySlice
       {...props}
       style={{
-        ...style,
-        opacity: focusedSlice !== -1 && focusedSlice !== _x ? 0.3 : 1,
+        ...restStyle,
+        fill: focusedSlice !== -1 && focusedSlice !== _x ? 'white' : fill,
       }}
     />
   );

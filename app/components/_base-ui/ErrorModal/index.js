@@ -3,7 +3,7 @@ import T from 'prop-types';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 
-import { CloseIcon } from 'images/icons';
+import { CloseIcon } from 'images/iconComponents';
 import ErrorBlock from 'components/_base-ui/ErrorBlock';
 
 import {

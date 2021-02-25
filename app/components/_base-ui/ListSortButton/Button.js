@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { ArrowDownIcon, ArrowUpIcon } from 'images/icons';
+import { ArrowDownIcon, ArrowUpIcon } from 'images/iconComponents';
 import { iconColorC, textColorB } from 'styleConstants';
 
 import { StyledButton } from './styledComponents';

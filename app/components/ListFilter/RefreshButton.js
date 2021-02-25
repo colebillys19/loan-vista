@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { RefreshIcon } from 'images/icons';
+import { RefreshIcon } from 'images/iconComponents';
 
 import { StyledIconButton } from './styledComponents';
 
