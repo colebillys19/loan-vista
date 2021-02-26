@@ -32,11 +32,19 @@ export const ChartsSubsection = styled.div`
 `;
 
 export const ChartWrapper = styled.div`
-  height: 19.8rem;
-  left: 0.1rem;
+  height: 19.6rem;
+  left: 0.2rem;
   position: absolute;
-  top: 0.1rem;
-  width: 19.8rem;
+  top: 0.2rem;
+  width: 19.6rem;
+`;
+
+export const DonutInnerWrapper = styled.div`
+  height: 19.6rem;
+  left: 0.2rem;
+  position: absolute;
+  top: 0.2rem;
+  width: 19.6rem;
 `;
 
 export const Metric = styled.h3`

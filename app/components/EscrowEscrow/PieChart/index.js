@@ -8,13 +8,15 @@ import {
   ChartsSubsection,
 } from './styledComponents';
 import Chart from './Chart';
-import Donut from './Donut';
+import DonutOuter from './DonutOuter';
+import DonutInner from './DonutInner';
 
 const PieChart = ({ data, heading, id, renderLoading }) => (
   <ChartsSubsection>
     <ChartHeading>{heading}</ChartHeading>
     <ChartContainer renderLoading={renderLoading}>
-      <Donut />
+      <DonutOuter />
+      <DonutInner />
       <ConditionalRender
         Component={<Chart data={data} id={id} />}
         shouldRender={!renderLoading}

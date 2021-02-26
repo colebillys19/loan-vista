@@ -25,8 +25,8 @@ const PieChart = ({ data, id }) => {
             target: 'data',
           },
         ]}
-        height={200}
-        innerRadius={56}
+        height={196}
+        innerRadius={44}
         labelComponent={
           <Tooltip
             focusedSlice={focusedSlice}
@@ -34,7 +34,7 @@ const PieChart = ({ data, id }) => {
           />
         }
         padding={0}
-        width={200}
+        width={196}
         x="name"
         y="value"
       />
