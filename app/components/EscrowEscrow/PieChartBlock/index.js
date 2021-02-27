@@ -9,7 +9,7 @@ import Donut from './Donut';
 const PieChartBlock = ({ data, heading, id, renderLoading }) => (
   <BlockContainer>
     <Heading>{heading}</Heading>
-    <ChartContainer>
+    <ChartContainer renderLoading={renderLoading}>
       <ConditionalRender
         Component={
           <Fragment>

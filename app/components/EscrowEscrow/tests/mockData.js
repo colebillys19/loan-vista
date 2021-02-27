@@ -17,7 +17,7 @@ export const CURRENT_PIE_MOCK_DATA = [
   { color: appColorA, name: 'Flood Insurance', value: 85 },
   { color: appColorB, name: 'Mortgage Insurance (Geico)', value: 690 },
   { color: appColorC, name: 'Mortgage Insurance', value: 825.5 },
-  { color: appColorA, name: 'Mortgage Insurance (Allstate)', value: 1150 },
+  { color: appColorB, name: 'Mortgage Insurance (Allstate)', value: 1150 },
 ];
 
 export const EFFECTIVE_PIE_MOCK_DATA = [
@@ -37,7 +37,7 @@ export const EFFECTIVE_PIE_MOCK_DATA = [
   { color: appColorA, name: 'Flood Insurance', value: 82.82 },
   { color: appColorB, name: 'Mortgage Insurance (Geico)', value: 717.77 },
   { color: appColorC, name: 'Mortgage Insurance', value: 808.33 },
-  { color: appColorA, name: 'Mortgage Insurance (Allstate)', value: 1192 },
+  { color: appColorB, name: 'Mortgage Insurance (Allstate)', value: 1192 },
 ];
 
 export const MOCK_DATA = {

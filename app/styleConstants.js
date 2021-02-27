@@ -18,7 +18,10 @@ export const borderGrey = 'rgb(204, 204, 204)';
 export const errorColor = 'rgb(244, 67, 54)';
 export const skeletonGrey = 'rgb(232, 232, 232)';
 
-export const loadingAnimation = css`
+export const loadingAnimationStyles = css`
+  background: linear-gradient(45deg, ${skeletonGrey}, ${backgroundColor});
+  background-size: 500% 500%;
+
   -webkit-animation: Webkit 2s ease infinite;
   -moz-animation: Moz 2s ease infinite;
   animation: Standard 2s ease infinite;

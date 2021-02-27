@@ -1,7 +1,7 @@
 import React from 'react';
 import { SvgIcon } from '@material-ui/core';
 
-import { DonutWrapper } from './styledComponents';
+import { ChartWrapper as DonutWrapper } from './styledComponents';
 
 const Donut = () => (
   <DonutWrapper>

@@ -4,9 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 
 import {
   appColorA,
-  backgroundColor,
   borderGrey,
-  skeletonGrey,
+  loadingAnimationStyles,
   textColorA,
 } from 'styleConstants';
 
@@ -20,24 +19,16 @@ export const BlockContainer = styled.div`
 `;
 
 export const ChartContainer = styled.div`
-  background-size: 500% 500%;
-  background: linear-gradient(45deg, ${skeletonGrey}, ${backgroundColor});
+  background-color: ${textColorA};
   clip-path: url(#donutClipPath);
   height: 20rem;
   margin: 0 auto;
   position: relative;
   width: 20rem;
+  ${({ renderLoading }) => renderLoading && loadingAnimationStyles}
 `;
 
 export const ChartWrapper = styled.div`
-  height: 19.6rem;
-  left: 0.2rem;
-  position: absolute;
-  top: 0.2rem;
-  width: 19.6rem;
-`;
-
-export const DonutWrapper = styled.div`
   height: 19.6rem;
   left: 0.2rem;
   position: absolute;
