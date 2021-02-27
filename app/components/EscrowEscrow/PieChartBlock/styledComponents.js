@@ -4,31 +4,29 @@ import { withStyles } from '@material-ui/core/styles';
 
 import {
   appColorA,
+  backgroundColor,
   borderGrey,
-  loadingAnimation,
+  skeletonGrey,
   textColorA,
 } from 'styleConstants';
 
-export const ChartContainer = styled.div`
-  height: 20rem;
-  margin: 0 auto;
-  position: relative;
-  width: 20rem;
-  ${loadingAnimation}
-`;
-
-export const ChartHeading = styled.h3`
-  margin: 0 0 2rem;
-  text-align: center;
-`;
-
-export const ChartsSubsection = styled.div`
+export const BlockContainer = styled.div`
   position: relative;
   width: 50%;
   &:last-of-type {
     border-left: 0.1rem solid ${borderGrey};
     padding-left: 0.1rem;
   }
+`;
+
+export const ChartContainer = styled.div`
+  background-size: 500% 500%;
+  background: linear-gradient(45deg, ${skeletonGrey}, ${backgroundColor});
+  clip-path: url(#donutClipPath);
+  height: 20rem;
+  margin: 0 auto;
+  position: relative;
+  width: 20rem;
 `;
 
 export const ChartWrapper = styled.div`
@@ -39,12 +37,17 @@ export const ChartWrapper = styled.div`
   width: 19.6rem;
 `;
 
-export const DonutInnerWrapper = styled.div`
+export const DonutWrapper = styled.div`
   height: 19.6rem;
   left: 0.2rem;
   position: absolute;
   top: 0.2rem;
   width: 19.6rem;
+`;
+
+export const Heading = styled.h3`
+  margin: 0 0 2rem;
+  text-align: center;
 `;
 
 export const Metric = styled.h3`

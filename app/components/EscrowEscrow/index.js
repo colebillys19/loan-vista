@@ -8,7 +8,7 @@ import T from 'prop-types';
 
 import GradientCard from 'components/_base-ui/GradientCard';
 
-import PieChart from './PieChart';
+import PieChartBlock from './PieChartBlock';
 import {
   ChartsSection,
   ListsContainer,
@@ -38,13 +38,13 @@ const EscrowEscrow = ({
       />
     </ListsContainer>
     <ChartsSection>
-      <PieChart
+      <PieChartBlock
         data={CURRENT_PIE_MOCK_DATA}
         heading="Current Escrow Breakdown"
         id="current"
         renderLoading={renderLoading}
       />
-      <PieChart
+      <PieChartBlock
         data={EFFECTIVE_PIE_MOCK_DATA}
         heading="Effective Escrow Breakdown"
         id="effective"

@@ -22,20 +22,17 @@ const EscrowView = ({
   loading,
   loanNumber,
 }) => {
-  const showComponents = loanNumber && !error && !loading;
+  const renderLoading = !loanNumber || error || loading;
 
   return (
     <TabContainer aria-labelledby="escrow-tab" id="escrow-view">
-      <EscrowEscrow data={escrowEscrowData} renderLoading={!showComponents} />
-      <EscrowTaxes data={escrowTaxesData} renderLoading={!showComponents} />
+      <EscrowEscrow data={escrowEscrowData} renderLoading={renderLoading} />
+      <EscrowTaxes data={escrowTaxesData} renderLoading={renderLoading} />
       <EscrowHomeowners
         data={escrowHomeownersData}
-        renderLoading={!showComponents}
+        renderLoading={renderLoading}
       />
-      <EscrowMortgage
-        data={escrowMortgageData}
-        renderLoading={!showComponents}
-      />
+      <EscrowMortgage data={escrowMortgageData} renderLoading={renderLoading} />
       <ErrorModal error={error} />
     </TabContainer>
   );

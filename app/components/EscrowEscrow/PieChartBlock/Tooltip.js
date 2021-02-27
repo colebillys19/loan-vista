@@ -17,7 +17,7 @@ const Tooltip = ({ active, datum: { name, value }, tooltipPlacement }) => (
     }
     TransitionProps={{ timeout: 0 }}
   >
-    <svg x={tooltipPlacement === 'left' ? 29 : 167} y={98} />
+    <svg x={tooltipPlacement === 'left' ? 24 : 172} y={98} />
   </StyledTooltip>
 );
 

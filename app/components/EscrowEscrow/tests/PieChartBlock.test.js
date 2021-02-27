@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import PieChart from '../PieChart';
+import PieChartBlock from '../PieChartBlock';
 import { CURRENT_PIE_MOCK_DATA } from './mockData';
 
 const mockProps = {
@@ -11,7 +11,7 @@ const mockProps = {
   renderLoading: false,
 };
 
-const Component = <PieChart {...mockProps} />;
+const Component = <PieChartBlock {...mockProps} />;
 
 describe('<PieChart />', () => {
   it('Expect not to log errors in console', () => {
