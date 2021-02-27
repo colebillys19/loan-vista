@@ -20,6 +20,7 @@ export const BlockContainer = styled.div`
 
 export const ChartContainer = styled.div`
   background-color: ${textColorA};
+  border-radius: 50%;
   clip-path: url(#donutClipPath);
   height: 20rem;
   margin: 0 auto;
