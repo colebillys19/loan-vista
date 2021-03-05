@@ -55,9 +55,15 @@ export const StyledTooltip = withStyles(() => ({
     borderRadius: '0.5rem',
     color: textColorA,
     lineHeight: '1.15',
+    maxWidth: 'none',
     padding: '1rem 1.2rem',
   },
 }))(Tooltip);
+
+export const TooltipContent = styled.div`
+  text-align: ${({ tooltipPlacement }) =>
+    tooltipPlacement === 'left' ? 'right' : 'left'};
+`;
 
 export const Value = styled.p`
   font-size: 1.4rem;

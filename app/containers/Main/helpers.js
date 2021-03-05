@@ -1,9 +1,35 @@
 import moment from 'moment';
 import { lowerCase } from 'lodash';
 
+import { appColorA, appColorB, appColorC } from 'styleConstants';
 import { convertNumToCurrency, toTitleCase } from 'utils/globalHelpers';
 
 import { DASHBOARD_BORROWER_LABEL_DICT } from './selectorConstants';
+
+/**
+ * addSliceColors
+ * @description ...
+ */
+export const addSliceColors = (arr) => {
+  let colors = [appColorA, appColorB, appColorC];
+
+  const newArr = arr.map((obj) => {
+    if (!colors.length) {
+      colors = [appColorA, appColorB, appColorC];
+    }
+
+    return { ...obj, color: colors.pop() };
+  });
+
+  if (
+    newArr.length > 3 &&
+    newArr[0].color === newArr[newArr.length - 1].color
+  ) {
+    newArr[newArr.length - 1].color = newArr[1].color;
+  }
+
+  return newArr;
+};
 
 /**
  * convertNumToPercentage
@@ -62,6 +88,10 @@ export const dataFormatter = (value, format) => {
     case 'stringLowerCase':
       return toLowerCase(value);
     case 'stringTitleCase':
+      if (value === 'CONTENTS/NACCA LOANS') {
+        return 'Contents/NACCA Loans';
+      }
+
       return toTitleCase(value);
     default:
       return value;

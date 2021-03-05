@@ -178,20 +178,22 @@ describe('makeSelectEscrowEscrow', () => {
   const escrowEscrowDataSelector = makeSelectEscrowEscrow();
   const mockedState = { main: MOCK_DATA };
   const expected = {
-    currentData: {
+    currentListData: {
       listData: [
         { label: 'Current Due Date', value: '5/6/2021' },
         { label: 'Current Escrow Payment', value: '$122.49' },
         { label: 'Current Escrow Balance', value: '$816.24' },
       ],
     },
-    effectiveData: {
+    currentPieData: [], // todo
+    effectiveListData: {
       listData: [
         { label: 'Last/Next Escrow Analysis Date', value: 'May 2022' },
         { label: 'Effective Due Date', value: 'Feb 2020' },
         { label: 'Effective Escrow Payment', value: '$599.32' },
       ],
     },
+    effectivePieData: [], // todo
   };
 
   it('selects the escrow escrow data', () => {
@@ -223,7 +225,7 @@ describe('makeSelectEscrowMortgage', () => {
   const mockedState = { main: MOCK_DATA };
   const expected = [
     {
-      Company: 'Geico',
+      Company: 'MGIC',
       id: '2cb873c2-9800-450a-aacd-dafde84b1e8e',
       'Insurance ID': 'GE57A',
       'Premium Amount': '$690.00',

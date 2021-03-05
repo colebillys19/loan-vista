@@ -14,38 +14,39 @@ import {
   ListsContainer,
   StyledTwoColumnList,
 } from './styledComponents';
-import {
-  CURRENT_PIE_MOCK_DATA,
-  EFFECTIVE_PIE_MOCK_DATA,
-} from './tests/mockData';
 
 /* eslint-disable react/no-array-index-key */
 const EscrowEscrow = ({
-  data: { currentData, effectiveData },
+  data: {
+    currentListData,
+    currentPieData,
+    effectiveListData,
+    effectivePieData,
+  },
   renderLoading,
 }) => (
   <GradientCard heading="Escrow">
     <ListsContainer>
       <StyledTwoColumnList
-        data={currentData}
+        data={currentListData}
         numRows={3}
         renderLoading={renderLoading}
       />
       <StyledTwoColumnList
-        data={effectiveData}
+        data={effectiveListData}
         numRows={3}
         renderLoading={renderLoading}
       />
     </ListsContainer>
     <ChartsSection>
       <PieChartBlock
-        data={CURRENT_PIE_MOCK_DATA}
+        data={currentPieData}
         heading="Current Escrow Breakdown"
         id="current"
         renderLoading={renderLoading}
       />
       <PieChartBlock
-        data={EFFECTIVE_PIE_MOCK_DATA}
+        data={effectivePieData}
         heading="Effective Escrow Breakdown"
         id="effective"
         renderLoading={renderLoading}
@@ -56,8 +57,10 @@ const EscrowEscrow = ({
 
 EscrowEscrow.propTypes = {
   data: T.shape({
-    currentData: T.object,
-    effectiveData: T.object,
+    currentListData: T.object,
+    currentPieData: T.array,
+    effectiveListData: T.object,
+    effectivePieData: T.array,
   }).isRequired,
   renderLoading: T.bool.isRequired,
 };

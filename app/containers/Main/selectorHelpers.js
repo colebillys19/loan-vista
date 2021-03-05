@@ -8,6 +8,7 @@ import {
   SIDEBAR_SUMMARY_LABEL_DICT,
 } from './selectorConstants';
 import {
+  addSliceColors,
   dataFormatter,
   getBorrowerKeyValues,
   getFormattedAddress,
@@ -25,6 +26,42 @@ export const getCallsSummary = (callsSummaryData) => {
     value: dataFormatter(callsSummaryData[key], format),
   }));
 };
+
+/**
+ * getCurrentEscrowListData
+ * @description: ...
+ */
+export const getCurrentEscrowListData = (
+  balance,
+  currentDueDate,
+  currentPayment,
+) => ({
+  listData: [
+    {
+      label: 'Current Due Date',
+      value: dataFormatter(currentDueDate, 'date'),
+    },
+    {
+      label: 'Current Escrow Payment',
+      value: dataFormatter(currentPayment, 'currency'),
+    },
+    {
+      label: 'Current Escrow Balance',
+      value: dataFormatter(balance, 'currency'),
+    },
+  ],
+});
+
+/**
+ * getCurrentPieData
+ * @description: ...
+ */
+// todo
+export const getCurrentPieData = () => [
+  { color: 'red', text: 'County/City Tax', value: 123.4 },
+  { color: 'green', text: 'Other Tax', value: 67.8 },
+  { color: 'blue', text: 'County Tax', value: 90 },
+];
 
 /**
  * getDashboardBorrowerData
@@ -98,63 +135,59 @@ export const getDashboardLoanData = (balancesData, paymentData, stopsData) => {
 };
 
 /**
- * getLoanSummary
+ * getEffectiveEscrowListData
  * @description: ...
  */
-export const getLoanSummary = (loanSummaryData) => {
-  const { loan: loanDict } = SIDEBAR_SUMMARY_LABEL_DICT;
-
-  return loanDict.map(({ format, key, label }) => ({
-    label,
-    value: dataFormatter(loanSummaryData[key], format),
-  }));
-};
-
-/**
- * getEscrowEscrow
- * @description: ...
- */
-export const getEscrowEscrow = ({
+export const getEffectiveEscrowListData = (
   analysisDate,
-  balance,
-  currentDueDate,
-  currentPayment,
   effectiveDueDate,
   effectivePayment,
-}) => ({
-  currentData: {
-    listData: [
-      {
-        label: 'Current Due Date',
-        value: dataFormatter(currentDueDate, 'date'),
-      },
-      {
-        label: 'Current Escrow Payment',
-        value: dataFormatter(currentPayment, 'currency'),
-      },
-      {
-        label: 'Current Escrow Balance',
-        value: dataFormatter(balance, 'currency'),
-      },
-    ],
-  },
-  effectiveData: {
-    listData: [
-      {
-        label: 'Last/Next Escrow Analysis Date',
-        value: dataFormatter(analysisDate, 'monthYear'),
-      },
-      {
-        label: 'Effective Due Date',
-        value: dataFormatter(effectiveDueDate, 'monthYear'),
-      },
-      {
-        label: 'Effective Escrow Payment',
-        value: dataFormatter(effectivePayment, 'currency'),
-      },
-    ],
-  },
+) => ({
+  listData: [
+    {
+      label: 'Last/Next Escrow Analysis Date',
+      value: dataFormatter(analysisDate, 'monthYear'),
+    },
+    {
+      label: 'Effective Due Date',
+      value: dataFormatter(effectiveDueDate, 'monthYear'),
+    },
+    {
+      label: 'Effective Escrow Payment',
+      value: dataFormatter(effectivePayment, 'currency'),
+    },
+  ],
 });
+
+/**
+ * getEffectivePieData
+ * @description: ...
+ */
+export const getEffectivePieData = ({ homeownersHazard, mortgage, taxes }) => {
+  const homeownersHazardArr = homeownersHazard.map(
+    ({ annualPremium, company, insuranceType, policyType }) => ({
+      text: `${dataFormatter(
+        insuranceType,
+        'stringTitleCase',
+      )} Insurance (${policyType}, ${company})`,
+      value: annualPremium,
+    }),
+  );
+
+  const mortgageArr = mortgage.map(({ amount, company, insuranceId }) => ({
+    text: `Mortgage Insurance (${company}, ${insuranceId})`,
+    value: amount,
+  }));
+
+  const taxesArr = taxes.map(({ amount, taxId, type }) => ({
+    text: `${dataFormatter(type, 'stringTitleCase')} Tax (${taxId})`,
+    value: amount,
+  }));
+
+  const combinedArr = homeownersHazardArr.concat(mortgageArr.concat(taxesArr));
+
+  return addSliceColors(combinedArr);
+};
 
 /**
  * getEscrowHomeowners
@@ -185,7 +218,7 @@ export const getEscrowHomeowners = (homeownersData) =>
  */
 export const getEscrowMortgage = (mortgageData) =>
   mortgageData.map(({ amount, company, due, id, insuranceId }) => ({
-    Company: dataFormatter(company, 'stringTitleCase'),
+    Company: company,
     id,
     'Insurance ID': insuranceId,
     'Premium Amount': dataFormatter(amount, 'currency'),
@@ -205,6 +238,19 @@ export const getEscrowTaxes = (taxesData) =>
     'Tax ID': taxId,
     'Tax Type': dataFormatter(type, 'stringTitleCase'),
   }));
+
+/**
+ * getLoanSummary
+ * @description: ...
+ */
+export const getLoanSummary = (loanSummaryData) => {
+  const { loan: loanDict } = SIDEBAR_SUMMARY_LABEL_DICT;
+
+  return loanDict.map(({ format, key, label }) => ({
+    label,
+    value: dataFormatter(loanSummaryData[key], format),
+  }));
+};
 
 /**
  * getPaymentSummary

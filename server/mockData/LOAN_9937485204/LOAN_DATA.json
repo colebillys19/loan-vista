@@ -58,12 +58,12 @@
          "annualPremium":49.50,
          "company":"35252",
          "id":"61dec679-d323-40a4-af7f-514f2879ad18",
-         "insuranceType":"CONTENTS/NACCA Loans",
+         "insuranceType":"CONTENTS/NACCA LOANS",
          "policyExpiration":"2025-05-01",
          "policyType":"CN"
       },
       {
-         "annualPremium":null,
+         "annualPremium":94.3,
          "company":"98700",
          "id":"290c6701-4edb-45dd-9657-7b2c9482b903",
          "insuranceType":"EARTHQUAKE",
@@ -71,7 +71,7 @@
          "policyType":"E"
       },
       {
-         "annualPremium":null,
+         "annualPremium":17.77,
          "company":"49211",
          "id":"c375a90b-8c0b-4986-a371-ce6bb8b8d69c",
          "insuranceType":"LIABILITY/WINDSTORM/HURRICANE",
@@ -90,21 +90,21 @@
    "mortgage":[
       {
          "amount":690,
-         "company":"GEICO",
+         "company":"MGIC",
          "due":"2021-05-01",
          "id":"2cb873c2-9800-450a-aacd-dafde84b1e8e",
-         "insuranceId":"GE57A"
+         "insuranceId":"L57A"
       },
       {
          "amount":825.5,
-         "company":null,
+         "company":"PMI",
          "due":"2021-04-01",
          "id":"3e18232c-cccc-4a7f-b587-6326c8d69765",
          "insuranceId":"SL842"
       },
       {
          "amount":1150,
-         "company":"ALLSTATE",
+         "company":"RADIAN",
          "due":"2021-06-01",
          "id":"15dc3bc8-c6b2-4ed8-a9ea-c3feffaf8abc",
          "insuranceId":"AQ7308"

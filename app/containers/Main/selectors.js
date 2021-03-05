@@ -3,10 +3,13 @@ import { createSelector } from 'reselect';
 import { initialState } from './reducer';
 import {
   getCallsSummary,
+  getCurrentEscrowListData,
+  getCurrentPieData,
   getDashboardBorrowerData,
   getDashboardListsData,
   getDashboardLoanData,
-  getEscrowEscrow,
+  getEffectiveEscrowListData,
+  getEffectivePieData,
   getEscrowHomeowners,
   getEscrowMortgage,
   getEscrowTaxes,
@@ -64,7 +67,36 @@ const makeSelectDashboardLoanData = () =>
 const makeSelectEscrowEscrow = () =>
   createSelector(
     makeSelectMain('loanData'),
-    ({ escrow }) => getEscrowEscrow(escrow),
+    ({
+      escrow: {
+        analysisDate,
+        balance,
+        currentDueDate,
+        currentPayment,
+        effectiveDueDate,
+        effectivePayment,
+      },
+      homeownersHazard,
+      mortgage,
+      taxes,
+    }) => ({
+      currentListData: getCurrentEscrowListData(
+        balance,
+        currentDueDate,
+        currentPayment,
+      ),
+      currentPieData: getCurrentPieData(),
+      effectiveListData: getEffectiveEscrowListData(
+        analysisDate,
+        effectiveDueDate,
+        effectivePayment,
+      ),
+      effectivePieData: getEffectivePieData({
+        homeownersHazard,
+        mortgage,
+        taxes,
+      }),
+    }),
   );
 
 /**

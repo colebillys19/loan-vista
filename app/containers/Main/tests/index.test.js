@@ -18,8 +18,10 @@ const mockProps = {
   dispatchFetchLoanData: jest.fn(),
   error: false,
   escrowEscrowData: {
-    currentData: { listData: [] },
-    effectiveData: { listData: [] },
+    currentListData: { listData: [] },
+    currentPieData: [],
+    effectiveListData: { listData: [] },
+    effectivePieData: [],
   },
   escrowHomeownersData: [],
   escrowMortgageData: [],

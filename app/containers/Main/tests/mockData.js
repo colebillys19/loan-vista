@@ -61,7 +61,7 @@ export const MOCK_DATA = {
     mortgage: [
       {
         amount: 690,
-        company: 'GEICO',
+        company: 'MGIC',
         due: '2021-05-01',
         id: '2cb873c2-9800-450a-aacd-dafde84b1e8e',
         insuranceId: 'GE57A',

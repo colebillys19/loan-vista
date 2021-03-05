@@ -2,10 +2,10 @@ import React from 'react';
 import { render } from 'react-testing-library';
 
 import PieChartBlock from '../PieChartBlock';
-import { CURRENT_PIE_MOCK_DATA } from './mockData';
+import { MOCK_DATA } from './mockData';
 
 const mockProps = {
-  data: CURRENT_PIE_MOCK_DATA,
+  data: MOCK_DATA.currentPieData,
   heading: 'heading',
   id: 'current',
   renderLoading: false,

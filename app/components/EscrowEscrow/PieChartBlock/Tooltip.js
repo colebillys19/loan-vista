@@ -1,19 +1,24 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import T from 'prop-types';
 
 import { convertNumToCurrency } from 'utils/globalHelpers';
 
-import { Metric, StyledTooltip, Value } from './styledComponents';
+import {
+  Metric,
+  StyledTooltip,
+  TooltipContent,
+  Value,
+} from './styledComponents';
 
-const Tooltip = ({ active, datum: { name, value }, tooltipPlacement }) => (
+const Tooltip = ({ active, datum: { text, value }, tooltipPlacement }) => (
   <StyledTooltip
     open={!!active}
     placement={tooltipPlacement}
     title={
-      <Fragment>
-        <Metric>{name}</Metric>
+      <TooltipContent tooltipPlacement={tooltipPlacement}>
+        <Metric>{text}</Metric>
         <Value>{convertNumToCurrency(value)}</Value>
-      </Fragment>
+      </TooltipContent>
     }
     TransitionProps={{ timeout: 0 }}
   >
