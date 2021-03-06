@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { PieSkeletonContainer } from './styledComponents';
+import { SkeletonContainer } from './styledComponents';
 
 const PieSkeleton = () => (
-  <PieSkeletonContainer>
+  <SkeletonContainer>
     <svg height="0" style={{ position: 'absolute' }} width="0">
       <defs>
         <clipPath id="donutClipPath">
@@ -11,7 +11,7 @@ const PieSkeleton = () => (
         </clipPath>
       </defs>
     </svg>
-  </PieSkeletonContainer>
+  </SkeletonContainer>
 );
 
 export default PieSkeleton;

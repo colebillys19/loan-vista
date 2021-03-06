@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import {
   appColorA,
   borderGrey,
-  // loadingAnimationStyles,
+  loadingAnimationStyles,
   textColorA,
 } from 'styleConstants';
 
@@ -24,8 +24,6 @@ export const ChartContainer = styled.div`
   width: 20rem;
 `;
 
-// ${({ renderLoading }) => renderLoading && loadingAnimationStyles}
-
 export const Heading = styled.h3`
   margin: 0 0 2rem;
   text-align: center;
@@ -37,12 +35,10 @@ export const Metric = styled.h3`
   margin: 0;
 `;
 
-export const PieSkeletonContainer = styled.div`
-  background-color: orange;
+export const SkeletonContainer = styled.div`
   clip-path: url(#donutClipPath);
   height: 100%;
-
-  outline: 1px solid indigo;
+  ${loadingAnimationStyles}
 `;
 
 export const StyledTooltip = withStyles(() => ({
