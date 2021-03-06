@@ -9,18 +9,28 @@ import { fetchCallsDataFailure, fetchCallsDataSuccess } from './actions';
 import makeSelectCalls from './selectors';
 import { FETCH_CALLS_DATA } from './constants';
 
-export function* fetchCallsDataSaga({ payload }) {
+export function* fetchCallsDataSaga() {
   try {
-    const { params: payloadFetchParams } = payload;
-    const stateFetchParams = yield select(makeSelectCalls('fetchParams'));
     const loanNumber = yield select(makeSelectMain('loanNumber'));
 
     if (loanNumber) {
+      const currentFilterParams = yield select(
+        makeSelectCalls('currentFilterParams'),
+      );
+      const currentSortParams = yield select(
+        makeSelectCalls('currentSortParams'),
+      );
+      const oldFilterParams = yield select(makeSelectCalls('oldFilterParams'));
+      const oldSortParams = yield select(makeSelectCalls('oldSortParams'));
+
+      const currentParams = { ...currentFilterParams, ...currentSortParams };
+      const oldParams = { ...oldFilterParams, ...oldSortParams };
+
       const queryParams = Object.assign(
         {},
         { loanNumber },
-        stateFetchParams,
-        payloadFetchParams,
+        oldParams,
+        currentParams,
       );
 
       const { callsData, newFetchParams } = yield call(

@@ -16,36 +16,37 @@ import { usePrevious } from 'utils/customHooks';
 import CallsView from 'components/CallsView';
 import makeSelectMain from 'containers/Main/selectors';
 
-import makeSelectCalls, {
-  makeSelectCallsData,
-  makeSelectSortValues,
-} from './selectors';
+import makeSelectCalls, { makeSelectCallsData } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import { fetchCallsData, onUnmount, setLoadingTrue } from './actions';
+import {
+  fetchCallsData,
+  setLoadingTrue,
+  updateFilterParam,
+  updateSortParam,
+} from './actions';
 
 export const Calls = ({
   callsData,
+  currentFilterParams,
+  currentSortParams,
   dispatchFetchCallsData,
-  dispatchOnUnmount,
   dispatchSetLoadingTrue,
+  dispatchUpdateParam,
   error,
-  fetchParams,
   loading,
   loanNumber,
   mainError,
   noDataFetched,
+  oldFilterParams,
+  oldSortParams,
   pathname,
   sortLoading,
-  sortValues,
 }) => {
   useInjectReducer({ key: 'calls', reducer });
   useInjectSaga({ key: 'calls', saga });
 
   const prevLoanNumber = usePrevious(loanNumber);
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => () => dispatchOnUnmount(), []);
 
   useEffect(() => {
     if (!loanNumber) {
@@ -64,51 +65,59 @@ export const Calls = ({
   return (
     <CallsView
       callsData={callsData}
+      currentFilterParams={currentFilterParams}
+      currentSortParams={currentSortParams}
       dispatchFetchCallsData={dispatchFetchCallsData}
+      dispatchUpdateParam={dispatchUpdateParam}
       error={mainError || error}
-      fetchParams={fetchParams}
       loading={loading}
       noDataFetched={noDataFetched}
+      oldFilterParams={oldFilterParams}
+      oldSortParams={oldSortParams}
       pathname={pathname}
       sortLoading={sortLoading}
-      sortValues={sortValues}
     />
   );
 };
 
 Calls.propTypes = {
   callsData: T.array.isRequired,
+  currentFilterParams: T.object.isRequired,
+  currentSortParams: T.object.isRequired,
   dispatchFetchCallsData: T.func.isRequired,
-  dispatchOnUnmount: T.func.isRequired,
   dispatchSetLoadingTrue: T.func.isRequired,
+  dispatchUpdateParam: T.func.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
-  fetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
   loanNumber: T.string.isRequired,
   mainError: T.oneOfType([T.bool, T.string]).isRequired,
   noDataFetched: T.bool.isRequired,
+  oldFilterParams: T.object.isRequired,
+  oldSortParams: T.object.isRequired,
   pathname: T.string.isRequired,
   sortLoading: T.bool.isRequired,
-  sortValues: T.object.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
   callsData: makeSelectCallsData(),
+  currentFilterParams: makeSelectCalls('currentFilterParams'),
+  currentSortParams: makeSelectCalls('currentSortParams'),
   error: makeSelectCalls('error'),
-  fetchParams: makeSelectCalls('fetchParams'),
   loading: makeSelectCalls('loading'),
   loanNumber: makeSelectMain('loanNumber'),
   mainError: makeSelectMain('error'),
   noDataFetched: makeSelectCalls('noDataFetched'),
+  oldFilterParams: makeSelectCalls('oldFilterParams'),
+  oldSortParams: makeSelectCalls('oldSortParams'),
   pathname: makeSelectPathname(),
   sortLoading: makeSelectCalls('sortLoading'),
-  sortValues: makeSelectSortValues(),
 });
 
 const mapDispatchToProps = (dispatch) => ({
   dispatchFetchCallsData: (payload) => dispatch(fetchCallsData(payload)),
-  dispatchOnUnmount: () => dispatch(onUnmount()),
   dispatchSetLoadingTrue: () => dispatch(setLoadingTrue()),
+  dispatchUpdateFilterParam: (payload) => dispatch(updateFilterParam(payload)),
+  dispatchUpdateSortParam: (payload) => dispatch(updateSortParam(payload)),
 });
 
 const withConnect = connect(
