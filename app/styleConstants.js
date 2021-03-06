@@ -31,37 +31,37 @@ export const loadingAnimationStyles = css`
 
   @-webkit-keyframes Webkit {
     0% {
-      background-position: 0% 100%;
-    }
-    50% {
       background-position: 100% 0%;
     }
-    100% {
+    50% {
       background-position: 0% 100%;
+    }
+    100% {
+      background-position: 100% 0%;
     }
   }
 
   @-moz-keyframes Moz {
     0% {
-      background-position: 0% 100%;
-    }
-    50% {
       background-position: 100% 0%;
     }
-    100% {
+    50% {
       background-position: 0% 100%;
+    }
+    100% {
+      background-position: 100% 0%;
     }
   }
 
   @keyframes Standard {
     0% {
-      background-position: 0% 100%;
-    }
-    50% {
       background-position: 100% 0%;
     }
-    100% {
+    50% {
       background-position: 0% 100%;
+    }
+    100% {
+      background-position: 100% 0%;
     }
   }
 `;
