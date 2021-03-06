@@ -38,6 +38,8 @@ export const Metric = styled.h3`
 `;
 
 export const PieSkeletonContainer = styled.div`
+  background-color: orange;
+  clip-path: url(#donutClipPath);
   height: 100%;
 
   outline: 1px solid indigo;
