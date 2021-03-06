@@ -50,6 +50,9 @@ const initialState = {
     },
     homeownersHazard: [],
     mortgage: [],
+    pastHomeownersHazard: [],
+    pastMortgage: [],
+    pastTaxes: [],
     payment: {
       accidentAndHealth: 0,
       bsc: 0,

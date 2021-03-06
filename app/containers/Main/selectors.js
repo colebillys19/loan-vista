@@ -4,17 +4,16 @@ import { initialState } from './reducer';
 import {
   getCallsSummary,
   getCurrentEscrowListData,
-  getCurrentPieData,
   getDashboardBorrowerData,
   getDashboardListsData,
   getDashboardLoanData,
   getEffectiveEscrowListData,
-  getEffectivePieData,
   getEscrowHomeowners,
   getEscrowMortgage,
   getEscrowTaxes,
   getLoanSummary,
   getPaymentSummary,
+  getPieData,
   getServiceSummary,
   getSidebarHeaderData,
 } from './selectorHelpers';
@@ -78,6 +77,9 @@ const makeSelectEscrowEscrow = () =>
       },
       homeownersHazard,
       mortgage,
+      pastHomeownersHazard,
+      pastMortgage,
+      pastTaxes,
       taxes,
     }) => ({
       currentListData: getCurrentEscrowListData(
@@ -85,16 +87,22 @@ const makeSelectEscrowEscrow = () =>
         currentDueDate,
         currentPayment,
       ),
-      currentPieData: getCurrentPieData(),
+      currentPieData: getPieData({
+        homeownersHazard: pastHomeownersHazard,
+        mortgage: pastMortgage,
+        taxes: pastTaxes,
+        variant: 'current',
+      }),
       effectiveListData: getEffectiveEscrowListData(
         analysisDate,
         effectiveDueDate,
         effectivePayment,
       ),
-      effectivePieData: getEffectivePieData({
+      effectivePieData: getPieData({
         homeownersHazard,
         mortgage,
         taxes,
+        variant: 'effective',
       }),
     }),
   );

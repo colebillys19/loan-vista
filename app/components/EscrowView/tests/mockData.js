@@ -7,9 +7,9 @@ export const MOCK_ESCROW_DATA = {
     ],
   },
   currentPieData: [
-    { color: 'red', text: 'County/City Tax', value: 123.4 },
-    { color: 'green', text: 'Other Tax', value: 67.8 },
-    { color: 'blue', text: 'County Tax', value: 90 },
+    { color: 'red', tooltipValue: 1, x: 'County/City Tax', y: 123.4 },
+    { color: 'green', tooltipValue: 1, x: 'Other Tax', y: 67.8 },
+    { color: 'blue', tooltipValue: 1, x: 'County Tax', y: 90 },
   ],
   effectiveListData: {
     listData: [
@@ -19,9 +19,9 @@ export const MOCK_ESCROW_DATA = {
     ],
   },
   effectivePieData: [
-    { color: 'red', text: 'County/City Tax', value: 123.4 },
-    { color: 'green', text: 'Other Tax', value: 67.8 },
-    { color: 'blue', text: 'County Tax', value: 90 },
+    { color: 'red', tooltipValue: 1, x: 'County/City Tax', y: 123.4 },
+    { color: 'green', tooltipValue: 1, x: 'Other Tax', y: 67.8 },
+    { color: 'blue', tooltipValue: 1, x: 'County Tax', y: 90 },
   ],
 };
 

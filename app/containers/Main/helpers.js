@@ -1,35 +1,17 @@
 import moment from 'moment';
 import { lowerCase } from 'lodash';
 
-import { appColorA, appColorB, appColorC } from 'styleConstants';
+import {
+  altPieColorA,
+  altPieColorB,
+  altPieColorC,
+  appColorA,
+  appColorB,
+  appColorC,
+} from 'styleConstants';
 import { convertNumToCurrency, toTitleCase } from 'utils/globalHelpers';
 
 import { DASHBOARD_BORROWER_LABEL_DICT } from './selectorConstants';
-
-/**
- * addSliceColors
- * @description ...
- */
-export const addSliceColors = (arr) => {
-  let colors = [appColorA, appColorB, appColorC];
-
-  const newArr = arr.map((obj) => {
-    if (!colors.length) {
-      colors = [appColorA, appColorB, appColorC];
-    }
-
-    return { ...obj, color: colors.pop() };
-  });
-
-  if (
-    newArr.length > 3 &&
-    newArr[0].color === newArr[newArr.length - 1].color
-  ) {
-    newArr[newArr.length - 1].color = newArr[1].color;
-  }
-
-  return newArr;
-};
 
 /**
  * convertNumToPercentage
@@ -108,6 +90,39 @@ export const formatPhoneNumber = (numStr) => {
   const c = numStr.slice(-4);
 
   return `(${a}) ${b}-${c}`;
+};
+
+/**
+ * formatPieData
+ * @description: ...
+ */
+export const formatPieData = (data, variant) => {
+  const minSliceVal = data.reduce((acc, { y }) => acc + y, 0) / 40;
+  const colors =
+    variant === 'effective'
+      ? [appColorC, appColorB, appColorA]
+      : [altPieColorC, altPieColorB, altPieColorA];
+  let mutableColors = [...colors];
+
+  const formattedData = data.map(({ x, y }) => {
+    if (!mutableColors.length) {
+      mutableColors = [...colors];
+    }
+
+    return {
+      color: mutableColors.pop(),
+      tooltipValue: y,
+      x,
+      y: y < minSliceVal ? minSliceVal : y,
+    };
+  });
+
+  const lastObj = formattedData[formattedData.length - 1];
+  if (formattedData.length > 3 && formattedData[0].color === lastObj.color) {
+    lastObj.color = formattedData[1].color;
+  }
+
+  return formattedData;
 };
 
 /**

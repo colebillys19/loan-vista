@@ -4,7 +4,7 @@ export const appColorA = 'rgb(80, 103, 55)';
 export const appColorAOpaque = 'rgba(80, 103, 55, 0.5)';
 export const appColorB = 'rgb(255, 191, 0)';
 export const appColorBOpaque = 'rgb(255, 191, 0, 0.5)';
-export const appColorC = 'rgb(110, 112, 197)';
+export const appColorC = 'rgb(140, 142, 209)';
 
 export const iconColorA = 'rgba(255, 191, 0, 0.5)';
 export const iconColorB = 'rgba(80, 103, 55, 0.5)';
@@ -17,6 +17,9 @@ export const backgroundColor = 'rgb(248, 248, 255)';
 export const borderGrey = 'rgb(204, 204, 204)';
 export const errorColor = 'rgb(244, 67, 54)';
 export const skeletonGrey = 'rgb(232, 232, 232)';
+export const altPieColorA = 'rgb(246, 153, 96)';
+export const altPieColorB = 'rgb(85, 159, 250)';
+export const altPieColorC = 'rgb(239, 106, 105)';
 
 export const loadingAnimationStyles = css`
   background: linear-gradient(45deg, ${skeletonGrey}, ${backgroundColor});

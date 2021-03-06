@@ -8,8 +8,8 @@ import {
   SIDEBAR_SUMMARY_LABEL_DICT,
 } from './selectorConstants';
 import {
-  addSliceColors,
   dataFormatter,
+  formatPieData,
   getBorrowerKeyValues,
   getFormattedAddress,
 } from './helpers';
@@ -58,9 +58,9 @@ export const getCurrentEscrowListData = (
  */
 // todo
 export const getCurrentPieData = () => [
-  { color: 'red', text: 'County/City Tax', value: 123.4 },
-  { color: 'green', text: 'Other Tax', value: 67.8 },
-  { color: 'blue', text: 'County Tax', value: 90 },
+  { color: 'red', tooltipValue: 1, x: 'County/City Tax', y: 123.4 },
+  { color: 'green', tooltipValue: 1, x: 'Other Tax', y: 67.8 },
+  { color: 'blue', tooltipValue: 1, x: 'County Tax', y: 90 },
 ];
 
 /**
@@ -160,36 +160,6 @@ export const getEffectiveEscrowListData = (
 });
 
 /**
- * getEffectivePieData
- * @description: ...
- */
-export const getEffectivePieData = ({ homeownersHazard, mortgage, taxes }) => {
-  const homeownersHazardArr = homeownersHazard.map(
-    ({ annualPremium, company, insuranceType, policyType }) => ({
-      text: `${dataFormatter(
-        insuranceType,
-        'stringTitleCase',
-      )} Insurance (${policyType}, ${company})`,
-      value: annualPremium,
-    }),
-  );
-
-  const mortgageArr = mortgage.map(({ amount, company, insuranceId }) => ({
-    text: `Mortgage Insurance (${company}, ${insuranceId})`,
-    value: amount,
-  }));
-
-  const taxesArr = taxes.map(({ amount, taxId, type }) => ({
-    text: `${dataFormatter(type, 'stringTitleCase')} Tax (${taxId})`,
-    value: amount,
-  }));
-
-  const combinedArr = homeownersHazardArr.concat(mortgageArr.concat(taxesArr));
-
-  return addSliceColors(combinedArr);
-};
-
-/**
  * getEscrowHomeowners
  * @description: ...
  */
@@ -263,6 +233,36 @@ export const getPaymentSummary = (paymentSummaryData) => {
     label,
     value: dataFormatter(paymentSummaryData[key], format),
   }));
+};
+
+/**
+ * getPieData
+ * @description: ...
+ */
+export const getPieData = ({ homeownersHazard, mortgage, taxes, variant }) => {
+  const homeownersHazardArr = homeownersHazard.map(
+    ({ annualPremium, company, insuranceType, policyType }) => ({
+      x: `${dataFormatter(
+        insuranceType,
+        'stringTitleCase',
+      )} Insurance (${policyType}, ${company})`,
+      y: annualPremium,
+    }),
+  );
+
+  const mortgageArr = mortgage.map(({ amount, company, insuranceId }) => ({
+    x: `Mortgage Insurance (${company}, ${insuranceId})`,
+    y: amount,
+  }));
+
+  const taxesArr = taxes.map(({ amount, taxId, type }) => ({
+    x: `${dataFormatter(type, 'stringTitleCase')} Tax (${taxId})`,
+    y: amount,
+  }));
+
+  const combinedArr = homeownersHazardArr.concat(mortgageArr.concat(taxesArr));
+
+  return formatPieData(combinedArr, variant);
 };
 
 /**

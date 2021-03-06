@@ -10,14 +10,14 @@ import {
   Value,
 } from './styledComponents';
 
-const Tooltip = ({ active, datum: { text, value }, tooltipPlacement }) => (
+const Tooltip = ({ active, datum: { tooltipValue, x }, tooltipPlacement }) => (
   <StyledTooltip
     open={!!active}
     placement={tooltipPlacement}
     title={
       <TooltipContent tooltipPlacement={tooltipPlacement}>
-        <Metric>{text}</Metric>
-        <Value>{convertNumToCurrency(value)}</Value>
+        <Metric>{x}</Metric>
+        <Value>{convertNumToCurrency(tooltipValue)}</Value>
       </TooltipContent>
     }
     TransitionProps={{ timeout: 0 }}

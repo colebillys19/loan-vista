@@ -33,8 +33,6 @@ const PieChart = ({ data, id }) => {
       }
       padding={0}
       width={200}
-      x="name"
-      y="value"
     />
   );
 };
