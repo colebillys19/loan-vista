@@ -6,8 +6,7 @@ import {
   FETCH_CALLS_DATA_FAILURE,
   FETCH_CALLS_DATA_SUCCESS,
   SET_LOADING_TRUE,
-  UPDATE_FILTER_PARAM,
-  UPDATE_SORT_PARAM,
+  UPDATE_FILTER_STATE,
 } from './constants';
 
 export const initialState = callsInitialState;
@@ -32,27 +31,19 @@ const callsReducer = (state = initialState, { payload, type }) =>
         draft.sortLoading = false;
         break;
       case FETCH_CALLS_DATA_SUCCESS:
-        const {
-          callsData,
-          paramsUsed: { dateFrom, dateTo, keyword, sortCol: c, sortOrder },
-        } = payload;
-        draft.noDataFetched = !callsData.length;
+        const { callsData, params } = payload;
         draft.callsData = callsData;
-        draft.oldFilterParams = { dateFrom, dateTo, keyword };
-        draft.oldSortParams = { sortCol: c, sortOrder };
+        draft.lastFetch = params;
         draft.loading = false;
+        draft.noDataFetched = !callsData.length;
         draft.sortLoading = false;
         break;
       case SET_LOADING_TRUE:
         draft.loading = true;
         break;
-      case UPDATE_FILTER_PARAM:
+      case UPDATE_FILTER_STATE:
         const { param, value } = payload;
-        draft.currentFilterParams[param] = value;
-        break;
-      case UPDATE_SORT_PARAM:
-        const { param: p, value: v } = payload;
-        draft.currentSortParams[p] = v;
+        draft.filterState[param] = value;
         break;
     }
   });

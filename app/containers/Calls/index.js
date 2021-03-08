@@ -19,12 +19,7 @@ import makeSelectMain from 'containers/Main/selectors';
 import makeSelectCalls, { makeSelectCallsData } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import {
-  fetchCallsData,
-  setLoadingTrue,
-  updateFilterParam,
-  updateSortParam,
-} from './actions';
+import { fetchCallsData, setLoadingTrue, updateFilterState } from './actions';
 
 export const Calls = ({
   callsData,
@@ -32,7 +27,7 @@ export const Calls = ({
   currentSortParams,
   dispatchFetchCallsData,
   dispatchSetLoadingTrue,
-  dispatchUpdateParam,
+  dispatchUpdateFilterState,
   error,
   loading,
   loanNumber,
@@ -68,7 +63,7 @@ export const Calls = ({
       currentFilterParams={currentFilterParams}
       currentSortParams={currentSortParams}
       dispatchFetchCallsData={dispatchFetchCallsData}
-      dispatchUpdateParam={dispatchUpdateParam}
+      dispatchUpdateFilterState={dispatchUpdateFilterState}
       error={mainError || error}
       loading={loading}
       noDataFetched={noDataFetched}
@@ -86,7 +81,7 @@ Calls.propTypes = {
   currentSortParams: T.object.isRequired,
   dispatchFetchCallsData: T.func.isRequired,
   dispatchSetLoadingTrue: T.func.isRequired,
-  dispatchUpdateParam: T.func.isRequired,
+  dispatchUpdateFilterState: T.func.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
   loading: T.bool.isRequired,
   loanNumber: T.string.isRequired,
@@ -95,7 +90,7 @@ Calls.propTypes = {
   oldFilterParams: T.object.isRequired,
   oldSortParams: T.object.isRequired,
   pathname: T.string.isRequired,
-  sortLoading: T.bool.isRequired,
+  sortLoading: T.oneOfType([T.bool, T.string]).isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
@@ -116,8 +111,7 @@ const mapStateToProps = createStructuredSelector({
 const mapDispatchToProps = (dispatch) => ({
   dispatchFetchCallsData: (payload) => dispatch(fetchCallsData(payload)),
   dispatchSetLoadingTrue: () => dispatch(setLoadingTrue()),
-  dispatchUpdateFilterParam: (payload) => dispatch(updateFilterParam(payload)),
-  dispatchUpdateSortParam: (payload) => dispatch(updateSortParam(payload)),
+  dispatchUpdateFilterState: (payload) => dispatch(updateFilterState(payload)),
 });
 
 const withConnect = connect(

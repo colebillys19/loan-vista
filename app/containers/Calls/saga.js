@@ -9,36 +9,27 @@ import { fetchCallsDataFailure, fetchCallsDataSuccess } from './actions';
 import makeSelectCalls from './selectors';
 import { FETCH_CALLS_DATA } from './constants';
 
-export function* fetchCallsDataSaga() {
+export function* fetchCallsDataSaga({ payload }) {
   try {
     const loanNumber = yield select(makeSelectMain('loanNumber'));
 
     if (loanNumber) {
-      const currentFilterParams = yield select(
-        makeSelectCalls('currentFilterParams'),
-      );
-      const currentSortParams = yield select(
-        makeSelectCalls('currentSortParams'),
-      );
-      const oldFilterParams = yield select(makeSelectCalls('oldFilterParams'));
-      const oldSortParams = yield select(makeSelectCalls('oldSortParams'));
-
-      const currentParams = { ...currentFilterParams, ...currentSortParams };
-      const oldParams = { ...oldFilterParams, ...oldSortParams };
+      const { sortCol, sortOrder } = payload;
+      const filterState = yield select(makeSelectCalls('filterState'));
+      const lastFetch = yield select(makeSelectCalls('lastFetch'));
 
       const queryParams = Object.assign(
         {},
         { loanNumber },
-        oldParams,
-        currentParams,
+        lastFetch,
+        filterState,
+        { sortCol, sortOrder },
       );
+      const endpoint = `/api/calls/?${querystring.stringify(queryParams)}`;
 
-      const { callsData, newFetchParams } = yield call(
-        get,
-        `/api/calls/?${querystring.stringify(queryParams)}`,
-      );
+      const { callsData, params } = yield call(get, endpoint);
 
-      yield put(fetchCallsDataSuccess(callsData, newFetchParams));
+      yield put(fetchCallsDataSuccess(callsData, params));
     }
   } catch (error) {
     console.error(error); // eslint-disable-line
