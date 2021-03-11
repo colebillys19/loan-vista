@@ -23,7 +23,7 @@ export const fetchCallsDataSuccess = (callsData, params) => ({
 
 export const setLoadingTrue = () => ({ type: SET_LOADING_TRUE });
 
-export const updateFilterState = (param, value) => ({
-  payload: { param, value },
+export const updateFilterState = (payload) => ({
+  payload,
   type: UPDATE_FILTER_STATE,
 });

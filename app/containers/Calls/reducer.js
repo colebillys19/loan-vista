@@ -33,17 +33,15 @@ const callsReducer = (state = initialState, { payload, type }) =>
       case FETCH_CALLS_DATA_SUCCESS:
         const { callsData, params } = payload;
         draft.callsData = callsData;
-        draft.lastFetch = params;
+        draft.lastFetchParams = params;
         draft.loading = false;
-        draft.noDataFetched = !callsData.length;
         draft.sortLoading = false;
         break;
       case SET_LOADING_TRUE:
         draft.loading = true;
         break;
       case UPDATE_FILTER_STATE:
-        const { param, value } = payload;
-        draft.filterState[param] = value;
+        draft.filterState = payload;
         break;
     }
   });

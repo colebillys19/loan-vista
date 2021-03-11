@@ -1,5 +1,12 @@
 import moment from 'moment';
 
+export const formatFilterState = ({ dateFrom, dateTo, keyword }) => {
+  const dateFromStr = dateFrom ? dateFrom.format('YYYY-MM-DD') : '';
+  const dateToStr = dateTo ? dateTo.format('YYYY-MM-DD') : '';
+
+  return { dateFrom: dateFromStr, dateTo: dateToStr, keyword };
+};
+
 export const getCallsData = (callsData) =>
   callsData.map(({ audio, date, desc, time, ...restData }) => {
     const audioFormatted = `${audio.slice(0, 20)}...`;

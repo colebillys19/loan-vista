@@ -8,6 +8,7 @@ import makeSelectMain from 'containers/Main/selectors';
 import { fetchCallsDataFailure, fetchCallsDataSuccess } from './actions';
 import makeSelectCalls from './selectors';
 import { FETCH_CALLS_DATA } from './constants';
+import { formatFilterState } from './helpers';
 
 export function* fetchCallsDataSaga({ payload }) {
   try {
@@ -16,15 +17,20 @@ export function* fetchCallsDataSaga({ payload }) {
     if (loanNumber) {
       const { sortCol, sortOrder } = payload;
       const filterState = yield select(makeSelectCalls('filterState'));
-      const lastFetch = yield select(makeSelectCalls('lastFetch'));
+      const lastFetchParams = yield select(makeSelectCalls('lastFetchParams'));
 
       const queryParams = Object.assign(
         {},
         { loanNumber },
-        lastFetch,
-        filterState,
-        { sortCol, sortOrder },
+        lastFetchParams,
+        formatFilterState(filterState),
       );
+
+      if (sortCol && sortOrder) {
+        queryParams.sortCol = sortCol;
+        queryParams.sortOrder = sortOrder;
+      }
+
       const endpoint = `/api/calls/?${querystring.stringify(queryParams)}`;
 
       const { callsData, params } = yield call(get, endpoint);

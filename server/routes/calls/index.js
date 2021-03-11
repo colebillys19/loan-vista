@@ -16,7 +16,7 @@ const getCalls = (req, res, next) => {
     const targetCallsData = getTargetCallsData(callsData, fetchParams);
 
     setTimeout(() => {
-      res.send({ callsData: targetCallsData, newFetchParams: fetchParams });
+      res.send({ callsData: targetCallsData, params: fetchParams });
     }, 1000);
   } catch (error) {
     next(error);

@@ -3,7 +3,7 @@
  * @description ...
  */
 
-import React, { useEffect, useState } from 'react';
+import React, { memo } from 'react';
 import T from 'prop-types';
 
 import ListBorders from 'components/_base-ui/ListBorders';
@@ -20,29 +20,23 @@ import {
 import TableRow from './TableRow';
 import { CustomTableHead } from './styledComponents';
 
-const CallsList = ({
-  callsData,
-  dispatchFetchCallsData,
-  headers,
-  sortLoading,
-  sortValues: { sortCol: currentSortCol, sortOrder: currentSortOrder },
-}) => {
-  const [colClicked, setColClicked] = useState('');
+const CallsList = (props) => {
+  // console.log('* * * components/CallsList');
+  // console.log(props);
 
-  useEffect(() => {
-    setColClicked('');
-  }, [currentSortCol, currentSortOrder]);
+  const {
+    callsData,
+    dispatchFetchCallsData,
+    headers,
+    lastFetchParams: { sortCol, sortOrder },
+    sortLoading,
+  } = props;
 
   const handleSortClick = (header) => {
-    setColClicked(header);
-
-    if (header !== currentSortCol) {
-      dispatchFetchCallsData({ sortCol: header, sortOrder: 'desc' });
-    } else {
-      dispatchFetchCallsData({
-        sortOrder: currentSortOrder === 'desc' ? 'asc' : 'desc',
-      });
-    }
+    dispatchFetchCallsData({
+      sortCol: header,
+      sortOrder: header === sortCol && sortOrder === 'desc' ? 'asc' : 'desc',
+    });
   };
 
   return (
@@ -54,17 +48,11 @@ const CallsList = ({
             {headers.map((header) => {
               if (['date', 'dept', 'rep'].includes(header)) {
                 return (
-                  <StyledTableHeader
-                    key={header}
-                    loading={sortLoading && header === colClicked}
-                    scope="col"
-                  >
+                  <StyledTableHeader key={header} scope="col">
                     <ListSortButton
-                      isActive={header === currentSortCol}
-                      isAscending={
-                        header === currentSortCol && currentSortOrder === 'asc'
-                      }
-                      loading={sortLoading && header === colClicked}
+                      isActive={header === sortCol}
+                      isAscending={header === sortCol && sortOrder === 'asc'}
+                      loading={sortLoading === header}
                       onClick={() => handleSortClick(header)}
                       text={header}
                     />
@@ -105,12 +93,18 @@ CallsList.propTypes = {
   ).isRequired,
   dispatchFetchCallsData: T.func.isRequired,
   headers: T.arrayOf(T.string),
+  lastFetchParams: T.shape({
+    dateFrom: T.string,
+    dateTo: T.string,
+    keyword: T.string,
+    sortCol: T.string,
+    sortOrder: T.string,
+  }).isRequired,
   sortLoading: T.bool.isRequired,
-  sortValues: T.shape({ sortCol: T.string, sortOrder: T.string }).isRequired,
 };
 
 CallsList.defaultProps = {
   headers: ['date', 'time', 'dept', 'rep', 'desc', 'audio'],
 };
 
-export default CallsList;
+export default memo(CallsList);
