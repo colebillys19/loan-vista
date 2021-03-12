@@ -6,7 +6,6 @@ import {
   FETCH_CALLS_DATA_FAILURE,
   FETCH_CALLS_DATA_SUCCESS,
   SET_LOADING_TRUE,
-  UPDATE_FILTER_STATE,
 } from './constants';
 
 export const initialState = callsInitialState;
@@ -39,9 +38,6 @@ const callsReducer = (state = initialState, { payload, type }) =>
         break;
       case SET_LOADING_TRUE:
         draft.loading = true;
-        break;
-      case UPDATE_FILTER_STATE:
-        draft.filterState = payload;
         break;
     }
   });

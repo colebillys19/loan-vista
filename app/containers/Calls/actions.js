@@ -3,7 +3,6 @@ import {
   FETCH_CALLS_DATA_FAILURE,
   FETCH_CALLS_DATA_SUCCESS,
   SET_LOADING_TRUE,
-  UPDATE_FILTER_STATE,
 } from './constants';
 
 export const fetchCallsData = (sortCol, sortOrder) => ({
@@ -22,8 +21,3 @@ export const fetchCallsDataSuccess = (callsData, params) => ({
 });
 
 export const setLoadingTrue = () => ({ type: SET_LOADING_TRUE });
-
-export const updateFilterState = (payload) => ({
-  payload,
-  type: UPDATE_FILTER_STATE,
-});

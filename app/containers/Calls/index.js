@@ -19,15 +19,13 @@ import makeSelectMain from 'containers/Main/selectors';
 import makeSelectCalls, { makeSelectCallsData } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import { fetchCallsData, setLoadingTrue, updateFilterState } from './actions';
+import { fetchCallsData, setLoadingTrue } from './actions';
 
 export const Calls = ({
   callsData,
   dispatchFetchCallsData,
   dispatchSetLoadingTrue,
-  dispatchUpdateFilterState,
   error,
-  filterState,
   lastFetchParams,
   loading,
   loanNumber,
@@ -58,9 +56,7 @@ export const Calls = ({
     <CallsView
       callsData={callsData}
       dispatchFetchCallsData={dispatchFetchCallsData}
-      dispatchUpdateFilterState={dispatchUpdateFilterState}
       error={mainError || error}
-      filterState={filterState}
       lastFetchParams={lastFetchParams}
       loading={loading}
       pathname={pathname}
@@ -73,9 +69,7 @@ Calls.propTypes = {
   callsData: T.array.isRequired,
   dispatchFetchCallsData: T.func.isRequired,
   dispatchSetLoadingTrue: T.func.isRequired,
-  dispatchUpdateFilterState: T.func.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
-  filterState: T.object.isRequired,
   lastFetchParams: T.object.isRequired,
   loading: T.bool.isRequired,
   loanNumber: T.string.isRequired,
@@ -87,7 +81,6 @@ Calls.propTypes = {
 const mapStateToProps = createStructuredSelector({
   callsData: makeSelectCallsData(),
   error: makeSelectCalls('error'),
-  filterState: makeSelectCalls('filterState'),
   lastFetchParams: makeSelectCalls('lastFetchParams'),
   loading: makeSelectCalls('loading'),
   loanNumber: makeSelectMain('loanNumber'),
@@ -100,7 +93,6 @@ const mapDispatchToProps = (dispatch) => ({
   dispatchFetchCallsData: (sortCol, sortOrder) =>
     dispatch(fetchCallsData(sortCol, sortOrder)),
   dispatchSetLoadingTrue: () => dispatch(setLoadingTrue()),
-  dispatchUpdateFilterState: (payload) => dispatch(updateFilterState(payload)),
 });
 
 const withConnect = connect(

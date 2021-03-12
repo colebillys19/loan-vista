@@ -2,13 +2,14 @@ import { all, call, put, select, takeLatest } from 'redux-saga/effects';
 import querystring from 'querystring';
 
 import { REQUEST_ERROR_MESSAGE } from 'utils/globalConstants';
+import { formatFilterState } from 'utils/globalHelpers';
 import { get } from 'utils/request';
 import makeSelectMain from 'containers/Main/selectors';
+import makeSelectListFilter from 'containers/ListFilter/selectors';
 
 import { fetchCallsDataFailure, fetchCallsDataSuccess } from './actions';
 import makeSelectCalls from './selectors';
 import { FETCH_CALLS_DATA } from './constants';
-import { formatFilterState } from './helpers';
 
 export function* fetchCallsDataSaga({ payload }) {
   try {
@@ -16,7 +17,7 @@ export function* fetchCallsDataSaga({ payload }) {
 
     if (loanNumber) {
       const { sortCol, sortOrder } = payload;
-      const filterState = yield select(makeSelectCalls('filterState'));
+      const filterState = yield select(makeSelectListFilter('calls'));
       const lastFetchParams = yield select(makeSelectCalls('lastFetchParams'));
 
       const queryParams = Object.assign(

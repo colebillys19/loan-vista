@@ -11,6 +11,24 @@ export const convertNumToCurrency = (num, withAdorn = true) => {
 };
 
 /**
+ * formatFilterState
+ * @description: ...
+ */
+export const formatFilterState = ({ dateFrom, dateTo, ...restState }) => ({
+  ...restState,
+  ...getDateStrings(dateFrom, dateTo),
+});
+
+/**
+ * getDateStrings
+ * @description: ...
+ */
+const getDateStrings = (dateFrom, dateTo) => ({
+  dateFrom: dateFrom ? dateFrom.format('YYYY-MM-DD') : '',
+  dateTo: dateTo ? dateTo.format('YYYY-MM-DD') : '',
+});
+
+/**
  * getHealthColor
  * @description: ...
  */
