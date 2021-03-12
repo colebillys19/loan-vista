@@ -23,10 +23,8 @@ const DateInput = ({ error, onChange, setError, value }) => {
   const onError = (err) => {
     if (err.length) {
       setError(err);
-    } else if (error) {
+    } else if (error.length) {
       setError(error);
-    } else {
-      setError('');
     }
   };
 

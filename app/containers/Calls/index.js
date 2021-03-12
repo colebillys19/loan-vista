@@ -21,25 +21,20 @@ import reducer from './reducer';
 import saga from './saga';
 import { fetchCallsData, setLoadingTrue, updateFilterState } from './actions';
 
-export const Calls = (props) => {
-  // console.log('* * * containers/Calls');
-  // console.log(props);
-
-  const {
-    callsData,
-    dispatchFetchCallsData,
-    dispatchSetLoadingTrue,
-    dispatchUpdateFilterState,
-    error,
-    filterState,
-    lastFetchParams,
-    loading,
-    loanNumber,
-    mainError,
-    pathname,
-    sortLoading,
-  } = props;
-
+export const Calls = ({
+  callsData,
+  dispatchFetchCallsData,
+  dispatchSetLoadingTrue,
+  dispatchUpdateFilterState,
+  error,
+  filterState,
+  lastFetchParams,
+  loading,
+  loanNumber,
+  mainError,
+  pathname,
+  sortLoading,
+}) => {
   useInjectReducer({ key: 'calls', reducer });
   useInjectSaga({ key: 'calls', saga });
 

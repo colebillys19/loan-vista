@@ -12,20 +12,17 @@ import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import ListFallback from 'components/_base-ui/ListFallback';
 import TabContainer from 'components/_base-ui/TabContainer';
 
-const CallsView = (props) => {
-  // console.log('* * * components/CallsView');
-  // console.log(props);
-
-  const {
-    callsData,
-    dispatchFetchCallsData,
-    dispatchUpdateFilterState,
-    error,
-    filterState,
-    lastFetchParams,
-    loading,
-    sortLoading,
-  } = props;
+const CallsView = ({
+  callsData,
+  dispatchFetchCallsData,
+  dispatchUpdateFilterState,
+  error,
+  filterState,
+  lastFetchParams,
+  loading,
+  sortLoading,
+}) => {
+  const { dateFrom, dateTo, keyword, sortCol, sortOrder } = lastFetchParams;
 
   return (
     <TabContainer aria-labelledby="calls-tab" id="calls-view">
@@ -33,14 +30,14 @@ const CallsView = (props) => {
         dispatchFetchData={dispatchFetchCallsData}
         dispatchUpdateFilterState={dispatchUpdateFilterState}
         filterState={filterState}
-        lastFetchParams={lastFetchParams}
+        lastFetchParams={{ dateFrom, dateTo, keyword }}
       />
       <ConditionalRender
         Component={
           <CallsList
             callsData={callsData}
             dispatchFetchCallsData={dispatchFetchCallsData}
-            lastFetchParams={lastFetchParams}
+            lastFetchParams={{ sortCol, sortOrder }}
             sortLoading={sortLoading}
           />
         }
@@ -57,7 +54,13 @@ CallsView.propTypes = {
   dispatchUpdateFilterState: T.func.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
   filterState: T.object.isRequired,
-  lastFetchParams: T.object.isRequired,
+  lastFetchParams: T.shape({
+    dateFrom: T.string,
+    dateTo: T.string,
+    keyword: T.string,
+    sortCol: T.string,
+    sortOrder: T.string,
+  }).isRequired,
   loading: T.bool.isRequired,
   sortLoading: T.oneOfType([T.bool, T.string]).isRequired,
 };

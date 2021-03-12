@@ -20,18 +20,13 @@ import {
 import TableRow from './TableRow';
 import { CustomTableHead } from './styledComponents';
 
-const CallsList = (props) => {
-  // console.log('* * * components/CallsList');
-  // console.log(props);
-
-  const {
-    callsData,
-    dispatchFetchCallsData,
-    headers,
-    lastFetchParams: { sortCol, sortOrder },
-    sortLoading,
-  } = props;
-
+const CallsList = ({
+  callsData,
+  dispatchFetchCallsData,
+  headers,
+  lastFetchParams: { sortCol, sortOrder },
+  sortLoading,
+}) => {
   const handleSortClick = (header) => {
     dispatchFetchCallsData({
       sortCol: header,
