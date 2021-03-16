@@ -1,1 +1,1 @@
-export const UPDATE_FILTER_STATE = 'app/Calls/UPDATE_FILTER_STATE';
+export const UPDATE_FILTER_STATE = 'app/ListFilter/UPDATE_FILTER_STATE';

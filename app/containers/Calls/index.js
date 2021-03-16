@@ -13,7 +13,9 @@ import { makeSelectPathname } from 'containers/App/selectors';
 import { useInjectReducer } from 'utils/injectReducer';
 import { useInjectSaga } from 'utils/injectSaga';
 import { usePrevious } from 'utils/customHooks';
-import CallsView from 'components/CallsView';
+import CallsList from 'components/CallsList';
+import ConditionalRender from 'components/_base-ui/ConditionalRender';
+import ListFallback from 'components/_base-ui/ListFallback';
 import makeSelectMain from 'containers/Main/selectors';
 
 import makeSelectCalls, { makeSelectCallsData } from './selectors';
@@ -26,7 +28,7 @@ export const Calls = ({
   dispatchFetchCallsData,
   dispatchSetLoadingTrue,
   error,
-  lastFetchParams,
+  lastFetchParams: { sortCol, sortOrder },
   loading,
   loanNumber,
   mainError,
@@ -53,17 +55,30 @@ export const Calls = ({
   ]);
 
   return (
-    <CallsView
-      callsData={callsData}
-      dispatchFetchCallsData={dispatchFetchCallsData}
-      error={mainError || error}
-      lastFetchParams={lastFetchParams}
-      loading={loading}
-      pathname={pathname}
-      sortLoading={sortLoading}
+    <ConditionalRender
+      Component={
+        <CallsList
+          callsData={callsData}
+          dispatchFetchCallsData={dispatchFetchCallsData}
+          lastFetchParams={{ sortCol, sortOrder }}
+          sortLoading={sortLoading}
+        />
+      }
+      FallbackComponent={<ListFallback error={error} loading={loading} />}
+      shouldRender={!error && !mainError && !loading && !!callsData.length}
     />
   );
 };
+
+// <CallsView
+//   callsData={callsData}
+//   dispatchFetchCallsData={dispatchFetchCallsData}
+//   error={mainError || error}
+//   lastFetchParams={lastFetchParams}
+//   loading={loading}
+//   pathname={pathname}
+//   sortLoading={sortLoading}
+// />
 
 Calls.propTypes = {
   callsData: T.array.isRequired,

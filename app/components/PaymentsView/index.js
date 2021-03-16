@@ -4,53 +4,20 @@
  */
 
 import React from 'react';
-import T from 'prop-types';
+// import T from 'prop-types';
 
-import ListFilter from 'components/ListFilter';
-import PaymentsList from 'components/PaymentsList';
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import ListFallback from 'components/_base-ui/ListFallback';
+import ListFilter from 'containers/ListFilter';
+// import Payments from 'containers/Payments';
+
 import TabContainer from 'components/_base-ui/TabContainer';
 
-const PaymentsView = ({
-  dispatchFetchPaymentsData,
-  error,
-  fetchParams,
-  loading,
-  noDataFetched,
-  paymentsData,
-  sortLoading,
-  sortValues,
-}) => (
+const PaymentsView = () => (
   <TabContainer aria-labelledby="payments-tab" id="payments-view">
-    <ListFilter
-      dispatchFetchData={dispatchFetchPaymentsData}
-      fetchParams={fetchParams}
-    />
-    <ConditionalRender
-      Component={
-        <PaymentsList
-          dispatchFetchPaymentsData={dispatchFetchPaymentsData}
-          paymentsData={paymentsData}
-          sortLoading={sortLoading}
-          sortValues={sortValues}
-        />
-      }
-      FallbackComponent={<ListFallback error={error} loading={loading} />}
-      shouldRender={!error && !loading && !noDataFetched}
-    />
+    <ListFilter />
+    {/* <Payments /> */}
   </TabContainer>
 );
 
-PaymentsView.propTypes = {
-  dispatchFetchPaymentsData: T.func.isRequired,
-  error: T.oneOfType([T.bool, T.string]).isRequired,
-  fetchParams: T.object.isRequired,
-  loading: T.bool.isRequired,
-  noDataFetched: T.bool.isRequired,
-  paymentsData: T.array.isRequired,
-  sortLoading: T.bool.isRequired,
-  sortValues: T.object.isRequired,
-};
+// PaymentsView.propTypes = {};
 
 export default PaymentsView;
