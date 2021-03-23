@@ -1,5 +1,5 @@
 /**
- * CallsView
+ * TabView
  * @description ...
  */
 
@@ -11,13 +11,13 @@ import ListFilter from 'containers/ListFilter';
 
 import TabContainer from 'components/_base-ui/TabContainer';
 
-const CallsView = () => (
+const TabView = () => (
   <TabContainer aria-labelledby="calls-tab" id="calls-view">
     <ListFilter />
     <Calls />
   </TabContainer>
 );
 
-// CallsView.propTypes = {};
+// TabView.propTypes = {};
 
-export default CallsView;
+export default TabView;

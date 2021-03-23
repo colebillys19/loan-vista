@@ -5,7 +5,7 @@ import { REQUEST_ERROR_MESSAGE } from 'utils/globalConstants';
 import { formatFilterState } from 'utils/globalHelpers';
 import { get } from 'utils/request';
 import makeSelectMain from 'containers/Main/selectors';
-import makeSelectListFilter from 'containers/ListFilter/selectors';
+import { makeSelectListFilterState } from 'containers/ListFilter/selectors';
 
 import { fetchCallsDataFailure, fetchCallsDataSuccess } from './actions';
 import makeSelectCalls from './selectors';
@@ -17,14 +17,14 @@ export function* fetchCallsDataSaga({ payload }) {
 
     if (loanNumber) {
       const { sortCol, sortOrder } = payload;
-      const filterState = yield select(makeSelectListFilter('calls'));
+      const filterState = yield select(makeSelectListFilterState());
       const lastFetchParams = yield select(makeSelectCalls('lastFetchParams'));
 
       const queryParams = Object.assign(
         {},
         { loanNumber },
         lastFetchParams,
-        formatFilterState(filterState),
+        formatFilterState(filterState.calls),
       );
 
       if (sortCol && sortOrder) {

@@ -3,8 +3,6 @@
 // import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 // import MomentUtils from '@date-io/moment';
 
-// import { checkBasicRendering } from 'utils/testingHelpers';
-
 // import ListFilter from '../index';
 
 // const mockProps = {
@@ -25,19 +23,22 @@
 //   </MuiPickersUtilsProvider>
 // );
 
-// describe('<ListFilter />', () => {
-//   it('Expect to not log errors in console', () => {
-//     const spy = jest.spyOn(global.console, 'error');
-//     render(component);
+describe('<ListFilter />', () => {
+  // it('Expect to not log errors in console', () => {
+  //   const spy = jest.spyOn(global.console, 'error');
+  //   render(component);
 
-//     expect(spy).not.toHaveBeenCalled();
-//   });
+  //   expect(spy).not.toHaveBeenCalled();
+  // });
 
-//   checkBasicRendering(component);
-// });
+  // it('Should render and match the snapshot', () => {
+  //   const {
+  //     container: { firstChild },
+  //   } = render(Component);
+  //   expect(firstChild).toMatchSnapshot();
+  // });
 
-describe('', () => {
   it('', () => {
-    expect(true).toBeTruthy();
+    expect(false).toBeTruthy();
   });
 });

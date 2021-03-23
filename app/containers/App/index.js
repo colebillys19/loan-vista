@@ -14,14 +14,14 @@ import { push } from 'connected-react-router';
 import GlobalStyles from 'globalStyles';
 
 import AppHeader from 'components/AppHeader';
-import CallsView from 'components/CallsView';
+import CallsTabView from 'containers/Calls/TabView';
 import DashboardView from 'components/DashboardView';
-import DocumentsView from 'components/DocumentsView';
+import DocumentsTabView from 'containers/Documents/TabView';
 import EscrowView from 'components/EscrowView';
 import Main from 'containers/Main';
 import MainContainer from 'components/MainContainer';
 import NotFoundView from 'components/NotFoundView';
-import PaymentsView from 'components/PaymentsView';
+import PaymentsTabView from 'containers/Payments/TabView';
 import SidebarView from 'components/SidebarView';
 import TabNav from 'components/TabNav';
 
@@ -71,9 +71,9 @@ const App = ({ dispatchNavigation, pathname }) => (
                 />
               )}
             />
-            <Route component={CallsView} exact path="/calls" />
-            <Route component={DocumentsView} exact path="/documents" />
-            <Route component={PaymentsView} exact path="/payments" />
+            <Route component={CallsTabView} exact path="/calls" />
+            <Route component={DocumentsTabView} exact path="/documents" />
+            <Route component={PaymentsTabView} exact path="/payments" />
             <Route
               exact
               path="/escrow"

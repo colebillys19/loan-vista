@@ -6,7 +6,8 @@ import { Provider } from 'react-redux';
 import configureStore from 'configureStore';
 import history from 'utils/history';
 
-import { Payments } from '../index';
+import Payments from '../index';
+// import { Payments } from '../index';
 import { MOCK_DATA } from './mockData';
 
 const initialState = {};

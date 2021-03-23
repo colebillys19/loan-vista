@@ -6,7 +6,8 @@ import { Provider } from 'react-redux';
 import configureStore from 'configureStore';
 import history from 'utils/history';
 
-import { Documents } from '../index';
+import Documents from '../index';
+// import { Documents } from '../index';
 import { MOCK_DATA } from './mockData';
 
 const initialState = {};
