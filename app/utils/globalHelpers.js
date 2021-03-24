@@ -24,8 +24,8 @@ export const formatFilterState = ({ dateFrom, dateTo, ...restState }) => ({
  * @description: ...
  */
 const getDateStrings = (dateFrom, dateTo) => ({
-  dateFrom: dateFrom ? dateFrom.format('YYYY-MM-DD') : '',
-  dateTo: dateTo ? dateTo.format('YYYY-MM-DD') : '',
+  dateFrom: dateFrom ? dateFrom.format() : '',
+  dateTo: dateTo ? dateTo.format() : '',
 });
 
 /**

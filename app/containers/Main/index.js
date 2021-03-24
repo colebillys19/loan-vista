@@ -54,9 +54,9 @@ export const Main = ({
 
   useEffect(() => {
     if (isValidRoute(pathname)) {
-      if (!loanNumber && !error && !loading) {
+      if (!loanNumber && !error) {
         dispatchFetchLoanData('9937485204');
-      } else if (prevLoanNumber !== '' && loanNumber !== prevLoanNumber) {
+      } else if (prevLoanNumber && loanNumber !== prevLoanNumber) {
         dispatchFetchLoanData(loanNumber);
       }
     }

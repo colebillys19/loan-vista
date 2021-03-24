@@ -1,5 +1,6 @@
 const fs = require('fs');
 
+const { getDateFromStr, getDateToStr } = require('../helpers');
 const { getTargetCallsData } = require('./helpers');
 
 const getCalls = (req, res, next) => {
@@ -14,6 +15,9 @@ const getCalls = (req, res, next) => {
     const callsData = JSON.parse(callsDataJson);
 
     const targetCallsData = getTargetCallsData(callsData, fetchParams);
+
+    fetchParams.dateFrom = fetchParams.dateFrom || getDateFromStr();
+    fetchParams.dateTo = fetchParams.dateTo || getDateToStr();
 
     setTimeout(() => {
       res.send({ callsData: targetCallsData, params: fetchParams });

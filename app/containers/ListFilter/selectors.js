@@ -9,12 +9,6 @@ import initialState from './initialState';
 
 const selectListFilterDomain = (state) => state.listFilter || initialState;
 
-// const makeSelectListFilter = (prop) =>
-//   createSelector(
-//     selectListFilterDomain,
-//     (substate) => substate[prop],
-//   );
-
 const makeSelectListFilterState = () =>
   createSelector(
     selectListFilterDomain,
@@ -29,7 +23,14 @@ const makeSelectTargetFilterState = () =>
   createSelector(
     makeSelectListFilterState(),
     makeSelectPathname(),
-    (listFilterState, pathname) => listFilterState[pathname.slice(1)],
+    (listFilterState, pathname) => {
+      const targetId = pathname.slice(1);
+
+      return {
+        state: listFilterState[pathname.slice(1)],
+        targetId,
+      };
+    },
   );
 
 /**
@@ -60,7 +61,6 @@ const makeSelectTargetLastFetchParams = () =>
     },
   );
 
-// export default makeSelectListFilter;
 export {
   makeSelectListFilterState,
   makeSelectTargetFilterState,

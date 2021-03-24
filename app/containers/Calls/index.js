@@ -28,11 +28,14 @@ export const Calls = ({
   dispatchFetchCallsData,
   dispatchSetLoadingTrue,
   error,
-  lastFetchParams: { sortCol, sortOrder },
+  lastFetchParams: {
+    dateFrom: lastDateFrom,
+    sortCol: lastSortCol,
+    sortOrder: lastSortOrder,
+  },
   loading,
   loanNumber,
   mainError,
-  pathname,
   sortLoading,
 }) => {
   useInjectReducer({ key: 'calls', reducer });
@@ -43,14 +46,17 @@ export const Calls = ({
   useEffect(() => {
     if (!loanNumber) {
       dispatchSetLoadingTrue();
-    } else if (loanNumber !== prevLoanNumber) {
+    } else if (
+      !lastDateFrom ||
+      (prevLoanNumber && loanNumber !== prevLoanNumber)
+    ) {
       dispatchFetchCallsData();
     }
   }, [
     dispatchFetchCallsData,
     dispatchSetLoadingTrue,
+    lastDateFrom,
     loanNumber,
-    pathname,
     prevLoanNumber,
   ]);
 
@@ -60,7 +66,8 @@ export const Calls = ({
         <CallsList
           callsData={callsData}
           dispatchFetchCallsData={dispatchFetchCallsData}
-          lastFetchParams={{ sortCol, sortOrder }}
+          lastSortCol={lastSortCol}
+          lastSortOrder={lastSortOrder}
           sortLoading={sortLoading}
         />
       }
@@ -70,26 +77,21 @@ export const Calls = ({
   );
 };
 
-// <CallsView
-//   callsData={callsData}
-//   dispatchFetchCallsData={dispatchFetchCallsData}
-//   error={mainError || error}
-//   lastFetchParams={lastFetchParams}
-//   loading={loading}
-//   pathname={pathname}
-//   sortLoading={sortLoading}
-// />
-
 Calls.propTypes = {
   callsData: T.array.isRequired,
   dispatchFetchCallsData: T.func.isRequired,
   dispatchSetLoadingTrue: T.func.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
-  lastFetchParams: T.object.isRequired,
+  lastFetchParams: T.shape({
+    dateFrom: T.string,
+    dateTo: T.string,
+    keyword: T.string,
+    sortCol: T.string,
+    sortOrder: T.string,
+  }).isRequired,
   loading: T.bool.isRequired,
   loanNumber: T.string.isRequired,
   mainError: T.oneOfType([T.bool, T.string]).isRequired,
-  pathname: T.string.isRequired,
   sortLoading: T.oneOfType([T.bool, T.string]).isRequired,
 };
 

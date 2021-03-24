@@ -21,14 +21,12 @@ export const checkParamsNotEmpty = ({ dateFrom, dateTo, keyword }) =>
 
 export const getDatesArr = () => {
   const now = moment();
+  const oneWe = moment().subtract(7, 'days');
+  const twoWe = moment().subtract(14, 'days');
+  const oneMo = moment().subtract(1, 'months');
+  const twoMo = moment().subtract(2, 'months');
 
-  return [
-    now,
-    now.subtract(1, 'months'),
-    now.subtract(7, 'days'),
-    now.subtract(2, 'months'),
-    now.subtract(14, 'days'),
-  ];
+  return [now, oneWe, twoWe, oneMo, twoMo];
 };
 
 export const getDateStrings = (dateFrom, dateTo) => ({

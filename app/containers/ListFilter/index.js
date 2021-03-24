@@ -10,8 +10,8 @@ import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
 import { fetchCallsData } from 'containers/Calls/actions';
-// import { fetchDocumentsData } from 'containers/Documents/actions';
-// import { fetchPaymentsData } from 'containers/Payments/actions';
+import { fetchDocumentsData } from 'containers/Documents/actions';
+import { fetchPaymentsData } from 'containers/Payments/actions';
 import { makeSelectPathname } from 'containers/App/selectors';
 import { useInjectReducer } from 'utils/injectReducer';
 import ListFilterView from 'components/ListFilterView';
@@ -29,19 +29,14 @@ export const ListFilter = ({
   dispatchFetchDataDocuments,
   dispatchFetchDataPayments,
   dispatchUpdateFilterState,
-  pathname,
   targetFilterState,
   targetLastFetchParams,
 }) => {
   useInjectReducer({ key: 'listFilter', reducer });
 
   const {
-    dateFrom,
-    dateFromError,
-    dateRange,
-    dateTo,
-    dateToError,
-    keyword,
+    state: { dateFrom, dateFromError, dateRange, dateTo, dateToError, keyword },
+    targetId,
   } = targetFilterState;
 
   const dispatchFetchDataDict = {
@@ -52,7 +47,7 @@ export const ListFilter = ({
 
   return (
     <HandlerLogic
-      dispatchFetchData={dispatchFetchDataDict[pathname.slice(1)]}
+      dispatchFetchData={dispatchFetchDataDict[targetId]}
       dispatchUpdateFilterState={dispatchUpdateFilterState}
       filterState={targetFilterState}
       lastFetchParams={targetLastFetchParams}
@@ -92,14 +87,16 @@ ListFilter.propTypes = {
   dispatchFetchDataDocuments: T.func.isRequired,
   dispatchFetchDataPayments: T.func.isRequired,
   dispatchUpdateFilterState: T.func.isRequired,
-  pathname: T.string.isRequired,
   targetFilterState: T.shape({
-    dateFrom: T.string,
-    dateFromError: T.string,
-    dateRange: T.string,
-    dateTo: T.string,
-    dateToError: T.string,
-    keyword: T.string,
+    state: T.shape({
+      dateFrom: T.object,
+      dateFromError: T.string,
+      dateRange: T.number,
+      dateTo: T.object,
+      dateToError: T.string,
+      keyword: T.string,
+    }),
+    targetId: T.string,
   }).isRequired,
   targetLastFetchParams: T.object.isRequired,
 };
@@ -111,20 +108,14 @@ const mapStateToProps = createStructuredSelector({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  dispatchFetchDataCalls: dispatch((sortCol, sortOrder) =>
-    fetchCallsData(sortCol, sortOrder),
-  ),
-  // temp using calls
-  dispatchFetchDataDocuments: dispatch((sortCol, sortOrder) =>
-    fetchCallsData(sortCol, sortOrder),
-  ),
-  // temp using calls
-  dispatchFetchDataPayments: dispatch((sortCol, sortOrder) =>
-    fetchCallsData(sortCol, sortOrder),
-  ),
-  dispatchUpdateFilterState: dispatch((substate, param, value) =>
-    updateFilterState(substate, param, value),
-  ),
+  dispatchFetchDataCalls: (sortCol, sortOrder) =>
+    dispatch(fetchCallsData(sortCol, sortOrder)),
+  dispatchFetchDataDocuments: (sortCol, sortOrder) =>
+    dispatch(fetchDocumentsData(sortCol, sortOrder)),
+  dispatchFetchDataPayments: (sortCol, sortOrder) =>
+    dispatch(fetchPaymentsData(sortCol, sortOrder)),
+  dispatchUpdateFilterState: (substate, newValues) =>
+    dispatch(updateFilterState(substate, newValues)),
 });
 
 const withConnect = connect(

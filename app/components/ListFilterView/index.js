@@ -63,10 +63,10 @@ const ListFilterView = ({
 );
 
 ListFilterView.propTypes = {
-  dateFrom: T.object.isRequired,
+  dateFrom: T.object,
   dateFromError: T.string.isRequired,
   dateRange: T.number.isRequired,
-  dateTo: T.object.isRequired,
+  dateTo: T.object,
   dateToError: T.string.isRequired,
   handleDateFromChange: T.func.isRequired,
   handleDateRangeChange: T.func.isRequired,

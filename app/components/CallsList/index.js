@@ -24,13 +24,15 @@ const CallsList = ({
   callsData,
   dispatchFetchCallsData,
   headers,
-  lastFetchParams: { sortCol, sortOrder },
+  lastSortCol,
+  lastSortOrder,
   sortLoading,
 }) => {
   const handleSortClick = (header) => {
     dispatchFetchCallsData({
       sortCol: header,
-      sortOrder: header === sortCol && sortOrder === 'desc' ? 'asc' : 'desc',
+      sortOrder:
+        header === lastSortCol && lastSortOrder === 'desc' ? 'asc' : 'desc',
     });
   };
 
@@ -45,8 +47,10 @@ const CallsList = ({
                 return (
                   <StyledTableHeader key={header} scope="col">
                     <ListSortButton
-                      isActive={header === sortCol}
-                      isAscending={header === sortCol && sortOrder === 'asc'}
+                      isActive={header === lastSortCol}
+                      isAscending={
+                        header === lastSortCol && lastSortOrder === 'asc'
+                      }
                       loading={sortLoading === header}
                       onClick={() => handleSortClick(header)}
                       text={header}
@@ -88,13 +92,8 @@ CallsList.propTypes = {
   ).isRequired,
   dispatchFetchCallsData: T.func.isRequired,
   headers: T.arrayOf(T.string),
-  lastFetchParams: T.shape({
-    dateFrom: T.string,
-    dateTo: T.string,
-    keyword: T.string,
-    sortCol: T.string,
-    sortOrder: T.string,
-  }).isRequired,
+  lastSortCol: T.string.isRequired,
+  lastSortOrder: T.string.isRequired,
   sortLoading: T.bool.isRequired,
 };
 

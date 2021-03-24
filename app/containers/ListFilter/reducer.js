@@ -8,8 +8,8 @@ const listFilterReducer = (state = initialState, { payload, type }) =>
   produce(state, (draft) => {
     switch (type) {
       case UPDATE_FILTER_STATE:
-        const { param, substate, value } = payload;
-        draft[substate][param] = value;
+        const { newValues, substate } = payload;
+        draft[substate] = newValues;
         break;
     }
   });
