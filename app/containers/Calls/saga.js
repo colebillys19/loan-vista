@@ -20,18 +20,12 @@ export function* fetchCallsDataSaga({ payload }) {
       const filterState = yield select(makeSelectListFilterState());
       const lastFetchParams = yield select(makeSelectCalls('lastFetchParams'));
 
-      const queryParams = Object.assign(
-        {},
-        { loanNumber },
-        lastFetchParams,
-        formatFilterState(filterState.calls),
-      );
+      const newParams =
+        sortCol && sortOrder
+          ? { sortCol, sortOrder }
+          : formatFilterState(filterState.calls);
 
-      if (sortCol && sortOrder) {
-        queryParams.sortCol = sortCol;
-        queryParams.sortOrder = sortOrder;
-      }
-
+      const queryParams = { ...lastFetchParams, ...newParams, loanNumber };
       const endpoint = `/api/calls/?${querystring.stringify(queryParams)}`;
 
       const { callsData, params } = yield call(get, endpoint);

@@ -36,8 +36,13 @@ export const getDateStrings = (dateFrom, dateTo) => ({
 
 export const getRangeValue = (fromDate, toDate) => {
   const datesArr = getDatesArr();
-  const fromIndex = datesArr.findIndex((dateObj) => dateObj.isSame(fromDate));
-  const toIndex = datesArr.findIndex((dateObj) => dateObj.isSame(toDate));
+
+  const fromIndex = datesArr.findIndex((dateObj) =>
+    dateObj.isSame(fromDate, 'day'),
+  );
+  const toIndex = datesArr.findIndex((dateObj) =>
+    dateObj.isSame(toDate, 'day'),
+  );
 
   return fromIndex !== -1 && toIndex === 0 ? fromIndex : 0;
 };

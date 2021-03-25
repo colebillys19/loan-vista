@@ -1,4 +1,5 @@
 import { capitalize } from 'lodash';
+import moment from 'moment';
 
 /**
  * convertNumToPercentage
@@ -24,8 +25,8 @@ export const formatFilterState = ({ dateFrom, dateTo, ...restState }) => ({
  * @description: ...
  */
 const getDateStrings = (dateFrom, dateTo) => ({
-  dateFrom: dateFrom ? dateFrom.format() : '',
-  dateTo: dateTo ? dateTo.format() : '',
+  dateFrom: dateFrom ? dateFrom.format() : '1970-01-01T00:00:00.000Z',
+  dateTo: dateTo ? dateTo.format() : moment().format(),
 });
 
 /**

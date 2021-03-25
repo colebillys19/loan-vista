@@ -47,8 +47,8 @@ export const Calls = ({
     if (!loanNumber) {
       dispatchSetLoadingTrue();
     } else if (
-      !lastDateFrom ||
-      (prevLoanNumber && loanNumber !== prevLoanNumber)
+      !loading &&
+      (!lastDateFrom || (prevLoanNumber && loanNumber !== prevLoanNumber))
     ) {
       dispatchFetchCallsData();
     }
@@ -56,6 +56,7 @@ export const Calls = ({
     dispatchFetchCallsData,
     dispatchSetLoadingTrue,
     lastDateFrom,
+    loading,
     loanNumber,
     prevLoanNumber,
   ]);

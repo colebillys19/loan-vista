@@ -42,19 +42,6 @@ const getDateTimeFormatted = (dateTime) => {
 };
 
 /**
- * getEpochStr
- * @description ...
- */
-const getEpochStr = () =>
-  moment('1970-01-01 00:00:00', MOCK_DATA_DATE_FORMAT).format();
-
-/**
- * getNowStr
- * @description ...
- */
-const getNowStr = () => moment().format();
-
-/**
  * sortByDateAsc
  * @description ...
  */
@@ -78,8 +65,6 @@ module.exports = {
   checkDate,
   checkKeyword,
   getDateTimeFormatted,
-  getEpochStr,
-  getNowStr,
   sortByDateAsc,
   sortByString,
 };

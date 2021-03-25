@@ -29,11 +29,11 @@ const CallsList = ({
   sortLoading,
 }) => {
   const handleSortClick = (header) => {
-    dispatchFetchCallsData({
-      sortCol: header,
-      sortOrder:
-        header === lastSortCol && lastSortOrder === 'desc' ? 'asc' : 'desc',
-    });
+    const newSortCol = header;
+    const newSortOrder =
+      header === lastSortCol && lastSortOrder === 'desc' ? 'asc' : 'desc';
+
+    dispatchFetchCallsData(newSortCol, newSortOrder);
   };
 
   return (
@@ -94,7 +94,7 @@ CallsList.propTypes = {
   headers: T.arrayOf(T.string),
   lastSortCol: T.string.isRequired,
   lastSortOrder: T.string.isRequired,
-  sortLoading: T.bool.isRequired,
+  sortLoading: T.oneOfType([T.bool, T.string]).isRequired,
 };
 
 CallsList.defaultProps = {
