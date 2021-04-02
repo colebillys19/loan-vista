@@ -6,11 +6,15 @@
 import React, { useEffect, useState } from 'react';
 import T from 'prop-types';
 
+import { usePrevious } from 'utils/customHooks';
+
 import ForwardRefPicker from './ForwardRefPicker';
 import Tooltip from './Tooltip';
 
 const DateInput = ({ error, onChange, setError, value }) => {
   const [tooltipOpen, setTooltipOpen] = useState(false);
+
+  const prevError = usePrevious(error);
 
   useEffect(() => {
     if (error) {
@@ -21,9 +25,9 @@ const DateInput = ({ error, onChange, setError, value }) => {
   }, [error]);
 
   const onError = (err) => {
-    if (err.length) {
+    if (err && err !== error) {
       setError(err);
-    } else if (error.length) {
+    } else if (error && error !== prevError) {
       setError(error);
     }
   };
