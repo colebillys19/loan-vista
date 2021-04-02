@@ -1,5 +1,5 @@
 import {
-  checkDatesOrder,
+  // checkDatesOrder,
   checkParamsNotEmpty,
   getDatesArr,
   getRangeValue,
@@ -17,7 +17,7 @@ const HandlerLogic = ({
 
   //
   const handleDateFromChange = (date) => {
-    const [fromError, toError] = checkDatesOrder(date, dateTo, 'from');
+    // const [fromError, toError] = checkDatesOrder(date, dateTo, 'from');
 
     const newValues = {
       ...state,
@@ -25,17 +25,17 @@ const HandlerLogic = ({
       dateRange: getRangeValue(date, dateTo),
     };
 
-    if (fromError || toError) {
-      newValues.dateFromError = fromError;
-      newValues.dateToError = toError;
-    }
+    // if (fromError || toError) {
+    //   newValues.dateFromError = fromError;
+    //   newValues.dateToError = toError;
+    // }
 
     dispatchUpdateFilterState(targetId, newValues);
   };
 
   //
   const handleDateToChange = (date) => {
-    const [fromError, toError] = checkDatesOrder(dateFrom, date, 'to');
+    // const [fromError, toError] = checkDatesOrder(dateFrom, date, 'to');
 
     const newValues = {
       ...state,
@@ -43,10 +43,10 @@ const HandlerLogic = ({
       dateTo: date,
     };
 
-    if (fromError || toError) {
-      newValues.dateFromError = fromError;
-      newValues.dateToError = toError;
-    }
+    // if (fromError || toError) {
+    //   newValues.dateFromError = fromError;
+    //   newValues.dateToError = toError;
+    // }
 
     dispatchUpdateFilterState(targetId, newValues);
   };

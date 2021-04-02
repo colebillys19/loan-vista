@@ -27,7 +27,7 @@ const makeSelectTargetFilterState = () =>
       const targetId = pathname.slice(1);
 
       return {
-        state: listFilterState[pathname.slice(1)],
+        state: listFilterState[targetId],
         targetId,
       };
     },

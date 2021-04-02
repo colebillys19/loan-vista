@@ -4,7 +4,6 @@ import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import MomentUtils from '@date-io/moment';
 
 import TextField from './TextField';
-import { MAX_DATE, MIN_DATE } from './constants';
 import {
   DatePickerWrapper,
   ErrorIndicator,
@@ -20,9 +19,9 @@ const ForwardRefPicker = forwardRef(({ isError, ...restProps }, ref) => (
         format="MM/DD/YYYY"
         invalidDateMessage="invalid date format"
         isError={isError}
-        maxDate={MAX_DATE}
+        // maxDate={MAX_DATE}
         maxDateMessage="future dates not permitted"
-        minDate={MIN_DATE}
+        // minDate={MIN_DATE}
         minDateMessage="pick a more recent date"
         TextFieldComponent={TextField}
         variant="inline"

@@ -1,20 +1,20 @@
 import moment from 'moment';
 
-export const checkDatesOrder = (fromDate, toDate, activePicker) => {
-  if (
-    fromDate &&
-    fromDate.isValid() &&
-    toDate &&
-    toDate.isValid() &&
-    !fromDate.isBefore(toDate)
-  ) {
-    return activePicker === 'from'
-      ? ['dates must be in chronological order', '']
-      : ['', 'dates must be in chronological order'];
-  }
+// export const checkDatesOrder = (fromDate, toDate, activePicker) => {
+//   if (
+//     fromDate &&
+//     fromDate.isValid() &&
+//     toDate &&
+//     toDate.isValid() &&
+//     !fromDate.isBefore(toDate)
+//   ) {
+//     return activePicker === 'from'
+//       ? ['dates must be in chronological order', '']
+//       : ['', 'dates must be in chronological order'];
+//   }
 
-  return ['', ''];
-};
+//   return ['', ''];
+// };
 
 export const checkParamsNotEmpty = ({ dateFrom, dateTo, keyword }) =>
   dateFrom !== '' || dateTo !== '' || keyword !== '';
