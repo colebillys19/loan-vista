@@ -70,4 +70,5 @@ export {
   makeSelectListFilterState,
   makeSelectTargetFilterState,
   makeSelectTargetLastFetchParams,
+  selectListFilterDomain,
 };

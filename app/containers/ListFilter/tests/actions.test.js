@@ -5,9 +5,10 @@ describe('ListFilter actions', () => {
   describe('update filter state', () => {
     it('has a type of DEFAULT_ACTION', () => {
       const expected = {
+        payload: { newValues: {}, substate: 'calls' },
         type: UPDATE_FILTER_STATE,
       };
-      expect(updateFilterState()).toEqual(expected);
+      expect(updateFilterState('calls', {})).toEqual(expected);
     });
   });
 });

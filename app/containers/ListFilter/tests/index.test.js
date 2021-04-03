@@ -11,7 +11,23 @@ import { ListFilter } from '../index';
 const initialState = {};
 const store = configureStore(initialState, history);
 
-const mockProps = {};
+const mockProps = {
+  dispatchFetchDataCalls: jest.fn(),
+  dispatchFetchDataDocuments: jest.fn(),
+  dispatchFetchDataPayments: jest.fn(),
+  dispatchUpdateFilterState: jest.fn(),
+  targetFilterState: {
+    state: {
+      dateFrom: null,
+      dateFromError: '',
+      dateRange: 0,
+      dateTo: null,
+      dateToError: '',
+      keyword: '',
+    },
+  },
+  targetLastFetchParams: {},
+};
 
 const WrappedListFilter = (props) => (
   <Provider store={store}>

@@ -1,4 +1,5 @@
 import produce from 'immer';
+import moment from 'moment';
 
 import { updateFilterState } from '../actions';
 import initialState from '../initialState';
@@ -12,15 +13,18 @@ describe('listFilterReducer', () => {
   });
 
   it('should handle updateFilterState correctly', () => {
-    const subState = [];
-    const param = [];
-    const value = [];
+    const newParams = {
+      dateFrom: moment(),
+      dateRange: 1,
+      dateTo: moment(),
+      keyword: 'test',
+    };
     const expected = produce(state, (draft) => {
-      draft[subState][param] = value;
+      draft.calls = newParams;
     });
 
     expect(
-      listFilterReducer(state, updateFilterState(subState, param, value)),
+      listFilterReducer(state, updateFilterState('calls', newParams)),
     ).toEqual(expected);
   });
 });
