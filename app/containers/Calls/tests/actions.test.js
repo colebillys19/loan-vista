@@ -2,28 +2,33 @@ import {
   fetchCallsData,
   fetchCallsDataFailure,
   fetchCallsDataSuccess,
-  onUnmount,
   setLoadingTrue,
 } from '../actions';
 import {
   FETCH_CALLS_DATA,
   FETCH_CALLS_DATA_FAILURE,
   FETCH_CALLS_DATA_SUCCESS,
-  ON_UNMOUNT,
   SET_LOADING_TRUE,
 } from '../constants';
 import { MOCK_DATA } from './mockData';
 
 describe('fetchCallsData', () => {
-  it('has correct payload and type', () => {
-    const params = {
-      dateFrom: '2020-01-01',
-      dateTo: '2020-02-01',
-      keyword: 'test',
+  it('behaves as expected when no arguments passed', () => {
+    const expected = {
+      payload: { sortCol: undefined, sortOrder: undefined },
+      type: FETCH_CALLS_DATA,
     };
-    const expected = { payload: { params }, type: FETCH_CALLS_DATA };
 
-    expect(fetchCallsData(params)).toEqual(expected);
+    expect(fetchCallsData()).toEqual(expected);
+  });
+
+  it('behaves as expected when arguments passed', () => {
+    const expected = {
+      payload: { sortCol: 'date', sortOrder: 'desc' },
+      type: FETCH_CALLS_DATA,
+    };
+
+    expect(fetchCallsData('date', 'desc')).toEqual(expected);
   });
 });
 
@@ -39,8 +44,7 @@ describe('fetchCallsDataFailure', () => {
 describe('fetchCallsDataSuccess', () => {
   it('has correct payload and type', () => {
     const callsData = MOCK_DATA;
-    const newFetchParams = {
-      currentTotal: '80',
+    const params = {
       dateFrom: '',
       dateTo: '',
       keyword: '',
@@ -48,17 +52,11 @@ describe('fetchCallsDataSuccess', () => {
       sortOrder: 'desc',
     };
     const expected = {
-      payload: { callsData, newFetchParams },
+      payload: { callsData, params },
       type: FETCH_CALLS_DATA_SUCCESS,
     };
 
-    expect(fetchCallsDataSuccess(callsData, newFetchParams)).toEqual(expected);
-  });
-});
-
-describe('onUnmount', () => {
-  it('has correct type', () => {
-    expect(onUnmount()).toEqual({ type: ON_UNMOUNT });
+    expect(fetchCallsDataSuccess(callsData, params)).toEqual(expected);
   });
 });
 

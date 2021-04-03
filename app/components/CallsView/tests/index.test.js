@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import CallsList from '../index';
+import CallsView from '../index';
 
 import { MOCK_DATA, MOCK_HEADERS } from './mockData';
 
@@ -13,9 +13,9 @@ const mockProps = {
   sortValues: { sortCol: '', sortOrder: '' },
 };
 
-const Component = <CallsList {...mockProps} />;
+const Component = <CallsView {...mockProps} />;
 
-describe('<CallsList />', () => {
+describe('<CallsView />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

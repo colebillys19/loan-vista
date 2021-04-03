@@ -7,7 +7,6 @@ import configureStore from 'configureStore';
 import history from 'utils/history';
 
 import Calls from '../index';
-// import { Calls } from '../index';
 import { MOCK_DATA } from './mockData';
 
 const initialState = {};
@@ -16,17 +15,19 @@ const store = configureStore(initialState, history);
 const mockProps = {
   callsData: MOCK_DATA,
   dispatchFetchCallsData: jest.fn(),
-  dispatchOnUnmount: jest.fn(),
   dispatchSetLoadingTrue: jest.fn(),
   error: false,
-  fetchParams: {},
+  lastFetchParams: {
+    dateFrom: '',
+    dateTo: '',
+    keyword: '',
+    sortCol: 'date',
+    sortOrder: 'desc',
+  },
   loading: false,
   loanNumber: '1234567890',
   mainError: false,
-  noDataFetched: false,
-  pathname: '',
   sortLoading: false,
-  sortValues: {},
 };
 
 const WrappedCalls = (props) => (

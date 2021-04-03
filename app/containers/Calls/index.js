@@ -13,7 +13,7 @@ import { makeSelectPathname } from 'containers/App/selectors';
 import { useInjectReducer } from 'utils/injectReducer';
 import { useInjectSaga } from 'utils/injectSaga';
 import { usePrevious } from 'utils/customHooks';
-import CallsList from 'components/CallsList';
+import CallsView from 'components/CallsView';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import ListFallback from 'components/_base-ui/ListFallback';
 import makeSelectMain from 'containers/Main/selectors';
@@ -64,7 +64,7 @@ export const Calls = ({
   return (
     <ConditionalRender
       Component={
-        <CallsList
+        <CallsView
           callsData={callsData}
           dispatchFetchCallsData={dispatchFetchCallsData}
           lastSortCol={lastSortCol}

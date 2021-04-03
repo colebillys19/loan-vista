@@ -1,5 +1,5 @@
 /**
- * CallsList
+ * CallsView
  * @description ...
  */
 
@@ -20,7 +20,7 @@ import {
 import TableRow from './TableRow';
 import { CustomTableHead } from './styledComponents';
 
-const CallsList = ({
+const CallsView = ({
   callsData,
   dispatchFetchCallsData,
   headers,
@@ -78,7 +78,7 @@ const CallsList = ({
   );
 };
 
-CallsList.propTypes = {
+CallsView.propTypes = {
   callsData: T.arrayOf(
     T.shape({
       audio: T.string,
@@ -97,8 +97,8 @@ CallsList.propTypes = {
   sortLoading: T.oneOfType([T.bool, T.string]).isRequired,
 };
 
-CallsList.defaultProps = {
+CallsView.defaultProps = {
   headers: ['date', 'time', 'dept', 'rep', 'desc', 'audio'],
 };
 
-export default memo(CallsList);
+export default memo(CallsView);

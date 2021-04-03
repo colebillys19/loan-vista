@@ -1,6 +1,5 @@
 import makeSelectCalls, {
   makeSelectCallsData,
-  makeSelectSortValues,
   selectCallsDomain,
 } from '../selectors';
 import { MOCK_DATA, MOCK_RAW_DATA } from './mockData';
@@ -33,23 +32,5 @@ describe('makeSelectCallsData', () => {
 
   it('selects and formats the calls data', () => {
     expect(callsDataSelector(mockedState)).toEqual(callsData);
-  });
-});
-
-describe('makeSelectSortValues', () => {
-  const sortValuesSelector = makeSelectSortValues();
-  const fetchParams = {
-    currentTotal: '80',
-    dateFrom: '',
-    dateTo: '',
-    keyword: '',
-    sortCol: 'date',
-    sortOrder: 'desc',
-  };
-  const mockedState = { calls: { fetchParams } };
-  const expected = { sortCol: 'date', sortOrder: 'desc' };
-
-  it('selects the sort values', () => {
-    expect(sortValuesSelector(mockedState)).toEqual(expected);
   });
 });

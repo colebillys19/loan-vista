@@ -4,7 +4,6 @@ import {
   fetchCallsData,
   fetchCallsDataFailure,
   fetchCallsDataSuccess,
-  onUnmount,
   setLoadingTrue,
 } from '../actions';
 import initialState from '../initialState';
@@ -32,25 +31,13 @@ describe('callsReducer', () => {
   });
 
   it('should handle fetchCallsData correctly when filter arguments are passed', () => {
-    const params = {
-      dateFrom: '2020-01-01',
-      dateTo: '2020-02-01',
-      keyword: 'test',
-    };
     const expected = produce(state, (draft) => {
-      draft.loading = true;
+      draft.sortLoading = 'date';
     });
 
-    expect(callsReducer(state, fetchCallsData(params))).toEqual(expected);
-  });
-
-  it('should handle fetchCallsData correctly when sort arguments are passed', () => {
-    const params = { sortOrder: 'asc' };
-    const expected = produce(state, (draft) => {
-      draft.sortLoading = true;
-    });
-
-    expect(callsReducer(state, fetchCallsData(params))).toEqual(expected);
+    expect(callsReducer(state, fetchCallsData('date', 'desc'))).toEqual(
+      expected,
+    );
   });
 
   it('should handle fetchCallsDataFailure correctly', () => {
@@ -64,8 +51,7 @@ describe('callsReducer', () => {
 
   it('should handle fetchCallsDataSuccess correctly', () => {
     const callsData = MOCK_DATA;
-    const newFetchParams = {
-      currentTotal: '80',
+    const params = {
       dateFrom: '2020-01-01',
       dateTo: '2020-02-01',
       keyword: 'test',
@@ -74,37 +60,12 @@ describe('callsReducer', () => {
     };
     const expected = produce(state, (draft) => {
       draft.callsData = callsData;
-      draft.fetchParams = newFetchParams;
+      draft.lastFetchParams = params;
     });
 
     expect(
-      callsReducer(state, fetchCallsDataSuccess(callsData, newFetchParams)),
+      callsReducer(state, fetchCallsDataSuccess(callsData, params)),
     ).toEqual(expected);
-  });
-
-  it('should handle fetchCallsDataSuccess correctly when no data was fetched', () => {
-    const callsData = [];
-    const newFetchParams = {
-      currentTotal: '80',
-      dateFrom: '2020-01-01',
-      dateTo: '2020-02-01',
-      keyword: 'test',
-      sortCol: 'date',
-      sortOrder: 'desc',
-    };
-    const expected = produce(state, (draft) => {
-      draft.callsData = callsData;
-      draft.fetchParams = newFetchParams;
-      draft.noDataFetched = true;
-    });
-
-    expect(
-      callsReducer(state, fetchCallsDataSuccess(callsData, newFetchParams)),
-    ).toEqual(expected);
-  });
-
-  it('should handle onUnmount correctly', () => {
-    expect(callsReducer(state, onUnmount())).toEqual(initialState);
   });
 
   it('should handle setLoadingTrue correctly', () => {
