@@ -1,6 +1,6 @@
 const moment = require('moment');
 
-const { MOCK_DATA_DATE_FORMAT } = require('./constants');
+const { EPOCH_MOMENT, MOCK_DATA_DATE_FORMAT } = require('./constants');
 
 /**
  * checkDate
@@ -25,6 +25,21 @@ const checkKeyword = (strArr, keyword) => {
   );
 
   return !!matches.length;
+};
+
+/**
+ * getDateMoments
+ * @description ...
+ */
+const getDateMoments = (dateFrom, dateTo) => {
+  const dateFromMoment = dateFrom
+    ? moment(`${dateFrom} 00:00:00`, MOCK_DATA_DATE_FORMAT)
+    : EPOCH_MOMENT;
+  const dateToMoment = dateTo
+    ? moment(`${dateTo} 23:59:59`, MOCK_DATA_DATE_FORMAT)
+    : moment();
+
+  return { dateFromMoment, dateToMoment };
 };
 
 /**
@@ -64,6 +79,7 @@ const sortByString = (data, str, order) =>
 module.exports = {
   checkDate,
   checkKeyword,
+  getDateMoments,
   getDateTimeFormatted,
   sortByDateAsc,
   sortByString,

@@ -58,8 +58,6 @@ export const ListFilter = ({
         handleKeywordChange,
         handleRefreshClick,
         handleSubmitClick,
-        setDateFromError,
-        setDateToError,
       }) => (
         <ListFilterView
           dateFrom={dateFrom}
@@ -74,8 +72,6 @@ export const ListFilter = ({
           handleRefreshClick={handleRefreshClick}
           handleSubmitClick={handleSubmitClick}
           keyword={keyword}
-          setDateFromError={setDateFromError}
-          setDateToError={setDateToError}
         />
       )}
     />

@@ -1,20 +1,45 @@
 import moment from 'moment';
 
-// export const checkDatesOrder = (fromDate, toDate, activePicker) => {
-//   if (
-//     fromDate &&
-//     fromDate.isValid() &&
-//     toDate &&
-//     toDate.isValid() &&
-//     !fromDate.isBefore(toDate)
-//   ) {
-//     return activePicker === 'from'
-//       ? ['dates must be in chronological order', '']
-//       : ['', 'dates must be in chronological order'];
-//   }
+import { EPOCH_MOMENT } from 'utils/globalConstants';
 
-//   return ['', ''];
-// };
+const checkChronological = (dateFrom, dateTo) => {
+  if (!dateFrom || !dateTo) {
+    return ['', ''];
+  }
+
+  return dateFrom.isAfter(dateTo)
+    ? ['', 'dates must be in chronological order']
+    : ['', ''];
+};
+
+const getDateError = (date) => {
+  if (!date) {
+    return '';
+  }
+
+  if (!date.isValid()) {
+    return 'invalid date format';
+  }
+
+  if (date.isBefore(EPOCH_MOMENT)) {
+    return 'pick a more recent date';
+  }
+
+  if (date.isAfter(moment())) {
+    return 'no future dates permitted';
+  }
+
+  return '';
+};
+
+export const getDatesErrorState = (dateFrom, dateTo) => {
+  const fromError = getDateError(dateFrom);
+  const toError = getDateError(dateTo);
+
+  return !fromError && !toError
+    ? checkChronological(dateFrom, dateTo)
+    : [fromError, toError];
+};
 
 export const checkParamsNotEmpty = ({ dateFrom, dateTo, keyword }) =>
   dateFrom !== '' || dateTo !== '' || keyword !== '';

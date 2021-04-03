@@ -27,8 +27,6 @@ const ListFilterView = ({
   handleRefreshClick,
   handleSubmitClick,
   keyword,
-  setDateFromError,
-  setDateToError,
 }) => (
   <StyledForm onSubmit={(e) => e.preventDefault()}>
     <DateField
@@ -36,7 +34,6 @@ const ListFilterView = ({
       error={dateFromError}
       label="from"
       onChange={handleDateFromChange}
-      setError={setDateFromError}
       value={dateFrom}
     />
     <DateField
@@ -44,7 +41,6 @@ const ListFilterView = ({
       error={dateToError}
       label="to"
       onChange={handleDateToChange}
-      setError={setDateToError}
       value={dateTo}
     />
     <DateRangeField
@@ -75,8 +71,6 @@ ListFilterView.propTypes = {
   handleRefreshClick: T.func.isRequired,
   handleSubmitClick: T.func.isRequired,
   keyword: T.string.isRequired,
-  setDateFromError: T.func.isRequired,
-  setDateToError: T.func.isRequired,
 };
 
 export default ListFilterView;

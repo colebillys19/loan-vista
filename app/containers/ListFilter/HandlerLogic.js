@@ -17,38 +17,20 @@ const HandlerLogic = ({
 
   //
   const handleDateFromChange = (date) => {
-    // const [fromError, toError] = checkDatesOrder(date, dateTo, 'from');
-
-    const newValues = {
+    dispatchUpdateFilterState(targetId, {
       ...state,
       dateFrom: date,
       dateRange: getRangeValue(date, dateTo),
-    };
-
-    // if (fromError || toError) {
-    //   newValues.dateFromError = fromError;
-    //   newValues.dateToError = toError;
-    // }
-
-    dispatchUpdateFilterState(targetId, newValues);
+    });
   };
 
   //
   const handleDateToChange = (date) => {
-    // const [fromError, toError] = checkDatesOrder(dateFrom, date, 'to');
-
-    const newValues = {
+    dispatchUpdateFilterState(targetId, {
       ...state,
       dateRange: getRangeValue(dateFrom, date),
       dateTo: date,
-    };
-
-    // if (fromError || toError) {
-    //   newValues.dateFromError = fromError;
-    //   newValues.dateToError = toError;
-    // }
-
-    dispatchUpdateFilterState(targetId, newValues);
+    });
   };
 
   //
@@ -96,14 +78,6 @@ const HandlerLogic = ({
     }
   };
 
-  //
-  const setDateFromError = (err) =>
-    dispatchUpdateFilterState(targetId, { ...state, dateFromError: err });
-
-  //
-  const setDateToError = (err) =>
-    dispatchUpdateFilterState(targetId, { ...state, dateToError: err });
-
   return render({
     handleDateFromChange,
     handleDateRangeChange,
@@ -111,8 +85,6 @@ const HandlerLogic = ({
     handleKeywordChange,
     handleRefreshClick,
     handleSubmitClick,
-    setDateFromError,
-    setDateToError,
   });
 };
 

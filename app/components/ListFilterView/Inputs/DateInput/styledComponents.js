@@ -5,8 +5,6 @@ import { TextField } from '@material-ui/core';
 
 import { errorColor, textColorB } from 'styleConstants';
 
-import { getColor } from './helpers';
-
 export const ErrorIndicator = styled.div`
   background-color: ${({ isError }) => (isError ? errorColor : 'transparent')};
   bottom: 0.1rem;
@@ -33,9 +31,11 @@ export const StyledKeyboardDatePicker = styled(({ isError, ...restProps }) => (
     transition: none;
   }
   & .MuiInputBase-input {
-    color: ${({ isError, value }) => getColor(isError, value)};
     margin-right: -0.6rem;
     min-width: 7.4rem;
+  }
+  & .MuiInput-underline.Mui-error:after {
+    border-bottom-color: transparent;
   }
   & .MuiFormHelperText-root {
     display: none;
@@ -53,3 +53,15 @@ export const StyledTextField = styled(TextField)`
     text-indent: 0.1rem;
   }
 `;
+
+// export const getColor = (isError, value) => {
+//   if (value === null) {
+//     return 'inherit';
+//   }
+
+//   if (isError) {
+//     return 'red';
+//   }
+
+//   return textColorB;
+// };

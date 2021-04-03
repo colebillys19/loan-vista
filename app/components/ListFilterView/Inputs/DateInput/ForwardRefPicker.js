@@ -1,7 +1,10 @@
 import React, { forwardRef } from 'react';
 import T from 'prop-types';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import moment from 'moment';
 import MomentUtils from '@date-io/moment';
+
+import { EPOCH_MOMENT } from 'utils/globalConstants';
 
 import TextField from './TextField';
 import {
@@ -17,12 +20,8 @@ const ForwardRefPicker = forwardRef(({ isError, ...restProps }, ref) => (
         autoOk
         disableToolbar
         format="MM/DD/YYYY"
-        invalidDateMessage="invalid date format"
-        isError={isError}
-        // maxDate={MAX_DATE}
-        maxDateMessage="future dates not permitted"
-        // minDate={MIN_DATE}
-        minDateMessage="pick a more recent date"
+        maxDate={moment()}
+        minDate={EPOCH_MOMENT}
         TextFieldComponent={TextField}
         variant="inline"
         {...restProps}

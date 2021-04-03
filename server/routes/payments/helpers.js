@@ -1,9 +1,9 @@
 const moment = require('moment');
 
-const { MOCK_DATA_DATE_FORMAT } = require('../constants');
 const {
   checkDate,
   checkKeyword,
+  getDateMoments,
   sortByDateAsc,
   sortByString,
 } = require('../helpers');
@@ -23,14 +23,7 @@ const convertNumToCurrency = (num, withAdorn = true) => {
  * @description ...
  */
 const filterPayments = (data, dateFrom, dateTo, keyword) => {
-  const now = moment();
-  const epoch = moment('1970-01-01 00:00:00', MOCK_DATA_DATE_FORMAT);
-  const dateFromMoment = dateFrom
-    ? moment(`${dateFrom} 00:00:00`, MOCK_DATA_DATE_FORMAT)
-    : epoch;
-  const dateToMoment = dateTo
-    ? moment(`${dateTo} 23:59:59`, MOCK_DATA_DATE_FORMAT)
-    : now;
+  const { dateFromMoment, dateToMoment } = getDateMoments(dateFrom, dateTo);
 
   return data.filter((row) => {
     const { date, time } = row;

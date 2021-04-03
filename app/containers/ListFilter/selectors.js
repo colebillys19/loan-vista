@@ -5,6 +5,7 @@ import makeSelectCalls from 'containers/Calls/selectors';
 import makeSelectDocuments from 'containers/Documents/selectors';
 import makeSelectPayments from 'containers/Payments/selectors';
 
+import { getDatesErrorState } from './helpers';
 import initialState from './initialState';
 
 const selectListFilterDomain = (state) => state.listFilter || initialState;
@@ -25,9 +26,13 @@ const makeSelectTargetFilterState = () =>
     makeSelectPathname(),
     (listFilterState, pathname) => {
       const targetId = pathname.slice(1);
+      const targetState = listFilterState[targetId];
+
+      const { dateFrom, dateTo } = targetState;
+      const [dateFromError, dateToError] = getDatesErrorState(dateFrom, dateTo);
 
       return {
-        state: listFilterState[targetId],
+        state: { ...targetState, dateFromError, dateToError },
         targetId,
       };
     },
