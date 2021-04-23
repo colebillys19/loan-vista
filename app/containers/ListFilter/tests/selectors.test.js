@@ -2,13 +2,14 @@ import moment from 'moment';
 
 import initialState from '../initialState';
 import {
-  // makeSelectListFilterState,
-  makeSelectTargetFilterState,
+  makeSelectTargetDateErrors,
+  makeSelectTargetId,
   makeSelectTargetLastFetchParams,
+  makeSelectTargetState,
   selectListFilterDomain,
 } from '../selectors';
 
-describe('selectCallsDomain', () => {
+describe('selectListFilterDomain', () => {
   const listFilterDomainState = {};
   const mockedState = { listFilter: listFilterDomainState };
 
@@ -17,67 +18,32 @@ describe('selectCallsDomain', () => {
   });
 });
 
-// needed?
-// describe('makeSelectListFilterState', () => {});
-
-describe('makeSelectTargetFilterState', () => {
-  const targetFilterStateSelector = makeSelectTargetFilterState();
-
-  it('should format state with date errors and target id', () => {
-    const mockedState = {
-      listFilter: {
-        ...initialState,
-        calls: {
-          dateFrom: null,
-          dateRange: 0,
-          dateTo: null,
-          keyword: '',
-        },
-      },
-      router: { location: { pathname: '/calls' } },
-    };
-    const expected = {
-      state: {
-        dateFrom: null,
-        dateFromError: '',
-        dateRange: 0,
-        dateTo: null,
-        dateToError: '',
-        keyword: '',
-      },
-      targetId: 'calls',
-    };
-
-    expect(targetFilterStateSelector(mockedState)).toEqual(expected);
-  });
-
-  it('should derive date error from date object', () => {
-    const oldMoment = moment('1969-01-01', 'YYYY-MM-DD');
-    const mockedState = {
-      listFilter: {
-        ...initialState,
-        calls: {
-          dateFrom: oldMoment,
-          dateRange: 0,
-          dateTo: null,
-          keyword: '',
-        },
-      },
-      router: { location: { pathname: '/calls' } },
-    };
-    const expected = {
-      state: {
+describe('makeSelectTargetDateErrors', () => {
+  const targetDateErrorsSelector = makeSelectTargetDateErrors();
+  const oldMoment = moment('1969-01-01', 'YYYY-MM-DD');
+  const mockedState = {
+    listFilter: {
+      ...initialState,
+      calls: {
+        ...initialState.calls,
         dateFrom: oldMoment,
-        dateFromError: 'pick a more recent date',
-        dateRange: 0,
-        dateTo: null,
-        dateToError: '',
-        keyword: '',
       },
-      targetId: 'calls',
-    };
+    },
+    router: { location: { pathname: '/calls' } },
+  };
+  const expected = ['pick a more recent date', ''];
 
-    expect(targetFilterStateSelector(mockedState)).toEqual(expected);
+  it('derives date errors from state', () => {
+    expect(targetDateErrorsSelector(mockedState)).toEqual(expected);
+  });
+});
+
+describe('makeSelectTargetId', () => {
+  const targetFilterStateSelector = makeSelectTargetId();
+  const mockedState = { router: { location: { pathname: '/calls' } } };
+
+  it('derives current pathname from state', () => {
+    expect(targetFilterStateSelector(mockedState)).toEqual('calls');
   });
 });
 
@@ -108,5 +74,26 @@ describe('makeSelectTargetLastFetchParams', () => {
     };
 
     expect(targetLastFetchParamsSelector(mockedState)).toEqual(expected);
+  });
+});
+
+describe('makeSelectTargetState', () => {
+  const targetStateSelector = makeSelectTargetState();
+  const mockedState = {
+    listFilter: {
+      ...initialState,
+      calls: { ...initialState.calls, keyword: 'test' },
+    },
+    router: { location: { pathname: '/calls' } },
+  };
+  const expected = {
+    dateFrom: null,
+    dateRange: 0,
+    dateTo: null,
+    keyword: 'test',
+  };
+
+  it('derives correct substate', () => {
+    expect(targetStateSelector(mockedState)).toEqual(expected);
   });
 });

@@ -5,7 +5,7 @@ import { REQUEST_ERROR_MESSAGE } from 'utils/globalConstants';
 import { formatFilterState } from 'utils/globalHelpers';
 import { get } from 'utils/request';
 import makeSelectMain from 'containers/Main/selectors';
-import { makeSelectListFilterState } from 'containers/ListFilter/selectors';
+import { selectListFilterDomain } from 'containers/ListFilter/selectors';
 
 import { fetchCallsDataFailure, fetchCallsDataSuccess } from './actions';
 import makeSelectCalls from './selectors';
@@ -17,7 +17,7 @@ export function* fetchCallsDataSaga({ payload }) {
 
     if (loanNumber) {
       const { sortCol, sortOrder } = payload;
-      const filterState = yield select(makeSelectListFilterState());
+      const filterState = yield select(selectListFilterDomain);
       const lastFetchParams = yield select(makeSelectCalls('lastFetchParams'));
 
       const newParams =

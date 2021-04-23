@@ -10,32 +10,24 @@ import initialState from './initialState';
 
 const selectListFilterDomain = (state) => state.listFilter || initialState;
 
-const makeSelectListFilterState = () =>
+/**
+ * makeSelectTargetDateErrors
+ * @description ...
+ */
+const makeSelectTargetDateErrors = () =>
   createSelector(
-    selectListFilterDomain,
-    (substate) => substate,
+    makeSelectTargetState(),
+    ({ dateFrom, dateTo }) => getDatesErrorState(dateFrom, dateTo),
   );
 
 /**
- * makeSelectTargetFilterState
+ * makeSelectTargetId
  * @description ...
  */
-const makeSelectTargetFilterState = () =>
+const makeSelectTargetId = () =>
   createSelector(
-    makeSelectListFilterState(),
     makeSelectPathname(),
-    (listFilterState, pathname) => {
-      const targetId = pathname.slice(1);
-      const targetState = listFilterState[targetId];
-
-      const { dateFrom, dateTo } = targetState;
-      const [dateFromError, dateToError] = getDatesErrorState(dateFrom, dateTo);
-
-      return {
-        state: { ...targetState, dateFromError, dateToError },
-        targetId,
-      };
-    },
+    (pathname) => pathname.slice(1),
   );
 
 /**
@@ -66,9 +58,21 @@ const makeSelectTargetLastFetchParams = () =>
     },
   );
 
+/**
+ * makeSelectTargetState
+ * @description ...
+ */
+const makeSelectTargetState = () =>
+  createSelector(
+    selectListFilterDomain,
+    makeSelectTargetId(),
+    (listFilterState, targetId) => listFilterState[targetId],
+  );
+
 export {
-  makeSelectListFilterState,
-  makeSelectTargetFilterState,
+  makeSelectTargetDateErrors,
+  makeSelectTargetId,
   makeSelectTargetLastFetchParams,
+  makeSelectTargetState,
   selectListFilterDomain,
 };

@@ -17,8 +17,10 @@ import { useInjectReducer } from 'utils/injectReducer';
 import ListFilterView from 'components/ListFilterView';
 
 import {
-  makeSelectTargetFilterState,
+  makeSelectTargetDateErrors,
+  makeSelectTargetId,
   makeSelectTargetLastFetchParams,
+  makeSelectTargetState,
 } from './selectors';
 import { updateFilterState } from './actions';
 import HandlerLogic from './HandlerLogic';
@@ -29,15 +31,15 @@ export const ListFilter = ({
   dispatchFetchDataDocuments,
   dispatchFetchDataPayments,
   dispatchUpdateFilterState,
-  targetFilterState,
+  targetDateErrors,
+  targetId,
   targetLastFetchParams,
+  targetState,
 }) => {
   useInjectReducer({ key: 'listFilter', reducer });
 
-  const {
-    state: { dateFrom, dateFromError, dateRange, dateTo, dateToError, keyword },
-    targetId,
-  } = targetFilterState;
+  const { dateFrom, dateRange, dateTo, keyword } = targetState;
+  const [dateFromError, dateToError] = targetDateErrors;
 
   const dispatchFetchDataDict = {
     calls: dispatchFetchDataCalls,
@@ -47,9 +49,9 @@ export const ListFilter = ({
 
   return (
     <HandlerLogic
+      dateErrors={targetDateErrors}
       dispatchFetchData={dispatchFetchDataDict[targetId]}
       dispatchUpdateFilterState={dispatchUpdateFilterState}
-      filterState={targetFilterState}
       lastFetchParams={targetLastFetchParams}
       render={({
         handleDateFromChange,
@@ -74,6 +76,8 @@ export const ListFilter = ({
           keyword={keyword}
         />
       )}
+      state={targetState}
+      targetId={targetId}
     />
   );
 };
@@ -83,24 +87,23 @@ ListFilter.propTypes = {
   dispatchFetchDataDocuments: T.func.isRequired,
   dispatchFetchDataPayments: T.func.isRequired,
   dispatchUpdateFilterState: T.func.isRequired,
-  targetFilterState: T.shape({
-    state: T.shape({
-      dateFrom: T.object,
-      dateFromError: T.string,
-      dateRange: T.number,
-      dateTo: T.object,
-      dateToError: T.string,
-      keyword: T.string,
-    }),
-    targetId: T.string,
-  }).isRequired,
+  targetDateErrors: T.arrayOf(T.string).isRequired,
+  targetId: T.string.isRequired,
   targetLastFetchParams: T.object.isRequired,
+  targetState: T.shape({
+    dateFrom: T.object,
+    dateRange: T.number,
+    dateTo: T.object,
+    keyword: T.string,
+  }).isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
   pathname: makeSelectPathname(),
-  targetFilterState: makeSelectTargetFilterState(),
+  targetDateErrors: makeSelectTargetDateErrors(),
+  targetId: makeSelectTargetId(),
   targetLastFetchParams: makeSelectTargetLastFetchParams(),
+  targetState: makeSelectTargetState(),
 });
 
 const mapDispatchToProps = (dispatch) => ({

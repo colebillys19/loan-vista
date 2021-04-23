@@ -54,11 +54,6 @@ export const getDatesArr = () => {
   return [now, oneWe, twoWe, oneMo, twoMo];
 };
 
-export const getDateStrings = (dateFrom, dateTo) => ({
-  dateFrom: dateFrom ? dateFrom.format('YYYY-MM-DD') : '',
-  dateTo: dateTo ? dateTo.format('YYYY-MM-DD') : '',
-});
-
 export const getRangeValue = (fromDate, toDate) => {
   const datesArr = getDatesArr();
 

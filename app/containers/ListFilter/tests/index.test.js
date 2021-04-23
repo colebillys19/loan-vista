@@ -16,17 +16,15 @@ const mockProps = {
   dispatchFetchDataDocuments: jest.fn(),
   dispatchFetchDataPayments: jest.fn(),
   dispatchUpdateFilterState: jest.fn(),
-  targetFilterState: {
-    state: {
-      dateFrom: null,
-      dateFromError: '',
-      dateRange: 0,
-      dateTo: null,
-      dateToError: '',
-      keyword: '',
-    },
-  },
+  targetDateErrors: ['', ''],
+  targetId: 'calls',
   targetLastFetchParams: {},
+  targetState: {
+    dateFrom: null,
+    dateRange: 0,
+    dateTo: null,
+    keyword: '',
+  },
 };
 
 const WrappedListFilter = (props) => (

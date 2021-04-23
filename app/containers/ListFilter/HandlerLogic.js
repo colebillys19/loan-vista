@@ -1,19 +1,15 @@
-import {
-  // checkDatesOrder,
-  checkParamsNotEmpty,
-  getDatesArr,
-  getRangeValue,
-} from './helpers';
+import { checkParamsNotEmpty, getDatesArr, getRangeValue } from './helpers';
 
 const HandlerLogic = ({
+  dateErrors: [dateFromError, dateToError],
   dispatchFetchData,
   dispatchUpdateFilterState,
-  filterState,
   lastFetchParams,
   render,
+  state,
+  targetId,
 }) => {
-  const { state, targetId } = filterState;
-  const { dateFrom, dateFromError, dateTo, dateToError } = state;
+  const { dateFrom, dateTo } = state;
 
   //
   const handleDateFromChange = (date) => {
@@ -59,10 +55,8 @@ const HandlerLogic = ({
   const handleRefreshClick = () => {
     dispatchUpdateFilterState(targetId, {
       dateFrom: null,
-      dateFromError: '',
       dateRange: 0,
       dateTo: null,
-      dateToError: '',
       keyword: '',
     });
 
