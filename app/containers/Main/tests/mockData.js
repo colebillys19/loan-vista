@@ -67,6 +67,35 @@ export const MOCK_DATA = {
         insuranceId: 'GE57A',
       },
     ],
+    pastHomeownersHazard: [
+      {
+        annualPremium: 12.34,
+        company: '10101',
+        id: '78f016c8-3903-474d-92b0-d12151a12345',
+        insuranceType: 'FLOOD',
+        policyExpiration: '2023-10-25',
+        policyType: 'F',
+      },
+    ],
+    pastMortgage: [
+      {
+        amount: 691,
+        company: 'YEET',
+        due: '2021-05-02',
+        id: '2cb873c2-9800-450a-aacd-dafde84jdjd2',
+        insuranceId: 'Y12345',
+      },
+    ],
+    pastTaxes: [
+      {
+        amount: 1211.32,
+        due: '2021-07-02',
+        id: '123c3ac3-dbf4-459d-b7bb-ecfbeef98989',
+        paidTo: '917851344',
+        taxId: '497382112',
+        type: 'county/city',
+      },
+    ],
     payment: {
       accidentAndHealth: 3.1,
       bsc: 2,

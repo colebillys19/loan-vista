@@ -9,8 +9,9 @@ const mockProps = {
   callsData: MOCK_DATA,
   dispatchFetchCallsData: jest.fn(),
   headers: MOCK_HEADERS,
+  lastSortCol: '',
+  lastSortOrder: '',
   sortLoading: false,
-  sortValues: { sortCol: '', sortOrder: '' },
 };
 
 const Component = <CallsView {...mockProps} />;
@@ -22,13 +23,10 @@ describe('<CallsView />', () => {
     expect(spy).not.toHaveBeenCalled();
   });
 
-  // it('Should render and match the snapshot', () => {
-  //   const {
-  //     container: { firstChild },
-  //   } = render(Component);
-  //   expect(firstChild).toMatchSnapshot();
-  // });
-  it('', () => {
-    expect(false).toBeTruthy();
+  it('Should render and match the snapshot', () => {
+    const {
+      container: { firstChild },
+    } = render(Component);
+    expect(firstChild).toMatchSnapshot();
   });
 });

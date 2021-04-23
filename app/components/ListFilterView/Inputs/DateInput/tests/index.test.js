@@ -4,7 +4,7 @@ import { render } from 'react-testing-library';
 import DateInput from '../index';
 
 const mockProps = {
-  error: { error: '', setError: jest.fn() },
+  error: '',
   onChange: jest.fn(),
   value: new Date(),
 };

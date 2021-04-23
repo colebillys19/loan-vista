@@ -185,7 +185,26 @@ describe('makeSelectEscrowEscrow', () => {
         { label: 'Current Escrow Balance', value: '$816.24' },
       ],
     },
-    currentPieData: [], // todo
+    currentPieData: [
+      {
+        color: 'rgb(246, 153, 96)',
+        tooltipValue: 12.34,
+        x: 'Flood Insurance (F, 10101)',
+        y: 47.866499999999995,
+      },
+      {
+        color: 'rgb(85, 159, 250)',
+        tooltipValue: 691,
+        x: 'Mortgage Insurance (YEET, Y12345)',
+        y: 691,
+      },
+      {
+        color: 'rgb(239, 106, 105)',
+        tooltipValue: 1211.32,
+        x: 'County/City Tax (497382112)',
+        y: 1211.32,
+      },
+    ],
     effectiveListData: {
       listData: [
         { label: 'Last/Next Escrow Analysis Date', value: 'May 2022' },
@@ -193,7 +212,26 @@ describe('makeSelectEscrowEscrow', () => {
         { label: 'Effective Escrow Payment', value: '$599.32' },
       ],
     },
-    effectivePieData: [], // todo
+    effectivePieData: [
+      {
+        color: 'rgb(80, 103, 55)',
+        tooltipValue: 67.55,
+        x: 'Hazard Insurance (H, 90105)',
+        y: 67.55,
+      },
+      {
+        color: 'rgb(255, 191, 0)',
+        tooltipValue: 690,
+        x: 'Mortgage Insurance (MGIC, GE57A)',
+        y: 690,
+      },
+      {
+        color: 'rgb(140, 142, 209)',
+        tooltipValue: 1211.31,
+        x: 'County/City Tax (497382197)',
+        y: 1211.31,
+      },
+    ],
   };
 
   it('selects the escrow escrow data', () => {
