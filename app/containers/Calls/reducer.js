@@ -1,14 +1,12 @@
 import produce from 'immer';
 
-import callsInitialState from './initialState';
+import initialState from './initialState';
 import {
   FETCH_CALLS_DATA,
   FETCH_CALLS_DATA_FAILURE,
   FETCH_CALLS_DATA_SUCCESS,
   SET_LOADING_TRUE,
 } from './constants';
-
-export const initialState = callsInitialState;
 
 /* eslint-disable default-case, no-param-reassign, no-case-declarations */
 const callsReducer = (state = initialState, { payload, type }) =>

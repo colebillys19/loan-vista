@@ -14,9 +14,8 @@ describe('selectCallsDomain', () => {
 });
 
 describe('makeSelectCalls', () => {
-  const prop = 'callsData';
   const callsData = [];
-  const callsSelector = makeSelectCalls(prop);
+  const callsSelector = makeSelectCalls('callsData');
   const mockedState = { calls: { callsData } };
 
   it('should use the prop passed to select the proper substate', () => {

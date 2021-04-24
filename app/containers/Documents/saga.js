@@ -1,9 +1,11 @@
 import { all, call, put, select, takeLatest } from 'redux-saga/effects';
 import querystring from 'querystring';
 
-import { get } from 'utils/request';
 import { REQUEST_ERROR_MESSAGE } from 'utils/globalConstants';
+import { formatFilterState } from 'utils/globalHelpers';
+import { get } from 'utils/request';
 import makeSelectMain from 'containers/Main/selectors';
+import { selectListFilterDomain } from 'containers/ListFilter/selectors';
 
 import {
   fetchDocumentsDataFailure,
@@ -14,24 +16,26 @@ import { FETCH_DOCUMENTS_DATA } from './constants';
 
 export function* fetchDocumentsDataSaga({ payload }) {
   try {
-    const { params: payloadFetchParams } = payload;
-    const stateFetchParams = yield select(makeSelectDocuments('fetchParams'));
     const loanNumber = yield select(makeSelectMain('loanNumber'));
 
     if (loanNumber) {
-      const queryParams = Object.assign(
-        {},
-        { loanNumber },
-        stateFetchParams,
-        payloadFetchParams,
+      const { sortCol, sortOrder } = payload;
+      const filterState = yield select(selectListFilterDomain);
+      const lastFetchParams = yield select(
+        makeSelectDocuments('lastFetchParams'),
       );
 
-      const { documentsData, newFetchParams } = yield call(
-        get,
-        `/api/documents/?${querystring.stringify(queryParams)}`,
-      );
+      const newParams =
+        sortCol && sortOrder
+          ? { sortCol, sortOrder }
+          : formatFilterState(filterState.documents);
 
-      yield put(fetchDocumentsDataSuccess(documentsData, newFetchParams));
+      const queryParams = { ...lastFetchParams, ...newParams, loanNumber };
+      const endpoint = `/api/documents/?${querystring.stringify(queryParams)}`;
+
+      const { documentsData, params } = yield call(get, endpoint);
+
+      yield put(fetchDocumentsDataSuccess(documentsData, params));
     }
   } catch (error) {
     console.error(error); // eslint-disable-line

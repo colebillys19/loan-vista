@@ -6,7 +6,7 @@ import DateField from '../DateField';
 const mockProps = {
   disabled: false,
   error: '',
-  label: '',
+  label: 'from',
   onChange: jest.fn(),
   setError: jest.fn(),
   value: null,

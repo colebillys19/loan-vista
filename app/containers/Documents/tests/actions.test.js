@@ -2,28 +2,33 @@ import {
   fetchDocumentsData,
   fetchDocumentsDataFailure,
   fetchDocumentsDataSuccess,
-  onUnmount,
   setLoadingTrue,
 } from '../actions';
 import {
   FETCH_DOCUMENTS_DATA,
   FETCH_DOCUMENTS_DATA_FAILURE,
   FETCH_DOCUMENTS_DATA_SUCCESS,
-  ON_UNMOUNT,
   SET_LOADING_TRUE,
 } from '../constants';
 import { MOCK_DATA } from './mockData';
 
 describe('fetchDocumentsData', () => {
-  it('has correct payload and type', () => {
-    const params = {
-      dateFrom: '2020-10-13',
-      dateTo: '2020-11-18',
-      keyword: 'test',
+  it('behaves as expected when no arguments passed', () => {
+    const expected = {
+      payload: { sortCol: undefined, sortOrder: undefined },
+      type: FETCH_DOCUMENTS_DATA,
     };
-    const expected = { payload: { params }, type: FETCH_DOCUMENTS_DATA };
 
-    expect(fetchDocumentsData(params)).toEqual(expected);
+    expect(fetchDocumentsData()).toEqual(expected);
+  });
+
+  it('behaves as expected when arguments passed', () => {
+    const expected = {
+      payload: { sortCol: 'date', sortOrder: 'desc' },
+      type: FETCH_DOCUMENTS_DATA,
+    };
+
+    expect(fetchDocumentsData('date', 'desc')).toEqual(expected);
   });
 });
 
@@ -39,28 +44,19 @@ describe('fetchDocumentsDataFailure', () => {
 describe('fetchDocumentsDataSuccess', () => {
   it('has correct payload and type', () => {
     const documentsData = MOCK_DATA;
-    const newFetchParams = {
-      currentTotal: '80',
+    const params = {
       dateFrom: '',
       dateTo: '',
       keyword: '',
-      sortCol: 'date',
+      sortCol: 'date sent',
       sortOrder: 'desc',
     };
     const expected = {
-      payload: { documentsData, newFetchParams },
+      payload: { documentsData, params },
       type: FETCH_DOCUMENTS_DATA_SUCCESS,
     };
 
-    expect(fetchDocumentsDataSuccess(documentsData, newFetchParams)).toEqual(
-      expected,
-    );
-  });
-});
-
-describe('onUnmount', () => {
-  it('has correct type', () => {
-    expect(onUnmount()).toEqual({ type: ON_UNMOUNT });
+    expect(fetchDocumentsDataSuccess(documentsData, params)).toEqual(expected);
   });
 });
 

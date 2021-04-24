@@ -1,13 +1,11 @@
 import produce from 'immer';
 
-import mainInitialState from './initialState';
+import initialState from './initialState';
 import {
   FETCH_LOAN_DATA,
   FETCH_LOAN_DATA_FAILURE,
   FETCH_LOAN_DATA_SUCCESS,
 } from './constants';
-
-export const initialState = mainInitialState;
 
 /* eslint-disable default-case, no-param-reassign, no-case-declarations */
 const mainReducer = (state = initialState, { payload, type }) =>

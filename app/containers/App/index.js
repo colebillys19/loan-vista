@@ -14,16 +14,17 @@ import { push } from 'connected-react-router';
 import GlobalStyles from 'globalStyles';
 
 import AppHeader from 'components/AppHeader';
-import CallsTabView from 'containers/Calls/TabView';
+import Calls from 'containers/Calls';
 import DashboardView from 'components/DashboardView';
-import DocumentsTabView from 'containers/Documents/TabView';
+import Documents from 'containers/Documents';
 import EscrowView from 'components/EscrowView';
 import Main from 'containers/Main';
 import MainContainer from 'components/MainContainer';
 import NotFoundView from 'components/NotFoundView';
-import PaymentsTabView from 'containers/Payments/TabView';
+import Payments from 'containers/Payments';
 import SidebarView from 'components/SidebarView';
 import TabNav from 'components/TabNav';
+import TabView from 'components/TabView';
 
 import { makeSelectPathname } from './selectors';
 
@@ -71,9 +72,21 @@ const App = ({ dispatchNavigation, pathname }) => (
                 />
               )}
             />
-            <Route component={CallsTabView} exact path="/calls" />
-            <Route component={DocumentsTabView} exact path="/documents" />
-            <Route component={PaymentsTabView} exact path="/payments" />
+            <Route
+              exact
+              path="/calls"
+              render={() => <TabView Container={Calls} id="calls" />}
+            />
+            <Route
+              exact
+              path="/documents"
+              render={() => <TabView Container={Documents} id="documents" />}
+            />
+            <Route
+              exact
+              path="/payments"
+              render={() => <TabView Container={Payments} id="payments" />}
+            />
             <Route
               exact
               path="/escrow"

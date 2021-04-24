@@ -1,9 +1,9 @@
 /**
- * DocumentsList
+ * DocumentsView
  * @description ...
  */
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import T from 'prop-types';
 
 import ListBorders from 'components/_base-ui/ListBorders';
@@ -20,29 +20,20 @@ import {
 import TableRow from './TableRow';
 import { CustomTableHead } from './styledComponents';
 
-const DocumentsList = ({
+const DocumentsView = ({
   dispatchFetchDocumentsData,
   documentsData,
   headers,
+  lastSortCol,
+  lastSortOrder,
   sortLoading,
-  sortValues: { sortCol: currentSortCol, sortOrder: currentSortOrder },
 }) => {
-  const [colClicked, setColClicked] = useState('');
-
-  useEffect(() => {
-    setColClicked('');
-  }, [currentSortCol, currentSortOrder]);
-
   const handleSortClick = (header) => {
-    setColClicked(header);
+    const newSortCol = header;
+    const newSortOrder =
+      header === lastSortCol && lastSortOrder === 'desc' ? 'asc' : 'desc';
 
-    if (header !== currentSortCol) {
-      dispatchFetchDocumentsData({ sortCol: header, sortOrder: 'desc' });
-    } else {
-      dispatchFetchDocumentsData({
-        sortOrder: currentSortOrder === 'desc' ? 'asc' : 'desc',
-      });
-    }
+    dispatchFetchDocumentsData(newSortCol, newSortOrder);
   };
 
   return (
@@ -56,11 +47,11 @@ const DocumentsList = ({
                 return (
                   <StyledTableHeader key={header} scope="col">
                     <ListSortButton
-                      isActive={header === currentSortCol}
+                      isActive={header === lastSortCol}
                       isAscending={
-                        header === currentSortCol && currentSortOrder === 'asc'
+                        header === lastSortCol && lastSortOrder === 'asc'
                       }
-                      loading={sortLoading && header === colClicked}
+                      loading={sortLoading === header}
                       onClick={() => handleSortClick(header)}
                       text={header}
                     />
@@ -87,7 +78,7 @@ const DocumentsList = ({
   );
 };
 
-DocumentsList.propTypes = {
+DocumentsView.propTypes = {
   dispatchFetchDocumentsData: T.func.isRequired,
   documentsData: T.arrayOf(
     T.shape({
@@ -101,12 +92,13 @@ DocumentsList.propTypes = {
     }),
   ).isRequired,
   headers: T.arrayOf(T.string),
-  sortLoading: T.bool.isRequired,
-  sortValues: T.shape({ sortCol: T.string, sortOrder: T.string }).isRequired,
+  lastSortCol: T.string.isRequired,
+  lastSortOrder: T.string.isRequired,
+  sortLoading: T.oneOfType([T.bool, T.string]).isRequired,
 };
 
-DocumentsList.defaultProps = {
+DocumentsView.defaultProps = {
   headers: ['date sent', 'time sent', 'type', 'from', 'desc', 'pdf'],
 };
 
-export default DocumentsList;
+export default DocumentsView;

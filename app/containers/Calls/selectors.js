@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 
-import { initialState } from './reducer';
 import { getCallsData } from './helpers';
+import initialState from './initialState';
 
 const selectCallsDomain = (state) => state.calls || initialState;
 

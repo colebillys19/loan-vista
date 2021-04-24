@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 
-import { initialState } from './reducer';
 import { getDocumentsData } from './helpers';
+import initialState from './initialState';
 
 const selectDocumentsDomain = (state) => state.documents || initialState;
 
@@ -21,15 +21,5 @@ const makeSelectDocumentsData = () =>
     (documentsData) => getDocumentsData(documentsData),
   );
 
-/**
- * makeSelectSortValues
- * @description ...
- */
-const makeSelectSortValues = () =>
-  createSelector(
-    makeSelectDocuments('fetchParams'),
-    ({ sortCol, sortOrder }) => ({ sortCol, sortOrder }),
-  );
-
 export default makeSelectDocuments;
-export { makeSelectDocumentsData, selectDocumentsDomain, makeSelectSortValues };
+export { makeSelectDocumentsData, selectDocumentsDomain };

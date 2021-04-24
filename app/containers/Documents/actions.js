@@ -2,13 +2,11 @@ import {
   FETCH_DOCUMENTS_DATA,
   FETCH_DOCUMENTS_DATA_FAILURE,
   FETCH_DOCUMENTS_DATA_SUCCESS,
-  ON_UNMOUNT,
   SET_LOADING_TRUE,
 } from './constants';
 
-/* eslint-disable arrow-body-style */
-export const fetchDocumentsData = (params) => ({
-  payload: { params },
+export const fetchDocumentsData = (sortCol, sortOrder) => ({
+  payload: { sortCol, sortOrder },
   type: FETCH_DOCUMENTS_DATA,
 });
 
@@ -17,11 +15,9 @@ export const fetchDocumentsDataFailure = (error) => ({
   type: FETCH_DOCUMENTS_DATA_FAILURE,
 });
 
-export const fetchDocumentsDataSuccess = (documentsData, newFetchParams) => ({
-  payload: { documentsData, newFetchParams },
+export const fetchDocumentsDataSuccess = (documentsData, params) => ({
+  payload: { documentsData, params },
   type: FETCH_DOCUMENTS_DATA_SUCCESS,
 });
-
-export const onUnmount = () => ({ type: ON_UNMOUNT });
 
 export const setLoadingTrue = () => ({ type: SET_LOADING_TRUE });

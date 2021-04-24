@@ -4,8 +4,8 @@ const { MOCK_DATA_DATE_FORMAT } = require('../constants');
 const {
   checkDate,
   checkKeyword,
-  getDateMoments,
   getDateTimeFormatted,
+  sortByString,
 } = require('../helpers');
 
 /**
@@ -13,7 +13,8 @@ const {
  * @description ...
  */
 const filterDocuments = (data, dateFrom, dateTo, keyword) => {
-  const { dateFromMoment, dateToMoment } = getDateMoments(dateFrom, dateTo);
+  const dateFromMoment = moment(dateFrom);
+  const dateToMoment = moment(dateTo);
 
   return data.filter((row) => {
     const { dateSent, timeSent } = row;
@@ -103,14 +104,5 @@ const sortDocuments = (data, sortCol, sortOrder) => {
 
   return sortByString(data, sortCol, sortOrder);
 };
-
-/**
- * sortByString
- * @description ...
- */
-const sortByString = (data, str, order) =>
-  order === 'asc'
-    ? data.sort((a, b) => b[str].localeCompare(a[str]))
-    : data.sort((a, b) => a[str].localeCompare(b[str]));
 
 module.exports = { getTargetDocumentsData };

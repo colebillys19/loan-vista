@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 
-import { initialState } from './reducer';
+import initialState from './initialState';
 import {
   getCallsSummary,
   getCurrentEscrowListData,

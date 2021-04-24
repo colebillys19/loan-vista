@@ -21,7 +21,7 @@ const getDocuments = (req, res, next) => {
     setTimeout(() => {
       res.send({
         documentsData: targetDocumentsData,
-        newFetchParams: fetchParams,
+        params: fetchParams,
       });
     }, 1000);
   } catch (error) {

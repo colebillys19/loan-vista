@@ -1,8 +1,6 @@
 import { all, put, takeLatest } from 'redux-saga/effects';
-// import querystring from 'querystring';
 
 import { REQUEST_ERROR_MESSAGE } from 'utils/globalConstants';
-// import { get } from 'utils/request';
 
 import { fetchCallsDataFailure } from '../actions';
 import { FETCH_CALLS_DATA } from '../constants';

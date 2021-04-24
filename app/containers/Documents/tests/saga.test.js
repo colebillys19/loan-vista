@@ -1,20 +1,21 @@
 import { all, put, takeLatest } from 'redux-saga/effects';
-// import querystring from 'querystring';
 
 import { REQUEST_ERROR_MESSAGE } from 'utils/globalConstants';
-// import { get } from 'utils/request';
 
 import { fetchDocumentsDataFailure } from '../actions';
 import { FETCH_DOCUMENTS_DATA } from '../constants';
+import initialState from '../initialState';
 import watcherSaga, {
   fetchDocumentsData,
   fetchDocumentsDataSaga,
 } from '../saga';
 
+import { MOCK_DATA } from './mockData';
+
 describe('fetchDocumentsData Saga', () => {
   const generator = fetchDocumentsData();
 
-  it('should yield takeLatest FETCH_DOCUMENTS_DATA', () => {
+  it('calls fetchDocumentsDataSaga when FETCH_DOCUMENTS_DATA action is dispatched', () => {
     const expectedEffect = takeLatest(
       FETCH_DOCUMENTS_DATA,
       fetchDocumentsDataSaga,
@@ -23,7 +24,7 @@ describe('fetchDocumentsData Saga', () => {
     expect(generator.next().value).toEqual(expectedEffect);
   });
 
-  it('should be done', () => {
+  it('is done', () => {
     const isDone = generator.next().done;
 
     expect(isDone).toBe(true);
@@ -31,47 +32,44 @@ describe('fetchDocumentsData Saga', () => {
 });
 
 describe('fetchDocumentsDataSaga Saga', () => {
-  const params = {
-    dateFrom: '2020-01-01',
-    dateTo: '2020-02-01',
-    keyword: 'test',
-  };
+  const params = { sortCol: '', sortOrder: '' };
   const generatorA = fetchDocumentsDataSaga({ payload: { params } });
   const generatorB = fetchDocumentsDataSaga({ payload: { params } });
 
-  // revisit this
-  it('selects data from state', () => {
-    expect(generatorA.next().value.type).toEqual('SELECT');
+  it('selects loan number from state', () => {
     expect(generatorA.next().value.type).toEqual('SELECT');
   });
 
-  // it('sends a get request to the server', () => {
-  //   const expectedEffect = call(
-  //     get,
-  //     `/api/documents/?${querystring.stringify(params)}`,
-  //   );
+  it('selects current filter values from state', () => {
+    expect(generatorA.next({ loanNumber: '1234567890' }).value.type).toEqual(
+      'SELECT',
+    );
+  });
 
-  //   expect(generatorA.next().value).toEqual(expectedEffect);
-  // });
+  it('selects last fetch params from state', () => {
+    expect(generatorA.next({ documents: initialState }).value.type).toEqual(
+      'SELECT',
+    );
+  });
 
-  // // revisit this
-  // it('updates state with data returned (if request successful)', () => {
-  //   const {
-  //     payload: {
-  //       action: { type: actionType },
-  //     },
-  //     type: effectType,
-  //   } = generatorA.next({}).value;
+  it('fetches data from the server', () => {
+    expect(generatorA.next().value.type).toEqual('CALL');
+  });
 
-  //   expect(effectType).toEqual('PUT');
-  //   expect(actionType).toEqual('app/Documents/FETCH_DOCUMENTS_DATA_SUCCESS');
-  // });
+  it('updates state with data fetched', () => {
+    expect(
+      generatorA.next({
+        documentsData: MOCK_DATA,
+        params: initialState.lastFetchParams,
+      }).value.type,
+    ).toEqual('PUT');
+  });
 
   it('is done', () => {
     expect(generatorA.next().done).toBe(true);
   });
 
-  it('updates state with error message (if request unsuccessful)', () => {
+  it('updates state with error message if fetch unsuccessful', () => {
     generatorB.next();
     const err = REQUEST_ERROR_MESSAGE;
     const actualEffect = generatorB.throw(err).value;
@@ -84,9 +82,13 @@ describe('fetchDocumentsDataSaga Saga', () => {
 describe('watcherSaga Saga', () => {
   const generator = watcherSaga();
 
-  it('should yield watcher saga', () => {
+  it('monitors all dispatched actions', () => {
     const expectedEffect = all([fetchDocumentsData()]);
 
     expect(generator.next().value).toEqual(expectedEffect);
+  });
+
+  it('is done', () => {
+    expect(generator.next().done).toBe(true);
   });
 });

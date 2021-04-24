@@ -3,7 +3,7 @@
  * @description ...
  */
 
-import React, { memo } from 'react';
+import React from 'react';
 import T from 'prop-types';
 
 import ListBorders from 'components/_base-ui/ListBorders';
@@ -101,4 +101,4 @@ CallsView.defaultProps = {
   headers: ['date', 'time', 'dept', 'rep', 'desc', 'audio'],
 };
 
-export default memo(CallsView);
+export default CallsView;

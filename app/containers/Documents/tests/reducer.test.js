@@ -4,7 +4,6 @@ import {
   fetchDocumentsData,
   fetchDocumentsDataFailure,
   fetchDocumentsDataSuccess,
-  onUnmount,
   setLoadingTrue,
 } from '../actions';
 import initialState from '../initialState';
@@ -32,27 +31,11 @@ describe('documentsReducer', () => {
   });
 
   it('should handle fetchDocumentsData correctly when filter arguments are passed', () => {
-    const params = {
-      dateFrom: '2020-01-01',
-      dateTo: '2020-02-01',
-      keyword: 'test',
-    };
     const expected = produce(state, (draft) => {
-      draft.loading = true;
+      draft.sortLoading = 'date';
     });
 
-    expect(documentsReducer(state, fetchDocumentsData(params))).toEqual(
-      expected,
-    );
-  });
-
-  it('should handle fetchDocumentsData correctly when sort arguments are passed', () => {
-    const params = { sortOrder: 'asc' };
-    const expected = produce(state, (draft) => {
-      draft.sortLoading = true;
-    });
-
-    expect(documentsReducer(state, fetchDocumentsData(params))).toEqual(
+    expect(documentsReducer(state, fetchDocumentsData('date', 'desc'))).toEqual(
       expected,
     );
   });
@@ -70,8 +53,7 @@ describe('documentsReducer', () => {
 
   it('should handle fetchDocumentsDataSuccess correctly', () => {
     const documentsData = MOCK_DATA;
-    const newFetchParams = {
-      currentTotal: '80',
+    const params = {
       dateFrom: '2020-01-01',
       dateTo: '2020-02-01',
       keyword: 'test',
@@ -80,43 +62,12 @@ describe('documentsReducer', () => {
     };
     const expected = produce(state, (draft) => {
       draft.documentsData = documentsData;
-      draft.fetchParams = newFetchParams;
+      draft.lastFetchParams = params;
     });
 
     expect(
-      documentsReducer(
-        state,
-        fetchDocumentsDataSuccess(documentsData, newFetchParams),
-      ),
+      documentsReducer(state, fetchDocumentsDataSuccess(documentsData, params)),
     ).toEqual(expected);
-  });
-
-  it('should handle fetchDocumentsDataSuccess correctly when no data was fetched', () => {
-    const documentsData = [];
-    const newFetchParams = {
-      currentTotal: '80',
-      dateFrom: '2020-01-01',
-      dateTo: '2020-02-01',
-      keyword: 'test',
-      sortCol: 'date',
-      sortOrder: 'desc',
-    };
-    const expected = produce(state, (draft) => {
-      draft.documentsData = documentsData;
-      draft.fetchParams = newFetchParams;
-      draft.noDataFetched = true;
-    });
-
-    expect(
-      documentsReducer(
-        state,
-        fetchDocumentsDataSuccess(documentsData, newFetchParams),
-      ),
-    ).toEqual(expected);
-  });
-
-  it('should handle onUnmount correctly', () => {
-    expect(documentsReducer(state, onUnmount())).toEqual(initialState);
   });
 
   it('should handle setLoadingTrue correctly', () => {
