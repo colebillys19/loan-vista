@@ -7,13 +7,13 @@ const HandlerLogic = ({
   lastFetchParams,
   render,
   state,
-  targetId,
+  tabId,
 }) => {
   const { dateFrom, dateTo } = state;
 
   //
   const handleDateFromChange = (date) => {
-    dispatchUpdateFilterState(targetId, {
+    dispatchUpdateFilterState(tabId, {
       ...state,
       dateFrom: date,
       dateRange: getRangeValue(date, dateTo),
@@ -22,7 +22,7 @@ const HandlerLogic = ({
 
   //
   const handleDateToChange = (date) => {
-    dispatchUpdateFilterState(targetId, {
+    dispatchUpdateFilterState(tabId, {
       ...state,
       dateRange: getRangeValue(dateFrom, date),
       dateTo: date,
@@ -43,17 +43,17 @@ const HandlerLogic = ({
       newValues.dateTo = datesArr[0]; // eslint-disable-line
     }
 
-    dispatchUpdateFilterState(targetId, newValues);
+    dispatchUpdateFilterState(tabId, newValues);
   };
 
   //
   const handleKeywordChange = (value) => {
-    dispatchUpdateFilterState(targetId, { ...state, keyword: value });
+    dispatchUpdateFilterState(tabId, { ...state, keyword: value });
   };
 
   //
   const handleRefreshClick = () => {
-    dispatchUpdateFilterState(targetId, {
+    dispatchUpdateFilterState(tabId, {
       dateFrom: null,
       dateRange: 0,
       dateTo: null,

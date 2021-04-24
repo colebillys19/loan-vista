@@ -18,7 +18,6 @@ import ListFilterView from 'components/ListFilterView';
 
 import {
   makeSelectTargetDateErrors,
-  makeSelectTargetId,
   makeSelectTargetLastFetchParams,
   makeSelectTargetState,
 } from './selectors';
@@ -31,8 +30,8 @@ export const ListFilter = ({
   dispatchFetchDataDocuments,
   dispatchFetchDataPayments,
   dispatchUpdateFilterState,
+  tabId,
   targetDateErrors,
-  targetId,
   targetLastFetchParams,
   targetState,
 }) => {
@@ -50,7 +49,7 @@ export const ListFilter = ({
   return (
     <HandlerLogic
       dateErrors={targetDateErrors}
-      dispatchFetchData={dispatchFetchDataDict[targetId]}
+      dispatchFetchData={dispatchFetchDataDict[tabId]}
       dispatchUpdateFilterState={dispatchUpdateFilterState}
       lastFetchParams={targetLastFetchParams}
       render={({
@@ -77,7 +76,7 @@ export const ListFilter = ({
         />
       )}
       state={targetState}
-      targetId={targetId}
+      tabId={tabId}
     />
   );
 };
@@ -87,8 +86,8 @@ ListFilter.propTypes = {
   dispatchFetchDataDocuments: T.func.isRequired,
   dispatchFetchDataPayments: T.func.isRequired,
   dispatchUpdateFilterState: T.func.isRequired,
+  tabId: T.string.isRequired,
   targetDateErrors: T.arrayOf(T.string).isRequired,
-  targetId: T.string.isRequired,
   targetLastFetchParams: T.object.isRequired,
   targetState: T.shape({
     dateFrom: T.object,
@@ -101,7 +100,6 @@ ListFilter.propTypes = {
 const mapStateToProps = createStructuredSelector({
   pathname: makeSelectPathname(),
   targetDateErrors: makeSelectTargetDateErrors(),
-  targetId: makeSelectTargetId(),
   targetLastFetchParams: makeSelectTargetLastFetchParams(),
   targetState: makeSelectTargetState(),
 });

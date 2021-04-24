@@ -3,7 +3,6 @@ import moment from 'moment';
 import initialState from '../initialState';
 import {
   makeSelectTargetDateErrors,
-  makeSelectTargetId,
   makeSelectTargetLastFetchParams,
   makeSelectTargetState,
   selectListFilterDomain,
@@ -35,15 +34,6 @@ describe('makeSelectTargetDateErrors', () => {
 
   it('derives date errors from state', () => {
     expect(targetDateErrorsSelector(mockedState)).toEqual(expected);
-  });
-});
-
-describe('makeSelectTargetId', () => {
-  const targetFilterStateSelector = makeSelectTargetId();
-  const mockedState = { router: { location: { pathname: '/calls' } } };
-
-  it('derives current pathname from state', () => {
-    expect(targetFilterStateSelector(mockedState)).toEqual('calls');
   });
 });
 

@@ -16,8 +16,8 @@ const mockProps = {
   dispatchFetchDataDocuments: jest.fn(),
   dispatchFetchDataPayments: jest.fn(),
   dispatchUpdateFilterState: jest.fn(),
+  tabId: 'calls',
   targetDateErrors: ['', ''],
-  targetId: 'calls',
   targetLastFetchParams: {},
   targetState: {
     dateFrom: null,

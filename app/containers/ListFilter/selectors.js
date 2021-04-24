@@ -21,16 +21,6 @@ const makeSelectTargetDateErrors = () =>
   );
 
 /**
- * makeSelectTargetId
- * @description ...
- */
-const makeSelectTargetId = () =>
-  createSelector(
-    makeSelectPathname(),
-    (pathname) => pathname.slice(1),
-  );
-
-/**
  * makeSelectTargetLastFetchParams
  * @description ...
  */
@@ -65,13 +55,12 @@ const makeSelectTargetLastFetchParams = () =>
 const makeSelectTargetState = () =>
   createSelector(
     selectListFilterDomain,
-    makeSelectTargetId(),
-    (listFilterState, targetId) => listFilterState[targetId],
+    makeSelectPathname(),
+    (listFilterState, pathname) => listFilterState[pathname.slice(1)],
   );
 
 export {
   makeSelectTargetDateErrors,
-  makeSelectTargetId,
   makeSelectTargetLastFetchParams,
   makeSelectTargetState,
   selectListFilterDomain,
