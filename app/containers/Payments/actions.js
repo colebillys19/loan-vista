@@ -2,13 +2,11 @@ import {
   FETCH_PAYMENTS_DATA,
   FETCH_PAYMENTS_DATA_FAILURE,
   FETCH_PAYMENTS_DATA_SUCCESS,
-  ON_UNMOUNT,
   SET_LOADING_TRUE,
 } from './constants';
 
-/* eslint-disable arrow-body-style */
-export const fetchPaymentsData = (params) => ({
-  payload: { params },
+export const fetchPaymentsData = (sortCol, sortOrder) => ({
+  payload: { sortCol, sortOrder },
   type: FETCH_PAYMENTS_DATA,
 });
 
@@ -17,11 +15,9 @@ export const fetchPaymentsDataFailure = (error) => ({
   type: FETCH_PAYMENTS_DATA_FAILURE,
 });
 
-export const fetchPaymentsDataSuccess = (paymentsData, newFetchParams) => ({
-  payload: { newFetchParams, paymentsData },
+export const fetchPaymentsDataSuccess = (paymentsData, params) => ({
+  payload: { params, paymentsData },
   type: FETCH_PAYMENTS_DATA_SUCCESS,
 });
-
-export const onUnmount = () => ({ type: ON_UNMOUNT });
 
 export const setLoadingTrue = () => ({ type: SET_LOADING_TRUE });

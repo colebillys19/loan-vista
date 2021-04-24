@@ -1,7 +1,6 @@
 const initialState = {
   error: false,
-  fetchParams: {
-    currentTotal: '80',
+  lastFetchParams: {
     dateFrom: '',
     dateTo: '',
     keyword: '',
@@ -9,7 +8,6 @@ const initialState = {
     sortOrder: 'desc',
   },
   loading: false,
-  noDataFetched: false,
   paymentsData: [],
   sortLoading: false,
 };

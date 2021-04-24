@@ -3,7 +3,7 @@ const moment = require('moment');
 const {
   checkDate,
   checkKeyword,
-  getDateMoments,
+  getDateTimeFormatted,
   sortByDateAsc,
   sortByString,
 } = require('../helpers');
@@ -23,7 +23,8 @@ const convertNumToCurrency = (num, withAdorn = true) => {
  * @description ...
  */
 const filterPayments = (data, dateFrom, dateTo, keyword) => {
-  const { dateFromMoment, dateToMoment } = getDateMoments(dateFrom, dateTo);
+  const dateFromMoment = moment(dateFrom);
+  const dateToMoment = moment(dateTo);
 
   return data.filter((row) => {
     const { date, time } = row;
@@ -43,11 +44,15 @@ const filterPayments = (data, dateFrom, dateTo, keyword) => {
  * getFormattedRowValuesArray
  * @description ...
  */
-const getFormattedRowValuesArray = (rowObj) =>
-  Object.keys(rowObj).reduce((acc, key) => {
+const getFormattedRowValuesArray = (rowObj) => {
+  const { date, time } = rowObj;
+  const dateTime = `${date} ${time}`;
+  const [dateFormatted, timeFormatted] = getDateTimeFormatted(dateTime);
+
+  return Object.keys(rowObj).reduce((acc, key) => {
     switch (key) {
       case 'date':
-        acc.push(moment(rowObj[key], 'YYYY-MM-DD').format('MM/DD/YYYY'));
+        acc.push(dateFormatted);
         break;
       case 'desc':
         acc.push(rowObj[key]);
@@ -58,6 +63,7 @@ const getFormattedRowValuesArray = (rowObj) =>
       case 'id':
         break;
       case 'time':
+        acc.push(timeFormatted);
         break;
       default:
         acc.push(convertNumToCurrency(rowObj[key]));
@@ -65,6 +71,7 @@ const getFormattedRowValuesArray = (rowObj) =>
 
     return acc;
   }, []);
+};
 
 /**
  * getTargetPaymentsData

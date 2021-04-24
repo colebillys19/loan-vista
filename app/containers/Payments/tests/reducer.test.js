@@ -4,7 +4,6 @@ import {
   fetchPaymentsData,
   fetchPaymentsDataFailure,
   fetchPaymentsDataSuccess,
-  onUnmount,
   setLoadingTrue,
 } from '../actions';
 import initialState from '../initialState';
@@ -32,25 +31,13 @@ describe('paymentsReducer', () => {
   });
 
   it('should handle fetchPaymentsData correctly when filter arguments are passed', () => {
-    const params = {
-      dateFrom: '2020-01-01',
-      dateTo: '2020-02-01',
-      keyword: 'test',
-    };
     const expected = produce(state, (draft) => {
-      draft.loading = true;
+      draft.sortLoading = 'date';
     });
 
-    expect(paymentsReducer(state, fetchPaymentsData(params))).toEqual(expected);
-  });
-
-  it('should handle fetchPaymentsData correctly when sort arguments are passed', () => {
-    const params = { sortOrder: 'asc' };
-    const expected = produce(state, (draft) => {
-      draft.sortLoading = true;
-    });
-
-    expect(paymentsReducer(state, fetchPaymentsData(params))).toEqual(expected);
+    expect(paymentsReducer(state, fetchPaymentsData('date', 'desc'))).toEqual(
+      expected,
+    );
   });
 
   it('should handle fetchPaymentsDataFailure correctly', () => {
@@ -66,8 +53,7 @@ describe('paymentsReducer', () => {
 
   it('should handle fetchPaymentsDataSuccess correctly', () => {
     const paymentsData = MOCK_DATA;
-    const newFetchParams = {
-      currentTotal: '80',
+    const params = {
       dateFrom: '2020-01-01',
       dateTo: '2020-02-01',
       keyword: 'test',
@@ -76,43 +62,12 @@ describe('paymentsReducer', () => {
     };
     const expected = produce(state, (draft) => {
       draft.paymentsData = paymentsData;
-      draft.fetchParams = newFetchParams;
+      draft.lastFetchParams = params;
     });
 
     expect(
-      paymentsReducer(
-        state,
-        fetchPaymentsDataSuccess(paymentsData, newFetchParams),
-      ),
+      paymentsReducer(state, fetchPaymentsDataSuccess(paymentsData, params)),
     ).toEqual(expected);
-  });
-
-  it('should handle fetchPaymentsDataSuccess correctly when no data was fetched', () => {
-    const paymentsData = [];
-    const newFetchParams = {
-      currentTotal: '80',
-      dateFrom: '2020-01-01',
-      dateTo: '2020-02-01',
-      keyword: 'test',
-      sortCol: 'date',
-      sortOrder: 'desc',
-    };
-    const expected = produce(state, (draft) => {
-      draft.paymentsData = paymentsData;
-      draft.fetchParams = newFetchParams;
-      draft.noDataFetched = true;
-    });
-
-    expect(
-      paymentsReducer(
-        state,
-        fetchPaymentsDataSuccess(paymentsData, newFetchParams),
-      ),
-    ).toEqual(expected);
-  });
-
-  it('should handle onUnmount correctly', () => {
-    expect(paymentsReducer(state, onUnmount())).toEqual(initialState);
   });
 
   it('should handle setLoadingTrue correctly', () => {

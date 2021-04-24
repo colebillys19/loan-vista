@@ -2,28 +2,33 @@ import {
   fetchPaymentsData,
   fetchPaymentsDataFailure,
   fetchPaymentsDataSuccess,
-  onUnmount,
   setLoadingTrue,
 } from '../actions';
 import {
   FETCH_PAYMENTS_DATA,
   FETCH_PAYMENTS_DATA_FAILURE,
   FETCH_PAYMENTS_DATA_SUCCESS,
-  ON_UNMOUNT,
   SET_LOADING_TRUE,
 } from '../constants';
 import { MOCK_DATA } from './mockData';
 
 describe('fetchPaymentsData', () => {
-  it('has correct payload and type', () => {
-    const params = {
-      dateFrom: '2020-10-13',
-      dateTo: '2020-11-18',
-      keyword: 'test',
+  it('behaves as expected when no arguments passed', () => {
+    const expected = {
+      payload: { sortCol: undefined, sortOrder: undefined },
+      type: FETCH_PAYMENTS_DATA,
     };
-    const expected = { payload: { params }, type: FETCH_PAYMENTS_DATA };
 
-    expect(fetchPaymentsData(params)).toEqual(expected);
+    expect(fetchPaymentsData()).toEqual(expected);
+  });
+
+  it('behaves as expected when arguments passed', () => {
+    const expected = {
+      payload: { sortCol: 'date', sortOrder: 'desc' },
+      type: FETCH_PAYMENTS_DATA,
+    };
+
+    expect(fetchPaymentsData('date', 'desc')).toEqual(expected);
   });
 });
 
@@ -39,8 +44,7 @@ describe('fetchPaymentsDataFailure', () => {
 describe('fetchPaymentsDataSuccess', () => {
   it('has correct payload and type', () => {
     const paymentsData = MOCK_DATA;
-    const newFetchParams = {
-      currentTotal: '80',
+    const params = {
       dateFrom: '',
       dateTo: '',
       keyword: '',
@@ -48,19 +52,11 @@ describe('fetchPaymentsDataSuccess', () => {
       sortOrder: 'desc',
     };
     const expected = {
-      payload: { newFetchParams, paymentsData },
+      payload: { params, paymentsData },
       type: FETCH_PAYMENTS_DATA_SUCCESS,
     };
 
-    expect(fetchPaymentsDataSuccess(paymentsData, newFetchParams)).toEqual(
-      expected,
-    );
-  });
-});
-
-describe('onUnmount', () => {
-  it('has correct type', () => {
-    expect(onUnmount()).toEqual({ type: ON_UNMOUNT });
+    expect(fetchPaymentsDataSuccess(paymentsData, params)).toEqual(expected);
   });
 });
 

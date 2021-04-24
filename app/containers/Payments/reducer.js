@@ -1,25 +1,22 @@
 import produce from 'immer';
 
-import paymentsInitialState from './initialState';
+import initialState from './initialState';
 import {
   FETCH_PAYMENTS_DATA,
   FETCH_PAYMENTS_DATA_FAILURE,
   FETCH_PAYMENTS_DATA_SUCCESS,
-  ON_UNMOUNT,
   SET_LOADING_TRUE,
 } from './constants';
-
-export const initialState = paymentsInitialState;
 
 /* eslint-disable default-case, no-param-reassign, no-case-declarations */
 const paymentsReducer = (state = initialState, { payload, type }) =>
   produce(state, (draft) => {
     switch (type) {
       case FETCH_PAYMENTS_DATA:
-        const { params } = payload;
+        const { sortCol } = payload;
         draft.error = false;
-        if (params && params.sortOrder) {
-          draft.sortLoading = true;
+        if (sortCol) {
+          draft.sortLoading = sortCol;
         } else {
           draft.loading = true;
         }
@@ -31,16 +28,9 @@ const paymentsReducer = (state = initialState, { payload, type }) =>
         draft.sortLoading = false;
         break;
       case FETCH_PAYMENTS_DATA_SUCCESS:
-        const { newFetchParams, paymentsData } = payload;
-        draft.noDataFetched = !paymentsData.length;
-        draft.loading = false;
-        draft.fetchParams = newFetchParams;
+        const { params, paymentsData } = payload;
         draft.paymentsData = paymentsData;
-        draft.sortLoading = false;
-        break;
-      case ON_UNMOUNT:
-        draft.error = false;
-        draft.fetchParams = initialState.fetchParams;
+        draft.lastFetchParams = params;
         draft.loading = false;
         draft.sortLoading = false;
         break;

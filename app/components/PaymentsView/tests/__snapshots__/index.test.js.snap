@@ -1,0 +1,295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
+<div
+  class="styledComponents__TableContainer-vlp0pm-7 jqujHF"
+>
+  <div
+    class="GradientBorder-sc-1rv7gqq-0 fQQJcU"
+  />
+  <div
+    class="GradientBorder-sc-1rv7gqq-0 gmyLkZ"
+  />
+  <div
+    class="GradientBorder-sc-1rv7gqq-0 gnegQe"
+  />
+  <div
+    class="GradientBorder-sc-1rv7gqq-0 yNJzF"
+  />
+  <table
+    class="styledComponents__StyledTable-vlp0pm-1 isdduh"
+  >
+    <thead
+      class="styledComponents__StyledTableHead-vlp0pm-4 styledComponents__CustomTableHead-sc-1kvx6rk-0 kanASB"
+    >
+      <tr
+        class="styledComponents__StyledTableRow-vlp0pm-6 ldLzdU"
+      >
+        <th
+          class="styledComponents__StyledTableHeader-vlp0pm-5 bVVwbq"
+          scope="col"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 gBupFP MuiButton-disableElevation"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              date
+              <span
+                class="MuiButton-endIcon MuiButton-iconSizeMedium"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  style="height: 0.8rem; width: 0.8rem;"
+                  viewBox="7 7 10 10"
+                >
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M7 10l5 5 5-5z"
+                    fill="rgb(136, 136, 136)"
+                  />
+                </svg>
+              </span>
+            </span>
+          </button>
+        </th>
+        <th
+          class="styledComponents__StyledTableHeader-vlp0pm-5 bVVwbq"
+          scope="col"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 gBupFP MuiButton-disableElevation"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              desc
+              <span
+                class="MuiButton-endIcon MuiButton-iconSizeMedium"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  style="height: 0.8rem; width: 0.8rem;"
+                  viewBox="7 7 10 10"
+                >
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M7 10l5 5 5-5z"
+                    fill="rgb(136, 136, 136)"
+                  />
+                </svg>
+              </span>
+            </span>
+          </button>
+        </th>
+        <th
+          class="styledComponents__StyledTableHeader-vlp0pm-5 bVVwbq"
+          scope="col"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 gBupFP MuiButton-disableElevation"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              total
+              <span
+                class="MuiButton-endIcon MuiButton-iconSizeMedium"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  style="height: 0.8rem; width: 0.8rem;"
+                  viewBox="7 7 10 10"
+                >
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M7 10l5 5 5-5z"
+                    fill="rgb(136, 136, 136)"
+                  />
+                </svg>
+              </span>
+            </span>
+          </button>
+        </th>
+        <th
+          class="styledComponents__StyledTableHeader-vlp0pm-5 bVVwbq"
+          scope="col"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 gBupFP MuiButton-disableElevation"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              principal
+              <span
+                class="MuiButton-endIcon MuiButton-iconSizeMedium"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  style="height: 0.8rem; width: 0.8rem;"
+                  viewBox="7 7 10 10"
+                >
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M7 10l5 5 5-5z"
+                    fill="rgb(136, 136, 136)"
+                  />
+                </svg>
+              </span>
+            </span>
+          </button>
+        </th>
+        <th
+          class="styledComponents__StyledTableHeader-vlp0pm-5 bVVwbq"
+          scope="col"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 gBupFP MuiButton-disableElevation"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              interest
+              <span
+                class="MuiButton-endIcon MuiButton-iconSizeMedium"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  style="height: 0.8rem; width: 0.8rem;"
+                  viewBox="7 7 10 10"
+                >
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M7 10l5 5 5-5z"
+                    fill="rgb(136, 136, 136)"
+                  />
+                </svg>
+              </span>
+            </span>
+          </button>
+        </th>
+        <th
+          class="styledComponents__StyledTableHeader-vlp0pm-5 bVVwbq"
+          scope="col"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 gBupFP MuiButton-disableElevation"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              escrow
+              <span
+                class="MuiButton-endIcon MuiButton-iconSizeMedium"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  style="height: 0.8rem; width: 0.8rem;"
+                  viewBox="7 7 10 10"
+                >
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M7 10l5 5 5-5z"
+                    fill="rgb(136, 136, 136)"
+                  />
+                </svg>
+              </span>
+            </span>
+          </button>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="styledComponents__StyledTableBody-vlp0pm-2 hzYCgB"
+    >
+      <tr
+        class="styledComponents__StyledTableRow-vlp0pm-6 ldLzdU"
+      >
+        <td
+          class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
+        >
+          date
+        </td>
+        <td
+          class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
+        >
+          desc
+        </td>
+        <td
+          class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
+        >
+          total
+        </td>
+        <td
+          class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
+        >
+          principal
+        </td>
+        <td
+          class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
+        >
+          interest
+        </td>
+        <td
+          class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
+        >
+          escrow
+        </td>
+      </tr>
+    </tbody>
+    <thead>
+      <tr>
+        <td
+          class="styledComponents__TableFooterCell-vlp0pm-8 dEwaCH"
+        >
+          hidden text
+        </td>
+      </tr>
+    </thead>
+  </table>
+</div>
+`;

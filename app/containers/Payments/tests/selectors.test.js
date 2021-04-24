@@ -1,6 +1,5 @@
 import makeSelectPayments, {
   makeSelectPaymentsData,
-  makeSelectSortValues,
   selectPaymentsDomain,
 } from '../selectors';
 import { MOCK_DATA, MOCK_RAW_DATA } from './mockData';
@@ -15,9 +14,8 @@ describe('selectPaymentsDomain', () => {
 });
 
 describe('makeSelectPayments', () => {
-  const prop = 'paymentsData';
   const paymentsData = [];
-  const paymentsSelector = makeSelectPayments(prop);
+  const paymentsSelector = makeSelectPayments('paymentsData');
   const mockedState = { payments: { paymentsData } };
 
   it('should use the prop passed to select the proper substate', () => {
@@ -33,23 +31,5 @@ describe('makeSelectPaymentsData', () => {
 
   it('selects and formats the payments data', () => {
     expect(paymentsDataSelector(mockedState)).toEqual(paymentsData);
-  });
-});
-
-describe('makeSelectSortValues', () => {
-  const sortValuesSelector = makeSelectSortValues();
-  const fetchParams = {
-    currentTotal: '80',
-    dateFrom: '',
-    dateTo: '',
-    keyword: '',
-    sortCol: 'date',
-    sortOrder: 'desc',
-  };
-  const mockedState = { payments: { fetchParams } };
-  const expected = { sortCol: 'date', sortOrder: 'desc' };
-
-  it('selects the sort values', () => {
-    expect(sortValuesSelector(mockedState)).toEqual(expected);
   });
 });

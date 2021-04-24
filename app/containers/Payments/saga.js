@@ -1,9 +1,11 @@
 import { all, call, put, select, takeLatest } from 'redux-saga/effects';
 import querystring from 'querystring';
 
-import { get } from 'utils/request';
 import { REQUEST_ERROR_MESSAGE } from 'utils/globalConstants';
+import { formatFilterState } from 'utils/globalHelpers';
+import { get } from 'utils/request';
 import makeSelectMain from 'containers/Main/selectors';
+import { selectListFilterDomain } from 'containers/ListFilter/selectors';
 
 import { fetchPaymentsDataFailure, fetchPaymentsDataSuccess } from './actions';
 import makeSelectPayments from './selectors';
@@ -11,24 +13,26 @@ import { FETCH_PAYMENTS_DATA } from './constants';
 
 export function* fetchPaymentsDataSaga({ payload }) {
   try {
-    const { params: payloadFetchParams } = payload;
-    const stateFetchParams = yield select(makeSelectPayments('fetchParams'));
     const loanNumber = yield select(makeSelectMain('loanNumber'));
 
     if (loanNumber) {
-      const queryParams = Object.assign(
-        {},
-        { loanNumber },
-        stateFetchParams,
-        payloadFetchParams,
+      const { sortCol, sortOrder } = payload;
+      const filterState = yield select(selectListFilterDomain);
+      const lastFetchParams = yield select(
+        makeSelectPayments('lastFetchParams'),
       );
 
-      const { newFetchParams, paymentsData } = yield call(
-        get,
-        `/api/payments/?${querystring.stringify(queryParams)}`,
-      );
+      const newParams =
+        sortCol && sortOrder
+          ? { sortCol, sortOrder }
+          : formatFilterState(filterState.payments);
 
-      yield put(fetchPaymentsDataSuccess(paymentsData, newFetchParams));
+      const queryParams = { ...lastFetchParams, ...newParams, loanNumber };
+      const endpoint = `/api/payments/?${querystring.stringify(queryParams)}`;
+
+      const { params, paymentsData } = yield call(get, endpoint);
+
+      yield put(fetchPaymentsDataSuccess(paymentsData, params));
     }
   } catch (error) {
     console.error(error); // eslint-disable-line

@@ -1,9 +1,9 @@
 /**
- * PaymentsList
+ * PaymentsView
  * @description ...
  */
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import T from 'prop-types';
 
 import ListBorders from 'components/_base-ui/ListBorders';
@@ -20,29 +20,20 @@ import {
 import TableRow from './TableRow';
 import { CustomTableHead } from './styledComponents';
 
-const PaymentsList = ({
+const PaymentsView = ({
   dispatchFetchPaymentsData,
   headers,
+  lastSortCol,
+  lastSortOrder,
   paymentsData,
   sortLoading,
-  sortValues: { sortCol: currentSortCol, sortOrder: currentSortOrder },
 }) => {
-  const [colClicked, setColClicked] = useState('');
-
-  useEffect(() => {
-    setColClicked('');
-  }, [currentSortCol, currentSortOrder]);
-
   const handleSortClick = (header) => {
-    setColClicked(header);
+    const newSortCol = header;
+    const newSortOrder =
+      header === lastSortCol && lastSortOrder === 'desc' ? 'asc' : 'desc';
 
-    if (header !== currentSortCol) {
-      dispatchFetchPaymentsData({ sortCol: header, sortOrder: 'desc' });
-    } else {
-      dispatchFetchPaymentsData({
-        sortOrder: currentSortOrder === 'desc' ? 'asc' : 'desc',
-      });
-    }
+    dispatchFetchPaymentsData(newSortCol, newSortOrder);
   };
 
   return (
@@ -54,11 +45,11 @@ const PaymentsList = ({
             {headers.map((header) => (
               <StyledTableHeader key={header} scope="col">
                 <ListSortButton
-                  isActive={header === currentSortCol}
+                  isActive={header === lastSortCol}
                   isAscending={
-                    header === currentSortCol && currentSortOrder === 'asc'
+                    header === lastSortCol && lastSortOrder === 'asc'
                   }
-                  loading={sortLoading && header === colClicked}
+                  loading={sortLoading === header}
                   onClick={() => handleSortClick(header)}
                   text={header}
                 />
@@ -77,9 +68,11 @@ const PaymentsList = ({
   );
 };
 
-PaymentsList.propTypes = {
+PaymentsView.propTypes = {
   dispatchFetchPaymentsData: T.func.isRequired,
   headers: T.arrayOf(T.string),
+  lastSortCol: T.string.isRequired,
+  lastSortOrder: T.string.isRequired,
   paymentsData: T.arrayOf(
     T.shape({
       date: T.string,
@@ -91,12 +84,11 @@ PaymentsList.propTypes = {
       total: T.string,
     }),
   ).isRequired,
-  sortLoading: T.bool.isRequired,
-  sortValues: T.shape({ sortCol: T.string, sortOrder: T.string }).isRequired,
+  sortLoading: T.oneOfType([T.bool, T.string]).isRequired,
 };
 
-PaymentsList.defaultProps = {
+PaymentsView.defaultProps = {
   headers: ['date', 'desc', 'total', 'principal', 'interest', 'escrow'],
 };
 
-export default PaymentsList;
+export default PaymentsView;

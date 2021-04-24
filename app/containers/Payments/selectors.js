@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 
-import { initialState } from './reducer';
 import { getPaymentsData } from './helpers';
+import initialState from './initialState';
 
 const selectPaymentsDomain = (state) => state.payments || initialState;
 
@@ -21,15 +21,5 @@ const makeSelectPaymentsData = () =>
     (paymentsData) => getPaymentsData(paymentsData),
   );
 
-/**
- * makeSelectSortValues
- * @description ...
- */
-const makeSelectSortValues = () =>
-  createSelector(
-    makeSelectPayments('fetchParams'),
-    ({ sortCol, sortOrder }) => ({ sortCol, sortOrder }),
-  );
-
 export default makeSelectPayments;
-export { makeSelectPaymentsData, selectPaymentsDomain, makeSelectSortValues };
+export { makeSelectPaymentsData, selectPaymentsDomain };

@@ -1,17 +1,18 @@
 import { all, put, takeLatest } from 'redux-saga/effects';
-// import querystring from 'querystring';
 
 import { REQUEST_ERROR_MESSAGE } from 'utils/globalConstants';
-// import { get } from 'utils/request';
 
 import { fetchPaymentsDataFailure } from '../actions';
 import { FETCH_PAYMENTS_DATA } from '../constants';
+import initialState from '../initialState';
 import watcherSaga, { fetchPaymentsData, fetchPaymentsDataSaga } from '../saga';
+
+import { MOCK_DATA } from './mockData';
 
 describe('fetchPaymentsData Saga', () => {
   const generator = fetchPaymentsData();
 
-  it('should yield takeLatest FETCH_PAYMENTS_DATA', () => {
+  it('calls fetchPaymentsDataSaga when FETCH_PAYMENTS_DATA action is dispatched', () => {
     const expectedEffect = takeLatest(
       FETCH_PAYMENTS_DATA,
       fetchPaymentsDataSaga,
@@ -20,7 +21,7 @@ describe('fetchPaymentsData Saga', () => {
     expect(generator.next().value).toEqual(expectedEffect);
   });
 
-  it('should be done', () => {
+  it('is done', () => {
     const isDone = generator.next().done;
 
     expect(isDone).toBe(true);
@@ -28,47 +29,44 @@ describe('fetchPaymentsData Saga', () => {
 });
 
 describe('fetchPaymentsDataSaga Saga', () => {
-  const params = {
-    dateFrom: '2020-01-01',
-    dateTo: '2020-02-01',
-    keyword: 'test',
-  };
+  const params = { sortCol: '', sortOrder: '' };
   const generatorA = fetchPaymentsDataSaga({ payload: { params } });
   const generatorB = fetchPaymentsDataSaga({ payload: { params } });
 
-  // revisit this
-  it('selects data from state', () => {
-    expect(generatorA.next().value.type).toEqual('SELECT');
+  it('selects loan number from state', () => {
     expect(generatorA.next().value.type).toEqual('SELECT');
   });
 
-  // it('sends a get request to the server', () => {
-  //   const expectedEffect = call(
-  //     get,
-  //     `/api/payments/?${querystring.stringify(params)}`,
-  //   );
+  it('selects current filter values from state', () => {
+    expect(generatorA.next({ loanNumber: '1234567890' }).value.type).toEqual(
+      'SELECT',
+    );
+  });
 
-  //   expect(generatorA.next().value).toEqual(expectedEffect);
-  // });
+  it('selects last fetch params from state', () => {
+    expect(generatorA.next({ payments: initialState }).value.type).toEqual(
+      'SELECT',
+    );
+  });
 
-  // // revisit this
-  // it('updates state with data returned (if request successful)', () => {
-  //   const {
-  //     payload: {
-  //       action: { type: actionType },
-  //     },
-  //     type: effectType,
-  //   } = generatorA.next({}).value;
+  it('fetches data from the server', () => {
+    expect(generatorA.next().value.type).toEqual('CALL');
+  });
 
-  //   expect(effectType).toEqual('PUT');
-  //   expect(actionType).toEqual('app/Payments/FETCH_PAYMENTS_DATA_SUCCESS');
-  // });
+  it('updates state with data fetched', () => {
+    expect(
+      generatorA.next({
+        params: initialState.lastFetchParams,
+        paymentsData: MOCK_DATA,
+      }).value.type,
+    ).toEqual('PUT');
+  });
 
   it('is done', () => {
     expect(generatorA.next().done).toBe(true);
   });
 
-  it('updates state with error message (if request unsuccessful)', () => {
+  it('updates state with error message if fetch unsuccessful', () => {
     generatorB.next();
     const err = REQUEST_ERROR_MESSAGE;
     const actualEffect = generatorB.throw(err).value;
@@ -81,9 +79,13 @@ describe('fetchPaymentsDataSaga Saga', () => {
 describe('watcherSaga Saga', () => {
   const generator = watcherSaga();
 
-  it('should yield watcher saga', () => {
+  it('monitors all dispatched actions', () => {
     const expectedEffect = all([fetchPaymentsData()]);
 
     expect(generator.next().value).toEqual(expectedEffect);
+  });
+
+  it('is done', () => {
+    expect(generator.next().done).toBe(true);
   });
 });
