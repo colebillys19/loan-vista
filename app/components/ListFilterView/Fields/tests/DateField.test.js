@@ -7,9 +7,6 @@ const mockProps = {
   disabled: false,
   error: '',
   label: 'from',
-  onChange: jest.fn(),
-  setError: jest.fn(),
-  value: null,
 };
 
 const Component = <DateField {...mockProps} />;

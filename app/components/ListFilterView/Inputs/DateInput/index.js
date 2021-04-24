@@ -11,7 +11,7 @@ import { usePrevious } from 'utils/customHooks';
 import ForwardRefPicker from './ForwardRefPicker';
 import Tooltip from './Tooltip';
 
-const DateInput = ({ error, onChange, value }) => {
+const DateInput = ({ error, ...restProps }) => {
   const [open, setOpen] = useState(false);
 
   const prevError = usePrevious(error);
@@ -32,15 +32,11 @@ const DateInput = ({ error, onChange, value }) => {
       title={error}
       TransitionProps={{ timeout: 0 }}
     >
-      <ForwardRefPicker isError={!!error} onChange={onChange} value={value} />
+      <ForwardRefPicker isError={!!error} {...restProps} />
     </Tooltip>
   );
 };
 
-DateInput.propTypes = {
-  error: T.string.isRequired,
-  onChange: T.func.isRequired,
-  value: T.object,
-};
+DateInput.propTypes = { error: T.string.isRequired };
 
 export default DateInput;

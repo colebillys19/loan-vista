@@ -31,10 +31,6 @@ const ForwardRefPicker = forwardRef(({ isError, ...restProps }, ref) => (
   </DatePickerWrapper>
 ));
 
-ForwardRefPicker.propTypes = {
-  isError: T.bool.isRequired,
-  onChange: T.func.isRequired,
-  value: T.object,
-};
+ForwardRefPicker.propTypes = { isError: T.bool.isRequired };
 
 export default ForwardRefPicker;

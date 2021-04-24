@@ -235,7 +235,7 @@ exports[`<ListFilter /> Should render and match the snapshot 1`] = `
     class="styledComponents__FieldWrapper-at5kq4-0 eDOiRT"
   >
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1jxtcmc-0 jdkzfT styledComponents__StyledButton-sc-86ulmm-0 bbadGD"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1jxtcmc-0 kLtwHh styledComponents__StyledButton-sc-86ulmm-0 bbadGD"
       tabindex="0"
       type="submit"
     >

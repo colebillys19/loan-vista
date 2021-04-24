@@ -3,11 +3,7 @@ import { render } from 'react-testing-library';
 
 import ForwardRefPicker from '../ForwardRefPicker';
 
-const mockProps = {
-  isError: false,
-  onChange: jest.fn(),
-  value: new Date(),
-};
+const mockProps = { isError: false };
 
 const Component = <ForwardRefPicker {...mockProps} />;
 
