@@ -3,8 +3,9 @@ import T from 'prop-types';
 
 import { StyledTextField } from './styledComponents';
 
-const KeywordInput = ({ onChange, value }) => (
+const KeywordInput = ({ disabled, onChange, value }) => (
   <StyledTextField
+    disabled={disabled}
     onChange={(e) => onChange(e.target.value)}
     placeholder="keyword search"
     value={value}
@@ -12,6 +13,7 @@ const KeywordInput = ({ onChange, value }) => (
 );
 
 KeywordInput.propTypes = {
+  disabled: T.bool.isRequired,
   onChange: T.func.isRequired,
   value: T.string.isRequired,
 };

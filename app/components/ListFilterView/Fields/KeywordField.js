@@ -8,7 +8,7 @@ import { FieldWrapper, StyledLabel } from './styledComponents';
 const KeywordField = ({ disabled, keyword, onChange }) => (
   <FieldWrapper disabled={disabled}>
     <StyledLabel htmlFor="">and/or</StyledLabel>
-    <KeywordInput onChange={onChange} value={keyword} />
+    <KeywordInput disabled={disabled} onChange={onChange} value={keyword} />
   </FieldWrapper>
 );
 

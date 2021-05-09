@@ -8,7 +8,7 @@ import { FieldWrapper, StyledLabel } from './styledComponents';
 const DateRangeField = ({ dateRange, disabled, onChange }) => (
   <FieldWrapper disabled={disabled}>
     <StyledLabel htmlFor="">or</StyledLabel>
-    <DateRangeInput onChange={onChange} value={dateRange} />
+    <DateRangeInput disabled={disabled} onChange={onChange} value={dateRange} />
   </FieldWrapper>
 );
 

@@ -3,7 +3,7 @@ import T from 'prop-types';
 
 import { StyledMenuItem, StyledSelect } from './styledComponents';
 
-const DateRangeInput = ({ onChange, value }) => {
+const DateRangeInput = ({ disabled, onChange, value }) => {
   const getRenderValue = (val) => {
     switch (val) {
       case 1:
@@ -21,6 +21,7 @@ const DateRangeInput = ({ onChange, value }) => {
 
   return (
     <StyledSelect
+      disabled={disabled}
       displayEmpty
       onChange={(e) => onChange(e.target.value)}
       renderValue={getRenderValue}
@@ -38,6 +39,7 @@ const DateRangeInput = ({ onChange, value }) => {
 };
 
 DateRangeInput.propTypes = {
+  disabled: T.bool.isRequired,
   onChange: T.func.isRequired,
   value: T.number.isRequired,
 };

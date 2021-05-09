@@ -20,6 +20,9 @@ export const StyledMenuItem = styled(
 export const StyledSelect = styled(Select)`
   display: inline-block;
   min-width: 11rem;
+  &.Mui-disabled div {
+    color: rgba(0, 0, 0, 0.38);
+  }
   & .MuiInputBase-input {
     color: ${({ value }) => (value === 0 ? textColorB : 'inherit')};
     opacity: ${({ value }) => (value === 0 ? '0.6' : 'inherit')};

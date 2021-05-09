@@ -7,7 +7,7 @@ import { FieldWrapper } from './styledComponents';
 
 const SubmitField = ({ disabled, onClick }) => (
   <FieldWrapper disabled={disabled}>
-    <SubmitButton onClick={onClick} />
+    <SubmitButton disabled={disabled} onClick={onClick} />
   </FieldWrapper>
 );
 

@@ -7,7 +7,7 @@ import { FieldWrapper } from './styledComponents';
 
 const RefreshField = ({ disabled, onClick }) => (
   <FieldWrapper disabled={disabled}>
-    <RefreshButton onClick={onClick} />
+    <RefreshButton disabled={disabled} onClick={onClick} />
   </FieldWrapper>
 );
 

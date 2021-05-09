@@ -8,7 +8,7 @@ import { FieldWrapper, StyledLabel } from './styledComponents';
 const DateField = ({ disabled, label, ...restProps }) => (
   <FieldWrapper disabled={disabled}>
     <StyledLabel htmlFor="">{label}</StyledLabel>
-    <DateInput {...restProps} />
+    <DateInput disabled={disabled} {...restProps} />
   </FieldWrapper>
 );
 

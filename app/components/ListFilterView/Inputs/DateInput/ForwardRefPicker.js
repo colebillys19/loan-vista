@@ -13,24 +13,30 @@ import {
   StyledKeyboardDatePicker,
 } from './styledComponents';
 
-const ForwardRefPicker = forwardRef(({ isError, ...restProps }, ref) => (
-  <DatePickerWrapper ref={ref}>
-    <MuiPickersUtilsProvider utils={MomentUtils}>
-      <StyledKeyboardDatePicker
-        autoOk
-        disableToolbar
-        format="MM/DD/YYYY"
-        maxDate={moment()}
-        minDate={EPOCH_MOMENT}
-        TextFieldComponent={TextField}
-        variant="inline"
-        {...restProps}
-      />
-    </MuiPickersUtilsProvider>
-    <ErrorIndicator isError={isError} />
-  </DatePickerWrapper>
-));
+const ForwardRefPicker = forwardRef(
+  ({ disabled, isError, ...restProps }, ref) => (
+    <DatePickerWrapper ref={ref}>
+      <MuiPickersUtilsProvider utils={MomentUtils}>
+        <StyledKeyboardDatePicker
+          autoOk
+          disabled={disabled}
+          disableToolbar
+          format="MM/DD/YYYY"
+          maxDate={moment()}
+          minDate={EPOCH_MOMENT}
+          TextFieldComponent={TextField}
+          variant="inline"
+          {...restProps}
+        />
+      </MuiPickersUtilsProvider>
+      <ErrorIndicator isError={isError} />
+    </DatePickerWrapper>
+  ),
+);
 
-ForwardRefPicker.propTypes = { isError: T.bool.isRequired };
+ForwardRefPicker.propTypes = {
+  disabled: T.bool.isRequired,
+  isError: T.bool.isRequired,
+};
 
 export default ForwardRefPicker;
