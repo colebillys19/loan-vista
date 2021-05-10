@@ -3,7 +3,7 @@ import { render } from 'react-testing-library';
 
 import DateInput from '../index';
 
-const mockProps = { error: '' };
+const mockProps = { disabled: false, error: '' };
 
 const Component = <DateInput {...mockProps} />;
 

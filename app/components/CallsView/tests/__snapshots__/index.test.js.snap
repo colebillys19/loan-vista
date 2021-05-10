@@ -20,13 +20,13 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
     class="styledComponents__StyledTable-vlp0pm-1 isdduh"
   >
     <thead
-      class="styledComponents__StyledTableHead-vlp0pm-4 styledComponents__CustomTableHead-ottpwa-0 bXnrko"
+      class="styledComponents__StyledTableHead-vlp0pm-4 styledComponents__CustomTableHead-ottpwa-0 bnFrhX"
     >
       <tr
         class="styledComponents__StyledTableRow-vlp0pm-6 ldLzdU"
       >
         <th
-          class="styledComponents__StyledTableHeader-vlp0pm-5 bVVwbq"
+          class="styledComponents__StyledTableHeader-vlp0pm-5 cgQTkg"
           scope="col"
         >
           <button
@@ -62,13 +62,13 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
           </button>
         </th>
         <th
-          class="styledComponents__StyledTableHeader-vlp0pm-5 bVVwbq"
+          class="styledComponents__StyledTableHeader-vlp0pm-5 cgQTkg"
           scope="col"
         >
           time
         </th>
         <th
-          class="styledComponents__StyledTableHeader-vlp0pm-5 bVVwbq"
+          class="styledComponents__StyledTableHeader-vlp0pm-5 cgQTkg"
           scope="col"
         >
           <button
@@ -104,13 +104,13 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
           </button>
         </th>
         <th
-          class="styledComponents__StyledTableHeader-vlp0pm-5 bVVwbq"
+          class="styledComponents__StyledTableHeader-vlp0pm-5 cgQTkg"
           scope="col"
         >
           desc
         </th>
         <th
-          class="styledComponents__StyledTableHeader-vlp0pm-5 bVVwbq"
+          class="styledComponents__StyledTableHeader-vlp0pm-5 cgQTkg"
           scope="col"
         >
           <button
@@ -146,7 +146,7 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
           </button>
         </th>
         <th
-          class="styledComponents__StyledTableHeader-vlp0pm-5 bVVwbq"
+          class="styledComponents__StyledTableHeader-vlp0pm-5 cgQTkg"
           scope="col"
         >
           audio
@@ -160,32 +160,32 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableRow-vlp0pm-6 ldLzdU"
       >
         <td
-          class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
+          class="styledComponents__StyledTableData-vlp0pm-3 kHjjen"
         >
           date
         </td>
         <td
-          class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
+          class="styledComponents__StyledTableData-vlp0pm-3 kHjjen"
         >
           time
         </td>
         <td
-          class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
+          class="styledComponents__StyledTableData-vlp0pm-3 kHjjen"
         >
           dept
         </td>
         <td
-          class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
+          class="styledComponents__StyledTableData-vlp0pm-3 kHjjen"
         >
           desc
         </td>
         <td
-          class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
+          class="styledComponents__StyledTableData-vlp0pm-3 kHjjen"
         >
           rep
         </td>
         <td
-          class="styledComponents__StyledTableData-vlp0pm-3 fqIKzF"
+          class="styledComponents__StyledTableData-vlp0pm-3 kHjjen"
         >
           <button
             class="MuiButtonBase-root styledComponents__StyledButton-sc-9o47wt-0 fQixWh"

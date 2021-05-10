@@ -2,10 +2,10 @@
 
 exports[`<ListFilter /> Should render and match the snapshot 1`] = `
 <form
-  class="styledComponents__StyledForm-sc-4etz7c-0 hInnyk"
+  class="styledComponents__StyledForm-sc-4etz7c-0 GpOgS"
 >
   <span
-    class="styledComponents__FieldWrapper-at5kq4-0 eDOiRT"
+    class="styledComponents__FieldWrapper-at5kq4-0 heWTRq"
   >
     <label
       class="styledComponents__StyledLabel-at5kq4-3 iOyTto"
@@ -70,7 +70,7 @@ exports[`<ListFilter /> Should render and match the snapshot 1`] = `
     </span>
   </span>
   <span
-    class="styledComponents__FieldWrapper-at5kq4-0 eDOiRT"
+    class="styledComponents__FieldWrapper-at5kq4-0 heWTRq"
   >
     <label
       class="styledComponents__StyledLabel-at5kq4-3 iOyTto"
@@ -135,7 +135,7 @@ exports[`<ListFilter /> Should render and match the snapshot 1`] = `
     </span>
   </span>
   <span
-    class="styledComponents__FieldWrapper-at5kq4-0 eDOiRT"
+    class="styledComponents__FieldWrapper-at5kq4-0 heWTRq"
   >
     <label
       class="styledComponents__StyledLabel-at5kq4-3 iOyTto"
@@ -144,7 +144,7 @@ exports[`<ListFilter /> Should render and match the snapshot 1`] = `
       or
     </label>
     <div
-      class="MuiInputBase-root MuiInput-root MuiInput-underline styledComponents__StyledSelect-tuipg9-1 TumNJ"
+      class="MuiInputBase-root MuiInput-root MuiInput-underline styledComponents__StyledSelect-tuipg9-1 evfkEJ"
     >
       <div
         aria-haspopup="listbox"
@@ -173,7 +173,7 @@ exports[`<ListFilter /> Should render and match the snapshot 1`] = `
     </div>
   </span>
   <span
-    class="styledComponents__FieldWrapper-at5kq4-0 eDOiRT"
+    class="styledComponents__FieldWrapper-at5kq4-0 heWTRq"
   >
     <label
       class="styledComponents__StyledLabel-at5kq4-3 iOyTto"
@@ -198,11 +198,11 @@ exports[`<ListFilter /> Should render and match the snapshot 1`] = `
     </div>
   </span>
   <span
-    class="styledComponents__FieldWrapper-at5kq4-0 eDOiRT"
+    class="styledComponents__FieldWrapper-at5kq4-0 heWTRq"
   >
     <button
-      aria-label="delete"
-      class="MuiButtonBase-root MuiIconButton-root styledComponents__StyledIconButton-p72z6f-0 kfcBLq"
+      aria-label="refresh"
+      class="MuiButtonBase-root MuiIconButton-root styledComponents__StyledIconButton-p72z6f-0 fSMSXL"
       tabindex="0"
       type="button"
     >
@@ -232,7 +232,7 @@ exports[`<ListFilter /> Should render and match the snapshot 1`] = `
     </button>
   </span>
   <span
-    class="styledComponents__FieldWrapper-at5kq4-0 eDOiRT"
+    class="styledComponents__FieldWrapper-at5kq4-0 heWTRq"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1jxtcmc-0 kLtwHh styledComponents__StyledButton-sc-86ulmm-0 bbadGD"
