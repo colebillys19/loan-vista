@@ -2,30 +2,33 @@ import React from 'react';
 import styled from 'styled-components';
 import { Button, Tab, Tabs } from '@material-ui/core';
 
-import { appColorA, textColorA, textColorB } from 'styleConstants';
-
-export const DashboardButtonContainer = styled.div`
-  align-items: center;
-  display: flex;
-  position: absolute;
-  width: 36rem;
-`;
+import {
+  appColorA,
+  textColorA,
+  textColorAOpaque,
+  textColorB,
+} from 'styleConstants';
 
 export const StyledButton = styled(({ isOpaque, ...restProps }) => (
   <Button {...restProps} />
 ))`
-  color: ${textColorA};
+  color: ${({ isOpaque }) => (isOpaque ? textColorAOpaque : textColorA)};
   display: block;
   font-size: 2.2rem;
   height: 6rem;
   margin: 0 auto;
-  opacity: ${({ isOpaque }) => (isOpaque ? '0.5' : '1')};
   padding: 0;
+  position: absolute;
   text-transform: none;
-  & :hover {
+  width: 36rem;
+  &:hover {
     background-color: transparent;
     text-decoration: underline;
     opacity: 1;
+  }
+  &:focus {
+    background-color: white;
+    text-decoration: underline;
   }
 `;
 
@@ -38,13 +41,15 @@ export const StyledTab = styled(Tab)`
   text-transform: none;
   &.Mui-selected {
     color: ${textColorA};
+    text-decoration: none;
   }
-  & :hover {
+  &:hover {
     color: ${textColorA};
     text-decoration: underline;
   }
-  &.Mui-selected {
-    text-decoration: none;
+  &:focus {
+    background-color: white;
+    text-decoration: underline;
   }
 `;
 

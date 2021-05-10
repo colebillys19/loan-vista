@@ -11,6 +11,7 @@ export const iconColorB = 'rgba(80, 103, 55, 0.5)';
 export const iconColorC = 'rgb(80, 103, 55)';
 
 export const textColorA = 'rgb(17, 17, 17)';
+export const textColorAOpaque = 'rgba(17, 17, 17, 0.5)';
 export const textColorB = 'rgb(136, 136, 136)';
 
 export const backgroundColor = 'rgb(248, 248, 255)';

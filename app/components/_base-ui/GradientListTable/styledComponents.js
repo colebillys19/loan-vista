@@ -31,9 +31,6 @@ export const StyledTableBody = styled.tbody`
 export const StyledTableData = styled.td`
   height: 2.1rem;
   vertical-align: middle;
-  &:first-of-type {
-    padding-left: 1rem;
-  }
 `;
 
 export const StyledTableHead = styled.thead`
@@ -47,9 +44,6 @@ export const StyledTableHeader = styled.th`
   position: relative;
   text-align: left;
   text-transform: uppercase;
-  &:first-of-type {
-    padding-left: 1rem;
-  }
 `;
 
 export const StyledTableRow = styled.tr`

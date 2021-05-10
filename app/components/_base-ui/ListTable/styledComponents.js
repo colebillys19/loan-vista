@@ -11,7 +11,7 @@ export const StyledTableBody = styled.tbody``;
 
 export const StyledTableData = styled.td`
   color: ${textColorA};
-  & :last-of-type {
+  &:last-of-type {
     text-align: right;
   }
 `;
@@ -21,7 +21,7 @@ export const StyledTableHead = styled.thead``;
 
 export const StyledTableHeader = styled.th`
   text-align: left;
-  & :last-of-type {
+  &:last-of-type {
     text-align: right;
   }
 `;

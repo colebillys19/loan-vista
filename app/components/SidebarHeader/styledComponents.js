@@ -17,7 +17,7 @@ export const IconContainer = styled.div`
 export const SidebarDetail = styled.span`
   display: block;
   text-align: center;
-  & :not(:last-of-type) {
+  &:not(:last-of-type) {
     margin-bottom: 0.3rem;
   }
 `;

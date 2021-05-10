@@ -19,7 +19,7 @@ export const Row = styled.div`
 `;
 
 export const SidebarSummaryContainer = styled.section`
-  & :not(:last-of-type) {
+  &:not(:last-of-type) {
     margin-bottom: 2.2rem;
   }
 `;

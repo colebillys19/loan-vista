@@ -10,7 +10,7 @@ export const StyledButton = styled(Button)`
   min-width: 0;
   padding: 0.5rem 1.2rem;
   text-transform: none;
-  & :hover {
+  &:hover {
     background-color: ${appColorAOpaque};
   }
 `;

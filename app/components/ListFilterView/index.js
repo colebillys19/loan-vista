@@ -30,14 +30,14 @@ const ListFilterView = ({
 }) => (
   <StyledForm onSubmit={(e) => e.preventDefault()}>
     <DateField
-      disabled
+      disabled={!!dateToError}
       error={dateFromError}
       label="from"
       onChange={handleDateFromChange}
       value={dateFrom}
     />
     <DateField
-      disabled
+      disabled={!!dateFromError}
       error={dateToError}
       label="to"
       onChange={handleDateToChange}
@@ -45,12 +45,22 @@ const ListFilterView = ({
     />
     <DateRangeField
       dateRange={dateRange}
-      disabled
+      disabled={!!dateFromError || !!dateToError}
       onChange={handleDateRangeChange}
     />
-    <KeywordField disabled keyword={keyword} onChange={handleKeywordChange} />
-    <RefreshField disabled onClick={handleRefreshClick} />
-    <SubmitField disabled onClick={handleSubmitClick} />
+    <KeywordField
+      disabled={!!dateFromError || !!dateToError}
+      keyword={keyword}
+      onChange={handleKeywordChange}
+    />
+    <RefreshField
+      disabled={!!dateFromError || !!dateToError}
+      onClick={handleRefreshClick}
+    />
+    <SubmitField
+      disabled={!!dateFromError || !!dateToError}
+      onClick={handleSubmitClick}
+    />
   </StyledForm>
 );
 

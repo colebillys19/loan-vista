@@ -9,11 +9,7 @@ import T from 'prop-types';
 import Tabs from './Tabs';
 import { checkRoute } from './helpers';
 import { VALID_ROUTES } from './constants';
-import {
-  DashboardButtonContainer,
-  StyledButton,
-  TabNavWrapper,
-} from './styledComponents';
+import { StyledButton, TabNavWrapper } from './styledComponents';
 
 const TabNav = ({ dispatchNavigation, pathname }) => {
   const [route, setRoute] = useState(checkRoute(pathname));
@@ -34,16 +30,14 @@ const TabNav = ({ dispatchNavigation, pathname }) => {
 
   return (
     <TabNavWrapper>
-      <DashboardButtonContainer>
-        <StyledButton
-          disableRipple
-          id="dashboard-button"
-          isOpaque={pathname !== '/'}
-          onClick={handleDashboardButtonClick}
-        >
-          Dashboard
-        </StyledButton>
-      </DashboardButtonContainer>
+      <StyledButton
+        disableRipple
+        id="dashboard-button"
+        isOpaque={pathname !== '/'}
+        onClick={handleDashboardButtonClick}
+      >
+        Dashboard
+      </StyledButton>
       <Tabs handleChange={handleChange} value={route} />
     </TabNavWrapper>
   );

@@ -4,7 +4,7 @@ import { StyledTableHead } from 'components/_base-ui/GradientListTable';
 
 export const CustomTableHead = styled(StyledTableHead)`
   & th:nth-of-type(1) {
-    width: 12.2rem;
+    width: 11.3rem;
   }
   & th:nth-of-type(2) {
     width: 10rem;
