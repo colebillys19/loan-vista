@@ -22,12 +22,6 @@ const WrappedTabView = (props) => (
 );
 
 describe('<TabView />', () => {
-  // it('Expect not to log errors in console', () => {
-  //   const spy = jest.spyOn(global.console, 'error');
-  //   render(WrappedTabView);
-  //   expect(spy).not.toHaveBeenCalled();
-  // });
-
   it('Expect to render', () => {
     const { container } = render(WrappedTabView);
     expect(container.firstChild).toBeDefined();

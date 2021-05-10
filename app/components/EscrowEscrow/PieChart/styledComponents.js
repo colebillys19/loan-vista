@@ -32,7 +32,7 @@ export const Heading = styled.h3`
 export const Metric = styled.h3`
   color: ${appColorA};
   font-size: 1.6rem;
-  margin: 0;
+  margin: 0 0 0.4rem;
 `;
 
 export const SkeletonContainer = styled.div`
@@ -59,6 +59,6 @@ export const TooltipContent = styled.div`
 `;
 
 export const Value = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin: 0;
 `;

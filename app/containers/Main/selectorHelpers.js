@@ -53,17 +53,6 @@ export const getCurrentEscrowListData = (
 });
 
 /**
- * getCurrentPieData
- * @description: ...
- */
-// todo
-export const getCurrentPieData = () => [
-  { color: 'red', tooltipValue: 1, x: 'County/City Tax', y: 123.4 },
-  { color: 'green', tooltipValue: 1, x: 'Other Tax', y: 67.8 },
-  { color: 'blue', tooltipValue: 1, x: 'County Tax', y: 90 },
-];
-
-/**
  * getDashboardBorrowerData
  * @description: ...
  */
