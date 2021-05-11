@@ -11,7 +11,6 @@ const HandlerLogic = ({
 }) => {
   const { dateFrom, dateTo } = state;
 
-  //
   const handleDateFromChange = (date) => {
     dispatchUpdateFilterState(tabId, {
       ...state,
@@ -20,7 +19,6 @@ const HandlerLogic = ({
     });
   };
 
-  //
   const handleDateToChange = (date) => {
     dispatchUpdateFilterState(tabId, {
       ...state,
@@ -29,7 +27,6 @@ const HandlerLogic = ({
     });
   };
 
-  //
   const handleDateRangeChange = (value) => {
     const newValues = { ...state, dateRange: value };
 
@@ -46,12 +43,10 @@ const HandlerLogic = ({
     dispatchUpdateFilterState(tabId, newValues);
   };
 
-  //
   const handleKeywordChange = (value) => {
     dispatchUpdateFilterState(tabId, { ...state, keyword: value });
   };
 
-  //
   const handleRefreshClick = () => {
     dispatchUpdateFilterState(tabId, {
       dateFrom: null,
@@ -65,7 +60,6 @@ const HandlerLogic = ({
     }
   };
 
-  //
   const handleSubmitClick = () => {
     if (!dateFromError && !dateToError) {
       dispatchFetchData();

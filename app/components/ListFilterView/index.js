@@ -53,10 +53,7 @@ const ListFilterView = ({
       keyword={keyword}
       onChange={handleKeywordChange}
     />
-    <RefreshField
-      disabled={!!dateFromError || !!dateToError}
-      onClick={handleRefreshClick}
-    />
+    <RefreshField onClick={handleRefreshClick} />
     <SubmitField
       disabled={!!dateFromError || !!dateToError}
       onClick={handleSubmitClick}

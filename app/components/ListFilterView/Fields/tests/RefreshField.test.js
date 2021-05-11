@@ -3,7 +3,7 @@ import { render } from 'react-testing-library';
 
 import RefreshField from '../RefreshField';
 
-const mockProps = { disabled: false, onClick: jest.fn() };
+const mockProps = { onClick: jest.fn() };
 
 const Component = <RefreshField {...mockProps} />;
 
