@@ -9,16 +9,24 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
-import { fetchCallsData } from 'containers/Calls/actions';
-import { fetchDocumentsData } from 'containers/Documents/actions';
-import { fetchPaymentsData } from 'containers/Payments/actions';
-import { makeSelectPathname } from 'containers/App/selectors';
+import {
+  fetchCallsData,
+  setIsFilteredData as setIsFilteredDataCalls,
+} from 'containers/Calls/actions';
+import {
+  fetchDocumentsData,
+  setIsFilteredData as setIsFilteredDataDocuments,
+} from 'containers/Documents/actions';
+import {
+  fetchPaymentsData,
+  setIsFilteredData as setIsFilteredDataPayments,
+} from 'containers/Payments/actions';
 import { useInjectReducer } from 'utils/injectReducer';
 import ListFilterView from 'components/ListFilterView';
 
 import {
+  makeSelectIsFilteredData,
   makeSelectTargetDateErrors,
-  makeSelectTargetLastFetchParams,
   makeSelectTargetState,
 } from './selectors';
 import { updateFilterState } from './actions';
@@ -29,10 +37,13 @@ export const ListFilter = ({
   dispatchFetchDataCalls,
   dispatchFetchDataDocuments,
   dispatchFetchDataPayments,
+  dispatchSetIsFilteredCalls,
+  dispatchSetIsFilteredDocuments,
+  dispatchSetIsFilteredPayments,
   dispatchUpdateFilterState,
+  isFilteredData,
   tabId,
   targetDateErrors,
-  targetLastFetchParams,
   targetState,
 }) => {
   useInjectReducer({ key: 'listFilter', reducer });
@@ -40,18 +51,28 @@ export const ListFilter = ({
   const { dateFrom, dateRange, dateTo, keyword } = targetState;
   const [dateFromError, dateToError] = targetDateErrors;
 
-  const dispatchFetchDataDict = {
-    calls: dispatchFetchDataCalls,
-    documents: dispatchFetchDataDocuments,
-    payments: dispatchFetchDataPayments,
+  const tabDispatchDict = {
+    calls: {
+      fetch: dispatchFetchDataCalls,
+      setIsFiltered: dispatchSetIsFilteredCalls,
+    },
+    documents: {
+      fetch: dispatchFetchDataDocuments,
+      setIsFiltered: dispatchSetIsFilteredDocuments,
+    },
+    payments: {
+      fetch: dispatchFetchDataPayments,
+      setIsFiltered: dispatchSetIsFilteredPayments,
+    },
   };
 
   return (
     <HandlerLogic
       dateErrors={targetDateErrors}
-      dispatchFetchData={dispatchFetchDataDict[tabId]}
+      dispatchFetchData={tabDispatchDict[tabId].fetch}
+      dispatchSetIsFiltered={tabDispatchDict[tabId].setIsFiltered}
       dispatchUpdateFilterState={dispatchUpdateFilterState}
-      lastFetchParams={targetLastFetchParams}
+      isFilteredData={isFilteredData}
       render={({
         handleDateFromChange,
         handleDateRangeChange,
@@ -85,10 +106,13 @@ ListFilter.propTypes = {
   dispatchFetchDataCalls: T.func.isRequired,
   dispatchFetchDataDocuments: T.func.isRequired,
   dispatchFetchDataPayments: T.func.isRequired,
+  dispatchSetIsFilteredCalls: T.func.isRequired,
+  dispatchSetIsFilteredDocuments: T.func.isRequired,
+  dispatchSetIsFilteredPayments: T.func.isRequired,
   dispatchUpdateFilterState: T.func.isRequired,
+  isFilteredData: T.bool.isRequired,
   tabId: T.string.isRequired,
   targetDateErrors: T.arrayOf(T.string).isRequired,
-  targetLastFetchParams: T.object.isRequired,
   targetState: T.shape({
     dateFrom: T.object,
     dateRange: T.number,
@@ -98,9 +122,8 @@ ListFilter.propTypes = {
 };
 
 const mapStateToProps = createStructuredSelector({
-  pathname: makeSelectPathname(),
+  isFilteredData: makeSelectIsFilteredData(),
   targetDateErrors: makeSelectTargetDateErrors(),
-  targetLastFetchParams: makeSelectTargetLastFetchParams(),
   targetState: makeSelectTargetState(),
 });
 
@@ -111,6 +134,12 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(fetchDocumentsData(sortCol, sortOrder)),
   dispatchFetchDataPayments: (sortCol, sortOrder) =>
     dispatch(fetchPaymentsData(sortCol, sortOrder)),
+  dispatchSetIsFilteredCalls: (value) =>
+    dispatch(setIsFilteredDataCalls(value)),
+  dispatchSetIsFilteredDocuments: (value) =>
+    dispatch(setIsFilteredDataDocuments(value)),
+  dispatchSetIsFilteredPayments: (value) =>
+    dispatch(setIsFilteredDataPayments(value)),
   dispatchUpdateFilterState: (substate, newValues) =>
     dispatch(updateFilterState(substate, newValues)),
 });

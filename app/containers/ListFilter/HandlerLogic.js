@@ -1,15 +1,18 @@
-import { checkParamsNotEmpty, getDatesArr, getRangeValue } from './helpers';
+import { getDatesArr, getRangeValue } from './helpers';
 
 const HandlerLogic = ({
   dateErrors: [dateFromError, dateToError],
   dispatchFetchData,
+  dispatchSetIsFiltered,
   dispatchUpdateFilterState,
-  lastFetchParams,
+  isFilteredData,
   render,
   state,
   tabId,
 }) => {
   const { dateFrom, dateTo } = state;
+
+  const isDateErrors = !!dateFromError || !!dateToError;
 
   const handleDateFromChange = (date) => {
     dispatchUpdateFilterState(tabId, {
@@ -48,20 +51,33 @@ const HandlerLogic = ({
   };
 
   const handleRefreshClick = () => {
-    dispatchUpdateFilterState(tabId, {
-      dateFrom: null,
-      dateRange: 0,
-      dateTo: null,
-      keyword: '',
-    });
-
-    if (checkParamsNotEmpty(lastFetchParams)) {
+    if (!isDateErrors && isFilteredData) {
       dispatchFetchData();
+      dispatchSetIsFiltered(false);
+    }
+
+    if (isDateErrors) {
+      dispatchUpdateFilterState(tabId, {
+        ...state,
+        dateFrom: null,
+        dateTo: null,
+      });
+    } else {
+      dispatchUpdateFilterState(tabId, {
+        dateFrom: null,
+        dateRange: 0,
+        dateTo: null,
+        keyword: '',
+      });
     }
   };
 
   const handleSubmitClick = () => {
-    if (!dateFromError && !dateToError) {
+    if (!isDateErrors) {
+      if (!isFilteredData) {
+        dispatchSetIsFiltered(true);
+      }
+
       dispatchFetchData();
     }
   };

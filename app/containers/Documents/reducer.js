@@ -5,6 +5,7 @@ import {
   FETCH_DOCUMENTS_DATA,
   FETCH_DOCUMENTS_DATA_FAILURE,
   FETCH_DOCUMENTS_DATA_SUCCESS,
+  SET_IS_FILTERED,
   SET_LOADING_TRUE,
 } from './constants';
 
@@ -33,6 +34,10 @@ const documentsReducer = (state = initialState, { payload, type }) =>
         draft.lastFetchParams = params;
         draft.loading = false;
         draft.sortLoading = false;
+        break;
+      case SET_IS_FILTERED:
+        const { value } = payload;
+        draft.isFilteredData = value;
         break;
       case SET_LOADING_TRUE:
         draft.loading = true;

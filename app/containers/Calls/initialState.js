@@ -1,6 +1,7 @@
 const initialState = {
   callsData: [],
   error: false,
+  isFilteredData: false,
   lastFetchParams: {
     dateFrom: '',
     dateTo: '',

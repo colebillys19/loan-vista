@@ -1,6 +1,7 @@
 const initialState = {
   documentsData: [],
   error: false,
+  isFilteredData: false,
   lastFetchParams: {
     dateFrom: '',
     dateTo: '',

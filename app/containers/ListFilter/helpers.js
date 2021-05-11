@@ -32,18 +32,6 @@ const getDateError = (date) => {
   return '';
 };
 
-export const getDatesErrorState = (dateFrom, dateTo) => {
-  const fromError = getDateError(dateFrom);
-  const toError = getDateError(dateTo);
-
-  return !fromError && !toError
-    ? checkChronological(dateFrom, dateTo)
-    : [fromError, toError];
-};
-
-export const checkParamsNotEmpty = ({ dateFrom, dateTo, keyword }) =>
-  dateFrom !== '' || dateTo !== '' || keyword !== '';
-
 export const getDatesArr = () => {
   const now = moment();
   const oneWe = moment().subtract(7, 'days');
@@ -52,6 +40,15 @@ export const getDatesArr = () => {
   const twoMo = moment().subtract(2, 'months');
 
   return [now, oneWe, twoWe, oneMo, twoMo];
+};
+
+export const getDatesErrorState = (dateFrom, dateTo) => {
+  const fromError = getDateError(dateFrom);
+  const toError = getDateError(dateTo);
+
+  return !fromError && !toError
+    ? checkChronological(dateFrom, dateTo)
+    : [fromError, toError];
 };
 
 export const getRangeValue = (fromDate, toDate) => {
