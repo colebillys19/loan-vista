@@ -4,6 +4,7 @@ import { Button, Tab, Tabs } from '@material-ui/core';
 
 import {
   appColorA,
+  backgroundColor,
   textColorA,
   textColorAOpaque,
   textColorB,
@@ -27,8 +28,13 @@ export const StyledButton = styled(({ isOpaque, ...restProps }) => (
     opacity: 1;
   }
   &:focus {
-    background-color: white;
-    text-decoration: underline;
+    &:focus {
+      background-color: #ffffff;
+      box-shadow: inset 1rem 0 3rem ${backgroundColor},
+        inset -1rem 0 3rem ${backgroundColor};
+      text-decoration: underline;
+      outline: 0.1rem solid #ffffff;
+    }
   }
 `;
 
@@ -48,8 +54,11 @@ export const StyledTab = styled(Tab)`
     text-decoration: underline;
   }
   &:focus {
-    background-color: white;
+    background-color: #ffffff;
+    box-shadow: inset 1rem 0 1rem ${backgroundColor},
+      inset -1rem 0 1rem ${backgroundColor};
     text-decoration: underline;
+    outline: 0.1rem solid #ffffff;
   }
 `;
 
