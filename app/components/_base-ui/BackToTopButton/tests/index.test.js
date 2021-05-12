@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import ErrorBlock from '../index';
+import BackToTopButton from '../index';
 
-const mockProps = { error: 'error' };
+const mockProps = { pathname: '/calls' };
 
-const Component = <ErrorBlock {...mockProps} />;
+const Component = <BackToTopButton {...mockProps} />;
 
-describe('<ErrorBlock />', () => {
+describe('<BackToTopButton />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);
