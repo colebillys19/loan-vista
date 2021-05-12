@@ -41,34 +41,6 @@ const makeSelectTargetDateErrors = () =>
     ({ dateFrom, dateTo }) => getDatesErrorState(dateFrom, dateTo),
   );
 
-// /**
-//  * makeSelectTargetLastFetchParams
-//  * @description ...
-//  */
-// /* eslint-disable consistent-return, default-case */
-// const makeSelectTargetLastFetchParams = () =>
-//   createSelector(
-//     makeSelectPathname(),
-//     makeSelectCalls('lastFetchParams'),
-//     makeSelectDocuments('lastFetchParams'),
-//     makeSelectPayments('lastFetchParams'),
-//     (
-//       pathname,
-//       lastFetchParamsCalls,
-//       lastFetchParamsDocuments,
-//       lastFetchParamsPayments,
-//     ) => {
-//       switch (pathname.slice(1)) {
-//         case 'calls':
-//           return lastFetchParamsCalls;
-//         case 'documents':
-//           return lastFetchParamsDocuments;
-//         case 'payments':
-//           return lastFetchParamsPayments;
-//       }
-//     },
-//   );
-
 /**
  * makeSelectTargetState
  * @description ...
@@ -83,7 +55,6 @@ const makeSelectTargetState = () =>
 export {
   makeSelectIsFilteredData,
   makeSelectTargetDateErrors,
-  // makeSelectTargetLastFetchParams,
   makeSelectTargetState,
   selectListFilterDomain,
 };

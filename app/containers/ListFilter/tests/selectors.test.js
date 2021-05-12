@@ -2,8 +2,8 @@ import moment from 'moment';
 
 import initialState from '../initialState';
 import {
+  makeSelectIsFilteredData,
   makeSelectTargetDateErrors,
-  makeSelectTargetLastFetchParams,
   makeSelectTargetState,
   selectListFilterDomain,
 } from '../selectors';
@@ -14,6 +14,18 @@ describe('selectListFilterDomain', () => {
 
   it('should select the list filter state', () => {
     expect(selectListFilterDomain(mockedState)).toEqual(listFilterDomainState);
+  });
+});
+
+describe('makeSelectIsFilteredData', () => {
+  const isFilteredDataSelector = makeSelectIsFilteredData();
+  const mockedState = {
+    calls: { isFilteredData: true },
+    router: { location: { pathname: '/calls' } },
+  };
+
+  it('derives the isFilteredData value from correct container', () => {
+    expect(isFilteredDataSelector(mockedState)).toEqual(true);
   });
 });
 
@@ -34,36 +46,6 @@ describe('makeSelectTargetDateErrors', () => {
 
   it('derives date errors from state', () => {
     expect(targetDateErrorsSelector(mockedState)).toEqual(expected);
-  });
-});
-
-describe('makeSelectTargetLastFetchParams', () => {
-  const targetLastFetchParamsSelector = makeSelectTargetLastFetchParams();
-
-  it('should select last fetch params based on current location', () => {
-    const mockedState = {
-      calls: {
-        lastFetchParams: {
-          dateFrom: '',
-          dateTo: '',
-          keyword: '',
-          sortCol: 'date',
-          sortOrder: 'desc',
-        },
-      },
-      documents: { lastFetchParams: {} },
-      payments: { lastFetchParams: {} },
-      router: { location: { pathname: '/calls' } },
-    };
-    const expected = {
-      dateFrom: '',
-      dateTo: '',
-      keyword: '',
-      sortCol: 'date',
-      sortOrder: 'desc',
-    };
-
-    expect(targetLastFetchParamsSelector(mockedState)).toEqual(expected);
   });
 });
 
