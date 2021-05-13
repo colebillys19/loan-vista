@@ -3,9 +3,7 @@ import { render } from 'react-testing-library';
 
 import BackToTopButton from '../index';
 
-const mockProps = { pathname: '/calls' };
-
-const Component = <BackToTopButton {...mockProps} />;
+const Component = <BackToTopButton />;
 
 describe('<BackToTopButton />', () => {
   it('Expect not to log errors in console', () => {
