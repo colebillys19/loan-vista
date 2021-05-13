@@ -47,8 +47,8 @@ export const Documents = ({
     if (!loanNumber) {
       dispatchSetLoadingTrue();
     } else if (
-      !lastDateFrom ||
-      (prevLoanNumber && loanNumber !== prevLoanNumber)
+      !loading &&
+      (!lastDateFrom || (prevLoanNumber && loanNumber !== prevLoanNumber))
     ) {
       dispatchFetchDocumentsData();
     }

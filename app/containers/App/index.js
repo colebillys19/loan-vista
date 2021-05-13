@@ -14,18 +14,19 @@ import { push } from 'connected-react-router';
 import GlobalStyles from 'globalStyles';
 
 import AppHeader from 'components/AppHeader';
+import BackToTopButton from 'components/_base-ui/BackToTopButton';
 import Calls from 'containers/Calls';
+import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import DashboardView from 'components/DashboardView';
 import Documents from 'containers/Documents';
 import EscrowView from 'components/EscrowView';
 import Main from 'containers/Main';
+import MainContainer from 'components/_base-ui/MainContainer';
 import NotFoundView from 'components/NotFoundView';
 import Payments from 'containers/Payments';
 import SidebarView from 'components/SidebarView';
 import TabNav from 'components/TabNav';
 import TabView from 'components/TabView';
-import BackToTopButton from 'components/_base-ui/BackToTopButton';
-import MainContainer from 'components/_base-ui/MainContainer';
 
 import { makeSelectPathname } from './selectors';
 
@@ -105,7 +106,12 @@ const App = ({ dispatchNavigation, pathname }) => (
             />
             <Route component={NotFoundView} />
           </Switch>
-          <BackToTopButton pathname={pathname} />
+          <ConditionalRender
+            Component={BackToTopButton}
+            shouldRender={['/calls', '/documents', '/payments'].includes(
+              pathname,
+            )}
+          />
         </MainContainer>
       )}
     />

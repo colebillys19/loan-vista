@@ -47,8 +47,8 @@ export const Payments = ({
     if (!loanNumber) {
       dispatchSetLoadingTrue();
     } else if (
-      !lastDateFrom ||
-      (prevLoanNumber && loanNumber !== prevLoanNumber)
+      !loading &&
+      (!lastDateFrom || (prevLoanNumber && loanNumber !== prevLoanNumber))
     ) {
       dispatchFetchPaymentsData();
     }
