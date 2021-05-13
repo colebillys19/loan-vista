@@ -26,40 +26,49 @@ const ListFilterView = ({
   handleKeywordChange,
   handleRefreshClick,
   handleSubmitClick,
+  isFilteredData,
   keyword,
-}) => (
-  <StyledForm onSubmit={(e) => e.preventDefault()}>
-    <DateField
-      disabled={!!dateToError}
-      error={dateFromError}
-      label="from"
-      onChange={handleDateFromChange}
-      value={dateFrom}
-    />
-    <DateField
-      disabled={!!dateFromError}
-      error={dateToError}
-      label="to"
-      onChange={handleDateToChange}
-      value={dateTo}
-    />
-    <DateRangeField
-      dateRange={dateRange}
-      disabled={!!dateFromError || !!dateToError}
-      onChange={handleDateRangeChange}
-    />
-    <KeywordField
-      disabled={!!dateFromError || !!dateToError}
-      keyword={keyword}
-      onChange={handleKeywordChange}
-    />
-    <RefreshField onClick={handleRefreshClick} />
-    <SubmitField
-      disabled={!!dateFromError || !!dateToError}
-      onClick={handleSubmitClick}
-    />
-  </StyledForm>
-);
+}) => {
+  const isDateError = !!dateFromError || !!dateToError;
+  const noInput = !dateFrom && !dateTo && !keyword;
+
+  return (
+    <StyledForm onSubmit={(e) => e.preventDefault()}>
+      <DateField
+        disabled={!!dateToError}
+        error={dateFromError}
+        label="from"
+        onChange={handleDateFromChange}
+        value={dateFrom}
+      />
+      <DateField
+        disabled={!!dateFromError}
+        error={dateToError}
+        label="to"
+        onChange={handleDateToChange}
+        value={dateTo}
+      />
+      <DateRangeField
+        dateRange={dateRange}
+        disabled={isDateError}
+        onChange={handleDateRangeChange}
+      />
+      <KeywordField
+        disabled={isDateError}
+        keyword={keyword}
+        onChange={handleKeywordChange}
+      />
+      <RefreshField
+        disabled={!isFilteredData && noInput}
+        onClick={handleRefreshClick}
+      />
+      <SubmitField
+        disabled={isDateError || noInput}
+        onClick={handleSubmitClick}
+      />
+    </StyledForm>
+  );
+};
 
 ListFilterView.propTypes = {
   dateFrom: T.object,
@@ -73,6 +82,7 @@ ListFilterView.propTypes = {
   handleKeywordChange: T.func.isRequired,
   handleRefreshClick: T.func.isRequired,
   handleSubmitClick: T.func.isRequired,
+  isFilteredData: T.bool.isRequired,
   keyword: T.string.isRequired,
 };
 

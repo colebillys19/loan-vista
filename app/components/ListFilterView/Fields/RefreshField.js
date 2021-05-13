@@ -5,12 +5,15 @@ import RefreshButton from '../Inputs/RefreshButton';
 
 import { FieldWrapper } from './styledComponents';
 
-const RefreshField = ({ onClick }) => (
-  <FieldWrapper>
-    <RefreshButton onClick={onClick} />
+const RefreshField = ({ disabled, onClick }) => (
+  <FieldWrapper disabled={disabled}>
+    <RefreshButton disabled={disabled} onClick={onClick} />
   </FieldWrapper>
 );
 
-RefreshField.propTypes = { onClick: T.func.isRequired };
+RefreshField.propTypes = {
+  disabled: T.bool.isRequired,
+  onClick: T.func.isRequired,
+};
 
 export default RefreshField;

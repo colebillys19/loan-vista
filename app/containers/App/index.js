@@ -13,7 +13,7 @@ import { push } from 'connected-react-router';
 
 import GlobalStyles from 'globalStyles';
 
-import AppHeader from 'components/AppHeader';
+import AppHeader from 'components/_base-ui/AppHeader';
 import BackToTopButton from 'components/_base-ui/BackToTopButton';
 import Calls from 'containers/Calls';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';

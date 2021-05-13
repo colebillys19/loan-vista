@@ -73,13 +73,11 @@ const HandlerLogic = ({
   };
 
   const handleSubmitClick = () => {
-    if (!isDateErrors) {
-      if (!isFilteredData) {
-        dispatchSetIsFiltered(true);
-      }
-
-      dispatchFetchData();
+    if (!isFilteredData) {
+      dispatchSetIsFiltered(true);
     }
+
+    dispatchFetchData();
   };
 
   return render({

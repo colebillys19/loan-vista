@@ -93,6 +93,7 @@ export const ListFilter = ({
           handleKeywordChange={handleKeywordChange}
           handleRefreshClick={handleRefreshClick}
           handleSubmitClick={handleSubmitClick}
+          isFilteredData={isFilteredData}
           keyword={keyword}
         />
       )}
