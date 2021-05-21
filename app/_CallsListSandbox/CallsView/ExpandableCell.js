@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import T from 'prop-types';
 
-import { AbsoluteButton, Yoy } from './styledComponents';
+import { AbsoluteButton, ExpandableDescTableData } from './styledComponents';
 
 const ExpandableCell = ({ children }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <Yoy isExpanded={isExpanded}>
+    <ExpandableDescTableData isExpanded={isExpanded}>
       {children}
       <AbsoluteButton onClick={() => setIsExpanded(!isExpanded)}>
         {isExpanded ? 'less' : 'more'}
       </AbsoluteButton>
-    </Yoy>
+    </ExpandableDescTableData>
   );
 };
 

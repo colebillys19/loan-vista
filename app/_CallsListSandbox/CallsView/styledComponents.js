@@ -23,13 +23,13 @@ export const CustomTableHead = styled(StyledTableHead)`
   }
 `;
 
-export const Temp = styled(StyledTableData)`
+export const DescTableData = styled(StyledTableData)`
   max-width: 40rem;
   padding-right: 6rem;
   position: relative;
 `;
 
-export const Yoy = styled(Temp)`
+export const ExpandableDescTableData = styled(DescTableData)`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: ${({ isExpanded }) => (isExpanded ? 'normal' : 'nowrap')};
