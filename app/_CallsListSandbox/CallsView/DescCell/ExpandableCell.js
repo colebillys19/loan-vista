@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import T from 'prop-types';
 
-import { AbsoluteButton, ExpandableDescTableData } from './styledComponents';
+import { ExpandButton, ExpandableTableData } from './styledComponents';
 
 const ExpandableCell = ({ children }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <ExpandableDescTableData isExpanded={isExpanded}>
+    <ExpandableTableData isExpanded={isExpanded}>
       {children}
-      <AbsoluteButton onClick={() => setIsExpanded(!isExpanded)}>
+      <ExpandButton onClick={() => setIsExpanded(!isExpanded)}>
         {isExpanded ? 'less' : 'more'}
-      </AbsoluteButton>
-    </ExpandableDescTableData>
+      </ExpandButton>
+    </ExpandableTableData>
   );
 };
 
