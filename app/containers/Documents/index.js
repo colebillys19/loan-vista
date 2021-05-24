@@ -12,7 +12,7 @@ import { compose } from 'redux';
 import { makeSelectPathname } from 'containers/App/selectors';
 import { useInjectReducer } from 'utils/injectReducer';
 import { useInjectSaga } from 'utils/injectSaga';
-import { usePrevious } from 'utils/customHooks';
+// import { usePrevious } from 'utils/customHooks';
 import DocumentsView from 'components/DocumentsView';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import ListFallback from 'components/_base-ui/ListFallback';
@@ -21,45 +21,50 @@ import makeSelectMain from 'containers/Main/selectors';
 import makeSelectDocuments, { makeSelectDocumentsData } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import { fetchDocumentsData, setLoadingTrue } from './actions';
+// import { fetchDocumentsData, setLoadingTrue } from './actions';
+import { fetchDocumentsData } from './actions';
 
 export const Documents = ({
   dispatchFetchDocumentsData,
-  dispatchSetLoadingTrue,
+  // dispatchSetLoadingTrue,
   documentsData,
   error,
   lastFetchParams: {
-    dateFrom: lastDateFrom,
+    // dateFrom: lastDateFrom,
     sortCol: lastSortCol,
     sortOrder: lastSortOrder,
   },
   loading,
-  loanNumber,
+  // loanNumber,
   mainError,
   sortLoading,
 }) => {
   useInjectReducer({ key: 'documents', reducer });
   useInjectSaga({ key: 'documents', saga });
 
-  const prevLoanNumber = usePrevious(loanNumber);
+  // const prevLoanNumber = usePrevious(loanNumber);
 
   useEffect(() => {
-    if (!loanNumber) {
-      dispatchSetLoadingTrue();
-    } else if (
-      !loading &&
-      (!lastDateFrom || (prevLoanNumber && loanNumber !== prevLoanNumber))
-    ) {
-      dispatchFetchDocumentsData();
-    }
-  }, [
-    dispatchFetchDocumentsData,
-    dispatchSetLoadingTrue,
-    lastDateFrom,
-    loading,
-    loanNumber,
-    prevLoanNumber,
-  ]);
+    dispatchFetchDocumentsData();
+  }, [dispatchFetchDocumentsData]);
+
+  // useEffect(() => {
+  //   if (!loanNumber) {
+  //     dispatchSetLoadingTrue();
+  //   } else if (
+  //     !loading &&
+  //     (!lastDateFrom || (prevLoanNumber && loanNumber !== prevLoanNumber))
+  //   ) {
+  //     dispatchFetchDocumentsData();
+  //   }
+  // }, [
+  //   dispatchFetchDocumentsData,
+  //   dispatchSetLoadingTrue,
+  //   lastDateFrom,
+  //   loading,
+  //   loanNumber,
+  //   prevLoanNumber,
+  // ]);
 
   return (
     <ConditionalRender
@@ -80,7 +85,7 @@ export const Documents = ({
 
 Documents.propTypes = {
   dispatchFetchDocumentsData: T.func.isRequired,
-  dispatchSetLoadingTrue: T.func.isRequired,
+  // dispatchSetLoadingTrue: T.func.isRequired,
   documentsData: T.array.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
   lastFetchParams: T.shape({
@@ -91,7 +96,7 @@ Documents.propTypes = {
     sortOrder: T.string,
   }).isRequired,
   loading: T.bool.isRequired,
-  loanNumber: T.string.isRequired,
+  // loanNumber: T.string.isRequired,
   mainError: T.oneOfType([T.bool, T.string]).isRequired,
   sortLoading: T.oneOfType([T.bool, T.string]).isRequired,
 };
@@ -101,7 +106,7 @@ const mapStateToProps = createStructuredSelector({
   error: makeSelectDocuments('error'),
   lastFetchParams: makeSelectDocuments('lastFetchParams'),
   loading: makeSelectDocuments('loading'),
-  loanNumber: makeSelectMain('loanNumber'),
+  // loanNumber: makeSelectMain('loanNumber'),
   mainError: makeSelectMain('error'),
   pathname: makeSelectPathname(),
   sortLoading: makeSelectDocuments('sortLoading'),
@@ -110,7 +115,7 @@ const mapStateToProps = createStructuredSelector({
 const mapDispatchToProps = (dispatch) => ({
   dispatchFetchDocumentsData: (sortCol, sortOrder) =>
     dispatch(fetchDocumentsData(sortCol, sortOrder)),
-  dispatchSetLoadingTrue: () => dispatch(setLoadingTrue()),
+  // dispatchSetLoadingTrue: () => dispatch(setLoadingTrue()),
 });
 
 const withConnect = connect(

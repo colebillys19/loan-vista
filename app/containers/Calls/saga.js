@@ -4,7 +4,7 @@ import querystring from 'querystring';
 import { REQUEST_ERROR_MESSAGE } from 'utils/globalConstants';
 import { formatFilterState } from 'utils/globalHelpers';
 import { get } from 'utils/request';
-import makeSelectMain from 'containers/Main/selectors';
+// import makeSelectMain from 'containers/Main/selectors';
 import { selectListFilterDomain } from 'containers/ListFilter/selectors';
 
 import { fetchCallsDataFailure, fetchCallsDataSuccess } from './actions';
@@ -13,7 +13,8 @@ import { FETCH_CALLS_DATA } from './constants';
 
 export function* fetchCallsDataSaga({ payload }) {
   try {
-    const loanNumber = yield select(makeSelectMain('loanNumber'));
+    // const loanNumber = yield select(makeSelectMain('loanNumber'));
+    const loanNumber = '9937485204';
 
     if (loanNumber) {
       const { sortCol, sortOrder } = payload;
