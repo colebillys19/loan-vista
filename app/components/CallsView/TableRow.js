@@ -1,18 +1,24 @@
 import React from 'react';
 import T from 'prop-types';
 
-import LinkButton from 'components/_base-ui/LinkButton';
 import {
   StyledTableData,
   StyledTableRow,
 } from 'components/_base-ui/GradientListTable';
+import LinkButton from 'components/_base-ui/LinkButton';
+
+import DescCell from './DescCell';
 
 const TableRow = ({ data, headers }) => (
   <StyledTableRow>
     {headers.map((header) => {
+      if (header === 'desc') {
+        return <DescCell key={header}>{data[header]}</DescCell>;
+      }
+
       if (header === 'audio') {
         return (
-          <StyledTableData key={header}>
+          <StyledTableData key="audio">
             <LinkButton onClick={() => null} text="request" />
           </StyledTableData>
         );

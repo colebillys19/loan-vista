@@ -30,7 +30,8 @@ export const StyledTableBody = styled.tbody`
 
 export const StyledTableData = styled.td`
   height: 2.1rem;
-  vertical-align: middle;
+  vertical-align: top;
+  padding: 0.4rem 0;
 `;
 
 export const StyledTableHead = styled.thead`
@@ -55,10 +56,6 @@ export const StyledTableRow = styled.tr`
       #f6f6f6 70%,
       ${backgroundColor} 100%
     );
-  }
-  &:last-of-type td {
-    padding-bottom: 0.4rem;
-    padding-top: 0.2rem;
   }
 `;
 
