@@ -51,11 +51,6 @@ const HandlerLogic = ({
   };
 
   const handleRefreshClick = () => {
-    if (!isDateErrors && isFilteredData) {
-      dispatchFetchData();
-      dispatchSetIsFiltered(false);
-    }
-
     if (isDateErrors) {
       dispatchUpdateFilterState(tabId, {
         ...state,
@@ -69,6 +64,11 @@ const HandlerLogic = ({
         dateTo: null,
         keyword: '',
       });
+    }
+
+    if (!isDateErrors && isFilteredData) {
+      dispatchFetchData();
+      dispatchSetIsFiltered(false);
     }
   };
 
