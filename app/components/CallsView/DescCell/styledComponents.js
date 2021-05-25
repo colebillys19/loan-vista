@@ -6,7 +6,7 @@ import { StyledTableData } from 'components/_base-ui/GradientListTable';
 
 export const DescTableData = styled(StyledTableData)`
   max-width: 40rem;
-  padding-right: 6.4rem;
+  padding-right: 8.4rem;
   position: relative;
 `;
 
@@ -25,7 +25,7 @@ export const ExpandButton = styled(Button)`
   min-width: 0;
   padding: 0 0.6rem 0 1rem;
   position: absolute;
-  right: 1rem;
+  right: 3.4rem;
   text-transform: none;
   top: 0;
   width: 4.8rem;

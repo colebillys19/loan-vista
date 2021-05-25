@@ -10,10 +10,10 @@ export const CustomTableHead = styled(StyledTableHead)`
     width: 10.2rem;
   }
   & th:nth-of-type(3) {
-    width: 8.2rem;
+    width: 7.6rem;
   }
   & th:nth-of-type(4) {
-    width: 7.4rem;
+    width: 6.8rem;
   }
   & th:nth-of-type(6) {
     width: 5.6rem;
