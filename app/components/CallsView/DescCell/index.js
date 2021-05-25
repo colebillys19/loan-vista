@@ -6,7 +6,7 @@ import ConditionalRender from 'components/_base-ui/ConditionalRender';
 import ExpandableCell from './ExpandableCell';
 import { DescTableData } from './styledComponents';
 
-const YeetCell = ({ children }) => {
+const DescCell = ({ children }) => {
   const cellRef = useRef(null);
   const [renderExpandable, setRenderExpandable] = useState(false);
 
@@ -30,6 +30,6 @@ const YeetCell = ({ children }) => {
   );
 };
 
-YeetCell.propTypes = { children: T.node.isRequired };
+DescCell.propTypes = { children: T.node.isRequired };
 
-export default YeetCell;
+export default DescCell;
