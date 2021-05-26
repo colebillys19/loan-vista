@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import { textColorA } from 'styleConstants';
-
 export const StyledTable = styled.table`
   width: 100%;
 `;
@@ -10,10 +8,7 @@ export const StyledTable = styled.table`
 export const StyledTableBody = styled.tbody``;
 
 export const StyledTableData = styled.td`
-  color: ${textColorA};
-  &:last-of-type {
-    text-align: right;
-  }
+  vertical-align: top;
 `;
 
 // keep?

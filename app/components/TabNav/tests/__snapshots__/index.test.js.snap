@@ -5,7 +5,7 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
   class="styledComponents__TabNavWrapper-ift0se-3 hseaqD"
 >
   <button
-    class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-ift0se-0 bPaLqL"
+    class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-ift0se-0 labhVu"
     id="dashboard-button"
     tabindex="0"
     type="button"
@@ -30,7 +30,7 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
         <button
           aria-controls="calls-view"
           aria-selected="true"
-          class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-ift0se-1 kRbvfe Mui-selected"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-ift0se-1 eCObik Mui-selected"
           id="calls-tab"
           role="tab"
           tabindex="0"
@@ -45,7 +45,7 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
         <button
           aria-controls="documents-view"
           aria-selected="false"
-          class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-ift0se-1 kRbvfe"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-ift0se-1 eCObik"
           id="documents-tab"
           role="tab"
           tabindex="0"
@@ -60,7 +60,7 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
         <button
           aria-controls="payments-view"
           aria-selected="false"
-          class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-ift0se-1 kRbvfe"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-ift0se-1 eCObik"
           id="payments-tab"
           role="tab"
           tabindex="0"
@@ -75,7 +75,7 @@ exports[`<TabNav /> Should render and match the snapshot 1`] = `
         <button
           aria-controls="escrow-view"
           aria-selected="false"
-          class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-ift0se-1 kRbvfe"
+          class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit styledComponents__StyledTab-ift0se-1 eCObik"
           id="escrow-tab"
           role="tab"
           tabindex="0"

@@ -1,13 +1,19 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import RefreshField from '../RefreshField';
+import ExpandableCell from '../ExpandableCell';
 
-const mockProps = { disabled: false, onClick: jest.fn() };
+const Component = (
+  <table>
+    <tbody>
+      <tr>
+        <ExpandableCell>testing</ExpandableCell>
+      </tr>
+    </tbody>
+  </table>
+);
 
-const Component = <RefreshField {...mockProps} />;
-
-describe('<RefreshField />', () => {
+describe('<ExpandableCell />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

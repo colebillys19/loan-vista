@@ -198,12 +198,14 @@ exports[`<ListFilter /> Should render and match the snapshot 1`] = `
     </div>
   </span>
   <span
-    class="styledComponents__FieldWrapper-at5kq4-0 heWTRq"
+    class="styledComponents__FieldWrapper-at5kq4-0 kmjorW"
+    disabled=""
   >
     <button
       aria-label="refresh"
-      class="MuiButtonBase-root MuiIconButton-root styledComponents__StyledIconButton-p72z6f-0 fSMSXL"
-      tabindex="0"
+      class="MuiButtonBase-root MuiIconButton-root styledComponents__StyledIconButton-p72z6f-0 fSMSXL Mui-disabled Mui-disabled"
+      disabled=""
+      tabindex="-1"
       type="button"
     >
       <span
@@ -226,17 +228,16 @@ exports[`<ListFilter /> Should render and match the snapshot 1`] = `
           />
         </svg>
       </span>
-      <span
-        class="MuiTouchRipple-root"
-      />
     </button>
   </span>
   <span
-    class="styledComponents__FieldWrapper-at5kq4-0 heWTRq"
+    class="styledComponents__FieldWrapper-at5kq4-0 kmjorW"
+    disabled=""
   >
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1jxtcmc-0 kLtwHh styledComponents__StyledButton-sc-86ulmm-0 bbadGD"
-      tabindex="0"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1jxtcmc-0 kLtwHh styledComponents__StyledButton-sc-86ulmm-0 bbadGD Mui-disabled Mui-disabled"
+      disabled=""
+      tabindex="-1"
       type="submit"
     >
       <span
@@ -244,9 +245,6 @@ exports[`<ListFilter /> Should render and match the snapshot 1`] = `
       >
         find
       </span>
-      <span
-        class="MuiTouchRipple-root"
-      />
     </button>
   </span>
 </form>

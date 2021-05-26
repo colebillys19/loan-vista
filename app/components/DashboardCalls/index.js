@@ -65,7 +65,7 @@ DashboardCalls.propTypes = {
 };
 
 DashboardCalls.defaultProps = {
-  headers: ['date', 'time', 'dept', 'desc', 'rep', 'audio'],
+  headers: ['date', 'time', 'dept', 'rep', 'desc', 'audio'],
 };
 
 export default DashboardCalls;

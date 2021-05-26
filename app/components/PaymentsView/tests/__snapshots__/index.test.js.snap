@@ -23,14 +23,14 @@ exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
       class="styledComponents__StyledTableHead-vlp0pm-4 styledComponents__CustomTableHead-sc-1kvx6rk-0 jbPGBV"
     >
       <tr
-        class="styledComponents__StyledTableRow-vlp0pm-6 ldLzdU"
+        class="styledComponents__StyledTableRow-vlp0pm-6 iITeu"
       >
         <th
           class="styledComponents__StyledTableHeader-vlp0pm-5 cgQTkg"
           scope="col"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 gBupFP MuiButton-disableElevation"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 fGeLDD MuiButton-disableElevation"
             tabindex="0"
             type="button"
           >
@@ -66,7 +66,7 @@ exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
           scope="col"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 gBupFP MuiButton-disableElevation"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 fGeLDD MuiButton-disableElevation"
             tabindex="0"
             type="button"
           >
@@ -102,7 +102,7 @@ exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
           scope="col"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 gBupFP MuiButton-disableElevation"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 fGeLDD MuiButton-disableElevation"
             tabindex="0"
             type="button"
           >
@@ -138,7 +138,7 @@ exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
           scope="col"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 gBupFP MuiButton-disableElevation"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 fGeLDD MuiButton-disableElevation"
             tabindex="0"
             type="button"
           >
@@ -174,7 +174,7 @@ exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
           scope="col"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 gBupFP MuiButton-disableElevation"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 fGeLDD MuiButton-disableElevation"
             tabindex="0"
             type="button"
           >
@@ -210,7 +210,7 @@ exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
           scope="col"
         >
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 gBupFP MuiButton-disableElevation"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1qurbx9-0 fGeLDD MuiButton-disableElevation"
             tabindex="0"
             type="button"
           >
@@ -247,35 +247,35 @@ exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
       class="styledComponents__StyledTableBody-vlp0pm-2 hzYCgB"
     >
       <tr
-        class="styledComponents__StyledTableRow-vlp0pm-6 ldLzdU"
+        class="styledComponents__StyledTableRow-vlp0pm-6 iITeu"
       >
         <td
-          class="styledComponents__StyledTableData-vlp0pm-3 kHjjen"
+          class="styledComponents__StyledTableData-vlp0pm-3 keIbjS"
         >
           date
         </td>
         <td
-          class="styledComponents__StyledTableData-vlp0pm-3 kHjjen"
+          class="styledComponents__StyledTableData-vlp0pm-3 keIbjS"
         >
           desc
         </td>
         <td
-          class="styledComponents__StyledTableData-vlp0pm-3 kHjjen"
+          class="styledComponents__StyledTableData-vlp0pm-3 keIbjS"
         >
           total
         </td>
         <td
-          class="styledComponents__StyledTableData-vlp0pm-3 kHjjen"
+          class="styledComponents__StyledTableData-vlp0pm-3 keIbjS"
         >
           principal
         </td>
         <td
-          class="styledComponents__StyledTableData-vlp0pm-3 kHjjen"
+          class="styledComponents__StyledTableData-vlp0pm-3 keIbjS"
         >
           interest
         </td>
         <td
-          class="styledComponents__StyledTableData-vlp0pm-3 kHjjen"
+          class="styledComponents__StyledTableData-vlp0pm-3 keIbjS"
         >
           escrow
         </td>

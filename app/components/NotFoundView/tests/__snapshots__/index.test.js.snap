@@ -2,7 +2,7 @@
 
 exports[`<NotFoundView /> Should render and match the snapshot 1`] = `
 <section
-  class="TabContainer-sc-1us62xt-0 fqhtXT"
+  class="TabContainer-sc-1us62xt-0 gvWCQW"
 >
   <div
     class="styledComponents__NotFoundViewContainer-sc-1yh80ac-0 dpVXfe"

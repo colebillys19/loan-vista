@@ -1,21 +1,23 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { StyledTableData, StyledTableRow } from 'components/_base-ui/ListTable';
+import { StyledTableRow } from 'components/_base-ui/ListTable';
 import LinkButton from 'components/_base-ui/LinkButton';
+
+import { CustomTableData } from './styledComponents';
 
 const CustomTableRow = ({ data, headers }) => (
   <StyledTableRow>
     {headers.map((header) => {
       if (header === 'audio') {
         return (
-          <StyledTableData key={header}>
+          <CustomTableData key={header}>
             <LinkButton onClick={() => null} text="request" />
-          </StyledTableData>
+          </CustomTableData>
         );
       }
 
-      return <StyledTableData key={header}>{data[header]}</StyledTableData>;
+      return <CustomTableData key={header}>{data[header]}</CustomTableData>;
     })}
   </StyledTableRow>
 );

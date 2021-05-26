@@ -3,7 +3,7 @@
 exports[`<EscrowView /> Should render and match the snapshot 1`] = `
 <section
   aria-labelledby="escrow-tab"
-  class="TabContainer-sc-1us62xt-0 fqhtXT"
+  class="TabContainer-sc-1us62xt-0 gvWCQW"
   id="escrow-view"
 >
   <section
@@ -367,19 +367,19 @@ exports[`<EscrowView /> Should render and match the snapshot 1`] = `
           class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
         >
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
+            class="styledComponents__StyledTableData-qh5wjg-2 kWBgSA"
           />
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
+            class="styledComponents__StyledTableData-qh5wjg-2 kWBgSA"
           />
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
+            class="styledComponents__StyledTableData-qh5wjg-2 kWBgSA"
           />
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
+            class="styledComponents__StyledTableData-qh5wjg-2 kWBgSA"
           />
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
+            class="styledComponents__StyledTableData-qh5wjg-2 kWBgSA"
           />
         </tr>
       </tbody>
@@ -464,19 +464,19 @@ exports[`<EscrowView /> Should render and match the snapshot 1`] = `
           class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
         >
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
+            class="styledComponents__StyledTableData-qh5wjg-2 kWBgSA"
           />
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
+            class="styledComponents__StyledTableData-qh5wjg-2 kWBgSA"
           />
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
+            class="styledComponents__StyledTableData-qh5wjg-2 kWBgSA"
           />
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
+            class="styledComponents__StyledTableData-qh5wjg-2 kWBgSA"
           />
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
+            class="styledComponents__StyledTableData-qh5wjg-2 kWBgSA"
           />
         </tr>
       </tbody>
@@ -556,16 +556,16 @@ exports[`<EscrowView /> Should render and match the snapshot 1`] = `
           class="styledComponents__StyledTableRow-qh5wjg-5 iyUdAf"
         >
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
+            class="styledComponents__StyledTableData-qh5wjg-2 kWBgSA"
           />
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
+            class="styledComponents__StyledTableData-qh5wjg-2 kWBgSA"
           />
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
+            class="styledComponents__StyledTableData-qh5wjg-2 kWBgSA"
           />
           <td
-            class="styledComponents__StyledTableData-qh5wjg-2 jKpcRq"
+            class="styledComponents__StyledTableData-qh5wjg-2 kWBgSA"
           />
         </tr>
       </tbody>

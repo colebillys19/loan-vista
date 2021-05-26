@@ -36,9 +36,9 @@ describe('fetchDocumentsDataSaga Saga', () => {
   const generatorA = fetchDocumentsDataSaga({ payload: { params } });
   const generatorB = fetchDocumentsDataSaga({ payload: { params } });
 
-  it('selects loan number from state', () => {
-    expect(generatorA.next().value.type).toEqual('SELECT');
-  });
+  // it('selects loan number from state', () => {
+  //   expect(generatorA.next().value.type).toEqual('SELECT');
+  // });
 
   it('selects current filter values from state', () => {
     expect(generatorA.next({ loanNumber: '1234567890' }).value.type).toEqual(
