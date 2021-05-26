@@ -82,7 +82,7 @@ import '!file-loader?name=[name].[ext]!./images/favicon.ico';
 import 'file-loader?name=.htaccess!./.htaccess';
 import GlobalStyles from 'globalStyles';
 import muiTheme from './muiTheme';
-import CallsListSandbox from './_CallsListSandbox';
+import PaymentsListSandbox from './_PaymentsListSandbox';
 
 const MOUNT_NODE = document.getElementById('app');
 
@@ -90,7 +90,7 @@ const render = () => {
   ReactDOM.render(
     <StylesProvider injectFirst>
       <ThemeProvider theme={muiTheme}>
-        <CallsListSandbox />
+        <PaymentsListSandbox />
         <GlobalStyles />
       </ThemeProvider>
     </StylesProvider>,
