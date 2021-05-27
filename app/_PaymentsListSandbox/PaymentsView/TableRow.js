@@ -1,19 +1,40 @@
-import React from 'react';
+import React, { Fragment, useState } from 'react';
 import T from 'prop-types';
 
 import {
   StyledTableData,
   StyledTableRow,
 } from 'components/_base-ui/GradientListTable';
+import ConditionalRender from 'components/_base-ui/ConditionalRender';
 
-const TableRow = ({ data, headers }) => (
-  <StyledTableRow>
-    {headers.map((header) => (
-      <StyledTableData key={header}>{data[header]}</StyledTableData>
-    ))}
-    <StyledTableData>btn</StyledTableData>
-  </StyledTableRow>
-);
+import ArrowButton from '../ArrowButton';
+import PaymentDetailRow from './PaymentDetailRow';
+import { BaseTableData } from './styledComponents';
+
+const TableRow = ({ data, headers }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <Fragment>
+      <StyledTableRow>
+        {headers.map((header) => (
+          <StyledTableData key={header}>{data[header]}</StyledTableData>
+        ))}
+        <BaseTableData>
+          <ArrowButton
+            handleClick={() => setIsExpanded(!isExpanded)}
+            renderUp={isExpanded}
+          />
+        </BaseTableData>
+      </StyledTableRow>
+      <ConditionalRender
+        Component={PaymentDetailRow}
+        propsToPassDown={{ data }}
+        shouldRender={isExpanded}
+      />
+    </Fragment>
+  );
+};
 
 TableRow.propTypes = {
   data: T.shape({
