@@ -11,6 +11,7 @@ const TableRow = ({ data, headers }) => (
     {headers.map((header) => (
       <StyledTableData key={header}>{data[header]}</StyledTableData>
     ))}
+    <StyledTableData>btn</StyledTableData>
   </StyledTableRow>
 );
 

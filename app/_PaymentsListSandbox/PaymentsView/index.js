@@ -55,6 +55,7 @@ const PaymentsView = ({
                 />
               </StyledTableHeader>
             ))}
+            <StyledTableHeader scope="col" />
           </StyledTableRow>
         </CustomTableHead>
         <StyledTableBody>
