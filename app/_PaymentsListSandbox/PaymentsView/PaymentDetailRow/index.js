@@ -5,7 +5,11 @@ import { StyledTableRow } from 'components/_base-ui/GradientListTable';
 
 import { BaseTableData } from '../styledComponents';
 import { CELL_ARR } from './constants';
-import { Anchor, ContentContainer } from './styledComponents';
+import {
+  Anchor,
+  ContentContainer,
+  StyledTwoColumnList,
+} from './styledComponents';
 
 /* eslint-disable react/no-array-index-key */
 const PaymentDetailRow = ({ data }) => (
@@ -13,11 +17,13 @@ const PaymentDetailRow = ({ data }) => (
     <BaseTableData>
       <Anchor>
         <ContentContainer>
-          {Object.keys(data).map((key) => (
-            <div key={key}>
-              {key}:&nbsp;
-              <b>{data[key]}</b>
-            </div>
+          {data.map((listData, i) => (
+            <StyledTwoColumnList
+              key={i}
+              data={listData}
+              numRows={6}
+              renderLoading={false}
+            />
           ))}
         </ContentContainer>
       </Anchor>
@@ -29,28 +35,7 @@ const PaymentDetailRow = ({ data }) => (
 );
 
 PaymentDetailRow.propTypes = {
-  data: T.shape({
-    accidentHealthInsurance: T.string,
-    accruedLateCharge: T.string,
-    date: T.string,
-    desc: T.string,
-    effectiveDate: T.string,
-    escrow: T.string,
-    escrowBalance: T.string,
-    fees: T.string,
-    id: T.string,
-    interest: T.string,
-    lifeInsurance: T.string,
-    misc: T.string,
-    otherTotal: T.string,
-    principal: T.string,
-    principalBalance: T.string,
-    replacementReserve: T.string,
-    restrictedReserve: T.string,
-    suspense: T.string,
-    time: T.string,
-    total: T.string,
-  }).isRequired,
+  data: T.arrayOf(T.shape({ listData: T.array })).isRequired,
 };
 
 export default PaymentDetailRow;

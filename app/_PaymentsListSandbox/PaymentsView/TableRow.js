@@ -11,14 +11,14 @@ import ArrowButton from '../ArrowButton';
 import PaymentDetailRow from './PaymentDetailRow';
 import { BaseTableData } from './styledComponents';
 
-const TableRow = ({ data, headers }) => {
+const TableRow = ({ data: { expandedData, mainData }, headers }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <Fragment>
       <StyledTableRow>
         {headers.map((header) => (
-          <StyledTableData key={header}>{data[header]}</StyledTableData>
+          <StyledTableData key={header}>{mainData[header]}</StyledTableData>
         ))}
         <BaseTableData>
           <ArrowButton
@@ -29,7 +29,7 @@ const TableRow = ({ data, headers }) => {
       </StyledTableRow>
       <ConditionalRender
         Component={PaymentDetailRow}
-        propsToPassDown={{ data }}
+        propsToPassDown={{ data: expandedData }}
         shouldRender={isExpanded}
       />
     </Fragment>
