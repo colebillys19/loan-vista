@@ -4,6 +4,8 @@ import { StyledTableHead } from 'components/_base-ui/GradientListTable';
 
 export const BaseTableData = styled.td`
   padding: 0;
+  padding-bottom: ${({ isExpanded }) => (isExpanded ? '16.6rem' : '0')};
+  position: relative;
 `;
 
 /* eslint-disable prettier/prettier */

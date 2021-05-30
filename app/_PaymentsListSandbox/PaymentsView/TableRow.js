@@ -8,7 +8,7 @@ import {
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 
 import ArrowButton from '../ArrowButton';
-import PaymentDetailRow from './PaymentDetailRow';
+import ExpandedContent from './ExpandedContent';
 import { BaseTableData } from './styledComponents';
 
 const TableRow = ({ data: { expandedData, mainData }, headers }) => {
@@ -20,18 +20,18 @@ const TableRow = ({ data: { expandedData, mainData }, headers }) => {
         {headers.map((header) => (
           <StyledTableData key={header}>{mainData[header]}</StyledTableData>
         ))}
-        <BaseTableData>
+        <BaseTableData isExpanded={isExpanded}>
           <ArrowButton
             handleClick={() => setIsExpanded(!isExpanded)}
             renderUp={isExpanded}
           />
+          <ConditionalRender
+            Component={ExpandedContent}
+            propsToPassDown={{ data: expandedData }}
+            shouldRender={isExpanded}
+          />
         </BaseTableData>
       </StyledTableRow>
-      <ConditionalRender
-        Component={PaymentDetailRow}
-        propsToPassDown={{ data: expandedData }}
-        shouldRender={isExpanded}
-      />
     </Fragment>
   );
 };

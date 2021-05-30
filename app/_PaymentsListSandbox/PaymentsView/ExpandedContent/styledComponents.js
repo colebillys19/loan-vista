@@ -2,22 +2,18 @@ import styled from 'styled-components';
 
 import TwoColumnList from 'components/_base-ui/TwoColumnList';
 
-export const Anchor = styled.div`
-  height: 16.6rem;
-  position: relative;
-`;
-
-export const ContentContainer = styled.div`
+export const Container = styled.div`
   display: flex;
-  height: 16.6rem;
   justify-content: space-between;
-  left: 0;
   padding: 2rem;
   position: absolute;
-  top: 0;
-  width: 83.7rem;
+  right: 0;
+  top: 2.4rem;
 `;
 
 export const StyledTwoColumnList = styled(TwoColumnList)`
   width: 38rem;
+  &:first-of-type {
+    margin-right: 3.7rem;
+  }
 `;
