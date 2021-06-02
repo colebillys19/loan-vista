@@ -1,7 +1,8 @@
+import moment from 'moment';
+
 import { getCallsData } from 'containers/Calls/helpers';
 import { getDocumentsData } from 'containers/Documents/helpers';
-import { getPaymentsData } from 'containers/Payments/helpers';
-import { toTitleCase } from 'utils/globalHelpers';
+import { convertNumToCurrency, toTitleCase } from 'utils/globalHelpers';
 
 import {
   DASHBOARD_LOAN_LABEL_DICT,
@@ -82,7 +83,7 @@ export const getDashboardListsData = (
 ) => {
   const formattedRecentCalls = getCallsData(recentCalls);
   const formattedRecentDocuments = getDocumentsData(recentDocuments);
-  const formattedRecentPayments = getPaymentsData(recentPayments);
+  const formattedRecentPayments = getDashboardPaymentsData(recentPayments);
 
   return {
     callsData: formattedRecentCalls,
@@ -122,6 +123,25 @@ export const getDashboardLoanData = (balancesData, paymentData, stopsData) => {
     stopsData: formattedStopsData,
   };
 };
+
+/**
+ * getDashboardPaymentsData
+ * @description: ...
+ */
+const getDashboardPaymentsData = (paymentsData) =>
+  paymentsData.map(({ date, desc, escrow, id, interest, principal, total }) => {
+    const dateFormatted = moment(date, 'YYYY-MM-DD').format('MM/DD/YYYY');
+
+    return {
+      date: dateFormatted,
+      desc: toTitleCase(desc),
+      escrow: convertNumToCurrency(escrow),
+      id,
+      interest: convertNumToCurrency(interest),
+      principal: convertNumToCurrency(principal),
+      total: convertNumToCurrency(total),
+    };
+  });
 
 /**
  * getEffectiveEscrowListData

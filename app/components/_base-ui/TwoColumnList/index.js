@@ -37,7 +37,7 @@ const TwoColumnList = ({
 TwoColumnList.propTypes = {
   className: T.string,
   data: T.shape({
-    listData: T.arrayOf(T.shape({ key: T.string, value: T.string })),
+    listData: T.arrayOf(T.shape({ label: T.string, value: T.string })),
     title: T.string,
   }).isRequired,
   numRows: T.number.isRequired,

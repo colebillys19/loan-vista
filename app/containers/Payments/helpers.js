@@ -23,41 +23,66 @@ export const getPaymentsData = (paymentsData) =>
       replacementReserve,
       restrictedReserve,
       suspense,
-      time,
       total,
     }) => {
-      const dateTime = `${date} ${time}`;
-      const dateTimeFormatted = moment(dateTime, 'YYYY-MM-DD HH:mm:ss').format(
-        'MM/DD/YYYY hh:mm A',
-      );
-      const [dateFormatted, t, m] = dateTimeFormatted.split(' ');
-      const timeFormatted = `${t} ${m}`;
-
+      const dateFormatted = moment(date, 'YYYY-MM-DD').format('MM/DD/YYYY');
       const effectiveDateFormatted = moment(effectiveDate, 'YYYY-MM-DD').format(
         'MM/DD/YYYY',
       );
 
       return {
-        accidentHealthInsurance: convertNumToCurrency(accidentHealthInsurance),
-        accruedLateCharge: convertNumToCurrency(accruedLateCharge),
-        date: dateFormatted,
-        desc: toTitleCase(desc),
-        effectiveDate: effectiveDateFormatted,
-        escrow: convertNumToCurrency(escrow),
-        escrowBalance: convertNumToCurrency(escrowBalance),
-        fees: convertNumToCurrency(fees),
+        expandedData: [
+          {
+            listData: [
+              { label: 'effectiveDate', value: effectiveDateFormatted },
+              {
+                label: 'principalBalance',
+                value: convertNumToCurrency(principalBalance),
+              },
+              {
+                label: 'escrowBalance',
+                value: convertNumToCurrency(escrowBalance),
+              },
+              { label: 'fees', value: convertNumToCurrency(fees) },
+              {
+                label: 'accruedLateCharge',
+                value: convertNumToCurrency(accruedLateCharge),
+              },
+              { label: 'otherTotal', value: convertNumToCurrency(otherTotal) },
+            ],
+          },
+          {
+            listData: [
+              {
+                label: 'accidentHealthInsurance',
+                value: convertNumToCurrency(accidentHealthInsurance),
+              },
+              {
+                label: 'lifeInsurance',
+                value: convertNumToCurrency(lifeInsurance),
+              },
+              { label: 'misc', value: convertNumToCurrency(misc) },
+              { label: 'suspense', value: convertNumToCurrency(suspense) },
+              {
+                label: 'replacementReserve',
+                value: convertNumToCurrency(replacementReserve),
+              },
+              {
+                label: 'restrictedReserve',
+                value: convertNumToCurrency(restrictedReserve),
+              },
+            ],
+          },
+        ],
         id,
-        interest: convertNumToCurrency(interest),
-        lifeInsurance: convertNumToCurrency(lifeInsurance),
-        misc: convertNumToCurrency(misc),
-        otherTotal: convertNumToCurrency(otherTotal),
-        principal: convertNumToCurrency(principal),
-        principalBalance: convertNumToCurrency(principalBalance),
-        replacementReserve: convertNumToCurrency(replacementReserve),
-        restrictedReserve: convertNumToCurrency(restrictedReserve),
-        suspense: convertNumToCurrency(suspense),
-        time: timeFormatted,
-        total: convertNumToCurrency(total),
+        mainData: {
+          date: dateFormatted,
+          desc: toTitleCase(desc),
+          escrow: convertNumToCurrency(escrow),
+          interest: convertNumToCurrency(interest),
+          principal: convertNumToCurrency(principal),
+          total: convertNumToCurrency(total),
+        },
       };
     },
   );

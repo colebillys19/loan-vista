@@ -3,7 +3,6 @@ const moment = require('moment');
 const {
   checkDate,
   checkKeyword,
-  getDateTimeFormatted,
   sortByDateAsc,
   sortByString,
 } = require('../helpers');
@@ -45,9 +44,8 @@ const filterPayments = (data, dateFrom, dateTo, keyword) => {
  * @description ...
  */
 const getFormattedRowValuesArray = (rowObj) => {
-  const { date, time } = rowObj;
-  const dateTime = `${date} ${time}`;
-  const [dateFormatted, timeFormatted] = getDateTimeFormatted(dateTime);
+  const { date } = rowObj;
+  const dateFormatted = moment(date, 'YYYY-MM-DD').format('MM/DD/YYYY');
 
   return Object.keys(rowObj).reduce((acc, key) => {
     switch (key) {
@@ -63,7 +61,6 @@ const getFormattedRowValuesArray = (rowObj) => {
       case 'id':
         break;
       case 'time':
-        acc.push(timeFormatted);
         break;
       default:
         acc.push(convertNumToCurrency(rowObj[key]));
