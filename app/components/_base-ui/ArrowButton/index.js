@@ -6,20 +6,24 @@ import ConditionalRender from 'components/_base-ui/ConditionalRender';
 
 import { StyledIconButton } from './styledComponents';
 
-const ArrowButton = ({ handleClick, renderUp }) => (
-  <StyledIconButton disableRipple onClick={handleClick}>
+const ArrowButton = ({ className, handleClick, renderUp, size }) => (
+  <StyledIconButton className={className} disableRipple onClick={handleClick}>
     <ConditionalRender
       Component={ArrowUpIcon}
       FallbackComponent={ArrowDownIcon}
-      propsToPassDown={{ size: '1.2rem' }}
+      propsToPassDown={{ size }}
       shouldRender={renderUp}
     />
   </StyledIconButton>
 );
 
 ArrowButton.propTypes = {
+  className: T.string,
   handleClick: T.func.isRequired,
   renderUp: T.bool.isRequired,
+  size: T.string,
 };
+
+ArrowButton.defaultProps = { size: '1.2rem' };
 
 export default ArrowButton;

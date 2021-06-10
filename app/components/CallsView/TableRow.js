@@ -5,7 +5,7 @@ import {
   StyledTableData,
   StyledTableRow,
 } from 'components/_base-ui/GradientListTable';
-import LinkButton from 'components/_base-ui/LinkButton';
+import { BaseTableData, StyledLinkButton } from './styledComponents';
 
 import DescCell from './DescCell';
 
@@ -18,9 +18,9 @@ const TableRow = ({ data, headers }) => (
 
       if (header === 'audio') {
         return (
-          <StyledTableData key="audio">
-            <LinkButton onClick={() => null} text="request" />
-          </StyledTableData>
+          <BaseTableData key="audio">
+            <StyledLinkButton onClick={() => null} text="request" />
+          </BaseTableData>
         );
       }
 

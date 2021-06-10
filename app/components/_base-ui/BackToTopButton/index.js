@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { throttle } from 'lodash';
 
-import { ArrowUpIcon } from 'images/iconComponents';
 import ConditionalRender from 'components/_base-ui/ConditionalRender';
 
-import { StyledIconButton } from './styledComponents';
+import { StyledArrowButton } from './styledComponents';
 
 const BackToTopButton = () => {
   const [scrollValue, setScrollValue] = useState(0);
@@ -33,9 +32,7 @@ const BackToTopButton = () => {
   return (
     <ConditionalRender
       Component={
-        <StyledIconButton onClick={handleClick}>
-          <ArrowUpIcon size="3.6rem" />
-        </StyledIconButton>
+        <StyledArrowButton handleClick={handleClick} renderUp size="3.6rem" />
       }
       shouldRender={scrollValue >= 230}
     />

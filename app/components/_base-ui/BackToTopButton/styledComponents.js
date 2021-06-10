@@ -1,9 +1,11 @@
 import styled from 'styled-components';
-import { IconButton } from '@material-ui/core';
 
-export const StyledIconButton = styled(IconButton)`
+import ArrowButton from 'components/_base-ui/ArrowButton';
+
+export const StyledArrowButton = styled(ArrowButton)`
   bottom: 1rem;
   display: inline;
+  padding: 1.6rem;
   position: fixed;
   right: 1rem;
 `;
