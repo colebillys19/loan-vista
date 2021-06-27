@@ -20,7 +20,7 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
     class="styledComponents__StyledTable-vlp0pm-1 isdduh"
   >
     <thead
-      class="styledComponents__StyledTableHead-vlp0pm-4 styledComponents__CustomTableHead-ottpwa-0 fhlJev"
+      class="styledComponents__StyledTableHead-vlp0pm-4 styledComponents__CustomTableHead-ottpwa-1 ljUaMu"
     >
       <tr
         class="styledComponents__StyledTableRow-vlp0pm-6 iITeu"
@@ -175,7 +175,7 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
           dept
         </td>
         <td
-          class="styledComponents__StyledTableData-vlp0pm-3 styledComponents__DescTableData-sc-1papec4-0 gUZPnR"
+          class="styledComponents__StyledTableData-vlp0pm-3 styledComponents__DescTableData-sc-1papec4-0 eFIGUm"
         >
           desc
         </td>
@@ -185,10 +185,10 @@ exports[`<CallsView /> Should render and match the snapshot 1`] = `
           rep
         </td>
         <td
-          class="styledComponents__StyledTableData-vlp0pm-3 keIbjS"
+          class="styledComponents__BaseTableData-ottpwa-0 bwBJvK"
         >
           <button
-            class="MuiButtonBase-root styledComponents__StyledButton-sc-9o47wt-0 fQixWh"
+            class="MuiButtonBase-root styledComponents__StyledLinkButton-ottpwa-2 ZDcBh styledComponents__StyledButton-sc-9o47wt-0 fQixWh"
             tabindex="0"
             type="button"
           >

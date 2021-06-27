@@ -1,12 +1,18 @@
 export const MOCK_DATA = [
   {
-    date: 'date',
-    desc: 'desc',
-    escrow: 'escrow',
+    expandedData: [
+      { listData: [{ label: 'label', value: 'value' }] },
+      { listData: [{ label: 'label', value: 'value' }] },
+    ],
     id: 'id',
-    interest: 'interest',
-    principal: 'principal',
-    total: 'total',
+    mainData: {
+      date: 'date',
+      desc: 'desc',
+      escrow: 'escrow',
+      interest: 'interest',
+      principal: 'principal',
+      total: 'total',
+    },
   },
 ];
 

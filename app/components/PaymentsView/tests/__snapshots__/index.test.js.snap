@@ -20,7 +20,7 @@ exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
     class="styledComponents__StyledTable-vlp0pm-1 isdduh"
   >
     <thead
-      class="styledComponents__StyledTableHead-vlp0pm-4 styledComponents__CustomTableHead-sc-1kvx6rk-0 jbPGBV"
+      class="styledComponents__StyledTableHead-vlp0pm-4 styledComponents__CustomTableHead-sc-1kvx6rk-1 jKZVB"
     >
       <tr
         class="styledComponents__StyledTableRow-vlp0pm-6 iITeu"
@@ -241,6 +241,10 @@ exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
             </span>
           </button>
         </th>
+        <th
+          class="styledComponents__StyledTableHeader-vlp0pm-5 cgQTkg"
+          scope="col"
+        />
       </tr>
     </thead>
     <tbody
@@ -278,6 +282,36 @@ exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
           class="styledComponents__StyledTableData-vlp0pm-3 keIbjS"
         >
           escrow
+        </td>
+        <td
+          class="styledComponents__BaseTableData-sc-1kvx6rk-0 dSjhVg"
+        >
+          <button
+            class="MuiButtonBase-root MuiIconButton-root styledComponents__StyledIconButton-jqecxu-0 bIRJBi"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                style="height: 1.2rem; width: 1.2rem;"
+                viewBox="7 7 10 10"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M7 10l5 5 5-5z"
+                  fill="rgb(80, 103, 55)"
+                />
+              </svg>
+            </span>
+          </button>
         </td>
       </tr>
     </tbody>

@@ -34,41 +34,41 @@ export const getPaymentsData = (paymentsData) =>
         expandedData: [
           {
             listData: [
-              { label: 'effectiveDate', value: effectiveDateFormatted },
+              { label: 'Effective Date', value: effectiveDateFormatted },
               {
-                label: 'principalBalance',
+                label: 'Principal Balance',
                 value: convertNumToCurrency(principalBalance),
               },
               {
-                label: 'escrowBalance',
+                label: 'Escrow Balance',
                 value: convertNumToCurrency(escrowBalance),
               },
-              { label: 'fees', value: convertNumToCurrency(fees) },
+              { label: 'Fees', value: convertNumToCurrency(fees) },
               {
-                label: 'accruedLateCharge',
+                label: 'Accrued Late Charge',
                 value: convertNumToCurrency(accruedLateCharge),
               },
-              { label: 'otherTotal', value: convertNumToCurrency(otherTotal) },
+              { label: 'Other Total', value: convertNumToCurrency(otherTotal) },
             ],
           },
           {
             listData: [
               {
-                label: 'accidentHealthInsurance',
+                label: 'Accident/Health Insurance',
                 value: convertNumToCurrency(accidentHealthInsurance),
               },
               {
-                label: 'lifeInsurance',
+                label: 'Life Insurance',
                 value: convertNumToCurrency(lifeInsurance),
               },
-              { label: 'misc', value: convertNumToCurrency(misc) },
-              { label: 'suspense', value: convertNumToCurrency(suspense) },
+              { label: 'Miscellaneous', value: convertNumToCurrency(misc) },
+              { label: 'Suspense', value: convertNumToCurrency(suspense) },
               {
-                label: 'replacementReserve',
+                label: 'Replacement Reserve',
                 value: convertNumToCurrency(replacementReserve),
               },
               {
-                label: 'restrictedReserve',
+                label: 'Restricted Reserve',
                 value: convertNumToCurrency(restrictedReserve),
               },
             ],
