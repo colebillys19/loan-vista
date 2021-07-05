@@ -32,7 +32,7 @@ const BackToTopButton = () => {
   return (
     <ConditionalRender
       Component={
-        <StyledArrowButton handleClick={handleClick} renderUp size="3.6rem" />
+        <StyledArrowButton handleClick={handleClick} renderUp size="2.4rem" />
       }
       shouldRender={scrollValue >= 230}
     />
