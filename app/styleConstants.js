@@ -15,6 +15,7 @@ export const textColorAOpaque = 'rgba(17, 17, 17, 0.5)';
 export const textColorB = 'rgb(136, 136, 136)';
 
 export const backgroundColor = 'rgb(248, 248, 255)';
+export const backgroundColorOpaque = 'rgba(248, 248, 255, 0.8)';
 export const borderGrey = 'rgb(204, 204, 204)';
 export const errorColor = 'rgb(244, 67, 54)';
 export const skeletonGrey = 'rgb(232, 232, 232)';
