@@ -8,12 +8,12 @@ import T from 'prop-types';
 
 import { appColorB, iconColorB, textColorA } from 'styleConstants';
 import { MailIcon } from 'images/iconComponents';
-import { StyledTable, StyledTableBody } from 'components/_base-ui/ListTable';
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import GradientCard from 'components/_base-ui/GradientCard';
-import ListSkeleton from 'components/_base-ui/ListSkeleton';
-import NoDataBlock from 'components/_base-ui/NoDataBlock';
-import ViewMoreBlock from 'components/_base-ui/ViewMoreBlock';
+import { StyledTable, StyledTableBody } from 'components/_shared/ListTable';
+import ConditionalRender from 'components/_shared/ConditionalRender';
+import GradientCard from 'components/_shared/GradientCard';
+import ListSkeleton from 'components/_shared/ListSkeleton';
+import NoDataBlock from 'components/_shared/NoDataBlock';
+import ViewMoreBlock from 'components/_shared/ViewMoreBlock';
 
 import CustomTableRow from './CustomTableRow';
 

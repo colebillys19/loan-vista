@@ -12,12 +12,12 @@ import {
   StyledTableHead,
   StyledTableHeader,
   TableRow,
-} from 'components/_base-ui/ListTable';
+} from 'components/_shared/ListTable';
 import { appColorB } from 'styleConstants';
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import GradientCard from 'components/_base-ui/GradientCard';
-import ListSkeleton from 'components/_base-ui/ListSkeleton';
-import NoDataBlock from 'components/_base-ui/NoDataBlock';
+import ConditionalRender from 'components/_shared/ConditionalRender';
+import GradientCard from 'components/_shared/GradientCard';
+import ListSkeleton from 'components/_shared/ListSkeleton';
+import NoDataBlock from 'components/_shared/NoDataBlock';
 
 import { TableHeadRow } from './styledComponents';
 

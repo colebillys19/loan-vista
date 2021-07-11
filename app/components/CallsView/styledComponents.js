@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { StyledTableHead } from 'components/_base-ui/GradientListTable';
-import LinkButton from 'components/_base-ui/LinkButton';
+import { StyledTableHead } from 'components/_shared/GradientListTable';
+import LinkButton from 'components/_shared/LinkButton';
 
 export const BaseTableData = styled.td`
   padding: 0;

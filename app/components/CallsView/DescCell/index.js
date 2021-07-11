@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import T from 'prop-types';
 
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
+import ConditionalRender from 'components/_shared/ConditionalRender';
 
 import ExpandableCell from './ExpandableCell';
 import { DescTableData } from './styledComponents';

@@ -8,8 +8,8 @@ import T from 'prop-types';
 
 import { BulletIcon } from 'images/iconComponents';
 import { getHealthColor } from 'utils/globalHelpers';
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import ListSkeleton from 'components/_base-ui/ListSkeleton';
+import ConditionalRender from 'components/_shared/ConditionalRender';
+import ListSkeleton from 'components/_shared/ListSkeleton';
 
 import {
   Detail,

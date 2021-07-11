@@ -6,7 +6,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import GradientCard from 'components/_base-ui/GradientCard';
+import GradientCard from 'components/_shared/GradientCard';
 import { TextIcon } from 'images/iconComponents';
 
 import StopsList from './StopsList';

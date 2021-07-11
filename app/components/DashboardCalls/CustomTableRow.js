@@ -1,8 +1,8 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { StyledTableRow } from 'components/_base-ui/ListTable';
-import LinkButton from 'components/_base-ui/LinkButton';
+import { StyledTableRow } from 'components/_shared/ListTable';
+import LinkButton from 'components/_shared/LinkButton';
 
 import { CustomTableData } from './styledComponents';
 

@@ -4,7 +4,7 @@ import T from 'prop-types';
 import {
   StyledTableData,
   StyledTableRow,
-} from 'components/_base-ui/GradientListTable';
+} from 'components/_shared/GradientListTable';
 import { BaseTableData, StyledLinkButton } from './styledComponents';
 
 import DescCell from './DescCell';

@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 import T from 'prop-types';
 
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import { StyledTable, StyledTableBody } from 'components/_base-ui/ListTable';
-import ListSkeleton from 'components/_base-ui/ListSkeleton';
+import ConditionalRender from 'components/_shared/ConditionalRender';
+import { StyledTable, StyledTableBody } from 'components/_shared/ListTable';
+import ListSkeleton from 'components/_shared/ListSkeleton';
 
 import { StopsListContainer, StopsListHeading } from './styledComponents';
 import StopsListRow from './StopsListRow';

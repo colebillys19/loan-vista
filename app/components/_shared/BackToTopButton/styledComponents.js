@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { appColorA, backgroundColorOpaque } from 'styleConstants';
-import ArrowButton from 'components/_base-ui/ArrowButton';
+import ArrowButton from 'components/_shared/ArrowButton';
 
 export const StyledArrowButton = styled(ArrowButton)`
   background-color: ${backgroundColorOpaque};

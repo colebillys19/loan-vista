@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { StyledTableData } from 'components/_base-ui/ListTable';
+import { StyledTableData } from 'components/_shared/ListTable';
 
 import { CustomTableRow } from './styledComponents';
 

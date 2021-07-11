@@ -2,8 +2,8 @@ import React from 'react';
 import T from 'prop-types';
 
 import { iconColorC, textColorB } from 'styleConstants';
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import Spinner from 'components/_base-ui/Spinner';
+import ConditionalRender from 'components/_shared/ConditionalRender';
+import Spinner from 'components/_shared/Spinner';
 
 import Button from './Button';
 

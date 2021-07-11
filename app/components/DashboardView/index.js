@@ -11,8 +11,8 @@ import DashboardCalls from 'components/DashboardCalls';
 import DashboardDocuments from 'components/DashboardDocuments';
 import DashboardLoan from 'components/DashboardLoan';
 import DashboardPayments from 'components/DashboardPayments';
-import TabContainer from 'components/_base-ui/TabContainer';
-import ErrorModal from 'components/_base-ui/ErrorModal';
+import TabContainer from 'components/_shared/TabContainer';
+import ErrorModal from 'components/_shared/ErrorModal';
 
 const DashboardView = ({
   dashboardBorrowerData,

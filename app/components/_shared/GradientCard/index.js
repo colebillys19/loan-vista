@@ -3,8 +3,8 @@ import T from 'prop-types';
 
 import { BulletIcon } from 'images/iconComponents';
 import { appColorA, appColorB } from 'styleConstants';
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import GradientBorder from 'components/_base-ui/GradientBorder';
+import ConditionalRender from 'components/_shared/ConditionalRender';
+import GradientBorder from 'components/_shared/GradientBorder';
 
 import {
   CardContainer,

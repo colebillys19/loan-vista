@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import TwoColumnList from 'components/_base-ui/TwoColumnList';
+import TwoColumnList from 'components/_shared/TwoColumnList';
 
 export const Container = styled.div`
   display: flex;

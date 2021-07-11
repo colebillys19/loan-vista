@@ -6,8 +6,8 @@
 import React from 'react';
 import T from 'prop-types';
 
-import ListBorders from 'components/_base-ui/ListBorders';
-import ListSortButton from 'components/_base-ui/ListSortButton';
+import ListBorders from 'components/_shared/ListBorders';
+import ListSortButton from 'components/_shared/ListSortButton';
 import {
   StyledTable,
   StyledTableBody,
@@ -15,7 +15,7 @@ import {
   StyledTableRow,
   TableContainer,
   TableFooter,
-} from 'components/_base-ui/GradientListTable';
+} from 'components/_shared/GradientListTable';
 
 import TableRow from './TableRow';
 import { CustomTableHead } from './styledComponents';

@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import T from 'prop-types';
 
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import ListSkeleton from 'components/_base-ui/ListSkeleton';
+import ConditionalRender from 'components/_shared/ConditionalRender';
+import ListSkeleton from 'components/_shared/ListSkeleton';
 
 import { Label, ListHeading, Row, Value } from './styledComponents';
 

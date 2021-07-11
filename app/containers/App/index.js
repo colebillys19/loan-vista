@@ -13,15 +13,15 @@ import { push } from 'connected-react-router';
 
 import GlobalStyles from 'globalStyles';
 
-import AppHeader from 'components/_base-ui/AppHeader';
-import BackToTopButton from 'components/_base-ui/BackToTopButton';
+import AppHeader from 'components/_shared/AppHeader';
+import BackToTopButton from 'components/_shared/BackToTopButton';
 import Calls from 'containers/Calls';
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
+import ConditionalRender from 'components/_shared/ConditionalRender';
 import DashboardView from 'components/DashboardView';
 import Documents from 'containers/Documents';
 import EscrowView from 'components/EscrowView';
 import Main from 'containers/Main';
-import MainContainer from 'components/_base-ui/MainContainer';
+import MainContainer from 'components/_shared/MainContainer';
 import NotFoundView from 'components/NotFoundView';
 import Payments from 'containers/Payments';
 import SidebarView from 'components/SidebarView';

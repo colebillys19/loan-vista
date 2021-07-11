@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-import TabContainer from 'components/_base-ui/TabContainer';
+import TabContainer from 'components/_shared/TabContainer';
 import { WarningIcon } from 'images/iconComponents';
 
 import { NotFoundViewContainer, WarningHeading } from './styledComponents';

@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import LinkButton from 'components/_base-ui/LinkButton';
+import LinkButton from 'components/_shared/LinkButton';
 
 import { ViewMoreContainer } from './styledComponents';
 

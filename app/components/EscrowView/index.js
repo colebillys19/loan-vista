@@ -6,12 +6,12 @@
 import React from 'react';
 import T from 'prop-types';
 
-import ErrorModal from 'components/_base-ui/ErrorModal';
+import ErrorModal from 'components/_shared/ErrorModal';
 import EscrowEscrow from 'components/EscrowEscrow';
 import EscrowHomeowners from 'components/EscrowHomeowners';
 import EscrowMortgage from 'components/EscrowMortgage';
 import EscrowTaxes from 'components/EscrowTaxes';
-import TabContainer from 'components/_base-ui/TabContainer';
+import TabContainer from 'components/_shared/TabContainer';
 
 const EscrowView = ({
   error,

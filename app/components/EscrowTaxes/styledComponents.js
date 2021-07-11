@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { textColorB } from 'styleConstants';
-import { StyledTableRow } from 'components/_base-ui/ListTable';
+import { StyledTableRow } from 'components/_shared/ListTable';
 
 export const TableHeadRow = styled(StyledTableRow)`
   color: ${textColorB};

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { StyledTableData } from 'components/_base-ui/GradientListTable';
-import ArrowButton from 'components/_base-ui/ArrowButton';
+import { StyledTableData } from 'components/_shared/GradientListTable';
+import ArrowButton from 'components/_shared/ArrowButton';
 
 export const DescTableData = styled(StyledTableData)`
   max-width: 40rem;

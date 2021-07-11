@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Button from 'components/_base-ui/Button';
+import Button from 'components/_shared/Button';
 
 export const FallbackBlockContainer = styled.div`
   height: 9.3rem;

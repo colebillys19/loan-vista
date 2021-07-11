@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { StyledTableData } from 'components/_base-ui/ListTable';
+import { StyledTableData } from 'components/_shared/ListTable';
 
 export const CustomTableData = styled(StyledTableData)`
   &:nth-of-type(1) {

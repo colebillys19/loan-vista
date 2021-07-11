@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 
 import { ArrowDownIcon, ArrowUpIcon } from 'images/iconComponents';
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
+import ConditionalRender from 'components/_shared/ConditionalRender';
 
 import { StyledIconButton } from './styledComponents';
 

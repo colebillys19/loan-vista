@@ -14,8 +14,8 @@ import { useInjectReducer } from 'utils/injectReducer';
 import { useInjectSaga } from 'utils/injectSaga';
 // import { usePrevious } from 'utils/customHooks';
 import DocumentsView from 'components/DocumentsView';
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
-import ListFallback from 'components/_base-ui/ListFallback';
+import ConditionalRender from 'components/_shared/ConditionalRender';
+import ListFallback from 'components/_shared/ListFallback';
 import makeSelectMain from 'containers/Main/selectors';
 
 import makeSelectDocuments, { makeSelectDocumentsData } from './selectors';

@@ -7,7 +7,7 @@ import React from 'react';
 import T from 'prop-types';
 
 import ListFilter from 'containers/ListFilter';
-import TabContainer from 'components/_base-ui/TabContainer';
+import TabContainer from 'components/_shared/TabContainer';
 
 const TabView = ({ Container, id }) => (
   <TabContainer aria-labelledby={`${id}-tab`} id={`${id}-view`}>

@@ -7,7 +7,7 @@ import React from 'react';
 import T from 'prop-types';
 
 import { isValidRoute } from 'utils/globalHelpers';
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
+import ConditionalRender from 'components/_shared/ConditionalRender';
 
 import { getIcon, getTabName } from './helpers';
 import FallbackBlock from './FallbackBlock';

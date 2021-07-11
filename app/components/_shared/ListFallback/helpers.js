@@ -1,8 +1,8 @@
 import React from 'react';
 
-import ErrorBlock from 'components/_base-ui/ErrorBlock';
-import NoDataBlock from 'components/_base-ui/NoDataBlock';
-import Spinner from 'components/_base-ui/Spinner';
+import ErrorBlock from 'components/_shared/ErrorBlock';
+import NoDataBlock from 'components/_shared/NoDataBlock';
+import Spinner from 'components/_shared/Spinner';
 
 export const getComponent = (error, loading) => {
   if (error) {

@@ -7,7 +7,7 @@ import React from 'react';
 import T from 'prop-types';
 
 import { GroupIcon } from 'images/iconComponents';
-import GradientCard from 'components/_base-ui/GradientCard';
+import GradientCard from 'components/_shared/GradientCard';
 
 import { ListsContainer, StyledTwoColumnList } from './styledComponents';
 

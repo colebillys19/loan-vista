@@ -4,7 +4,7 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 
 import { CloseIcon } from 'images/iconComponents';
-import ErrorBlock from 'components/_base-ui/ErrorBlock';
+import ErrorBlock from 'components/_shared/ErrorBlock';
 
 import {
   ContentContainer,

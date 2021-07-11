@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 import { borderGrey } from 'styleConstants';
-import { StyledTableRow } from 'components/_base-ui/ListTable';
-import TwoColumnList from 'components/_base-ui/TwoColumnList';
+import { StyledTableRow } from 'components/_shared/ListTable';
+import TwoColumnList from 'components/_shared/TwoColumnList';
 
 export const ListsContainer = styled.div`
   display: flex;

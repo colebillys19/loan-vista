@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import Button from 'components/_base-ui/Button';
+import Button from 'components/_shared/Button';
 import { textColorA, textColorB } from 'styleConstants';
 
 export const FieldWrapper = styled.span`

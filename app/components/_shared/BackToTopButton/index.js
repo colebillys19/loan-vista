@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { throttle } from 'lodash';
 
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
+import ConditionalRender from 'components/_shared/ConditionalRender';
 
 import { StyledArrowButton } from './styledComponents';
 

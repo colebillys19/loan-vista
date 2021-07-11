@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import T from 'prop-types';
 
-import ArrowButton from 'components/_base-ui/ArrowButton';
+import ArrowButton from 'components/_shared/ArrowButton';
 import {
   StyledTableData,
   StyledTableRow,
-} from 'components/_base-ui/GradientListTable';
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
+} from 'components/_shared/GradientListTable';
+import ConditionalRender from 'components/_shared/ConditionalRender';
 
 import ExpandedContent from './ExpandedContent';
 import { BaseTableData } from './styledComponents';

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { borderGrey } from 'styleConstants';
-import TwoColumnList from 'components/_base-ui/TwoColumnList';
+import TwoColumnList from 'components/_shared/TwoColumnList';
 
 export const ChartsSection = styled.div`
   border-top: 0.1rem solid ${borderGrey};

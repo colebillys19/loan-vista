@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { StyledTableData, StyledTableRow } from 'components/_base-ui/ListTable';
+import { StyledTableData, StyledTableRow } from 'components/_shared/ListTable';
 
 const CustomTableRow = ({ data, headers }) => (
   <StyledTableRow>

@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import ConditionalRender from 'components/_base-ui/ConditionalRender';
+import ConditionalRender from 'components/_shared/ConditionalRender';
 import { BlockContainer, ChartContainer, Heading } from './styledComponents';
 import Chart from './Chart';
 import PieSkeleton from './PieSkeleton';
