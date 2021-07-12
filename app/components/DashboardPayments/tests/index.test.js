@@ -2,17 +2,21 @@ import React from 'react';
 import { render } from 'react-testing-library';
 
 import DashboardPayments from '../index';
-import { MOCK_DATA } from './mockData';
+import { MOCK_DATA, MOCK_HEADERS } from './mockData';
 
 const Component = (
   <DashboardPayments
-    data={MOCK_DATA}
+    data={{ data: MOCK_DATA, listHeaders: MOCK_HEADERS }}
     dispatchNavigation={jest.fn()}
     renderLoading={false}
   />
 );
 const ComponentLoading = (
-  <DashboardPayments data={[]} dispatchNavigation={jest.fn()} renderLoading />
+  <DashboardPayments
+    data={{ data: [], listHeaders: MOCK_HEADERS }}
+    dispatchNavigation={jest.fn()}
+    renderLoading
+  />
 );
 
 describe('<DashboardPayments />', () => {

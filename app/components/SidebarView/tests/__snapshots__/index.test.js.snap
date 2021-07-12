@@ -40,7 +40,7 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root styledComponents__StyledSpinnerIcon-evygym-0 gvlvsG"
+          class="MuiSvgIcon-root styledComponents__StyledSpinnerIcon-i0a2m2-0 bVdRyG"
           focusable="false"
           style="height: 5rem; width: 5rem;"
           viewBox="0 0 16 16"
@@ -52,7 +52,7 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
         </svg>
       </div>
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-n9yhwx-5 dWrZle styledComponents__StyledButton-sc-86ulmm-0 bbadGD"
+        class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-n9yhwx-5 dWrZle styledComponents__StyledButton-sc-1loq0nq-0 gxexxq"
         tabindex="0"
         type="button"
       >
@@ -93,101 +93,101 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
         </h3>
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
     </section>
@@ -218,45 +218,45 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
         </h3>
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
     </section>
@@ -287,45 +287,45 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
         </h3>
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
     </section>
@@ -356,24 +356,24 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
         </h3>
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
       <div
-        class="styledComponents__RowContainer-sc-12zmidq-0 bSTXkd"
+        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
       >
         <div
-          class="styledComponents__RowStripe-sc-12zmidq-1 eBpPtD"
+          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
         />
       </div>
     </section>

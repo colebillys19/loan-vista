@@ -3,18 +3,18 @@
 exports[`<DashboardView /> Should render and match the snapshot 1`] = `
 <section
   aria-labelledby="dashboard-tab"
-  class="TabContainer-sc-1us62xt-0 gvWCQW"
+  class="TabContainer-sc-1edk8ho-0 cuygtl"
   id="dashboard-view"
 >
   <section
-    class="styledComponents__CardContainer-sc-1glo3a7-0 hVJZWB"
+    class="styledComponents__CardContainer-sc-1wpt79b-0 dABPYv"
   >
     <div
-      class="styledComponents__TopStripe-sc-1glo3a7-4 htdszD"
+      class="styledComponents__TopStripe-sc-1wpt79b-4 klOucO"
       color="rgb(80, 103, 55)"
     />
     <div
-      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 ihYfJV"
+      class="styledComponents__SummaryTitleContainer-sc-1wpt79b-2 fIofHc"
     >
       <svg
         aria-hidden="true"
@@ -35,12 +35,12 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
         </g>
       </svg>
       <h2
-        class="styledComponents__StyledH2-sc-1glo3a7-1 kipGlV"
+        class="styledComponents__StyledH2-sc-1wpt79b-1 ikQNuj"
       >
         Borrower Information
       </h2>
       <div
-        class="styledComponents__ThinStripe-sc-1glo3a7-3 jEBAxK"
+        class="styledComponents__ThinStripe-sc-1wpt79b-3 eVQUHf"
       />
     </div>
     <div
@@ -50,25 +50,25 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTwoColumnList-sc-1t59z9k-1 dFGcyd"
       >
         <h3
-          class="styledComponents__ListHeading-oikso6-1 fKfFsr"
+          class="styledComponents__ListHeading-sc-7lrvdh-1 dYYobE"
         >
           title
         </h3>
       </div>
     </div>
     <div
-      class="GradientBorder-sc-1rv7gqq-0 yNJzF"
+      class="GradientBorder-zuziiu-0 cgqNXZ"
     />
   </section>
   <section
-    class="styledComponents__CardContainer-sc-1glo3a7-0 hVJZWB"
+    class="styledComponents__CardContainer-sc-1wpt79b-0 dABPYv"
   >
     <div
-      class="styledComponents__TopStripe-sc-1glo3a7-4 htdszD"
+      class="styledComponents__TopStripe-sc-1wpt79b-4 klOucO"
       color="rgb(80, 103, 55)"
     />
     <div
-      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 ihYfJV"
+      class="styledComponents__SummaryTitleContainer-sc-1wpt79b-2 fIofHc"
     >
       <svg
         aria-hidden="true"
@@ -99,12 +99,12 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
         />
       </svg>
       <h2
-        class="styledComponents__StyledH2-sc-1glo3a7-1 kipGlV"
+        class="styledComponents__StyledH2-sc-1wpt79b-1 ikQNuj"
       >
         Loan Information
       </h2>
       <div
-        class="styledComponents__ThinStripe-sc-1glo3a7-3 jEBAxK"
+        class="styledComponents__ThinStripe-sc-1wpt79b-3 eVQUHf"
       />
     </div>
     <div
@@ -114,7 +114,7 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTwoColumnList-sc-1881tcc-3 kFbJqt"
       >
         <h3
-          class="styledComponents__ListHeading-oikso6-1 fKfFsr"
+          class="styledComponents__ListHeading-sc-7lrvdh-1 dYYobE"
         >
           title
         </h3>
@@ -123,7 +123,7 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTwoColumnList-sc-1881tcc-3 kFbJqt"
       >
         <h3
-          class="styledComponents__ListHeading-oikso6-1 fKfFsr"
+          class="styledComponents__ListHeading-sc-7lrvdh-1 dYYobE"
         >
           title
         </h3>
@@ -138,26 +138,26 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
         Stops
       </h3>
       <table
-        class="styledComponents__StyledTable-qh5wjg-0 iUJMBY"
+        class="styledComponents__StyledTable-sc-1gw5eqk-0 bHausK"
       >
         <tbody
-          class="styledComponents__StyledTableBody-qh5wjg-1 efBlkm"
+          class="styledComponents__StyledTableBody-sc-1gw5eqk-1 iLjHxu"
         />
       </table>
     </div>
     <div
-      class="GradientBorder-sc-1rv7gqq-0 yNJzF"
+      class="GradientBorder-zuziiu-0 cgqNXZ"
     />
   </section>
   <section
-    class="styledComponents__CardContainer-sc-1glo3a7-0 gwuMZd"
+    class="styledComponents__CardContainer-sc-1wpt79b-0 cUQAml"
   >
     <div
-      class="styledComponents__TopStripe-sc-1glo3a7-4 kJMcOS"
+      class="styledComponents__TopStripe-sc-1wpt79b-4 fawtJw"
       color="rgb(255, 191, 0)"
     />
     <div
-      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 ihYfJV"
+      class="styledComponents__SummaryTitleContainer-sc-1wpt79b-2 fIofHc"
     >
       <svg
         aria-hidden="true"
@@ -178,31 +178,31 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
         </g>
       </svg>
       <h2
-        class="styledComponents__StyledH2-sc-1glo3a7-1 kipGlV"
+        class="styledComponents__StyledH2-sc-1wpt79b-1 ikQNuj"
       >
         Calls
       </h2>
       <div
-        class="styledComponents__ThinStripe-sc-1glo3a7-3 jEBAxK"
+        class="styledComponents__ThinStripe-sc-1wpt79b-3 eVQUHf"
       />
     </div>
     <div
-      class="styledComponents__Message-sc-29kat5-0 dFheX"
+      class="styledComponents__Message-sc-6s3320-0 bQwZgi"
     >
       No data to display.
     </div>
     <table
-      class="styledComponents__StyledTable-qh5wjg-0 iUJMBY"
+      class="styledComponents__StyledTable-sc-1gw5eqk-0 bHausK"
     >
       <tbody
-        class="styledComponents__StyledTableBody-qh5wjg-1 efBlkm"
+        class="styledComponents__StyledTableBody-sc-1gw5eqk-1 iLjHxu"
       />
     </table>
     <div
-      class="styledComponents__ViewMoreContainer-hcrd2u-0 cNcyjo"
+      class="styledComponents__ViewMoreContainer-r5p4f5-0 bZyuuP"
     >
       <button
-        class="MuiButtonBase-root styledComponents__StyledButton-sc-9o47wt-0 fQixWh"
+        class="MuiButtonBase-root styledComponents__StyledButton-sc-1xk0fom-0 fEIblC"
         tabindex="0"
         type="button"
       >
@@ -210,18 +210,18 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
       </button>
     </div>
     <div
-      class="GradientBorder-sc-1rv7gqq-0 yNJzF"
+      class="GradientBorder-zuziiu-0 cgqNXZ"
     />
   </section>
   <section
-    class="styledComponents__CardContainer-sc-1glo3a7-0 gwuMZd"
+    class="styledComponents__CardContainer-sc-1wpt79b-0 cUQAml"
   >
     <div
-      class="styledComponents__TopStripe-sc-1glo3a7-4 kJMcOS"
+      class="styledComponents__TopStripe-sc-1wpt79b-4 fawtJw"
       color="rgb(255, 191, 0)"
     />
     <div
-      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 ihYfJV"
+      class="styledComponents__SummaryTitleContainer-sc-1wpt79b-2 fIofHc"
     >
       <svg
         aria-hidden="true"
@@ -242,31 +242,31 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
         </g>
       </svg>
       <h2
-        class="styledComponents__StyledH2-sc-1glo3a7-1 kipGlV"
+        class="styledComponents__StyledH2-sc-1wpt79b-1 ikQNuj"
       >
         Documents
       </h2>
       <div
-        class="styledComponents__ThinStripe-sc-1glo3a7-3 jEBAxK"
+        class="styledComponents__ThinStripe-sc-1wpt79b-3 eVQUHf"
       />
     </div>
     <div
-      class="styledComponents__Message-sc-29kat5-0 dFheX"
+      class="styledComponents__Message-sc-6s3320-0 bQwZgi"
     >
       No data to display.
     </div>
     <table
-      class="styledComponents__StyledTable-qh5wjg-0 iUJMBY"
+      class="styledComponents__StyledTable-sc-1gw5eqk-0 bHausK"
     >
       <tbody
-        class="styledComponents__StyledTableBody-qh5wjg-1 efBlkm"
+        class="styledComponents__StyledTableBody-sc-1gw5eqk-1 iLjHxu"
       />
     </table>
     <div
-      class="styledComponents__ViewMoreContainer-hcrd2u-0 cNcyjo"
+      class="styledComponents__ViewMoreContainer-r5p4f5-0 bZyuuP"
     >
       <button
-        class="MuiButtonBase-root styledComponents__StyledButton-sc-9o47wt-0 fQixWh"
+        class="MuiButtonBase-root styledComponents__StyledButton-sc-1xk0fom-0 fEIblC"
         tabindex="0"
         type="button"
       >
@@ -274,18 +274,18 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
       </button>
     </div>
     <div
-      class="GradientBorder-sc-1rv7gqq-0 yNJzF"
+      class="GradientBorder-zuziiu-0 cgqNXZ"
     />
   </section>
   <section
-    class="styledComponents__CardContainer-sc-1glo3a7-0 gwuMZd"
+    class="styledComponents__CardContainer-sc-1wpt79b-0 cUQAml"
   >
     <div
-      class="styledComponents__TopStripe-sc-1glo3a7-4 kJMcOS"
+      class="styledComponents__TopStripe-sc-1wpt79b-4 fawtJw"
       color="rgb(255, 191, 0)"
     />
     <div
-      class="styledComponents__SummaryTitleContainer-sc-1glo3a7-2 ihYfJV"
+      class="styledComponents__SummaryTitleContainer-sc-1wpt79b-2 fIofHc"
     >
       <svg
         aria-hidden="true"
@@ -310,31 +310,31 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
         </g>
       </svg>
       <h2
-        class="styledComponents__StyledH2-sc-1glo3a7-1 kipGlV"
+        class="styledComponents__StyledH2-sc-1wpt79b-1 ikQNuj"
       >
         Payments
       </h2>
       <div
-        class="styledComponents__ThinStripe-sc-1glo3a7-3 jEBAxK"
+        class="styledComponents__ThinStripe-sc-1wpt79b-3 eVQUHf"
       />
     </div>
     <div
-      class="styledComponents__Message-sc-29kat5-0 dFheX"
+      class="styledComponents__Message-sc-6s3320-0 bQwZgi"
     >
       No data to display.
     </div>
     <table
-      class="styledComponents__StyledTable-qh5wjg-0 iUJMBY"
+      class="styledComponents__StyledTable-sc-1gw5eqk-0 bHausK"
     >
       <tbody
-        class="styledComponents__StyledTableBody-qh5wjg-1 efBlkm"
+        class="styledComponents__StyledTableBody-sc-1gw5eqk-1 iLjHxu"
       />
     </table>
     <div
-      class="styledComponents__ViewMoreContainer-hcrd2u-0 cNcyjo"
+      class="styledComponents__ViewMoreContainer-r5p4f5-0 bZyuuP"
     >
       <button
-        class="MuiButtonBase-root styledComponents__StyledButton-sc-9o47wt-0 fQixWh"
+        class="MuiButtonBase-root styledComponents__StyledButton-sc-1xk0fom-0 fEIblC"
         tabindex="0"
         type="button"
       >
@@ -342,7 +342,7 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
       </button>
     </div>
     <div
-      class="GradientBorder-sc-1rv7gqq-0 yNJzF"
+      class="GradientBorder-zuziiu-0 cgqNXZ"
     />
   </section>
 </section>

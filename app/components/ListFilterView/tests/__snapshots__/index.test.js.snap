@@ -235,7 +235,7 @@ exports[`<ListFilter /> Should render and match the snapshot 1`] = `
     disabled=""
   >
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1jxtcmc-0 kLtwHh styledComponents__StyledButton-sc-86ulmm-0 bbadGD Mui-disabled Mui-disabled"
+      class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-sc-1jxtcmc-0 kLtwHh styledComponents__StyledButton-sc-1loq0nq-0 gxexxq Mui-disabled Mui-disabled"
       disabled=""
       tabindex="-1"
       type="submit"

@@ -8,9 +8,9 @@ import { MOCK_DATA, MOCK_HEADERS } from './mockData';
 const mockProps = {
   callsData: MOCK_DATA,
   dispatchFetchCallsData: jest.fn(),
-  headers: MOCK_HEADERS,
   lastSortCol: '',
   lastSortOrder: '',
+  listHeaders: MOCK_HEADERS,
   sortLoading: false,
 };
 

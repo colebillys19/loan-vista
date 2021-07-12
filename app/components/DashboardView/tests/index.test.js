@@ -6,9 +6,9 @@ import DashboardView from '../index';
 const mockProps = {
   dashboardBorrowerData: [{ listData: [], title: 'title' }],
   dashboardListsData: {
-    callsData: [],
-    documentsData: [],
-    paymentsData: [],
+    callsData: { data: [], listHeaders: ['header'] },
+    documentsData: { data: [], listHeaders: ['header'] },
+    paymentsData: { data: [], listHeaders: ['header'] },
   },
   dashboardLoanData: {
     balancesData: { listData: [], title: 'title' },

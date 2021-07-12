@@ -7,9 +7,9 @@ import { MOCK_DATA, MOCK_HEADERS } from './mockData';
 
 const mockProps = {
   dispatchFetchPaymentsData: jest.fn(),
-  headers: MOCK_HEADERS,
   lastSortCol: '',
   lastSortOrder: '',
+  listHeaders: MOCK_HEADERS,
   paymentsData: MOCK_DATA,
   sortLoading: false,
 };

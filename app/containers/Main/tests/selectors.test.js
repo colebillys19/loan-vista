@@ -69,39 +69,48 @@ describe('makeSelectDashboardListsData', () => {
   const dashboardListsDataSelector = makeSelectDashboardListsData();
   const mockedState = { main: MOCK_DATA };
   const expected = {
-    callsData: [
-      {
-        audio: 'iaculis_diam.mp3...',
-        date: '12/29/2020',
-        dept: 'BSDV',
-        desc: 'magna bibendum imperdiet nullam orci pede venenatis...',
-        id: 'cb50e5c5-fed2-43da-8a47-fc8f7df96222',
-        rep: 'MNL',
-        time: '08:13 AM',
-      },
-    ],
-    documentsData: [
-      {
-        'date sent': '12/29/2020',
-        desc: '-',
-        from: 'JPP...',
-        id: '1311f935-a8f4-4c63-b339-a3b4cd93c287',
-        pdf: 'integer_aliquet...',
-        'time sent': '08:59 PM',
-        type: 'Email',
-      },
-    ],
-    paymentsData: [
-      {
-        date: '12/30/2020',
-        desc: 'Principal Curtailment',
-        escrow: '$41.02',
-        id: '29ba8a70-19d3-4ddf-b4ff-879b4f8c8fe6',
-        interest: '$25.00',
-        principal: '$36.02',
-        total: '$14.93',
-      },
-    ],
+    callsData: {
+      data: [
+        {
+          audio: 'iaculis_diam.mp3...',
+          date: '12/29/2020',
+          dept: 'BSDV',
+          desc: 'magna bibendum imperdiet nullam orci pede venenatis...',
+          id: 'cb50e5c5-fed2-43da-8a47-fc8f7df96222',
+          rep: 'MNL',
+          time: '08:13 AM',
+        },
+      ],
+      listHeaders: ['date', 'time', 'dept', 'rep', 'desc', 'audio'],
+    },
+    documentsData: {
+      data: [
+        {
+          'date sent': '12/29/2020',
+          desc: '-',
+          from: 'JPP...',
+          id: '1311f935-a8f4-4c63-b339-a3b4cd93c287',
+          pdf: 'integer_aliquet...',
+          'time sent': '08:59 PM',
+          type: 'Email',
+        },
+      ],
+      listHeaders: ['date sent', 'time sent', 'type', 'from', 'desc', 'pdf'],
+    },
+    paymentsData: {
+      data: [
+        {
+          date: '12/30/2020',
+          desc: 'Principal Curtailment',
+          escrow: '$41.02',
+          id: '29ba8a70-19d3-4ddf-b4ff-879b4f8c8fe6',
+          interest: '$25.00',
+          principal: '$36.02',
+          total: '$14.93',
+        },
+      ],
+      listHeaders: ['date', 'desc', 'total', 'principal', 'interest', 'escrow'],
+    },
   };
 
   it('selects the dashboard lists data', () => {

@@ -10,4 +10,4 @@ export const MOCK_DATA = [
   },
 ];
 
-export const MOCK_HEADERS = ['date', 'time', 'dept', 'desc', 'rep', 'audio'];
+export const MOCK_HEADERS = ['date', 'time', 'dept', 'rep', 'desc', 'audio'];
