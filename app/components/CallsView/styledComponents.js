@@ -8,7 +8,7 @@ export const BaseTableData = styled.td`
   position: relative;
 `;
 
-export const CustomTableHead = styled(StyledTableHead)`
+export const CallsTableHead = styled(StyledTableHead)`
   & th:nth-of-type(1) {
     width: 11.4rem;
   }

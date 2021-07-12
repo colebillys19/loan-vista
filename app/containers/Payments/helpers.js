@@ -2,8 +2,10 @@ import moment from 'moment';
 
 import { convertNumToCurrency, toTitleCase } from 'utils/globalHelpers';
 
-export const getPaymentsData = (paymentsData) =>
-  paymentsData.map(
+import { PAYMENTS_LIST_HEADERS } from './constants';
+
+export const getPaymentsData = (paymentsData) => {
+  const data = paymentsData.map(
     ({
       accidentHealthInsurance,
       accruedLateCharge,
@@ -86,3 +88,6 @@ export const getPaymentsData = (paymentsData) =>
       };
     },
   );
+
+  return { data, listHeaders: PAYMENTS_LIST_HEADERS };
+};

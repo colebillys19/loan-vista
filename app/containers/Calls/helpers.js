@@ -1,7 +1,9 @@
 import moment from 'moment';
 
-export const getCallsData = (callsData) =>
-  callsData.map(({ audio, date, desc, time, ...restData }) => {
+import { CALLS_LIST_HEADERS } from './constants';
+
+export const getCallsData = (callsData) => {
+  const data = callsData.map(({ audio, date, desc, time, ...restData }) => {
     const audioFormatted = `${audio.slice(0, 20)}...`;
 
     const dateTime = `${date} ${time}`;
@@ -21,3 +23,6 @@ export const getCallsData = (callsData) =>
       ...restData,
     };
   });
+
+  return { data, listHeaders: CALLS_LIST_HEADERS };
+};

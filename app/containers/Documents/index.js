@@ -27,7 +27,7 @@ import { fetchDocumentsData } from './actions';
 export const Documents = ({
   dispatchFetchDocumentsData,
   // dispatchSetLoadingTrue,
-  documentsData,
+  documentsData: { data, listHeaders },
   error,
   lastFetchParams: {
     // dateFrom: lastDateFrom,
@@ -71,14 +71,15 @@ export const Documents = ({
       Component={
         <DocumentsView
           dispatchFetchDocumentsData={dispatchFetchDocumentsData}
-          documentsData={documentsData}
+          documentsData={data}
           lastSortCol={lastSortCol}
           lastSortOrder={lastSortOrder}
+          listHeaders={listHeaders}
           sortLoading={sortLoading}
         />
       }
       FallbackComponent={<ListFallback error={error} loading={loading} />}
-      shouldRender={!error && !mainError && !loading && !!documentsData.length}
+      shouldRender={!error && !mainError && !loading && !!data.length}
     />
   );
 };
@@ -86,15 +87,9 @@ export const Documents = ({
 Documents.propTypes = {
   dispatchFetchDocumentsData: T.func.isRequired,
   // dispatchSetLoadingTrue: T.func.isRequired,
-  documentsData: T.array.isRequired,
+  documentsData: T.shape({ data: T.array, listHeaders: T.array }).isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
-  lastFetchParams: T.shape({
-    dateFrom: T.string,
-    dateTo: T.string,
-    keyword: T.string,
-    sortCol: T.string,
-    sortOrder: T.string,
-  }).isRequired,
+  lastFetchParams: T.objectOf(T.string).isRequired,
   loading: T.bool.isRequired,
   // loanNumber: T.string.isRequired,
   mainError: T.oneOfType([T.bool, T.string]).isRequired,

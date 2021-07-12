@@ -25,7 +25,7 @@ import saga from './saga';
 import { fetchCallsData } from './actions';
 
 export const Calls = ({
-  callsData,
+  callsData: { data, listHeaders },
   dispatchFetchCallsData,
   // dispatchSetLoadingTrue,
   error,
@@ -70,31 +70,26 @@ export const Calls = ({
     <ConditionalRender
       Component={
         <CallsView
-          callsData={callsData}
+          callsData={data}
           dispatchFetchCallsData={dispatchFetchCallsData}
           lastSortCol={lastSortCol}
           lastSortOrder={lastSortOrder}
+          listHeaders={listHeaders}
           sortLoading={sortLoading}
         />
       }
       FallbackComponent={<ListFallback error={error} loading={loading} />}
-      shouldRender={!error && !mainError && !loading && !!callsData.length}
+      shouldRender={!error && !mainError && !loading && !!data.length}
     />
   );
 };
 
 Calls.propTypes = {
-  callsData: T.array.isRequired,
+  callsData: T.shape({ data: T.array, listHeaders: T.array }).isRequired,
   dispatchFetchCallsData: T.func.isRequired,
   // dispatchSetLoadingTrue: T.func.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
-  lastFetchParams: T.shape({
-    dateFrom: T.string,
-    dateTo: T.string,
-    keyword: T.string,
-    sortCol: T.string,
-    sortOrder: T.string,
-  }).isRequired,
+  lastFetchParams: T.objectOf(T.string).isRequired,
   loading: T.bool.isRequired,
   // loanNumber: T.string.isRequired,
   mainError: T.oneOfType([T.bool, T.string]).isRequired,

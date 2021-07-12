@@ -20,9 +20,9 @@ export const CustomTableData = styled(StyledTableData)`
     padding-right: 3rem;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 40rem;
+    max-width: 37.1rem;
   }
   &:nth-of-type(6) {
-    width: 6rem;
+    width: 5.6rem;
   }
 `;

@@ -36,7 +36,7 @@ export const Payments = ({
   loading,
   // loanNumber,
   mainError,
-  paymentsData,
+  paymentsData: { data, listHeaders },
   sortLoading,
 }) => {
   useInjectReducer({ key: 'payments', reducer });
@@ -73,12 +73,13 @@ export const Payments = ({
           dispatchFetchPaymentsData={dispatchFetchPaymentsData}
           lastSortCol={lastSortCol}
           lastSortOrder={lastSortOrder}
-          paymentsData={paymentsData}
+          listHeaders={listHeaders}
+          paymentsData={data}
           sortLoading={sortLoading}
         />
       }
       FallbackComponent={<ListFallback error={error} loading={loading} />}
-      shouldRender={!error && !mainError && !loading && !!paymentsData.length}
+      shouldRender={!error && !mainError && !loading && !!data.length}
     />
   );
 };
@@ -87,17 +88,11 @@ Payments.propTypes = {
   dispatchFetchPaymentsData: T.func.isRequired,
   // dispatchSetLoadingTrue: T.func.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
-  lastFetchParams: T.shape({
-    dateFrom: T.string,
-    dateTo: T.string,
-    keyword: T.string,
-    sortCol: T.string,
-    sortOrder: T.string,
-  }).isRequired,
+  lastFetchParams: T.objectOf(T.string).isRequired,
   loading: T.bool.isRequired,
   // loanNumber: T.string.isRequired,
   mainError: T.oneOfType([T.bool, T.string]).isRequired,
-  paymentsData: T.array.isRequired,
+  paymentsData: T.shape({ data: T.array, listHeaders: T.array }).isRequired,
   sortLoading: T.oneOfType([T.bool, T.string]).isRequired,
 };
 

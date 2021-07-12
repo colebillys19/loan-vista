@@ -20,9 +20,8 @@ import CustomTableRow from './CustomTableRow';
 const Icon = <MailIcon colorA={iconColorB} colorB={textColorA} size="4rem" />;
 
 const DashboardDocuments = ({
-  data,
+  data: { data, listHeaders },
   dispatchNavigation,
-  headers,
   renderLoading,
 }) => (
   <GradientCard
@@ -41,7 +40,11 @@ const DashboardDocuments = ({
           Component={
             <Fragment>
               {data.map(({ id, ...restData }) => (
-                <CustomTableRow key={id} data={restData} headers={headers} />
+                <CustomTableRow
+                  key={id}
+                  data={restData}
+                  headers={listHeaders}
+                />
               ))}
             </Fragment>
           }
@@ -58,14 +61,10 @@ const DashboardDocuments = ({
 );
 
 DashboardDocuments.propTypes = {
-  data: T.array,
+  data: T.shape({ data: T.arrayOf(T.object), listHeaders: T.arrayOf(T.string) })
+    .isRequired,
   dispatchNavigation: T.func.isRequired,
-  headers: T.array,
   renderLoading: T.bool.isRequired,
-};
-
-DashboardDocuments.defaultProps = {
-  headers: ['date sent', 'time sent', 'type', 'from', 'desc', 'pdf'],
 };
 
 export default DashboardDocuments;

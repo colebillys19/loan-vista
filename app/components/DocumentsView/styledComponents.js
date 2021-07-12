@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { StyledTableHead } from 'components/_shared/GradientListTable';
 
-export const CustomTableHead = styled(StyledTableHead)`
+export const DocumentsTableHead = styled(StyledTableHead)`
   & th:nth-of-type(1) {
     width: 13.4rem;
   }

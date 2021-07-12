@@ -55,9 +55,9 @@ const DashboardView = ({
 DashboardView.propTypes = {
   dashboardBorrowerData: T.array.isRequired,
   dashboardListsData: T.shape({
-    callsData: T.array,
-    documentsData: T.array,
-    paymentsData: T.array,
+    callsData: T.object,
+    documentsData: T.object,
+    paymentsData: T.object,
   }).isRequired,
   dashboardLoanData: T.object.isRequired,
   dispatchNavigation: T.func.isRequired,

@@ -2,6 +2,7 @@ import moment from 'moment';
 
 import { getCallsData } from 'containers/Calls/helpers';
 import { getDocumentsData } from 'containers/Documents/helpers';
+import { PAYMENTS_LIST_HEADERS } from 'containers/Payments/constants';
 import { convertNumToCurrency, toTitleCase } from 'utils/globalHelpers';
 
 import {
@@ -128,20 +129,25 @@ export const getDashboardLoanData = (balancesData, paymentData, stopsData) => {
  * getDashboardPaymentsData
  * @description: ...
  */
-const getDashboardPaymentsData = (paymentsData) =>
-  paymentsData.map(({ date, desc, escrow, id, interest, principal, total }) => {
-    const dateFormatted = moment(date, 'YYYY-MM-DD').format('MM/DD/YYYY');
+const getDashboardPaymentsData = (paymentsData) => {
+  const data = paymentsData.map(
+    ({ date, desc, escrow, id, interest, principal, total }) => {
+      const dateFormatted = moment(date, 'YYYY-MM-DD').format('MM/DD/YYYY');
 
-    return {
-      date: dateFormatted,
-      desc: toTitleCase(desc),
-      escrow: convertNumToCurrency(escrow),
-      id,
-      interest: convertNumToCurrency(interest),
-      principal: convertNumToCurrency(principal),
-      total: convertNumToCurrency(total),
-    };
-  });
+      return {
+        date: dateFormatted,
+        desc: toTitleCase(desc),
+        escrow: convertNumToCurrency(escrow),
+        id,
+        interest: convertNumToCurrency(interest),
+        principal: convertNumToCurrency(principal),
+        total: convertNumToCurrency(total),
+      };
+    },
+  );
+
+  return { data, listHeaders: PAYMENTS_LIST_HEADERS };
+};
 
 /**
  * getEffectiveEscrowListData

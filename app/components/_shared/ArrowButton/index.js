@@ -6,8 +6,18 @@ import ConditionalRender from 'components/_shared/ConditionalRender';
 
 import { StyledIconButton } from './styledComponents';
 
-const ArrowButton = ({ className, handleClick, renderUp, size }) => (
-  <StyledIconButton className={className} disableRipple onClick={handleClick}>
+const ArrowButton = ({
+  className,
+  disableRipple,
+  handleClick,
+  renderUp,
+  size,
+}) => (
+  <StyledIconButton
+    className={className}
+    disableRipple={disableRipple}
+    onClick={handleClick}
+  >
     <ConditionalRender
       Component={ArrowUpIcon}
       FallbackComponent={ArrowDownIcon}
@@ -19,11 +29,12 @@ const ArrowButton = ({ className, handleClick, renderUp, size }) => (
 
 ArrowButton.propTypes = {
   className: T.string,
+  disableRipple: T.bool,
   handleClick: T.func.isRequired,
   renderUp: T.bool.isRequired,
   size: T.string,
 };
 
-ArrowButton.defaultProps = { size: '1.2rem' };
+ArrowButton.defaultProps = { disableRipple: true, size: '1.2rem' };
 
 export default ArrowButton;

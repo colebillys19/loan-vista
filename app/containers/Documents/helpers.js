@@ -1,31 +1,39 @@
 import moment from 'moment';
+
 import { toTitleCase } from 'utils/globalHelpers';
 
-export const getDocumentsData = (documentsData) =>
-  documentsData.map(({ dateSent, desc, file, from, id, timeSent, type }) => {
-    const dateSentFormatted = moment(dateSent, 'YYYY-MM-DD').format(
-      'MM/DD/YYYY',
-    );
+import { DOCUMENTS_LIST_HEADERS } from './constants';
 
-    const descFormatted = desc === null ? '-' : `${desc.slice(0, 15)}...`;
+export const getDocumentsData = (documentsData) => {
+  const data = documentsData.map(
+    ({ dateSent, desc, file, from, id, timeSent, type }) => {
+      const dateSentFormatted = moment(dateSent, 'YYYY-MM-DD').format(
+        'MM/DD/YYYY',
+      );
 
-    const fileFormatted = `${file.slice(0, 15)}...`;
+      const descFormatted = desc === null ? '-' : `${desc.slice(0, 15)}...`;
 
-    const fromFormatted = `${from.slice(0, 15)}...`;
+      const fileFormatted = `${file.slice(0, 15)}...`;
 
-    const timeSentFormatted = timeSent
-      ? moment(timeSent, 'HH:mm:ss').format('hh:mm A')
-      : '-';
+      const fromFormatted = `${from.slice(0, 15)}...`;
 
-    const typeFormatted = toTitleCase(type);
+      const timeSentFormatted = timeSent
+        ? moment(timeSent, 'HH:mm:ss').format('hh:mm A')
+        : '-';
 
-    return {
-      'date sent': dateSentFormatted,
-      desc: descFormatted,
-      from: fromFormatted,
-      id,
-      pdf: fileFormatted,
-      'time sent': timeSentFormatted,
-      type: typeFormatted,
-    };
-  });
+      const typeFormatted = toTitleCase(type);
+
+      return {
+        'date sent': dateSentFormatted,
+        desc: descFormatted,
+        from: fromFormatted,
+        id,
+        pdf: fileFormatted,
+        'time sent': timeSentFormatted,
+        type: typeFormatted,
+      };
+    },
+  );
+
+  return { data, listHeaders: DOCUMENTS_LIST_HEADERS };
+};

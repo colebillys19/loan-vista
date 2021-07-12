@@ -20,9 +20,8 @@ import CustomTableRow from './CustomTableRow';
 const Icon = <CashIcon colorA={iconColorB} colorB={textColorA} size="4rem" />;
 
 const DashboardPayments = ({
-  data,
+  data: { data, listHeaders },
   dispatchNavigation,
-  headers,
   renderLoading,
 }) => (
   <GradientCard
@@ -41,7 +40,11 @@ const DashboardPayments = ({
           Component={
             <Fragment>
               {data.map(({ id, ...restData }) => (
-                <CustomTableRow key={id} data={restData} headers={headers} />
+                <CustomTableRow
+                  key={id}
+                  data={restData}
+                  headers={listHeaders}
+                />
               ))}
             </Fragment>
           }
@@ -58,14 +61,10 @@ const DashboardPayments = ({
 );
 
 DashboardPayments.propTypes = {
-  data: T.array,
+  data: T.shape({ data: T.arrayOf(T.object), listHeaders: T.arrayOf(T.string) })
+    .isRequired,
   dispatchNavigation: T.func.isRequired,
-  headers: T.array,
   renderLoading: T.bool.isRequired,
-};
-
-DashboardPayments.defaultProps = {
-  headers: ['date', 'desc', 'total', 'principal', 'interest', 'escrow'],
 };
 
 export default DashboardPayments;

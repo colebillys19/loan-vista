@@ -8,7 +8,7 @@ export const BaseTableData = styled.td`
   position: relative;
 `;
 
-export const CustomTableHead = styled(StyledTableHead)`
+export const PaymentsTableHead = styled(StyledTableHead)`
   & th:nth-of-type(1) {
     13.2rem;
   }
