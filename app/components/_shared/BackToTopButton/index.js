@@ -20,7 +20,7 @@ const BackToTopButton = () => {
   }, []);
 
   const handleClick = () => {
-    window.scrollTo({ behavior: 'smooth', left: 0, top: 0 });
+    window.scrollTo({ behavior: 'smooth', top: 0 });
   };
 
   const handleScroll = () => {
