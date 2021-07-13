@@ -57,6 +57,17 @@ const getDateTimeFormatted = (dateTime) => {
 };
 
 /**
+ * getPageData
+ * @description ...
+ */
+const getPageData = ({ data, itemsPerPage, pageToFetch }) => {
+  const offset = itemsPerPage * (pageToFetch - 1);
+  const pageData = data.slice(offset, offset + itemsPerPage);
+  const totalPages = Math.ceil(data.length / itemsPerPage);
+  return { pageData, totalPages };
+};
+
+/**
  * sortByDateAsc
  * @description ...
  */
@@ -81,6 +92,7 @@ module.exports = {
   checkKeyword,
   getDateMoments,
   getDateTimeFormatted,
+  getPageData,
   sortByDateAsc,
   sortByString,
 };

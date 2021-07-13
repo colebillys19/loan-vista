@@ -37,6 +37,8 @@ export const Calls = ({
   loading,
   // loanNumber,
   mainError,
+  nextPageToFetch,
+  scrollLoading,
   sortLoading,
 }) => {
   useInjectReducer({ key: 'calls', reducer });
@@ -44,9 +46,10 @@ export const Calls = ({
 
   // const prevLoanNumber = usePrevious(loanNumber);
 
+  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
     dispatchFetchCallsData();
-  }, [dispatchFetchCallsData]);
+  }, []);
 
   // useEffect(() => {
   //   if (!loanNumber) {
@@ -75,6 +78,8 @@ export const Calls = ({
           lastSortCol={lastSortCol}
           lastSortOrder={lastSortOrder}
           listHeaders={listHeaders}
+          nextPageToFetch={nextPageToFetch}
+          scrollLoading={scrollLoading}
           sortLoading={sortLoading}
         />
       }
@@ -93,6 +98,8 @@ Calls.propTypes = {
   loading: T.bool.isRequired,
   // loanNumber: T.string.isRequired,
   mainError: T.oneOfType([T.bool, T.string]).isRequired,
+  nextPageToFetch: T.number.isRequired,
+  scrollLoading: T.bool.isRequired,
   sortLoading: T.oneOfType([T.bool, T.string]).isRequired,
 };
 
@@ -103,7 +110,9 @@ const mapStateToProps = createStructuredSelector({
   loading: makeSelectCalls('loading'),
   // loanNumber: makeSelectMain('loanNumber'),
   mainError: makeSelectMain('error'),
+  nextPageToFetch: makeSelectCalls('nextPageToFetch'),
   pathname: makeSelectPathname(),
+  scrollLoading: makeSelectCalls('scrollLoading'),
   sortLoading: makeSelectCalls('sortLoading'),
 });
 

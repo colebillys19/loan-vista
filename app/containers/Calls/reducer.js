@@ -1,4 +1,4 @@
-import produce from 'immer';
+import produce, { original } from 'immer';
 
 import initialState from './initialState';
 import {
@@ -14,9 +14,11 @@ const callsReducer = (state = initialState, { payload, type }) =>
   produce(state, (draft) => {
     switch (type) {
       case FETCH_CALLS_DATA:
-        const { sortCol } = payload;
+        const { pageToFetch, sortCol } = payload;
         draft.error = false;
-        if (sortCol) {
+        if (pageToFetch) {
+          draft.scrollLoading = true;
+        } else if (sortCol) {
           draft.sortLoading = sortCol;
         } else {
           draft.loading = true;
@@ -26,14 +28,23 @@ const callsReducer = (state = initialState, { payload, type }) =>
         const { error } = payload;
         draft.error = error;
         draft.loading = false;
+        draft.scrollLoading = false;
         draft.sortLoading = false;
         break;
       case FETCH_CALLS_DATA_SUCCESS:
-        const { callsData, params } = payload;
-        draft.callsData = callsData;
+        const { pageData, pageNum, params, totalPages } = payload;
+        if (pageNum === 1) {
+          draft.callsData = pageData;
+        } else {
+          const { callsData } = original(draft);
+          draft.callsData = callsData.concat(pageData);
+        }
         draft.lastFetchParams = params;
         draft.loading = false;
+        draft.nextPageToFetch = pageNum === totalPages ? -1 : pageNum + 1;
+        draft.scrollLoading = false;
         draft.sortLoading = false;
+        draft.totalPages = totalPages;
         break;
       case SET_IS_FILTERED:
         const { value } = payload;

@@ -26,7 +26,7 @@ const SortHead = ({
     const newSortOrder =
       header === lastSortCol && lastSortOrder === 'desc' ? 'asc' : 'desc';
 
-    dispatchFetchCallsData(newSortCol, newSortOrder);
+    dispatchFetchCallsData({ sortCol: newSortCol, sortOrder: newSortOrder });
   };
 
   return (

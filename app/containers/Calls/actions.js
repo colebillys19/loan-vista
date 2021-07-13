@@ -6,18 +6,27 @@ import {
   SET_LOADING_TRUE,
 } from './constants';
 
-export const fetchCallsData = (sortCol, sortOrder) => ({
-  payload: { sortCol, sortOrder },
-  type: FETCH_CALLS_DATA,
-});
+export const fetchCallsData = (payload) => {
+  const { pageToFetch, sortCol, sortOrder } = payload || {};
+
+  return {
+    payload: { pageToFetch, sortCol, sortOrder },
+    type: FETCH_CALLS_DATA,
+  };
+};
 
 export const fetchCallsDataFailure = (error) => ({
   payload: { error },
   type: FETCH_CALLS_DATA_FAILURE,
 });
 
-export const fetchCallsDataSuccess = (callsData, params) => ({
-  payload: { callsData, params },
+export const fetchCallsDataSuccess = ({
+  pageData,
+  pageNum,
+  params,
+  totalPages,
+}) => ({
+  payload: { pageData, pageNum, params, totalPages },
   type: FETCH_CALLS_DATA_SUCCESS,
 });
 
