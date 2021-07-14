@@ -28,20 +28,45 @@ const CallsView = ({
   scrollLoading,
   ...restProps
 }) => {
+  const nextPageToFetchRef = useRef(null);
+  const scrollLoadingRef = useRef(null);
   const scrollPositionRef = useRef(null);
+
+  useEffect(() => {
+    window.addEventListener('scroll', updateScrollPositionRef);
+    return () => {
+      window.removeEventListener('scroll', updateScrollPositionRef);
+    };
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [handleScroll, nextPageToFetch]);
+  }, [handleScroll]);
 
   useEffect(() => {
-    if (scrollPositionRef.current) {
-      window.scrollTo({ top: scrollPositionRef.current });
-    }
+    window.scrollTo({ top: scrollPositionRef.current });
   }, [callsData]);
+
+  useEffect(() => {
+    nextPageToFetchRef.current = nextPageToFetch;
+    return () => {
+      nextPageToFetchRef.current = null;
+    };
+  }, [nextPageToFetch]);
+
+  useEffect(() => {
+    scrollLoadingRef.current = scrollLoading;
+    return () => {
+      scrollLoadingRef.current = null;
+    };
+  }, [scrollLoading]);
+
+  const updateScrollPositionRef = () => {
+    scrollPositionRef.current = window.scrollY;
+  };
 
   const handleScroll = throttle(() => {
     const {
@@ -52,13 +77,13 @@ const CallsView = ({
       scrollY,
     } = window;
 
-    const isPastThreshold = scrollY + innerHeight > scrollHeight - 100;
-    if (isPastThreshold && !scrollLoading && nextPageToFetch !== -1) {
-      scrollPositionRef.current = window.scrollY;
+    const allPagesRendered =
+      nextPageToFetchRef && nextPageToFetchRef.current === -1;
+    const isPastThreshold = scrollY + innerHeight > scrollHeight - 300;
+    const isScrollLoading = scrollLoadingRef && scrollLoadingRef.current;
 
-      dispatchFetchCallsData({ pageToFetch: nextPageToFetch });
-    } else if (scrollPositionRef.current) {
-      scrollPositionRef.current = null;
+    if (isPastThreshold && !isScrollLoading && !allPagesRendered) {
+      dispatchFetchCallsData({ pageToFetch: nextPageToFetchRef.current });
     }
   }, 200);
 
