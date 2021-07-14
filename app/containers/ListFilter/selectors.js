@@ -16,18 +16,23 @@ const selectListFilterDomain = (state) => state.listFilter || initialState;
  */
 const makeSelectIsFilteredData = () =>
   createSelector(
-    makeSelectPathname(),
     makeSelectCalls('isFilteredData'),
     makeSelectDocuments('isFilteredData'),
     makeSelectPayments('isFilteredData'),
-    (pathname, isFilteredCalls, isFilteredDocuments, isFilteredPayments) => {
+    makeSelectTargetContainerName(),
+    (
+      isFilteredCalls,
+      isFilteredDocuments,
+      isFilteredPayments,
+      containerName,
+    ) => {
       const dict = {
         calls: isFilteredCalls,
         documents: isFilteredDocuments,
         payments: isFilteredPayments,
       };
 
-      return dict[pathname.slice(1)];
+      return dict[containerName];
     },
   );
 
@@ -42,14 +47,28 @@ const makeSelectTargetDateErrors = () =>
   );
 
 /**
+ * makeSelectTargetContainerName
+ * @description ...
+ */
+const makeSelectTargetContainerName = () =>
+  createSelector(
+    makeSelectPathname(),
+    (pathname) =>
+      ['calls', 'documents', 'payments'].includes(pathname.slice(1))
+        ? pathname.slice(1)
+        : 'calls',
+  );
+
+/**
  * makeSelectTargetState
  * @description ...
  */
 const makeSelectTargetState = () =>
   createSelector(
     selectListFilterDomain,
-    makeSelectPathname(),
-    (listFilterState, pathname) => listFilterState[pathname.slice(1)],
+    makeSelectTargetContainerName(),
+    (listFilterState, targetContainerName) =>
+      listFilterState[targetContainerName],
   );
 
 export {
