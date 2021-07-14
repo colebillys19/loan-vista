@@ -26,7 +26,9 @@ const mockProps = {
   loading: false,
   loanNumber: '1234567890',
   mainError: false,
+  nextPageToFetch: 1,
   paymentsData: MOCK_DATA,
+  scrollLoading: false,
   sortLoading: false,
 };
 

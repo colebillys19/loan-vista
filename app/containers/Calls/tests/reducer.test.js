@@ -8,7 +8,6 @@ import {
 } from '../actions';
 import initialState from '../initialState';
 import callsReducer from '../reducer';
-import { MOCK_DATA } from './mockData';
 
 /* eslint-disable no-param-reassign */
 describe('callsReducer', () => {
@@ -35,9 +34,12 @@ describe('callsReducer', () => {
       draft.sortLoading = 'date';
     });
 
-    expect(callsReducer(state, fetchCallsData('date', 'desc'))).toEqual(
-      expected,
-    );
+    expect(
+      callsReducer(
+        state,
+        fetchCallsData({ sortCol: 'date', sortOrder: 'desc' }),
+      ),
+    ).toEqual(expected);
   });
 
   it('should handle fetchCallsDataFailure correctly', () => {
@@ -50,7 +52,6 @@ describe('callsReducer', () => {
   });
 
   it('should handle fetchCallsDataSuccess correctly', () => {
-    const callsData = MOCK_DATA;
     const params = {
       dateFrom: '2020-01-01',
       dateTo: '2020-02-01',
@@ -59,12 +60,22 @@ describe('callsReducer', () => {
       sortOrder: 'desc',
     };
     const expected = produce(state, (draft) => {
-      draft.callsData = callsData;
+      draft.callsData = [];
       draft.lastFetchParams = params;
+      draft.nextPageToFetch = -1;
+      draft.totalPages = 1;
     });
 
     expect(
-      callsReducer(state, fetchCallsDataSuccess(callsData, params)),
+      callsReducer(
+        state,
+        fetchCallsDataSuccess({
+          pageData: [],
+          pageNum: 1,
+          params,
+          totalPages: 1,
+        }),
+      ),
     ).toEqual(expected);
   });
 

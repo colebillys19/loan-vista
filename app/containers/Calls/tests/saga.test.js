@@ -34,10 +34,12 @@ describe('fetchCallsDataSaga Saga', () => {
   //   expect(generatorA.next().value.type).toEqual('SELECT');
   // });
 
+  it('selects items per page value from state', () => {
+    expect(generatorA.next().value.type).toEqual('SELECT');
+  });
+
   it('selects current filter values from state', () => {
-    expect(generatorA.next({ loanNumber: '1234567890' }).value.type).toEqual(
-      'SELECT',
-    );
+    expect(generatorA.next({ itemsPerPage: 70 }).value.type).toEqual('SELECT');
   });
 
   it('selects last fetch params from state', () => {

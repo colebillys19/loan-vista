@@ -10,7 +10,6 @@ import {
   FETCH_CALLS_DATA_SUCCESS,
   SET_LOADING_TRUE,
 } from '../constants';
-import { MOCK_DATA } from './mockData';
 
 describe('fetchCallsData', () => {
   it('behaves as expected when no arguments passed', () => {
@@ -24,11 +23,13 @@ describe('fetchCallsData', () => {
 
   it('behaves as expected when arguments passed', () => {
     const expected = {
-      payload: { sortCol: 'date', sortOrder: 'desc' },
+      payload: { pageToFetch: 1, sortCol: 'date', sortOrder: 'desc' },
       type: FETCH_CALLS_DATA,
     };
 
-    expect(fetchCallsData('date', 'desc')).toEqual(expected);
+    expect(
+      fetchCallsData({ pageToFetch: 1, sortCol: 'date', sortOrder: 'desc' }),
+    ).toEqual(expected);
   });
 });
 
@@ -43,7 +44,6 @@ describe('fetchCallsDataFailure', () => {
 
 describe('fetchCallsDataSuccess', () => {
   it('has correct payload and type', () => {
-    const callsData = MOCK_DATA;
     const params = {
       dateFrom: '',
       dateTo: '',
@@ -52,11 +52,23 @@ describe('fetchCallsDataSuccess', () => {
       sortOrder: 'desc',
     };
     const expected = {
-      payload: { callsData, params },
+      payload: {
+        pageData: [],
+        pageNum: 1,
+        params,
+        totalPages: 1,
+      },
       type: FETCH_CALLS_DATA_SUCCESS,
     };
 
-    expect(fetchCallsDataSuccess(callsData, params)).toEqual(expected);
+    expect(
+      fetchCallsDataSuccess({
+        pageData: [],
+        pageNum: 1,
+        params,
+        totalPages: 1,
+      }),
+    ).toEqual(expected);
   });
 });
 

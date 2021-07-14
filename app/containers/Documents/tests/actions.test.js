@@ -10,7 +10,6 @@ import {
   FETCH_DOCUMENTS_DATA_SUCCESS,
   SET_LOADING_TRUE,
 } from '../constants';
-import { MOCK_DATA } from './mockData';
 
 describe('fetchDocumentsData', () => {
   it('behaves as expected when no arguments passed', () => {
@@ -24,11 +23,17 @@ describe('fetchDocumentsData', () => {
 
   it('behaves as expected when arguments passed', () => {
     const expected = {
-      payload: { sortCol: 'date', sortOrder: 'desc' },
+      payload: { pageToFetch: 1, sortCol: 'date', sortOrder: 'desc' },
       type: FETCH_DOCUMENTS_DATA,
     };
 
-    expect(fetchDocumentsData('date', 'desc')).toEqual(expected);
+    expect(
+      fetchDocumentsData({
+        pageToFetch: 1,
+        sortCol: 'date',
+        sortOrder: 'desc',
+      }),
+    ).toEqual(expected);
   });
 });
 
@@ -43,7 +48,6 @@ describe('fetchDocumentsDataFailure', () => {
 
 describe('fetchDocumentsDataSuccess', () => {
   it('has correct payload and type', () => {
-    const documentsData = MOCK_DATA;
     const params = {
       dateFrom: '',
       dateTo: '',
@@ -52,11 +56,23 @@ describe('fetchDocumentsDataSuccess', () => {
       sortOrder: 'desc',
     };
     const expected = {
-      payload: { documentsData, params },
+      payload: {
+        pageData: [],
+        pageNum: 1,
+        params,
+        totalPages: 1,
+      },
       type: FETCH_DOCUMENTS_DATA_SUCCESS,
     };
 
-    expect(fetchDocumentsDataSuccess(documentsData, params)).toEqual(expected);
+    expect(
+      fetchDocumentsDataSuccess({
+        pageData: [],
+        pageNum: 1,
+        params,
+        totalPages: 1,
+      }),
+    ).toEqual(expected);
   });
 });
 

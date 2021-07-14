@@ -73,6 +73,7 @@ const makeSelectTargetState = () =>
 
 export {
   makeSelectIsFilteredData,
+  makeSelectTargetContainerName,
   makeSelectTargetDateErrors,
   makeSelectTargetState,
   selectListFilterDomain,

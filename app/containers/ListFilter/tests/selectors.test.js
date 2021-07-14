@@ -3,6 +3,7 @@ import moment from 'moment';
 import initialState from '../initialState';
 import {
   makeSelectIsFilteredData,
+  makeSelectTargetContainerName,
   makeSelectTargetDateErrors,
   makeSelectTargetState,
   selectListFilterDomain,
@@ -26,6 +27,15 @@ describe('makeSelectIsFilteredData', () => {
 
   it('derives the isFilteredData value from correct container', () => {
     expect(isFilteredDataSelector(mockedState)).toEqual(true);
+  });
+});
+
+describe('makeSelectTargetContainerName', () => {
+  const targetContainerNameSelector = makeSelectTargetContainerName();
+  const mockedState = { router: { location: { pathname: '/calls' } } };
+
+  it('derives the target container name via app state', () => {
+    expect(targetContainerNameSelector(mockedState)).toEqual('calls');
   });
 });
 

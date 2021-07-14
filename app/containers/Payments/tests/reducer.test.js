@@ -8,7 +8,6 @@ import {
 } from '../actions';
 import initialState from '../initialState';
 import paymentsReducer from '../reducer';
-import { MOCK_DATA } from './mockData';
 
 /* eslint-disable no-param-reassign */
 describe('paymentsReducer', () => {
@@ -35,9 +34,12 @@ describe('paymentsReducer', () => {
       draft.sortLoading = 'date';
     });
 
-    expect(paymentsReducer(state, fetchPaymentsData('date', 'desc'))).toEqual(
-      expected,
-    );
+    expect(
+      paymentsReducer(
+        state,
+        fetchPaymentsData({ sortCol: 'date', sortOrder: 'desc' }),
+      ),
+    ).toEqual(expected);
   });
 
   it('should handle fetchPaymentsDataFailure correctly', () => {
@@ -52,7 +54,6 @@ describe('paymentsReducer', () => {
   });
 
   it('should handle fetchPaymentsDataSuccess correctly', () => {
-    const paymentsData = MOCK_DATA;
     const params = {
       dateFrom: '2020-01-01',
       dateTo: '2020-02-01',
@@ -61,12 +62,22 @@ describe('paymentsReducer', () => {
       sortOrder: 'desc',
     };
     const expected = produce(state, (draft) => {
-      draft.paymentsData = paymentsData;
+      draft.paymentsData = [];
       draft.lastFetchParams = params;
+      draft.nextPageToFetch = -1;
+      draft.totalPages = 1;
     });
 
     expect(
-      paymentsReducer(state, fetchPaymentsDataSuccess(paymentsData, params)),
+      paymentsReducer(
+        state,
+        fetchPaymentsDataSuccess({
+          pageData: [],
+          pageNum: 1,
+          params,
+          totalPages: 1,
+        }),
+      ),
     ).toEqual(expected);
   });
 
