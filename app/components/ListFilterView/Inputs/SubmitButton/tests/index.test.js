@@ -3,7 +3,7 @@ import { render } from 'react-testing-library';
 
 import SubmitButton from '../index';
 
-const mockProps = { onClick: jest.fn() };
+const mockProps = { disabled: false, onClick: jest.fn() };
 
 const Component = <SubmitButton {...mockProps} />;
 

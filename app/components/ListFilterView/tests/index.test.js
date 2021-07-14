@@ -17,6 +17,7 @@ const mockProps = {
   handleKeywordChange: jest.fn(),
   handleRefreshClick: jest.fn(),
   handleSubmitClick: jest.fn(),
+  isFilteredData: false,
   keyword: '',
 };
 

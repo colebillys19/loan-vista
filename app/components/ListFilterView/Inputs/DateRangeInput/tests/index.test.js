@@ -3,7 +3,7 @@ import { render } from 'react-testing-library';
 
 import DateRangeInput from '../index';
 
-const mockProps = { onChange: jest.fn(), value: 0 };
+const mockProps = { disabled: false, onChange: jest.fn(), value: 0 };
 
 const Component = <DateRangeInput {...mockProps} />;
 

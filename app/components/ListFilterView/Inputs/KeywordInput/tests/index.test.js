@@ -3,7 +3,7 @@ import { render } from 'react-testing-library';
 
 import KeywordInput from '../index';
 
-const mockProps = { onChange: jest.fn(), value: 'value' };
+const mockProps = { disabled: false, onChange: jest.fn(), value: 'value' };
 
 const Component = <KeywordInput {...mockProps} />;
 

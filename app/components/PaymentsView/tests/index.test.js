@@ -10,13 +10,22 @@ const mockProps = {
   lastSortCol: '',
   lastSortOrder: '',
   listHeaders: MOCK_HEADERS,
+  nextPageToFetch: 1,
   paymentsData: MOCK_DATA,
+  scrollLoading: false,
   sortLoading: false,
 };
 
 const Component = <PaymentsView {...mockProps} />;
 
 describe('<PaymentsView />', () => {
+  global.addEventListener = jest.fn();
+  global.removeEventListener = jest.fn();
+  global.scrollTo = jest.fn();
+  global.document = { scrollingElement: { scrollHeight: 0 } };
+  global.innerHeight = 0;
+  global.scrollY = 0;
+
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);
