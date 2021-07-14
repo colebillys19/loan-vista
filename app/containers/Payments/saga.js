@@ -13,28 +13,38 @@ import { FETCH_PAYMENTS_DATA } from './constants';
 
 export function* fetchPaymentsDataSaga({ payload }) {
   try {
-    // const loanNumber = yield select(makeSelectMain('loanNumber'));
+    // hard-coded temporarily
     const loanNumber = '9937485204';
+    // const loanNumber = yield select(makeSelectMain('loanNumber'));
+    const itemsPerPage = yield select(makeSelectPayments('itemsPerPage'));
 
-    if (loanNumber) {
-      const { sortCol, sortOrder } = payload;
-      const filterState = yield select(selectListFilterDomain);
-      const lastFetchParams = yield select(
-        makeSelectPayments('lastFetchParams'),
-      );
+    const { pageToFetch = 1, sortCol, sortOrder } = payload;
+    const filterState = yield select(selectListFilterDomain);
+    const lastFetchParams = yield select(makeSelectPayments('lastFetchParams'));
+    const newParams =
+      sortCol && sortOrder
+        ? { sortCol, sortOrder }
+        : formatFilterState(filterState.payments);
 
-      const newParams =
-        sortCol && sortOrder
-          ? { sortCol, sortOrder }
-          : formatFilterState(filterState.payments);
+    const queryParams = {
+      ...lastFetchParams,
+      ...newParams,
+      itemsPerPage,
+      loanNumber,
+      pageToFetch,
+    };
+    const endpoint = `/api/payments/?${querystring.stringify(queryParams)}`;
 
-      const queryParams = { ...lastFetchParams, ...newParams, loanNumber };
-      const endpoint = `/api/payments/?${querystring.stringify(queryParams)}`;
+    const { pageData, params, totalPages } = yield call(get, endpoint);
 
-      const { params, paymentsData } = yield call(get, endpoint);
-
-      yield put(fetchPaymentsDataSuccess(paymentsData, params));
-    }
+    yield put(
+      fetchPaymentsDataSuccess({
+        pageData,
+        pageNum: pageToFetch,
+        params,
+        totalPages,
+      }),
+    );
   } catch (error) {
     console.error(error); // eslint-disable-line
     yield put(fetchPaymentsDataFailure(REQUEST_ERROR_MESSAGE));

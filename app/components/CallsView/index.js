@@ -3,19 +3,19 @@
  * @description ...
  */
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import T from 'prop-types';
 import throttle from 'lodash/throttle';
 
 import ConditionalRender from 'components/_shared/ConditionalRender';
-import ListBorders from 'components/_shared/ListBorders';
-import ScrollLoader from 'components/_shared/ScrollLoader';
 import {
   StyledTable,
   StyledTableBody,
   TableContainer,
   TableFooter,
 } from 'components/_shared/GradientListTable';
+import ListBorders from 'components/_shared/ListBorders';
+import ScrollLoader from 'components/_shared/ScrollLoader';
 
 import SortHead from './SortHead';
 import TableRow from './TableRow';
@@ -47,10 +47,6 @@ const CallsView = ({
   }, [handleScroll]);
 
   useEffect(() => {
-    window.scrollTo({ top: scrollPositionRef.current });
-  }, [callsData]);
-
-  useEffect(() => {
     nextPageToFetchRef.current = nextPageToFetch;
     return () => {
       nextPageToFetchRef.current = null;
@@ -63,6 +59,10 @@ const CallsView = ({
       scrollLoadingRef.current = null;
     };
   }, [scrollLoading]);
+
+  useLayoutEffect(() => {
+    window.scrollTo({ top: scrollPositionRef.current });
+  }, [callsData]);
 
   const updateScrollPositionRef = () => {
     scrollPositionRef.current = window.scrollY;

@@ -1,11 +1,12 @@
 const fs = require('fs');
 
+const { getPageData } = require('../helpers');
 const { getTargetPaymentsData } = require('./helpers');
 
 const getPayments = (req, res, next) => {
   try {
     const {
-      query: { loanNumber, ...fetchParams },
+      query: { itemsPerPage, loanNumber, pageToFetch, ...fetchParams },
     } = req;
 
     const paymentsDataJson = fs.readFileSync(
@@ -15,11 +16,14 @@ const getPayments = (req, res, next) => {
 
     const targetPaymentsData = getTargetPaymentsData(paymentsData, fetchParams);
 
+    const { pageData, totalPages } = getPageData({
+      data: targetPaymentsData,
+      itemsPerPage: Number(itemsPerPage),
+      pageToFetch: Number(pageToFetch),
+    });
+
     setTimeout(() => {
-      res.send({
-        params: fetchParams,
-        paymentsData: targetPaymentsData,
-      });
+      res.send({ pageData, params: fetchParams, totalPages });
     }, 1000);
   } catch (error) {
     next(error);

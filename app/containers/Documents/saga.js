@@ -16,28 +16,40 @@ import { FETCH_DOCUMENTS_DATA } from './constants';
 
 export function* fetchDocumentsDataSaga({ payload }) {
   try {
-    // const loanNumber = yield select(makeSelectMain('loanNumber'));
+    // hard-coded temporarily
     const loanNumber = '9937485204';
+    // const loanNumber = yield select(makeSelectMain('loanNumber'));
+    const itemsPerPage = yield select(makeSelectDocuments('itemsPerPage'));
 
-    if (loanNumber) {
-      const { sortCol, sortOrder } = payload;
-      const filterState = yield select(selectListFilterDomain);
-      const lastFetchParams = yield select(
-        makeSelectDocuments('lastFetchParams'),
-      );
+    const { pageToFetch = 1, sortCol, sortOrder } = payload;
+    const filterState = yield select(selectListFilterDomain);
+    const lastFetchParams = yield select(
+      makeSelectDocuments('lastFetchParams'),
+    );
+    const newParams =
+      sortCol && sortOrder
+        ? { sortCol, sortOrder }
+        : formatFilterState(filterState.documents);
 
-      const newParams =
-        sortCol && sortOrder
-          ? { sortCol, sortOrder }
-          : formatFilterState(filterState.documents);
+    const queryParams = {
+      ...lastFetchParams,
+      ...newParams,
+      itemsPerPage,
+      loanNumber,
+      pageToFetch,
+    };
+    const endpoint = `/api/documents/?${querystring.stringify(queryParams)}`;
 
-      const queryParams = { ...lastFetchParams, ...newParams, loanNumber };
-      const endpoint = `/api/documents/?${querystring.stringify(queryParams)}`;
+    const { pageData, params, totalPages } = yield call(get, endpoint);
 
-      const { documentsData, params } = yield call(get, endpoint);
-
-      yield put(fetchDocumentsDataSuccess(documentsData, params));
-    }
+    yield put(
+      fetchDocumentsDataSuccess({
+        pageData,
+        pageNum: pageToFetch,
+        params,
+        totalPages,
+      }),
+    );
   } catch (error) {
     console.error(error); // eslint-disable-line
     yield put(fetchDocumentsDataFailure(REQUEST_ERROR_MESSAGE));

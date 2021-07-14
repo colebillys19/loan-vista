@@ -37,6 +37,8 @@ export const Documents = ({
   loading,
   // loanNumber,
   mainError,
+  nextPageToFetch,
+  scrollLoading,
   sortLoading,
 }) => {
   useInjectReducer({ key: 'documents', reducer });
@@ -75,6 +77,8 @@ export const Documents = ({
           lastSortCol={lastSortCol}
           lastSortOrder={lastSortOrder}
           listHeaders={listHeaders}
+          nextPageToFetch={nextPageToFetch}
+          scrollLoading={scrollLoading}
           sortLoading={sortLoading}
         />
       }
@@ -93,6 +97,8 @@ Documents.propTypes = {
   loading: T.bool.isRequired,
   // loanNumber: T.string.isRequired,
   mainError: T.oneOfType([T.bool, T.string]).isRequired,
+  nextPageToFetch: T.number.isRequired,
+  scrollLoading: T.bool.isRequired,
   sortLoading: T.oneOfType([T.bool, T.string]).isRequired,
 };
 
@@ -103,7 +109,9 @@ const mapStateToProps = createStructuredSelector({
   loading: makeSelectDocuments('loading'),
   // loanNumber: makeSelectMain('loanNumber'),
   mainError: makeSelectMain('error'),
+  nextPageToFetch: makeSelectDocuments('nextPageToFetch'),
   pathname: makeSelectPathname(),
+  scrollLoading: makeSelectDocuments('scrollLoading'),
   sortLoading: makeSelectDocuments('sortLoading'),
 });
 

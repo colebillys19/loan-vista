@@ -26,7 +26,7 @@ const SortHead = ({
     const newSortOrder =
       header === lastSortCol && lastSortOrder === 'desc' ? 'asc' : 'desc';
 
-    dispatchFetchPaymentsData(newSortCol, newSortOrder);
+    dispatchFetchPaymentsData({ sortCol: newSortCol, sortOrder: newSortOrder });
   };
 
   return (

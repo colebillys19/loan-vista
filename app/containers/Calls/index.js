@@ -46,10 +46,9 @@ export const Calls = ({
 
   // const prevLoanNumber = usePrevious(loanNumber);
 
-  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
     dispatchFetchCallsData();
-  }, []);
+  }, [dispatchFetchCallsData]);
 
   // useEffect(() => {
   //   if (!loanNumber) {

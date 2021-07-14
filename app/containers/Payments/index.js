@@ -36,7 +36,9 @@ export const Payments = ({
   loading,
   // loanNumber,
   mainError,
+  nextPageToFetch,
   paymentsData: { data, listHeaders },
+  scrollLoading,
   sortLoading,
 }) => {
   useInjectReducer({ key: 'payments', reducer });
@@ -74,7 +76,9 @@ export const Payments = ({
           lastSortCol={lastSortCol}
           lastSortOrder={lastSortOrder}
           listHeaders={listHeaders}
+          nextPageToFetch={nextPageToFetch}
           paymentsData={data}
+          scrollLoading={scrollLoading}
           sortLoading={sortLoading}
         />
       }
@@ -92,7 +96,9 @@ Payments.propTypes = {
   loading: T.bool.isRequired,
   // loanNumber: T.string.isRequired,
   mainError: T.oneOfType([T.bool, T.string]).isRequired,
+  nextPageToFetch: T.number.isRequired,
   paymentsData: T.shape({ data: T.array, listHeaders: T.array }).isRequired,
+  scrollLoading: T.bool.isRequired,
   sortLoading: T.oneOfType([T.bool, T.string]).isRequired,
 };
 
@@ -102,8 +108,10 @@ const mapStateToProps = createStructuredSelector({
   loading: makeSelectPayments('loading'),
   // loanNumber: makeSelectMain('loanNumber'),
   mainError: makeSelectMain('error'),
+  nextPageToFetch: makeSelectPayments('nextPageToFetch'),
   pathname: makeSelectPathname(),
   paymentsData: makeSelectPaymentsData(),
+  scrollLoading: makeSelectPayments('scrollLoading'),
   sortLoading: makeSelectPayments('sortLoading'),
 });
 

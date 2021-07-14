@@ -6,18 +6,27 @@ import {
   SET_LOADING_TRUE,
 } from './constants';
 
-export const fetchPaymentsData = (sortCol, sortOrder) => ({
-  payload: { sortCol, sortOrder },
-  type: FETCH_PAYMENTS_DATA,
-});
+export const fetchPaymentsData = (payload) => {
+  const { pageToFetch, sortCol, sortOrder } = payload || {};
+
+  return {
+    payload: { pageToFetch, sortCol, sortOrder },
+    type: FETCH_PAYMENTS_DATA,
+  };
+};
 
 export const fetchPaymentsDataFailure = (error) => ({
   payload: { error },
   type: FETCH_PAYMENTS_DATA_FAILURE,
 });
 
-export const fetchPaymentsDataSuccess = (paymentsData, params) => ({
-  payload: { params, paymentsData },
+export const fetchPaymentsDataSuccess = ({
+  pageData,
+  pageNum,
+  params,
+  totalPages,
+}) => ({
+  payload: { pageData, pageNum, params, totalPages },
   type: FETCH_PAYMENTS_DATA_SUCCESS,
 });
 
