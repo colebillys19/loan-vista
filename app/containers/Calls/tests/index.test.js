@@ -15,7 +15,6 @@ const store = configureStore(initialState, history);
 const mockProps = {
   callsData: MOCK_DATA,
   dispatchFetchCallsData: jest.fn(),
-  dispatchSetLoadingTrue: jest.fn(),
   error: false,
   lastFetchParams: {
     dateFrom: '',
@@ -25,7 +24,6 @@ const mockProps = {
     sortOrder: 'desc',
   },
   loading: false,
-  loanNumber: '1234567890',
   mainError: false,
   nextPageToFetch: 1,
   scrollLoading: false,

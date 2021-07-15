@@ -2,13 +2,11 @@ import {
   fetchPaymentsData,
   fetchPaymentsDataFailure,
   fetchPaymentsDataSuccess,
-  setLoadingTrue,
 } from '../actions';
 import {
   FETCH_PAYMENTS_DATA,
   FETCH_PAYMENTS_DATA_FAILURE,
   FETCH_PAYMENTS_DATA_SUCCESS,
-  SET_LOADING_TRUE,
 } from '../constants';
 
 describe('fetchPaymentsData', () => {
@@ -69,11 +67,5 @@ describe('fetchPaymentsDataSuccess', () => {
         totalPages: 1,
       }),
     ).toEqual(expected);
-  });
-});
-
-describe('setLoadingTrue', () => {
-  it('has correct type', () => {
-    expect(setLoadingTrue()).toEqual({ type: SET_LOADING_TRUE });
   });
 });

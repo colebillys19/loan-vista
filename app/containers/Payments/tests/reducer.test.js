@@ -4,7 +4,6 @@ import {
   fetchPaymentsData,
   fetchPaymentsDataFailure,
   fetchPaymentsDataSuccess,
-  setLoadingTrue,
 } from '../actions';
 import initialState from '../initialState';
 import paymentsReducer from '../reducer';
@@ -79,13 +78,5 @@ describe('paymentsReducer', () => {
         }),
       ),
     ).toEqual(expected);
-  });
-
-  it('should handle setLoadingTrue correctly', () => {
-    const expected = produce(state, (draft) => {
-      draft.loading = true;
-    });
-
-    expect(paymentsReducer(state, setLoadingTrue())).toEqual(expected);
   });
 });

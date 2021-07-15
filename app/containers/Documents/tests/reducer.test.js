@@ -4,7 +4,6 @@ import {
   fetchDocumentsData,
   fetchDocumentsDataFailure,
   fetchDocumentsDataSuccess,
-  setLoadingTrue,
 } from '../actions';
 import initialState from '../initialState';
 import documentsReducer from '../reducer';
@@ -79,13 +78,5 @@ describe('documentsReducer', () => {
         }),
       ),
     ).toEqual(expected);
-  });
-
-  it('should handle setLoadingTrue correctly', () => {
-    const expected = produce(state, (draft) => {
-      draft.loading = true;
-    });
-
-    expect(documentsReducer(state, setLoadingTrue())).toEqual(expected);
   });
 });

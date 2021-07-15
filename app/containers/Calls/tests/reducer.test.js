@@ -4,7 +4,6 @@ import {
   fetchCallsData,
   fetchCallsDataFailure,
   fetchCallsDataSuccess,
-  setLoadingTrue,
 } from '../actions';
 import initialState from '../initialState';
 import callsReducer from '../reducer';
@@ -77,13 +76,5 @@ describe('callsReducer', () => {
         }),
       ),
     ).toEqual(expected);
-  });
-
-  it('should handle setLoadingTrue correctly', () => {
-    const expected = produce(state, (draft) => {
-      draft.loading = true;
-    });
-
-    expect(callsReducer(state, setLoadingTrue())).toEqual(expected);
   });
 });

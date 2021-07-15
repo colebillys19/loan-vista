@@ -2,13 +2,11 @@ import {
   fetchCallsData,
   fetchCallsDataFailure,
   fetchCallsDataSuccess,
-  setLoadingTrue,
 } from '../actions';
 import {
   FETCH_CALLS_DATA,
   FETCH_CALLS_DATA_FAILURE,
   FETCH_CALLS_DATA_SUCCESS,
-  SET_LOADING_TRUE,
 } from '../constants';
 
 describe('fetchCallsData', () => {
@@ -69,11 +67,5 @@ describe('fetchCallsDataSuccess', () => {
         totalPages: 1,
       }),
     ).toEqual(expected);
-  });
-});
-
-describe('setLoadingTrue', () => {
-  it('has correct type', () => {
-    expect(setLoadingTrue()).toEqual({ type: SET_LOADING_TRUE });
   });
 });

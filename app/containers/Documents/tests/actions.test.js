@@ -2,13 +2,11 @@ import {
   fetchDocumentsData,
   fetchDocumentsDataFailure,
   fetchDocumentsDataSuccess,
-  setLoadingTrue,
 } from '../actions';
 import {
   FETCH_DOCUMENTS_DATA,
   FETCH_DOCUMENTS_DATA_FAILURE,
   FETCH_DOCUMENTS_DATA_SUCCESS,
-  SET_LOADING_TRUE,
 } from '../constants';
 
 describe('fetchDocumentsData', () => {
@@ -73,11 +71,5 @@ describe('fetchDocumentsDataSuccess', () => {
         totalPages: 1,
       }),
     ).toEqual(expected);
-  });
-});
-
-describe('setLoadingTrue', () => {
-  it('has correct type', () => {
-    expect(setLoadingTrue()).toEqual({ type: SET_LOADING_TRUE });
   });
 });

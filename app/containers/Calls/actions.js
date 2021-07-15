@@ -3,7 +3,6 @@ import {
   FETCH_CALLS_DATA_FAILURE,
   FETCH_CALLS_DATA_SUCCESS,
   SET_IS_FILTERED,
-  SET_LOADING_TRUE,
 } from './constants';
 
 export const fetchCallsData = (payload) => {
@@ -34,5 +33,3 @@ export const setIsFilteredData = (value) => ({
   payload: { value },
   type: SET_IS_FILTERED,
 });
-
-export const setLoadingTrue = () => ({ type: SET_LOADING_TRUE });

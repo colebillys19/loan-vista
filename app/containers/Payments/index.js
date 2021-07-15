@@ -21,20 +21,13 @@ import makeSelectMain from 'containers/Main/selectors';
 import makeSelectPayments, { makeSelectPaymentsData } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-// import { fetchPaymentsData, setLoadingTrue } from './actions';
 import { fetchPaymentsData } from './actions';
 
 export const Payments = ({
   dispatchFetchPaymentsData,
-  // dispatchSetLoadingTrue,
   error,
-  lastFetchParams: {
-    // dateFrom: lastDateFrom,
-    sortCol: lastSortCol,
-    sortOrder: lastSortOrder,
-  },
+  lastFetchParams: { sortCol: lastSortCol, sortOrder: lastSortOrder },
   loading,
-  // loanNumber,
   mainError,
   nextPageToFetch,
   paymentsData: { data, listHeaders },
@@ -44,29 +37,9 @@ export const Payments = ({
   useInjectReducer({ key: 'payments', reducer });
   useInjectSaga({ key: 'payments', saga });
 
-  // const prevLoanNumber = usePrevious(loanNumber);
-
   useEffect(() => {
     dispatchFetchPaymentsData();
   }, [dispatchFetchPaymentsData]);
-
-  // useEffect(() => {
-  //   if (!loanNumber) {
-  //     dispatchSetLoadingTrue();
-  //   } else if (
-  //     !loading &&
-  //     (!lastDateFrom || (prevLoanNumber && loanNumber !== prevLoanNumber))
-  //   ) {
-  //     dispatchFetchPaymentsData();
-  //   }
-  // }, [
-  //   dispatchFetchPaymentsData,
-  //   dispatchSetLoadingTrue,
-  //   lastDateFrom,
-  //   loading,
-  //   loanNumber,
-  //   prevLoanNumber,
-  // ]);
 
   return (
     <ConditionalRender
@@ -90,11 +63,9 @@ export const Payments = ({
 
 Payments.propTypes = {
   dispatchFetchPaymentsData: T.func.isRequired,
-  // dispatchSetLoadingTrue: T.func.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
   lastFetchParams: T.objectOf(T.string).isRequired,
   loading: T.bool.isRequired,
-  // loanNumber: T.string.isRequired,
   mainError: T.oneOfType([T.bool, T.string]).isRequired,
   nextPageToFetch: T.number.isRequired,
   paymentsData: T.shape({ data: T.array, listHeaders: T.array }).isRequired,
@@ -106,7 +77,6 @@ const mapStateToProps = createStructuredSelector({
   error: makeSelectPayments('error'),
   lastFetchParams: makeSelectPayments('lastFetchParams'),
   loading: makeSelectPayments('loading'),
-  // loanNumber: makeSelectMain('loanNumber'),
   mainError: makeSelectMain('error'),
   nextPageToFetch: makeSelectPayments('nextPageToFetch'),
   pathname: makeSelectPathname(),
@@ -118,7 +88,6 @@ const mapStateToProps = createStructuredSelector({
 const mapDispatchToProps = (dispatch) => ({
   dispatchFetchPaymentsData: (sortCol, sortOrder) =>
     dispatch(fetchPaymentsData(sortCol, sortOrder)),
-  // dispatchSetLoadingTrue: () => dispatch(setLoadingTrue()),
 });
 
 const withConnect = connect(

@@ -6,7 +6,6 @@ import {
   FETCH_CALLS_DATA_FAILURE,
   FETCH_CALLS_DATA_SUCCESS,
   SET_IS_FILTERED,
-  SET_LOADING_TRUE,
 } from './constants';
 
 /* eslint-disable default-case, no-param-reassign, no-case-declarations */
@@ -49,9 +48,6 @@ const callsReducer = (state = initialState, { payload, type }) =>
       case SET_IS_FILTERED:
         const { value } = payload;
         draft.isFilteredData = value;
-        break;
-      case SET_LOADING_TRUE:
-        draft.loading = true;
         break;
     }
   });
