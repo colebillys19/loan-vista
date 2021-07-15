@@ -3,12 +3,13 @@
  * @description ...
  */
 
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import T from 'prop-types';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
+import Context from 'Context';
 import { isValidRoute } from 'utils/globalHelpers';
 import { makeSelectPathname } from 'containers/App/selectors';
 import { useInjectReducer } from 'utils/injectReducer';
@@ -50,6 +51,9 @@ export const Main = ({
   useInjectReducer({ key: 'main', reducer });
   useInjectSaga({ key: 'main', saga });
 
+  // eslint-disable-next-line
+  const [context, setContext] = useContext(Context);
+
   const prevLoanNumber = usePrevious(loanNumber);
 
   useEffect(() => {
@@ -69,6 +73,10 @@ export const Main = ({
     prevLoanNumber,
   ]);
 
+  useEffect(() => {
+    setContext({ mainError: !!error, mainLoading: loading });
+  }, [error, loading, setContext]);
+
   return render({
     dashboardBorrowerData,
     dashboardListsData,
@@ -78,8 +86,6 @@ export const Main = ({
     escrowHomeownersData,
     escrowMortgageData,
     escrowTaxesData,
-    loading,
-    loanNumber,
     sidebarHeaderData,
     sidebarSummariesData,
   });

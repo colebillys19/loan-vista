@@ -7,12 +7,7 @@ import { Container, StyledTwoColumnList } from './styledComponents';
 const PaymentDetailRow = ({ data }) => (
   <Container>
     {data.map((listData, i) => (
-      <StyledTwoColumnList
-        key={i}
-        data={listData}
-        numRows={6}
-        renderLoading={false}
-      />
+      <StyledTwoColumnList key={i} data={listData} numRows={6} />
     ))}
   </Container>
 );

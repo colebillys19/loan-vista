@@ -1,9 +1,10 @@
 import React from 'react';
+import T from 'prop-types';
 
 import { SkeletonContainer } from './styledComponents';
 
-const PieSkeleton = () => (
-  <SkeletonContainer>
+const PieSkeleton = ({ isError }) => (
+  <SkeletonContainer isError={isError}>
     <svg height="0" style={{ position: 'absolute' }} width="0">
       <defs>
         <clipPath id="donutClipPath">
@@ -13,5 +14,9 @@ const PieSkeleton = () => (
     </svg>
   </SkeletonContainer>
 );
+
+PieSkeleton.propTypes = { isError: T.bool };
+
+PieSkeleton.defaultProps = { isError: false };
 
 export default PieSkeleton;

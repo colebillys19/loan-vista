@@ -3,9 +3,10 @@
  * @description ...
  */
 
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
 import T from 'prop-types';
 
+import Context from 'Context';
 import { appColorB, iconColorB, textColorA } from 'styleConstants';
 import { MailIcon } from 'images/iconComponents';
 import { StyledTable, StyledTableBody } from 'components/_shared/ListTable';
@@ -22,49 +23,54 @@ const Icon = <MailIcon colorA={iconColorB} colorB={textColorA} size="4rem" />;
 const DashboardDocuments = ({
   data: { data, listHeaders },
   dispatchNavigation,
-  renderLoading,
-}) => (
-  <GradientCard
-    color={appColorB}
-    heading="Documents"
-    Icon={Icon}
-    reduceBottomPadding
-  >
-    <ConditionalRender
-      Component={<NoDataBlock />}
-      shouldRender={!renderLoading && !data.length}
-    />
-    <StyledTable>
-      <StyledTableBody>
-        <ConditionalRender
-          Component={
-            <Fragment>
-              {data.map(({ id, ...restData }) => (
-                <CustomTableRow
-                  key={id}
-                  data={restData}
-                  headers={listHeaders}
-                />
-              ))}
-            </Fragment>
-          }
-          FallbackComponent={<ListSkeleton isTable numRows={5} />}
-          shouldRender={!renderLoading}
-        />
-      </StyledTableBody>
-    </StyledTable>
-    <ViewMoreBlock
-      isActive={!renderLoading && !!data.length}
-      navigate={() => dispatchNavigation('/documents')}
-    />
-  </GradientCard>
-);
+}) => {
+  const [{ mainError, mainLoading }] = useContext(Context);
+  const useFallback = mainLoading || mainError;
+
+  return (
+    <GradientCard
+      color={appColorB}
+      heading="Documents"
+      Icon={Icon}
+      reduceBottomPadding
+    >
+      <ConditionalRender
+        Component={<NoDataBlock />}
+        shouldRender={!useFallback && !data.length}
+      />
+      <StyledTable>
+        <StyledTableBody>
+          <ConditionalRender
+            Component={
+              <Fragment>
+                {data.map(({ id, ...restData }) => (
+                  <CustomTableRow
+                    key={id}
+                    data={restData}
+                    headers={listHeaders}
+                  />
+                ))}
+              </Fragment>
+            }
+            FallbackComponent={
+              <ListSkeleton isError={mainError} isTable numRows={5} />
+            }
+            shouldRender={!useFallback}
+          />
+        </StyledTableBody>
+      </StyledTable>
+      <ViewMoreBlock
+        isActive={!useFallback && !!data.length}
+        navigate={() => dispatchNavigation('/documents')}
+      />
+    </GradientCard>
+  );
+};
 
 DashboardDocuments.propTypes = {
   data: T.shape({ data: T.arrayOf(T.object), listHeaders: T.arrayOf(T.string) })
     .isRequired,
   dispatchNavigation: T.func.isRequired,
-  renderLoading: T.bool.isRequired,
 };
 
 export default DashboardDocuments;

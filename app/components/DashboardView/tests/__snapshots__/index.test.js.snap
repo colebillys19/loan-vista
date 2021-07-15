@@ -187,7 +187,7 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
       />
     </div>
     <div
-      class="styledComponents__Message-sc-6s3320-0 bQwZgi"
+      class="styledComponents__Message-sc-6s3320-0 gcuzmo"
     >
       No data to display.
     </div>
@@ -251,7 +251,7 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
       />
     </div>
     <div
-      class="styledComponents__Message-sc-6s3320-0 bQwZgi"
+      class="styledComponents__Message-sc-6s3320-0 gcuzmo"
     >
       No data to display.
     </div>
@@ -319,7 +319,7 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
       />
     </div>
     <div
-      class="styledComponents__Message-sc-6s3320-0 bQwZgi"
+      class="styledComponents__Message-sc-6s3320-0 gcuzmo"
     >
       No data to display.
     </div>

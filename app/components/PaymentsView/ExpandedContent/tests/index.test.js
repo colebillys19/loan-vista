@@ -4,7 +4,7 @@ import { render } from 'react-testing-library';
 import ExpandedContent from '../index';
 import { MOCK_DATA } from './mockData';
 
-const mockProps = { data: MOCK_DATA, renderLoading: false };
+const mockProps = { data: MOCK_DATA };
 
 const Component = <ExpandedContent {...mockProps} />;
 

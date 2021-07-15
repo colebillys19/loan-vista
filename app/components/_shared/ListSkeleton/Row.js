@@ -3,13 +3,13 @@ import T from 'prop-types';
 
 import { RowContainer, RowStripe } from './styledComponents';
 
-const Row = ({ reduceHeight }) => (
+const Row = ({ isError, reduceHeight }) => (
   <RowContainer reduceHeight={reduceHeight}>
-    <RowStripe reduceHeight={reduceHeight} />
+    <RowStripe isError={isError} reduceHeight={reduceHeight} />
   </RowContainer>
 );
 
-Row.propTypes = { reduceHeight: T.bool };
+Row.propTypes = { isError: T.bool.isRequired, reduceHeight: T.bool };
 
 Row.defaultProps = { reduceHeight: false };
 

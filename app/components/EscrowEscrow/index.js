@@ -23,33 +23,22 @@ const EscrowEscrow = ({
     effectiveListData,
     effectivePieData,
   },
-  renderLoading,
 }) => (
   <GradientCard heading="Escrow">
     <ListsContainer>
-      <StyledTwoColumnList
-        data={currentListData}
-        numRows={3}
-        renderLoading={renderLoading}
-      />
-      <StyledTwoColumnList
-        data={effectiveListData}
-        numRows={3}
-        renderLoading={renderLoading}
-      />
+      <StyledTwoColumnList data={currentListData} numRows={3} />
+      <StyledTwoColumnList data={effectiveListData} numRows={3} />
     </ListsContainer>
     <ChartsSection>
       <PieChart
         data={currentPieData}
         heading="Current Escrow Breakdown"
         id="current"
-        renderLoading={renderLoading}
       />
       <PieChart
         data={effectivePieData}
         heading="Effective Escrow Breakdown"
         id="effective"
-        renderLoading={renderLoading}
       />
     </ChartsSection>
   </GradientCard>
@@ -62,7 +51,6 @@ EscrowEscrow.propTypes = {
     effectiveListData: T.object,
     effectivePieData: T.array,
   }).isRequired,
-  renderLoading: T.bool.isRequired,
 };
 
 export default EscrowEscrow;

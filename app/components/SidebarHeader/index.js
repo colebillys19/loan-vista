@@ -3,9 +3,10 @@
  * @description ...
  */
 
-import React from 'react';
+import React, { useContext } from 'react';
 import T from 'prop-types';
 
+import Context from 'Context';
 import { isValidRoute } from 'utils/globalHelpers';
 import ConditionalRender from 'components/_shared/ConditionalRender';
 
@@ -21,11 +22,11 @@ import {
 } from './styledComponents';
 
 const SidebarHeader = ({
-  error,
   pathname,
-  renderLoading,
   sidebarHeaderData: { addressA, addressB, loanNumber, name },
 }) => {
+  const [{ mainError, mainLoading }] = useContext(Context);
+
   const isDashboard = pathname === '/';
   const headingText = isDashboard ? loanNumber : getTabName(pathname);
 
@@ -43,12 +44,15 @@ const SidebarHeader = ({
           </SidebarDetailsContainer>
         }
         FallbackComponent={
-          <FallbackBlock error={error} hideIcon={!isValidRoute(pathname)} />
+          <FallbackBlock
+            hideIcon={!isValidRoute(pathname)}
+            isError={mainError}
+          />
         }
-        shouldRender={!renderLoading}
+        shouldRender={!mainLoading && !mainError}
       />
       <StyledButton
-        isGhost={renderLoading}
+        isGhost={mainLoading || mainError}
         onClick={() => null}
         text="Switch Loan"
       />
@@ -57,13 +61,10 @@ const SidebarHeader = ({
 };
 
 SidebarHeader.propTypes = {
-  error: T.oneOfType([T.bool, T.string]).isRequired,
   pathname: T.string.isRequired,
-  renderLoading: T.bool.isRequired,
   sidebarHeaderData: T.shape({
     addressA: T.string,
     addressB: T.string,
-    health: T.number,
     loanNumber: T.string,
     name: T.string,
   }).isRequired,

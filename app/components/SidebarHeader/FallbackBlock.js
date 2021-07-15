@@ -7,20 +7,19 @@ import Spinner from 'components/_shared/Spinner';
 
 import { FallbackBlockContainer } from './styledComponents';
 
-const FallbackBlock = ({ error, hideIcon }) => (
+const FallbackBlock = ({ hideIcon, isError }) => (
   <FallbackBlockContainer>
     <ConditionalRender
       Component={WarningIcon}
       FallbackComponent={!hideIcon ? Spinner : null}
       propsToPassDown={{ size: '5rem' }}
-      shouldRender={!!error}
+      shouldRender={isError}
     />
   </FallbackBlockContainer>
 );
 
-FallbackBlock.propTypes = {
-  error: T.oneOfType([T.bool, T.string]).isRequired,
-  hideIcon: T.bool,
-};
+FallbackBlock.propTypes = { hideIcon: T.bool, isError: T.bool };
+
+FallbackBlock.defaultProps = { isError: false };
 
 export default FallbackBlock;

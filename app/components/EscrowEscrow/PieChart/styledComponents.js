@@ -6,6 +6,7 @@ import {
   appColorA,
   borderGrey,
   loadingAnimationStyles,
+  skeletonGreyOpaque,
   textColorA,
 } from 'styleConstants';
 
@@ -38,7 +39,8 @@ export const Metric = styled.h3`
 export const SkeletonContainer = styled.div`
   clip-path: url(#donutClipPath);
   height: 100%;
-  ${loadingAnimationStyles}
+  background-color: ${skeletonGreyOpaque};
+  ${({ isError }) => (isError ? '' : loadingAnimationStyles)}
 `;
 
 export const StyledTooltip = withStyles(() => ({

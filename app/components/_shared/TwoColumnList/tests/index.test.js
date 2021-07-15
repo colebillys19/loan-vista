@@ -4,7 +4,7 @@ import { render } from 'react-testing-library';
 import TwoColumnList from '../index';
 import { MOCK_DATA } from './mockData';
 
-const mockProps = { data: MOCK_DATA, numRows: 1, renderLoading: false };
+const mockProps = { data: MOCK_DATA, numRows: 1 };
 
 const Component = <TwoColumnList {...mockProps} />;
 

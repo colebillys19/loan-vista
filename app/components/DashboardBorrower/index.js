@@ -14,7 +14,7 @@ import { ListsContainer, StyledTwoColumnList } from './styledComponents';
 const Icon = <GroupIcon size="4rem" />;
 
 /* eslint-disable react/no-array-index-key */
-const DashboardBorrower = ({ data, renderLoading }) => (
+const DashboardBorrower = ({ data }) => (
   <GradientCard heading="Borrower Information" Icon={Icon}>
     <ListsContainer>
       {data.map((listData, i) => (
@@ -22,7 +22,6 @@ const DashboardBorrower = ({ data, renderLoading }) => (
           key={i}
           data={listData}
           numRows={6}
-          renderLoading={renderLoading}
           smallRows={[2]}
         />
       ))}
@@ -30,9 +29,6 @@ const DashboardBorrower = ({ data, renderLoading }) => (
   </GradientCard>
 );
 
-DashboardBorrower.propTypes = {
-  data: T.arrayOf(T.object),
-  renderLoading: T.bool.isRequired,
-};
+DashboardBorrower.propTypes = { data: T.arrayOf(T.object) };
 
 export default DashboardBorrower;

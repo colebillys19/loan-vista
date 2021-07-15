@@ -3,9 +3,10 @@
  * @description ...
  */
 
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
 import T from 'prop-types';
 
+import Context from 'Context';
 import {
   StyledTable,
   StyledTableBody,
@@ -21,42 +22,45 @@ import NoDataBlock from 'components/_shared/NoDataBlock';
 
 import { TableHeadRow } from './styledComponents';
 
-const EscrowTaxes = ({ data, headers, renderLoading }) => (
-  <GradientCard color={appColorB} heading="Taxes">
-    <ConditionalRender
-      Component={<NoDataBlock />}
-      shouldRender={!renderLoading && !data.length}
-    />
-    <StyledTable>
-      <StyledTableHead>
-        <TableHeadRow>
-          {headers.map((header) => (
-            <StyledTableHeader key={header}>{header}</StyledTableHeader>
-          ))}
-        </TableHeadRow>
-      </StyledTableHead>
-      <StyledTableBody>
-        <ConditionalRender
-          Component={
-            <Fragment>
-              {data.map(({ id, ...restData }) => (
-                <TableRow key={id} data={restData} headers={headers} />
-              ))}
-            </Fragment>
-          }
-          FallbackComponent={<ListSkeleton isTable numRows={5} />}
-          shouldRender={!renderLoading}
-        />
-      </StyledTableBody>
-    </StyledTable>
-  </GradientCard>
-);
+const EscrowTaxes = ({ data, headers }) => {
+  const [{ mainError, mainLoading }] = useContext(Context);
+  const useFallback = mainLoading || mainError;
 
-EscrowTaxes.propTypes = {
-  data: T.array,
-  headers: T.array,
-  renderLoading: T.bool.isRequired,
+  return (
+    <GradientCard color={appColorB} heading="Taxes">
+      <ConditionalRender
+        Component={<NoDataBlock />}
+        shouldRender={!useFallback && !data.length}
+      />
+      <StyledTable>
+        <StyledTableHead>
+          <TableHeadRow>
+            {headers.map((header) => (
+              <StyledTableHeader key={header}>{header}</StyledTableHeader>
+            ))}
+          </TableHeadRow>
+        </StyledTableHead>
+        <StyledTableBody>
+          <ConditionalRender
+            Component={
+              <Fragment>
+                {data.map(({ id, ...restData }) => (
+                  <TableRow key={id} data={restData} headers={headers} />
+                ))}
+              </Fragment>
+            }
+            FallbackComponent={
+              <ListSkeleton isError={mainError} isTable numRows={5} />
+            }
+            shouldRender={!useFallback}
+          />
+        </StyledTableBody>
+      </StyledTable>
+    </GradientCard>
+  );
 };
+
+EscrowTaxes.propTypes = { data: T.array, headers: T.array };
 
 EscrowTaxes.defaultProps = {
   headers: ['Tax Type', 'Paid To', 'Tax ID', 'Next Due', 'Expected Amount'],

@@ -79,7 +79,7 @@ const PaymentsView = ({
 
     const allPagesRendered =
       nextPageToFetchRef && nextPageToFetchRef.current === -1;
-    const isPastThreshold = scrollY + innerHeight > scrollHeight - 300;
+    const isPastThreshold = scrollY + innerHeight > scrollHeight - 500;
     const isScrollLoading = scrollLoadingRef && scrollLoadingRef.current;
 
     if (isPastThreshold && !isScrollLoading && !allPagesRendered) {

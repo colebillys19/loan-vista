@@ -44,16 +44,11 @@ const App = ({ dispatchNavigation, pathname }) => (
         escrowHomeownersData,
         escrowMortgageData,
         escrowTaxesData,
-        loading,
-        loanNumber,
         sidebarHeaderData,
         sidebarSummariesData,
       }) => (
         <MainContainer>
           <SidebarView
-            error={error}
-            loading={loading}
-            loanNumber={loanNumber}
             pathname={pathname}
             sidebarHeaderData={sidebarHeaderData}
             sidebarSummariesData={sidebarSummariesData}
@@ -69,8 +64,6 @@ const App = ({ dispatchNavigation, pathname }) => (
                   dashboardLoanData={dashboardLoanData}
                   dispatchNavigation={dispatchNavigation}
                   error={error}
-                  loading={loading}
-                  loanNumber={loanNumber}
                 />
               )}
             />
@@ -99,8 +92,6 @@ const App = ({ dispatchNavigation, pathname }) => (
                   escrowHomeownersData={escrowHomeownersData}
                   escrowMortgageData={escrowMortgageData}
                   escrowTaxesData={escrowTaxesData}
-                  loading={loading}
-                  loanNumber={loanNumber}
                 />
               )}
             />

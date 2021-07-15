@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { loadingAnimationStyles } from 'styleConstants';
+import { loadingAnimationStyles, skeletonGreyOpaque } from 'styleConstants';
 
 export const RowContainer = styled.div`
   height: ${({ reduceHeight }) => (reduceHeight ? '1.6rem' : '2.1rem')};
@@ -11,7 +11,8 @@ export const RowStripe = styled.div`
   position: relative;
   top: 0.4rem;
   visibility: ${({ reduceHeight }) => (reduceHeight ? 'hidden' : 'visible')};
-  ${loadingAnimationStyles}
+  background-color: ${skeletonGreyOpaque};
+  ${({ isError }) => (isError ? '' : loadingAnimationStyles)}
 `;
 
 export const TableRowContainer = styled.tr`
@@ -26,5 +27,6 @@ export const TableRowStripe = styled.td`
   position: absolute;
   top: 0.4rem;
   width: 78.7rem;
-  ${loadingAnimationStyles}
+  background-color: ${skeletonGreyOpaque};
+  ${({ isError }) => (isError ? '' : loadingAnimationStyles)}
 `;

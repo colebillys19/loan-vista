@@ -12,6 +12,7 @@ import DashboardDocuments from 'components/DashboardDocuments';
 import DashboardLoan from 'components/DashboardLoan';
 import DashboardPayments from 'components/DashboardPayments';
 import TabContainer from 'components/_shared/TabContainer';
+import ConditionalRender from 'components/_shared/ConditionalRender';
 import ErrorModal from 'components/_shared/ErrorModal';
 
 const DashboardView = ({
@@ -20,37 +21,26 @@ const DashboardView = ({
   dashboardLoanData,
   dispatchNavigation,
   error,
-  loading,
-  loanNumber,
-}) => {
-  const showComponents = loanNumber && !error && !loading;
-
-  return (
-    <TabContainer aria-labelledby="dashboard-tab" id="dashboard-view">
-      <DashboardBorrower
-        data={dashboardBorrowerData}
-        renderLoading={!showComponents}
-      />
-      <DashboardLoan data={dashboardLoanData} renderLoading={!showComponents} />
-      <DashboardCalls
-        data={callsData}
-        dispatchNavigation={dispatchNavigation}
-        renderLoading={!showComponents}
-      />
-      <DashboardDocuments
-        data={documentsData}
-        dispatchNavigation={dispatchNavigation}
-        renderLoading={!showComponents}
-      />
-      <DashboardPayments
-        data={paymentsData}
-        dispatchNavigation={dispatchNavigation}
-        renderLoading={!showComponents}
-      />
-      <ErrorModal error={error} />
-    </TabContainer>
-  );
-};
+}) => (
+  <TabContainer aria-labelledby="dashboard-tab" id="dashboard-view">
+    <DashboardBorrower data={dashboardBorrowerData} />
+    <DashboardLoan data={dashboardLoanData} />
+    <DashboardCalls data={callsData} dispatchNavigation={dispatchNavigation} />
+    <DashboardDocuments
+      data={documentsData}
+      dispatchNavigation={dispatchNavigation}
+    />
+    <DashboardPayments
+      data={paymentsData}
+      dispatchNavigation={dispatchNavigation}
+    />
+    <ConditionalRender
+      Component={ErrorModal}
+      propsToPassDown={{ error }}
+      shouldRender={!!error}
+    />
+  </TabContainer>
+);
 
 DashboardView.propTypes = {
   dashboardBorrowerData: T.array.isRequired,
@@ -62,8 +52,6 @@ DashboardView.propTypes = {
   dashboardLoanData: T.object.isRequired,
   dispatchNavigation: T.func.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
-  loading: T.bool.isRequired,
-  loanNumber: T.string.isRequired,
 };
 
 export default DashboardView;

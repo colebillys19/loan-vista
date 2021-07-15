@@ -17,8 +17,6 @@ const mockProps = {
   },
   dispatchNavigation: jest.fn(),
   error: false,
-  loading: false,
-  loanNumber: '1234567890',
 };
 
 const Component = <DashboardView {...mockProps} />;

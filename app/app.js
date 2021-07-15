@@ -25,6 +25,7 @@ import 'file-loader?name=.htaccess!./.htaccess';
 /* eslint-enable import/no-unresolved, import/extensions */
 
 import configureStore from './configureStore';
+import { ContextProvider } from './Context';
 import muiTheme from './muiTheme';
 
 const initialState = {};
@@ -34,13 +35,15 @@ const MOUNT_NODE = document.getElementById('app');
 const render = () => {
   ReactDOM.render(
     <Provider store={store}>
-      <ConnectedRouter history={history}>
-        <StylesProvider injectFirst>
-          <ThemeProvider theme={muiTheme}>
-            <App />
-          </ThemeProvider>
-        </StylesProvider>
-      </ConnectedRouter>
+      <ContextProvider>
+        <ConnectedRouter history={history}>
+          <StylesProvider injectFirst>
+            <ThemeProvider theme={muiTheme}>
+              <App />
+            </ThemeProvider>
+          </StylesProvider>
+        </ConnectedRouter>
+      </ContextProvider>
     </Provider>,
     MOUNT_NODE,
   );

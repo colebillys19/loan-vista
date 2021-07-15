@@ -4,7 +4,7 @@ import { render } from 'react-testing-library';
 import EscrowMortgage from '../index';
 import { MOCK_DATA } from './mockData';
 
-const mockProps = { data: MOCK_DATA, renderLoading: false };
+const mockProps = { data: MOCK_DATA };
 
 const Component = <EscrowMortgage {...mockProps} />;
 

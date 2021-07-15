@@ -14,24 +14,13 @@ import { ListsContainer, StyledTwoColumnList } from './styledComponents';
 
 const Icon = <TextIcon size="4rem" />;
 
-const DashboardLoan = ({
-  data: { balancesData, paymentData, stopsData },
-  renderLoading,
-}) => (
+const DashboardLoan = ({ data: { balancesData, paymentData, stopsData } }) => (
   <GradientCard heading="Loan Information" Icon={Icon}>
     <ListsContainer>
-      <StyledTwoColumnList
-        data={balancesData}
-        numRows={12}
-        renderLoading={renderLoading}
-      />
-      <StyledTwoColumnList
-        data={paymentData}
-        numRows={12}
-        renderLoading={renderLoading}
-      />
+      <StyledTwoColumnList data={balancesData} numRows={12} />
+      <StyledTwoColumnList data={paymentData} numRows={12} />
     </ListsContainer>
-    <StopsList data={stopsData} renderLoading={renderLoading} />
+    <StopsList data={stopsData} />
   </GradientCard>
 );
 
@@ -41,7 +30,6 @@ DashboardLoan.propTypes = {
     paymentData: T.object,
     stopsData: T.arrayOf(T.object),
   }),
-  renderLoading: T.bool.isRequired,
 };
 
 export default DashboardLoan;

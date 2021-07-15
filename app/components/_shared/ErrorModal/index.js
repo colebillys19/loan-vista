@@ -1,55 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import T from 'prop-types';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 
-import { CloseIcon } from 'images/iconComponents';
 import ErrorBlock from 'components/_shared/ErrorBlock';
 
-import {
-  ContentContainer,
-  FlexContainer,
-  StyledIconButton,
-} from './styledComponents';
+import { ContentContainer, FlexContainer } from './styledComponents';
 
-const ErrorModal = ({ error }) => {
-  const [open, setOpen] = useState(false);
-  const [opacity, setOpacity] = useState('0');
-
-  useEffect(() => {
-    if (error && error.length) {
-      setOpen(true);
-    }
-  }, [error]);
-
-  const closeModal = () => setOpen(false);
-
-  const removeOpacity = () => setOpacity('1');
-
-  return (
-    <Modal
-      BackdropComponent={Backdrop}
-      BackdropProps={{ transitionDuration: 200 }}
-      onBackdropClick={closeModal}
-      onEscapeKeyDown={closeModal}
-      onRendered={removeOpacity}
-      open={open}
-    >
-      <FlexContainer>
-        <ContentContainer opacity={opacity}>
-          <StyledIconButton
-            aria-label="delete"
-            disableRipple
-            onClick={closeModal}
-          >
-            <CloseIcon size="2.5rem" />
-          </StyledIconButton>
-          <ErrorBlock error={error} />
-        </ContentContainer>
-      </FlexContainer>
-    </Modal>
-  );
-};
+const ErrorModal = ({ error }) => (
+  <Modal
+    BackdropComponent={Backdrop}
+    BackdropProps={{ transitionDuration: 200 }}
+    open
+  >
+    <FlexContainer>
+      <ContentContainer>
+        <ErrorBlock error={error} />
+      </ContentContainer>
+    </FlexContainer>
+  </Modal>
+);
 
 ErrorModal.propTypes = { error: T.oneOfType([T.bool, T.string]).isRequired };
 

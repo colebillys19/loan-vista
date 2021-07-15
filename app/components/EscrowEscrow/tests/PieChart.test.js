@@ -8,7 +8,6 @@ const mockProps = {
   data: MOCK_DATA.currentPieData,
   heading: 'heading',
   id: 'current',
-  renderLoading: false,
 };
 
 const Component = <PieChart {...mockProps} />;

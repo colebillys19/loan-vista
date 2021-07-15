@@ -19,51 +19,49 @@ export const backgroundColorOpaque = 'rgba(248, 248, 255, 0.8)';
 export const borderGrey = 'rgb(204, 204, 204)';
 export const errorColor = 'rgb(244, 67, 54)';
 export const skeletonGrey = 'rgb(232, 232, 232)';
+export const skeletonGreyOpaque = 'rgba(232, 232, 232, 0.5)';
 export const altPieColorA = 'rgb(246, 153, 96)';
 export const altPieColorB = 'rgb(85, 159, 250)';
 export const altPieColorC = 'rgb(239, 106, 105)';
 
 export const loadingAnimationStyles = css`
-  background: linear-gradient(45deg, ${skeletonGrey}, ${backgroundColor});
-  background-size: 500% 500%;
-
-  -webkit-animation: Webkit 2s ease infinite;
-  -moz-animation: Moz 2s ease infinite;
-  animation: Standard 2s ease infinite;
+  -webkit-animation: Webkit 1.8s ease infinite;
+  -moz-animation: Moz 1.8s ease infinite;
+  animation: Standard 1.8s ease infinite;
 
   @-webkit-keyframes Webkit {
     0% {
-      background-position: 100% 0%;
+      background-color: ${skeletonGrey};
     }
     50% {
-      background-position: 0% 100%;
+      background-color: ${skeletonGreyOpaque};
     }
     100% {
-      background-position: 100% 0%;
+      background-color: ${skeletonGrey};
     }
   }
 
   @-moz-keyframes Moz {
     0% {
-      background-position: 100% 0%;
+      background-color: ${skeletonGrey};
     }
     50% {
-      background-position: 0% 100%;
+      background-color: ${skeletonGreyOpaque};
     }
     100% {
-      background-position: 100% 0%;
+      background-color: ${skeletonGrey};
     }
   }
 
   @keyframes Standard {
     0% {
-      background-position: 100% 0%;
+      background-color: ${skeletonGrey};
     }
     50% {
-      background-position: 0% 100%;
+      background-color: ${skeletonGreyOpaque};
     }
     100% {
-      background-position: 100% 0%;
+      background-color: ${skeletonGrey};
     }
   }
 `;

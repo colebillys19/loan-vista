@@ -36,23 +36,27 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
         </svg>
       </div>
       <div
-        class="styledComponents__FallbackBlockContainer-n9yhwx-0 lkEeUI"
+        class="styledComponents__SidebarDetailsContainer-n9yhwx-3 bMUcfp"
       >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root styledComponents__StyledSpinnerIcon-i0a2m2-0 bVdRyG"
-          focusable="false"
-          style="height: 5rem; width: 5rem;"
-          viewBox="0 0 16 16"
+        <h1
+          class="styledComponents__StyledH1-n9yhwx-6 kOnLlB"
         >
-          <path
-            d="M12.9 3.1c1.3 1.2 2.1 3 2.1 4.9 0 3.9-3.1 7-7 7s-7-3.1-7-7c0-1.9 0.8-3.7 2.1-4.9l-0.8-0.8c-1.4 1.5-2.3 3.5-2.3 5.7 0 4.4 3.6 8 8 8s8-3.6 8-8c0-2.2-0.9-4.2-2.3-5.7l-0.8 0.8z"
-            fill="rgb(80, 103, 55)"
-          />
-        </svg>
+          loanNumber
+        </h1>
+        <span
+          class="styledComponents__SidebarDetail-n9yhwx-2 iSQTXp"
+        >
+          name
+        </span>
+        <span
+          class="styledComponents__SidebarDetail-n9yhwx-2 iSQTXp"
+        />
+        <span
+          class="styledComponents__SidebarDetail-n9yhwx-2 iSQTXp"
+        />
       </div>
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-n9yhwx-5 dWrZle styledComponents__StyledButton-sc-1loq0nq-0 gxexxq"
+        class="MuiButtonBase-root MuiButton-root MuiButton-text styledComponents__StyledButton-n9yhwx-5 krCNxw styledComponents__StyledButton-sc-1loq0nq-0 gxexxq"
         tabindex="0"
         type="button"
       >
@@ -93,102 +97,19 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
         </h3>
       </div>
       <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
+        class="styledComponents__Row-sc-15x7lk9-2 lfNUDT"
       >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
+        <span
+          class="styledComponents__DetailLabel-sc-15x7lk9-1 fucBOt"
+        >
+          label
+          : 
+        </span>
+        <span
+          class="styledComponents__Detail-sc-15x7lk9-0 fPVGnS"
+        >
+          value
+        </span>
       </div>
     </section>
     <section
@@ -218,46 +139,19 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
         </h3>
       </div>
       <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
+        class="styledComponents__Row-sc-15x7lk9-2 lfNUDT"
       >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
+        <span
+          class="styledComponents__DetailLabel-sc-15x7lk9-1 fucBOt"
+        >
+          label
+          : 
+        </span>
+        <span
+          class="styledComponents__Detail-sc-15x7lk9-0 fPVGnS"
+        >
+          value
+        </span>
       </div>
     </section>
     <section
@@ -287,46 +181,19 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
         </h3>
       </div>
       <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
+        class="styledComponents__Row-sc-15x7lk9-2 lfNUDT"
       >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
+        <span
+          class="styledComponents__DetailLabel-sc-15x7lk9-1 fucBOt"
+        >
+          label
+          : 
+        </span>
+        <span
+          class="styledComponents__Detail-sc-15x7lk9-0 fPVGnS"
+        >
+          value
+        </span>
       </div>
     </section>
     <section
@@ -356,25 +223,19 @@ exports[`<SidebarView /> Should render and match the snapshot 1`] = `
         </h3>
       </div>
       <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
+        class="styledComponents__Row-sc-15x7lk9-2 lfNUDT"
       >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
-      </div>
-      <div
-        class="styledComponents__RowContainer-m3am64-0 bLaNeN"
-      >
-        <div
-          class="styledComponents__RowStripe-m3am64-1 dIdgzS"
-        />
+        <span
+          class="styledComponents__DetailLabel-sc-15x7lk9-1 fucBOt"
+        >
+          label
+          : 
+        </span>
+        <span
+          class="styledComponents__Detail-sc-15x7lk9-0 fPVGnS"
+        >
+          value
+        </span>
       </div>
     </section>
   </div>

@@ -16,8 +16,6 @@ const mockProps = {
   escrowHomeownersData,
   escrowMortgageData,
   escrowTaxesData,
-  loading: false,
-  loanNumber: '1234567890',
 };
 
 const Component = <EscrowView {...mockProps} />;
