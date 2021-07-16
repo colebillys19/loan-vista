@@ -6,9 +6,9 @@ import Spinner from 'components/_shared/Spinner';
 import { SpinnerContainer, StyledTableRow } from './styledComponents';
 
 /* eslint-disable react/no-array-index-key */
-const ListLoader = ({ isEven, numCells }) => (
+const ListLoader = ({ numCells }) => (
   <thead>
-    <StyledTableRow isEven={isEven}>
+    <StyledTableRow>
       <td>
         <SpinnerContainer>
           <Spinner />
@@ -21,9 +21,6 @@ const ListLoader = ({ isEven, numCells }) => (
   </thead>
 );
 
-ListLoader.propTypes = {
-  isEven: T.bool.isRequired,
-  numCells: T.number.isRequired,
-};
+ListLoader.propTypes = { numCells: T.number.isRequired };
 
 export default ListLoader;

@@ -9,8 +9,11 @@ export const SpinnerContainer = styled.div`
 `;
 
 export const StyledTableRow = styled.tr`
-  ${({ isEven }) =>
-    isEven
-      ? `background: linear-gradient(90deg, ${backgroundColor} 0%, #f6f6f6 30%, #f6f6f6 70%, ${backgroundColor} 100%);`
-      : ''}
+  background: linear-gradient(
+    90deg,
+    ${backgroundColor} 0%,
+    #f6f6f6 30%,
+    #f6f6f6 70%,
+    ${backgroundColor} 100%
+  );
 `;
