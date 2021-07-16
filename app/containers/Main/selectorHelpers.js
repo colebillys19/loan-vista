@@ -146,7 +146,7 @@ const getDashboardPaymentsData = (paymentsData) => {
     },
   );
 
-  return { data, listHeaders: PAYMENTS_LIST_HEADERS };
+  return { data, ...PAYMENTS_LIST_HEADERS };
 };
 
 /**

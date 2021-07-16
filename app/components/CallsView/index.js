@@ -48,7 +48,7 @@ const CallsView = ({
           </StyledTableBody>
           <ConditionalRender
             Component={ScrollLoader}
-            propsToPassDown={{ isEven: callsData.length % 2 === 0 }}
+            propsToPassDown={{ numCells: listHeaders.length }}
             shouldRender={scrollLoading}
           />
           <TableFooter />

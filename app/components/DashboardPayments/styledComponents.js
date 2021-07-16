@@ -9,9 +9,18 @@ export const TableHeadRow = styled(StyledTableRow)`
     font-weight: normal;
   }
   th:nth-of-type(1) {
-    width: 22.5rem;
+    width: 14rem;
+  }
+  th:nth-of-type(2) {
+    width: 23rem;
+  }
+  th:nth-of-type(3) {
+    width: 12.2rem;
   }
   th:nth-of-type(4) {
-    width: 9.9rem;
+    width: 12.2rem;
+  }
+  th:nth-of-type(6) {
+    width: 5.4rem;
   }
 `;

@@ -10,7 +10,7 @@ export const BaseTableData = styled.td`
 
 export const PaymentsTableHead = styled(StyledTableHead)`
   & th:nth-of-type(1) {
-    13.2rem;
+    width: 13.2rem;
   }
   & th:nth-of-type(3) {
     width: 11.6rem;

@@ -9,9 +9,9 @@ export const TableHeadRow = styled(StyledTableRow)`
     font-weight: normal;
   }
   th:nth-of-type(1) {
-    width: 24.5rem;
+    width: 17.6rem;
   }
   th:nth-of-type(5) {
-    width: 14rem;
+    width: 12.7rem;
   }
 `;

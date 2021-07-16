@@ -37,7 +37,7 @@ const DocumentsView = ({
         <ListBorders />
         <StyledTable>
           <SortHead
-            dispatchFetchCallsData={dispatchFetchDocumentsData}
+            dispatchFetchDocumentsData={dispatchFetchDocumentsData}
             headers={listHeaders}
             {...restProps}
           />

@@ -11,12 +11,6 @@ export const getDocumentsData = (documentsData) => {
         'MM/DD/YYYY',
       );
 
-      const descFormatted = desc === null ? '-' : `${desc.slice(0, 15)}...`;
-
-      const fileFormatted = `${file.slice(0, 15)}...`;
-
-      const fromFormatted = `${from.slice(0, 15)}...`;
-
       const timeSentFormatted = timeSent
         ? moment(timeSent, 'HH:mm:ss').format('hh:mm A')
         : '-';
@@ -25,15 +19,15 @@ export const getDocumentsData = (documentsData) => {
 
       return {
         'date sent': dateSentFormatted,
-        desc: descFormatted,
-        from: fromFormatted,
+        desc: desc === null ? '-' : desc,
+        from,
         id,
-        pdf: fileFormatted,
+        pdf: file,
         'time sent': timeSentFormatted,
         type: typeFormatted,
       };
     },
   );
 
-  return { data, listHeaders: DOCUMENTS_LIST_HEADERS };
+  return { data, ...DOCUMENTS_LIST_HEADERS };
 };

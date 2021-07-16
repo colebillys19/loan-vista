@@ -24,5 +24,5 @@ export const getCallsData = (callsData) => {
     };
   });
 
-  return { data, listHeaders: CALLS_LIST_HEADERS };
+  return { data, ...CALLS_LIST_HEADERS };
 };

@@ -8,7 +8,12 @@ import T from 'prop-types';
 
 import Context from 'Context';
 import { CallIcon } from 'images/iconComponents';
-import { StyledTable, StyledTableBody } from 'components/_shared/ListTable';
+import {
+  StyledTable,
+  StyledTableBody,
+  StyledTableHead,
+  StyledTableHeader,
+} from 'components/_shared/ListTable';
 import { appColorB, iconColorB, textColorA } from 'styleConstants';
 import ConditionalRender from 'components/_shared/ConditionalRender';
 import GradientCard from 'components/_shared/GradientCard';
@@ -17,11 +22,12 @@ import NoDataBlock from 'components/_shared/NoDataBlock';
 import ViewMoreBlock from 'components/_shared/ViewMoreBlock';
 
 import CustomTableRow from './CustomTableRow';
+import { TableHeadRow } from './styledComponents';
 
 const Icon = <CallIcon colorA={iconColorB} colorB={textColorA} size="4rem" />;
 
 const DashboardCalls = ({
-  data: { data, listHeaders },
+  data: { data, formattedHeaders, listHeaders },
   dispatchNavigation,
 }) => {
   const [{ mainError, mainLoading }] = useContext(Context);
@@ -39,6 +45,13 @@ const DashboardCalls = ({
         shouldRender={!useFallback && !data.length}
       />
       <StyledTable>
+        <StyledTableHead>
+          <TableHeadRow>
+            {formattedHeaders.map((header) => (
+              <StyledTableHeader key={header}>{header}</StyledTableHeader>
+            ))}
+          </TableHeadRow>
+        </StyledTableHead>
         <StyledTableBody>
           <ConditionalRender
             Component={
@@ -68,8 +81,11 @@ const DashboardCalls = ({
 };
 
 DashboardCalls.propTypes = {
-  data: T.shape({ data: T.arrayOf(T.object), listHeaders: T.arrayOf(T.string) })
-    .isRequired,
+  data: T.shape({
+    data: T.arrayOf(T.object),
+    formattedHeaders: T.arrayOf(T.string),
+    listHeaders: T.arrayOf(T.string),
+  }).isRequired,
   dispatchNavigation: T.func.isRequired,
 };
 

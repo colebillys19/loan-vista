@@ -37,7 +37,7 @@ const PaymentsView = ({
         <ListBorders />
         <StyledTable>
           <SortHead
-            dispatchFetchCallsData={dispatchFetchPaymentsData}
+            dispatchFetchPaymentsData={dispatchFetchPaymentsData}
             headers={listHeaders}
             {...restProps}
           />

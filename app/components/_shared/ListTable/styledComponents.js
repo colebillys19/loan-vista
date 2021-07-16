@@ -16,9 +16,6 @@ export const StyledTableHead = styled.thead``;
 
 export const StyledTableHeader = styled.th`
   text-align: left;
-  &:last-of-type {
-    text-align: right;
-  }
 `;
 
 export const StyledTableRow = styled.tr`
