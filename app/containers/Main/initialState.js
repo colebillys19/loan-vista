@@ -1,4 +1,6 @@
 const initialState = {
+  audioModalData: {},
+  downloadModalData: {},
   error: false,
   loading: false,
   loanData: {

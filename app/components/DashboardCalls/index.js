@@ -21,6 +21,7 @@ const Icon = <CallIcon colorA={iconColorB} colorB={textColorA} size="4rem" />;
 const DashboardCalls = ({
   data: { data, formattedHeaders, listHeaders },
   dispatchNavigation,
+  dispatchSetAudioModalData,
 }) => {
   const [{ mainError, mainLoading }] = useContext(Context);
   const useFallback = mainLoading || mainError;
@@ -38,6 +39,7 @@ const DashboardCalls = ({
         FallbackComponent={NoDataBlock}
         propsToPassDown={{
           data,
+          dispatchSetAudioModalData,
           formattedHeaders,
           listHeaders,
           mainError,
@@ -60,6 +62,7 @@ DashboardCalls.propTypes = {
     listHeaders: T.arrayOf(T.string),
   }).isRequired,
   dispatchNavigation: T.func.isRequired,
+  dispatchSetAudioModalData: T.func.isRequired,
 };
 
 export default DashboardCalls;

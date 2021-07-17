@@ -14,33 +14,28 @@ import {
   StyledIconButton,
 } from './styledComponents';
 
-const ListModal = ({
-  callAudioProps,
-  dispatchResetModalState,
-  documentDownloadProps,
-  open,
-}) => (
+const ListModal = ({ audioData, dispatchClearListModalData, downloadData }) => (
   <Modal
     BackdropComponent={Backdrop}
     BackdropProps={{ transitionDuration: 200 }}
-    onBackdropClick={() => dispatchResetModalState()}
-    onEscapeKeyDown={() => dispatchResetModalState()}
-    open={open}
+    onBackdropClick={() => dispatchClearListModalData()}
+    onEscapeKeyDown={() => dispatchClearListModalData()}
+    open={!!audioData || !!downloadData}
   >
     <FlexContainer>
       <ContentContainer>
         <StyledIconButton
           aria-label="delete"
           disableRipple
-          onClick={() => dispatchResetModalState()}
+          onClick={() => dispatchClearListModalData()}
         >
           <CloseIcon size="2.5rem" />
         </StyledIconButton>
         <ConditionalRender
           Component={CallAudioContent}
           FallbackComponent={DocumentDownloadContent}
-          propsToPassDown={{ callAudioProps, documentDownloadProps }}
-          shouldRender={!!callAudioProps}
+          propsToPassDown={{ audioData, downloadData }}
+          shouldRender={!!audioData}
         />
       </ContentContainer>
     </FlexContainer>
@@ -48,10 +43,9 @@ const ListModal = ({
 );
 
 ListModal.propTypes = {
-  callAudioProps: T.oneOfType([T.bool, T.object]).isRequired,
-  dispatchResetModalState: T.func.isRequired,
-  documentDownloadProps: T.oneOfType([T.bool, T.object]).isRequired,
-  open: T.bool.isRequired,
+  audioData: T.oneOfType([T.bool, T.object]).isRequired,
+  dispatchClearListModalData: T.func.isRequired,
+  downloadData: T.oneOfType([T.bool, T.object]).isRequired,
 };
 
 export default ListModal;

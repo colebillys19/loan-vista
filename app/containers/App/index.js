@@ -20,6 +20,7 @@ import ConditionalRender from 'components/_shared/ConditionalRender';
 import DashboardView from 'components/DashboardView';
 import Documents from 'containers/Documents';
 import EscrowView from 'components/EscrowView';
+import ListModal from 'components/_shared/ListModal';
 import Main from 'containers/Main';
 import MainContainer from 'components/_shared/MainContainer';
 import NotFoundView from 'components/NotFoundView';
@@ -36,9 +37,14 @@ const App = ({ dispatchNavigation, pathname }) => (
     <TabNav dispatchNavigation={dispatchNavigation} pathname={pathname} />
     <Main
       render={({
+        audioModalData,
         dashboardBorrowerData,
         dashboardListsData,
         dashboardLoanData,
+        dispatchClearListModalData,
+        dispatchSetAudioModalData,
+        dispatchSetDownloadModalData,
+        downloadModalData,
         error,
         escrowEscrowData,
         escrowHomeownersData,
@@ -63,6 +69,8 @@ const App = ({ dispatchNavigation, pathname }) => (
                   dashboardListsData={dashboardListsData}
                   dashboardLoanData={dashboardLoanData}
                   dispatchNavigation={dispatchNavigation}
+                  dispatchSetAudioModalData={dispatchSetAudioModalData}
+                  dispatchSetDownloadModalData={dispatchSetDownloadModalData}
                   error={error}
                 />
               )}
@@ -97,6 +105,16 @@ const App = ({ dispatchNavigation, pathname }) => (
             />
             <Route component={NotFoundView} />
           </Switch>
+
+          <ConditionalRender
+            Component={ListModal}
+            propsToPassDown={{
+              audioData: audioModalData,
+              dispatchClearListModalData,
+              downloadData: downloadModalData,
+            }}
+            shouldRender={['/', '/calls', '/documents'].includes(pathname)}
+          />
           <ConditionalRender
             Component={BackToTopButton}
             shouldRender={['/calls', '/documents', '/payments'].includes(

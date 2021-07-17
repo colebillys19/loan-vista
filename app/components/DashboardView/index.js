@@ -20,15 +20,22 @@ const DashboardView = ({
   dashboardListsData: { callsData, documentsData, paymentsData },
   dashboardLoanData,
   dispatchNavigation,
+  dispatchSetAudioModalData,
+  dispatchSetDownloadModalData,
   error,
 }) => (
   <TabContainer aria-labelledby="dashboard-tab" id="dashboard-view">
     <DashboardBorrower data={dashboardBorrowerData} />
     <DashboardLoan data={dashboardLoanData} />
-    <DashboardCalls data={callsData} dispatchNavigation={dispatchNavigation} />
+    <DashboardCalls
+      data={callsData}
+      dispatchNavigation={dispatchNavigation}
+      dispatchSetAudioModalData={dispatchSetAudioModalData}
+    />
     <DashboardDocuments
       data={documentsData}
       dispatchNavigation={dispatchNavigation}
+      dispatchSetDownloadModalData={dispatchSetDownloadModalData}
     />
     <DashboardPayments
       data={paymentsData}
@@ -51,6 +58,8 @@ DashboardView.propTypes = {
   }).isRequired,
   dashboardLoanData: T.object.isRequired,
   dispatchNavigation: T.func.isRequired,
+  dispatchSetAudioModalData: T.func.isRequired,
+  dispatchSetDownloadModalData: T.func.isRequired,
   error: T.oneOfType([T.bool, T.string]).isRequired,
 };
 

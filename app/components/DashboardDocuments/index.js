@@ -21,6 +21,7 @@ const Icon = <MailIcon colorA={iconColorB} colorB={textColorA} size="4rem" />;
 const DashboardDocuments = ({
   data: { data, formattedHeaders, listHeaders },
   dispatchNavigation,
+  dispatchSetDownloadModalData,
 }) => {
   const [{ mainError, mainLoading }] = useContext(Context);
   const useFallback = mainLoading || mainError;
@@ -38,6 +39,7 @@ const DashboardDocuments = ({
         FallbackComponent={NoDataBlock}
         propsToPassDown={{
           data,
+          dispatchSetDownloadModalData,
           formattedHeaders,
           listHeaders,
           mainError,
@@ -60,6 +62,7 @@ DashboardDocuments.propTypes = {
     listHeaders: T.arrayOf(T.string),
   }).isRequired,
   dispatchNavigation: T.func.isRequired,
+  dispatchSetDownloadModalData: T.func.isRequired,
 };
 
 export default DashboardDocuments;

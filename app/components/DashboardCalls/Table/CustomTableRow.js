@@ -6,7 +6,7 @@ import LinkButton from 'components/_shared/LinkButton';
 
 import { LinkButtonContainer } from './styledComponents';
 
-const CustomTableRow = ({ data, headers }) => (
+const CustomTableRow = ({ data, handleRequestClick, headers }) => (
   <StyledTableRow>
     {headers.map((header) => {
       if (header === 'desc') {
@@ -21,7 +21,7 @@ const CustomTableRow = ({ data, headers }) => (
         return (
           <StyledTableData key={header}>
             <LinkButtonContainer>
-              <LinkButton onClick={() => null} text="request" />
+              <LinkButton onClick={handleRequestClick} text="request" />
             </LinkButtonContainer>
           </StyledTableData>
         );
@@ -32,6 +32,10 @@ const CustomTableRow = ({ data, headers }) => (
   </StyledTableRow>
 );
 
-CustomTableRow.propTypes = { data: T.object, headers: T.array };
+CustomTableRow.propTypes = {
+  data: T.object,
+  handleRequestClick: T.func,
+  headers: T.array,
+};
 
 export default CustomTableRow;

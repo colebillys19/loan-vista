@@ -1,4 +1,5 @@
 import { createSelector } from 'reselect';
+import isEmpty from 'lodash/isEmpty';
 
 import initialState from './initialState';
 import {
@@ -24,6 +25,24 @@ const makeSelectMain = (prop) =>
   createSelector(
     selectMainDomain,
     (substate) => substate[prop],
+  );
+
+/**
+ * makeSelectAudioModalData
+ * @description ...
+ */
+const makeSelectAudioModalData = () =>
+  createSelector(
+    makeSelectMain('audioModalData'),
+    (audioModalData) => {
+      if (isEmpty(audioModalData)) {
+        return false;
+      }
+
+      // format here
+
+      return audioModalData;
+    },
   );
 
 /**
@@ -57,6 +76,24 @@ const makeSelectDashboardLoanData = () =>
     makeSelectMain('loanData'),
     ({ balances, payment, stops }) =>
       getDashboardLoanData(balances, payment, stops),
+  );
+
+/**
+ * makeSelectDownloadModalData
+ * @description ...
+ */
+const makeSelectDownloadModalData = () =>
+  createSelector(
+    makeSelectMain('downloadModalData'),
+    (downloadModalData) => {
+      if (isEmpty(downloadModalData)) {
+        return false;
+      }
+
+      // format here
+
+      return downloadModalData;
+    },
   );
 
 /**
@@ -170,9 +207,11 @@ const makeSelectSidebarSummariesData = () =>
 
 export default makeSelectMain;
 export {
+  makeSelectAudioModalData,
   makeSelectDashboardBorrowerData,
   makeSelectDashboardListsData,
   makeSelectDashboardLoanData,
+  makeSelectDownloadModalData,
   makeSelectEscrowEscrow,
   makeSelectEscrowHomeowners,
   makeSelectEscrowMortgage,

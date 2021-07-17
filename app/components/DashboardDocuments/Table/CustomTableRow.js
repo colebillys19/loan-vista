@@ -6,14 +6,14 @@ import LinkButton from 'components/_shared/LinkButton';
 
 import { LinkButtonContainer } from './styledComponents';
 
-const CustomTableRow = ({ data, headers }) => (
+const CustomTableRow = ({ data, handleDownloadClick, headers }) => (
   <StyledTableRow>
     {headers.map((header) => {
       if (header === 'pdf') {
         return (
           <StyledTableData key={header}>
             <LinkButtonContainer>
-              <LinkButton onClick={() => null} text="download" />
+              <LinkButton onClick={handleDownloadClick} text="download" />
             </LinkButtonContainer>
           </StyledTableData>
         );
@@ -24,6 +24,10 @@ const CustomTableRow = ({ data, headers }) => (
   </StyledTableRow>
 );
 
-CustomTableRow.propTypes = { data: T.object, headers: T.array };
+CustomTableRow.propTypes = {
+  data: T.object,
+  handleDownloadClick: T.func,
+  headers: T.array,
+};
 
 export default CustomTableRow;
