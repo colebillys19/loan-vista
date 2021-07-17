@@ -1,25 +1,20 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import { ContextProvider } from 'Context';
+import CustomTableRow from '../CustomTableRow';
+import { MOCK_DATA, MOCK_HEADERS } from '../../tests/mockData';
 
-import DashboardPayments from '../index';
-import { MOCK_DATA, MOCK_HEADERS } from './mockData';
+const mockProps = { data: MOCK_DATA[0], headers: MOCK_HEADERS };
 
 const Component = (
-  <ContextProvider>
-    <DashboardPayments
-      data={{
-        data: MOCK_DATA,
-        formattedHeaders: MOCK_HEADERS,
-        listHeaders: MOCK_HEADERS,
-      }}
-      dispatchNavigation={jest.fn()}
-    />
-  </ContextProvider>
+  <table>
+    <tbody>
+      <CustomTableRow {...mockProps} />
+    </tbody>
+  </table>
 );
 
-describe('<DashboardPayments />', () => {
+describe('<CustomTableRow />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

@@ -4,13 +4,17 @@ import T from 'prop-types';
 import { StyledTableData, StyledTableRow } from 'components/_shared/ListTable';
 import LinkButton from 'components/_shared/LinkButton';
 
+import { LinkButtonContainer } from './styledComponents';
+
 const CustomTableRow = ({ data, headers }) => (
   <StyledTableRow>
     {headers.map((header) => {
       if (header === 'pdf') {
         return (
           <StyledTableData key={header}>
-            <LinkButton onClick={() => null} text="download" />
+            <LinkButtonContainer>
+              <LinkButton onClick={() => null} text="download" />
+            </LinkButtonContainer>
           </StyledTableData>
         );
       }

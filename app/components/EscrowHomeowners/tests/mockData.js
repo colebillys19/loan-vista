@@ -40,3 +40,11 @@ export const MOCK_DATA = [
     'Policy Type': 'FL',
   },
 ];
+
+export const MOCK_HEADERS = [
+  'Insurance Type',
+  'Policy Type',
+  'Company',
+  'Policy Expiration',
+  'Annual Premium',
+];

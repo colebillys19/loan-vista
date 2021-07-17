@@ -3,59 +3,39 @@
  * @description ...
  */
 
-import React, { Fragment, useContext } from 'react';
+import React, { useContext } from 'react';
 import T from 'prop-types';
 
 import Context from 'Context';
-import {
-  StyledTable,
-  StyledTableBody,
-  StyledTableHead,
-  StyledTableHeader,
-  TableRow,
-} from 'components/_shared/ListTable';
 import { appColorB } from 'styleConstants';
 import ConditionalRender from 'components/_shared/ConditionalRender';
 import GradientCard from 'components/_shared/GradientCard';
-import ListSkeleton from 'components/_shared/ListSkeleton';
 import NoDataBlock from 'components/_shared/NoDataBlock';
 
-import { TableHeadRow } from './styledComponents';
+import Table from './Table';
 
 const EscrowTaxes = ({ data, headers }) => {
   const [{ mainError, mainLoading }] = useContext(Context);
   const useFallback = mainLoading || mainError;
+  const isNoData = !useFallback && !data.length;
 
   return (
-    <GradientCard color={appColorB} heading="Homeowner's/Hazard Insurance">
+    <GradientCard
+      color={appColorB}
+      heading="Homeowner's/Hazard Insurance"
+      reduceBottomPadding
+    >
       <ConditionalRender
-        Component={<NoDataBlock />}
-        shouldRender={!useFallback && !data.length}
+        Component={Table}
+        FallbackComponent={NoDataBlock}
+        propsToPassDown={{
+          data,
+          headers,
+          mainError,
+          useFallback,
+        }}
+        shouldRender={!isNoData}
       />
-      <StyledTable>
-        <StyledTableHead>
-          <TableHeadRow>
-            {headers.map((header) => (
-              <StyledTableHeader key={header}>{header}</StyledTableHeader>
-            ))}
-          </TableHeadRow>
-        </StyledTableHead>
-        <StyledTableBody>
-          <ConditionalRender
-            Component={
-              <Fragment>
-                {data.map(({ id, ...restData }) => (
-                  <TableRow key={id} data={restData} headers={headers} />
-                ))}
-              </Fragment>
-            }
-            FallbackComponent={
-              <ListSkeleton isError={mainError} isTable numRows={5} />
-            }
-            shouldRender={!useFallback}
-          />
-        </StyledTableBody>
-      </StyledTable>
     </GradientCard>
   );
 };

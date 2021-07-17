@@ -1,6 +1,8 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
+import { ContextProvider } from 'Context';
+
 import EscrowView from '../index';
 
 import {
@@ -18,7 +20,11 @@ const mockProps = {
   escrowTaxesData,
 };
 
-const Component = <EscrowView {...mockProps} />;
+const Component = (
+  <ContextProvider>
+    <EscrowView {...mockProps} />
+  </ContextProvider>
+);
 
 describe('<EscrowView />', () => {
   it('Expect not to log errors in console', () => {

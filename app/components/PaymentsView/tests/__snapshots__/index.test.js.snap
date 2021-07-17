@@ -20,7 +20,7 @@ exports[`<PaymentsView /> Should render and match the snapshot 1`] = `
     class="styledComponents__StyledTable-fhggrt-1 fYoUQb"
   >
     <thead
-      class="styledComponents__StyledTableHead-fhggrt-4 styledComponents__PaymentsTableHead-sc-1kvx6rk-1 evvGHC"
+      class="styledComponents__StyledTableHead-fhggrt-4 styledComponents__PaymentsTableHead-sc-1kvx6rk-1 eiiNCi"
     >
       <tr
         class="styledComponents__StyledTableRow-fhggrt-6 fSdBuc"

@@ -3,7 +3,7 @@
 exports[`<EscrowView /> Should render and match the snapshot 1`] = `
 <section
   aria-labelledby="escrow-tab"
-  class="TabContainer-sc-1edk8ho-0 cuygtl"
+  class="TabContainer-sc-1edk8ho-0 kmLNPJ"
   id="escrow-view"
 >
   <section
@@ -46,92 +46,50 @@ exports[`<EscrowView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTwoColumnList-vwc47z-2 jesBqZ"
       >
         <div
-          class="styledComponents__Row-sc-7lrvdh-2 bfMyNR"
+          class="styledComponents__RowContainer-m3am64-0 bLaNeN"
         >
-          <span
-            class="styledComponents__Label-sc-7lrvdh-0 bYuMBI"
-          >
-            Current Due Date
-          </span>
-          <span
-            class="styledComponents__Value-sc-7lrvdh-3 geRGeK"
-          >
-            05/06/2021
-          </span>
+          <div
+            class="styledComponents__RowStripe-m3am64-1 bqKTOk"
+          />
         </div>
         <div
-          class="styledComponents__Row-sc-7lrvdh-2 bfMyNR"
+          class="styledComponents__RowContainer-m3am64-0 bLaNeN"
         >
-          <span
-            class="styledComponents__Label-sc-7lrvdh-0 bYuMBI"
-          >
-            Current Escrow Payment
-          </span>
-          <span
-            class="styledComponents__Value-sc-7lrvdh-3 geRGeK"
-          >
-            $123.45
-          </span>
+          <div
+            class="styledComponents__RowStripe-m3am64-1 bqKTOk"
+          />
         </div>
         <div
-          class="styledComponents__Row-sc-7lrvdh-2 bfMyNR"
+          class="styledComponents__RowContainer-m3am64-0 bLaNeN"
         >
-          <span
-            class="styledComponents__Label-sc-7lrvdh-0 bYuMBI"
-          >
-            Current Escrow Balance
-          </span>
-          <span
-            class="styledComponents__Value-sc-7lrvdh-3 geRGeK"
-          >
-            $876.54
-          </span>
+          <div
+            class="styledComponents__RowStripe-m3am64-1 bqKTOk"
+          />
         </div>
       </div>
       <div
         class="styledComponents__StyledTwoColumnList-vwc47z-2 jesBqZ"
       >
         <div
-          class="styledComponents__Row-sc-7lrvdh-2 bfMyNR"
+          class="styledComponents__RowContainer-m3am64-0 bLaNeN"
         >
-          <span
-            class="styledComponents__Label-sc-7lrvdh-0 bYuMBI"
-          >
-            Last/Next Escrow Analysis Date
-          </span>
-          <span
-            class="styledComponents__Value-sc-7lrvdh-3 geRGeK"
-          >
-            May 2022
-          </span>
+          <div
+            class="styledComponents__RowStripe-m3am64-1 bqKTOk"
+          />
         </div>
         <div
-          class="styledComponents__Row-sc-7lrvdh-2 bfMyNR"
+          class="styledComponents__RowContainer-m3am64-0 bLaNeN"
         >
-          <span
-            class="styledComponents__Label-sc-7lrvdh-0 bYuMBI"
-          >
-            Effective Due Date
-          </span>
-          <span
-            class="styledComponents__Value-sc-7lrvdh-3 geRGeK"
-          >
-            02/20
-          </span>
+          <div
+            class="styledComponents__RowStripe-m3am64-1 bqKTOk"
+          />
         </div>
         <div
-          class="styledComponents__Row-sc-7lrvdh-2 bfMyNR"
+          class="styledComponents__RowContainer-m3am64-0 bLaNeN"
         >
-          <span
-            class="styledComponents__Label-sc-7lrvdh-0 bYuMBI"
-          >
-            Effective Escrow Payment
-          </span>
-          <span
-            class="styledComponents__Value-sc-7lrvdh-3 geRGeK"
-          >
-            $654.32
-          </span>
+          <div
+            class="styledComponents__RowStripe-m3am64-1 bqKTOk"
+          />
         </div>
       </div>
     </div>
@@ -150,65 +108,23 @@ exports[`<EscrowView /> Should render and match the snapshot 1`] = `
           class="styledComponents__ChartContainer-sc-1b51i62-1 keWEnA"
         >
           <div
-            class="VictoryContainer"
-            style="height: 100%; width: 100%; pointer-events: none; position: relative;"
+            class="styledComponents__SkeletonContainer-sc-1b51i62-4 jVKzvb"
           >
             <svg
-              height="200"
-              role="img"
-              style="pointer-events: all; width: 100%; height: 100%;"
-              viewBox="0 0 200 200"
-              width="200"
+              height="0"
+              style="position: absolute;"
+              width="0"
             >
-              <g>
-                <path
-                  d="M6.123233995736766e-15,-100A100,100,0,0,1,37.49288378575131,92.70535942127697L15.747011190015549,38.93625095693633A42,42,0,0,0,2.5717582782094417e-15,-42Z"
-                  role="presentation"
-                  shape-rendering="auto"
-                  style="fill: red; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
-                  transform="translate(100, 100)"
-                />
-                <path
-                  d="M37.49288378575131,92.70535942127697A100,100,0,0,1,-90.46747755738136,42.61027463423229L-37.996340574100174,17.89631534637756A42,42,0,0,0,15.747011190015549,38.93625095693633Z"
-                  role="presentation"
-                  shape-rendering="auto"
-                  style="fill: green; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
-                  transform="translate(100, 100)"
-                />
-                <path
-                  d="M-90.46747755738136,42.61027463423229A100,100,0,0,1,-1.8369701987210297e-14,-100L-7.715274834628325e-15,-42A42,42,0,0,0,-37.996340574100174,17.89631534637756Z"
-                  role="presentation"
-                  shape-rendering="auto"
-                  style="fill: blue; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
-                  transform="translate(100, 100)"
-                />
-                <svg
-                  class=""
-                  x="175"
-                  y="100"
-                />
-                <svg
-                  class=""
-                  x="175"
-                  y="100"
-                />
-                <svg
-                  class=""
-                  x="175"
-                  y="100"
-                />
-              </g>
+              <defs>
+                <clippath
+                  id="donutClipPath"
+                >
+                  <path
+                    d="M100,0 C155.228475,0 200,44.771525 200,100 C200,155.228475 155.228475,200 100,200 C44.771525,200 0,155.228475 0,100 C0,44.771525 44.771525,0 100,0 Z M100,58 C76.8040405,58 58,76.8040405 58,100 C58,123.195959 76.8040405,142 100,142 C123.195959,142 142,123.195959 142,100 C142,76.8040405 123.195959,58 100,58 Z"
+                  />
+                </clippath>
+              </defs>
             </svg>
-            <div
-              style="z-index: 99; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"
-            >
-              <svg
-                height="200"
-                style="overflow: visible; width: 100%; height: 100%;"
-                viewBox="0 0 200 200"
-                width="200"
-              />
-            </div>
           </div>
         </div>
       </div>
@@ -224,65 +140,23 @@ exports[`<EscrowView /> Should render and match the snapshot 1`] = `
           class="styledComponents__ChartContainer-sc-1b51i62-1 keWEnA"
         >
           <div
-            class="VictoryContainer"
-            style="height: 100%; width: 100%; pointer-events: none; position: relative;"
+            class="styledComponents__SkeletonContainer-sc-1b51i62-4 jVKzvb"
           >
             <svg
-              height="200"
-              role="img"
-              style="pointer-events: all; width: 100%; height: 100%;"
-              viewBox="0 0 200 200"
-              width="200"
+              height="0"
+              style="position: absolute;"
+              width="0"
             >
-              <g>
-                <path
-                  d="M6.123233995736766e-15,-100A100,100,0,0,1,37.49288378575131,92.70535942127697L15.747011190015549,38.93625095693633A42,42,0,0,0,2.5717582782094417e-15,-42Z"
-                  role="presentation"
-                  shape-rendering="auto"
-                  style="fill: red; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
-                  transform="translate(100, 100)"
-                />
-                <path
-                  d="M37.49288378575131,92.70535942127697A100,100,0,0,1,-90.46747755738136,42.61027463423229L-37.996340574100174,17.89631534637756A42,42,0,0,0,15.747011190015549,38.93625095693633Z"
-                  role="presentation"
-                  shape-rendering="auto"
-                  style="fill: green; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
-                  transform="translate(100, 100)"
-                />
-                <path
-                  d="M-90.46747755738136,42.61027463423229A100,100,0,0,1,-1.8369701987210297e-14,-100L-7.715274834628325e-15,-42A42,42,0,0,0,-37.996340574100174,17.89631534637756Z"
-                  role="presentation"
-                  shape-rendering="auto"
-                  style="fill: blue; padding: 10px; stroke: transparent; stroke-width: 1; opacity: 1;"
-                  transform="translate(100, 100)"
-                />
-                <svg
-                  class=""
-                  x="25"
-                  y="100"
-                />
-                <svg
-                  class=""
-                  x="25"
-                  y="100"
-                />
-                <svg
-                  class=""
-                  x="25"
-                  y="100"
-                />
-              </g>
+              <defs>
+                <clippath
+                  id="donutClipPath"
+                >
+                  <path
+                    d="M100,0 C155.228475,0 200,44.771525 200,100 C200,155.228475 155.228475,200 100,200 C44.771525,200 0,155.228475 0,100 C0,44.771525 44.771525,0 100,0 Z M100,58 C76.8040405,58 58,76.8040405 58,100 C58,123.195959 76.8040405,142 100,142 C123.195959,142 142,123.195959 142,100 C142,76.8040405 123.195959,58 100,58 Z"
+                  />
+                </clippath>
+              </defs>
             </svg>
-            <div
-              style="z-index: 99; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"
-            >
-              <svg
-                height="200"
-                style="overflow: visible; width: 100%; height: 100%;"
-                viewBox="0 0 200 200"
-                width="200"
-              />
-            </div>
           </div>
         </div>
       </div>
@@ -292,7 +166,7 @@ exports[`<EscrowView /> Should render and match the snapshot 1`] = `
     />
   </section>
   <section
-    class="styledComponents__CardContainer-sc-1wpt79b-0 dABPYv"
+    class="styledComponents__CardContainer-sc-1wpt79b-0 cUQAml"
   >
     <div
       class="styledComponents__TopStripe-sc-1wpt79b-4 fawtJw"
@@ -325,36 +199,36 @@ exports[`<EscrowView /> Should render and match the snapshot 1`] = `
       />
     </div>
     <table
-      class="styledComponents__StyledTable-sc-1gw5eqk-0 bHausK"
+      class="styledComponents__StyledTable-sc-1gw5eqk-0 styledComponents__CustomTable-sc-34ple3-0 iysqfc"
     >
       <thead
         class="styledComponents__StyledTableHead-sc-1gw5eqk-3 ezRwGt"
       >
         <tr
-          class="styledComponents__StyledTableRow-sc-1gw5eqk-5 styledComponents__TableHeadRow-z9y5qg-0 kOHsGY"
+          class="styledComponents__StyledTableRow-sc-1gw5eqk-5 styledComponents__TableHeadRow-sc-34ple3-1 hTMbUf"
         >
           <th
-            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 hrYhJz"
+            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 kYPULa"
           >
             Tax Type
           </th>
           <th
-            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 hrYhJz"
+            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 kYPULa"
           >
             Paid To
           </th>
           <th
-            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 hrYhJz"
+            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 kYPULa"
           >
             Tax ID
           </th>
           <th
-            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 hrYhJz"
+            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 kYPULa"
           >
             Next Due
           </th>
           <th
-            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 hrYhJz"
+            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 kYPULa"
           >
             Expected Amount
           </th>
@@ -364,22 +238,38 @@ exports[`<EscrowView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableBody-sc-1gw5eqk-1 iLjHxu"
       >
         <tr
-          class="styledComponents__StyledTableRow-sc-1gw5eqk-5 ffoQQK"
+          class="styledComponents__TableRowContainer-m3am64-2 cKKBAR"
         >
           <td
-            class="styledComponents__StyledTableData-sc-1gw5eqk-2 eqdWsI"
+            class="styledComponents__TableRowStripe-m3am64-3 hQAnzD"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-m3am64-2 cKKBAR"
+        >
           <td
-            class="styledComponents__StyledTableData-sc-1gw5eqk-2 eqdWsI"
+            class="styledComponents__TableRowStripe-m3am64-3 hQAnzD"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-m3am64-2 cKKBAR"
+        >
           <td
-            class="styledComponents__StyledTableData-sc-1gw5eqk-2 eqdWsI"
+            class="styledComponents__TableRowStripe-m3am64-3 hQAnzD"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-m3am64-2 cKKBAR"
+        >
           <td
-            class="styledComponents__StyledTableData-sc-1gw5eqk-2 eqdWsI"
+            class="styledComponents__TableRowStripe-m3am64-3 hQAnzD"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-m3am64-2 cKKBAR"
+        >
           <td
-            class="styledComponents__StyledTableData-sc-1gw5eqk-2 eqdWsI"
+            class="styledComponents__TableRowStripe-m3am64-3 hQAnzD"
           />
         </tr>
       </tbody>
@@ -389,7 +279,7 @@ exports[`<EscrowView /> Should render and match the snapshot 1`] = `
     />
   </section>
   <section
-    class="styledComponents__CardContainer-sc-1wpt79b-0 dABPYv"
+    class="styledComponents__CardContainer-sc-1wpt79b-0 cUQAml"
   >
     <div
       class="styledComponents__TopStripe-sc-1wpt79b-4 fawtJw"
@@ -422,36 +312,36 @@ exports[`<EscrowView /> Should render and match the snapshot 1`] = `
       />
     </div>
     <table
-      class="styledComponents__StyledTable-sc-1gw5eqk-0 bHausK"
+      class="styledComponents__StyledTable-sc-1gw5eqk-0 styledComponents__CustomTable-sc-5wfs9q-0 jcQqKD"
     >
       <thead
         class="styledComponents__StyledTableHead-sc-1gw5eqk-3 ezRwGt"
       >
         <tr
-          class="styledComponents__StyledTableRow-sc-1gw5eqk-5 styledComponents__TableHeadRow-sc-1kf9ny6-0 hGxBGx"
+          class="styledComponents__StyledTableRow-sc-1gw5eqk-5 styledComponents__TableHeadRow-sc-5wfs9q-1 jmAleU"
         >
           <th
-            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 hrYhJz"
+            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 kYPULa"
           >
             Insurance Type
           </th>
           <th
-            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 hrYhJz"
+            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 kYPULa"
           >
             Policy Type
           </th>
           <th
-            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 hrYhJz"
+            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 kYPULa"
           >
             Company
           </th>
           <th
-            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 hrYhJz"
+            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 kYPULa"
           >
             Policy Expiration
           </th>
           <th
-            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 hrYhJz"
+            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 kYPULa"
           >
             Annual Premium
           </th>
@@ -461,22 +351,38 @@ exports[`<EscrowView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableBody-sc-1gw5eqk-1 iLjHxu"
       >
         <tr
-          class="styledComponents__StyledTableRow-sc-1gw5eqk-5 ffoQQK"
+          class="styledComponents__TableRowContainer-m3am64-2 cKKBAR"
         >
           <td
-            class="styledComponents__StyledTableData-sc-1gw5eqk-2 eqdWsI"
+            class="styledComponents__TableRowStripe-m3am64-3 hQAnzD"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-m3am64-2 cKKBAR"
+        >
           <td
-            class="styledComponents__StyledTableData-sc-1gw5eqk-2 eqdWsI"
+            class="styledComponents__TableRowStripe-m3am64-3 hQAnzD"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-m3am64-2 cKKBAR"
+        >
           <td
-            class="styledComponents__StyledTableData-sc-1gw5eqk-2 eqdWsI"
+            class="styledComponents__TableRowStripe-m3am64-3 hQAnzD"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-m3am64-2 cKKBAR"
+        >
           <td
-            class="styledComponents__StyledTableData-sc-1gw5eqk-2 eqdWsI"
+            class="styledComponents__TableRowStripe-m3am64-3 hQAnzD"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-m3am64-2 cKKBAR"
+        >
           <td
-            class="styledComponents__StyledTableData-sc-1gw5eqk-2 eqdWsI"
+            class="styledComponents__TableRowStripe-m3am64-3 hQAnzD"
           />
         </tr>
       </tbody>
@@ -486,7 +392,7 @@ exports[`<EscrowView /> Should render and match the snapshot 1`] = `
     />
   </section>
   <section
-    class="styledComponents__CardContainer-sc-1wpt79b-0 dABPYv"
+    class="styledComponents__CardContainer-sc-1wpt79b-0 cUQAml"
   >
     <div
       class="styledComponents__TopStripe-sc-1wpt79b-4 fawtJw"
@@ -519,31 +425,31 @@ exports[`<EscrowView /> Should render and match the snapshot 1`] = `
       />
     </div>
     <table
-      class="styledComponents__StyledTable-sc-1gw5eqk-0 bHausK"
+      class="styledComponents__StyledTable-sc-1gw5eqk-0 styledComponents__CustomTable-u9rcp7-0 jIuhyg"
     >
       <thead
         class="styledComponents__StyledTableHead-sc-1gw5eqk-3 ezRwGt"
       >
         <tr
-          class="styledComponents__StyledTableRow-sc-1gw5eqk-5 styledComponents__TableHeadRow-veq70c-0 clgIdK"
+          class="styledComponents__StyledTableRow-sc-1gw5eqk-5 styledComponents__TableHeadRow-u9rcp7-1 kQlluT"
         >
           <th
-            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 hrYhJz"
+            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 kYPULa"
           >
             Company
           </th>
           <th
-            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 hrYhJz"
+            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 kYPULa"
           >
             Insurance ID
           </th>
           <th
-            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 hrYhJz"
+            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 kYPULa"
           >
             Premium Amount
           </th>
           <th
-            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 hrYhJz"
+            class="styledComponents__StyledTableHeader-sc-1gw5eqk-4 kYPULa"
           >
             Premium Due
           </th>
@@ -553,19 +459,38 @@ exports[`<EscrowView /> Should render and match the snapshot 1`] = `
         class="styledComponents__StyledTableBody-sc-1gw5eqk-1 iLjHxu"
       >
         <tr
-          class="styledComponents__StyledTableRow-sc-1gw5eqk-5 ffoQQK"
+          class="styledComponents__TableRowContainer-m3am64-2 cKKBAR"
         >
           <td
-            class="styledComponents__StyledTableData-sc-1gw5eqk-2 eqdWsI"
+            class="styledComponents__TableRowStripe-m3am64-3 hQAnzD"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-m3am64-2 cKKBAR"
+        >
           <td
-            class="styledComponents__StyledTableData-sc-1gw5eqk-2 eqdWsI"
+            class="styledComponents__TableRowStripe-m3am64-3 hQAnzD"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-m3am64-2 cKKBAR"
+        >
           <td
-            class="styledComponents__StyledTableData-sc-1gw5eqk-2 eqdWsI"
+            class="styledComponents__TableRowStripe-m3am64-3 hQAnzD"
           />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-m3am64-2 cKKBAR"
+        >
           <td
-            class="styledComponents__StyledTableData-sc-1gw5eqk-2 eqdWsI"
+            class="styledComponents__TableRowStripe-m3am64-3 hQAnzD"
+          />
+        </tr>
+        <tr
+          class="styledComponents__TableRowContainer-m3am64-2 cKKBAR"
+        >
+          <td
+            class="styledComponents__TableRowStripe-m3am64-3 hQAnzD"
           />
         </tr>
       </tbody>

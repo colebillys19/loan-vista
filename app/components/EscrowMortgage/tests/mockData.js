@@ -21,3 +21,10 @@ export const MOCK_DATA = [
     'Premium Due': '06/01/2021',
   },
 ];
+
+export const MOCK_HEADERS = [
+  'Company',
+  'Insurance ID',
+  'Premium Amount',
+  'Premium Due',
+];

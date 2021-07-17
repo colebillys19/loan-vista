@@ -1,14 +1,22 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
+import { ContextProvider } from 'Context';
+
 import DashboardDocuments from '../index';
 import { MOCK_DATA, MOCK_HEADERS } from './mockData';
 
 const Component = (
-  <DashboardDocuments
-    data={{ data: MOCK_DATA, listHeaders: MOCK_HEADERS }}
-    dispatchNavigation={jest.fn()}
-  />
+  <ContextProvider>
+    <DashboardDocuments
+      data={{
+        data: MOCK_DATA,
+        formattedHeaders: MOCK_HEADERS,
+        listHeaders: MOCK_HEADERS,
+      }}
+      dispatchNavigation={jest.fn()}
+    />
+  </ContextProvider>
 );
 
 describe('<DashboardDocuments />', () => {

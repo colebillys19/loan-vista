@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
 import { textColorB } from 'styleConstants';
-import { StyledTableRow } from 'components/_shared/ListTable';
+import { StyledTable, StyledTableRow } from 'components/_shared/ListTable';
+
+export const CustomTable = styled(StyledTable)`
+  margin-bottom: 1.1rem;
+`;
 
 export const TableHeadRow = styled(StyledTableRow)`
   color: ${textColorB};
@@ -9,21 +13,18 @@ export const TableHeadRow = styled(StyledTableRow)`
     font-weight: normal;
   }
   th:nth-of-type(1) {
-    width: 10rem;
+    width: 17.6rem;
   }
   th:nth-of-type(2) {
-    width: 9.8rem;
+    width: 16.3rem;
   }
   th:nth-of-type(3) {
-    width: 7.4rem;
+    width: 17.5rem;
   }
   th:nth-of-type(4) {
-    width: 7.8rem;
+    width: 14.7rem;
   }
   th:nth-of-type(5) {
-    width: 19rem;
-  }
-  th:nth-of-type(6) {
-    width: 7rem;
+    width: 12.5rem;
   }
 `;

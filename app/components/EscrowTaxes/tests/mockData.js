@@ -40,3 +40,11 @@ export const MOCK_DATA = [
     'Tax Type': 'City Tax',
   },
 ];
+
+export const MOCK_HEADERS = [
+  'Tax Type',
+  'Paid To',
+  'Tax ID',
+  'Next Due',
+  'Expected Amount',
+];

@@ -10,6 +10,14 @@ export const MOCK_DATA = {
       time: '08:13 AM',
     },
   ],
+  formattedHeaders: [
+    'Date',
+    'Time',
+    'Department',
+    'Representative',
+    'Description',
+    'Audio',
+  ],
   listHeaders: ['date', 'time', 'dept', 'rep', 'desc', 'audio'],
 };
 

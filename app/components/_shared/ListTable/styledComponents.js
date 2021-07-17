@@ -8,6 +8,7 @@ export const StyledTable = styled.table`
 export const StyledTableBody = styled.tbody``;
 
 export const StyledTableData = styled.td`
+  padding: 0;
   vertical-align: top;
 `;
 
@@ -16,6 +17,7 @@ export const StyledTableHead = styled.thead``;
 
 export const StyledTableHeader = styled.th`
   text-align: left;
+  padding: 0 0 0.5rem 0;
 `;
 
 export const StyledTableRow = styled.tr`

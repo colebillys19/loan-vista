@@ -1,20 +1,20 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import { ContextProvider } from 'Context';
-
-import EscrowTaxes from '../index';
-import { MOCK_DATA } from './mockData';
-
-const mockProps = { data: MOCK_DATA };
+import Table from '../index';
+import { MOCK_DATA, MOCK_HEADERS } from '../../tests/mockData';
 
 const Component = (
-  <ContextProvider>
-    <EscrowTaxes {...mockProps} />
-  </ContextProvider>
+  <Table
+    data={MOCK_DATA}
+    formattedHeaders={MOCK_HEADERS}
+    listHeaders={MOCK_HEADERS}
+    mainError={false}
+    useFallback={false}
+  />
 );
 
-describe('<EscrowTaxes />', () => {
+describe('<Table />', () => {
   it('Expect not to log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     render(Component);

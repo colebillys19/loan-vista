@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-testing-library';
 
 import CustomTableRow from '../CustomTableRow';
-import { MOCK_DATA, MOCK_HEADERS } from './mockData';
+import { MOCK_DATA, MOCK_HEADERS } from '../../tests/mockData';
 
 const mockProps = { data: MOCK_DATA[0], headers: MOCK_HEADERS };
 

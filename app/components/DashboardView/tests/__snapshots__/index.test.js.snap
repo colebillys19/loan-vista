@@ -3,7 +3,7 @@
 exports[`<DashboardView /> Should render and match the snapshot 1`] = `
 <section
   aria-labelledby="dashboard-tab"
-  class="TabContainer-sc-1edk8ho-0 cuygtl"
+  class="TabContainer-sc-1edk8ho-0 kmLNPJ"
   id="dashboard-view"
 >
   <section
@@ -187,17 +187,10 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
       />
     </div>
     <div
-      class="styledComponents__Message-sc-6s3320-0 gcuzmo"
+      class="styledComponents__Message-sc-6s3320-0 gLjXQV"
     >
       No data to display.
     </div>
-    <table
-      class="styledComponents__StyledTable-sc-1gw5eqk-0 bHausK"
-    >
-      <tbody
-        class="styledComponents__StyledTableBody-sc-1gw5eqk-1 iLjHxu"
-      />
-    </table>
     <div
       class="styledComponents__ViewMoreContainer-r5p4f5-0 bZyuuP"
     >
@@ -251,17 +244,10 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
       />
     </div>
     <div
-      class="styledComponents__Message-sc-6s3320-0 gcuzmo"
+      class="styledComponents__Message-sc-6s3320-0 gLjXQV"
     >
       No data to display.
     </div>
-    <table
-      class="styledComponents__StyledTable-sc-1gw5eqk-0 bHausK"
-    >
-      <tbody
-        class="styledComponents__StyledTableBody-sc-1gw5eqk-1 iLjHxu"
-      />
-    </table>
     <div
       class="styledComponents__ViewMoreContainer-r5p4f5-0 bZyuuP"
     >
@@ -319,17 +305,10 @@ exports[`<DashboardView /> Should render and match the snapshot 1`] = `
       />
     </div>
     <div
-      class="styledComponents__Message-sc-6s3320-0 gcuzmo"
+      class="styledComponents__Message-sc-6s3320-0 gLjXQV"
     >
       No data to display.
     </div>
-    <table
-      class="styledComponents__StyledTable-sc-1gw5eqk-0 bHausK"
-    >
-      <tbody
-        class="styledComponents__StyledTableBody-sc-1gw5eqk-1 iLjHxu"
-      />
-    </table>
     <div
       class="styledComponents__ViewMoreContainer-r5p4f5-0 bZyuuP"
     >

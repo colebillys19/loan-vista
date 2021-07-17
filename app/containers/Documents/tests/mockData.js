@@ -3,12 +3,20 @@ export const MOCK_DATA = {
     {
       'date sent': '12/29/2020',
       desc: '-',
-      from: 'JPP...',
+      from: 'JPP',
       id: '1311f935-a8f4-4c63-b339-a3b4cd93c287',
-      pdf: 'integer_aliquet...',
+      pdf: 'integer_aliquet.pdf',
       'time sent': '08:59 PM',
       type: 'Email',
     },
+  ],
+  formattedHeaders: [
+    'Date Sent',
+    'Time Sent',
+    'Type',
+    'From',
+    'Description',
+    'PDF',
   ],
   listHeaders: ['date sent', 'time sent', 'type', 'from', 'desc', 'pdf'],
 };

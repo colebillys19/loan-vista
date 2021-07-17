@@ -34,6 +34,14 @@ export const MOCK_DATA = {
       },
     },
   ],
+  formattedHeaders: [
+    'Date',
+    'Description',
+    'Total',
+    'Principal',
+    'Interest',
+    'Escrow',
+  ],
   listHeaders: ['date', 'desc', 'total', 'principal', 'interest', 'escrow'],
 };
 
